@@ -680,10 +680,10 @@ class Calendar extends Component {
 
         const calendarClasses = classnames(
             'fd-calendar',
-            className,
             {
                 'fd-calendar--compact': compact
-            }
+            },
+            className
         );
 
         return (

@@ -140,7 +140,7 @@ class DatePicker extends Component {
         });
     }
 
-    _handleOnChange = (e) => {
+    handleOnChange = (e) => {
         e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
@@ -253,7 +253,7 @@ class DatePicker extends Component {
         });
     };
 
-    _handleFocus = () => {
+    handleFocus = () => {
         this.props.onFocus(this.getCallbackData());
     }
 
@@ -307,11 +307,11 @@ class DatePicker extends Component {
      *
      * @returns {undefined}
      */
-    _handleBlur = () => {
+    handleBlur = () => {
         this.validateDates(this.props.onBlur);
     };
 
-    _showTodayHeader = () => {
+    showTodayHeader = () => {
         const { todayAction: { label: todayLabel, type: todayType } } = this.props;
         return todayType === 'navigate'
                 && todayLabel
@@ -319,7 +319,7 @@ class DatePicker extends Component {
                 && todayLabel.trim().length > 0;
     }
 
-    _showTodayFooter = () => {
+    showTodayFooter = () => {
         const { enableRangeSelection, todayAction: { label: todayLabel, type: todayType } } = this.props;
         return todayType === 'select'
                 && !enableRangeSelection
@@ -329,7 +329,7 @@ class DatePicker extends Component {
                 && todayLabel.trim().length > 0;
     };
 
-    _setTodayDate = () => {
+    setTodayDate = () => {
         this.updateDate(moment().locale(this.props.locale));
     }
 
@@ -397,9 +397,9 @@ class DatePicker extends Component {
                 validationState={validationState} >
                 <FormInput
                     {...inputProps}
-                    onBlur={this._handleBlur}
-                    onChange={this._handleOnChange}
-                    onFocus={this._handleFocus}
+                    onBlur={this.handleBlur}
+                    onChange={this.handleOnChange}
+                    onFocus={this.handleFocus}
                     onKeyPress={this.sendUpdate}
                     placeholder={this.getPlaceHolder(dateFormat)}
                     readOnly={readOnly}
@@ -455,17 +455,17 @@ class DatePicker extends Component {
                                 onChange={this.updateDate}
                                 openToDate={openToDate}
                                 ref={this.calendarRef}
-                                showToday={this._showTodayHeader()}
+                                showToday={this.showTodayHeader()}
                                 specialDays={specialDays}
                                 weekdayStart={weekdayStart} />
-                            { this._showTodayFooter() &&
+                            { this.showTodayFooter() &&
                                 <div className={datepickerFooterClassName}>
                                     <div className='fd-bar__right'>
                                         <div className='fd-bar__element'>
                                             <Button
                                                 className='fd-dialog__decisive-button'
                                                 compact={compact}
-                                                onClick={this._setTodayDate}>
+                                                onClick={this.setTodayDate}>
                                                 {todayAction.label}
                                             </Button>
                                         </div>
