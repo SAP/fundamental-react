@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component API/Button Dev 1`] = `
+exports[`Storyshots Component API/Button/Button Dev 1`] = `
 <div
   dir="ltr"
 >
@@ -14,7 +14,7 @@ exports[`Storyshots Component API/Button Dev 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/Button Icons 1`] = `
+exports[`Storyshots Component API/Button/Button Icons 1`] = `
 <div
   dir="ltr"
 >
@@ -104,7 +104,7 @@ exports[`Storyshots Component API/Button Icons 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/Button Options 1`] = `
+exports[`Storyshots Component API/Button/Button Options 1`] = `
 <div
   dir="ltr"
 >
@@ -133,7 +133,7 @@ exports[`Storyshots Component API/Button Options 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/Button Primary 1`] = `
+exports[`Storyshots Component API/Button/Button Primary 1`] = `
 <div
   dir="ltr"
 >
@@ -146,7 +146,7 @@ exports[`Storyshots Component API/Button Primary 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/Button Sizes 1`] = `
+exports[`Storyshots Component API/Button/Button Sizes 1`] = `
 <div
   dir="ltr"
 >
@@ -169,7 +169,7 @@ exports[`Storyshots Component API/Button Sizes 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/Button States 1`] = `
+exports[`Storyshots Component API/Button/Button States 1`] = `
 <div
   dir="ltr"
 >
@@ -338,7 +338,7 @@ exports[`Storyshots Component API/Button States 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/Button Types 1`] = `
+exports[`Storyshots Component API/Button/Button Types 1`] = `
 <div
   dir="ltr"
 >
