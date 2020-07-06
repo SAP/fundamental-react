@@ -672,6 +672,7 @@ class Calendar extends Component {
             tableProps,
             tableHeaderProps,
             tableBodyProps,
+            showToday,
             specialDays,
             weekdayStart,
             ...props

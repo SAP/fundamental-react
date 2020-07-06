@@ -34,8 +34,7 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName &&
-                    !child.props.className?.includes('fd-tokenizer')
+                'fd-input-group__input': !child.props.className?.includes('fd-tokenizer')
             },
             child.props.className
         );
@@ -45,6 +44,12 @@ class InputGroup extends Component {
                 {...props}
                 className={inputGroupClasses}>
                 {React.Children.toArray(children).map(child => {
+                    if (child?.type?.displayName === InputGroupAddon.displayName) {
+                        return React.cloneElement(child, {
+                            compact,
+                            disabled
+                        });
+                    }
                     return React.cloneElement(child, {
                         compact,
                         disabled,
