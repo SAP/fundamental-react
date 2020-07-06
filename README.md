@@ -44,7 +44,7 @@ For an existing react application, follow the steps below:
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```javascript
-    import { MessageStrip } from 'fundamental-react/MessageStrip';
+    import { MessageStrip } from 'fundamental-react/lib/MessageStrip';
     ```
     or
     ```javascript
