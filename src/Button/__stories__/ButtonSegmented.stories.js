@@ -4,7 +4,7 @@ import ButtonSegmented from '../ButtonSegmented';
 import React from 'react';
 
 export default {
-    title: 'Component API/ButtonSegmented',
+    title: 'Component API/Button/ButtonSegmented',
     component: ButtonSegmented
 };
 

@@ -5,7 +5,7 @@ import TabContent from '../_TabContent';
 import TabGroup from '../TabGroup';
 
 export default {
-    title: 'Component API/TabGroup',
+    title: 'Component API/Tabs/TabGroup',
     component: TabGroup,
     subcomponents: { Tab, TabContent }
 };
