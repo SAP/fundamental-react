@@ -88,6 +88,7 @@ export const dev = () => (
     <Calendar
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
             dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
+        compact={boolean('compact', false)}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
