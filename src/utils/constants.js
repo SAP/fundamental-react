@@ -110,3 +110,5 @@ export const GridSelector = {
     CELL: 'td, [role="gridcell"]',
     FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
 };
+
+export const DATEPICKER_TODAY_ACTIONS_TYPES = ['none', 'select', 'navigate'];
