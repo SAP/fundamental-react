@@ -234,8 +234,12 @@ weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
  * - And localized non-empty string value for `todayAction.label`
  *
  * will show a footer action in the DatePicker popover.
- *
  * Clicking this button selects today's date and closes the popover.
+ *
+ * This button will not be shown if
+ *
+ * - `enableRangeSelection` is true
+ * - OR if today's date is disabled
  * */
 
 export const localizedTodayFooterButton = () => (
