@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0-rc.28](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.27...v0.11.0-rc.28) (2020-07-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Import paths of subdirectories must contain the lib directory.  Such as `import { MessageStrip } from 'fundamental-react/lib/MessageStrip'`
+
+### Features
+
+* Publish the package with a lib directory ([#1119](https://github.com/SAP/fundamental-react/issues/1119)) ([cf39b4a](https://github.com/SAP/fundamental-react/commit/cf39b4ae167b47a1c0a7ec9ed73b7bbfe38e626d))
+
 ## [0.11.0-rc.27](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.26...v0.11.0-rc.27) (2020-07-02)
 
 

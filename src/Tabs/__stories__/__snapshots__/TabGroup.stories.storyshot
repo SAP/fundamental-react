@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component API/TabGroup Disabled 1`] = `
+exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
 <div
   dir="ltr"
 >
@@ -114,7 +114,7 @@ exports[`Storyshots Component API/TabGroup Disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/TabGroup Primary 1`] = `
+exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
 <div
   dir="ltr"
 >
@@ -224,7 +224,7 @@ exports[`Storyshots Component API/TabGroup Primary 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/TabGroup Selected Index 1`] = `
+exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
 <div
   dir="ltr"
 >
@@ -334,7 +334,7 @@ exports[`Storyshots Component API/TabGroup Selected Index 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/TabGroup Sizes 1`] = `
+exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
 <div
   dir="ltr"
 >
