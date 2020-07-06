@@ -11,7 +11,7 @@ const Import = () => {
         customStyle={{ padding: 10, whiteSpace: 'pre-wrap', fontSize: 14 }}
         language='javascript'
         style={googlecode}>
-        {`import { ${groups[groups.length - 1]} } from 'fundamental-react/${groups[1]}';`}
+        {`import { ${groups[groups.length - 1]} } from 'fundamental-react/lib/${groups[1]}';`}
     </SyntaxHighlighter>)
 }
 
