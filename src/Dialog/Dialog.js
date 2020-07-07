@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/bar.css';
-import 'fundamental-styles/dist/overlay.css';
 import 'fundamental-styles/dist/dialog.css';
 
 /** A **Dialog** is a container generally displayed in response to an action. It is used for short forms,
@@ -45,7 +44,6 @@ class Dialog extends Component {
     render() {
         const {
             actions,
-            backdropClassName,
             bodyProps,
             children,
             className,
@@ -62,12 +60,6 @@ class Dialog extends Component {
             title,
             ...rest
         } = this.props;
-
-        const backdropClasses = classnames(
-            'fd-overlay',
-            'fd-overlay--dialog',
-            backdropClassName
-        );
 
         const dialogClasses = classnames(
             'fd-dialog',
@@ -101,8 +93,7 @@ class Dialog extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock as='div' className={backdropClasses}
-                lockProps={{ ...rest }}>
+            <FocusLock as='div' lockProps={{ ...rest }}>
                 <span data-autofocus tabIndex='-1' />
                 <div
                     aria-label={title}
@@ -161,8 +152,6 @@ Dialog.propTypes = {
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
     /** Localized text for the heading */
     title: PropTypes.string.isRequired,
-    /** CSS class(es) to add to the dialog backdrop */
-    backdropClassName: PropTypes.string,
     /** Additional props to be spread to the body section of the dialog */
     bodyProps: PropTypes.object,
     /** Node(s) to render within the component */
