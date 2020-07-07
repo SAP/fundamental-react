@@ -385,7 +385,7 @@ class Shellbar extends Component {
                                         )
                                     }
                                     control={
-                                        <div className='fd-button fd-shellbar__button fd-user-menu__control'>
+                                        <button className='fd-button fd-shellbar__button fd-shellbar__button--user-menu'>
                                             {profile.image ? (
                                                 <Avatar
                                                     backgroundImageUrl={profile.image}
@@ -398,7 +398,7 @@ class Shellbar extends Component {
                                                     {profile.initials}
                                                 </Avatar>
                                             )}
-                                        </div>
+                                        </button>
                                     }
                                     noArrow
                                     placement='bottom-end'
