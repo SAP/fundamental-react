@@ -1,12 +1,19 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import 'fundamental-styles/dist/table.css';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
 const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
     tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
+    const [selectedRows, setSelectedRows] = useState([]);
+
+    const onCheckboxClick = (e, index) => {
+        const newSelectedRows = [...selectedRows];
+        newSelectedRows[index] = !newSelectedRows[index];
+        setSelectedRows(newSelectedRows);
+    };
 
     const tableClasses = classnames(
         'fd-table',
@@ -74,7 +81,13 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
                     }
 
                     if (richTable) {
-                        checkboxCell = <td className={tableCheckboxClasses}>{row.rowData[0]}</td>;
+                        checkboxCell = (
+                            <td
+                                className={tableCheckboxClasses}
+                                onChange={(e) => onCheckboxClick(e, index)}>
+                                {row.rowData[0]}
+                            </td>
+                        );
                         displayRows = row.rowData.splice(1, row.rowData.length);
                     }
 
@@ -82,6 +95,7 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
+                            aria-selected={selectedRows[index]}
                             key={index}>
                             {richTable && checkboxCell}
                             {displayRows.map((rowData, cellIndex) => {
