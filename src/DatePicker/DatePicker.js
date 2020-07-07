@@ -380,7 +380,7 @@ class DatePicker extends Component {
             'fd-bar',
             'fd-bar--footer',
             {
-                'fd-bar--cosy': !compact,
+                'fd-bar--cozy': !compact,
                 'fd-bar--compact': compact
             }
         );
