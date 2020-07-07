@@ -408,7 +408,7 @@ class DatePicker extends Component {
                     <Button {...buttonProps}
                         aria-label={buttonLabel}
                         disabled={disableButton}
-                        glyph='calendar'
+                        glyph='appointment-2'
                         onClick={this.handleClickButton}
                         option='transparent' />
                 </InputGroup.Addon>
