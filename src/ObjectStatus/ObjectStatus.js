@@ -9,7 +9,7 @@ import 'fundamental-styles/dist/object-status.css';
 /** *Object Status* is a short text that represents the semantic status of an object. It has a semantic color and an optional icon.
  * Typically, the object status is used in the dynamic page header and as a status attribute of a line item in a table. */
 
-const ObjectStatus = React.forwardRef(({ children, className, glyph, indication, inverted, link, onClick, size, status, ...props }, ref) => {
+const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, indication, inverted, link, onClick, size, status, ...props }, ref) => {
     const objectStatusClasses = classnames(
         'fd-object-status',
         {
@@ -22,14 +22,25 @@ const ObjectStatus = React.forwardRef(({ children, className, glyph, indication,
         },
         className
     );
-    const StatusTag = typeof link !== 'undefined' ? 'a' : 'span';
+    let StatusTag = 'span';
+    let semanticProps = {};
 
+    if (link?.length) {
+        StatusTag = 'a';
+        semanticProps.href = link;
+    } else if ( typeof onClick === 'function') {
+        StatusTag = 'button';
+        semanticProps.onClick = onClick;
+        semanticProps.style = {
+            background: 'transparent'
+        };
+    }
     return (
         <StatusTag
             {...props}
+            aria-label={ariaLabel}
             className={objectStatusClasses}
-            href={link}
-            onClick={onClick}
+            {...semanticProps}
             ref={ref}>
             {children}
         </StatusTag>
@@ -40,7 +51,12 @@ const ObjectStatus = React.forwardRef(({ children, className, glyph, indication,
 ObjectStatus.displayName = 'ObjectStatus';
 
 ObjectStatus.propTypes = {
+    /** aria-label is required for a11y, when object status has only icon */
 
+    ariaLabel: (props) => {
+        if ((!props.children && !props.ariaLabel) || (!props.children && typeof props.ariaLabel !== 'string'))
+            return new Error('ariaLabel is required if there is no text inside the ObjectStatus component and must be a string');
+    },
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */

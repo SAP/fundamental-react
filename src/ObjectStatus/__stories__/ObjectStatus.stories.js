@@ -3,7 +3,7 @@ import ObjectStatus from '../ObjectStatus';
 import React from 'react';
 
 export default {
-    title: 'Component API/ObjectStatus',
+    title: 'Component API/Object Display Components/ObjectStatus',
     component: ObjectStatus
 };
 
@@ -22,11 +22,15 @@ export const primary = () => (
 
 export const icons = () => (
     <div className='fddocs-container'>
-        <ObjectStatus glyph='status-negative' status='negative' />
-        <ObjectStatus glyph='status-critical' status='critical' />
-        <ObjectStatus glyph='status-positive' status='positive' />
-        <ObjectStatus glyph='hint' status='informative' />
-        <ObjectStatus glyph='to-be-reviewed' />
+        <ObjectStatus ariaLabel='negative' glyph='status-negative'
+            status='negative' />
+        <ObjectStatus ariaLabel='critical' glyph='status-critical'
+            status='critical' />
+        <ObjectStatus ariaLabel='positive' glyph='status-positive'
+            status='positive' />
+        <ObjectStatus ariaLabel='info' glyph='hint'
+            status='informative' />
+        <ObjectStatus ariaLabel='neutral' glyph='to-be-reviewed' />
     </div>
 );
 icons.storyName = 'Icon Only';
@@ -91,9 +95,10 @@ export const inverted = () => (
                 status='critical'>Critical</ObjectStatus>
             <ObjectStatus indication='1' inverted>Dark Red</ObjectStatus>
             <ObjectStatus indication='2' inverted>Red</ObjectStatus>
-            <ObjectStatus glyph='hint' inverted
-                status='informative' />
-            <ObjectStatus glyph='to-be-reviewed' inverted />
+            <ObjectStatus ariaLabel='informative' glyph='hint'
+                inverted status='informative' />
+            <ObjectStatus ariaLabel='neutral' glyph='to-be-reviewed'
+                inverted />
         </div>
     </>
 );
@@ -121,9 +126,10 @@ export const large = () => (
                 status='critical'>Critical</ObjectStatus>
             <ObjectStatus indication='1' size='l'>Dark Red</ObjectStatus>
             <ObjectStatus indication='2' size='l'>Red</ObjectStatus>
-            <ObjectStatus glyph='hint' size='l'
-                status='informative' />
-            <ObjectStatus glyph='to-be-reviewed' size='l' />
+            <ObjectStatus ariaLabel='informative' glyph='hint'
+                size='l' status='informative' />
+            <ObjectStatus ariaLabel='neutral' glyph='to-be-reviewed'
+                size='l' />
         </div>
     </>
 );
@@ -162,10 +168,11 @@ export const clickable = () => (
                 link='#'>Dark Red</ObjectStatus>
             <ObjectStatus indication='2' inverted
                 link='#'>Red</ObjectStatus>
-            <ObjectStatus glyph='hint' inverted
-                link='#' status='informative' />
-            <ObjectStatus glyph='to-be-reviewed' inverted
-                link='#' />
+            <ObjectStatus ariaLabel='informative' glyph='hint'
+                inverted link='#'
+                status='informative' />
+            <ObjectStatus ariaLabel='neutral' glyph='to-be-reviewed'
+                inverted link='#' />
         </div>
         <div className='fddocs-container'>
             <ObjectStatus glyph='status-negative' onClick={handleClick}
@@ -176,10 +183,11 @@ export const clickable = () => (
                 size='l'>Dark Red</ObjectStatus>
             <ObjectStatus indication='2' link='#'
                 size='l'>Red</ObjectStatus>
-            <ObjectStatus glyph='hint' link='#'
-                size='l' status='informative' />
-            <ObjectStatus glyph='to-be-reviewed' link='#'
-                size='l' />
+            <ObjectStatus ariaLabel='info' glyph='hint'
+                link='#' size='l'
+                status='informative' />
+            <ObjectStatus ariaLabel='info' glyph='to-be-reviewed'
+                link='#' size='l' />
         </div>
     </>
 );
