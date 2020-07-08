@@ -162,6 +162,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
+          onChange={[Function]}
         >
           <div
             className="fd-form-item"
@@ -251,6 +252,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
+          onChange={[Function]}
         >
           <div
             className="fd-form-item"
@@ -340,6 +342,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
+          onChange={[Function]}
         >
           <div
             className="fd-form-item"
@@ -429,6 +432,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
+          onChange={[Function]}
         >
           <div
             className="fd-form-item"

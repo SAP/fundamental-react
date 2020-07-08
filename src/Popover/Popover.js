@@ -158,6 +158,10 @@ class Popover extends Component {
             };
         }
 
+        const referenceClassName = classnames('fd-popover__control', {
+            'is-expanded': this.state.isExpanded
+        });
+
         const referenceComponent = React.cloneElement(control, controlProps);
 
         const popoverClasses = classnames('fd-popover', className);
@@ -174,7 +178,7 @@ class Popover extends Component {
                     popperClassName={popperClassName}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
-                    referenceClassName='fd-popover__control'
+                    referenceClassName={referenceClassName}
                     referenceComponent={referenceComponent}
                     show={!disabled && (typeof show === 'boolean' ? show : this.state.isExpanded)}
                     usePortal
