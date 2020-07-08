@@ -81,7 +81,7 @@ export const richTable = () => {
                                 onChange={handleChange} />,
                             <Avatar backgroundImageUrl={item.photoUrl} size='m'
                                 transparent />,
-                            <a className='fd-has-font-weight-semi' href='#'>
+                            <a href='#'>
                                 {item.email}
                             </a>,
                             'First Name',
