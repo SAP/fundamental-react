@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-knobs';
 
 export default {
-    title: 'Component API/Button',
+    title: 'Component API/Button/Button',
     component: Button
 };
 
