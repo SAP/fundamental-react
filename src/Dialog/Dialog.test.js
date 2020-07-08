@@ -154,18 +154,6 @@ describe('<Dialog />', () => {
     });
 
     describe('Custom class names', () => {
-        test('should allow classes to be added to backdrop', () => {
-            component = mount(<Dialog
-                actions={[
-                    (<Button option='transparent'>No</Button>),
-                    (<Button>Yes</Button>)
-                ]}
-                backdropClassName='sample' show
-                title='Title' />);
-
-            expect(component.find('div.fd-overlay--dialog').hasClass('sample')).toBe(true);
-        });
-
         test('should allow classes to be added to dialog', () => {
             component = mount(<Dialog
                 actions={[
@@ -192,11 +180,7 @@ describe('<Dialog />', () => {
                     title='Title' />
             );
 
-            expect( component.find('div.fd-overlay--dialog').getDOMNode().attributes[
-                'data-sample'
-            ].value).toBe(
-                'Sample'
-            );
+            expect(component.exists('div[data-sample="Sample"]')).toBe(true);
         });
 
         test('should allow props to be spread to the Dialog component\'s content section', () => {
