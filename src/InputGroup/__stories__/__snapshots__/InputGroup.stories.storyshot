@@ -131,6 +131,11 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       >
         <span
           className="sap-icon--globe"
+          style={
+            Object {
+              "fontSize": undefined,
+            }
+          }
         />
       </span>
       <input
@@ -152,6 +157,11 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       >
         <span
           className="sap-icon--hide"
+          style={
+            Object {
+              "fontSize": undefined,
+            }
+          }
         />
       </span>
     </div>
@@ -199,6 +209,11 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
     >
       <span
         className="sap-icon--hide"
+        style={
+          Object {
+            "fontSize": undefined,
+          }
+        }
       />
     </span>
   </div>

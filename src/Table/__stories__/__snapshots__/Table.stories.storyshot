@@ -196,7 +196,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
           className="fd-table__cell"
         >
           <a
-            className="fd-has-font-weight-semi"
             href="#"
           >
             user.name@test.com
@@ -286,7 +285,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
           className="fd-table__cell"
         >
           <a
-            className="fd-has-font-weight-semi"
             href="#"
           >
             florence.garcia@qwerty.io
@@ -376,7 +374,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
           className="fd-table__cell"
         >
           <a
-            className="fd-has-font-weight-semi"
             href="#"
           >
             mark.helper@qwerty.io
@@ -466,7 +463,6 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
           className="fd-table__cell"
         >
           <a
-            className="fd-has-font-weight-semi"
             href="#"
           >
             jenna@qwerty.io
