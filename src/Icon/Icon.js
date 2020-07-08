@@ -13,7 +13,6 @@ const Icon = React.forwardRef(({ glyph, size, className, ...props }, ref) => {
     const iconClasses = classnames(
         {
             [`sap-icon--${glyph}`]: !!glyph
-            // [`sap-icon--${size}`]: !!size
         },
         className
     );
@@ -23,7 +22,7 @@ const Icon = React.forwardRef(({ glyph, size, className, ...props }, ref) => {
             {...props}
             className={iconClasses}
             ref={ref}
-            style={size ? `font-size: ${ICON_SIZES.size}` : null} />
+            style={{ fontSize: ICON_SIZES[size] }} />
     );
 });
 
