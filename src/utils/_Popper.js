@@ -184,7 +184,8 @@ class Popper extends React.Component {
                             className={popperClasses}
                             ref={ref}
                             style={{ ...style, ...popperProps.style, ...fundamentalStyleOverrides }}
-                            x-out-of-boundaries={isReferenceHidden}
+                            // eslint-disable-next-line no-undefined
+                            x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
                             // This is needed for fundamental-styles even though popper-2 uses data-placement as well
                             x-placement={placement}>
                             <div ref={innerRef}>
@@ -232,9 +233,9 @@ Popper.displayName = 'Popper';
 Popper.propTypes = {
     children: PropTypes.node.isRequired,
     cssBlock: PropTypes.string.isRequired,
-    innerRef: PropTypes.func.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
+    innerRef: PropTypes.func,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.array,

@@ -65,7 +65,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
         className="fd-form-label"
         htmlFor="customDateFormatField"
       >
-        Custom date format (knobs)
+        Custom date format
       </label>
       <div
         defaultValue=""
@@ -120,7 +120,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
         className="fd-form-label"
         htmlFor="customDateFormatField2"
       >
-        Custom date format (knobs) with defaultValue
+        Custom date format with defaultValue
       </label>
       <div
         defaultValue="12/04/1993"
@@ -230,7 +230,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
         className="fd-form-label"
         htmlFor="customDateFormatField4"
       >
-        Custom date format (knobs) range selection
+        Custom date format range selection
       </label>
       <div
         defaultValue=""
@@ -338,7 +338,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
     <div>
       <label
         className="fd-form-label"
-        htmlFor="customDateFormatField5"
+        htmlFor="customDateFormatField6"
       >
         Unset date format, with null locale (uses ISO_DATE_FORMAT)
       </label>
@@ -365,7 +365,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
               >
                 <input
                   className="fd-input fd-input-group__input"
-                  id="customDateFormatField5"
+                  id="customDateFormatField6"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -399,7 +399,7 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
   dir="ltr"
 >
   <div
-    defaultValue=""
+    defaultValue="20/06/2020"
     onChange={[Function]}
     onFocus={[Function]}
   >
@@ -425,9 +425,9 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
               onChange={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
-              placeholder="MM/DD/YYYY"
+              placeholder="DD/MM/YYYY"
               type="text"
-              value=""
+              value="20/06/2020"
             />
             <span
               className="fd-input-group__addon fd-input-group__addon--button"
@@ -659,6 +659,248 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-layout-grid fd-layout-grid--col-2"
+  >
+    <div>
+      <label
+        className="fd-form-label"
+        htmlFor="englishTodayButtonDP"
+      >
+        Compact Datepicker with today selection button
+      </label>
+      <div
+        defaultValue=""
+        onChange={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-input-group--control fd-input-group"
+              >
+                <input
+                  className="fd-input fd-input--compact fd-input-group__input"
+                  id="englishTodayButtonDP"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="MM/DD/YYYY"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+                >
+                  <button
+                    aria-label="Choose date"
+                    className="fd-button fd-button--transparent fd-button--compact sap-icon--calendar fd-input-group__button"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label
+        className="fd-form-label"
+        htmlFor="hindiTodayButtonDP"
+      >
+        Datepicker with today selection button, custom locale, and default date
+      </label>
+      <div
+        defaultValue="३०/१२/१९९२"
+        onChange={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-input-group--control fd-input-group"
+              >
+                <input
+                  className="fd-input fd-input-group__input"
+                  id="hindiTodayButtonDP"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="DD/MM/YYYY"
+                  type="text"
+                  value="३०/१२/१९९२"
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button"
+                >
+                  <button
+                    aria-label="Choose date"
+                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-layout-grid fd-layout-grid--col-2"
+  >
+    <div>
+      <label
+        className="fd-form-label"
+        htmlFor="englishTodayButtonDP"
+      >
+        Compact Datepicker with today navigation button
+      </label>
+      <div
+        defaultValue=""
+        onChange={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-input-group--control fd-input-group"
+              >
+                <input
+                  className="fd-input fd-input--compact fd-input-group__input"
+                  id="englishTodayButtonDP"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="MM/DD/YYYY"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+                >
+                  <button
+                    aria-label="Choose date"
+                    className="fd-button fd-button--transparent fd-button--compact sap-icon--calendar fd-input-group__button"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label
+        className="fd-form-label"
+        htmlFor="hindiTodayButtonDP"
+      >
+        Datepicker with today navigation button, custom locale, and default date
+      </label>
+      <div
+        defaultValue="३०/१२/१९९२"
+        onChange={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-input-group--control fd-input-group"
+              >
+                <input
+                  className="fd-input fd-input-group__input"
+                  id="hindiTodayButtonDP"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="DD/MM/YYYY"
+                  type="text"
+                  value="३०/१२/१९९२"
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button"
+                >
+                  <button
+                    aria-label="Choose date"
+                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
 <div
   dir="ltr"
@@ -821,59 +1063,6 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
 `;
 
 exports[`Storyshots Component API/DatePicker Special Days 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    defaultValue=""
-    onChange={[Function]}
-    onFocus={[Function]}
-  >
-    <div
-      className="fd-popover"
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <div
-            aria-expanded={false}
-            aria-haspopup="true"
-            className="fd-input-group--control fd-input-group"
-          >
-            <input
-              className="fd-input fd-input-group__input"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onFocus={[Function]}
-              onKeyPress={[Function]}
-              placeholder="MM/DD/YYYY"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
-            >
-              <button
-                aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/DatePicker Today button 1`] = `
 <div
   dir="ltr"
 >

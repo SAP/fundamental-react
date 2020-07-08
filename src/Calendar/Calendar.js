@@ -456,19 +456,19 @@ class Calendar extends Component {
         const showToday = this.props.showToday && !this.state.showMonths && !this.state.showYears;
 
         return (
-            <header className='fd-calendar__header'>
+            <div className='fd-calendar__header'>
                 <div aria-live='assertive' className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
-                            compact
+                            compact={this.props.compact}
                             glyph='slim-arrow-left'
                             onClick={this.handlePrevious}
                             option='transparent' />
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
-                            compact
+                            compact={this.props.compact}
                             onClick={this.showMonths}
                             option='transparent'>
                             <span>
@@ -478,7 +478,7 @@ class Calendar extends Component {
                     </div>
                     <div className='fd-calendar__action'>
                         <Button
-                            compact
+                            compact={this.props.compact}
                             onClick={this.showYears}
                             option='transparent'>
                             <span>
@@ -490,7 +490,7 @@ class Calendar extends Component {
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={nextButtonLabel}
-                            compact
+                            compact={this.props.compact}
                             glyph='slim-arrow-right'
                             onClick={this.handleNext}
                             option='transparent' />
@@ -498,7 +498,7 @@ class Calendar extends Component {
                     {showToday &&
                         <div className='fd-calendar__action'>
                             <Button
-                                compact
+                                compact={this.props.compact}
                                 onClick={this.handleToday}
                                 option={'transparent'}>
                                 {this.props.localizedText.todayLabel}
@@ -506,7 +506,7 @@ class Calendar extends Component {
                         </div>
                     }
                 </div>
-            </header>
+            </div>
         );
     }
 
@@ -652,6 +652,7 @@ class Calendar extends Component {
 
     render() {
         const {
+            compact,
             enableRangeSelection,
             disableWeekends,
             disableBeforeDate,
@@ -671,6 +672,7 @@ class Calendar extends Component {
             tableProps,
             tableHeaderProps,
             tableBodyProps,
+            showToday,
             specialDays,
             weekdayStart,
             ...props
@@ -678,6 +680,9 @@ class Calendar extends Component {
 
         const calendarClasses = classnames(
             'fd-calendar',
+            {
+                'fd-calendar--compact': compact
+            },
             className
         );
 
@@ -708,6 +713,8 @@ Calendar.propTypes = {
     blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
+    compact: PropTypes.bool,
     customDate: PropTypes.oneOfType([
         PropTypes.object,
         PropTypes.array
@@ -722,7 +729,7 @@ Calendar.propTypes = {
     disableFutureDates: PropTypes.bool,
     /** Set to **true** to disable dates before today\'s date */
     disablePastDates: PropTypes.bool,
-    /** Disables dates that match a weekday */
+    /** Disables dates that match a weekday. For example, `disableWeekday={[\'Tuesday\', \'Thursday\', \'Friday\']}` */
     disableWeekday: PropTypes.arrayOf(PropTypes.string),
     /** Set to **true** to disables dates that match a weekend */
     disableWeekends: PropTypes.bool,
@@ -770,6 +777,7 @@ Calendar.propTypes = {
 };
 
 Calendar.defaultProps = {
+    compact: false,
     locale: 'en',
     localizedText: {
         calendarInstructions: 'Use arrow keys to move between dates.',

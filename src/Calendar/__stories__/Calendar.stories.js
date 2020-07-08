@@ -44,6 +44,8 @@ const weekdayOptions = {
 
 export const primary = () => (<Calendar />);
 
+export const compact = () => (<Calendar compact />);
+
 export const disableWeekends = () => (
     <Calendar
         disableBeforeDate={new Date()}
@@ -86,6 +88,7 @@ export const dev = () => (
     <Calendar
         blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
             dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
+        compact={boolean('compact', false)}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
@@ -96,6 +99,7 @@ export const dev = () => (
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
         locale={text('locale', 'en')}
         openToDate={dateKnobToDate('open to date', new Date())}
+        showToday={boolean('showToday', false)}
         weekdayStart={number('weekdayStart', 0)} />
 );
 

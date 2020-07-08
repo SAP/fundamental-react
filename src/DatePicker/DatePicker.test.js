@@ -301,6 +301,66 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
     });
 
+    describe('With today footer button', () => {
+
+        test('renders today button when todayAction.type=\'select\' AND valid todayAction.label is specified', () => {
+            wrapper = mount(
+                <DatePicker
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(true);
+            expect(todayButtonWrapper.getDOMNode().innerHTML).toBe('Today');
+        });
+
+        test('doesn\'t render today button when todayAction.type=\'select\' AND valid todayAction.label is specified but date range selection is enabled', () => {
+            wrapper = mount(
+                <DatePicker
+                    enableRangeSelection
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(false);
+        });
+
+        test('sets todays date when today button is pressed', () => {
+            wrapper = mount(
+                <DatePicker
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(true);
+            todayButtonWrapper.simulate('click');
+            expect(moment().isSame(wrapper.state('selectedDate'), 'day')).toBe(true);
+        });
+
+        test('calls onChange date when today button is pressed', () => {
+            const change = jest.fn();
+            wrapper = mount(
+                <DatePicker
+                    dateFormat='YYYY/MM/DD'
+                    onChange={change}
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            todayButtonWrapper.simulate('click');
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
+
+        });
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after leaving input', () => {
             const blur = jest.fn();
@@ -352,7 +412,7 @@ describe('<DatePicker />', () => {
     });
 
     describe('first displayed day', () => {
-        afterEach(() => {
+        beforeEach(() => {
             document.body.innerHTML = '';
         });
         test('should be the first sunday before the start of the month in locale "es"', () => {
