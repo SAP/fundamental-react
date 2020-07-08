@@ -135,7 +135,6 @@ export const large = () => (
 );
 large.storyName = 'Large Design';
 
-
 const handleClick = () => {
     alert('Status clicked');
 };

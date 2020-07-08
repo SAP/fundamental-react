@@ -51,7 +51,9 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, 
 ObjectStatus.displayName = 'ObjectStatus';
 
 ObjectStatus.propTypes = {
-    /** aria-label is required for a11y, when object status has only icon */
+    /**
+     * aria-label is required for a11y, when object status has only icon
+    */
 
     ariaLabel: (props) => {
         if ((!props.children && !props.ariaLabel) || (!props.children && typeof props.ariaLabel !== 'string'))

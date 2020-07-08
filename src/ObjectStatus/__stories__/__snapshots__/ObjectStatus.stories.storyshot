@@ -1,42 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component API/ObjectStatus Clickable 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickable 1`] = `
 <div
   dir="ltr"
 >
   <div
     className="fddocs-container"
   >
-    <span
+    <button
       className="fd-object-status sap-icon--status-negative fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Negative
-    </span>
-    <span
+    </button>
+    <button
       className="fd-object-status sap-icon--status-critical fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Critical
-    </span>
-    <span
+    </button>
+    <button
       className="fd-object-status sap-icon--status-positive fd-object-status--positive fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Positive
-    </span>
+    </button>
     <a
       className="fd-object-status sap-icon--hint fd-object-status--informative fd-object-status--link"
       href="#"
     >
       Info
     </a>
-    <span
+    <button
       className="fd-object-status sap-icon--to-be-reviewed fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Neutral
-    </span>
+    </button>
   </div>
   <div
     className="fddocs-container"
@@ -66,10 +86,12 @@ exports[`Storyshots Component API/ObjectStatus Clickable 1`] = `
       Red
     </a>
     <a
+      aria-label="informative"
       className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative fd-object-status--link"
       href="#"
     />
     <a
+      aria-label="neutral"
       className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted fd-object-status--link"
       href="#"
     />
@@ -77,24 +99,39 @@ exports[`Storyshots Component API/ObjectStatus Clickable 1`] = `
   <div
     className="fddocs-container"
   >
-    <span
+    <button
       className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Negative
-    </span>
-    <span
+    </button>
+    <button
       className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Critical
-    </span>
-    <span
+    </button>
+    <button
       className="fd-object-status fd-object-status--indication-1 fd-object-status--large fd-object-status--link"
       onClick={[Function]}
+      style={
+        Object {
+          "background": "transparent",
+        }
+      }
     >
       Dark Red
-    </span>
+    </button>
     <a
       className="fd-object-status fd-object-status--indication-2 fd-object-status--large fd-object-status--link"
       href="#"
@@ -102,10 +139,12 @@ exports[`Storyshots Component API/ObjectStatus Clickable 1`] = `
       Red
     </a>
     <a
+      aria-label="info"
       className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative fd-object-status--link"
       href="#"
     />
     <a
+      aria-label="info"
       className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large fd-object-status--link"
       href="#"
     />
@@ -113,7 +152,7 @@ exports[`Storyshots Component API/ObjectStatus Clickable 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Generic Indication Colors 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Generic Indication Colors 1`] = `
 <div
   dir="ltr"
 >
@@ -164,7 +203,7 @@ exports[`Storyshots Component API/ObjectStatus Generic Indication Colors 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Icon Only 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon Only 1`] = `
 <div
   dir="ltr"
 >
@@ -172,25 +211,30 @@ exports[`Storyshots Component API/ObjectStatus Icon Only 1`] = `
     className="fddocs-container"
   >
     <span
+      aria-label="negative"
       className="fd-object-status sap-icon--status-negative fd-object-status--negative"
     />
     <span
+      aria-label="critical"
       className="fd-object-status sap-icon--status-critical fd-object-status--critical"
     />
     <span
+      aria-label="positive"
       className="fd-object-status sap-icon--status-positive fd-object-status--positive"
     />
     <span
+      aria-label="info"
       className="fd-object-status sap-icon--hint fd-object-status--informative"
     />
     <span
+      aria-label="neutral"
       className="fd-object-status sap-icon--to-be-reviewed"
     />
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Icon and Text 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon and Text 1`] = `
 <div
   dir="ltr"
 >
@@ -226,7 +270,7 @@ exports[`Storyshots Component API/ObjectStatus Icon and Text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Inverted 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverted 1`] = `
 <div
   dir="ltr"
 >
@@ -293,16 +337,18 @@ exports[`Storyshots Component API/ObjectStatus Inverted 1`] = `
       Red
     </span>
     <span
+      aria-label="informative"
       className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative"
     />
     <span
+      aria-label="neutral"
       className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted"
     />
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Large Design 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Large Design 1`] = `
 <div
   dir="ltr"
 >
@@ -369,16 +415,18 @@ exports[`Storyshots Component API/ObjectStatus Large Design 1`] = `
       Red
     </span>
     <span
+      aria-label="informative"
       className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative"
     />
     <span
+      aria-label="neutral"
       className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large"
     />
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Primary 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Primary 1`] = `
 <div
   dir="ltr"
 >
@@ -414,7 +462,7 @@ exports[`Storyshots Component API/ObjectStatus Primary 1`] = `
 </div>
 `;
 
-exports[`Storyshots Component API/ObjectStatus Text Only 1`] = `
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Text Only 1`] = `
 <div
   dir="ltr"
 >
