@@ -165,7 +165,6 @@ const Select = React.forwardRef(({
             firstFocusIndex={firstFocusIndex}
             noArrow
             placement='bottom-start'
-            popperProps={{ id }}
             ref={popoverRef}
             type='listbox'
             useArrowKeyNavigation
