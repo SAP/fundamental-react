@@ -5,7 +5,7 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const FormValidationOverlay = React.forwardRef(({ className, control, popperProps, validationState, ...props }, ref) => {
+const FormValidationOverlay = React.forwardRef(({ className, control, popperProps, validationState, ...rest }, ref) => {
     let [showValidationMessage, setShowValidationMessage] = useState(false);
 
     const _handleBlur = () => {
@@ -22,8 +22,10 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
 
     const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
 
+    const referenceComponent = React.cloneElement(control, rest);
+
     return (
-        <div {...props}
+        <div
             className={popoverClasses}
             onBlur={_handleBlur}
             onFocus={_handleFocus}
@@ -34,7 +36,7 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
                 popperPlacement={'bottom-start'}
                 popperProps={popperProps}
                 referenceClassName='fd-popover__control'
-                referenceComponent={control}
+                referenceComponent={referenceComponent}
                 show={showValidationMessage}
                 usePortal>
                 {bodyContent}
