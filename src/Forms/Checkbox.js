@@ -53,6 +53,12 @@ const Checkbox = React.forwardRef(({
 
     const checkId = id ? id : shortId.generate();
 
+    const checkboxChildren = (typeof children === 'string') ? (
+        <span className='fd-checkbox__text'>
+            {children}
+        </span>
+    ) : children;
+
     return (
         <FormItem
             {...props}
@@ -77,9 +83,7 @@ const Checkbox = React.forwardRef(({
                 className={labelClasses}
                 disabled={disabled}
                 htmlFor={checkId}>
-                <span className='fd-checkbox__text'>
-                    {children}
-                </span>
+                {checkboxChildren}
             </FormLabel>
         </FormItem>
     );

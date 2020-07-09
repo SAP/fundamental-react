@@ -18,13 +18,13 @@ exports[`Storyshots Component API/Select Compact 1`] = `
         <div
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
-          aria-haspopup={true}
+          aria-haspopup="listbox"
           className="fd-popover"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <div
@@ -81,13 +81,13 @@ exports[`Storyshots Component API/Select Dev 1`] = `
         <div
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
-          aria-haspopup={true}
+          aria-haspopup="listbox"
           className="fd-popover"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <div
@@ -145,13 +145,13 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
         <div
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
-          aria-haspopup={true}
+          aria-haspopup="listbox"
           className="fd-popover"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <div
@@ -208,13 +208,13 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
         <div
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
-          aria-haspopup={true}
+          aria-haspopup="listbox"
           className="fd-popover"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <div
@@ -268,13 +268,13 @@ exports[`Storyshots Component API/Select Primary 1`] = `
         <div
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
-          aria-haspopup={true}
+          aria-haspopup="listbox"
           className="fd-popover"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <div
@@ -330,13 +330,13 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
         <div
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
-          aria-haspopup={true}
+          aria-haspopup="listbox"
           className="fd-popover"
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="combobox"
           tabIndex={0}
         >
           <div
@@ -392,13 +392,13 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           <div
             aria-controls="fd-mocked-short-id"
             aria-expanded={false}
-            aria-haspopup={true}
+            aria-haspopup="listbox"
             className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             onKeyPress={[Function]}
-            role="button"
+            role="combobox"
             tabIndex={0}
           >
             <div
@@ -447,13 +447,13 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           <div
             aria-controls="fd-mocked-short-id"
             aria-expanded={false}
-            aria-haspopup={true}
+            aria-haspopup="listbox"
             className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             onKeyPress={[Function]}
-            role="button"
+            role="combobox"
             tabIndex={0}
           >
             <div
@@ -502,13 +502,13 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           <div
             aria-controls="fd-mocked-short-id"
             aria-expanded={false}
-            aria-haspopup={true}
+            aria-haspopup="listbox"
             className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             onKeyPress={[Function]}
-            role="button"
+            role="combobox"
             tabIndex={0}
           >
             <div
@@ -557,13 +557,13 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
           <div
             aria-controls="fd-mocked-short-id"
             aria-expanded={false}
-            aria-haspopup={true}
+            aria-haspopup="listbox"
             className="fd-popover"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             onKeyPress={[Function]}
-            role="button"
+            role="combobox"
             tabIndex={0}
           >
             <div

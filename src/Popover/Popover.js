@@ -7,7 +7,7 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
-import { POPOVER_ROLES, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
+import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/popover.css';
 
@@ -94,6 +94,7 @@ class Popover extends Component {
 
     render() {
         const {
+            controlProps,
             disableEdgeDetection,
             disableKeyPressHandler,
             disableTriggerOnClick,
@@ -110,7 +111,6 @@ class Popover extends Component {
             popperProps,
             widthSizingType,
             useArrowKeyNavigation,
-            role,
             type,
             show,
             ...rest
@@ -127,7 +127,8 @@ class Popover extends Component {
 
         const id = popperProps.id || this.popoverId;
 
-        let controlProps = {
+        let newControlProps = {
+            ...controlProps,
             onClick: onClickFunctions,
             ref: (c) => {
                 this.controlRef = findDOMNode(c);
@@ -148,10 +149,10 @@ class Popover extends Component {
         };
 
         if (!disableKeyPressHandler) {
-            controlProps = {
-                ...controlProps,
+            newControlProps = {
+                ...newControlProps,
                 tabIndex: 0,
-                role: !!role ? role : 'button',
+                role: !!controlProps?.role ? controlProps?.role : 'button',
                 'aria-controls': id,
                 'aria-expanded': this.state.isExpanded,
                 'aria-haspopup': !!type ? type : true,
@@ -163,7 +164,7 @@ class Popover extends Component {
             'is-expanded': this.state.isExpanded
         });
 
-        const referenceComponent = React.cloneElement(control, controlProps);
+        const referenceComponent = React.cloneElement(control, newControlProps);
 
         const popoverClasses = classnames('fd-popover', className);
 
@@ -200,6 +201,8 @@ Popover.propTypes = {
     control: PropTypes.node.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Additional props to be spread to the control element */
+    controlProps: PropTypes.object,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     /** Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll */
@@ -231,8 +234,6 @@ Popover.propTypes = {
     popperClassName: PropTypes.string,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
-    /** Indicates the ARIA role to assign to the control element - "button" or "combobox". Defaults to 'button' */
-    role: PropTypes.oneOf(POPOVER_ROLES),
     /** Handling for show/hide popover if true show the popover */
     show: PropTypes.bool,
     /**  Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree".
