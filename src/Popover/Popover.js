@@ -7,7 +7,7 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
-import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
+import { POPOVER_ROLES, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/popover.css';
 
@@ -110,6 +110,7 @@ class Popover extends Component {
             popperProps,
             widthSizingType,
             useArrowKeyNavigation,
+            role,
             type,
             show,
             ...rest
@@ -150,7 +151,7 @@ class Popover extends Component {
             controlProps = {
                 ...controlProps,
                 tabIndex: 0,
-                role: 'button',
+                role: !!role ? role : 'button',
                 'aria-controls': id,
                 'aria-expanded': this.state.isExpanded,
                 'aria-haspopup': !!type ? type : true,
@@ -230,6 +231,8 @@ Popover.propTypes = {
     popperClassName: PropTypes.string,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
+    /** Indicates the ARIA role to assign to the control element - "button" or "combobox". Defaults to 'button' */
+    role: PropTypes.oneOf(POPOVER_ROLES),
     /** Handling for show/hide popover if true show the popover */
     show: PropTypes.bool,
     /**  Indicates the type of popup - "dialog", "grid", "listbox", "menu", or "tree".

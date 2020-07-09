@@ -165,6 +165,8 @@ const Select = React.forwardRef(({
             placement='bottom-start'
             popperProps={{ id }}
             ref={popoverRef}
+            role='combobox'
+            type='listbox'
             useArrowKeyNavigation
             widthSizingType='minTarget' />
     );

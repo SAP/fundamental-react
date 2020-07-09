@@ -72,6 +72,11 @@ export const POPOVER_TYPES = [
     'tree'
 ];
 
+export const POPOVER_ROLES = [
+    'button',
+    'combobox'
+];
+
 export const POPPER_PLACEMENTS = [
     'bottom-start',
     'bottom',
