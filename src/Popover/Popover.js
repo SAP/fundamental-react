@@ -94,7 +94,6 @@ class Popover extends Component {
 
     render() {
         const {
-            controlProps,
             disableEdgeDetection,
             disableKeyPressHandler,
             disableTriggerOnClick,
@@ -128,7 +127,6 @@ class Popover extends Component {
         const id = popperProps.id || this.popoverId;
 
         let newControlProps = {
-            ...controlProps,
             onClick: onClickFunctions,
             ref: (c) => {
                 this.controlRef = findDOMNode(c);
@@ -152,7 +150,7 @@ class Popover extends Component {
             newControlProps = {
                 ...newControlProps,
                 tabIndex: 0,
-                role: !!controlProps?.role ? controlProps?.role : 'button',
+                role: !!control?.props.role ? control?.props.role : 'button',
                 'aria-controls': id,
                 'aria-expanded': this.state.isExpanded,
                 'aria-haspopup': !!type ? type : true,
@@ -201,8 +199,6 @@ Popover.propTypes = {
     control: PropTypes.node.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Additional props to be spread to the control element */
-    controlProps: PropTypes.object,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     /** Set to **true** to render popover without edge detection so popover will not flip from top to bottom with scroll */
