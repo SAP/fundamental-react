@@ -159,7 +159,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 <div
                   className="fd-popover"
                   onBlur={[Function]}
-                  onClick={[Function]}
                   onFocus={[Function]}
                 >
                   <div
@@ -172,6 +171,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                     >
                       <div
                         className="fd-shellbar__input-group fd-input-group"
+                        onClick={[Function]}
                       >
                         <input
                           className="fd-input fd-input-group__input fd-shellbar__input-group__input"
@@ -549,7 +549,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 <div
                   className="fd-popover"
                   onBlur={[Function]}
-                  onClick={[Function]}
                   onFocus={[Function]}
                 >
                   <div
@@ -562,6 +561,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                     >
                       <div
                         className="fd-shellbar__input-group fd-input-group"
+                        onClick={[Function]}
                       >
                         <input
                           className="fd-input fd-input-group__input fd-shellbar__input-group__input"
