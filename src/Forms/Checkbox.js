@@ -77,7 +77,9 @@ const Checkbox = React.forwardRef(({
                 className={labelClasses}
                 disabled={disabled}
                 htmlFor={checkId}>
-                {children}
+                <span className='fd-checkbox__text'>
+                    {children}
+                </span>
             </FormLabel>
         </FormItem>
     );
