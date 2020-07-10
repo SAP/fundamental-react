@@ -76,7 +76,11 @@ export const richTable = () => {
 
     return (
         <Table
-            headers={[<Checkbox ariaLabel='Select all rows' onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
+            headers={[
+                <Checkbox
+                    ariaLabel='Select all rows'
+                    checked={!Object.keys(checkedItems).some(key => !checkedItems[key])}
+                    onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
             richTable
             tableData={
                 tableRowData.map(item => {
