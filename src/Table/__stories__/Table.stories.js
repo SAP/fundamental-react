@@ -41,6 +41,12 @@ export const richTable = () => {
         setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked });
     };
 
+    const handleHeaderChange = (event) => {
+        const newCheckedItems = {};
+        tableRowData.forEach(row => newCheckedItems[row.name] = event.target.checked);
+        setCheckedItems(newCheckedItems);
+    };
+
     const tableRowData = [
         {
             email: 'user.name@test.com',
@@ -70,13 +76,14 @@ export const richTable = () => {
 
     return (
         <Table
-            headers={[<Checkbox />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
+            headers={[<Checkbox ariaLabel='Select all rows' onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
             richTable
             tableData={
                 tableRowData.map(item => {
                     return ({
                         rowData: [
                             <Checkbox
+                                ariaLabel={'Select row'}
                                 checked={checkedItems[item.name] || false}
                                 name={item.name}
                                 onChange={handleChange} />,

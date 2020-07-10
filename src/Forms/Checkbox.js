@@ -1,3 +1,4 @@
+/* eslint-disable valid-jsdoc */
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
@@ -11,6 +12,7 @@ import 'fundamental-styles/dist/checkbox.css';
 This component can also be disabled and displayed in a row */
 
 const Checkbox = React.forwardRef(({
+    ariaLabel,
     checked,
     children,
     className,
@@ -67,6 +69,7 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
+                aria-label={ariaLabel}
                 checked={checked}
                 className={classes}
                 defaultChecked={defaultChecked}
@@ -92,10 +95,20 @@ const Checkbox = React.forwardRef(({
 Checkbox.displayName = 'Checkbox';
 
 Checkbox.propTypes = {
-    /** Node(s) to render within the component */
-    children: PropTypes.node.isRequired,
+    /** aria-label for the checkbox when no visible label is used */
+    ariaLabel: PropTypes.string,
     /** Set to **true** when checkbox input is checked and a controlled component */
     checked: PropTypes.bool,
+    /** Node(s) to render within the component */
+    children: (props, propName, componentName) => {
+        if (!props.children && !props.ariaLabel) {
+            return new Error(`
+No \`children\` or \`aria-label\` found for ${componentName}.
+Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` for accessibility purposes.
+`
+            );
+        }
+    },
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
