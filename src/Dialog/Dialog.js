@@ -44,6 +44,7 @@ class Dialog extends Component {
     render() {
         const {
             actions,
+            backdropClassName,
             bodyProps,
             children,
             className,
@@ -93,7 +94,8 @@ class Dialog extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock as='div' lockProps={{ ...rest }}>
+            <FocusLock as='div' className={backdropClassName}
+                lockProps={{ ...rest }}>
                 <span data-autofocus tabIndex='-1' />
                 <div
                     aria-label={title}
@@ -152,6 +154,8 @@ Dialog.propTypes = {
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
     /** Localized text for the heading */
     title: PropTypes.string.isRequired,
+    /** CSS class(es) to add to the dialog backdrop */
+    backdropClassName: PropTypes.string,
     /** Additional props to be spread to the body section of the dialog */
     bodyProps: PropTypes.object,
     /** Node(s) to render within the component */

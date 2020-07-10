@@ -154,6 +154,18 @@ describe('<Dialog />', () => {
     });
 
     describe('Custom class names', () => {
+        test('should allow classes to be added to backdrop', () => {
+            component = mount(<Dialog
+                actions={[
+                    (<Button option='transparent'>No</Button>),
+                    (<Button>Yes</Button>)
+                ]}
+                backdropClassName='sample' show
+                title='Title' />);
+
+            expect(component.find('.sample').exists()).toBe(true);
+        });
+
         test('should allow classes to be added to dialog', () => {
             component = mount(<Dialog
                 actions={[
