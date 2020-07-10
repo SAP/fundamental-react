@@ -215,8 +215,8 @@ Popover.propTypes = {
     firstFocusIndex: PropTypes.number,
     /** The bounding container to use when determining if the popover is out of bounds */
     flipContainer: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
+        PropTypes.arrayOf(PropTypes.element),
+        PropTypes.element
     ]),
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,

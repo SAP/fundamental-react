@@ -249,8 +249,8 @@ Popper.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     fallbackPlacements: PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
     flipContainer: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.node),
-        PropTypes.node
+        PropTypes.arrayOf(PropTypes.element),
+        PropTypes.element
     ]),
     innerRef: PropTypes.func,
     noArrow: PropTypes.bool,
