@@ -74,12 +74,14 @@ export const richTable = () => {
         }
     ];
 
+    const allItemsChecked = Object.keys(checkedItems).length > 0 && !Object.keys(checkedItems).some(key => !checkedItems[key]);
+
     return (
         <Table
             headers={[
                 <Checkbox
                     ariaLabel='Select all rows'
-                    checked={!Object.keys(checkedItems).some(key => !checkedItems[key])}
+                    checked={allItemsChecked}
                     onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
             richTable
             tableData={

@@ -111,6 +111,8 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-label="Select all rows"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -158,18 +160,21 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       className="fd-table__body"
     >
       <tr
+        aria-selected={false}
         className="fd-table__row"
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
-          onChange={[Function]}
         >
           <div
             className="fd-form-item"
           >
             <input
+              aria-label="Select row"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id"
+              name="User"
               onChange={[Function]}
               type="checkbox"
             />
@@ -247,18 +252,21 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         </td>
       </tr>
       <tr
+        aria-selected={false}
         className="fd-table__row"
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
-          onChange={[Function]}
         >
           <div
             className="fd-form-item"
           >
             <input
+              aria-label="Select row"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id"
+              name="Florence"
               onChange={[Function]}
               type="checkbox"
             />
@@ -336,18 +344,21 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         </td>
       </tr>
       <tr
+        aria-selected={false}
         className="fd-table__row"
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
-          onChange={[Function]}
         >
           <div
             className="fd-form-item"
           >
             <input
+              aria-label="Select row"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id"
+              name="Mark"
               onChange={[Function]}
               type="checkbox"
             />
@@ -425,18 +436,21 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
         </td>
       </tr>
       <tr
+        aria-selected={false}
         className="fd-table__row"
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
-          onChange={[Function]}
         >
           <div
             className="fd-form-item"
           >
             <input
+              aria-label="Select row"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id"
+              name="Jenna"
               onChange={[Function]}
               type="checkbox"
             />
