@@ -9,7 +9,7 @@ import {
     boolean,
     select
 } from '@storybook/addon-knobs';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default {
     title: 'Component API/Popover',
@@ -204,6 +204,36 @@ export const disableEdgeDetection = () => (
             placement='bottom' />
     </>
 );
+
+export const withCustomFlipContainer = () => {
+    const containerRef = useRef();
+    const [container, setContainer] = useState();
+
+    useEffect(() => {
+        setContainer(containerRef.current);
+    });
+
+    return (
+        <div style={{ alignItems: 'center', display: 'flex' }}>
+            <div style={{
+                backgroundColor: '#444',
+                width: '180px',
+                height: '120px'
+            }} />
+            <div ref={containerRef} style={{
+                border: '1px solid black',
+                padding: '120px 140px 250px 40px'
+            }}>
+                <Popover
+                    body={bodyContent}
+                    control={<Button glyph='navigation-up-arrow' option='transparent' />}
+                    fallbackPlacements={['left', 'right', 'top']}
+                    flipContainer={container}
+                    placement='bottom' />
+            </div>
+        </div>
+    );
+};
 
 export const noArrow = () => (
     <>

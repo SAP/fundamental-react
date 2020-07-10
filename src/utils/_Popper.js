@@ -17,23 +17,35 @@ const defaultModifiers = [
         }
     },
     {
-        name: 'preventOverflow',
-        options: {
-            boundary: []
-        }
+        name: 'preventOverflow'
     },
     {
         name: 'hide' // adds the isReferenceHidden attribute
-    },
-    {
-        name: 'flip',
-        options: {
-            boundary: [] // https://github.com/popperjs/popper-core/issues/1110
-        }
+
+
     }
 ];
 
-const disableEdgeDetectionModifier = { name: 'flip', enabled: false };
+const createFlipModifier = ({
+    disableEdgeDetection,
+    fallbackPlacements,
+    flipContainer
+}) => {
+    if (disableEdgeDetection) {
+        return {
+            name: 'flip',
+            enabled: false
+        };
+    }
+
+    return {
+        name: 'flip',
+        options: {
+            fallbackPlacements,
+            boundary: flipContainer
+        }
+    };
+};
 
 const matchTargetModifier = {
     name: 'matchTargetModifier',
@@ -128,6 +140,8 @@ class Popper extends React.Component {
             children,
             cssBlock,
             disableEdgeDetection,
+            fallbackPlacements,
+            flipContainer,
             innerRef,
             noArrow,
             onClickOutside,
@@ -145,11 +159,9 @@ class Popper extends React.Component {
 
         const modifiers = [
             ...defaultModifiers,
+            createFlipModifier({ disableEdgeDetection, fallbackPlacements, flipContainer }),
             ...popperModifiers
         ];
-        if (disableEdgeDetection) {
-            modifiers.push(disableEdgeDetectionModifier);
-        }
         if (widthSizingType === 'matchTarget') {
             modifiers.push(matchTargetModifier);
         }
@@ -235,6 +247,11 @@ Popper.propTypes = {
     cssBlock: PropTypes.string.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
+    fallbackPlacements: PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
+    flipContainer: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]),
     innerRef: PropTypes.func,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
@@ -252,6 +269,7 @@ Popper.propTypes = {
 };
 
 Popper.defaultProps = {
+    fallbackPlacements: ['bottom-start', 'top-start', 'bottom-end', 'top-end'],
     popperModifiers: [],
     popperPlacement: 'bottom-start',
     onClickOutside: () => { },

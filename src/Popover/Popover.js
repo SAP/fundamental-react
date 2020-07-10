@@ -97,6 +97,8 @@ class Popover extends Component {
             disableEdgeDetection,
             disableKeyPressHandler,
             disableTriggerOnClick,
+            fallbackPlacements,
+            flipContainer,
             firstFocusIndex,
             onClickOutside,
             onEscapeKey,
@@ -167,6 +169,8 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     disableEdgeDetection={disableEdgeDetection}
+                    fallbackPlacements={fallbackPlacements}
+                    flipContainer={flipContainer}
                     innerRef={innerRef}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
@@ -205,8 +209,15 @@ Popover.propTypes = {
     /** Set to **true** to remove default triggerBody handler used in onClick.
      * Useful for when a custom method is desired to open the Popover */
     disableTriggerOnClick: PropTypes.bool,
+    /** Where else to position the popover when the original placement is out of bounds */
+    fallbackPlacements: PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
     /** Index of the focusable item to focus first within the Popover */
     firstFocusIndex: PropTypes.number,
+    /** The bounding container to use when determining if the popover is out of bounds */
+    flipContainer: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]),
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
     /** 'bottom-start',
