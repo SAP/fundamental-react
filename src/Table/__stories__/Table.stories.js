@@ -77,7 +77,8 @@ export const richTable = () => {
                     return ({
                         rowData: [
                             <Checkbox
-                                checked={checkedItems[item.name]}
+                                checked={checkedItems[item.name] || false}
+                                name={item.name}
                                 onChange={handleChange} />,
                             <Avatar backgroundImageUrl={item.photoUrl} size='m'
                                 transparent />,
