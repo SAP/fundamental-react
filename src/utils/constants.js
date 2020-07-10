@@ -39,10 +39,10 @@ export const FORM_MESSAGE_TYPES = [
 ];
 
 export const ICON_SIZES = {
-    's': '12px',
-    'm': '16px',
-    'l': '20px',
-    'xl': '24px'
+    's': '0.75rem',
+    'm': '1rem',
+    'l': '1.25rem',
+    'xl': '1.5rem'
 };
 
 export const AVATAR_SIZES = [
