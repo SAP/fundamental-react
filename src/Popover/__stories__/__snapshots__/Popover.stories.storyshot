@@ -804,3 +804,62 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Component API/Popover With Custom Flip Container 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#444",
+          "height": "120px",
+          "width": "180px",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "border": "1px solid black",
+          "padding": "120px 140px 250px 40px",
+        }
+      }
+    >
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <button
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+              type="button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
