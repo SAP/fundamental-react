@@ -5,27 +5,35 @@ exports[`Storyshots Component API/Popover Dev 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-popover"
+    style={
+      Object {
+        "margin": "220px",
+      }
+    }
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover"
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        <button
-          aria-controls="fd-mocked-short-id"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
-        />
+        <div
+          className="fd-popover__control"
+        >
+          <button
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -830,7 +838,7 @@ exports[`Storyshots Component API/Popover With Custom Flip Container 1`] = `
       style={
         Object {
           "border": "1px solid black",
-          "padding": "120px 140px 250px 40px",
+          "padding": "220px 140px 250px 40px",
         }
       }
     >
