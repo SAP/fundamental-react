@@ -14,7 +14,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--accelerated"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -30,7 +30,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--accept"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -46,7 +46,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--accidental-leave"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -62,7 +62,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--account"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -78,7 +78,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--accounting-document-verification"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -94,7 +94,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--action"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -110,7 +110,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--action-settings"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -126,7 +126,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--activate"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -142,7 +142,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--activities"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -158,7 +158,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--activity-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -174,7 +174,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--activity-assigned-to-goal"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -190,7 +190,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--activity-individual"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -206,7 +206,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--activity-items"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -222,7 +222,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -238,7 +238,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-activity"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -254,7 +254,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-activity-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -270,7 +270,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-contact"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -286,7 +286,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-coursebook"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -302,7 +302,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-document"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -318,7 +318,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-equipment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -334,7 +334,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-favorite"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -350,7 +350,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-filter"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -366,7 +366,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-photo"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -382,7 +382,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-process"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -398,7 +398,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--add-product"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -414,7 +414,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--address-book"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -430,7 +430,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--addresses"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -446,7 +446,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--alert"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -462,7 +462,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--along-stacked-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -478,7 +478,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--alphabetical-order"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -494,7 +494,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--appointment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -510,7 +510,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--appointment-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -526,7 +526,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--approvals"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -542,7 +542,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--area-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -558,7 +558,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--arobase"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -574,7 +574,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--arrow-bottom"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -590,7 +590,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--arrow-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -606,7 +606,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--arrow-left"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -622,7 +622,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--arrow-right"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -638,7 +638,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--arrow-top"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -654,7 +654,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -670,7 +670,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-audio"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -686,7 +686,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-e-pub"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -702,7 +702,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-html"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -718,7 +718,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-photo"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -734,7 +734,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-text-file"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -750,7 +750,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-video"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -766,7 +766,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--attachment-zip-file"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -782,7 +782,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--back-to-top"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -798,7 +798,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--background"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -814,7 +814,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--badge"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -830,7 +830,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bar-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -846,7 +846,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bar-code"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -862,7 +862,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--basket"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -878,7 +878,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--batch-payments"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -894,7 +894,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bbyd-active-sales"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -910,7 +910,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bbyd-dashboard"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -926,7 +926,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bed"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -942,7 +942,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--begin"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -958,7 +958,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bell"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -974,7 +974,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--blank-tag"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -990,7 +990,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--blank-tag-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1006,7 +1006,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bo-strategy-management"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1022,7 +1022,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bold-text"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1038,7 +1038,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bookmark"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1054,7 +1054,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--border"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1070,7 +1070,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--broken-link"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1086,7 +1086,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bubble-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1102,7 +1102,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--building"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1118,7 +1118,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bullet-text"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1134,7 +1134,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--burglary"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1150,7 +1150,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--bus-public-transport"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1166,7 +1166,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--business-by-design"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1182,7 +1182,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--business-card"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1198,7 +1198,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--business-objects-experience"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1214,7 +1214,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--business-objects-explorer"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1230,7 +1230,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--business-objects-mobile"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1246,7 +1246,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--business-one"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1262,7 +1262,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--calendar"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1278,7 +1278,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--call"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1294,7 +1294,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--camera"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1310,7 +1310,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cancel"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1326,7 +1326,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cancel-maintenance"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1342,7 +1342,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cancel-share"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1358,7 +1358,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--capital-projects"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1374,7 +1374,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--car-rental"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1390,7 +1390,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--card"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1406,7 +1406,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cargo-train"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1422,7 +1422,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1438,7 +1438,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1454,7 +1454,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart-3"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1470,7 +1470,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart-4"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1486,7 +1486,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart-5"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1502,7 +1502,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart-approval"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1518,7 +1518,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cart-full"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1534,7 +1534,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cause"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1550,7 +1550,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--chain-link"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1566,7 +1566,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--chalkboard"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1582,7 +1582,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--chart-axis"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1598,7 +1598,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--chart-table-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1614,7 +1614,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--Chart-Tree-Map"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1630,7 +1630,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--check-availability"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1646,7 +1646,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--checklist"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1662,7 +1662,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--checklist-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1678,7 +1678,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--checklist-item"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1694,7 +1694,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--checklist-item-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1710,7 +1710,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--chevron-phase"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1726,7 +1726,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--chevron-phase-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1742,7 +1742,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--choropleth-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1758,7 +1758,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--circle-task"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1774,7 +1774,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--circle-task-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1790,7 +1790,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--citizen-connect"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1806,7 +1806,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--clear-filter"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1822,7 +1822,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--clinical-order"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1838,7 +1838,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--clinical-tast-tracker"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1854,7 +1854,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--close-command-field"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1870,7 +1870,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cloud"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1886,7 +1886,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--co"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1902,7 +1902,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--collaborate"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1918,7 +1918,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--collapse"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1934,7 +1934,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--collapse-group"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1950,7 +1950,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--collections-insight"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1966,7 +1966,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--collections-management"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1982,7 +1982,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--collision"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -1998,7 +1998,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--color-fill"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2014,7 +2014,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--column-chart-dual-axis"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2030,7 +2030,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--comment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2046,7 +2046,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--commission-check"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2062,7 +2062,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--company-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2078,7 +2078,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--compare"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2094,7 +2094,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--compare-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2110,7 +2110,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--competitor"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2126,7 +2126,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--complete"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2142,7 +2142,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--connected"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2158,7 +2158,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--contacts"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2174,7 +2174,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--copy"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2190,7 +2190,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--course-book"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2206,7 +2206,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--course-program"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2222,7 +2222,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--create"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2238,7 +2238,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--create-entry-time"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2254,7 +2254,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--create-form"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2270,7 +2270,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--create-leave-request"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2286,7 +2286,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--create-session"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2302,7 +2302,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--credit-card"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2318,7 +2318,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--crm-sales"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2334,7 +2334,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--crm-service-manager"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2350,7 +2350,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--crop"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2366,7 +2366,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--crossed-line-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2382,7 +2382,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--curriculum"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2398,7 +2398,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--cursor"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2414,7 +2414,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2430,7 +2430,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-and-contacts"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2446,7 +2446,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-and-supplier"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2462,7 +2462,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-briefing"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2478,7 +2478,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-financial-fact-sheet"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2494,7 +2494,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-history"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2510,7 +2510,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-order-entry"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2526,7 +2526,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customer-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2542,7 +2542,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--customize"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2558,7 +2558,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--database"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2574,7 +2574,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--date-time"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2590,7 +2590,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--decision"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2606,7 +2606,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--decline"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2622,7 +2622,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--decrease-line-height"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2638,7 +2638,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--delete"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2654,7 +2654,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--detail-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2670,7 +2670,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--developer-settings"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2686,7 +2686,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--dimension"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2702,7 +2702,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--disconnected"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2718,7 +2718,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--discussion"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2734,7 +2734,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--discussion-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2750,7 +2750,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--dishwasher"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2766,7 +2766,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--display"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2782,7 +2782,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--display-more"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2798,7 +2798,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--doc-attachment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2814,7 +2814,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--doctor"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2830,7 +2830,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--document"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2846,7 +2846,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--document-text"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2862,7 +2862,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--documents"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2878,7 +2878,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--donut-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2894,7 +2894,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2910,7 +2910,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--download"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2926,7 +2926,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--download-from-cloud"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2942,7 +2942,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--draw-rectangle"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2958,7 +2958,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--drill-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2974,7 +2974,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--drill-up"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -2990,7 +2990,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--drop-down-list"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3006,7 +3006,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--dropdown"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3022,7 +3022,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--duplicate"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3038,7 +3038,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--e-care"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3054,7 +3054,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--e-learning"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3070,7 +3070,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--eam-work-order"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3086,7 +3086,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--edit"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3102,7 +3102,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--edit-outside"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3118,7 +3118,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--education"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3134,7 +3134,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--electrocardiogram"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3150,7 +3150,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--electronic-medical-record"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3166,7 +3166,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--email"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3182,7 +3182,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--email-read"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3198,7 +3198,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--employee"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3214,7 +3214,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--employee-approvals"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3230,7 +3230,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--employee-lookup"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3246,7 +3246,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--employee-pane"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3262,7 +3262,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--employee-rejections"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3278,7 +3278,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--end-user-experience-monitoring"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3294,7 +3294,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--endoscopy"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3310,7 +3310,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--energy-saving-lightbulb"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3326,7 +3326,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--enter-more"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3342,7 +3342,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--eraser"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3358,7 +3358,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--error"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3374,7 +3374,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--example"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3390,7 +3390,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--excel-attachment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3406,7 +3406,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--exitfullscreen"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3422,7 +3422,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--expand"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3438,7 +3438,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--expand-group"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3454,7 +3454,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--expense-report"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3470,7 +3470,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--explorer"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3486,7 +3486,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--factory"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3502,7 +3502,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--fallback"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3518,7 +3518,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--family-care"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3534,7 +3534,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--family-protection"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3550,7 +3550,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--favorite"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3566,7 +3566,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--favorite-list"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3582,7 +3582,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--fax-machine"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3598,7 +3598,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--feed"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3614,7 +3614,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--feeder-arrow"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3630,7 +3630,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--filter"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3646,7 +3646,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--filter-analytics"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3662,7 +3662,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--filter-facets"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3678,7 +3678,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--filter-fields"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3694,7 +3694,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--flag"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3710,7 +3710,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--flight"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3726,7 +3726,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--fob-watch"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3742,7 +3742,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--folder"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3758,7 +3758,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--folder-blank"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3774,7 +3774,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--folder-full"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3790,7 +3790,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--form"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3806,7 +3806,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--forward"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3822,7 +3822,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--fridge"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3838,7 +3838,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--full-screen"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3854,7 +3854,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--full-stacked-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3870,7 +3870,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--full-stacked-column-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3886,7 +3886,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--functional-location"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3902,7 +3902,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--future"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3918,7 +3918,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--gantt-bars"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3934,7 +3934,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--general-leave-request"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3950,7 +3950,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--generate-shortcut"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3966,7 +3966,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--geographic-bubble-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3982,7 +3982,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--globe"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -3998,7 +3998,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--goal"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4014,7 +4014,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--goalseek"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4030,7 +4030,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--grid"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4046,7 +4046,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--group"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4062,7 +4062,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--group-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4078,7 +4078,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--header"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4094,7 +4094,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--heading-1"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4110,7 +4110,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--heading-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4126,7 +4126,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--heading-3"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4142,7 +4142,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--headset"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4158,7 +4158,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--heating-cooling"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4174,7 +4174,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--heatmap-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4190,7 +4190,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--hello-world"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4206,7 +4206,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--hide"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4222,7 +4222,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--hint"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4238,7 +4238,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--history"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4254,7 +4254,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--home"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4270,7 +4270,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--home-share"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4286,7 +4286,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--horizontal-bar-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4302,7 +4302,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--horizontal-bar-chart-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4318,7 +4318,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--horizontal-bullet-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4334,7 +4334,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--horizontal-grip"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4350,7 +4350,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--horizontal-stacked-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4366,7 +4366,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--horizontal-waterfall-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4382,7 +4382,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--hr-approval"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4398,7 +4398,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--idea-wall"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4414,7 +4414,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--image-viewer"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4430,7 +4430,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--inbox"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4446,7 +4446,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--incident"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4462,7 +4462,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--incoming-call"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4478,7 +4478,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--increase-line-height"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4494,7 +4494,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--indent"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4510,7 +4510,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--initiative"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4526,7 +4526,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--inspect"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4542,7 +4542,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--inspect-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4558,7 +4558,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--inspection"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4574,7 +4574,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--instance"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4590,7 +4590,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--insurance-car"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4606,7 +4606,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--insurance-house"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4622,7 +4622,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--insurance-life"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4638,7 +4638,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--internet-browser"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4654,7 +4654,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--inventory"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4670,7 +4670,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--ipad"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4686,7 +4686,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--ipad-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4702,7 +4702,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--iphone"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4718,7 +4718,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--iphone-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4734,7 +4734,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--it-host"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4750,7 +4750,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--it-instance"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4766,7 +4766,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--it-system"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4782,7 +4782,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--italic-text"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4798,7 +4798,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--jam"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4814,7 +4814,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--journey-arrive"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4830,7 +4830,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--journey-change"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4846,7 +4846,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--journey-depart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4862,7 +4862,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--key"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4878,7 +4878,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--key-user-settings"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4894,7 +4894,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--kpi-corporate-performance"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4910,7 +4910,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--kpi-managing-my-area"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4926,7 +4926,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--lab"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4942,7 +4942,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--laptop"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4958,7 +4958,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--lateness"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4974,7 +4974,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--lead"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -4990,7 +4990,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--lead-outdated"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5006,7 +5006,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--leads"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5022,7 +5022,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--learning-assistant"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5038,7 +5038,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--legend"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5054,7 +5054,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--less"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5070,7 +5070,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--letter"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5086,7 +5086,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--lightbulb"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5102,7 +5102,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--line-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5118,7 +5118,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--line-chart-dual-axis"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5134,7 +5134,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--line-chart-time-axis"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5150,7 +5150,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--line-charts"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5166,7 +5166,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--list"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5182,7 +5182,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--loan"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5198,7 +5198,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--locate-me"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5214,7 +5214,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--locked"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5230,7 +5230,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--log"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5246,7 +5246,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--machine"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5262,7 +5262,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--manager"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5278,7 +5278,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--manager-insight"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5294,7 +5294,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--map"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5310,7 +5310,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--map-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5326,7 +5326,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--map-3"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5342,7 +5342,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--marketing-campaign"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5358,7 +5358,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--master-task-triangle"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5374,7 +5374,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--master-task-triangle-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5390,7 +5390,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--meal"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5406,7 +5406,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--measure"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5422,7 +5422,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--measurement-document"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5438,7 +5438,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--measuring-point"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5454,7 +5454,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--media-forward"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5470,7 +5470,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--media-pause"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5486,7 +5486,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--media-play"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5502,7 +5502,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--media-reverse"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5518,7 +5518,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--media-rewind"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5534,7 +5534,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--meeting-room"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5550,7 +5550,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--menu"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5566,7 +5566,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--menu2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5582,7 +5582,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--message-error"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5598,7 +5598,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--message-information"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5614,7 +5614,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--message-popup"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5630,7 +5630,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--message-success"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5646,7 +5646,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--message-warning"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5662,7 +5662,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--microphone"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5678,7 +5678,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--mileage"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5694,7 +5694,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--minimize"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5710,7 +5710,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--mirrored-task-circle"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5726,7 +5726,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--mirrored-task-circle-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5742,7 +5742,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--money-bills"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5758,7 +5758,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--monitor-payments"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5774,7 +5774,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--move"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5790,7 +5790,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--mri-scan"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5806,7 +5806,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiple-bar-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5822,7 +5822,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiple-line-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5838,7 +5838,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiple-pie-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5854,7 +5854,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiple-radar-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5870,7 +5870,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiselect"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5886,7 +5886,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiselect-all"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5902,7 +5902,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--multiselect-none"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5918,7 +5918,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--my-sales-order"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5934,7 +5934,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--my-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5950,7 +5950,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--nav-back"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5966,7 +5966,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--navigation-down-arrow"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5982,7 +5982,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--navigation-left-arrow"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -5998,7 +5998,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--navigation-right-arrow"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6014,7 +6014,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--navigation-up-arrow"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6030,7 +6030,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--negative"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6046,7 +6046,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--Netweaver-business-client"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6062,7 +6062,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--newspaper"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6078,7 +6078,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--notes"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6094,7 +6094,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--notification-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6110,7 +6110,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--number-sign"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6126,7 +6126,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--numbered-text"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6142,7 +6142,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--nurse"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6158,7 +6158,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--nutrition-activity"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6174,7 +6174,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--official-service"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6190,7 +6190,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--offsite-work"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6206,7 +6206,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--open-command-field"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6222,7 +6222,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--open-folder"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6238,7 +6238,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--opportunities"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6254,7 +6254,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--opportunity"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6270,7 +6270,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--order-status"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6286,7 +6286,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--org-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6302,7 +6302,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--outbox"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6318,7 +6318,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--outdent"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6334,7 +6334,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--outgoing-call"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6350,7 +6350,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--overflow"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6366,7 +6366,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--overlay"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6382,7 +6382,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--overview-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6398,7 +6398,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--paging"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6414,7 +6414,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--paid-leave"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6430,7 +6430,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--palette"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6446,7 +6446,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--paper-plane"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6462,7 +6462,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--passenger-train"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6478,7 +6478,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--past"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6494,7 +6494,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--paste"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6510,7 +6510,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pause"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6526,7 +6526,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--payment-approval"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6542,7 +6542,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pdf-attachment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6558,7 +6558,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pdf-reader"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6574,7 +6574,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pending"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6590,7 +6590,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--per-diem"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6606,7 +6606,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--performance"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6622,7 +6622,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--permission"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6638,7 +6638,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--person-placeholder"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6654,7 +6654,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--personnel-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6670,7 +6670,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pharmacy"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6686,7 +6686,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--phone"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6702,7 +6702,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--photo-voltaic"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6718,7 +6718,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--physical-activity"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6734,7 +6734,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--picture"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6750,7 +6750,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pie-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6766,7 +6766,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pipeline-analysis"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6782,7 +6782,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--play"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6798,7 +6798,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pool"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6814,7 +6814,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--popup-window"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6830,7 +6830,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--positive"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6846,7 +6846,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--post"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6862,7 +6862,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--ppt-attachment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6878,7 +6878,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--present"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6894,7 +6894,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--print"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6910,7 +6910,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--private"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6926,7 +6926,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--process"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6942,7 +6942,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--product"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6958,7 +6958,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--program-triangles"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6974,7 +6974,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--program-triangles-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -6990,7 +6990,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--project-definition-triangle"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7006,7 +7006,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--project-definition-triangle-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7022,7 +7022,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--projector"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7038,7 +7038,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--provision"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7054,7 +7054,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pull-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7070,7 +7070,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pushpin-off"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7086,7 +7086,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--pushpin-on"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7102,7 +7102,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--puzzle"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7118,7 +7118,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--quality-issue"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7134,7 +7134,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--question-mark"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7150,7 +7150,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--radar-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7166,7 +7166,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--receipt"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7182,7 +7182,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--record"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7198,7 +7198,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--redo"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7214,7 +7214,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--refresh"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7230,7 +7230,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--repost"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7246,7 +7246,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--request"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7262,7 +7262,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--reset"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7278,7 +7278,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--resize"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7294,7 +7294,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--resize-corner"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7310,7 +7310,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--resize-horizontal"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7326,7 +7326,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--resize-vertical"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7342,7 +7342,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--response"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7358,7 +7358,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--restart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7374,7 +7374,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--retail-store"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7390,7 +7390,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--retail-store-manager"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7406,7 +7406,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--rhombus-milestone"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7422,7 +7422,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--rhombus-milestone-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7438,7 +7438,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--role"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7454,7 +7454,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sales-document"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7470,7 +7470,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sales-notification"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7486,7 +7486,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sales-order"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7502,7 +7502,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sales-order-item"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7518,7 +7518,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sales-quote"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7534,7 +7534,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sap-box"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7550,7 +7550,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sap-logo-shape"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7566,7 +7566,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sap-ui5"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7582,7 +7582,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--save"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7598,7 +7598,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--scatter-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7614,7 +7614,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--scissors"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7630,7 +7630,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--screen-split-one"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7646,7 +7646,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--screen-split-three"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7662,7 +7662,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--screen-split-two"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7678,7 +7678,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--search"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7694,7 +7694,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--settings"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7710,7 +7710,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--share"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7726,7 +7726,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--share-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7742,7 +7742,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--shelf"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7758,7 +7758,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--shield"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7774,7 +7774,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--shipping-status"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7790,7 +7790,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--shortcut"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7806,7 +7806,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--show"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7822,7 +7822,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--signature"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7838,7 +7838,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--simple-payment"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7854,7 +7854,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--simulate"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7870,7 +7870,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--slim-arrow-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7886,7 +7886,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--slim-arrow-left"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7902,7 +7902,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--slim-arrow-right"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7918,7 +7918,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--slim-arrow-up"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7934,7 +7934,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--soccor"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7950,7 +7950,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sonography"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7966,7 +7966,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sort"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7982,7 +7982,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sort-ascending"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -7998,7 +7998,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sort-descending"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8014,7 +8014,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sorting-ranking"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8030,7 +8030,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sound"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8046,7 +8046,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sound-loud"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8062,7 +8062,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sound-off"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8078,7 +8078,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--source-code"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8094,7 +8094,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--status-critical"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8110,7 +8110,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--status-inactive"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8126,7 +8126,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--status-negative"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8142,7 +8142,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--status-positive"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8158,7 +8158,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--step"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8174,7 +8174,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--stethoscope"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8190,7 +8190,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--stop"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8206,7 +8206,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--study-leave"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8222,7 +8222,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--subway-train"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8238,7 +8238,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--suitcase"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8254,7 +8254,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--supplier"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8270,7 +8270,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--survey"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8286,7 +8286,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--switch-classes"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8302,7 +8302,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--switch-views"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8318,7 +8318,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--synchronize"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8334,7 +8334,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--syntax"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8350,7 +8350,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--syringe"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8366,7 +8366,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-add"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8382,7 +8382,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-back"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8398,7 +8398,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-back-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8414,7 +8414,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-cancel"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8430,7 +8430,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-cancel-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8446,7 +8446,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-enter"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8462,7 +8462,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-enter-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8478,7 +8478,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-find"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8494,7 +8494,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-find-next"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8510,7 +8510,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-first-page"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8526,7 +8526,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-help"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8542,7 +8542,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-help-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8558,7 +8558,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-last-page"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8574,7 +8574,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-minus"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8590,7 +8590,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-monitor"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8606,7 +8606,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-next-page"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8622,7 +8622,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--sys-prev-page"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8638,7 +8638,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--system-exit"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8654,7 +8654,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--system-exit-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8670,7 +8670,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--table-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8686,7 +8686,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--table-view"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8702,7 +8702,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--tag"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8718,7 +8718,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--tag-cloud-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8734,7 +8734,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--tags"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8750,7 +8750,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--target-group"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8766,7 +8766,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--task"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8782,7 +8782,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--taxi"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8798,7 +8798,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--technical-object"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8814,7 +8814,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--temperature"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8830,7 +8830,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--text-align-center"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8846,7 +8846,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--text-align-justified"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8862,7 +8862,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--text-align-left"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8878,7 +8878,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--text-align-right"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8894,7 +8894,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--text-formatting"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8910,7 +8910,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--theater"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8926,7 +8926,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--thing-type"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8942,7 +8942,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--thumb-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8958,7 +8958,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--thumb-up"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8974,7 +8974,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--time-account"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -8990,7 +8990,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--time-entry-request"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9006,7 +9006,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--time-overtime"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9022,7 +9022,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--timesheet"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9038,7 +9038,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--to-be-reviewed"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9054,7 +9054,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--toaster-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9070,7 +9070,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--toaster-top"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9086,7 +9086,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--toaster-up"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9102,7 +9102,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--tools-opportunity"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9118,7 +9118,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--travel-expense"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9134,7 +9134,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--travel-expense-report"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9150,7 +9150,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--travel-itinerary"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9166,7 +9166,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--travel-request"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9182,7 +9182,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--tree"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9198,7 +9198,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--trend-down"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9214,7 +9214,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--trend-up"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9230,7 +9230,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--trip-report"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9246,7 +9246,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--ui-notifications"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9262,7 +9262,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--umbrella"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9278,7 +9278,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--underline-text"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9294,7 +9294,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--undo"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9310,7 +9310,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--unfavorite"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9326,7 +9326,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--unlocked"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9342,7 +9342,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--unpaid-leave"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9358,7 +9358,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--unwired"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9374,7 +9374,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--up"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9390,7 +9390,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--upload"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9406,7 +9406,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--upload-to-cloud"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9422,7 +9422,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--upstacked-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9438,7 +9438,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--user-edit"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9454,7 +9454,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--user-settings"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9470,7 +9470,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--value-help"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9486,7 +9486,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vds-file"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9502,7 +9502,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vehicle-repair"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9518,7 +9518,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vertical-bar-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9534,7 +9534,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vertical-bar-chart-2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9550,7 +9550,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vertical-bullet-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9566,7 +9566,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vertical-grip"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9582,7 +9582,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vertical-stacked-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9598,7 +9598,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--vertical-waterfall-chart"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9614,7 +9614,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--video"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9630,7 +9630,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--visits"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9646,7 +9646,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--waiver"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9662,7 +9662,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--wallet"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9678,7 +9678,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--warning"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9694,7 +9694,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--warning2"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9710,7 +9710,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--washing-machine"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9726,7 +9726,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--weather-proofing"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9742,7 +9742,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--web-cam"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9758,7 +9758,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--widgets"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9774,7 +9774,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--windows-doors"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9790,7 +9790,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--work-history"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9806,7 +9806,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--workflow-tasks"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9822,7 +9822,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--world"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9838,7 +9838,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--wounds-doc"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9854,7 +9854,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--wrench"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9870,7 +9870,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--write-new"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9886,7 +9886,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--write-new-document"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9902,7 +9902,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--x-ray"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9918,7 +9918,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--zoom-in"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9934,7 +9934,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
         className="sap-icon--zoom-out"
         style={
           Object {
-            "fontSize": "24px",
+            "fontSize": "1.5rem",
           }
         }
       />
@@ -9953,11 +9953,6 @@ exports[`Storyshots Component API/Icon Primary 1`] = `
 >
   <span
     className="sap-icon--cart"
-    style={
-      Object {
-        "fontSize": undefined,
-      }
-    }
   />
 </div>
 `;
@@ -9973,7 +9968,18 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
       className="sap-icon--cart"
       style={
         Object {
-          "fontSize": "12px",
+          "fontSize": "0.75rem",
+        }
+      }
+    />
+    <span
+      className="sap-icon--cart"
+    />
+    <span
+      className="sap-icon--cart"
+      style={
+        Object {
+          "fontSize": "1rem",
         }
       }
     />
@@ -9981,7 +9987,7 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
       className="sap-icon--cart"
       style={
         Object {
-          "fontSize": undefined,
+          "fontSize": "1.25rem",
         }
       }
     />
@@ -9989,23 +9995,7 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
       className="sap-icon--cart"
       style={
         Object {
-          "fontSize": "16px",
-        }
-      }
-    />
-    <span
-      className="sap-icon--cart"
-      style={
-        Object {
-          "fontSize": "20px",
-        }
-      }
-    />
-    <span
-      className="sap-icon--cart"
-      style={
-        Object {
-          "fontSize": "24px",
+          "fontSize": "1.5rem",
         }
       }
     />

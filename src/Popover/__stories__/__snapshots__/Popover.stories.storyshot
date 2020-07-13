@@ -114,7 +114,7 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           role="button"
           style={
             Object {
-              "fontSize": "24px",
+              "fontSize": "1.5rem",
             }
           }
           tabIndex={0}
@@ -196,7 +196,7 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           role="button"
           style={
             Object {
-              "fontSize": "24px",
+              "fontSize": "1.5rem",
             }
           }
           tabIndex={0}

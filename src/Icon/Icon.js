@@ -17,12 +17,17 @@ const Icon = React.forwardRef(({ glyph, size, className, ...props }, ref) => {
         className
     );
 
+    let style;
+    if (size) {
+        style = { fontSize: ICON_SIZES[size] };
+    }
+
     return (
         <span
             {...props}
             className={iconClasses}
             ref={ref}
-            style={{ fontSize: ICON_SIZES[size] }} />
+            style={style} />
     );
 });
 
