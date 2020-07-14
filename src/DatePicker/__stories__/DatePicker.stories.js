@@ -3,7 +3,6 @@ import DatePicker from '../DatePicker';
 import FormLabel from '../../Forms/FormLabel';
 import LayoutGrid from '../../LayoutGrid/LayoutGrid';
 import moment from 'moment';
-import React from 'react';
 import {
     boolean,
     date,
@@ -13,6 +12,7 @@ import {
     text,
     withKnobs
 } from '@storybook/addon-knobs';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default {
     title: 'Component API/DatePicker',
@@ -71,6 +71,31 @@ export const compact = () => (
 
 
 compact.storyName = 'Compact';
+
+export const withCustomFlipContainer = () => {
+    const containerRef = useRef();
+    const [flipContainer, setFlipContainer] = useState();
+
+    useEffect(() => {
+        setFlipContainer(containerRef.current);
+    });
+
+    return (
+        <div style={{ alignItems: 'center', display: 'flex' }}>
+            <div ref={containerRef} style={{
+                border: '1px solid black',
+                padding: '420px 40px 450px 240px'
+            }}>
+                <DatePicker popoverProps={{ flipContainer }} />
+            </div>
+            <div style={{
+                backgroundColor: '#444',
+                width: '180px',
+                height: '120px'
+            }} />
+        </div>
+    );
+};
 
 export const disabled = () => (
     <DatePicker disabled />

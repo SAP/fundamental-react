@@ -1426,3 +1426,83 @@ exports[`Storyshots Component API/DatePicker Weekday Start (Monday Start) 1`] = 
   </div>
 </div>
 `;
+
+exports[`Storyshots Component API/DatePicker With Custom Flip Container 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "border": "1px solid black",
+          "padding": "420px 40px 450px 240px",
+        }
+      }
+    >
+      <div
+        defaultValue=""
+        onChange={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="true"
+                className="fd-input-group--control fd-input-group"
+              >
+                <input
+                  className="fd-input fd-input-group__input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="MM/DD/YYYY"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button"
+                >
+                  <button
+                    aria-label="Choose date"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#444",
+          "height": "120px",
+          "width": "180px",
+        }
+      }
+    />
+  </div>
+</div>
+`;

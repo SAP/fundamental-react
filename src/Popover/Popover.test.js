@@ -3,6 +3,7 @@ import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import Popover from './Popover';
+import Popper from '../utils/_Popper';
 import React from 'react';
 import { Popper as ReactPopper } from 'react-popper-2';
 
@@ -231,6 +232,51 @@ describe('<Popover />', () => {
             const popperComponent = popoverWithParent.find(ReactPopper);
             const modifier = popperComponent.props().modifiers.find(m => m.name === 'maxTargetModifier');
             expect(modifier).toBeTruthy();
+        });
+    });
+
+    describe('flip modifiers', () => {
+        test('disableEdgeDetection props', () => {
+            const popoverWithParent = mount(popOver).setProps({ disableEdgeDetection: true });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.enabled).toBe(false);
+        });
+
+        test('disableEdgeDetection default', () => {
+            const popoverWithParent = mount(popOver).setProps({ });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.enabled).not.toBeDefined();
+        });
+
+        test('fallback placements props', () => {
+            const popoverWithParent = mount(popOver).setProps({ fallbackPlacements: ['top'] });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.fallbackPlacements).toEqual(['top']);
+        });
+
+        test('fallback placements default', () => {
+            const popoverWithParent = mount(popOver).setProps({ });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.fallbackPlacements).toEqual(Popper.defaultProps.fallbackPlacements);
+        });
+
+        test('flip container props', () => {
+            const boundary = document.createElement('div');
+            const popoverWithParent = mount(popOver).setProps({ flipContainer: boundary });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.boundary).toBe(boundary);
+        });
+
+        test('flip container default', () => {
+            const popoverWithParent = mount(popOver).setProps({ });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.boundary).not.toBeDefined();
         });
     });
 
