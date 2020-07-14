@@ -1483,7 +1483,7 @@ exports[`Storyshots Component API/DatePicker With Custom Flip Container 1`] = `
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
