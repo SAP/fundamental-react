@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.1...v0.11.1-rc.2) (2020-07-14)
+
+
+### Features
+
+* Allow a custom flip boundary container for components using Popper ([#1122](https://github.com/SAP/fundamental-react/issues/1122)) ([e28bc26](https://github.com/SAP/fundamental-react/commit/e28bc26eed95948673430b796b489abfdef17a6f))
+
 ### [0.11.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.0...v0.11.1-rc.1) (2020-07-14)
 
 
