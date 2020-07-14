@@ -380,7 +380,7 @@ class DatePicker extends Component {
             'fd-bar',
             'fd-bar--footer',
             {
-                'fd-bar--cosy': !compact,
+                'fd-bar--cozy': !compact,
                 'fd-bar--compact': compact
             }
         );
@@ -408,7 +408,7 @@ class DatePicker extends Component {
                     <Button {...buttonProps}
                         aria-label={buttonLabel}
                         disabled={disableButton}
-                        glyph='calendar'
+                        glyph='appointment-2'
                         onClick={this.handleClickButton}
                         option='transparent' />
                 </InputGroup.Addon>

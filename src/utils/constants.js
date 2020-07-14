@@ -38,12 +38,12 @@ export const FORM_MESSAGE_TYPES = [
     'success'
 ];
 
-export const ICON_SIZES = [
-    's',
-    'm',
-    'l',
-    'xl'
-];
+export const ICON_SIZES = {
+    's': '0.75rem',
+    'm': '1rem',
+    'l': '1.25rem',
+    'xl': '1.5rem'
+};
 
 export const AVATAR_SIZES = [
     'xs',

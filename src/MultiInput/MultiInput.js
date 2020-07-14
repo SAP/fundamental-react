@@ -41,7 +41,7 @@ class MultiInput extends Component {
                     labelClassName='fd-list__label'
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
-                    <List.Text>{item}</List.Text>
+                    <List.Text className='fd-checkbox__text'>{item}</List.Text>
                 </Checkbox>
             </List.Item>
         ));

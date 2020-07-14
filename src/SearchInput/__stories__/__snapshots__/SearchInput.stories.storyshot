@@ -19,7 +19,6 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -32,6 +31,7 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
               >
                 <div
                   className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
                 >
                   <input
                     className="fd-input fd-input--compact fd-input-group__input"
@@ -81,7 +81,6 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -94,6 +93,7 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
               >
                 <div
                   className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
                 >
                   <input
                     className="fd-input fd-input-group__input"
@@ -145,7 +145,6 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -158,6 +157,7 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
               >
                 <div
                   className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
                 >
                   <input
                     className="fd-input fd-input-group__input"
@@ -207,7 +207,6 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -233,6 +232,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-error fd-input-group is-error"
+                        onClick={[Function]}
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -278,7 +278,6 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -304,6 +303,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-warning fd-input-group is-warning"
+                        onClick={[Function]}
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -349,7 +349,6 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -375,6 +374,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-success fd-input-group is-success"
+                        onClick={[Function]}
                       >
                         <input
                           className="fd-input fd-input-group__input"
@@ -420,7 +420,6 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           <div
             className="fd-popover"
             onBlur={[Function]}
-            onClick={[Function]}
             onFocus={[Function]}
           >
             <div
@@ -446,6 +445,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-information fd-input-group is-information"
+                        onClick={[Function]}
                       >
                         <input
                           className="fd-input fd-input-group__input"

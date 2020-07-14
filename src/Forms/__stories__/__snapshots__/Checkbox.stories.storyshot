@@ -17,7 +17,11 @@ exports[`Storyshots Component API/Forms/Checkbox Compact 1`] = `
       className="fd-form-label fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Text Option
+      <span
+        className="fd-checkbox__text"
+      >
+        Text Option
+      </span>
     </label>
   </div>
 </div>
@@ -41,7 +45,11 @@ exports[`Storyshots Component API/Forms/Checkbox Controlled Checked 1`] = `
       className="fd-form-label fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Text Option
+      <span
+        className="fd-checkbox__text"
+      >
+        Text Option
+      </span>
     </label>
   </div>
 </div>
@@ -65,7 +73,11 @@ exports[`Storyshots Component API/Forms/Checkbox Default Checked 1`] = `
       className="fd-form-label fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Text Option
+      <span
+        className="fd-checkbox__text"
+      >
+        Text Option
+      </span>
     </label>
   </div>
 </div>
@@ -90,7 +102,11 @@ exports[`Storyshots Component API/Forms/Checkbox Dev 1`] = `
       className="fd-form-label fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Text Option
+      <span
+        className="fd-checkbox__text"
+      >
+        Text Option
+      </span>
     </label>
   </div>
 </div>
@@ -115,7 +131,11 @@ exports[`Storyshots Component API/Forms/Checkbox Disabled 1`] = `
       className="fd-form-label is-disabled fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Text Option
+      <span
+        className="fd-checkbox__text"
+      >
+        Text Option
+      </span>
     </label>
   </div>
 </div>
@@ -138,7 +158,11 @@ exports[`Storyshots Component API/Forms/Checkbox Indeterminate 1`] = `
       className="fd-form-label fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Text Option
+      <span
+        className="fd-checkbox__text"
+      >
+        Text Option
+      </span>
     </label>
   </div>
 </div>
@@ -161,7 +185,11 @@ exports[`Storyshots Component API/Forms/Checkbox Primary 1`] = `
       className="fd-form-label fd-checkbox__label"
       htmlFor="fd-mocked-short-id"
     >
-      Default Checkbox
+      <span
+        className="fd-checkbox__text"
+      >
+        Default Checkbox
+      </span>
     </label>
   </div>
 </div>
@@ -187,7 +215,11 @@ exports[`Storyshots Component API/Forms/Checkbox Validation State 1`] = `
         className="fd-form-label fd-checkbox__label"
         htmlFor="fd-mocked-short-id"
       >
-        Text Option
+        <span
+          className="fd-checkbox__text"
+        >
+          Text Option
+        </span>
       </label>
     </div>
     <div
@@ -203,7 +235,11 @@ exports[`Storyshots Component API/Forms/Checkbox Validation State 1`] = `
         className="fd-form-label fd-checkbox__label"
         htmlFor="fd-mocked-short-id"
       >
-        Text Option
+        <span
+          className="fd-checkbox__text"
+        >
+          Text Option
+        </span>
       </label>
     </div>
     <div
@@ -219,7 +255,11 @@ exports[`Storyshots Component API/Forms/Checkbox Validation State 1`] = `
         className="fd-form-label fd-checkbox__label"
         htmlFor="fd-mocked-short-id"
       >
-        Text Option
+        <span
+          className="fd-checkbox__text"
+        >
+          Text Option
+        </span>
       </label>
     </div>
     <div
@@ -235,7 +275,11 @@ exports[`Storyshots Component API/Forms/Checkbox Validation State 1`] = `
         className="fd-form-label fd-checkbox__label"
         htmlFor="fd-mocked-short-id"
       >
-        Text Option
+        <span
+          className="fd-checkbox__text"
+        >
+          Text Option
+        </span>
       </label>
     </div>
   </div>
