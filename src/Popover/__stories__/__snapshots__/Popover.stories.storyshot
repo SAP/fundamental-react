@@ -116,10 +116,15 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="sap-icon--cart sap-icon--xl"
+          className="sap-icon--cart"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
+          style={
+            Object {
+              "fontSize": "1.5rem",
+            }
+          }
           tabIndex={0}
         />
       </div>
@@ -193,10 +198,15 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="sap-icon--menu2 sap-icon--xl"
+          className="sap-icon--menu2"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
+          style={
+            Object {
+              "fontSize": "1.5rem",
+            }
+          }
           tabIndex={0}
         />
       </div>

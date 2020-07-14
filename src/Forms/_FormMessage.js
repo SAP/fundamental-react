@@ -16,7 +16,7 @@ const FormMessage = React.forwardRef(({ type, children, className, ...props }, r
     return (
         <div
             {...props}
-            aria-live='assertive'
+            aria-live='polite'
             className={formMessageClasses}
             ref={ref}
             role='alert'>

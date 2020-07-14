@@ -41,6 +41,12 @@ export const richTable = () => {
         setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked });
     };
 
+    const handleHeaderChange = (event) => {
+        const newCheckedItems = {};
+        tableRowData.forEach(row => newCheckedItems[row.name] = event.target.checked);
+        setCheckedItems(newCheckedItems);
+    };
+
     const tableRowData = [
         {
             email: 'user.name@test.com',
@@ -68,20 +74,28 @@ export const richTable = () => {
         }
     ];
 
+    const allItemsChecked = Object.keys(checkedItems).length > 0 && !Object.keys(checkedItems).some(key => !checkedItems[key]);
+
     return (
         <Table
-            headers={[<Checkbox />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
+            headers={[
+                <Checkbox
+                    ariaLabel='Select all rows'
+                    checked={allItemsChecked}
+                    onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
             richTable
             tableData={
                 tableRowData.map(item => {
                     return ({
                         rowData: [
                             <Checkbox
-                                checked={checkedItems[item.name]}
+                                ariaLabel={'Select row'}
+                                checked={checkedItems[item.name] || false}
+                                name={item.name}
                                 onChange={handleChange} />,
                             <Avatar backgroundImageUrl={item.photoUrl} size='m'
                                 transparent />,
-                            <a className='fd-has-font-weight-semi' href='#'>
+                            <a href='#'>
                                 {item.email}
                             </a>,
                             'First Name',

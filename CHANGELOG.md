@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.0...v0.11.1-rc.1) (2020-07-14)
+
+
+### Features
+
+* upgrade fundamental-styles to 0.11.0-rc.100 ([#1121](https://github.com/SAP/fundamental-react/issues/1121)) ([695aac4](https://github.com/SAP/fundamental-react/commit/695aac469e504d61a0adda7df9d15b181794c539))
+
+### [0.11.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.11.0...v0.11.1-rc.0) (2020-07-14)
+
 ## [0.11.0](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.29...v0.11.0) (2020-07-08)
 
 ## [0.11.0-rc.29](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.28...v0.11.0-rc.29) (2020-07-06)

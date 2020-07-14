@@ -40,7 +40,7 @@ exports[`Storyshots Component API/DatePicker Compact 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent fd-button--compact sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent fd-button--compact sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />
@@ -104,7 +104,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -159,7 +159,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -214,7 +214,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -269,7 +269,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -324,7 +324,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                 >
                   <button
                     aria-label="debugz"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -379,7 +379,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                 >
                   <button
                     aria-label="debugz"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -434,7 +434,7 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />
@@ -489,7 +489,7 @@ exports[`Storyshots Component API/DatePicker Disabled 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar is-disabled fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 is-disabled fd-input-group__button"
                 disabled={true}
                 onClick={[Function]}
                 type="button"
@@ -543,7 +543,7 @@ exports[`Storyshots Component API/DatePicker Enabled Range Selection 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />
@@ -599,7 +599,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
               >
                 <button
                   aria-label="Choose date"
-                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                   onClick={[Function]}
                   type="button"
                 />
@@ -645,7 +645,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
               >
                 <button
                   aria-label="Choose date"
-                  className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                  className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                   onClick={[Function]}
                   type="button"
                 />
@@ -710,7 +710,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] =
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent fd-button--compact sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent fd-button--compact sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -765,7 +765,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] =
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -831,7 +831,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent fd-button--compact sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent fd-button--compact sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -886,7 +886,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
                 >
                   <button
                     aria-label="Choose date"
-                    className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                    className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                     onClick={[Function]}
                     type="button"
                   />
@@ -941,7 +941,7 @@ exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />
@@ -994,7 +994,7 @@ exports[`Storyshots Component API/DatePicker Primary 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />
@@ -1048,7 +1048,7 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar is-disabled fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 is-disabled fd-input-group__button"
                 disabled={true}
                 onClick={[Function]}
                 type="button"
@@ -1102,7 +1102,7 @@ exports[`Storyshots Component API/DatePicker Special Days 1`] = `
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />
@@ -1171,7 +1171,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                     >
                       <button
                         aria-label="Choose date"
-                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                         onClick={[Function]}
                         type="button"
                       />
@@ -1233,7 +1233,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                     >
                       <button
                         aria-label="Choose date"
-                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                         onClick={[Function]}
                         type="button"
                       />
@@ -1295,7 +1295,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                     >
                       <button
                         aria-label="Choose date"
-                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                         onClick={[Function]}
                         type="button"
                       />
@@ -1357,7 +1357,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                     >
                       <button
                         aria-label="Choose date"
-                        className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                        className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                         onClick={[Function]}
                         type="button"
                       />
@@ -1414,7 +1414,7 @@ exports[`Storyshots Component API/DatePicker Weekday Start (Monday Start) 1`] = 
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent sap-icon--calendar fd-input-group__button"
+                className="fd-button fd-button--transparent sap-icon--appointment-2 fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               />

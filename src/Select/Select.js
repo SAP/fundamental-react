@@ -107,7 +107,7 @@ const Select = React.forwardRef(({
             id={id}
             onClick={handleClick}
             ref={divRef}>
-            <div aria-disabled={disabled} className={selectControlClasses}>
+            <div className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
                 {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
@@ -116,7 +116,10 @@ const Select = React.forwardRef(({
 
     const wrappedSelectControl = (
         <FormValidationOverlay
+            aria-disabled={disabled}
+            aria-readonly={readOnly}
             control={selectControl}
+            role={'combobox'}
             validationState={validationState} />
     );
 
@@ -129,7 +132,6 @@ const Select = React.forwardRef(({
 
     return (
         <Popover
-            aria-disabled={disabled}
             body={
                 (<>
                     {validationState &&
@@ -163,8 +165,8 @@ const Select = React.forwardRef(({
             firstFocusIndex={firstFocusIndex}
             noArrow
             placement='bottom-start'
-            popperProps={{ id }}
             ref={popoverRef}
+            type='listbox'
             useArrowKeyNavigation
             widthSizingType='minTarget' />
     );

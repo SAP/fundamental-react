@@ -128,7 +128,7 @@ class Popover extends Component {
 
         const id = popperProps.id || this.popoverId;
 
-        let controlProps = {
+        let newControlProps = {
             onClick: onClickFunctions,
             ref: (c) => {
                 this.controlRef = findDOMNode(c);
@@ -149,10 +149,10 @@ class Popover extends Component {
         };
 
         if (!disableKeyPressHandler) {
-            controlProps = {
-                ...controlProps,
+            newControlProps = {
+                ...newControlProps,
                 tabIndex: 0,
-                role: 'button',
+                role: !!control?.props.role ? control?.props.role : 'button',
                 'aria-controls': id,
                 'aria-expanded': this.state.isExpanded,
                 'aria-haspopup': !!type ? type : true,
@@ -160,7 +160,11 @@ class Popover extends Component {
             };
         }
 
-        const referenceComponent = React.cloneElement(control, controlProps);
+        const referenceClassName = classnames('fd-popover__control', {
+            'is-expanded': this.state.isExpanded
+        });
+
+        const referenceComponent = React.cloneElement(control, newControlProps);
 
         const popoverClasses = classnames('fd-popover', className);
 
@@ -178,7 +182,7 @@ class Popover extends Component {
                     popperClassName={popperClassName}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
-                    referenceClassName='fd-popover__control'
+                    referenceClassName={referenceClassName}
                     referenceComponent={referenceComponent}
                     show={!disabled && (typeof show === 'boolean' ? show : this.state.isExpanded)}
                     usePortal
