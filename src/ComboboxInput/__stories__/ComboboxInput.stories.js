@@ -1,5 +1,7 @@
 /* eslint-disable react/no-multi-comp */
+import Button from '../../Button/Button';
 import ComboboxInput from '../ComboboxInput';
+import LayoutGrid from '../../LayoutGrid/LayoutGrid';
 import {
     boolean,
     select,
@@ -12,7 +14,7 @@ export default {
     component: ComboboxInput
 };
 
-const placeholder = 'Select country';
+const placeholder = 'Enter country';
 
 const options = [
     { 'text': 'Afghanistan', 'key': 'AF' },
@@ -297,28 +299,41 @@ export const validationState = () => (
 );
 
 export const dev = () => {
-    const [selectedFruitObj, setSelectedFruit] = useState();
+    const [selectedCountryObj, setSelectedCountry] = useState();
     return (
         <>
-            Selected country: {
-                selectedFruitObj?.text || 'none'
-            }<br />
-            <ComboboxInput
-                compact={boolean('compact', false)}
-                disabled={boolean('disabled', false)}
-                noMatchesText='No Matches'
-                onSelectionChange={(event, option) => {
-                    setSelectedFruit(option);
-                }}
-                options={options}
-                placeholder={text('Placeholder', placeholder)}
-                validationState={select('Validation State', {
-                    'none': '',
-                    'success': { state: 'success', text: 'placeholder text' },
-                    'error': { state: 'error', text: 'placeholder text' },
-                    'information': { state: 'information', text: 'placeholder text' },
-                    'warning': { state: 'warning', text: 'placeholder text' }
-                })} />
+            <LayoutGrid>
+                <div>
+                    For focus testing
+                    <br />
+                    <Button>Test</Button>
+                </div>
+                <div>
+                    Selected country code: {selectedCountryObj?.key || 'none'}
+                    <br />
+                    <ComboboxInput
+                        compact={boolean('compact', false)}
+                        disabled={boolean('disabled', false)}
+                        noMatchesText='No Matches'
+                        onSelectionChange={(event, option) => {
+                            setSelectedCountry(option);
+                        }}
+                        options={options}
+                        placeholder={text('Placeholder', placeholder)}
+                        validationState={select('Validation State', {
+                            'none': '',
+                            'success': { state: 'success', text: 'placeholder text' },
+                            'error': { state: 'error', text: 'placeholder text' },
+                            'information': { state: 'information', text: 'placeholder text' },
+                            'warning': { state: 'warning', text: 'placeholder text' }
+                        })} />
+                </div>
+                <div>
+                    For focus testing
+                    <br />
+                    <Button>Test</Button>
+                </div>
+            </LayoutGrid>
         </>
     );
 };

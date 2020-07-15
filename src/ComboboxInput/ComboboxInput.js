@@ -1,6 +1,6 @@
-/* eslint-disable no-console */
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import FocusManager from '../utils/focusManager/focusManager';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
@@ -34,6 +34,7 @@ const ComboboxInput = React.forwardRef(({
     let [filterString, setFilterString] = useState();
     const textInputRef = useRef(null);
     const popoverRef = useRef(null);
+    const popoverBodyRef = useRef(null);
 
     const inputGroupClass = classnames(
         'fd-input-group--control',
@@ -51,7 +52,6 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handleClick = (e) => {
-        setIsExpanded(!isExpanded);
         if (!disabled) {
             onClick(e);
         }
@@ -99,17 +99,22 @@ const ComboboxInput = React.forwardRef(({
             field.selectionStart = start;
             field.selectionEnd = end;
         }
-        // field?.focus();
+    };
+
+    const attachFocusManager = () => {
+        isExpanded &&
+            popoverBodyRef?.current &&
+            textInputRef?.current &&
+            new FocusManager(popoverBodyRef?.current, textInputRef?.current, true, 0);
     };
 
     const handleInputKeyDown = (event) => {
-        console.clear();
         const textField = event?.target;
         const textFieldValue = event?.target?.value;
         const selectedText = textFieldValue?.substring(textField?.selectionStart, textField?.selectionEnd);
         switch (keycode(event)) {
             case 'backspace':
-                console.debug('\n\nhandleInputKeyDown');
+                // console.debug('\n\nhandleInputKeyDown');
                 // console.debug('selectedText', selectedText);
 
                 const allTextIsSelected = selectedText?.length === textFieldValue?.length;
@@ -130,7 +135,7 @@ const ComboboxInput = React.forwardRef(({
                     });
                 } else {
                     const fsMinusOne = filterString?.length && filterString.substring(0, filterString?.length - 1);
-                    console.debug('fsMinusOne', fsMinusOne);
+                    // console.debug('fsMinusOne', fsMinusOne);
                     handleInputChange({
                         target: {
                             value: fsMinusOne
@@ -140,7 +145,7 @@ const ComboboxInput = React.forwardRef(({
                 break;
             case 'enter':
                 if (textFieldValue) {
-                    console.debug('matched');
+                    // console.debug('matched');
                     const matchedOptions = getFilteredOptions(textFieldValue);
                     if (matchedOptions?.length) {
                         const firstOption = matchedOptions[0];
@@ -150,7 +155,11 @@ const ComboboxInput = React.forwardRef(({
                 }
                 break;
             case 'esc':
-                setIsExpanded(false);
+                closePopover();
+                break;
+            case 'down':
+                setIsExpanded(true);
+                attachFocusManager();
                 break;
             default:
         }
@@ -161,11 +170,8 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handleInputChange = (event, erasing) => {
-        console.debug('\n\nhandleInputChange', event);
 
         const inputValue = event?.target?.value;
-        console.debug('event?.target?.value', inputValue);
-        console.debug('filterString', filterString);
         //update
         setFilterString(inputValue);
 
@@ -173,29 +179,27 @@ const ComboboxInput = React.forwardRef(({
         onSelectionChange && onSelectionChange(null, null);
 
         //try type ahead nudge
-        if (inputValue) {
+        if (erasing) {
+            textInputRef.current.value = filterString;
+        } else if (inputValue) {
             setIsExpanded(true);
             const matchedOptions = getFilteredOptions(inputValue);
             if (matchedOptions?.length) {
-                console.debug('matched', matchedOptions?.length);
                 const firstOption = matchedOptions[0];
                 if (shouldTypeAhead(firstOption?.text, inputValue)) {
-                    console.debug('typing ahead', firstOption?.text);
                     textInputRef.current.value = firstOption?.text;
                     createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
-                } else if (erasing) {
-                    textInputRef.current.value = filterString;
                 }
             }
         } else {
-            setIsExpanded(false);
+            closePopover();
         }
     };
 
     const anyWordStartsWith = (sentence, search) => {
         const sentenceLC = sentence?.toLowerCase();
         const searchLC = search?.toLowerCase();
-        const words = sentenceLC.split(/\s/i);
+        const words = sentenceLC.split(/[^a-zA-Z0-9.]/i);
         return words?.length && !!words?.find(word => word.startsWith(searchLC))?.length;
     };
 
@@ -211,10 +215,18 @@ const ComboboxInput = React.forwardRef(({
         return options;
     };
 
-    // const selected = options
-    //     .find(option => selectedOptionKey && typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
-
-    // const inputFieldTextValue = selected && selected.text;
+    const comboboxAddonButton = (
+        <Button
+            {...buttonProps}
+            glyph='navigation-down-arrow'
+            onClick={(event) => {
+                event.stopPropagation();
+                setIsExpanded(!isExpanded);
+            }}
+            option='transparent'
+            ref={ref}
+            tabIndex='-1' />
+    );
 
     const inputGroup = (
         <InputGroup
@@ -234,31 +246,23 @@ const ComboboxInput = React.forwardRef(({
                 placeholder={placeholder}
                 ref={textInputRef} />
             <InputGroup.Addon isButton>
-                <Button
-                    {...buttonProps}
-                    glyph='navigation-down-arrow'
-                    onClick={(event) => {
-                        event.preventDefault();
-                        isExpanded && closePopover();
-                    }}
-                    option='transparent'
-                    ref={ref} />
+                {comboboxAddonButton}
             </InputGroup.Addon>
         </InputGroup>
     );
 
-    console.debug('\n\npre-render\nfilterString', filterString);
-    console.debug('=================');
     const filteredOptions = getFilteredOptions(filterString);
 
     return (
         <Popover
             {...popoverProps}
             body={
-                (<div style={{
-                    maxHeight: '500px',
-                    overflowY: 'scroll'
-                }}>
+                (<div
+                    ref={popoverBodyRef}
+                    style={{
+                        maxHeight: '500px',
+                        overflowY: 'scroll'
+                    }}>
                     {validationState &&
                         <FormMessage
                             type={validationState.state}>
@@ -269,14 +273,8 @@ const ComboboxInput = React.forwardRef(({
                         {filteredOptions?.length ? filteredOptions.map(option => {
                             const firstOccurrence = option.text?.toLowerCase().indexOf(filterString?.toLowerCase());
                             const leftPart = option.text?.substring(0, firstOccurrence);
-                            // console.debug('\n\n');
-                            // console.debug('leftPart', leftPart);
-                            // console.debug('filterString', filterString);
-                            // console.debug('firstOccurrence', firstOccurrence);
                             const matchingPart = option.text?.substring(firstOccurrence, firstOccurrence + filterString?.length);
-                            // console.debug('matchingPart', matchingPart);
                             const rightPart = option.text?.substring(firstOccurrence + filterString?.length);
-                            // console.debug('rightPart', rightPart);
                             return (
                                 <List.Item
                                     key={option.key}
@@ -297,7 +295,7 @@ const ComboboxInput = React.forwardRef(({
             control={inputGroup}
             disableKeyPressHandler
             disabled={disabled}
-            // firstFocusIndex={0}
+            firstFocusIndex={0}
             noArrow
             ref={popoverRef}
             show={isExpanded}
