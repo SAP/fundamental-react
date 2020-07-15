@@ -105,7 +105,6 @@ const Select = React.forwardRef(({
             {...props}
             className={selectClasses}
             id={id}
-            onClick={handleClick}
             ref={divRef}>
             <div className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
@@ -114,12 +113,16 @@ const Select = React.forwardRef(({
         </div>
     );
 
+    const tabIndex = disabled ? -1 : 0;
+
     const wrappedSelectControl = (
         <FormValidationOverlay
             aria-disabled={disabled}
             aria-readonly={readOnly}
             control={selectControl}
+            onClick={handleClick}
             role={'combobox'}
+            tabIndex={tabIndex}
             validationState={validationState} />
     );
 
@@ -162,6 +165,8 @@ const Select = React.forwardRef(({
                     </List>
                 </>)}
             control={wrappedSelectControl}
+            disableKeyPressHandler={disabled || readOnly}
+            disableTriggerOnClick={disabled || readOnly}
             firstFocusIndex={firstFocusIndex}
             noArrow
             placement='bottom-start'
