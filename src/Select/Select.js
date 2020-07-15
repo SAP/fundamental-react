@@ -39,9 +39,29 @@ const Select = React.forwardRef(({
 
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
+    const openPopover = () => {
+        const popover = popoverRef && popoverRef.current;
+        popover && popover.triggerBody();
+    };
+
     const handleClick = (e) => {
         if (!disabled && !readOnly) {
+            openPopover();
+
             onClick(e);
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (!disabled && !readOnly) {
+            switch (keycode(e)) {
+                case 'enter':
+                case 'space':
+                    e.preventDefault();
+                    openPopover();
+                    break;
+                default:
+            }
         }
     };
 
@@ -105,7 +125,6 @@ const Select = React.forwardRef(({
             {...props}
             className={selectClasses}
             id={id}
-            onClick={handleClick}
             ref={divRef}>
             <div className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
@@ -114,12 +133,17 @@ const Select = React.forwardRef(({
         </div>
     );
 
+    const tabIndex = disabled ? -1 : 0;
+
     const wrappedSelectControl = (
         <FormValidationOverlay
             aria-disabled={disabled}
             aria-readonly={readOnly}
             control={selectControl}
+            onClick={handleClick}
+            onKeyDown={handleKeyDown}
             role={'combobox'}
+            tabIndex={tabIndex}
             validationState={validationState} />
     );
 
@@ -162,6 +186,8 @@ const Select = React.forwardRef(({
                     </List>
                 </>)}
             control={wrappedSelectControl}
+            disableKeyPressHandler
+            disableTriggerOnClick
             firstFocusIndex={firstFocusIndex}
             noArrow
             placement='bottom-start'
