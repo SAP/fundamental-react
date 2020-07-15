@@ -39,6 +39,12 @@ const Select = React.forwardRef(({
 
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
+    const handleClick = (e) => {
+        if (!disabled && !readOnly) {
+            onClick(e);
+        }
+    };
+
     const handleSelect = (e, option) => {
         const popover = popoverRef && popoverRef.current;
         popover && popover.handleEscapeKey();
@@ -114,6 +120,7 @@ const Select = React.forwardRef(({
             aria-disabled={disabled}
             aria-readonly={readOnly}
             control={selectControl}
+            onClick={handleClick}
             role={'combobox'}
             tabIndex={tabIndex}
             validationState={validationState} />

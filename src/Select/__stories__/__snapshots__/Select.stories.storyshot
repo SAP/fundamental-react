@@ -154,6 +154,7 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
               <div
                 aria-disabled={true}
                 className="fd-select"
+                onClick={[Function]}
                 role="combobox"
                 tabIndex={-1}
               >
@@ -331,6 +332,7 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
               <div
                 aria-readonly={true}
                 className="fd-select"
+                onClick={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
