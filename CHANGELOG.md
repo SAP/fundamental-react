@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.2...v0.11.1-rc.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* prevent disabled and readonly select from opening ([#1124](https://github.com/SAP/fundamental-react/issues/1124)) ([7d64334](https://github.com/SAP/fundamental-react/commit/7d64334b7f73435c9c81b7d1e4ef6881bf774e7d))
+
 ### [0.11.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.1...v0.11.1-rc.2) (2020-07-14)
 
 
