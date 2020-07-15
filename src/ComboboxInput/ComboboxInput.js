@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
@@ -22,16 +23,16 @@ const ComboboxInput = React.forwardRef(({
     inputProps,
     buttonProps,
     selectedKey,
+    noMatchesText,
     onClick,
-    onSelect,
+    onSelectionChange,
     options,
     validationState,
     ...props
 }, ref) => {
-
     let [isExpanded, setIsExpanded] = useState(false);
-    let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
-
+    let [filterString, setFilterString] = useState();
+    const textInputRef = useRef(null);
     const popoverRef = useRef(null);
 
     const inputGroupClass = classnames(
@@ -50,7 +51,7 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handleClick = (e) => {
-        setIsExpanded(true);
+        setIsExpanded(!isExpanded);
         if (!disabled) {
             onClick(e);
         }
@@ -58,8 +59,15 @@ const ComboboxInput = React.forwardRef(({
 
     const handleSelect = (e, option) => {
         closePopover();
-        setSelectedOptionKey(option.key);
-        onSelect(e, option);
+
+        textInputRef.current.value = option?.text;
+        textInputRef.current?.select();
+
+        //an option has been selected
+        onSelectionChange && onSelectionChange(e, option);
+
+        //update the string that filters the options
+        setFilterString(option?.text);
     };
 
     const handleOptionKeyDown = (e, option) => {
@@ -78,8 +86,135 @@ const ComboboxInput = React.forwardRef(({
         }
     };
 
-    const selected = options
-        .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+    const createSelection = (field, start, end) => {
+        if (field?.createTextRange) {
+            var selRange = field.createTextRange();
+            selRange.collapse(true);
+            selRange.moveStart('character', start);
+            selRange.moveEnd('character', end);
+            selRange.select();
+        } else if (field?.setSelectionRange) {
+            field.setSelectionRange(start, end);
+        } else if (field?.selectionStart) {
+            field.selectionStart = start;
+            field.selectionEnd = end;
+        }
+        // field?.focus();
+    };
+
+    const handleInputKeyDown = (event) => {
+        console.clear();
+        const textField = event?.target;
+        const textFieldValue = event?.target?.value;
+        const selectedText = textFieldValue?.substring(textField?.selectionStart, textField?.selectionEnd);
+        switch (keycode(event)) {
+            case 'backspace':
+                console.debug('\n\nhandleInputKeyDown');
+                // console.debug('selectedText', selectedText);
+
+                const allTextIsSelected = selectedText?.length === textFieldValue?.length;
+                // console.debug('allSelected', allTextIsSelected);
+
+                const finalCharacter = selectedText?.length === textFieldValue?.length - 1;
+                // console.debug('finalCharacter', finalCharacter);
+
+                if (finalCharacter) {
+                    createSelection(textField, 0, textFieldValue?.length);
+                }
+
+                if (allTextIsSelected) {
+                    handleInputChange({
+                        target: {
+                            value: ''
+                        }
+                    });
+                } else {
+                    const fsMinusOne = filterString?.length && filterString.substring(0, filterString?.length - 1);
+                    console.debug('fsMinusOne', fsMinusOne);
+                    handleInputChange({
+                        target: {
+                            value: fsMinusOne
+                        }
+                    }, true);
+                }
+                break;
+            case 'enter':
+                if (textFieldValue) {
+                    console.debug('matched');
+                    const matchedOptions = getFilteredOptions(textFieldValue);
+                    if (matchedOptions?.length) {
+                        const firstOption = matchedOptions[0];
+                        handleSelect(null, firstOption);
+                        textField.select();
+                    }
+                }
+                break;
+            case 'esc':
+                setIsExpanded(false);
+                break;
+            default:
+        }
+    };
+
+    const shouldTypeAhead = (optionText, inputValue) => {
+        return optionText?.toLowerCase().startsWith(inputValue?.toLowerCase());
+    };
+
+    const handleInputChange = (event, erasing) => {
+        console.debug('\n\nhandleInputChange', event);
+
+        const inputValue = event?.target?.value;
+        console.debug('event?.target?.value', inputValue);
+        console.debug('filterString', filterString);
+        //update
+        setFilterString(inputValue);
+
+        // editing text counts means selection is cleared
+        onSelectionChange && onSelectionChange(null, null);
+
+        //try type ahead nudge
+        if (inputValue) {
+            setIsExpanded(true);
+            const matchedOptions = getFilteredOptions(inputValue);
+            if (matchedOptions?.length) {
+                console.debug('matched', matchedOptions?.length);
+                const firstOption = matchedOptions[0];
+                if (shouldTypeAhead(firstOption?.text, inputValue)) {
+                    console.debug('typing ahead', firstOption?.text);
+                    textInputRef.current.value = firstOption?.text;
+                    createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
+                } else if (erasing) {
+                    textInputRef.current.value = filterString;
+                }
+            }
+        } else {
+            setIsExpanded(false);
+        }
+    };
+
+    const anyWordStartsWith = (sentence, search) => {
+        const sentenceLC = sentence?.toLowerCase();
+        const searchLC = search?.toLowerCase();
+        const words = sentenceLC.split(/\s/i);
+        return words?.length && !!words?.find(word => word.startsWith(searchLC))?.length;
+    };
+
+    const getFilteredOptions = (searchString) => {
+        //if non-empty string return options whose text begins with searchString, case insensitive
+        if (searchString?.trim()?.length) {
+            return options?.filter(eachOption => searchString?.toLowerCase().match(/\s/i)?.length ?
+                eachOption?.text?.toLowerCase().startsWith(searchString?.toLowerCase())
+                : anyWordStartsWith(eachOption?.text, searchString)
+            );
+        }
+        //if empty string return all the options
+        return options;
+    };
+
+    // const selected = options
+    //     .find(option => selectedOptionKey && typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
+    // const inputFieldTextValue = selected && selected.text;
 
     const inputGroup = (
         <InputGroup
@@ -94,47 +229,78 @@ const ComboboxInput = React.forwardRef(({
             <FormInput
                 {...inputProps}
                 compact={compact}
-                onChange={() => null}
+                onChange={handleInputChange}
+                onKeyDown={handleInputKeyDown}
                 placeholder={placeholder}
-                value={selected && selected.text} />
+                ref={textInputRef} />
             <InputGroup.Addon isButton>
                 <Button
                     {...buttonProps}
                     glyph='navigation-down-arrow'
+                    onClick={(event) => {
+                        event.preventDefault();
+                        isExpanded && closePopover();
+                    }}
                     option='transparent'
                     ref={ref} />
             </InputGroup.Addon>
         </InputGroup>
     );
 
+    console.debug('\n\npre-render\nfilterString', filterString);
+    console.debug('=================');
+    const filteredOptions = getFilteredOptions(filterString);
+
     return (
         <Popover
             {...popoverProps}
             body={
-                (<>
+                (<div style={{
+                    maxHeight: '500px',
+                    overflowY: 'scroll'
+                }}>
                     {validationState &&
-                    <FormMessage
-                        type={validationState.state}>
-                        {validationState.text}
-                    </FormMessage>
+                        <FormMessage
+                            type={validationState.state}>
+                            {validationState.text}
+                        </FormMessage>
                     }
                     <List className='fd-list--dropdown'>
-                        {options.map(option => (
-                            <List.Item
-                                key={option.key}
-                                onClick={(e) => handleSelect(e, option)}
-                                onKeyDown={(e) => handleOptionKeyDown(e, option)}>
-                                <List.Text>{option.text}</List.Text>
+                        {filteredOptions?.length ? filteredOptions.map(option => {
+                            const firstOccurrence = option.text?.toLowerCase().indexOf(filterString?.toLowerCase());
+                            const leftPart = option.text?.substring(0, firstOccurrence);
+                            // console.debug('\n\n');
+                            // console.debug('leftPart', leftPart);
+                            // console.debug('filterString', filterString);
+                            // console.debug('firstOccurrence', firstOccurrence);
+                            const matchingPart = option.text?.substring(firstOccurrence, firstOccurrence + filterString?.length);
+                            // console.debug('matchingPart', matchingPart);
+                            const rightPart = option.text?.substring(firstOccurrence + filterString?.length);
+                            // console.debug('rightPart', rightPart);
+                            return (
+                                <List.Item
+                                    key={option.key}
+                                    onClick={(e) => handleSelect(e, option)}
+                                    onKeyDown={(e) => handleOptionKeyDown(e, option)}>
+                                    <List.Text>{filterString?.length ?
+                                        (<>{leftPart}<b>{matchingPart}</b>{rightPart}</>)
+                                        : option.text}</List.Text>
+                                </List.Item>
+                            );
+                        }) :
+                            (<List.Item>
+                                <List.Text>{noMatchesText}</List.Text>
                             </List.Item>
-                        ))}
+                            )}
                     </List>
-                </>)}
+                </div>)}
             control={inputGroup}
             disableKeyPressHandler
             disabled={disabled}
-            firstFocusIndex={0}
+            // firstFocusIndex={0}
             noArrow
             ref={popoverRef}
+            show={isExpanded}
             useArrowKeyNavigation
             widthSizingType='minTarget' />
     );
@@ -153,6 +319,8 @@ ComboboxInput.propTypes = {
     disabled: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Localized string to show when no options match the input */
+    noMatchesText: PropTypes.string,
     /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
@@ -173,14 +341,17 @@ ComboboxInput.propTypes = {
     }),
     /** Callback function when user clicks on the component*/
     onClick: PropTypes.func,
-    /** Callback function when user clicks on an option */
-    onSelect: PropTypes.func
+    /** Callback function when selected option changes when
+     *
+     * * user clicks on an option
+     * * enters text that causes de-selection*/
+    onSelectionChange: PropTypes.func
 };
 
 ComboboxInput.defaultProps = {
     options: [],
-    onClick: () => {},
-    onSelect: () => {}
+    onClick: () => { },
+    onSelect: () => { }
 };
 
 export default ComboboxInput;
