@@ -39,32 +39,6 @@ const Select = React.forwardRef(({
 
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
-    const openPopover = () => {
-        const popover = popoverRef && popoverRef.current;
-        popover && popover.triggerBody();
-    };
-
-    const handleClick = (e) => {
-        if (!disabled && !readOnly) {
-            openPopover();
-
-            onClick(e);
-        }
-    };
-
-    const handleKeyDown = (e) => {
-        if (!disabled && !readOnly) {
-            switch (keycode(e)) {
-                case 'enter':
-                case 'space':
-                    e.preventDefault();
-                    openPopover();
-                    break;
-                default:
-            }
-        }
-    };
-
     const handleSelect = (e, option) => {
         const popover = popoverRef && popoverRef.current;
         popover && popover.handleEscapeKey();
@@ -140,8 +114,6 @@ const Select = React.forwardRef(({
             aria-disabled={disabled}
             aria-readonly={readOnly}
             control={selectControl}
-            onClick={handleClick}
-            onKeyDown={handleKeyDown}
             role={'combobox'}
             tabIndex={tabIndex}
             validationState={validationState} />
@@ -186,8 +158,8 @@ const Select = React.forwardRef(({
                     </List>
                 </>)}
             control={wrappedSelectControl}
-            disableKeyPressHandler
-            disableTriggerOnClick
+            disableKeyPressHandler={disabled || readOnly}
+            disableTriggerOnClick={disabled || readOnly}
             firstFocusIndex={firstFocusIndex}
             noArrow
             placement='bottom-start'

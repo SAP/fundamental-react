@@ -29,9 +29,12 @@ exports[`Storyshots Component API/Select Compact 1`] = `
               className="fd-popover__control"
             >
               <div
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
                 className="fd-select fd-select--compact"
                 onClick={[Function]}
-                onKeyDown={[Function]}
+                onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
@@ -87,10 +90,13 @@ exports[`Storyshots Component API/Select Dev 1`] = `
               className="fd-popover__control"
             >
               <div
+                aria-controls="fd-mocked-short-id"
                 aria-disabled={false}
+                aria-expanded={false}
+                aria-haspopup="listbox"
                 className="fd-select"
                 onClick={[Function]}
-                onKeyDown={[Function]}
+                onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
@@ -148,8 +154,6 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
               <div
                 aria-disabled={true}
                 className="fd-select"
-                onClick={[Function]}
-                onKeyDown={[Function]}
                 role="combobox"
                 tabIndex={-1}
               >
@@ -205,9 +209,12 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
               className="fd-popover__control"
             >
               <div
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
                 className="fd-select"
                 onClick={[Function]}
-                onKeyDown={[Function]}
+                onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
@@ -261,9 +268,12 @@ exports[`Storyshots Component API/Select Primary 1`] = `
               className="fd-popover__control"
             >
               <div
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
                 className="fd-select"
                 onClick={[Function]}
-                onKeyDown={[Function]}
+                onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
@@ -321,8 +331,6 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
               <div
                 aria-readonly={true}
                 className="fd-select"
-                onClick={[Function]}
-                onKeyDown={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
@@ -378,9 +386,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="listbox"
                   className="fd-select"
                   onClick={[Function]}
-                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
                   role="combobox"
                   tabIndex={0}
                 >
@@ -429,9 +440,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="listbox"
                   className="fd-select"
                   onClick={[Function]}
-                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
                   role="combobox"
                   tabIndex={0}
                 >
@@ -480,9 +494,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="listbox"
                   className="fd-select"
                   onClick={[Function]}
-                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
                   role="combobox"
                   tabIndex={0}
                 >
@@ -531,9 +548,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                 className="fd-popover__control"
               >
                 <div
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="listbox"
                   className="fd-select"
                   onClick={[Function]}
-                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
                   role="combobox"
                   tabIndex={0}
                 >
