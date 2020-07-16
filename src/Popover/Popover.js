@@ -97,7 +97,6 @@ class Popover extends Component {
             disableEdgeDetection,
             disableKeyPressHandler,
             disableTriggerOnClick,
-            fallbackPlacements,
             flipContainer,
             firstFocusIndex,
             onClickOutside,
@@ -173,7 +172,6 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     disableEdgeDetection={disableEdgeDetection}
-                    fallbackPlacements={fallbackPlacements}
                     flipContainer={flipContainer}
                     innerRef={innerRef}
                     noArrow={noArrow}
@@ -213,8 +211,6 @@ Popover.propTypes = {
     /** Set to **true** to remove default triggerBody handler used in onClick.
      * Useful for when a custom method is desired to open the Popover */
     disableTriggerOnClick: PropTypes.bool,
-    /** Where else to position the popover when the original placement is out of bounds */
-    fallbackPlacements: PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
     /** Index of the focusable item to focus first within the Popover */
     firstFocusIndex: PropTypes.number,
     /** The bounding container to use when determining if the popover is out of bounds */
@@ -224,7 +220,10 @@ Popover.propTypes = {
     ]),
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
-    /** 'bottom-start',
+    /** The options are 'auto',
+    'auto-start',
+    'auto-end',
+    'bottom-start',
     'bottom',
     'bottom-end',
     'left-start',
@@ -235,8 +234,13 @@ Popover.propTypes = {
     'right-end',
     'top-start',
     'top',
-    'top-end' */
-    placement: PropTypes.oneOf(POPPER_PLACEMENTS),
+    'top-end'
+    You can also pass an array of these to specify which placements to fallback to
+    */
+    placement: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
+        PropTypes.oneOf(POPPER_PLACEMENTS)
+    ]),
     /** Additional classeNames to be spread to the overlay element */
     popperClassName: PropTypes.string,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
