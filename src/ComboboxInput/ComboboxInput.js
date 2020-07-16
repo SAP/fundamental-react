@@ -73,92 +73,97 @@ const ComboboxInput = React.forwardRef(({
         event.stopPropagation();
         if (!isExpanded) {
             textInputRef?.current?.focus();
-            setTimeout(() => {
-                attachFocusManager();
-            }, 0);
+            openPopoverToIndex();
+        } else {
+            setIsExpanded(false);
         }
-        setIsExpanded(!isExpanded);
     };
 
     const handleInputKeyDown = (event) => {
         const textField = event?.target;
         const textFieldValue = event?.target?.value;
-        const selectedText = textFieldValue?.substring(textField?.selectionStart - 1, textField?.selectionEnd);
+        // const selectionStart = textField?.selectionStart;
+        // const selectionEnd = textField?.selectionEnd;
+        // const selectedText = textFieldValue?.substring(selectionStart - 1, selectionEnd);
         switch (keycode(event)) {
             case 'backspace':
-                if (textField?.selectionStart === 0) {
-                    break;
-                }
-                const allTextIsSelected = selectedText?.length === textFieldValue?.length;
+                textInputRef.current.value = filterString;
+                //     console.clear();
+                //     console.debug('filterString', filterString);
+                //     console.debug('textFieldValue', textFieldValue);
+                //     console.debug('textFieldValue?.length', textFieldValue?.length);
+                //     console.debug('selectionStart', selectionStart);
+                //     console.debug('selectionEnd', selectionEnd);
+                //     console.debug('selectedText', selectedText);
+                //     console.debug('selectedText length', selectedText?.length);
+                //     if (selectionStart === 0) {
+                //         console.debug('do nothing');
+                //         break;
+                //     }
+                //     const allTextIsSelected = selectedText?.length === textFieldValue?.length;
+                //     console.debug('allTextIsSelected', allTextIsSelected);
 
-                const finalCharacter = selectedText?.length === textFieldValue?.length - 1;
+                //     const finalCharacter =
+                //         (selectionStart < textFieldValue?.length)
+                //         && (selectedText?.length === textFieldValue?.length - 1);
+                //     console.debug('finalCharacter', finalCharacter);
 
-                if (finalCharacter) {
-                    createSelection(textField, 0, textFieldValue?.length);
-                }
+                //     if (finalCharacter) {
+                //         createSelection(textField, 0, textFieldValue?.length);
+                //     }
 
-                if (allTextIsSelected) {
-                    reset();
-                } else {
-                    if (selectedText) {
-                        const unselectedText = textFieldValue?.split(selectedText).join('');
-                        handleInputChange({
-                            target: {
-                                value: unselectedText
-                            }
-                        });
-                    } else {
-                        const fsMinusOne = filterString?.substring(0, filterString?.length - 1);
-                        handleInputChange({
-                            target: {
-                                value: fsMinusOne
-                            }
-                        }, true);
-                    }
-                }
+                //     if (allTextIsSelected) {
+                //         reset();
+                //     } else {
+                //         if (selectedText) {
+                //             const unselectedText = textFieldValue?.split(selectedText).join('');
+                //             console.debug('unselectedText', unselectedText);
+                //             setFilterString(unselectedText);
+                //             select(null, null);
+                //             textInputRef.current.value = filterString;
+                //         } else {
+                //             const fsMinusOne = filterString?.substring(0, filterString?.length - 1);
+                //             console.debug('fsMinusOne', fsMinusOne);
+                //             setFilterString(fsMinusOne);
+                //             select(null, null);
+                //             textInputRef.current.value = filterString;
+                //         }
+                //     }
                 break;
             case 'enter':
-                if (textFieldValue) {
-                    const firstOption = getFirstFilteredOption(textFieldValue);
-                    if (firstOption) {
-                        handleOptionSelect(null, firstOption);
-                        textField.select();
-                    }
-                }
+                autoSelectFirstOption(event, textFieldValue);
+                textField.select();
                 break;
             case 'esc':
                 reset();
                 break;
             case 'tab':
-                autoSelectFirstOption(textFieldValue);
+                autoSelectFirstOption(event, textFieldValue);
                 closePopover();
                 break;
             case 'up':
-                setIsExpanded(true);
-                setTimeout(() => {
-                    attachFocusManager(lastTabbableNodeIndex(popoverBodyRef?.current));
-                }, 0);
+                const lastOptionIndex = lastTabbableNodeIndex(popoverBodyRef?.current);
+                openPopoverToIndex(lastOptionIndex);
                 break;
             case 'down':
-                setIsExpanded(true);
-                setTimeout(() => {
-                    attachFocusManager(selectedOptionKey ? 1 : 0);
-                }, 0);
+                openPopoverToIndex(selectedOptionKey ? 1 : 0);
+                break;
+            case 'left':
+            case 'right':
+                setFilterString(textFieldValue);
                 break;
             default:
         }
     };
 
-    const handleInputChange = (event, erasing) => {
-
+    const handleInputChange = (event) => {
+        // console.debug('handleInputChange', event?.target?.value);
         const inputValue = event?.target?.value;
         setFilterString(inputValue);
         select(null, null);
 
         //try type ahead nudge
-        if (erasing) {
-            textInputRef.current.value = filterString;
-        } else if (inputValue) {
+        if (inputValue) {
             setIsExpanded(true);
             const firstOption = getFirstFilteredOption(inputValue);
             if (
@@ -213,31 +218,19 @@ const ComboboxInput = React.forwardRef(({
             new FocusManager(popoverBodyRef?.current, textInputRef?.current, true, focusNodeIndex);
     };
 
-    const autoSelectFirstOption = (searchString) => {
+    const autoSelectFirstOption = (event, searchString) => {
         if (searchString) {
             const firstOption = getFirstFilteredOption(searchString);
             if (firstOption) {
-                handleOptionSelect(null, firstOption);
+                handleOptionSelect(event, firstOption);
             }
         }
-    };
-
-    const reset = () => {
-        closePopover();
-        textInputRef.current.value = '';
-        select(null, null);
-        setFilterString('');
     };
 
     const closePopover = () => {
         setIsExpanded(false);
         const popover = popoverRef && popoverRef.current;
         popover && popover.handleEscapeKey();
-    };
-
-    const select = (e, option) => {
-        onSelectionChange && onSelectionChange(e, option);
-        setSelectedOptionKey(option?.key);
     };
 
     const createSelection = (field, start, end) => {
@@ -253,6 +246,29 @@ const ComboboxInput = React.forwardRef(({
             field.selectionStart = start;
             field.selectionEnd = end;
         }
+    };
+
+    const openPopoverToIndex = (index) => {
+        setIsExpanded(true);
+        queueFocusManagerAttachment(index);
+    };
+
+    const reset = () => {
+        closePopover();
+        textInputRef.current.value = '';
+        select(null, null);
+        setFilterString('');
+    };
+
+    const select = (e, option) => {
+        onSelectionChange && onSelectionChange(e, option);
+        setSelectedOptionKey(option?.key);
+    };
+
+    const queueFocusManagerAttachment = (initialFocusIndex) => {
+        setTimeout(() => {
+            attachFocusManager(initialFocusIndex);
+        }, 0);
     };
 
     //String, collection, and DOM utils
@@ -367,7 +383,7 @@ const ComboboxInput = React.forwardRef(({
             {...formItemProps}>
             {
                 label?.trim() &&
-                <FormLabel id={`${id}-label`}>{label}, {filterString}, {selectedOptionKey}</FormLabel>
+                <FormLabel id={`${id}-label`}>{label}</FormLabel>
             }
             <Popover
                 {...popoverProps}
