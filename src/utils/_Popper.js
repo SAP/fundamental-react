@@ -28,7 +28,7 @@ const defaultModifiers = [
 
 const createFlipModifier = ({
     disableEdgeDetection,
-    fallbackPlacements,
+    popperPlacement,
     flipContainer
 }) => {
     if (disableEdgeDetection) {
@@ -38,12 +38,15 @@ const createFlipModifier = ({
         };
     }
 
+    const options = {
+        boundary: flipContainer
+    };
+    if (Array.isArray(popperPlacement)) {
+        options.fallbackPlacements = popperPlacement.slice(1);
+    }
     return {
         name: 'flip',
-        options: {
-            fallbackPlacements,
-            boundary: flipContainer
-        }
+        options
     };
 };
 
@@ -140,7 +143,6 @@ class Popper extends React.Component {
             children,
             cssBlock,
             disableEdgeDetection,
-            fallbackPlacements,
             flipContainer,
             innerRef,
             noArrow,
@@ -159,7 +161,7 @@ class Popper extends React.Component {
 
         const modifiers = [
             ...defaultModifiers,
-            createFlipModifier({ disableEdgeDetection, fallbackPlacements, flipContainer }),
+            createFlipModifier({ disableEdgeDetection, popperPlacement, flipContainer }),
             ...popperModifiers
         ];
         if (widthSizingType === 'matchTarget') {
@@ -175,10 +177,14 @@ class Popper extends React.Component {
             [`${cssBlock}__popper--no-arrow`]: !!noArrow
         });
 
+        const basePlacement = Array.isArray(popperPlacement)
+            ? popperPlacement[0]
+            : popperPlacement;
+
         let popper = (
             <ReactPopper
                 modifiers={modifiers}
-                placement={popperPlacement}>
+                placement={basePlacement}>
                 {({ ref, style, isReferenceHidden, arrowProps, placement }) => {
                     if (!show) {
                         return null;
@@ -247,7 +253,6 @@ Popper.propTypes = {
     cssBlock: PropTypes.string.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
-    fallbackPlacements: PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
     flipContainer: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.instanceOf(Element)),
         PropTypes.instanceOf(Element)
@@ -256,7 +261,10 @@ Popper.propTypes = {
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.array,
-    popperPlacement: PropTypes.oneOf(POPPER_PLACEMENTS),
+    popperPlacement: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
+        PropTypes.oneOf(POPPER_PLACEMENTS)
+    ]),
     popperProps: PropTypes.object,
     referenceClassName: PropTypes.string,
     referenceProps: PropTypes.object,
@@ -269,9 +277,8 @@ Popper.propTypes = {
 };
 
 Popper.defaultProps = {
-    fallbackPlacements: ['bottom-start', 'top-start', 'bottom-end', 'top-end'],
     popperModifiers: [],
-    popperPlacement: 'bottom-start',
+    popperPlacement: ['bottom-start', 'top-start', 'bottom-end', 'top-end'],
     onClickOutside: () => { },
     onKeyDown: () => { }
 };
