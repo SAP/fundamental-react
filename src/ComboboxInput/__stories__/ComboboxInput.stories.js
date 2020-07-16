@@ -312,8 +312,11 @@ export const dev = () => {
                     Selected country code: {selectedCountryObj?.key || 'none'}
                     <br />
                     <ComboboxInput
+                        arrowLabel='Show country options'
                         compact={boolean('compact', false)}
                         disabled={boolean('disabled', false)}
+                        id='comboboxDevExample'
+                        label='Country'
                         noMatchesText='No Matches'
                         onSelectionChange={(event, option) => {
                             setSelectedCountry(option);
