@@ -250,8 +250,8 @@ describe('<Popover />', () => {
             expect(flipModifier.enabled).not.toBeDefined();
         });
 
-        test('fallback placements props', () => {
-            const popoverWithParent = mount(popOver).setProps({ fallbackPlacements: ['top'] });
+        test('fallback placements', () => {
+            const popoverWithParent = mount(popOver).setProps({ placement: ['right', 'top'] });
             const popperComponent = popoverWithParent.find(ReactPopper);
             const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
             expect(flipModifier.options.fallbackPlacements).toEqual(['top']);
@@ -261,7 +261,7 @@ describe('<Popover />', () => {
             const popoverWithParent = mount(popOver).setProps({ });
             const popperComponent = popoverWithParent.find(ReactPopper);
             const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
-            expect(flipModifier.options.fallbackPlacements).toEqual(Popper.defaultProps.fallbackPlacements);
+            expect(flipModifier.options.fallbackPlacements).toEqual(Popper.defaultProps.popperPlacement.slice(1));
         });
 
         test('flip container props', () => {

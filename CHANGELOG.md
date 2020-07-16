@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.3...v0.11.1-rc.4) (2020-07-16)
+
+
+### Features
+
+* Use the popperPlacement prop to allow fallbackPlacements ([#1126](https://github.com/SAP/fundamental-react/issues/1126)) ([ca5a66f](https://github.com/SAP/fundamental-react/commit/ca5a66f25140b002d515801a079ddca04b0b8263))
+
 ### [0.11.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.2...v0.11.1-rc.3) (2020-07-15)
 
 

@@ -5,10 +5,8 @@ import Dialog from '../../Dialog/Dialog';
 import Icon from '../../Icon/Icon';
 import Menu from '../../Menu/Menu';
 import Popover from '../Popover';
-import Popper from '../../utils/_Popper';
 import { POPPER_PLACEMENTS } from '../../utils/constants';
 import {
-    array,
     boolean,
     select
 } from '@storybook/addon-knobs';
@@ -230,9 +228,8 @@ export const withCustomFlipContainer = () => {
                 <Popover
                     body={bodyContent}
                     control={<Button glyph='navigation-up-arrow' option='transparent' />}
-                    fallbackPlacements={['left', 'right', 'top']}
                     flipContainer={container}
-                    placement='bottom' />
+                    placement={['bottom', 'left', 'right', 'top']} />
             </div>
         </div>
     );
@@ -351,9 +348,6 @@ export const dev = () => {
             disableEdgeDetection={boolean('disableEdgeDetection', false)}
             disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
             disabled={boolean('disabled', false)}
-            fallbackPlacements={array('fallbackPlacements',
-                Popper.defaultProps.fallbackPlacements
-            )}
             // eslint-disable-next-line no-undefined
             flipContainer={useContainer ? container : undefined}
             noArrow={boolean('noArrow', false)}
