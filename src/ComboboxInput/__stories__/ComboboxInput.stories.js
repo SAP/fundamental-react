@@ -56,7 +56,7 @@ export const validationState = () => (
 
 export const dev = () => {
     const [selectedCountryObj, setSelectedCountry] = useState();
-    const [useCustomRenderer, setUseCustomRenderer] = useState();
+    const [useCustomRenderer, setUseCustomRenderer] = useState(true);
 
     const withFlags = (option) => {
         return (
@@ -65,7 +65,8 @@ export const dev = () => {
                 <span
                     style={{
                         position: 'absolute',
-                        right: '20px'
+                        right: '20px',
+                        fontSize: '2rem'
                     }}>
                     {option.emoji}
                 </span>
@@ -83,6 +84,7 @@ export const dev = () => {
                 </div>
                 <div>
                     <Switch
+                        checked
                         compact
                         onChange={() => {
                             setUseCustomRenderer(!useCustomRenderer);

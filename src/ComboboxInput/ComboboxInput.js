@@ -82,6 +82,9 @@ const ComboboxInput = React.forwardRef(({
         const selectedText = textFieldValue?.substring(textField?.selectionStart, textField?.selectionEnd);
         switch (keycode(event)) {
             case 'backspace':
+                if (textField?.selectionStart === 0) {
+                    break;
+                }
                 const allTextIsSelected = selectedText?.length === textFieldValue?.length;
 
                 const finalCharacter = selectedText?.length === textFieldValue?.length - 1;
@@ -114,7 +117,7 @@ const ComboboxInput = React.forwardRef(({
                 reset();
                 break;
             case 'tab':
-                autoSelect(textFieldValue);
+                autoSelectFirstOption(textFieldValue);
                 closePopover();
                 break;
             case 'up':
@@ -145,10 +148,13 @@ const ComboboxInput = React.forwardRef(({
         } else if (inputValue) {
             setIsExpanded(true);
             const firstOption = getFirstFilteredOption(inputValue);
-            if (firstOption && shouldTypeAhead(firstOption?.text, inputValue)) {
+            if (
+                firstOption
+                && startsWithIgnoreCase(firstOption?.text, inputValue)
+            ) {
                 textInputRef.current.value = firstOption?.text;
-                select(event, firstOption);
                 createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
+                select(event, firstOption);
             }
         } else {
             closePopover();
@@ -168,6 +174,7 @@ const ComboboxInput = React.forwardRef(({
             case 'tab':
                 e.stopPropagation();
                 closePopover();
+                setFilterString(option?.text);
                 break;
             case 'enter':
             case 'space':
@@ -186,12 +193,6 @@ const ComboboxInput = React.forwardRef(({
         setFilterString(option?.text);
     };
 
-    const handleNoMatchOptionKeyDown = (event) => {
-        if (keycode(event) === 'esc') {
-            reset();
-        }
-    };
-
     // DOM and State Manipulation
     const attachFocusManager = (focusNodeIndex = 0) => {
         popoverBodyRef?.current &&
@@ -199,21 +200,20 @@ const ComboboxInput = React.forwardRef(({
             new FocusManager(popoverBodyRef?.current, textInputRef?.current, true, focusNodeIndex);
     };
 
-    const autoSelect = (searchString) => {
+    const autoSelectFirstOption = (searchString) => {
         if (searchString) {
             const firstOption = getFirstFilteredOption(searchString);
             if (firstOption) {
                 handleOptionSelect(null, firstOption);
-                textInputRef?.current?.select();
             }
         }
     };
 
     const reset = () => {
-        textInputRef.current.value = '';
-        setFilterString('');
-        select(null, null);
         closePopover();
+        textInputRef.current.value = '';
+        select(null, null);
+        setFilterString('');
     };
 
     const closePopover = () => {
@@ -252,7 +252,7 @@ const ComboboxInput = React.forwardRef(({
         return container ? tabbable(container)?.length - 1 || 0 : 0;
     };
 
-    const shouldTypeAhead = (optionText, inputValue) => {
+    const startsWithIgnoreCase = (optionText, inputValue) => {
         return optionText?.toLowerCase().startsWith(inputValue?.toLowerCase());
     };
 
@@ -293,6 +293,9 @@ const ComboboxInput = React.forwardRef(({
         return content;
     };
 
+    const filteredOptions = getFilteredOptions(filterString);
+    const showPopover = isExpanded && !!filteredOptions.length;
+
     const comboboxAddonButton = (
         <Button
             {...buttonProps}
@@ -300,7 +303,7 @@ const ComboboxInput = React.forwardRef(({
             className={classnames(
                 buttonProps?.className,
                 {
-                    'is-active': isExpanded
+                    'is-active': showPopover
                 }
             )}
             glyph='navigation-down-arrow'
@@ -313,7 +316,7 @@ const ComboboxInput = React.forwardRef(({
 
     const inputGroup = (
         <div
-            aria-expanded={isExpanded}
+            aria-expanded={showPopover}
             aria-haspopup='listbox'
             aria-owns={`${id}-listbox`}
             id={`${id}-combobox`}
@@ -346,14 +349,12 @@ const ComboboxInput = React.forwardRef(({
         </div>
     );
 
-    const filteredOptions = getFilteredOptions(filterString);
-
     return (
         <FormItem
             {...formItemProps}>
             {
                 label?.trim() &&
-                <FormLabel id={`${id}-label`}>{label}</FormLabel>
+                <FormLabel id={`${id}-label`}>{label}, {filterString}, {selectedOptionKey}</FormLabel>
             }
             <Popover
                 {...popoverProps}
@@ -390,7 +391,7 @@ const ComboboxInput = React.forwardRef(({
                                 );
                             }) :
                                 (<List.Item
-                                    onKeyDown={handleNoMatchOptionKeyDown}>
+                                    tabIndex='-1'>
                                     <List.Text
                                         role='option'>
                                         {noMatchesText || 'No match'}
@@ -406,9 +407,10 @@ const ComboboxInput = React.forwardRef(({
                 noArrow
                 onClickOutside={() => {
                     closePopover();
+                    setFilterString(textInputRef?.current?.value);
                 }}
                 ref={popoverRef}
-                show={isExpanded}
+                show={showPopover}
                 useArrowKeyNavigation
                 widthSizingType='minTarget' />
         </FormItem>
