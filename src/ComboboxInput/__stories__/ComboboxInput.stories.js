@@ -104,7 +104,7 @@ export const dev = () => {
                         onSelectionChange={(event, option) => {
                             setSelectedCountry(option);
                         }}
-                        optionRenderer={useCustomRenderer ? withFlags : false}
+                        optionRenderer={useCustomRenderer ? withFlags : null}
                         options={countriesData}
                         placeholder={text('Placeholder', placeholder)}
                         validationState={select('Validation State', {
