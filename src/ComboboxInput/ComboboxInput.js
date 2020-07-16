@@ -60,6 +60,10 @@ const ComboboxInput = React.forwardRef(({
 
     // Event Handler
     const handleInputGroupClick = (e) => {
+        if (isExpanded) {
+            closePopover();
+            setFilterString(textInputRef?.current?.value);
+        }
         if (!disabled) {
             onClick(e);
         }
@@ -79,7 +83,7 @@ const ComboboxInput = React.forwardRef(({
     const handleInputKeyDown = (event) => {
         const textField = event?.target;
         const textFieldValue = event?.target?.value;
-        const selectedText = textFieldValue?.substring(textField?.selectionStart, textField?.selectionEnd);
+        const selectedText = textFieldValue?.substring(textField?.selectionStart - 1, textField?.selectionEnd);
         switch (keycode(event)) {
             case 'backspace':
                 if (textField?.selectionStart === 0) {
@@ -96,12 +100,21 @@ const ComboboxInput = React.forwardRef(({
                 if (allTextIsSelected) {
                     reset();
                 } else {
-                    const fsMinusOne = filterString?.length && filterString.substring(0, filterString?.length - 1);
-                    handleInputChange({
-                        target: {
-                            value: fsMinusOne
-                        }
-                    }, true);
+                    if (selectedText) {
+                        const unselectedText = textFieldValue?.split(selectedText).join('');
+                        handleInputChange({
+                            target: {
+                                value: unselectedText
+                            }
+                        });
+                    } else {
+                        const fsMinusOne = filterString?.substring(0, filterString?.length - 1);
+                        handleInputChange({
+                            target: {
+                                value: fsMinusOne
+                            }
+                        }, true);
+                    }
                 }
                 break;
             case 'enter':
