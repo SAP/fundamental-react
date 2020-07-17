@@ -22,6 +22,12 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, 
         },
         className
     );
+
+    const handleKeyPress = e => {
+        if (e.key === 'Enter' || e.key === ' ')
+            onClick();
+    };
+
     let StatusTag = 'span';
     let semanticProps = {};
 
@@ -29,11 +35,11 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, 
         StatusTag = 'a';
         semanticProps.href = link;
     } else if ( typeof onClick === 'function') {
-        StatusTag = 'button';
+        StatusTag = 'span';
         semanticProps.onClick = onClick;
-        semanticProps.style = {
-            background: 'transparent'
-        };
+        semanticProps.onKeyPress = handleKeyPress;
+        semanticProps.role = 'button';
+        semanticProps.tabIndex = 0;
     }
     return (
         <StatusTag
