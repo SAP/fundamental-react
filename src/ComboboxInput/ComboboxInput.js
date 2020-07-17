@@ -436,7 +436,7 @@ const ComboboxInput = React.forwardRef(({
                 label?.trim() &&
                 <FormLabel id={`${id}-label`}>{label}</FormLabel>
             }
-            <small>{`typ:${resolvedSelectionType}, fs:${filterString}, sok:${selectedOption?.key}`}</small>
+            {/* <small>{`typ:${resolvedSelectionType}, fs:${filterString}, sok:${selectedOption?.key}`}</small> */}
             <Popover
                 {...popoverProps}
                 body={
