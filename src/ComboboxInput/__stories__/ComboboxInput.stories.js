@@ -78,9 +78,7 @@ export const dev = () => {
         <>
             <LayoutGrid>
                 <div>
-                    For focus testing
-                    <br />
-                    <Button>Test</Button>
+                    <Button>Dummy</Button>
                 </div>
                 <div>
                     <Switch
@@ -124,9 +122,7 @@ export const dev = () => {
                         })} />
                 </div>
                 <div>
-                    For focus testing
-                    <br />
-                    <Button>Test</Button>
+                    <Button>Dummy</Button>
                 </div>
             </LayoutGrid>
         </>

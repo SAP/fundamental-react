@@ -147,17 +147,17 @@ const ComboboxInput = React.forwardRef(({
         setFilterString(inputValue);
         select(null, null);
 
-        //try type ahead nudge
         if (inputValue?.trim()) {
             setIsExpanded(true);
-            const firstOption = getFirstFilteredOption(inputValue);
             switch (resolvedSelectionType) {
                 case 'manual':
                     break;
                 case 'auto':
-                    select(event, firstOption);
+                    select(event, getFirstFilteredOption(inputValue));
                     break;
                 case 'auto-inline':
+                    //try type ahead nudge
+                    const firstOption = getFirstFilteredOption(inputValue);
                     if (
                         firstOption
                         && startsWithIgnoreCase(firstOption?.text, inputValue)
@@ -177,7 +177,7 @@ const ComboboxInput = React.forwardRef(({
     const handleInputBlur = (event) => {
         switch (resolvedSelectionType) {
             case 'manual':
-                if (!selectedOption?.key) {
+                if (!selectedOption?.key && textInputRef?.current?.value?.trim().length) {
                     onSelectionChange && onSelectionChange(event, {
                         'text': textInputRef?.current?.value,
                         'key': -1
