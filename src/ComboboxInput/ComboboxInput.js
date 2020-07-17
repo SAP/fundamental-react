@@ -1,7 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
 import FocusManager from '../utils/focusManager/focusManager';
-import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormItem from '../Forms/FormItem';
 import FormLabel from '../Forms/FormLabel';
@@ -12,6 +11,7 @@ import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import tabbable from 'tabbable';
+import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useRef, useState } from 'react';
 
 /** A **ComboboxInput** allows users to select an item from a predefined list.
@@ -25,11 +25,13 @@ const ComboboxInput = React.forwardRef(({
     className,
     disabled,
     formItemProps,
+    filterable,
     id,
     popoverProps,
     inputProps,
     buttonProps,
     selectedKey,
+    selectionType,
     label,
     maxHeight,
     noMatchesText,
@@ -42,7 +44,7 @@ const ComboboxInput = React.forwardRef(({
 }, ref) => {
     let [isExpanded, setIsExpanded] = useState(false);
     let [filterString, setFilterString] = useState();
-    let [selectedOptionKey, setSelectedOptionKey] = useState();
+    let [selectedOption, setSelectedOption] = useState();
 
     const textInputRef = useRef(null);
     const popoverRef = useRef(null);
@@ -57,8 +59,9 @@ const ComboboxInput = React.forwardRef(({
         className
     );
 
+    const resolvedSelectionType = filterable ? selectionType : 'manual';
 
-    // Event Handler
+    // Event handling
     const handleInputGroupClick = (e) => {
         if (isExpanded) {
             closePopover();
@@ -82,53 +85,9 @@ const ComboboxInput = React.forwardRef(({
     const handleInputKeyDown = (event) => {
         const textField = event?.target;
         const textFieldValue = event?.target?.value;
-        // const selectionStart = textField?.selectionStart;
-        // const selectionEnd = textField?.selectionEnd;
-        // const selectedText = textFieldValue?.substring(selectionStart - 1, selectionEnd);
         switch (keycode(event)) {
             case 'backspace':
                 textInputRef.current.value = filterString;
-                //     console.clear();
-                //     console.debug('filterString', filterString);
-                //     console.debug('textFieldValue', textFieldValue);
-                //     console.debug('textFieldValue?.length', textFieldValue?.length);
-                //     console.debug('selectionStart', selectionStart);
-                //     console.debug('selectionEnd', selectionEnd);
-                //     console.debug('selectedText', selectedText);
-                //     console.debug('selectedText length', selectedText?.length);
-                //     if (selectionStart === 0) {
-                //         console.debug('do nothing');
-                //         break;
-                //     }
-                //     const allTextIsSelected = selectedText?.length === textFieldValue?.length;
-                //     console.debug('allTextIsSelected', allTextIsSelected);
-
-                //     const finalCharacter =
-                //         (selectionStart < textFieldValue?.length)
-                //         && (selectedText?.length === textFieldValue?.length - 1);
-                //     console.debug('finalCharacter', finalCharacter);
-
-                //     if (finalCharacter) {
-                //         createSelection(textField, 0, textFieldValue?.length);
-                //     }
-
-                //     if (allTextIsSelected) {
-                //         reset();
-                //     } else {
-                //         if (selectedText) {
-                //             const unselectedText = textFieldValue?.split(selectedText).join('');
-                //             console.debug('unselectedText', unselectedText);
-                //             setFilterString(unselectedText);
-                //             select(null, null);
-                //             textInputRef.current.value = filterString;
-                //         } else {
-                //             const fsMinusOne = filterString?.substring(0, filterString?.length - 1);
-                //             console.debug('fsMinusOne', fsMinusOne);
-                //             setFilterString(fsMinusOne);
-                //             select(null, null);
-                //             textInputRef.current.value = filterString;
-                //         }
-                //     }
                 break;
             case 'enter':
                 autoSelectFirstOption(event, textFieldValue);
@@ -138,15 +97,35 @@ const ComboboxInput = React.forwardRef(({
                 reset();
                 break;
             case 'tab':
-                autoSelectFirstOption(event, textFieldValue);
+                switch (resolvedSelectionType) {
+                    case 'auto':
+                    case 'auto-inline':
+                        autoSelectFirstOption(event, textFieldValue);
+                        break;
+                    default:
+                }
                 closePopover();
                 break;
-            case 'up':
-                const lastOptionIndex = lastTabbableNodeIndex(popoverBodyRef?.current);
-                openPopoverToIndex(lastOptionIndex);
-                break;
             case 'down':
-                openPopoverToIndex(selectedOptionKey ? 1 : 0);
+            case 'up':
+                let shouldShowOptions = true;
+                switch (resolvedSelectionType) {
+                    case 'manual': {
+                        shouldShowOptions = !!textFieldValue?.trim()?.length || false;
+                    }
+                        break;
+                    case 'auto':
+                    case 'auto-inline':
+                        break;
+                    default:
+                }
+                if (shouldShowOptions) {
+                    let targetIndex = selectedOption?.key ? 1 : 0;
+                    if (keycode(event) === 'up') {
+                        targetIndex = lastTabbableNodeIndex(popoverBodyRef?.current);
+                    }
+                    openPopoverToIndex(targetIndex);
+                }
                 break;
             case 'left':
             case 'right':
@@ -157,58 +136,124 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handleInputChange = (event) => {
-        // console.debug('handleInputChange', event?.target?.value);
         const inputValue = event?.target?.value;
         setFilterString(inputValue);
         select(null, null);
 
         //try type ahead nudge
-        if (inputValue) {
+        if (inputValue?.trim()) {
             setIsExpanded(true);
             const firstOption = getFirstFilteredOption(inputValue);
-            if (
-                firstOption
-                && startsWithIgnoreCase(firstOption?.text, inputValue)
-            ) {
-                textInputRef.current.value = firstOption?.text;
-                createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
-                select(event, firstOption);
+            switch (resolvedSelectionType) {
+                case 'manual':
+                    break;
+                case 'auto':
+                    select(event, firstOption);
+                    break;
+                case 'auto-inline':
+                    if (
+                        firstOption
+                        && startsWithIgnoreCase(firstOption?.text, inputValue)
+                    ) {
+                        textInputRef.current.value = firstOption?.text;
+                        createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
+                        select(event, firstOption);
+                    }
+                    break;
+                default:
             }
         } else {
             closePopover();
         }
     };
 
-    const handleOptionFocus = (e, option) => {
-        textInputRef.current.value = option?.text;
-        select(e, option);
-    };
-
-    const handleOptionKeyDown = (e, option) => {
-        switch (keycode(e)) {
-            case 'esc':
-                reset();
+    const handleInputBlur = (event) => {
+        switch (resolvedSelectionType) {
+            case 'manual':
+                if (!selectedOption?.key) {
+                    onSelectionChange && onSelectionChange(event, {
+                        'text': textInputRef?.current?.value,
+                        'key': -1
+                    });
+                }
                 break;
-            case 'tab':
-                e.stopPropagation();
-                closePopover();
-                setFilterString(option?.text);
+            case 'auto':
                 break;
-            case 'enter':
-            case 'space':
-                e.preventDefault();
-                handleOptionSelect(e, option);
+            case 'auto-inline':
                 break;
             default:
         }
     };
 
-    const handleOptionSelect = (e, option) => {
+    const handleOptionFocus = (event, option) => {
+        switch (resolvedSelectionType) {
+            case 'manual':
+                break;
+            case 'auto':
+                select(event, option);
+                break;
+            case 'auto-inline':
+                textInputRef.current.value = option?.text;
+                select(event, option);
+                break;
+            default:
+        }
+    };
+
+    const handleOptionKeyDown = (event, option) => {
+        switch (keycode(event)) {
+            case 'esc':
+                reset();
+                break;
+            case 'tab':
+                event.stopPropagation();
+                switch (resolvedSelectionType) {
+                    case 'manual':
+                    case 'auto':
+                        handleOptionSelect(event, option);
+                        // closePopover();
+                        // setFilterString(option?.text);
+                        // select(event, option);
+                        break;
+                    case 'auto-inline':
+                        closePopover();
+                        setFilterString(option?.text);
+                        break;
+                    default:
+                }
+                break;
+            case 'enter':
+            case 'space':
+                event.preventDefault();
+                handleOptionSelect(event, option);
+                break;
+            default:
+        }
+    };
+
+    const handleOptionSelect = (event, option) => {
         closePopover();
         textInputRef.current.value = option?.text;
         textInputRef.current?.select();
-        select(e, option);
+        select(event, option);
         setFilterString(option?.text);
+    };
+
+    const handlePopoverOutsideClick = () => {
+        closePopover();
+        switch (resolvedSelectionType) {
+            case 'manual':
+                setFilterString(textInputRef?.current?.value);
+                break;
+            case 'auto':
+                setFilterString(selectedOption?.text);
+                textInputRef.current.value = selectedOption?.text;
+                break;
+            case 'auto-inline':
+                setFilterString(selectedOption?.text);
+                break;
+            default:
+        }
     };
 
     // DOM and State Manipulation
@@ -260,9 +305,9 @@ const ComboboxInput = React.forwardRef(({
         setFilterString('');
     };
 
-    const select = (e, option) => {
-        onSelectionChange && onSelectionChange(e, option);
-        setSelectedOptionKey(option?.key);
+    const select = (event, option) => {
+        onSelectionChange && onSelectionChange(event, option);
+        setSelectedOption(option);
     };
 
     const queueFocusManagerAttachment = (initialFocusIndex) => {
@@ -305,7 +350,7 @@ const ComboboxInput = React.forwardRef(({
     };
 
 
-    // Renderers
+    // Rendering
     const renderListOption = (option) => {
         if (optionRenderer) {
             return optionRenderer(option);
@@ -367,13 +412,19 @@ const ComboboxInput = React.forwardRef(({
                     autoComplete='off'
                     compact={compact}
                     id={`${id}-input`}
+                    onBlur={handleInputBlur}
                     onChange={handleInputChange}
                     onKeyDown={handleInputKeyDown}
                     placeholder={placeholder}
                     ref={textInputRef} />
-                <InputGroup.Addon isButton>
-                    {comboboxAddonButton}
-                </InputGroup.Addon>
+                {
+                    resolvedSelectionType === 'auto-inline'
+                    && (
+                        <InputGroup.Addon isButton>
+                            {comboboxAddonButton}
+                        </InputGroup.Addon>
+                    )
+                }
             </InputGroup>
         </div>
     );
@@ -385,6 +436,7 @@ const ComboboxInput = React.forwardRef(({
                 label?.trim() &&
                 <FormLabel id={`${id}-label`}>{label}</FormLabel>
             }
+            <small>{`typ:${resolvedSelectionType}, fs:${filterString}, sok:${selectedOption?.key}`}</small>
             <Popover
                 {...popoverProps}
                 body={
@@ -414,7 +466,7 @@ const ComboboxInput = React.forwardRef(({
                                         onFocus={(e) => handleOptionFocus(e, option)}
                                         onKeyDown={(e) => handleOptionKeyDown(e, option)}
                                         role='option'
-                                        selected={selectedOptionKey ? option?.key === selectedOptionKey : false}>
+                                        selected={selectedOption?.key ? option?.key === selectedOption?.key : false}>
                                         {renderListOption(option)}
                                     </List.Item>
                                 );
@@ -434,10 +486,7 @@ const ComboboxInput = React.forwardRef(({
                 disableTriggerOnClick
                 disabled={disabled}
                 noArrow
-                onClickOutside={() => {
-                    closePopover();
-                    setFilterString(textInputRef?.current?.value);
-                }}
+                onClickOutside={handlePopoverOutsideClick}
                 ref={popoverRef}
                 show={showPopover}
                 useArrowKeyNavigation
@@ -476,6 +525,9 @@ Please set either 'label' or 'ariaLabel' property to a non-empty localized strin
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Set to **false** to disable option filtering. If **false** `selectionType` will be forced to `'manual'`.
+     * You can disable filtering to show a static list of options regardless of the text value, for example recent selections etc. */
+    filterable: PropTypes.bool,
     /** Additional props to be spread to the combobox FormItem wrapper */
     formItemProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
@@ -499,6 +551,13 @@ Please set either 'label' or 'ariaLabel' property to a non-empty localized strin
     popoverProps: PropTypes.object,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
+    /** String representing option selection behaviors:
+     *
+     * * `'manual'`: User has to manually select the option by navigating through the listbox options
+     * * `'auto'`: First option from the filtered options is automatically selected, user chooses different option by navigating through the list
+     * * `'auto-inline'`: First option from the filtered options is automatically selected and its options.text value is populated inline (type-ahead), user chooses different option by navigating through the list
+    */
+    selectionType: PropTypes.oneOf(COMBOBOX_SELECTION_TYPES),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -516,9 +575,11 @@ Please set either 'label' or 'ariaLabel' property to a non-empty localized strin
 };
 
 ComboboxInput.defaultProps = {
+    filterable: true,
     options: [],
     onClick: () => { },
-    onSelect: () => { }
+    onSelect: () => { },
+    selectionType: 'manual'
 };
 
 export default ComboboxInput;

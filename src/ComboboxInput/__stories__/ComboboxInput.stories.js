@@ -99,9 +99,10 @@ export const dev = () => {
                         arrowLabel='Show country options'
                         compact={boolean('compact', false)}
                         disabled={boolean('disabled', false)}
+                        filterable={boolean('filterable', true)}
                         id='comboboxDevExample'
                         label='Country'
-                        maxHeight='500px'
+                        maxHeight='250px'
                         noMatchesText='No Matches'
                         onSelectionChange={(event, option) => {
                             setSelectedCountry(option);
@@ -109,6 +110,11 @@ export const dev = () => {
                         optionRenderer={useCustomRenderer ? withFlags : null}
                         options={countriesData}
                         placeholder={text('Placeholder', placeholder)}
+                        selectionType={select('selectionType', {
+                            'manual': 'manual',
+                            'auto': 'auto',
+                            'auto-inline': 'auto-inline'
+                        })}
                         validationState={select('Validation State', {
                             'none': '',
                             'success': { state: 'success', text: 'placeholder text' },
