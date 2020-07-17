@@ -90,8 +90,15 @@ const ComboboxInput = React.forwardRef(({
                 textInputRef.current.value = filterString;
                 break;
             case 'enter':
-                autoSelectFirstOption(event, textFieldValue);
-                textField.select();
+                switch (resolvedSelectionType) {
+                    case 'manual':
+                        event.preventDefault();
+                        break;
+                    default:
+                        autoSelectFirstOption(event, textFieldValue);
+                        textField.select();
+                        break;
+                }
                 break;
             case 'esc':
                 reset();
@@ -157,8 +164,8 @@ const ComboboxInput = React.forwardRef(({
                     ) {
                         textInputRef.current.value = firstOption?.text;
                         createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
-                        select(event, firstOption);
                     }
+                    select(event, firstOption);
                     break;
                 default:
             }
