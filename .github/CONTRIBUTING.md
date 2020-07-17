@@ -16,7 +16,7 @@ If you find a bug or some other issue with any part of the library, please [subm
 - Your explanation is clear and complete.
 - You provide example code and/or screenshots (recommended).
 
-If you meet the above criteria, you can submit issues with our [GitHub issue tracker](https://github.com/SAP/fundamental-react/issues/new). Please use [labels](#usage-of-labels) to categorize your issue.
+If you meet the above criteria, you can submit issues with our [GitHub issue tracker](https://github.com/SAP/fundamental-react/issues/new).
 
 ## Feature Requests
 
@@ -43,7 +43,7 @@ which can be [found here](https://gist.github.com/CLAassistant/bd1ea8ec8aa035741
 If employees of a company contribute code, in **addition** to the individual agreement above, there needs to be one company agreement submitted. This is mainly for the protection of the contributing employees.
 
 A company representative authorized to do so needs to download, fill out, and print
-the [Corporate Contributor License Agreement](/docs/SAP%20Corporate%20Contributor%20License%20Agreement.pdf) form. Then either:
+the [Corporate Contributor License Agreement](https://github.com/SAP/openui5/blob/master/docs/SAP%20Corporate%20Contributor%20License%20Agreement.pdf) form. Then either:
 
 - Scan it and e-mail it to [opensource@sap.com](mailto:opensource@sap.com),
 - Fax it to: +49 6227 78-45813,
