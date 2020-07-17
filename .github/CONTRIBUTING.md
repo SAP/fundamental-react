@@ -16,7 +16,7 @@ If you find a bug or some other issue with any part of the library, please [subm
 - Your explanation is clear and complete.
 - You provide example code and/or screenshots (recommended).
 
-If you meet the above criteria, you can submit issues with our [GitHub issue tracker](https://github.com/SAP/fundamental-react/issues/new). Please use [labels](#usage-of-labels) to categorize your issue.
+If you meet the above criteria, you can submit issues with our [GitHub issue tracker](https://github.com/SAP/fundamental-react/issues/new).
 
 ## Feature Requests
 
