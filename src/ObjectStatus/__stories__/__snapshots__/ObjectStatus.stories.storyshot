@@ -7,56 +7,48 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
   <div
     className="fddocs-container"
   >
-    <button
+    <span
       className="fd-object-status sap-icon--status-negative fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Negative
-    </button>
-    <button
+    </span>
+    <span
       className="fd-object-status sap-icon--status-critical fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Critical
-    </button>
-    <button
+    </span>
+    <span
       className="fd-object-status sap-icon--status-positive fd-object-status--positive fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Positive
-    </button>
+    </span>
     <a
       className="fd-object-status sap-icon--hint fd-object-status--informative fd-object-status--link"
       href="#"
     >
       Info
     </a>
-    <button
+    <span
       className="fd-object-status sap-icon--to-be-reviewed fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Neutral
-    </button>
+    </span>
   </div>
   <div
     className="fddocs-container"
@@ -99,39 +91,33 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
   <div
     className="fddocs-container"
   >
-    <button
+    <span
       className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Negative
-    </button>
-    <button
+    </span>
+    <span
       className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Critical
-    </button>
-    <button
+    </span>
+    <span
       className="fd-object-status fd-object-status--indication-1 fd-object-status--large fd-object-status--link"
       onClick={[Function]}
-      style={
-        Object {
-          "background": "transparent",
-        }
-      }
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
     >
       Dark Red
-    </button>
+    </span>
     <a
       className="fd-object-status fd-object-status--indication-2 fd-object-status--large fd-object-status--link"
       href="#"
