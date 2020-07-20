@@ -232,10 +232,10 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handleOptionSelect = (event, option) => {
-        closePopover();
-        textInputRef.current.value = option?.text;
         select(event, option);
+        textInputRef.current.value = option?.text;
         setFilterString(option?.text);
+        closePopover();
     };
 
     const handlePopoverOutsideClick = () => {
@@ -564,7 +564,7 @@ Please set either 'label' or 'ariaLabel' property to a non-empty localized strin
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function when user clicks on the component*/
+    /** Callback function when user clicks on the input group i.e. the input field or addon button*/
     onClick: PropTypes.func,
     /** Callback function when selected option changes after
      *
@@ -577,7 +577,7 @@ ComboboxInput.defaultProps = {
     filterable: true,
     options: [],
     onClick: () => { },
-    onSelect: () => { },
+    onSelectionChange: () => { },
     selectionType: 'manual'
 };
 

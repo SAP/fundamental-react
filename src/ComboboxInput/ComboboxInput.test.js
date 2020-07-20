@@ -1,7 +1,10 @@
+import { act } from 'react-dom/test-utils';
 import ComboboxInput from './ComboboxInput';
 import { mount } from 'enzyme';
 import React from 'react';
+import { unmountComponentAtNode } from 'react-dom';
 
+let container = null;
 describe('<ComboboxInput />', () => {
     const defaultOptions = [
         { key: '1', text: 'List Item 1' },
@@ -12,7 +15,14 @@ describe('<ComboboxInput />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ComboboxInput component', () => {
-            const element = mount(<ComboboxInput data-sample='Sample' options={defaultOptions} />);
+            const element = mount(
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    data-sample='Sample'
+                    id='propSpreadingTesting'
+                    options={defaultOptions} />
+            );
 
             expect(
                 element.find('.fd-input-group').getDOMNode().attributes['data-sample'].value
@@ -20,7 +30,14 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s Popover component', () => {
-            const element = mount(<ComboboxInput options={defaultOptions} popoverProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    id='popoverPropSpreadingTesting'
+                    options={defaultOptions}
+                    popoverProps={{ 'data-sample': 'Sample' }} />
+            );
 
             expect(
                 element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
@@ -28,7 +45,14 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s input element', () => {
-            const element = mount(<ComboboxInput inputProps={{ 'data-sample': 'Sample' }} options={defaultOptions} />);
+            const element = mount(
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    id='inputFieldPropSpreadingTesting'
+                    inputProps={{ 'data-sample': 'Sample' }}
+                    options={defaultOptions} />
+            );
 
             expect(
                 element.find('input').getDOMNode().attributes['data-sample'].value
@@ -36,8 +60,15 @@ describe('<ComboboxInput />', () => {
         });
 
         test('should allow props to be spread to the ComboboxInput component\'s button element', () => {
-            const element = mount(<ComboboxInput buttonProps={{ 'data-sample': 'Sample' }} options={defaultOptions} />);
-
+            const element = mount(
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    buttonProps={{ 'data-sample': 'Sample' }}
+                    id='buttonPropSpreadingTesting'
+                    options={defaultOptions}
+                    selectionType='auto-inline' />
+            );
             expect(
                 element.find('button.sap-icon--navigation-down-arrow').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
@@ -45,33 +76,75 @@ describe('<ComboboxInput />', () => {
     });
 
     describe('interaction', () => {
-        let onSelect;
-        let element;
-        beforeEach(() => {
-            onSelect = jest.fn();
-            element = mount(
-                <ComboboxInput onSelect={onSelect} options={defaultOptions} />
-            );
-            element.find('button').simulate('click');
-        });
+        describe('Selection Type is \'auto-inline\'', () => {
+            beforeEach(() => {
+                container = document.createElement('div');
+                document.body.appendChild(container);
+            });
 
-        afterEach(() => {
-            let event = new MouseEvent('mousedown', {});
-            document.dispatchEvent(event);
-        });
+            afterEach(() => {
+                unmountComponentAtNode(container);
+                container.remove();
+                container = null;
+            });
 
-        test('should call onSelect when the first checkbox option is clicked', () => {
-            element.find('.fd-list__item').at(0).simulate('click');
+            test('should call onSelect when the first listbox option is clicked', () => {
+                const selectionChangeHandler = jest.fn();
+                act(() => {
+                    mount(
+                        <ComboboxInput
+                            ariaLabel='Dummy options'
+                            arrowLabel='Show options'
+                            id='interactionTesting'
+                            onSelectionChange={selectionChangeHandler}
+                            options={defaultOptions}
+                            selectionType='auto-inline' />,
+                        {
+                            attachTo: container
+                        }
+                    );
+                });
+                const button = document.getElementById('interactionTesting-combobox-arrow');
+                act(() => {
+                    button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+                });
+                const firstOption = document.body.querySelectorAll('.fd-list__item')[0];
+                let clickEvent = new MouseEvent('click', { bubbles: true });
+                act(() => {
+                    firstOption.dispatchEvent(clickEvent);
+                });
+                expect(selectionChangeHandler).toHaveBeenCalledTimes(1);
+                expect(selectionChangeHandler).toHaveBeenCalledWith(expect.anything(), defaultOptions[0]);
+            });
 
-            expect(onSelect).toHaveBeenCalledTimes(1);
-            expect(onSelect).toHaveBeenCalledWith(expect.anything(), defaultOptions[0]);
-        });
-
-        test('should call onSelect when the second checkbox option is clicked', () => {
-            element.find('.fd-list__item').at(1).simulate('click');
-
-            expect(onSelect).toHaveBeenCalledTimes(1);
-            expect(onSelect).toHaveBeenCalledWith(expect.anything(), defaultOptions[1]);
+            test('should call onSelect when the second listbox option is clicked', () => {
+                const selectionChangeHandler = jest.fn();
+                act(() => {
+                    mount(
+                        <ComboboxInput
+                            ariaLabel='Dummy options'
+                            arrowLabel='Show options'
+                            id='interactionTesting'
+                            onSelectionChange={selectionChangeHandler}
+                            options={defaultOptions}
+                            selectionType='auto-inline' />,
+                        {
+                            attachTo: container
+                        }
+                    );
+                });
+                const button = document.getElementById('interactionTesting-combobox-arrow');
+                act(() => {
+                    button.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+                });
+                const firstOption = document.body.querySelectorAll('.fd-list__item')[1];
+                let clickEvent = new MouseEvent('click', { bubbles: true });
+                act(() => {
+                    firstOption.dispatchEvent(clickEvent);
+                });
+                expect(selectionChangeHandler).toHaveBeenCalledTimes(1);
+                expect(selectionChangeHandler).toHaveBeenCalledWith(expect.anything(), defaultOptions[1]);
+            });
         });
     });
 
@@ -82,7 +155,15 @@ describe('<ComboboxInput />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <ComboboxInput options={defaultOptions} ref={ref} />;
+            render = () => (
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    id='refForwardingTesting'
+                    options={defaultOptions}
+                    ref={ref}
+                    selectionType='auto-inline' />
+            );
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('BUTTON');

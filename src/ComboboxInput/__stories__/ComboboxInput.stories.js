@@ -95,6 +95,9 @@ export const dev = () => {
                     <br />
                     <ComboboxInput
                         arrowLabel='Show country options'
+                        buttonProps={{
+                            'data-sample': 'combobox-dev-story-example'
+                        }}
                         compact={boolean('compact', false)}
                         disabled={boolean('disabled', false)}
                         filterable={boolean('filterable', true)}
