@@ -75,7 +75,6 @@ const ComboboxInput = React.forwardRef(({
     const handleAddonButtonClick = (event) => {
         event.stopPropagation();
         if (!isExpanded) {
-            textInputRef?.current?.focus();
             openPopoverToIndex();
         } else {
             setIsExpanded(false);
@@ -83,7 +82,6 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handleInputKeyDown = (event) => {
-        const textField = event?.target;
         const textFieldValue = event?.target?.value;
         switch (keycode(event)) {
             case 'backspace':
@@ -96,7 +94,6 @@ const ComboboxInput = React.forwardRef(({
                         break;
                     default:
                         autoSelectFirstOption(event, textFieldValue);
-                        textField.select();
                         break;
                 }
                 break;
@@ -213,14 +210,10 @@ const ComboboxInput = React.forwardRef(({
                 reset();
                 break;
             case 'tab':
-                event.stopPropagation();
                 switch (resolvedSelectionType) {
                     case 'manual':
                     case 'auto':
                         handleOptionSelect(event, option);
-                        // closePopover();
-                        // setFilterString(option?.text);
-                        // select(event, option);
                         break;
                     case 'auto-inline':
                         closePopover();
@@ -241,7 +234,6 @@ const ComboboxInput = React.forwardRef(({
     const handleOptionSelect = (event, option) => {
         closePopover();
         textInputRef.current.value = option?.text;
-        textInputRef.current?.select();
         select(event, option);
         setFilterString(option?.text);
     };
