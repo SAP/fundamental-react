@@ -10,47 +10,69 @@ import {
     select,
     text
 } from '@storybook/addon-knobs';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default {
     title: 'Component API/ComboboxInput',
-    component: ComboboxInput
+    component: ComboboxInput,
+    excludeStories: /.*VisualStoryShotOnly/
 };
 
 const placeholder = 'Enter country';
 
 export const primary = () => (
-    <ComboboxInput options={countriesData} placeholder={placeholder} />
+    <ComboboxInput
+        id='primaryComboboxExample'
+        label='Default'
+        options={countriesData}
+        placeholder={placeholder} />
 );
 
 export const disabled = () => (
-    <ComboboxInput disabled
-        options={countriesData} placeholder={placeholder} />
+    <ComboboxInput
+        ariaLabel='Disabled'
+        disabled
+        id='disabledComboboxExample'
+        options={countriesData}
+        placeholder={placeholder} />
 );
 
 export const compact = () => (
-    <ComboboxInput compact
-        options={countriesData} placeholder={placeholder} />
+    <ComboboxInput
+        ariaLabel='Compact'
+        compact
+        id='compactComboboxExample'
+        options={countriesData}
+        placeholder={placeholder} />
 );
 
 export const validationState = () => (
     <div className='fddocs-container'>
         <ComboboxInput
+            id='errorComboboxExample'
+            label='Combobox with error'
             options={countriesData}
-            placeholder='Error'
-            validationState={{ state: 'error', text: 'Test validation state' }} />
+            placeholder={placeholder}
+            required
+            validationState={{ state: 'error', text: 'Please select country of residence' }} />
         <ComboboxInput
+            id='warningComboboxExample'
+            label='Combobox with warning'
             options={countriesData}
-            placeholder='Warning'
-            validationState={{ state: 'warning', text: 'Test validation state' }} />
+            placeholder={placeholder}
+            validationState={{ state: 'warning', text: 'Country can be edited only once' }} />
         <ComboboxInput
+            id='infoComboboxExample'
+            label='Combobox with information'
             options={countriesData}
-            placeholder='Information'
-            validationState={{ state: 'information', text: 'Test validation state' }} />
+            placeholder={placeholder}
+            validationState={{ state: 'information', text: 'This data will not be shared.' }} />
         <ComboboxInput
+            id='successComboboxExample'
+            label='Combobox with success'
             options={countriesData}
-            placeholder='Success'
-            validationState={{ state: 'success', text: 'Test validation state' }} />
+            placeholder={placeholder}
+            validationState={{ state: 'success', text: 'Service is supported in these countries.' }} />
     </div>
 );
 
@@ -111,6 +133,7 @@ export const dev = () => {
                         optionRenderer={useCustomRenderer ? withFlags : null}
                         options={countriesData}
                         placeholder={text('Placeholder', placeholder)}
+                        required={boolean('required', false)}
                         selectionType={select('selectionType', {
                             'manual': 'manual',
                             'auto': 'auto',
@@ -132,5 +155,59 @@ export const dev = () => {
     );
 };
 
+dev.storyName = 'Dev';
 
 dev.parameters = { docs: { disable: true } };
+
+
+// Visual snapshot testing stories below
+export const autoInlineButtonClickVisualStoryShotOnly = () => {
+    const comboboxVS1ExampleButtonRef = useRef();
+    const comboboxVS2ExampleButtonRef = useRef();
+    const comboboxVS3ExampleButtonRef = useRef();
+
+    useEffect(() => {
+        comboboxVS1ExampleButtonRef?.current?.click();
+        comboboxVS2ExampleButtonRef?.current?.click();
+        comboboxVS3ExampleButtonRef?.current?.click();
+    }, [comboboxVS1ExampleButtonRef, comboboxVS2ExampleButtonRef, comboboxVS3ExampleButtonRef]);
+
+    return (
+        <LayoutGrid>
+            <div>
+                <ComboboxInput
+                    compact
+                    id='comboboxVS1Example'
+                    label='Compact country selector, manual selection'
+                    maxHeight='250px'
+                    noMatchesText='No Matches'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    ref={comboboxVS1ExampleButtonRef}
+                    selectionType='manual' />
+            </div>
+            <div>
+                <ComboboxInput
+                    id='comboboxVS2Example'
+                    label='Country selector, auto selection'
+                    maxHeight='250px'
+                    noMatchesText='No Matches'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    ref={comboboxVS2ExampleButtonRef}
+                    selectionType='auto' />
+            </div>
+            <div>
+                <ComboboxInput
+                    id='comboboxVS3Example'
+                    label='Country selector, auto-inline selection'
+                    maxHeight='250px'
+                    noMatchesText='No Matches'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    ref={comboboxVS3ExampleButtonRef}
+                    selectionType='auto-inline' />
+            </div>
+        </LayoutGrid>
+    );
+};
