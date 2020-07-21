@@ -246,8 +246,8 @@ const ComboboxInput = React.forwardRef(({
                 setFilterString(textInputRef?.current?.value);
                 break;
             case 'auto':
-                setFilterString(selectedOption?.text);
-                textInputRef.current.value = selectedOption?.text;
+                setFilterString(selectedOption?.text || '');
+                textInputRef.current.value = selectedOption?.text || '';
                 break;
             case 'auto-inline':
                 setFilterString(selectedOption?.text);
