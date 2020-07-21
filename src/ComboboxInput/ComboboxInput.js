@@ -20,25 +20,26 @@ If the entries are not validated by the application, users can also enter custom
 const ComboboxInput = React.forwardRef(({
     ariaLabel,
     arrowLabel,
-    placeholder,
+    buttonProps,
     compact,
     className,
     disabled,
     formItemProps,
     filterable,
     id,
-    popoverProps,
     inputProps,
-    buttonProps,
-    selectedKey,
-    selectionType,
     label,
     maxHeight,
     noMatchesText,
     onClick,
     onSelectionChange,
-    options,
     optionRenderer,
+    options,
+    placeholder,
+    popoverProps,
+    required,
+    selectedKey,
+    selectionType,
     validationState,
     ...props
 }, ref) => {
@@ -415,7 +416,8 @@ const ComboboxInput = React.forwardRef(({
                     onChange={handleInputChange}
                     onKeyDown={handleInputKeyDown}
                     placeholder={placeholder}
-                    ref={textInputRef} />
+                    ref={textInputRef}
+                    required={required} />
                 {
                     resolvedSelectionType === 'auto-inline'
                     && (
@@ -433,7 +435,12 @@ const ComboboxInput = React.forwardRef(({
             {...formItemProps}>
             {
                 label?.trim() &&
-                <FormLabel id={`${id}-label`}>{label}</FormLabel>
+                <FormLabel
+                    disabled={disabled}
+                    id={`${id}-label`}
+                    required={required} >
+                    {label}
+                </FormLabel>
             }
             {/* <small>{`typ:${resolvedSelectionType}, fs:${filterString}, sok:${selectedOption?.key}`}</small> */}
             <Popover
@@ -497,22 +504,37 @@ const ComboboxInput = React.forwardRef(({
 ComboboxInput.displayName = 'ComboboxInput';
 
 ComboboxInput.propTypes = {
-    /** Localized string to use as a ariaLabel for the Combobox dropdown arrow button*/
-    arrowLabel: PropTypes.string.isRequired,
     /** Unique id string for combobox control.
      * It is used to bind the various components within.
-     * Please don't provide id's for internal components through their individual props*/
+     * Please don't provide id's for internal components through their individual props
+     * */
     id: PropTypes.string.isRequired,
     /** Localized string to use as a ariaLabel for the Combobox, this is required if `label` is not set
      * @param {Object} props all props
      * @returns {Error} if ariaLabel and label both are missing
-    */
+     */
     ariaLabel: (props) => {
         if (!props.label?.trim() && !props.ariaLabel?.trim()) {
             return new Error(`
 Missing property 'ariaLabel' on 'Combobox'.
 Please set either 'label' or 'ariaLabel' property to a non-empty localized string.
-`
+            `
+            );
+        }
+    },
+    /** Localized string to use as a ariaLabel for the Combobox dropdown arrow button.
+     *
+     * @param {Object} props all props
+     * @returns {Error} if arrowLabel is missing, combobox is filterable and selectionType is 'auto-inline'
+     */
+    arrowLabel: (props) => {
+        if (!props.arrowLabel?.trim() && props?.filterable && props?.selectionType === 'auto-inline') {
+            return new Error(`
+Missing property 'arrowLabel'.
+Dropdown arrow/caret button is displayed if combobox is filterable and selectionType is 'auto-inline'.
+An accessible localized string is needed for this button.
+Please set 'arrowLabel' property to a non-empty localized string.
+            `
             );
         }
     },
@@ -548,6 +570,8 @@ Please set either 'label' or 'ariaLabel' property to a non-empty localized strin
     placeholder: PropTypes.string,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Set to **true** to mark input field as required.*/
+    required: PropTypes.bool,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** String representing option selection behaviors:
@@ -569,7 +593,8 @@ Please set either 'label' or 'ariaLabel' property to a non-empty localized strin
     /** Callback function when selected option changes after
      *
      * * user clicks on an option
-     * * enters text that causes de-selection*/
+     * * enters text that causes de-selection
+     * */
     onSelectionChange: PropTypes.func
 };
 
