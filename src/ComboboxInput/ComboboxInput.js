@@ -388,6 +388,11 @@ const ComboboxInput = React.forwardRef(({
             tabIndex='-1' />
     );
 
+    const labelProps = {
+        'aria-labelledby': label?.trim() ? `${id}-label` : null,
+        'aria-label': !label?.trim() && ariaLabel?.trim() ? ariaLabel : null
+    };
+
     const inputGroup = (
         <div
             aria-expanded={showPopover}
@@ -406,9 +411,9 @@ const ComboboxInput = React.forwardRef(({
                 validationState={validationState}>
                 <FormInput
                     {...inputProps}
+                    {...labelProps}
                     aria-autocomplete='both'
                     aria-controls={`${id}-listbox`}
-                    aria-labelledby={`${id}-label`}
                     autoComplete='off'
                     compact={compact}
                     id={`${id}-input`}
@@ -459,7 +464,7 @@ const ComboboxInput = React.forwardRef(({
                             </FormMessage>
                         }
                         <List
-                            aria-labelledby={`${id}-label`}
+                            {...labelProps}
                             className='fd-list--dropdown'
                             id={`${id}-listbox`}
                             role='listbox'>

@@ -116,6 +116,7 @@ export const dev = () => {
 
                     <br />
                     <ComboboxInput
+                        ariaLabel={text('ariaLabel', '')}
                         arrowLabel='Show country options'
                         buttonProps={{
                             'data-sample': 'combobox-dev-story-example'
@@ -124,7 +125,7 @@ export const dev = () => {
                         disabled={boolean('disabled', false)}
                         filterable={boolean('filterable', true)}
                         id='comboboxDevExample'
-                        label='Country'
+                        label={text('label', 'Country')}
                         maxHeight='250px'
                         noMatchesText='No Matches'
                         onSelectionChange={(event, option) => {
@@ -162,15 +163,11 @@ dev.parameters = { docs: { disable: true } };
 
 // Visual snapshot testing stories below
 export const autoInlineButtonClickVisualStoryShotOnly = () => {
-    const comboboxVS1ExampleButtonRef = useRef();
-    const comboboxVS2ExampleButtonRef = useRef();
     const comboboxVS3ExampleButtonRef = useRef();
 
     useEffect(() => {
-        comboboxVS1ExampleButtonRef?.current?.click();
-        comboboxVS2ExampleButtonRef?.current?.click();
         comboboxVS3ExampleButtonRef?.current?.click();
-    }, [comboboxVS1ExampleButtonRef, comboboxVS2ExampleButtonRef, comboboxVS3ExampleButtonRef]);
+    }, [comboboxVS3ExampleButtonRef]);
 
     return (
         <LayoutGrid>
@@ -183,7 +180,6 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
                     noMatchesText='No Matches'
                     options={countriesData}
                     placeholder={placeholder}
-                    ref={comboboxVS1ExampleButtonRef}
                     selectionType='manual' />
             </div>
             <div>
@@ -194,7 +190,6 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
                     noMatchesText='No Matches'
                     options={countriesData}
                     placeholder={placeholder}
-                    ref={comboboxVS2ExampleButtonRef}
                     selectionType='auto' />
             </div>
             <div>
