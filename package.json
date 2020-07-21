@@ -59,6 +59,7 @@
     "react-focus-lock": "^2.3.1",
     "react-overlays": "^3.2.0",
     "react-popper": "^2.2.3",
+    "react-required-if": "^1.0.3",
     "shortid": "^2.2.14",
     "tabbable": "^4.0.0"
   },
