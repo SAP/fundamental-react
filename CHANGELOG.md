@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.8...v0.11.1-rc.9) (2020-07-21)
+
+
+### Bug Fixes
+
+* DatePicker cleanup PropTypes ([#1131](https://github.com/SAP/fundamental-react/issues/1131)) ([00eb0c7](https://github.com/SAP/fundamental-react/commit/00eb0c7ec38fbb63a732b405716f2728db78d1c3))
+
 ### [0.11.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.7...v0.11.1-rc.8) (2020-07-21)
 
 ### [0.11.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.6...v0.11.1-rc.7) (2020-07-21)
