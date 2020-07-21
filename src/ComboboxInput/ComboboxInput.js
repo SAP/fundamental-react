@@ -388,10 +388,12 @@ const ComboboxInput = React.forwardRef(({
             tabIndex='-1' />
     );
 
-    const labelProps = {
-        'aria-labelledby': label?.trim() ? `${id}-label` : null,
-        'aria-label': !label?.trim() && ariaLabel?.trim() ? ariaLabel : null
-    };
+    let labelProps = {};
+    if (label?.trim()) {
+        labelProps['aria-labelledby'] = `${id}-label`;
+    } else if (ariaLabel?.trim()) {
+        labelProps['aria-label'] = ariaLabel;
+    }
 
     const inputGroup = (
         <div

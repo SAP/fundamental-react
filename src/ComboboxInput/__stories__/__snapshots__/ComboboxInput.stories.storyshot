@@ -32,7 +32,7 @@ exports[`Storyshots Component API/ComboboxInput Compact 1`] = `
               <input
                 aria-autocomplete="both"
                 aria-controls="compactComboboxExample-listbox"
-                aria-labelledby="compactComboboxExample-label"
+                aria-label="Compact"
                 autoComplete="off"
                 className="fd-input fd-input--compact fd-input-group__input"
                 id="compactComboboxExample-input"
@@ -202,7 +202,7 @@ exports[`Storyshots Component API/ComboboxInput Disabled 1`] = `
               <input
                 aria-autocomplete="both"
                 aria-controls="disabledComboboxExample-listbox"
-                aria-labelledby="disabledComboboxExample-label"
+                aria-label="Disabled"
                 autoComplete="off"
                 className="fd-input fd-input-group__input"
                 disabled={true}
