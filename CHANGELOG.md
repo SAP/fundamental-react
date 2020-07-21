@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.6...v0.11.1-rc.7) (2020-07-21)
+
+
+### Features
+
+* ObjectStatus new component ([#1118](https://github.com/SAP/fundamental-react/issues/1118)) ([f105990](https://github.com/SAP/fundamental-react/commit/f105990a4b415863b70a77b453b9499874340699))
+
 ### [0.11.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.5...v0.11.1-rc.6) (2020-07-20)
 
 ### [0.11.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.4...v0.11.1-rc.5) (2020-07-17)
