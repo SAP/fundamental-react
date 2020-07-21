@@ -11,9 +11,12 @@ instance, the most important button has a blue background where as a red button 
 the action it performs is potentially destructive. */
 
 const Button = React.forwardRef(({
+    allowFocusOnDisable,
     option,
     type,
     compact,
+    disabledMessage,
+    enabledMessage,
     glyph,
     selected,
     disabled,
@@ -49,6 +52,7 @@ const Button = React.forwardRef(({
 Button.displayName = 'Button';
 
 Button.propTypes = {
+    allowFocusOnDisable: PropTypes.bool,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
@@ -57,6 +61,8 @@ Button.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    disabledMessage: PropTypes.string,
+    enabledMessage: PropTypes.string,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
     /** Indicates the importance of the button: 'empahsized' or 'transparent' */
