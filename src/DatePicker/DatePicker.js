@@ -576,6 +576,7 @@ DatePicker.defaultProps = {
     defaultValue: '',
     dateFormat: null,
     locale: 'en',
+    localizedText: Calendar.defaultProps.localizedText,
     todayAction: {
         type: 'none'
     },
