@@ -25,12 +25,12 @@ componentDirs.map((directory) => {
     directory.fileNames.map((fileName) => {
         // get only stories.js files
         if (fileName.includes('.stories.js')) {
-        // Grab the component name
+            // Grab the component name
             const componentName = fileName.substr(0, fileName.indexOf('.'));
             // TODO: reenable storyshots for examples using hooks in storybook@6
             // https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
             if (componentName === 'Calendar'
-            || componentName === 'Dialog') {
+                || componentName === 'Dialog') {
                 return;
             }
 
@@ -43,7 +43,9 @@ export default {
 };
 
 export const ${componentName} = () => {
-    let storyNames = Object.keys(stories).filter(story => story !== 'default');
+    let storyNames = Object.keys(stories).filter(story => {
+        return story !== 'default' && story !== 'dev';
+    });
 
     return (<>{storyNames.map((item, index) => <div key={index}>{stories[item]()}</div>)}</>);
 };
