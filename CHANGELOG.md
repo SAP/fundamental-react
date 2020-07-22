@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.9...v0.11.1-rc.10) (2020-07-22)
+
+
+### Bug Fixes
+
+* Do not throw an error on "Element" if processing the code without the browser api ([#1132](https://github.com/SAP/fundamental-react/issues/1132)) ([d0b34d9](https://github.com/SAP/fundamental-react/commit/d0b34d97535da51d75313be7f827472135e83dbc))
+
 ### [0.11.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.8...v0.11.1-rc.9) (2020-07-21)
 
 
