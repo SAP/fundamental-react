@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import CustomPropTypes from './CustomPropTypes/CustomPropTypes';
 import Foco from 'react-foco';
 import { getModalManager } from './modalManager';
 import keycode from 'keycode';
@@ -253,10 +254,7 @@ Popper.propTypes = {
     cssBlock: PropTypes.string.isRequired,
     referenceComponent: PropTypes.element.isRequired,
     disableEdgeDetection: PropTypes.bool,
-    flipContainer: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.instanceOf(Element)),
-        PropTypes.instanceOf(Element)
-    ]),
+    flipContainer: CustomPropTypes.elementOrArrayOfElements(),
     innerRef: PropTypes.func,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
