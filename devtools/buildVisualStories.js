@@ -3,10 +3,6 @@ const path = require('path');
 
 const srcPath = path.join(__dirname, '../src');
 
-// Ignore errors from the browser API not being defined in node
-// eslint-disable-next-line no-undefined
-global.Element = undefined;
-
 const isComponentDirectory = (source) => {
     const ignoredDirectories = ['utils', 'Docs'];
     return lstatSync(source).isDirectory() && !ignoredDirectories.some(ignored => source.includes(ignored));

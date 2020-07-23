@@ -1,6 +1,18 @@
+import PropTypes from 'prop-types';
 const ANONYMOUS = '<<anonymous>>';
 
 /* eslint-disable no-console */
+
+const elementOrArrayOfElements = () => {
+    // Element is not defined unless the Browser API is defined
+    if (typeof Element === 'undefined') {
+        return null;
+    }
+    return PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.instanceOf(Element)),
+        PropTypes.instanceOf(Element)
+    ]);
+};
 
 const wrapValidator = (validator, typeName, typeChecker = null) => {
     // eslint-disable-next-line compat/compat
@@ -113,4 +125,4 @@ const i18n = (obj) => {
     return wrapValidator(createChainableTypeChecker(validate), 'i18n', obj);
 };
 
-export default { range, i18n };
+export default { elementOrArrayOfElements, range, i18n };

@@ -1,5 +1,6 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { findDOMNode } from 'react-dom';
 import FocusManager from '../utils/focusManager/focusManager';
 import keycode from 'keycode';
@@ -214,10 +215,7 @@ Popover.propTypes = {
     /** Index of the focusable item to focus first within the Popover */
     firstFocusIndex: PropTypes.number,
     /** The bounding container to use when determining if the popover is out of bounds */
-    flipContainer: PropTypes.oneOfType([
-        PropTypes.arrayOf(PropTypes.instanceOf(Element)),
-        PropTypes.instanceOf(Element)
-    ]),
+    flipContainer: CustomPropTypes.elementOrArrayOfElements(),
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
     /** The options are 'auto',
