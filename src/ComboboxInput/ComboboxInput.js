@@ -144,7 +144,7 @@ const ComboboxInput = React.forwardRef(({
     const handleInputChange = (event) => {
         const inputValue = event?.target?.value;
         setFilterString(inputValue);
-        select(null, null);
+        select(event, null);
 
         if (inputValue?.trim()) {
             setIsExpanded(true);
@@ -176,10 +176,10 @@ const ComboboxInput = React.forwardRef(({
     const handleInputBlur = (event) => {
         switch (resolvedSelectionType) {
             case 'manual':
-                if (!selectedOption?.key && textInputRef?.current?.value?.trim().length) {
+                if (!selectedOption?.key && filterString?.trim().length) {
                     onSelectionChange && onSelectionChange(event, {
-                        'text': textInputRef?.current?.value,
-                        'key': -1
+                        'text': filterString,
+                        'key': -1 //key is set to -1 for custom input in manual combobox
                     });
                 }
                 break;
