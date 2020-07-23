@@ -119,6 +119,7 @@ const StepInput = React.forwardRef(({
                 value={inputValue} />
             <Button
                 aria-label={localizedText.stepUpLabel}
+                className='fd-step-input__button'
                 compact={compact}
                 disabled={disabled}
                 glyph='add'

@@ -25,6 +25,10 @@ export const disabled = () => (
     <StepInput disabled />
 );
 
+export const readOnly = () => (
+    <StepInput readOnly />
+);
+
 export const validationStates = () => (
     <>
         <StepInput placeholder='Error'
