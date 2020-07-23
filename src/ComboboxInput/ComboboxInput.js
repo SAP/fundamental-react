@@ -10,6 +10,7 @@ import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import requiredIf from 'react-required-if';
 import tabbable from 'tabbable';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useRef, useState } from 'react';
@@ -517,18 +518,8 @@ ComboboxInput.propTypes = {
      * */
     id: PropTypes.string.isRequired,
     /** Localized string to use as a ariaLabel for the Combobox, this is required if `label` is not set
-     * @param {Object} props all props
-     * @returns {Error} if ariaLabel and label both are missing
      */
-    ariaLabel: (props) => {
-        if (!props.label?.trim() && !props.ariaLabel?.trim()) {
-            return new Error(`
-Missing property 'ariaLabel' on 'Combobox'.
-Please set either 'label' or 'ariaLabel' property to a non-empty localized string.
-            `
-            );
-        }
-    },
+    ariaLabel: requiredIf(PropTypes.string, props => !props.label?.trim() && !props.ariaLabel?.trim()),
     /** Localized string to use as a ariaLabel for the Combobox dropdown arrow button.
      *
      * @param {Object} props all props
@@ -560,7 +551,7 @@ Please set 'arrowLabel' property to a non-empty localized string.
     formItemProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
-    /** Localized string to use as a label for the Combobox*/
+    /** Localized string to use as a visual and semantic label for the Combobox*/
     label: PropTypes.string,
     /** CSS value for maxHeight property of listbox popover*/
     maxHeight: PropTypes.string,
