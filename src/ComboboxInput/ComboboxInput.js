@@ -116,11 +116,11 @@ const ComboboxInput = React.forwardRef(({
             case 'up':
                 let shouldShowOptions = true;
                 switch (resolvedSelectionType) {
-                    case 'manual': {
+                    case 'manual':
+                    case 'auto': {
                         shouldShowOptions = !!textFieldValue?.trim()?.length || false;
                     }
                         break;
-                    case 'auto':
                     case 'auto-inline':
                         break;
                     default:
@@ -415,7 +415,7 @@ const ComboboxInput = React.forwardRef(({
                 <FormInput
                     {...inputProps}
                     {...labelProps}
-                    aria-autocomplete='both'
+                    aria-autocomplete={resolvedSelectionType === 'auto-inline' ? 'both' : 'list'}
                     aria-controls={`${id}-listbox`}
                     autoComplete='off'
                     compact={compact}
@@ -468,8 +468,9 @@ const ComboboxInput = React.forwardRef(({
                         }
                         <List
                             {...labelProps}
-                            className='fd-list--dropdown'
+                            compact={compact}
                             id={`${id}-listbox`}
+                            noBorder
                             role='listbox'>
                             {filteredOptions?.length ? filteredOptions.map(option => {
                                 return (
