@@ -76,6 +76,66 @@ export const validationState = () => (
     </div>
 );
 
+export const selectionType = () => {
+    const [selectedCountryObj1, setSelectedCountry1] = useState();
+    const [selectedCountryObj2, setSelectedCountry2] = useState();
+    const [selectedCountryObj3, setSelectedCountry3] = useState();
+    return (
+        <>
+            <LayoutGrid>
+                <div>
+                    Selected country code: {selectedCountryObj1?.key || 'none'}
+                    <br />
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='comboboxAutoSelectExample'
+                        label='Country (Manual Select)'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        onSelectionChange={(event, option) => {
+                            setSelectedCountry1(option);
+                        }}
+                        options={countriesData}
+                        placeholder={placeholder}
+                        selectionType='manual' />
+                </div>
+                <div>
+                    Selected country code: {selectedCountryObj2?.key || 'none'}
+                    <br />
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='comboboxAutoSelectExample'
+                        label='Country (Auto Select)'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        onSelectionChange={(event, option) => {
+                            setSelectedCountry2(option);
+                        }}
+                        options={countriesData}
+                        placeholder={placeholder}
+                        selectionType='auto' />
+                </div>
+                <div>
+                    Selected country code: {selectedCountryObj3?.key || 'none'}
+                    <br />
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='comboboxAutoSelectExample'
+                        label='Country (Auto Select and Inline Auto Complete)'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        onSelectionChange={(event, option) => {
+                            setSelectedCountry3(option);
+                        }}
+                        options={countriesData}
+                        placeholder={placeholder}
+                        selectionType='auto-inline' />
+                </div>
+            </LayoutGrid>
+        </>
+    );
+};
+
 export const dev = () => {
     const [selectedCountryObj, setSelectedCountry] = useState();
     const [useCustomRenderer, setUseCustomRenderer] = useState(true);
