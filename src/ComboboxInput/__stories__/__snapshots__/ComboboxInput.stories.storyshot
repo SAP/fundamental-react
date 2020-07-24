@@ -30,7 +30,7 @@ exports[`Storyshots Component API/ComboboxInput Compact 1`] = `
               onClick={[Function]}
             >
               <input
-                aria-autocomplete="both"
+                aria-autocomplete="list"
                 aria-controls="compactComboboxExample-listbox"
                 aria-label="Compact"
                 autoComplete="off"
@@ -137,7 +137,7 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
                   onClick={[Function]}
                 >
                   <input
-                    aria-autocomplete="both"
+                    aria-autocomplete="list"
                     aria-controls="comboboxDevExample-listbox"
                     aria-labelledby="comboboxDevExample-label"
                     autoComplete="off"
@@ -200,7 +200,7 @@ exports[`Storyshots Component API/ComboboxInput Disabled 1`] = `
               onClick={[Function]}
             >
               <input
-                aria-autocomplete="both"
+                aria-autocomplete="list"
                 aria-controls="disabledComboboxExample-listbox"
                 aria-label="Disabled"
                 autoComplete="off"
@@ -258,7 +258,7 @@ exports[`Storyshots Component API/ComboboxInput Primary 1`] = `
               onClick={[Function]}
             >
               <input
-                aria-autocomplete="both"
+                aria-autocomplete="list"
                 aria-controls="primaryComboboxExample-listbox"
                 aria-labelledby="primaryComboboxExample-label"
                 autoComplete="off"
@@ -279,12 +279,200 @@ exports[`Storyshots Component API/ComboboxInput Primary 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-layout-grid"
+  >
+    <div>
+      Selected country code: 
+      none
+      <br />
+      <div
+        className="fd-form-item"
+      >
+        <label
+          className="fd-form-label"
+          id="comboboxManualSelectExample-label"
+        >
+          Country (Manual Select)
+        </label>
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-owns="comboboxManualSelectExample-listbox"
+                id="comboboxManualSelectExample-combobox"
+                role="combobox"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="comboboxManualSelectExample-listbox"
+                    aria-labelledby="comboboxManualSelectExample-label"
+                    autoComplete="off"
+                    className="fd-input fd-input-group__input"
+                    id="comboboxManualSelectExample-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Enter country"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      Selected country code: 
+      none
+      <br />
+      <div
+        className="fd-form-item"
+      >
+        <label
+          className="fd-form-label"
+          id="comboboxAutoSelectExample-label"
+        >
+          Country (Auto Select)
+        </label>
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-owns="comboboxAutoSelectExample-listbox"
+                id="comboboxAutoSelectExample-combobox"
+                role="combobox"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-controls="comboboxAutoSelectExample-listbox"
+                    aria-labelledby="comboboxAutoSelectExample-label"
+                    autoComplete="off"
+                    className="fd-input fd-input-group__input"
+                    id="comboboxAutoSelectExample-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Enter country"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      Selected country code: 
+      none
+      <br />
+      <div
+        className="fd-form-item"
+      >
+        <label
+          className="fd-form-label"
+          id="comboboxAutoInlineSelectExample-label"
+        >
+          Country (Auto Select and Inline Auto Complete)
+        </label>
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-owns="comboboxAutoInlineSelectExample-listbox"
+                id="comboboxAutoInlineSelectExample-combobox"
+                role="combobox"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-autocomplete="both"
+                    aria-controls="comboboxAutoInlineSelectExample-listbox"
+                    aria-labelledby="comboboxAutoInlineSelectExample-label"
+                    autoComplete="off"
+                    className="fd-input fd-input-group__input"
+                    id="comboboxAutoInlineSelectExample-input"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Enter country"
+                    type="text"
+                  />
+                  <span
+                    className="fd-input-group__addon fd-input-group__addon--button"
+                  >
+                    <button
+                      aria-label="Show country options"
+                      className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                      id="comboboxAutoInlineSelectExample-combobox-arrow"
+                      onClick={[Function]}
+                      tabIndex="-1"
+                      type="button"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
 <div
   dir="ltr"
 >
   <div
-    className="fddocs-container"
+    className="fd-layout-grid fd-layout-grid--col-4"
   >
     <div
       className="fd-form-item"
@@ -332,7 +520,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       onClick={[Function]}
                     >
                       <input
-                        aria-autocomplete="both"
+                        aria-autocomplete="list"
                         aria-controls="errorComboboxExample-listbox"
                         aria-labelledby="errorComboboxExample-label"
                         autoComplete="off"
@@ -399,7 +587,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       onClick={[Function]}
                     >
                       <input
-                        aria-autocomplete="both"
+                        aria-autocomplete="list"
                         aria-controls="warningComboboxExample-listbox"
                         aria-labelledby="warningComboboxExample-label"
                         autoComplete="off"
@@ -465,7 +653,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       onClick={[Function]}
                     >
                       <input
-                        aria-autocomplete="both"
+                        aria-autocomplete="list"
                         aria-controls="infoComboboxExample-listbox"
                         aria-labelledby="infoComboboxExample-label"
                         autoComplete="off"
@@ -531,7 +719,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       onClick={[Function]}
                     >
                       <input
-                        aria-autocomplete="both"
+                        aria-autocomplete="list"
                         aria-controls="successComboboxExample-listbox"
                         aria-labelledby="successComboboxExample-label"
                         autoComplete="off"

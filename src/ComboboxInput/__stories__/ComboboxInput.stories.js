@@ -47,7 +47,7 @@ export const compact = () => (
 );
 
 export const validationState = () => (
-    <div className='fddocs-container'>
+    <LayoutGrid cols={4}>
         <ComboboxInput
             id='errorComboboxExample'
             label='Combobox with error'
@@ -73,7 +73,7 @@ export const validationState = () => (
             options={countriesData}
             placeholder={placeholder}
             validationState={{ state: 'success', text: 'Service is supported in these countries.' }} />
-    </div>
+    </LayoutGrid>
 );
 
 export const selectionType = () => {
@@ -231,27 +231,6 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
 
     return (
         <LayoutGrid>
-            <div>
-                <ComboboxInput
-                    compact
-                    id='comboboxVS1Example'
-                    label='Compact country selector, manual selection'
-                    maxHeight='250px'
-                    noMatchesText='No Matches'
-                    options={countriesData}
-                    placeholder={placeholder}
-                    selectionType='manual' />
-            </div>
-            <div>
-                <ComboboxInput
-                    id='comboboxVS2Example'
-                    label='Country selector, auto selection'
-                    maxHeight='250px'
-                    noMatchesText='No Matches'
-                    options={countriesData}
-                    placeholder={placeholder}
-                    selectionType='auto' />
-            </div>
             <div>
                 <ComboboxInput
                     id='comboboxVS3Example'
