@@ -88,7 +88,7 @@ export const selectionType = () => {
                     <br />
                     <ComboboxInput
                         arrowLabel='Show country options'
-                        id='comboboxAutoSelectExample'
+                        id='comboboxManualSelectExample'
                         label='Country (Manual Select)'
                         maxHeight='250px'
                         noMatchesText='No Matches'
@@ -120,7 +120,7 @@ export const selectionType = () => {
                     <br />
                     <ComboboxInput
                         arrowLabel='Show country options'
-                        id='comboboxAutoSelectExample'
+                        id='comboboxAutoInlineSelectExample'
                         label='Country (Auto Select and Inline Auto Complete)'
                         maxHeight='250px'
                         noMatchesText='No Matches'
