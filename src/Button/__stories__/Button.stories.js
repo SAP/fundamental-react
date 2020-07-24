@@ -92,8 +92,8 @@ export const sizes = () => (
 
 sizes.storyName = 'Sizes';
 
-/** There are four states: default, `selected`, `disabled`, and `allowFocusOnDisable`. `allowFocusOnDisabled` allowes a
- * disabled button to be focusable. This is to ensure a screen reader can tab into the button and read it's state.
+/** There are four states: default, `selected`, `disabled`, and `allowFocusOnDisable`. `allowFocusOnDisabled` allows a
+ * disabled button to be focusable. This is to ensure a screen reader can tab into the button and read its state.
  * if `allowFocusOnDisabled` is selected there must be a `disabledMessage` and `enabledMessage` prop within the button
  * that is used by the screen reader to announce a message to the user informing them why the button is disabled, or give
  * instructions on how to enable this button then subsequently announce to the user when the button becomes enabled.
