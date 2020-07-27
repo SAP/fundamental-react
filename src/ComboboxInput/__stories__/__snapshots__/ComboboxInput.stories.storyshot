@@ -325,13 +325,13 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                     aria-autocomplete="list"
                     aria-controls="comboboxManualSelectExample-listbox"
                     aria-labelledby="comboboxManualSelectExample-label"
-                    autoComplete="off"
+                    autoComplete="nope"
                     className="fd-input fd-input-group__input"
                     id="comboboxManualSelectExample-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onKeyDown={[Function]}
-                    placeholder="Enter country"
+                    placeholder="🔎   Enter Country Name"
                     type="text"
                   />
                 </div>
@@ -380,13 +380,13 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                     aria-autocomplete="list"
                     aria-controls="comboboxAutoSelectExample-listbox"
                     aria-labelledby="comboboxAutoSelectExample-label"
-                    autoComplete="off"
+                    autoComplete="nope"
                     className="fd-input fd-input-group__input"
                     id="comboboxAutoSelectExample-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onKeyDown={[Function]}
-                    placeholder="Enter country"
+                    placeholder="🔎   Enter Country Name"
                     type="text"
                   />
                 </div>
@@ -435,13 +435,13 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                     aria-autocomplete="both"
                     aria-controls="comboboxAutoInlineSelectExample-listbox"
                     aria-labelledby="comboboxAutoInlineSelectExample-label"
-                    autoComplete="off"
+                    autoComplete="nope"
                     className="fd-input fd-input-group__input"
                     id="comboboxAutoInlineSelectExample-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onKeyDown={[Function]}
-                    placeholder="Enter country"
+                    placeholder="🔎   Enter Country Name"
                     type="text"
                   />
                   <span
