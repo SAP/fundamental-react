@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.11...v0.11.1-rc.12) (2020-07-27)
+
+
+### Bug Fixes
+
+* Only add the className prop to DatePicker children once ([#1137](https://github.com/SAP/fundamental-react/issues/1137)) ([1d5b9cb](https://github.com/SAP/fundamental-react/commit/1d5b9cbb90402ae5403ae13a5fb34e930182e2de))
+
 ### [0.11.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.10...v0.11.1-rc.11) (2020-07-23)
 
 
