@@ -26,6 +26,11 @@ describe('<DatePicker />', () => {
         mount(compactRangeDatepicker);
     });
 
+    test('adds a custom className to the outermost div', () => {
+        wrapper = mount(<DatePicker className='my-class-name' />);
+        expect(wrapper.find('div.my-class-name').length).toBe(1);
+    });
+
     test('start date and end date range', () => {
         wrapper = mount(rangeDatePicker);
         // set dates
