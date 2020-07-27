@@ -340,7 +340,6 @@ class DatePicker extends Component {
             buttonLabel,
             buttonProps,
             calendarProps,
-            className,
             compact,
             dateFormat,
             disabled,
@@ -372,8 +371,7 @@ class DatePicker extends Component {
             'fd-input-group--control',
             {
                 [`is-${validationState?.state}`]: validationState?.state
-            },
-            className
+            }
         );
 
         const datepickerFooterClassName = classnames(
@@ -418,8 +416,7 @@ class DatePicker extends Component {
 
         return (
             <div
-                {...props}
-                className={className}>
+                {...props}>
                 <Popover
                     {...popoverProps}
                     body={
