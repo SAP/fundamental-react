@@ -76,6 +76,20 @@ export const validationState = () => (
     </LayoutGrid>
 );
 
+/**
+ * It is important to note that the browser's own autocomplete feature might interfere with the combobox input field and
+ * its auto-select/auto-complete behaviour, as implemented below.
+ *
+ *
+ * Historically, setting `autocomplete=“off”` has disabled browser's own autocomplete but Chrome continues to change its
+ * stance on `autcomplete=“off”` on the basis of usability. With some Chrome versions, `autocomplete=“off”` will work, while in others, `autocomplete=“nope”`
+ * or other [semantic values](https://www.w3.org/TR/WCAG21/#input-purposes) like `autocomplete=“street-address”` will work. This back and forth has been going on for a while
+ * leaving many developers unhappy and [frustrated with this Chrome behavior](https://bugs.chromium.org/p/chromium/issues/detail?id=914451).
+ *
+ *
+ * We have tried to disable the browser's own autocomplete by setting `autocomplete="off"` as default but you may use any custom value by setting the `inputProps.autoComplete` attribute.
+ */
+
 export const selectionType = () => {
     const [selectedCountryObj1, setSelectedCountry1] = useState();
     const [selectedCountryObj2, setSelectedCountry2] = useState();
@@ -89,6 +103,9 @@ export const selectionType = () => {
                     <ComboboxInput
                         arrowLabel='Show country options'
                         id='comboboxManualSelectExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
                         label='Country (Manual Select)'
                         maxHeight='250px'
                         noMatchesText='No Matches'
@@ -96,7 +113,7 @@ export const selectionType = () => {
                             setSelectedCountry1(option);
                         }}
                         options={countriesData}
-                        placeholder={placeholder}
+                        placeholder='🔎   Enter Country Name'
                         selectionType='manual' />
                 </div>
                 <div>
@@ -105,6 +122,9 @@ export const selectionType = () => {
                     <ComboboxInput
                         arrowLabel='Show country options'
                         id='comboboxAutoSelectExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
                         label='Country (Auto Select)'
                         maxHeight='250px'
                         noMatchesText='No Matches'
@@ -112,7 +132,7 @@ export const selectionType = () => {
                             setSelectedCountry2(option);
                         }}
                         options={countriesData}
-                        placeholder={placeholder}
+                        placeholder='🔎   Enter Country Name'
                         selectionType='auto' />
                 </div>
                 <div>
@@ -121,6 +141,9 @@ export const selectionType = () => {
                     <ComboboxInput
                         arrowLabel='Show country options'
                         id='comboboxAutoInlineSelectExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
                         label='Country (Auto Select and Inline Auto Complete)'
                         maxHeight='250px'
                         noMatchesText='No Matches'
@@ -128,7 +151,7 @@ export const selectionType = () => {
                             setSelectedCountry3(option);
                         }}
                         options={countriesData}
-                        placeholder={placeholder}
+                        placeholder='🔎   Enter Country Name'
                         selectionType='auto-inline' />
                 </div>
             </LayoutGrid>

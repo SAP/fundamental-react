@@ -212,17 +212,7 @@ const ComboboxInput = React.forwardRef(({
                 reset();
                 break;
             case 'tab':
-                switch (resolvedSelectionType) {
-                    case 'manual':
-                    case 'auto':
-                        handleOptionSelect(event, option);
-                        break;
-                    case 'auto-inline':
-                        closePopover();
-                        setFilterString(option?.text);
-                        break;
-                    default:
-                }
+                handleOptionSelect(event, option);
                 break;
             case 'enter':
             case 'space':
@@ -413,11 +403,11 @@ const ComboboxInput = React.forwardRef(({
                 onClick={handleInputGroupClick}
                 validationState={validationState}>
                 <FormInput
+                    autoComplete='off'
                     {...inputProps}
                     {...labelProps}
                     aria-autocomplete={resolvedSelectionType === 'auto-inline' ? 'both' : 'list'}
                     aria-controls={`${id}-listbox`}
-                    autoComplete='off'
                     compact={compact}
                     id={`${id}-input`}
                     onBlur={handleInputBlur}
