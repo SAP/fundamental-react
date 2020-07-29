@@ -17,27 +17,43 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control fd-input-group"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input--compact fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Placeholder"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent fd-button--compact sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="fd-input fd-input--compact fd-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+                  >
+                    <button
+                      className="fd-button fd-button--transparent fd-button--compact sap-icon--search fd-input-group__button"
+                      onClick={[Function]}
+                      type="button"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -63,27 +79,43 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control fd-input-group"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Select a Fruit"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Select a Fruit"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    className="fd-input-group__addon fd-input-group__addon--button"
+                  >
+                    <button
+                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                      onClick={[Function]}
+                      type="button"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -111,27 +143,43 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control fd-input-group"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Placeholder"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    className="fd-input-group__addon fd-input-group__addon--button"
+                  >
+                    <button
+                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                      onClick={[Function]}
+                      type="button"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -157,34 +205,59 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control is-error fd-input-group is-error"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Error"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--error"
-            role="alert"
-          >
-            Test validation state
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-input-group--control is-error fd-input-group is-error"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="fd-input fd-input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Error"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -203,34 +276,59 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control is-warning fd-input-group is-warning"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Warning"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--warning"
-            role="alert"
-          >
-            Test validation state
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-input-group--control is-warning fd-input-group is-warning"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="fd-input fd-input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Warning"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -249,34 +347,59 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control is-success fd-input-group is-success"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Success"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--success"
-            role="alert"
-          >
-            Test validation state
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-input-group--control is-success fd-input-group is-success"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="fd-input fd-input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Success"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -295,34 +418,59 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
           className="fd-popover__control"
         >
           <div
-            className="fd-input-group--control is-information fd-input-group is-information"
-            onClick={[Function]}
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
           >
-            <input
-              className="fd-input fd-input-group__input"
-              onChange={[Function]}
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Information"
-              type="text"
-              value=""
-            />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
-              <button
-                className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                onClick={[Function]}
-                type="button"
-              />
-            </span>
-          </div>
-          <div
-            aria-live="assertive"
-            className="fd-form-message fd-form-message--information"
-            role="alert"
-          >
-            Test validation state
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-input-group--control is-information fd-input-group is-information"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="fd-input fd-input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Information"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -21,6 +21,15 @@ See [Component Documentation](https://sap.github.io/fundamental-react/) for exam
 
 You will need to install [Node and Node Package Manager](https://www.npmjs.com/get-npm).
 
+## Polyfills
+
+Fundamental React requires a polyfill for:
+- [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+- [Array.find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+You will need to add your own polyfills. See [core-js](https://github.com/zloirock/core-js#commonjs-api) for instructions.
+
 ## Getting Started
 
 For an existing react application, follow the steps below:
@@ -35,7 +44,7 @@ For an existing react application, follow the steps below:
 
 1. Import components as needed. See [Component Documentation](https://sap.github.io/fundamental-react/) for examples and API details.
     ```javascript
-    import { MessageStrip } from 'fundamental-react/MessageStrip';
+    import { MessageStrip } from 'fundamental-react/lib/MessageStrip';
     ```
     or
     ```javascript

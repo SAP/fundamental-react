@@ -2,6 +2,157 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.11...v0.11.1-rc.12) (2020-07-27)
+
+
+### Bug Fixes
+
+* Only add the className prop to DatePicker children once ([#1137](https://github.com/SAP/fundamental-react/issues/1137)) ([1d5b9cb](https://github.com/SAP/fundamental-react/commit/1d5b9cbb90402ae5403ae13a5fb34e930182e2de))
+
+### [0.11.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.10...v0.11.1-rc.11) (2020-07-23)
+
+
+### Bug Fixes
+
+* [#1129](https://github.com/SAP/fundamental-react/issues/1129) Fixing error in showing + button for readOnly StepInput ([#1133](https://github.com/SAP/fundamental-react/issues/1133)) ([51fa2b9](https://github.com/SAP/fundamental-react/commit/51fa2b95459ca219c4938e146d8ae04aa5a613be))
+
+### [0.11.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.9...v0.11.1-rc.10) (2020-07-22)
+
+
+### Bug Fixes
+
+* Do not throw an error on "Element" if processing the code without the browser api ([#1132](https://github.com/SAP/fundamental-react/issues/1132)) ([d0b34d9](https://github.com/SAP/fundamental-react/commit/d0b34d97535da51d75313be7f827472135e83dbc))
+
+### [0.11.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.8...v0.11.1-rc.9) (2020-07-21)
+
+
+### Bug Fixes
+
+* DatePicker cleanup PropTypes ([#1131](https://github.com/SAP/fundamental-react/issues/1131)) ([00eb0c7](https://github.com/SAP/fundamental-react/commit/00eb0c7ec38fbb63a732b405716f2728db78d1c3))
+
+### [0.11.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.7...v0.11.1-rc.8) (2020-07-21)
+
+### [0.11.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.6...v0.11.1-rc.7) (2020-07-21)
+
+
+### Features
+
+* ObjectStatus new component ([#1118](https://github.com/SAP/fundamental-react/issues/1118)) ([f105990](https://github.com/SAP/fundamental-react/commit/f105990a4b415863b70a77b453b9499874340699))
+
+### [0.11.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.5...v0.11.1-rc.6) (2020-07-20)
+
+### [0.11.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.4...v0.11.1-rc.5) (2020-07-17)
+
+### [0.11.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.3...v0.11.1-rc.4) (2020-07-16)
+
+
+### Features
+
+* Use the popperPlacement prop to allow fallbackPlacements ([#1126](https://github.com/SAP/fundamental-react/issues/1126)) ([ca5a66f](https://github.com/SAP/fundamental-react/commit/ca5a66f25140b002d515801a079ddca04b0b8263))
+
+### [0.11.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.2...v0.11.1-rc.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* prevent disabled and readonly select from opening ([#1124](https://github.com/SAP/fundamental-react/issues/1124)) ([7d64334](https://github.com/SAP/fundamental-react/commit/7d64334b7f73435c9c81b7d1e4ef6881bf774e7d))
+
+### [0.11.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.1...v0.11.1-rc.2) (2020-07-14)
+
+
+### Features
+
+* Allow a custom flip boundary container for components using Popper ([#1122](https://github.com/SAP/fundamental-react/issues/1122)) ([e28bc26](https://github.com/SAP/fundamental-react/commit/e28bc26eed95948673430b796b489abfdef17a6f))
+
+### [0.11.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.0...v0.11.1-rc.1) (2020-07-14)
+
+
+### Features
+
+* upgrade fundamental-styles to 0.11.0-rc.100 ([#1121](https://github.com/SAP/fundamental-react/issues/1121)) ([695aac4](https://github.com/SAP/fundamental-react/commit/695aac469e504d61a0adda7df9d15b181794c539))
+
+### [0.11.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.11.0...v0.11.1-rc.0) (2020-07-14)
+
+## [0.11.0](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.29...v0.11.0) (2020-07-08)
+
+## [0.11.0-rc.29](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.28...v0.11.0-rc.29) (2020-07-06)
+
+
+### Features
+
+*  today actions for datepicker ([#964](https://github.com/SAP/fundamental-react/issues/964)) ([9646fab](https://github.com/SAP/fundamental-react/commit/9646fabc97453bdc2e6d80c029177d9d3645b634))
+
+## [0.11.0-rc.28](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.27...v0.11.0-rc.28) (2020-07-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Import paths of subdirectories must contain the lib directory.  Such as `import { MessageStrip } from 'fundamental-react/lib/MessageStrip'`
+
+### Features
+
+* Publish the package with a lib directory ([#1119](https://github.com/SAP/fundamental-react/issues/1119)) ([cf39b4a](https://github.com/SAP/fundamental-react/commit/cf39b4ae167b47a1c0a7ec9ed73b7bbfe38e626d))
+
+## [0.11.0-rc.27](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.26...v0.11.0-rc.27) (2020-07-02)
+
+
+### Bug Fixes
+
+* Clear up DOM warnings ([#1117](https://github.com/SAP/fundamental-react/issues/1117)) ([1550e9f](https://github.com/SAP/fundamental-react/commit/1550e9fbf8b70f6f746977a5946ee405399cdd74))
+
+## [0.11.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.25...v0.11.0-rc.26) (2020-07-02)
+
+## [0.11.0-rc.25](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.24...v0.11.0-rc.25) (2020-07-01)
+
+
+### Bug Fixes
+
+* checkbox a11y ([#1116](https://github.com/SAP/fundamental-react/issues/1116)) ([b6fad78](https://github.com/SAP/fundamental-react/commit/b6fad78e4790c89696be305ecfa2b018a11d5f5d))
+
+## [0.11.0-rc.24](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.23...v0.11.0-rc.24) (2020-07-01)
+
+
+### Features
+
+* Substring Search in SearchInput ([#1089](https://github.com/SAP/fundamental-react/issues/1089)) ([bbf4488](https://github.com/SAP/fundamental-react/commit/bbf4488e57968a13b71d8ef89033c32cfa81ba88))
+
+## [0.11.0-rc.23](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.22...v0.11.0-rc.23) (2020-07-01)
+
+
+### Features
+
+* Upgrade to popper-2 ([#1100](https://github.com/SAP/fundamental-react/issues/1100)) ([e11e796](https://github.com/SAP/fundamental-react/commit/e11e796ff0c6872a289a4e245b1bf406ff7808de))
+
+## [0.11.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.21...v0.11.0-rc.22) (2020-07-01)
+
+
+### Bug Fixes
+
+* Use client-only-require for css imports ([#1115](https://github.com/SAP/fundamental-react/issues/1115)) ([2b09a3b](https://github.com/SAP/fundamental-react/commit/2b09a3b3d45a2315b8b85a07c4c3b3284e0134d8))
+
+## [0.11.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.20...v0.11.0-rc.21) (2020-06-30)
+
+
+### Bug Fixes
+
+* use popper for form validation messages ([#1105](https://github.com/SAP/fundamental-react/issues/1105)) ([f912d9c](https://github.com/SAP/fundamental-react/commit/f912d9c9b0824990698b109a77af8e212525ab4f))
+
+## [0.11.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.19...v0.11.0-rc.20) (2020-06-30)
+
+## [0.11.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.18...v0.11.0-rc.19) (2020-06-25)
+
+
+### Bug Fixes
+
+* minimal weekday abbreviations ([#1106](https://github.com/SAP/fundamental-react/issues/1106)) ([8c0163a](https://github.com/SAP/fundamental-react/commit/8c0163a499fe57c604e04b5076e1e67ba2709310))
+
+## [0.11.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.17...v0.11.0-rc.18) (2020-06-23)
+
+
+### Bug Fixes
+
+* [#1073](https://github.com/SAP/fundamental-react/issues/1073)Added onchange callback in stepInput props ([#1098](https://github.com/SAP/fundamental-react/issues/1098)) ([fe47615](https://github.com/SAP/fundamental-react/commit/fe476153ea8d8cd10b7373283a19997e3a4c49fa))
+
 ## [0.11.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.11.0-rc.16...v0.11.0-rc.17) (2020-06-22)
 
 

@@ -1,13 +1,12 @@
 import classnames from 'classnames';
-import { detect } from 'detect-browser';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import tryFocus from '../utils/tryFocus';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import 'fundamental-styles/dist/icon.css';
 import 'fundamental-styles/dist/button.css';
 import 'fundamental-styles/dist/select.css';
@@ -35,112 +34,36 @@ const Select = React.forwardRef(({
     const internalDivRef = useRef(null);
     const divRef = ref || internalDivRef;
 
+    const popoverRef = useRef(null);
     const ulRef = useRef(null);
 
-    let [isExpanded, setIsExpanded] = useState(false);
-    let [focusedElement, setFocusedElement] = useState();
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
 
     const handleClick = (e) => {
         if (!disabled && !readOnly) {
-            setIsExpanded(!isExpanded);
             onClick(e);
         }
     };
 
     const handleSelect = (e, option) => {
-        setIsExpanded(false);
+        const popover = popoverRef && popoverRef.current;
+        popover && popover.handleEscapeKey();
         setSelectedOptionKey(option.key);
         onSelect(e, option);
     };
 
-    const isKeyboardEvent = (e) => {
-        // we are able to use e.details for modern browsers, but IE11 doesn't work the same way (big surprise)
-        // for IE11, we can make use of e.screenX and e.screenY
-        // the screenX and screenY properties can't be used as a global replacement
-        // because Safari doesn't work the same way for those (of course)
-        const browser = detect();
-
-        if (browser && browser.name === 'ie') {
-            return !e.screenX && !e.screenY;
-        }
-
-        return e.detail === 0;
-    };
-
-
-    const getFocusableMenuItems = () => [...ulRef.current.children];
-
-    const getItemsAndActiveIndex = () => {
-        const items = getFocusableMenuItems();
-        const activeIndex = items.indexOf(document.activeElement);
-
-        return { items, activeIndex };
-    };
-
-    const focusFirst = () => {
-        const { items } = getItemsAndActiveIndex();
-        if (items.length === 0) {
-            return;
-        }
-        if (isKeyboardEvent) {
-            let selectedItem = items.filter(listItem => listItem.className === 'fd-list__item is-selected');
-            selectedItem.length ? setFocusedElement(tryFocus(selectedItem[0])) :
-                setFocusedElement(tryFocus(items[0]));
-        }
-    };
-
-    useEffect(() => {
-        if (isExpanded) focusFirst();
-    }, [isExpanded]);
-
-    useEffect(() => {
-        focusedElement && focusedElement.focus();
-    }, [focusedElement]);
-
-    const focusNext = () => {
-        const { items, activeIndex } = getItemsAndActiveIndex();
-        if (items.length === 0) return;
-
-        if (activeIndex !== items.length - 1) {
-            setFocusedElement(tryFocus(items[activeIndex + 1]));
-        } else {
-            setFocusedElement(tryFocus(items[0]));
-        }
-    };
-
-    const focusPrevious = () => {
-        const { items, activeIndex } = getItemsAndActiveIndex();
-        if (items.length === 0) return;
-
-        if (activeIndex <= 0) {
-            setFocusedElement(tryFocus(items[items.length - 1]));
-        } else {
-            setFocusedElement(tryFocus(items[activeIndex - 1]));
-        }
-    };
-
-    const handleKeyDown = (e, option) => {
+    const handleOptionKeyDown = (e, option) => {
         switch (keycode(e)) {
             case 'esc':
             case 'tab':
                 e.stopPropagation();
-                setIsExpanded(false);
-                setFocusedElement(tryFocus(divRef.current));
+                const popover = popoverRef && popoverRef.current;
+                popover && popover.handleEscapeKey();
                 break;
             case 'enter':
             case 'space':
                 e.preventDefault();
                 handleSelect(e, option);
-                setFocusedElement(tryFocus(divRef.current));
-                break;
-            case 'up':
-                e.preventDefault();
-                focusPrevious();
-                break;
-            case 'down':
-                e.preventDefault();
-                focusNext();
                 break;
             default:
         }
@@ -168,6 +91,11 @@ const Select = React.forwardRef(({
     const selected = displayOptions
         .find(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
 
+    const selectedIndex = displayOptions
+        .findIndex(option => typeof selectedOptionKey !== 'undefined' && option.key === selectedOptionKey);
+
+    const firstFocusIndex = selectedIndex > -1 ? selectedIndex : 0;
+
     const textContent = selected ? selected.text : placeholder;
 
     const selectAriaLabel = (includeEmptyOption && !textContent) ? emptyAriaLabel : null;
@@ -177,17 +105,25 @@ const Select = React.forwardRef(({
             {...props}
             className={selectClasses}
             id={id}
-            onClick={handleClick}
             ref={divRef}>
-            <div aria-disabled={disabled} className={selectControlClasses}>
+            <div className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className='fd-select__text-content'>{textContent}</span>
                 {!readOnly && <span className='fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button' />}
             </div>
-            {!isExpanded && validationState && (<FormMessage
-                type={validationState.state}>
-                {validationState.text}
-            </FormMessage>)}
         </div>
+    );
+
+    const tabIndex = disabled ? -1 : 0;
+
+    const wrappedSelectControl = (
+        <FormValidationOverlay
+            aria-disabled={disabled}
+            aria-readonly={readOnly}
+            control={selectControl}
+            onClick={handleClick}
+            role={'combobox'}
+            tabIndex={tabIndex}
+            validationState={validationState} />
     );
 
     const listClassName = classnames(
@@ -199,7 +135,6 @@ const Select = React.forwardRef(({
 
     return (
         <Popover
-            aria-disabled={disabled}
             body={
                 (<>
                     {validationState &&
@@ -220,21 +155,24 @@ const Select = React.forwardRef(({
                                 aria-selected={selected?.key === option.key}
                                 key={option.key}
                                 onClick={(e) => handleSelect(e, option)}
-                                onKeyDown={(e) => handleKeyDown(e, option)}
+                                onKeyDown={(e) => handleOptionKeyDown(e, option)}
                                 role='option'
                                 selected={selected?.key === option.key}
-                                tabIndex={selected?.key === option.key ? '0' : '-1'}>
+                                tabIndex={0}>
                                 <List.Text>{option.text}</List.Text>
                             </List.Item>
                         ))}
                     </List>
                 </>)}
-            control={selectControl}
+            control={wrappedSelectControl}
+            disableKeyPressHandler={disabled || readOnly}
+            disableTriggerOnClick={disabled || readOnly}
+            firstFocusIndex={firstFocusIndex}
             noArrow
-            onClickOutside={() => setIsExpanded(false)}
             placement='bottom-start'
-            popperProps={{ id }}
-            show={isExpanded}
+            ref={popoverRef}
+            type='listbox'
+            useArrowKeyNavigation
             widthSizingType='minTarget' />
     );
 });

@@ -123,6 +123,7 @@ export const coPilot = () => (
                 title: 'Fiori Home',
                 subtitle: 'Central Home',
                 image: './assets/01.png',
+                selected: true,
                 glyph: 'home'
             },
             {

@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
-import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
@@ -30,6 +30,7 @@ const StepInput = React.forwardRef(({
     placeholder,
     readOnly,
     localizedText,
+    onChange,
     validationState,
     value,
     ...rest
@@ -53,23 +54,30 @@ const StepInput = React.forwardRef(({
         if (ifValeEqualsSign(inputValue)) {
             return;
         }
-        updateInputValue(inputValue - 1);
+        handleChange(inputValue - 1);
     });
 
     const increaseValue = useCallback(() => {
         if (ifValeEqualsSign(inputValue)) {
             return;
         }
-        updateInputValue(inputValue + 1);
+        handleChange(inputValue + 1);
     });
 
     const onChangeInputValue = useCallback((event) => {
         const currentValue = event.target.value;
         const isNumber = !isNaN(parseInt(currentValue, 10));
         if (isNumber) {
-            updateInputValue(parseInt(currentValue, 10));
+            handleChange(parseInt(currentValue, 10));
         } else if (ifValeEqualsSign(currentValue)) {
+            handleChange(currentValue);
+        }
+    });
+
+    const handleChange = useCallback((currentValue) => {
+        if ( currentValue !== inputValue ) {
             updateInputValue(currentValue);
+            onChange(currentValue);
         }
     });
 
@@ -89,41 +97,42 @@ const StepInput = React.forwardRef(({
         }
     });
 
+    const stepInputControl = (
+        <div className={stepInputClasses}
+            onKeyDown={onKeyDownInput}
+            ref={ref}
+            {...rest}>
+            <Button
+                aria-label={localizedText.stepDownLabel}
+                className='fd-step-input__button'
+                compact={compact}
+                disabled={disabled}
+                glyph='less'
+                onClick={decreaseValue}
+                option='transparent'
+                tabIndex='-1' />
+            <FormInput
+                className='fd-input--no-number-spinner fd-step-input__input'
+                disabled={disabled}
+                onChange={onChangeInputValue}
+                placeholder={placeholder}
+                value={inputValue} />
+            <Button
+                aria-label={localizedText.stepUpLabel}
+                className='fd-step-input__button'
+                compact={compact}
+                disabled={disabled}
+                glyph='add'
+                onClick={increaseValue}
+                option='transparent'
+                tabIndex='-1' />
+        </div>
+    );
+
     return (
-        <>
-            <div className={stepInputClasses}
-                onKeyDown={onKeyDownInput}
-                ref={ref}
-                {...rest}>
-                <Button
-                    aria-label={localizedText.stepDownLabel}
-                    className='fd-step-input__button'
-                    compact={compact}
-                    disabled={disabled}
-                    glyph='less'
-                    onClick={decreaseValue}
-                    option='transparent'
-                    tabIndex='-1' />
-                <FormInput
-                    className='fd-input--no-number-spinner fd-step-input__input'
-                    disabled={disabled}
-                    onChange={onChangeInputValue}
-                    placeholder={placeholder}
-                    value={inputValue} />
-                <Button
-                    aria-label={localizedText.stepUpLabel}
-                    compact={compact}
-                    disabled={disabled}
-                    glyph='add'
-                    onClick={increaseValue}
-                    option='transparent'
-                    tabIndex='-1' />
-            </div>
-            {validationState && (<FormMessage
-                type={validationState.state}>
-                {validationState.text}
-            </FormMessage>)}
-        </>
+        <FormValidationOverlay
+            control={stepInputControl}
+            validationState={validationState} />
     );
 });
 
@@ -155,7 +164,9 @@ StepInput.propTypes = {
         text: PropTypes.string
     }),
     /** Value of the number input */
-    value: PropTypes.number
+    value: PropTypes.number,
+    /** Callback function when the change event fires on the component */
+    onChange: PropTypes.func
 };
 
 StepInput.defaultProps = {
@@ -163,8 +174,8 @@ StepInput.defaultProps = {
     localizedText: {
         stepUpLabel: 'Step Up',
         stepDownLabel: 'Step Down'
-    }
-
+    },
+    onChange: () => { }
 };
 
 export default StepInput;

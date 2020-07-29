@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
-import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -34,31 +34,37 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': child.type.displayName !== InputGroupAddon.displayName &&
-                    !child.props.className?.includes('fd-tokenizer')
+                'fd-input-group__input': !child.props.className?.includes('fd-tokenizer')
             },
             child.props.className
         );
 
-        return (
-            <>
-                <div
-                    {...props}
-                    className={inputGroupClasses}>
-                    {React.Children.toArray(children).map(child => {
+        const inputGroup = (
+            <div
+                {...props}
+                className={inputGroupClasses}>
+                {React.Children.toArray(children).map(child => {
+                    if (child?.type?.displayName === InputGroupAddon.displayName) {
                         return React.cloneElement(child, {
                             compact,
-                            disabled,
-                            className: getClassName(child)
+                            disabled
                         });
-                    })}
-                </div>
-                {validationState?.text?.length > 0 && (<FormMessage
-                    type={validationState.state}>
-                    {validationState.text}
-                </FormMessage>)}
-            </>
+                    }
+                    return React.cloneElement(child, {
+                        compact,
+                        disabled,
+                        className: getClassName(child),
+                        validationState: child.props.validationState && null // remove duplicate validation state from child component
+                    });
+                })}
+            </div>
         );
+
+        return validationState?.state ? (
+            <FormValidationOverlay
+                control={inputGroup}
+                validationState={validationState} />
+        ) : inputGroup;
     }
 }
 

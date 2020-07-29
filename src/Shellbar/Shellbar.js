@@ -138,45 +138,43 @@ class Shellbar extends Component {
                     )}
                     {productTitle && !productMenu && <span className='fd-shellbar__title'>{productTitle}</span>}
                     {productMenu && (
-                        <div className='fd-product-menu'>
-                            <Popover
-                                body={
-                                    productMenu && (
-                                        <Menu>
-                                            <Menu.List>
-                                                {productMenu.map((item, index) => {
-                                                    return (
-                                                        <Menu.Item
-                                                            key={index}
-                                                            link={item.link}
-                                                            onClick={item.callback}
-                                                            url={item.url} >
-                                                            {item.glyph && (
-                                                                <>
-                                                                    <Icon glyph={item.glyph} size={item.size} />
-                                                                        &nbsp;&nbsp;&nbsp;
-                                                                </>
-                                                            )}
-                                                            {item.name}
-                                                        </Menu.Item>
-                                                    );
-                                                })}
-                                            </Menu.List>
-                                        </Menu>
-                                    )
-                                }
-                                control={
-                                    <Button
-                                        className='fd-shellbar__button--menu fd-button--menu'
-                                        option='transparent'>
-                                        <span className='fd-shellbar__title'>
-                                            {productTitle}
-                                        </span>
-                                    </Button>
-                                }
-                                noArrow
-                                popperProps={{ id: 'fd-shellbar-product-popover' }} />
-                        </div>
+                        <Popover
+                            body={
+                                productMenu && (
+                                    <Menu>
+                                        <Menu.List>
+                                            {productMenu.map((item, index) => {
+                                                return (
+                                                    <Menu.Item
+                                                        key={index}
+                                                        link={item.link}
+                                                        onClick={item.callback}
+                                                        url={item.url} >
+                                                        {item.glyph && (
+                                                            <>
+                                                                <Icon glyph={item.glyph} size={item.size} />
+                                                                    &nbsp;&nbsp;&nbsp;
+                                                            </>
+                                                        )}
+                                                        {item.name}
+                                                    </Menu.Item>
+                                                );
+                                            })}
+                                        </Menu.List>
+                                    </Menu>
+                                )
+                            }
+                            control={
+                                <Button
+                                    className='fd-shellbar__button--menu fd-button--menu'
+                                    option='transparent'>
+                                    <span className='fd-shellbar__title'>
+                                        {productTitle}
+                                    </span>
+                                </Button>
+                            }
+                            noArrow
+                            popperProps={{ id: 'fd-shellbar-product-popover' }} />
                     )}
                     {subtitle && <div className='fd-shellbar__subtitle'>{subtitle}</div>}
                 </div>
@@ -385,7 +383,7 @@ class Shellbar extends Component {
                                         )
                                     }
                                     control={
-                                        <div className='fd-button fd-shellbar__button fd-user-menu__control'>
+                                        <button className='fd-button fd-shellbar__button fd-shellbar__button--user-menu'>
                                             {profile.image ? (
                                                 <Avatar
                                                     backgroundImageUrl={profile.image}
@@ -398,7 +396,7 @@ class Shellbar extends Component {
                                                     {profile.initials}
                                                 </Avatar>
                                             )}
-                                        </div>
+                                        </button>
                                     }
                                     noArrow
                                     placement='bottom-end'
@@ -416,7 +414,7 @@ class Shellbar extends Component {
                                                 {productSwitchList.map((item, index) => {
                                                     return (
                                                         <li
-                                                            className='fd-product-switch__item'
+                                                            className={`fd-product-switch__item ${item.selected ? 'selected' : ''}`}
                                                             key={index}
                                                             onClick={item.callback}>
                                                             <div className={`fd-product-switch__icon sap-icon--${item.glyph}`} />
@@ -487,7 +485,7 @@ Shellbar.propTypes = {
         label: PropTypes.string.isRequired
     }),
     /** Array of objects containing data about the products.
-     * Callback, title, and glyph are required; subtitle is optional. */
+     * Callback, title, and glyph are required; selected and subtitle are optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
@@ -495,6 +493,8 @@ Shellbar.propTypes = {
             title: PropTypes.string.isRequired,
             /** The icon to include. See the icon page for the list of icons */
             glyph: PropTypes.string.isRequired,
+            /** For pre-selecting an item in the product switch list */
+            selected: PropTypes.bool,
             subtitle: PropTypes.string
         })
     ),

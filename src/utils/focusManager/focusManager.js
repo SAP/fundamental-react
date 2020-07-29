@@ -2,13 +2,16 @@ import keycode from 'keycode';
 import tabbable from 'tabbable';
 
 export default class FocusManager {
-    constructor(trapNode, controlNode, useArrowKeys = false) {
+    constructor(trapNode, controlNode, useArrowKeys = false, firstFocusIndex) {
         this.container = trapNode;
         this.firstOuterTabbableNode = tabbable.isTabbable(controlNode) ? controlNode : tabbable(controlNode)[0];
         this.tabbableNodes = tabbable(this.container);
         this.useArrowKeys = useArrowKeys;
 
         document.addEventListener('keydown', this.keyHandler, true);
+        if (firstFocusIndex > -1) {
+            this.tabbableNodes.length && this.tryFocus(this.tabbableNodes[firstFocusIndex]);
+        }
     }
 
     isFocusContained = (e) => {

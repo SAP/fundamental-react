@@ -5,27 +5,35 @@ exports[`Storyshots Component API/Popover Dev 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-popover"
+    style={
+      Object {
+        "margin": "220px",
+      }
+    }
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover"
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        <button
-          aria-controls="fd-mocked-short-id"
-          aria-expanded={false}
-          aria-haspopup={true}
-          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
-          onClick={[Function]}
-          onKeyPress={[Function]}
-          role="button"
-          tabIndex={0}
-          type="button"
-        />
+        <div
+          className="fd-popover__control"
+        >
+          <button
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -108,10 +116,15 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="sap-icon--cart sap-icon--xl"
+          className="sap-icon--cart"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
+          style={
+            Object {
+              "fontSize": "1.5rem",
+            }
+          }
           tabIndex={0}
         />
       </div>
@@ -185,10 +198,15 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="sap-icon--menu2 sap-icon--xl"
+          className="sap-icon--menu2"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
+          style={
+            Object {
+              "fontSize": "1.5rem",
+            }
+          }
           tabIndex={0}
         />
       </div>
@@ -696,7 +714,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             none
@@ -728,7 +746,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             matchTarget
@@ -760,7 +778,7 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             minTarget
@@ -792,13 +810,72 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthizingType: 
+          widthSizingType: 
           <strong>
             '
             maxTarget
             '
           </strong>
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Popover With Custom Flip Container 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#444",
+          "height": "120px",
+          "width": "180px",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "border": "1px solid black",
+          "padding": "220px 140px 250px 40px",
+        }
+      }
+    >
+      <div
+        className="fd-popover"
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <button
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+              type="button"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -25,6 +25,8 @@ class MultiInput extends Component {
             bShowList: false,
             tags: []
         };
+
+        this.multiInputId = shortid.generate();
     }
 
     // create tags to display in dropdown list
@@ -35,11 +37,11 @@ class MultiInput extends Component {
                     checked={this.isChecked(item)}
                     className='fd-list__input'
                     compact={this.props.compact}
-                    id={index + `_${shortid.generate()}`}
-                    labelClasses='fd-list__label'
+                    id={index + `_${this.multiInputId}`}
+                    labelClassName='fd-list__label'
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
-                    <List.Text>{item}</List.Text>
+                    <List.Text className='fd-checkbox__text'>{item}</List.Text>
                 </Checkbox>
             </List.Item>
         ));
@@ -177,6 +179,35 @@ class MultiInput extends Component {
             </List>
         );
 
+        const inputGroup = (
+            <InputGroup
+                {...rest}
+                aria-expanded={this.state.bShowList}
+                aria-haspopup='true'
+                className={inputGroupClasses}
+                compact={compact}
+                disabled={disabled}
+                onClick={this.showHideTagList}
+                validationState={validationState}>
+                <div {...tagProps} className={tokenizerClassName}>
+                    <div className='fd-tokenizer__inner'>
+                        {this.state.tags.length > 0 && this.createTags()}
+                        <FormInput
+                            {...inputProps}
+                            className='fd-input-group__input fd-tokenizer__input'
+                            compact={compact}
+                            placeholder={placeholder} />
+                    </div>
+                </div>
+                <InputGroup.Addon isButton>
+                    <Button
+                        {...buttonProps}
+                        glyph='value-help'
+                        option='transparent' />
+                </InputGroup.Addon>
+            </InputGroup>
+        );
+
         return (
             <Popover
                 {...popoverProps}
@@ -190,37 +221,12 @@ class MultiInput extends Component {
                         }
                         {popoverBody}
                     </>)}
-                control={
-                    <InputGroup
-                        {...rest}
-                        aria-expanded={this.state.bShowList}
-                        aria-haspopup='true'
-                        className={inputGroupClasses}
-                        compact={compact}
-                        disabled={disabled}
-                        onClick={this.showHideTagList}
-                        validationState={!this.state.bShowList ? validationState : null}>
-                        <div {...tagProps} className={tokenizerClassName}>
-                            <div className='fd-tokenizer__inner'>
-                                {this.state.tags.length > 0 && this.createTags()}
-                                <FormInput
-                                    {...inputProps}
-                                    className='fd-input-group__input fd-tokenizer__input'
-                                    compact={compact}
-                                    placeholder={placeholder} />
-                            </div>
-                        </div>
-                        <InputGroup.Addon isButton>
-                            <Button
-                                {...buttonProps}
-                                glyph='value-help'
-                                option='transparent' />
-                        </InputGroup.Addon>
-                    </InputGroup>
-                }
+                control={inputGroup}
+                disableKeyPressHandler
                 disabled={disabled}
                 noArrow
                 onClickOutside={this.handleClickOutside}
+                useArrowKeyNavigation
                 widthSizingType='matchTarget' />
         );
     }

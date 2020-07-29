@@ -74,7 +74,12 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
                     }
 
                     if (richTable) {
-                        checkboxCell = <td className={tableCheckboxClasses}>{row.rowData[0]}</td>;
+                        checkboxCell = (
+                            <td
+                                className={tableCheckboxClasses}>
+                                {row.rowData[0]}
+                            </td>
+                        );
                         displayRows = row.rowData.splice(1, row.rowData.length);
                     }
 
@@ -82,6 +87,7 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
+                            aria-selected={row?.rowData[0]?.props?.checked}
                             key={index}>
                             {richTable && checkboxCell}
                             {displayRows.map((rowData, cellIndex) => {

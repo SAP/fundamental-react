@@ -38,12 +38,12 @@ export const FORM_MESSAGE_TYPES = [
     'success'
 ];
 
-export const ICON_SIZES = [
-    's',
-    'm',
-    'l',
-    'xl'
-];
+export const ICON_SIZES = {
+    's': '0.75rem',
+    'm': '1rem',
+    'l': '1.25rem',
+    'xl': '1.5rem'
+};
 
 export const AVATAR_SIZES = [
     'xs',
@@ -73,6 +73,9 @@ export const POPOVER_TYPES = [
 ];
 
 export const POPPER_PLACEMENTS = [
+    'auto',
+    'auto-start',
+    'auto-end',
     'bottom-start',
     'bottom',
     'bottom-end',
@@ -110,3 +113,15 @@ export const GridSelector = {
     CELL: 'td, [role="gridcell"]',
     FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
 };
+
+export const OBJECT_STATUS_SIZES = ['l'];
+
+export const OBJECT_STATUS_TYPES = [
+    'negative',
+    'critical',
+    'positive',
+    'informative'
+];
+
+export const DATEPICKER_TODAY_ACTIONS_TYPES = ['none', 'select', 'navigate'];
+
