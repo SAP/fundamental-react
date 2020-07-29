@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.11...v0.11.1-rc.12) (2020-07-27)
+
+
+### Bug Fixes
+
+* Only add the className prop to DatePicker children once ([#1137](https://github.com/SAP/fundamental-react/issues/1137)) ([1d5b9cb](https://github.com/SAP/fundamental-react/commit/1d5b9cbb90402ae5403ae13a5fb34e930182e2de))
+
+### [0.11.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.10...v0.11.1-rc.11) (2020-07-23)
+
+
+### Bug Fixes
+
+* [#1129](https://github.com/SAP/fundamental-react/issues/1129) Fixing error in showing + button for readOnly StepInput ([#1133](https://github.com/SAP/fundamental-react/issues/1133)) ([51fa2b9](https://github.com/SAP/fundamental-react/commit/51fa2b95459ca219c4938e146d8ae04aa5a613be))
+
+### [0.11.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.9...v0.11.1-rc.10) (2020-07-22)
+
+
+### Bug Fixes
+
+* Do not throw an error on "Element" if processing the code without the browser api ([#1132](https://github.com/SAP/fundamental-react/issues/1132)) ([d0b34d9](https://github.com/SAP/fundamental-react/commit/d0b34d97535da51d75313be7f827472135e83dbc))
+
+### [0.11.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.8...v0.11.1-rc.9) (2020-07-21)
+
+
+### Bug Fixes
+
+* DatePicker cleanup PropTypes ([#1131](https://github.com/SAP/fundamental-react/issues/1131)) ([00eb0c7](https://github.com/SAP/fundamental-react/commit/00eb0c7ec38fbb63a732b405716f2728db78d1c3))
+
 ### [0.11.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.7...v0.11.1-rc.8) (2020-07-21)
 
 ### [0.11.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.6...v0.11.1-rc.7) (2020-07-21)

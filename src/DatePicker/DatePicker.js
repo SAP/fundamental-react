@@ -8,6 +8,7 @@ import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
 import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
@@ -339,7 +340,6 @@ class DatePicker extends Component {
             buttonLabel,
             buttonProps,
             calendarProps,
-            className,
             compact,
             dateFormat,
             disabled,
@@ -371,8 +371,7 @@ class DatePicker extends Component {
             'fd-input-group--control',
             {
                 [`is-${validationState?.state}`]: validationState?.state
-            },
-            className
+            }
         );
 
         const datepickerFooterClassName = classnames(
@@ -417,8 +416,7 @@ class DatePicker extends Component {
 
         return (
             <div
-                {...props}
-                className={className}>
+                {...props}>
                 <Popover
                     {...popoverProps}
                     body={
@@ -541,7 +539,10 @@ DatePicker.propTypes = {
     */
     todayAction: PropTypes.shape({
         type: PropTypes.oneOf(DATEPICKER_TODAY_ACTIONS_TYPES),
-        label: PropTypes.string.isRequired
+        label: requiredIf(PropTypes.string, todayAction => {
+            const todayActionType = todayAction?.type?.trim();
+            return todayActionType === 'select' || todayActionType === 'navigate';
+        })
     }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`;
      * _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
@@ -572,6 +573,7 @@ DatePicker.defaultProps = {
     defaultValue: '',
     dateFormat: null,
     locale: 'en',
+    localizedText: Calendar.defaultProps.localizedText,
     todayAction: {
         type: 'none'
     },
