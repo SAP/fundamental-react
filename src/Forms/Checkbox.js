@@ -1,3 +1,4 @@
+/* eslint-disable valid-jsdoc */
 import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
@@ -5,28 +6,19 @@ import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import React, { useEffect, useRef } from 'react';
-
-const getCheckStatus = (checked, indeterminate) => {
-    if (indeterminate) {
-        return 'mixed';
-    } else if (checked) {
-        return 'true';
-    } else {
-        return 'false';
-    }
-};
+import 'fundamental-styles/dist/checkbox.css';
 
 /** With a **Checkbox**, all options are visible and the user can make one or more selections.
 This component can also be disabled and displayed in a row */
 
 const Checkbox = React.forwardRef(({
+    ariaLabel,
     checked,
     children,
     className,
     compact,
     defaultChecked,
     disabled,
-    disableStyles,
     id,
     indeterminate,
     inline,
@@ -46,12 +38,6 @@ const Checkbox = React.forwardRef(({
         inputEl && inputEl.current && (inputEl.current.indeterminate = indeterminate);
     });
 
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-            require('fundamental-styles/dist/checkbox.css');
-        }
-    }, []);
 
     const classes = classnames(
         className,
@@ -69,18 +55,24 @@ const Checkbox = React.forwardRef(({
 
     const checkId = id ? id : shortId.generate();
 
+    const checkboxChildren = (typeof children === 'string') ? (
+        <span className='fd-checkbox__text'>
+            {children}
+        </span>
+    ) : children;
+
     return (
         <FormItem
             {...props}
-            disableStyles={disableStyles}
             disabled={disabled}
             isInline={inline}
             ref={ref}>
             <input
                 {...inputProps}
-                aria-checked={getCheckStatus(checked, indeterminate)}
-                checked={checked || defaultChecked}
+                aria-label={ariaLabel}
+                checked={checked}
                 className={classes}
+                defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
                 name={name}
@@ -92,10 +84,9 @@ const Checkbox = React.forwardRef(({
                 value={value} />
             <FormLabel {...labelProps}
                 className={labelClasses}
-                disableStyles={disableStyles}
                 disabled={disabled}
                 htmlFor={checkId}>
-                {children}
+                {checkboxChildren}
             </FormLabel>
         </FormItem>
     );
@@ -104,10 +95,20 @@ const Checkbox = React.forwardRef(({
 Checkbox.displayName = 'Checkbox';
 
 Checkbox.propTypes = {
-    /** Node(s) to render within the component */
-    children: PropTypes.node.isRequired,
+    /** aria-label for the checkbox when no visible label is used */
+    ariaLabel: PropTypes.string,
     /** Set to **true** when checkbox input is checked and a controlled component */
     checked: PropTypes.bool,
+    /** Node(s) to render within the component */
+    children: (props, propName, componentName) => {
+        if (!props.children && !props.ariaLabel) {
+            return new Error(`
+No \`children\` or \`aria-label\` found for ${componentName}.
+Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` for accessibility purposes.
+`
+            );
+        }
+    },
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
@@ -116,8 +117,6 @@ Checkbox.propTypes = {
     defaultChecked: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     /** When true, the checkbox renders a "mixed" state */

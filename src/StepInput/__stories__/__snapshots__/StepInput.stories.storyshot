@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/StepInput Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input fd-step-input--compact"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent fd-button--compact sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent fd-button--compact sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/StepInput Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            disabled={false}
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            disabled={false}
+            onChange={[Function]}
+            placeholder="Placeholder"
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            disabled={false}
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/StepInput Disabled 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input is-disabled"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less is-disabled fd-step-input__button"
+            disabled={true}
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            disabled={true}
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add is-disabled fd-step-input__button"
+            disabled={true}
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/StepInput Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/StepInput Read Only 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input is-readonly"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/StepInput Validation States 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input is-error"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            placeholder="Error"
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input is-warning"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            placeholder="Warning"
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input is-success"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            placeholder="Success"
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-step-input is-information"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+          <input
+            className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            onChange={[Function]}
+            placeholder="Information"
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

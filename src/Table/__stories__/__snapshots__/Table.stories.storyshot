@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Table Primary 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    className="fd-table"
+  >
+    <thead
+      className="fd-table__header"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 1
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 2
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 3
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 4
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="fd-table__body"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell"
+        >
+          Data 1
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 2
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 3
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 4
+        </td>
+      </tr>
+      <tr
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell"
+        >
+          Data 5
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 6
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 7
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 8
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots Component API/Table Rich Table 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    className="fd-table"
+  >
+    <thead
+      className="fd-table__header"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <th
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-label="Select all rows"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Avatar
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          email
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          First Name
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Last Name
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Date
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="fd-table__body"
+    >
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="User"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
+            role="presentation"
+            style={
+              Object {
+                "backgroundImage": "url(https://robohash.org/green?size=50x50)",
+              }
+            }
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            href="#"
+          >
+            user.name@test.com
+          </a>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          First Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Last Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          01/26/17
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Florence"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
+            role="presentation"
+            style={
+              Object {
+                "backgroundImage": "url(https://robohash.org/brown?size=50x50)",
+              }
+            }
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            href="#"
+          >
+            florence.garcia@qwerty.io
+          </a>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          First Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Last Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          01/26/17
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Mark"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
+            role="presentation"
+            style={
+              Object {
+                "backgroundImage": "url(https://robohash.org/Q27.png?set=set1&size=50x50)",
+              }
+            }
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            href="#"
+          >
+            mark.helper@qwerty.io
+          </a>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          First Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Last Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          01/26/17
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Jenna"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--transparent"
+            role="presentation"
+            style={
+              Object {
+                "backgroundImage": "url(https://robohash.org/water?&size=50x50)",
+              }
+            }
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            href="#"
+          >
+            jenna@qwerty.io
+          </a>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          First Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Last Name
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          01/26/17
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

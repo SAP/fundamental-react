@@ -28,6 +28,8 @@ export const primary = () => (
     </div>
 );
 
+/** Including a subtitle is optional. It can have one line of text before it is truncated */
+
 export const subtitle = () => (
     <div className='fddocs-container'>
         <Tile onClick={() => {}}>
@@ -41,14 +43,10 @@ export const subtitle = () => (
     </div>
 );
 
-subtitle.story = {
-    parameters: {
-        docs: {
-            storyDescription: `Including a subtitle is optional.
-            It can have one line of text before it is truncated.`
-        }
-    }
-};
+/**
+ * The large (default) tiles are designed for screens larger than 374px. For smaller screens use `size='s'` prop.
+ * The generic tile control supports two tile dimensions - `1×1` (default) and `2×1` (`isDouble`).
+ */
 
 export const sizes = () => (
     <>
@@ -92,15 +90,10 @@ export const sizes = () => (
     </>
 );
 
-sizes.story = {
-    parameters: {
-        docs: {
-            storyDescription: `The large (default) tiles are designed for screens larger than 374px.
-            For smaller screens use size='s' prop. The generic tile control supports two tile dimensions
-            - 1×1 (default) and 2×1 (isDouble).`
-        }
-    }
-};
+/**
+ * Tile.Content can be split into two columns using the `twoColumns` prop.
+Note: Any children must be wrapped in 2 top level `div` elements.
+ */
 
 export const columns = () => (
     <div className='fddocs-container'>
@@ -124,12 +117,3 @@ export const columns = () => (
         </Tile>
     </div>
 );
-
-columns.story = {
-    parameters: {
-        docs: {
-            storyDescription: `Tile.Content can be split into two columns using the twoColumns prop.
-            Note: Any children must be wrapped in 2 top level div elements.`
-        }
-    }
-};

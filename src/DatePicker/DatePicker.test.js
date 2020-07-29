@@ -26,6 +26,11 @@ describe('<DatePicker />', () => {
         mount(compactRangeDatepicker);
     });
 
+    test('adds a custom className to the outermost div', () => {
+        wrapper = mount(<DatePicker className='my-class-name' />);
+        expect(wrapper.find('div.my-class-name').length).toBe(1);
+    });
+
     test('start date and end date range', () => {
         wrapper = mount(rangeDatePicker);
         // set dates
@@ -301,6 +306,66 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
     });
 
+    describe('With today footer button', () => {
+
+        test('renders today button when todayAction.type=\'select\' AND valid todayAction.label is specified', () => {
+            wrapper = mount(
+                <DatePicker
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(true);
+            expect(todayButtonWrapper.getDOMNode().innerHTML).toBe('Today');
+        });
+
+        test('doesn\'t render today button when todayAction.type=\'select\' AND valid todayAction.label is specified but date range selection is enabled', () => {
+            wrapper = mount(
+                <DatePicker
+                    enableRangeSelection
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(false);
+        });
+
+        test('sets todays date when today button is pressed', () => {
+            wrapper = mount(
+                <DatePicker
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            expect(todayButtonWrapper.exists()).toBe(true);
+            todayButtonWrapper.simulate('click');
+            expect(moment().isSame(wrapper.state('selectedDate'), 'day')).toBe(true);
+        });
+
+        test('calls onChange date when today button is pressed', () => {
+            const change = jest.fn();
+            wrapper = mount(
+                <DatePicker
+                    dateFormat='YYYY/MM/DD'
+                    onChange={change}
+                    todayAction={{
+                        type: 'select',
+                        label: 'Today'
+                    }} />);
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
+            todayButtonWrapper.simulate('click');
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
+
+        });
+    });
+
     describe('onBlur callback', () => {
         test('should call onBlur after leaving input', () => {
             const blur = jest.fn();
@@ -344,10 +409,43 @@ describe('<DatePicker />', () => {
             const datePickerClose = jest.fn();
             const element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
                 onDatePickerClose={datePickerClose} />);
-            element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            element.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
             expect(datePickerClose).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '2020-03-02' }));
             expect(datePickerClose).toHaveBeenCalledTimes(1);
+        });
+    });
+
+    describe('first displayed day', () => {
+        beforeEach(() => {
+            document.body.innerHTML = '';
+        });
+        test('should be the first sunday before the start of the month in locale "es"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='20/06/2020'
+                locale='es' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('31'); // May 31st is the first day shown
+        });
+        test('should be the first sunday before the start of the month in locale "fr"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='01/07/2020'
+                locale='fr' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('28'); // June 28th is the first day shown
+        });
+        test('should be the first sunday of the start of the month, when the 1st is the start of the month in locale "fr"', () => {
+            const element = mount(<DatePicker
+                dateFormat='DD/MM/YYYY'
+                defaultValue='01/11/2020'
+                locale='fr' />);
+            element.find('button').simulate('click');
+            const firstDisplayedDay = document.body.querySelectorAll('.fd-calendar__item--other-month')[0].textContent;
+            expect(firstDisplayedDay).toBe('1'); // In this case December 1st is the first other-month date shown
         });
     });
 
@@ -370,7 +468,7 @@ describe('<DatePicker />', () => {
             element = element.setProps({
                 dateFormat: 'MM/DD/YYYY'
             });
-            element.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            element.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
 
             expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }));
@@ -415,7 +513,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('button.fd-button--transparent.sap-icon--calendar').getDOMNode().attributes['data-sample'].value
+                element.find('button.fd-button--transparent.sap-icon--appointment-2').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -426,7 +524,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
             wrapper.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
 
             expect(
@@ -441,7 +539,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
             wrapper.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
 
             expect(
@@ -456,7 +554,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
 
             expect(
                 wrapper.find('.fd-calendar__dates').childAt(0).getDOMNode().attributes['data-sample'].value
@@ -470,7 +568,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
 
             expect(
                 wrapper.find('.fd-calendar__group').at(0).getDOMNode().attributes['data-sample'].value
@@ -484,7 +582,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--calendar').simulate('click');
+            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
 
             expect(
                 wrapper.find('tbody').getDOMNode().attributes['data-sample'].value

@@ -1,6 +1,18 @@
+import PropTypes from 'prop-types';
 const ANONYMOUS = '<<anonymous>>';
 
 /* eslint-disable no-console */
+
+const elementOrArrayOfElements = () => {
+    // Element is not defined unless the Browser API is defined
+    if (typeof Element === 'undefined') {
+        return null;
+    }
+    return PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.instanceOf(Element)),
+        PropTypes.instanceOf(Element)
+    ]);
+};
 
 const wrapValidator = (validator, typeName, typeChecker = null) => {
     // eslint-disable-next-line compat/compat
@@ -95,8 +107,16 @@ const i18n = (obj) => {
         const valueKeys = Object.keys(value);
 
         if (valueKeys.length !== shapeKeys.length) {
-            let missingKeys = shapeKeys.filter(key => !valueKeys.some(k => key === k));
-            return new Error(`The ${location} \`${propFullName}\` supplied to \`${componentName}\` only has ${valueKeys.length} strings when ${shapeKeys.length} were expected. Missing ${missingKeys.map(key => `\`${key}\``).join(', ')}.`);
+            let missMatchType = '';
+            let missMatchKeys = [];
+            if (valueKeys.length < shapeKeys.length) {
+                missMatchType = 'Missing';
+                missMatchKeys = shapeKeys.filter(key => !valueKeys.some(k => key === k));
+            } else {
+                missMatchType = 'Extra';
+                missMatchKeys = valueKeys.filter(key => !shapeKeys.some(k => key === k));
+            }
+            return new Error(`The ${location} \`${propFullName}\` supplied to \`${componentName}\` has ${valueKeys.length} string(s) when ${shapeKeys.length} were expected. ${missMatchType} ${missMatchKeys.map(key => `\`${key}\``).join(', ')}.`);
         }
 
         return null;
@@ -105,4 +125,4 @@ const i18n = (obj) => {
     return wrapValidator(createChainableTypeChecker(validate), 'i18n', obj);
 };
 
-export default { range, i18n };
+export default { elementOrArrayOfElements, range, i18n };

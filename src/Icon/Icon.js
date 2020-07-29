@@ -1,33 +1,33 @@
 import classnames from 'classnames';
 import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/icon.css';
 
 /** Icons are used throughout the UI to save space, allow for visual clarity
 and focus, and for fun. Icons can be used adaptively if desired, but at
 this point they are used more as visual elements within other
 components. */
-const Icon = React.forwardRef(({ glyph, size, className, disableStyles, ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/icon.css');
-        }
-    }, []);
+const Icon = React.forwardRef(({ glyph, size, className, ...props }, ref) => {
 
     const iconClasses = classnames(
         {
-            [`sap-icon--${glyph}`]: !!glyph,
-            [`sap-icon--${size}`]: !!size
+            [`sap-icon--${glyph}`]: !!glyph
         },
         className
     );
+
+    let style;
+    if (size) {
+        style = { fontSize: ICON_SIZES[size] };
+    }
 
     return (
         <span
             {...props}
             className={iconClasses}
-            ref={ref} />
+            ref={ref}
+            style={style} />
     );
 });
 
@@ -38,10 +38,8 @@ Icon.propTypes = {
     glyph: PropTypes.string.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Size of the component: 's', 'm', 'l', 'xl' */
-    size: PropTypes.oneOf(ICON_SIZES)
+    size: PropTypes.oneOf(Object.keys(ICON_SIZES))
 };
 
 export default Icon;

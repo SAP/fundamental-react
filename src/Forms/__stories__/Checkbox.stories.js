@@ -16,6 +16,12 @@ export const primary = () => (<Checkbox>Default Checkbox</Checkbox>);
 export const indeterminate = () => (
     <Checkbox indeterminate>Text Option</Checkbox>
 );
+export const controlledChecked = () => (
+    <Checkbox checked={boolean('checked (controlled)', false)}>Text Option</Checkbox>
+);
+export const defaultChecked = () => (
+    <Checkbox defaultChecked>Text Option</Checkbox>
+);
 export const disabled = () => (
     <Checkbox disabled>Text Option</Checkbox>
 );
@@ -46,7 +52,5 @@ export const dev = () => (
         })}>Text Option</Checkbox>
 );
 
-
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+controlledChecked.parameters = { docs: { disable: true } };
+dev.parameters = { docs: { disable: true } };

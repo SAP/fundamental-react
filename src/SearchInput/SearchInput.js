@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
+import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
@@ -20,9 +21,7 @@ class SearchInput extends PureComponent {
     }
 
     filterList = (list, query) => {
-        return this.props.subStringSearch ? list.filter((item) => {
-            return item.text.toLowerCase().includes(query.toLowerCase());
-        }) : list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
+        return list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
     }
 
     handleKeyPress = event => {
@@ -102,12 +101,10 @@ class SearchInput extends PureComponent {
 
     render() {
         const {
-            disableStyles,
             placeholder,
             inShellbar,
             onEnter,
             searchList,
-            subStringSearch,
             onChange,
             onSelect,
             noSearchBtn,
@@ -134,26 +131,19 @@ class SearchInput extends PureComponent {
         ) : inputGroupClasses;
         let filteredResult = this.state.value && this.props.searchList ? this.filterList(this.props.searchList, this.state.value) : this.props.searchList;
         const popoverBody = (
-            <Menu disableStyles={disableStyles}>
+            <Menu>
                 <Menu.List {...listProps}>
                     {filteredResult && filteredResult.length > 0 ? (
                         filteredResult.map((item, index) => {
                             return (
-                                subStringSearch ? (<Menu.Item
-                                        key={index}
-                                        onClick={(e) => this.handleListItemClick(e, item)}>
-                                        {item.text}
-                                    </Menu.Item>) :
-                                    (
-                                        <Menu.Item
-                                            key={index}
-                                            onClick={(e) => this.handleListItemClick(e, item)}>
-                                            <strong>{this.state.value}</strong>
-                                            {this.state.value && this.state.value.length
-                                                ? item.text.substring(this.state.value.length)
-                                                : item.text}
-                                        </Menu.Item>
-                                    )
+                                <Menu.Item
+                                    key={index}
+                                    onClick={(e) => this.handleListItemClick(e, item)}>
+                                    <strong>{this.state.value}</strong>
+                                    {this.state.value && this.state.value.length
+                                        ? item.text.substring(this.state.value.length)
+                                        : item.text}
+                                </Menu.Item>
                             );
                         })
                     ) : (
@@ -163,6 +153,37 @@ class SearchInput extends PureComponent {
             </Menu>
         );
 
+        const inputGroup = (
+            <InputGroup
+                {...inputGroupProps}
+                className={inputGroupClasses}
+                compact={compact}
+                validationState={validationState}>
+                <FormInput
+                    {...inputProps}
+                    onChange={this.handleChange}
+                    onClick={this.handleClick}
+                    onKeyPress={this.handleKeyPress}
+                    placeholder={placeholder}
+                    value={this.state.value} />
+
+                {!noSearchBtn && (
+                    <InputGroup.Addon {...inputGroupAddonProps} isButton>
+                        <Button {...searchBtnProps}
+                            glyph='search'
+                            onClick={this.handleClick}
+                            option='transparent' />
+                    </InputGroup.Addon>
+                )}
+            </InputGroup>
+        );
+
+        const wrappedInputGroup = (
+            <FormValidationOverlay
+                control={inputGroup}
+                validationState={validationState} />
+        );
+
         return (
             <div {...rest} className={className}>
                 <Popover
@@ -170,46 +191,17 @@ class SearchInput extends PureComponent {
                     body={
                         (<>
                             {validationState &&
-                            <FormMessage
-                                disableStyles={disableStyles}
-                                type={validationState.state}>
-                                {validationState.text}
-                            </FormMessage>
+                                <FormMessage
+                                    type={validationState.state}>
+                                    {validationState.text}
+                                </FormMessage>
                             }
                             {popoverBody}
                         </>)}
-                    control={
-                        <InputGroup
-                            {...inputGroupProps}
-                            className={inputGroupClasses}
-                            compact={compact}
-                            disableStyles={disableStyles}
-                            validationState={!this.state.isExpanded ? validationState : null}>
-                            <FormInput
-                                {...inputProps}
-                                disableStyles={disableStyles}
-                                onChange={this.handleChange}
-                                onClick={this.handleClick}
-                                onKeyPress={this.handleKeyPress}
-                                placeholder={placeholder}
-                                value={this.state.value} />
-
-                            {!noSearchBtn && (
-                                <InputGroup.Addon {...inputGroupAddonProps} isButton>
-                                    <Button {...searchBtnProps}
-                                            disableStyles={disableStyles}
-                                            glyph='search'
-                                            onClick={this.handleClick}
-                                            option='transparent' />
-                                </InputGroup.Addon>
-                            )}
-                        </InputGroup>
-                    }
+                    control={wrappedInputGroup}
                     disableKeyPressHandler
-                    disableStyles={disableStyles}
                     noArrow
                     onClickOutside={this.handleClickOutside}
-                    show={this.state.isExpanded}
                     widthSizingType='minTarget' />
             </div>
         );
@@ -223,8 +215,6 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */
@@ -249,8 +239,6 @@ SearchInput.propTypes = {
             callback: PropTypes.func
         })
     ),
-    /** enable substring search */
-    subStringSearch: PropTypes.bool,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -269,8 +257,7 @@ SearchInput.propTypes = {
 SearchInput.defaultProps = {
     onChange: () => { },
     onEnter: () => { },
-    onSelect: () => { },
-    subStringSearch: false
+    onSelect: () => { }
 };
 
 export default SearchInput;

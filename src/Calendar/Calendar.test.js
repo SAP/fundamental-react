@@ -33,7 +33,9 @@ describe('<Calendar />', () => {
     const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
     const disablePast = <Calendar disablePastDates />;
     const disableFuture = <Calendar disableFutureDates />;
+    const openToDate = <Calendar openToDate={moment().year('2000').month(0).date(1)} />;
     const weekdayStart = (_weekdayStart = 0) => <Calendar weekdayStart={_weekdayStart} />;
+    const showTodayButton = <Calendar showToday />;
 
     test('create calendar components', () => {
         mount(defaultCalendar);
@@ -48,6 +50,7 @@ describe('<Calendar />', () => {
         mount(disabledWeekDayFakeDays);
         mount(rangeSelect);
         mount(weekdayStart());
+        mount(openToDate);
     });
 
     test('show/hide months', () => {
@@ -55,7 +58,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showMonths')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -64,7 +67,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -84,7 +87,7 @@ describe('<Calendar />', () => {
         //open month overlay
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -113,7 +116,7 @@ describe('<Calendar />', () => {
         //open months view
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(1)
             .simulate('click');
@@ -136,7 +139,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -145,7 +148,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -159,7 +162,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -207,7 +210,7 @@ describe('<Calendar />', () => {
         expect(wrapper.state('showYears')).toBeFalsy();
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -233,7 +236,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(0)
             .simulate('click');
@@ -244,7 +247,7 @@ describe('<Calendar />', () => {
         // previous button when year shown
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -253,7 +256,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(0)
             .simulate('click');
@@ -270,7 +273,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(3)
             .simulate('click');
@@ -281,7 +284,7 @@ describe('<Calendar />', () => {
         // previous button when year shown
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(2)
             .simulate('click');
@@ -290,7 +293,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(3)
             .simulate('click');
@@ -308,7 +311,7 @@ describe('<Calendar />', () => {
 
         wrapper
             .find(
-                'header.fd-calendar__header button.fd-button--transparent.fd-button--compact'
+                '.fd-calendar__header button.fd-button--transparent'
             )
             .at(3)
             .simulate('click');
@@ -331,6 +334,30 @@ describe('<Calendar />', () => {
         let currentDateDisplayed = moment(new Date(wrapper.state('currentDateDisplayed')));
 
         expect(selectedDate.date()).toEqual(currentDateDisplayed.date());
+    });
+
+    test('click on Today button', () => {
+        const wrapper = mount(showTodayButton);
+        // select a different day first
+        wrapper
+            .find(
+                'table.fd-calendar__table tbody.fd-calendar__group tr.fd-calendar__row td.fd-calendar__item:not(.fd-calendar__item--other-month)'
+            )
+            .at(0)
+            .simulate('click');
+
+        // now click Today
+        wrapper
+            .find(
+                '.fd-calendar__header button.fd-button--transparent'
+            )
+            .at(4)
+            .simulate('click');
+
+        let selectedDate = moment(new Date(wrapper.state('selectedDate')));
+        let todayDate = moment(new Date(wrapper.state('todayDate')));
+
+        expect(selectedDate.date()).toEqual(todayDate.date());
     });
 
     test('click on day with range enabled', () => {
@@ -414,6 +441,21 @@ describe('<Calendar />', () => {
         expect(wrapper.state('arrSelectedDates').length).toEqual(2);
     });
 
+    describe('openToDate', () => {
+        test('should open today date if not specified', () => {
+            let wrapper = mount(defaultCalendar);
+
+            expect(wrapper.state('currentDateDisplayed')).toEqual(moment().startOf('day'));
+        });
+
+        test('should open to specified date when mounted', () => {
+            let wrapper = mount(openToDate);
+            const focusedDateElement = wrapper.find('[data-is-focused=true] span');
+
+            expect(focusedDateElement.prop('aria-label')).toEqual('January 1, 2000');
+        });
+    });
+
     describe('weekdayStart', () => {
         // testing with specific date so we can verify our weekdays actually line up with the proper dates
         const date = moment('6/1/2020');
@@ -422,7 +464,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('S');
+            expect(firstWeekday).toBe('Su');
             expect(firstDate).toBe('31'); // May 31, 2020
         });
         test('should render weekday start as Monday', () => {
@@ -430,7 +472,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('M');
+            expect(firstWeekday).toBe('Mo');
             expect(firstDate).toBe('1'); // June 1, 2020
         });
         test('should render weekday start as Tuesday', () => {
@@ -438,7 +480,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('T');
+            expect(firstWeekday).toBe('Tu');
             expect(firstDate).toBe('26'); // May 26, 2020 because our starting weekday is now after the first day of the month
         });
         test('should render weekday start as Wednesday', () => {
@@ -446,7 +488,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('W');
+            expect(firstWeekday).toBe('We');
             expect(firstDate).toBe('27'); // May 27, 2020
         });
         test('should render weekday start as Thursday', () => {
@@ -454,7 +496,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('T');
+            expect(firstWeekday).toBe('Th');
             expect(firstDate).toBe('28'); // May 28, 2020
         });
         test('should render weekday start as Friday', () => {
@@ -462,7 +504,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('F');
+            expect(firstWeekday).toBe('Fr');
             expect(firstDate).toBe('29'); // May 29, 2020
         });
         test('should render weekday start as Saturday', () => {
@@ -470,7 +512,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('S');
+            expect(firstWeekday).toBe('Sa');
             expect(firstDate).toBe('30'); // May 30, 2020
         });
         test('should render even when number as a string is passed in', () => {
@@ -478,7 +520,7 @@ describe('<Calendar />', () => {
             wrapper.setState({ currentDateDisplayed: date });
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
-            expect(firstWeekday).toBe('S');
+            expect(firstWeekday).toBe('Sa');
             expect(firstDate).toBe('30'); // May 30, 2020
         });
         test('should default to Sunday view when prop is not a number or a number as a string', () => {
@@ -488,7 +530,7 @@ describe('<Calendar />', () => {
             const firstWeekday = wrapper.find('th.fd-calendar__item .fd-calendar__text').first().text();
             const firstDate = wrapper.find('td').first().text();
             expect(consoleSpy).toHaveBeenCalled();
-            expect(firstWeekday).toBe('S');
+            expect(firstWeekday).toBe('Su');
             expect(firstDate).toBe('31'); // May 31, 2020
         });
     });

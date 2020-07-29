@@ -31,6 +31,7 @@ export { default as LocalizationEditor } from './LocalizationEditor/Localization
 export { default as Menu } from './Menu/Menu';
 export { default as MessageStrip } from './MessageStrip/MessageStrip';
 export { default as MultiInput } from './MultiInput/MultiInput';
+export { default as ObjectStatus } from './ObjectStatus/ObjectStatus';
 export { default as Pagination } from './Pagination/Pagination';
 export { default as LayoutGrid } from './LayoutGrid/LayoutGrid';
 export { default as Popover } from './Popover/Popover';

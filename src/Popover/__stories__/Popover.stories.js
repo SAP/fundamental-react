@@ -5,11 +5,12 @@ import Dialog from '../../Dialog/Dialog';
 import Icon from '../../Icon/Icon';
 import Menu from '../../Menu/Menu';
 import Popover from '../Popover';
+import { POPPER_PLACEMENTS } from '../../utils/constants';
 import {
     boolean,
     select
 } from '@storybook/addon-knobs';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default {
     title: 'Component API/Popover',
@@ -205,6 +206,35 @@ export const disableEdgeDetection = () => (
     </>
 );
 
+export const withCustomFlipContainer = () => {
+    const containerRef = useRef();
+    const [container, setContainer] = useState();
+
+    useEffect(() => {
+        setContainer(containerRef.current);
+    });
+
+    return (
+        <div style={{ alignItems: 'center', display: 'flex' }}>
+            <div style={{
+                backgroundColor: '#444',
+                width: '180px',
+                height: '120px'
+            }} />
+            <div ref={containerRef} style={{
+                border: '1px solid black',
+                padding: '220px 140px 250px 40px'
+            }}>
+                <Popover
+                    body={bodyContent}
+                    control={<Button glyph='navigation-up-arrow' option='transparent' />}
+                    flipContainer={container}
+                    placement={['bottom', 'left', 'right', 'top']} />
+            </div>
+        </div>
+    );
+};
+
 export const noArrow = () => (
     <>
         <Popover
@@ -239,8 +269,8 @@ export const widthSizingTypes = () => (
     <>
         {['none', 'matchTarget', 'minTarget', 'maxTarget'].map(type =>
             (<Popover
-                body={longBodyContent}
-                control={<Button>widthizingType: <strong>'{type}'</strong></Button>}
+                body={type === 'minTarget' ? bodyContent : longBodyContent}
+                control={<Button>widthSizingType: <strong>'{type}'</strong></Button>}
                 disableEdgeDetection
                 key={type}
                 placement='bottom'
@@ -248,6 +278,11 @@ export const widthSizingTypes = () => (
         )}
     </>
 );
+
+/**
+ * When an overlay (`body`) is visible, the reference (`control`)
+ * element must be tracked because if it overflows from its boundaries, the overlay will be hidden as well.
+ */
 
 export const outOfBoundaries = () => {
     let [open, setOpen] = useState(false);
@@ -296,59 +331,71 @@ export const outOfBoundaries = () => {
     );
 };
 
-outOfBoundaries.story = {
-    parameters: {
-        docs: {
-            storyDescription: `When an overlay (\`body\`) is visible, the reference (\`control\`)
-            element must be tracked because if it overflows from its boundaries, the overlay
-            will be hidden as well.`
-        },
+export const dev = () => {
+    const containerRef = useRef();
+    const [container, setContainer] = useState();
 
-        // TO DO: reenable storyshots for examples using hooks in storybook@6
-        // https://github.com/storybookjs/storybook/releases/tag/v6.0.0-alpha.43
-        storyshots: { disable: true }
+    useEffect(() => {
+        setContainer(containerRef.current);
+    });
+
+    const useContainer = boolean('Use flip container', false);
+
+    const popover = (
+        <Popover
+            body={someMenu}
+            control={<Button glyph='navigation-up-arrow' option='transparent' />}
+            disableEdgeDetection={boolean('disableEdgeDetection', false)}
+            disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
+            disabled={boolean('disabled', false)}
+            // eslint-disable-next-line no-undefined
+            flipContainer={useContainer ? container : undefined}
+            noArrow={boolean('noArrow', false)}
+            placement={select(
+                'placement',
+                POPPER_PLACEMENTS.reduce((a, b) => ({ ...a, [b]: b }), {}),
+                'bottom-start'
+            )}
+            type={select('type', {
+                'dialog': 'dialog',
+                'grid': 'grid',
+                'listbox': 'listbox',
+                'menu': 'menu',
+                'tree': 'tree'
+            })}
+            useArrowKeyNavigation={boolean('useArrowKeyNavigation', false)}
+            widthSizingType={select('widthSizingType', {
+                'none': 'none',
+                'matchTarget': 'matchTarget',
+                'minTarget': 'minTarget',
+                'maxTarget': 'maxTarget'
+            })} />
+    );
+
+    if (useContainer) {
+        return (
+            <div style={{ alignItems: 'center', display: 'flex' }}>
+                <div style={{
+                    backgroundColor: '#444',
+                    width: '180px',
+                    height: '120px'
+                }} />
+                <div ref={containerRef} style={{
+                    border: '1px solid black',
+                    padding: '220px 140px 250px 40px'
+                }}>
+                    {popover}
+                </div>
+            </div>
+        );
     }
+
+    return (
+        <div style={{ margin: '220px' }}>
+            {popover}
+        </div>
+    );
 };
-
-export const dev = () => (
-    <Popover
-        body={someMenu}
-        control={<Button glyph='navigation-up-arrow' option='transparent' />}
-        disableEdgeDetection={boolean('disableEdgeDetection', false)}
-        disableKeyPressHandler={boolean('disableKeyPressHandler', false)}
-        disabled={boolean('disabled', false)}
-        noArrow={boolean('noArrow', false)}
-        placement={select('placement', {
-            'bottom-start': 'bottom-start',
-            'bottom': 'bottom',
-            'bottom-end': 'bottom-end',
-            'left-start': 'left-start',
-            'left': 'left',
-            'left-end': 'left-end',
-            'right-start': 'right-start',
-            'right': 'right',
-            'right-end': 'right-end',
-            'top-start': 'top-start',
-            'top': 'top',
-            'top-end': 'top-end'
-        })}
-        type={select('type', {
-            'dialog': 'dialog',
-            'grid': 'grid',
-            'listbox': 'listbox',
-            'menu': 'menu',
-            'tree': 'tree'
-        })}
-        useArrowKeyNavigation={boolean('useArrowKeyNavigation', false)}
-        widthSizingType={select('widthSizingType', {
-            'none': 'none',
-            'matchTarget': 'matchTarget',
-            'minTarget': 'minTarget',
-            'maxTarget': 'maxTarget'
-        })} />
-);
-dev.story = {
-    parameters: {
-        docs: { disable: true }
-    }
+dev.parameters = {
+    docs: { disable: true }
 };

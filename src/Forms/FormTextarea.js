@@ -1,8 +1,10 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
+import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import 'fundamental-styles/dist/textarea.css';
 
 /** A **FormTextarea** is used to gather potentially lengthy input from a user.
  * Best practice is to use this component as a child of FormGroup. */
@@ -12,20 +14,13 @@ const FormTextarea = React.forwardRef(({
     counterProps,
     defaultValue,
     disabled,
-    disableStyles,
     localizedText,
     maxLength,
     onChange,
     readOnly,
-    state,
+    validationState,
     value,
     ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/textarea.css');
-        }
-    }, []);
 
     const getInitialCharCount = () => {
         if (typeof value === 'boolean' || value) {
@@ -61,7 +56,7 @@ const FormTextarea = React.forwardRef(({
         'fd-textarea',
         {
             'fd-textarea--compact': compact,
-            [`is-${state}`]: state
+            [`is-${validationState?.state}`]: validationState?.state
         },
         className
     );
@@ -71,18 +66,25 @@ const FormTextarea = React.forwardRef(({
         counterProps?.className
     );
 
+    const formTextarea = (
+        <textarea
+            {...props}
+            className={formTextAreaClasses}
+            defaultValue={defaultValue}
+            disabled={disabled}
+            maxLength={maxLength}
+            onChange={handleOnChange}
+            readOnly={readOnly}
+            ref={ref}
+            value={value} />
+    );
+
     return (
         <>
-            <textarea
-                {...props}
-                className={formTextAreaClasses}
-                defaultValue={defaultValue}
-                disabled={disabled}
-                maxLength={maxLength}
-                onChange={handleOnChange}
-                readOnly={readOnly}
-                ref={ref}
-                value={value} />
+            {validationState?.state ? <FormValidationOverlay
+                control={formTextarea}
+                validationState={validationState} />
+                : formTextarea}
             {hasMaxLength &&
                 <div
                     {...counterProps}
@@ -107,8 +109,8 @@ FormTextarea.propTypes = {
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
+    /** Value for the `id` attribute on the element */
+    id: PropTypes.string,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         charactersLeftPlural: PropTypes.string,
@@ -118,8 +120,13 @@ FormTextarea.propTypes = {
     maxLength: PropTypes.number,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
-    /** State of validation: 'error', 'warning', 'information', 'success' */
-    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
+    validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
+        text: PropTypes.string
+    }),
     /** Value for the textarea */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */

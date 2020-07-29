@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/tokenizer.css';
 
 /** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
  * and a dropdown menu with a list of the available options.
@@ -24,12 +25,8 @@ class MultiInput extends Component {
             bShowList: false,
             tags: []
         };
-    }
 
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/tokenizer.css');
-        }
+        this.multiInputId = shortid.generate();
     }
 
     // create tags to display in dropdown list
@@ -40,11 +37,11 @@ class MultiInput extends Component {
                     checked={this.isChecked(item)}
                     className='fd-list__input'
                     compact={this.props.compact}
-                    id={index + `_${shortid.generate()}`}
-                    labelClasses='fd-list__label'
+                    id={index + `_${this.multiInputId}`}
+                    labelClassName='fd-list__label'
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
-                    <List.Text>{item}</List.Text>
+                    <List.Text className='fd-checkbox__text'>{item}</List.Text>
                 </Checkbox>
             </List.Item>
         ));
@@ -139,7 +136,6 @@ class MultiInput extends Component {
             compact,
             className,
             disabled,
-            disableStyles,
             data,
             listProps,
             inputProps,
@@ -178,10 +174,38 @@ class MultiInput extends Component {
             <List
                 className={listClassName}
                 compact={compact}
-                disableStyles={disableStyles}
                 {...listProps}>
                 {this.createTagList(data)}
             </List>
+        );
+
+        const inputGroup = (
+            <InputGroup
+                {...rest}
+                aria-expanded={this.state.bShowList}
+                aria-haspopup='true'
+                className={inputGroupClasses}
+                compact={compact}
+                disabled={disabled}
+                onClick={this.showHideTagList}
+                validationState={validationState}>
+                <div {...tagProps} className={tokenizerClassName}>
+                    <div className='fd-tokenizer__inner'>
+                        {this.state.tags.length > 0 && this.createTags()}
+                        <FormInput
+                            {...inputProps}
+                            className='fd-input-group__input fd-tokenizer__input'
+                            compact={compact}
+                            placeholder={placeholder} />
+                    </div>
+                </div>
+                <InputGroup.Addon isButton>
+                    <Button
+                        {...buttonProps}
+                        glyph='value-help'
+                        option='transparent' />
+                </InputGroup.Addon>
+            </InputGroup>
         );
 
         return (
@@ -191,48 +215,18 @@ class MultiInput extends Component {
                     (<>
                         {validationState &&
                         <FormMessage
-                            disableStyles={disableStyles}
                             type={validationState.state}>
                             {validationState.text}
                         </FormMessage>
                         }
                         {popoverBody}
                     </>)}
-                control={
-                    <InputGroup
-                        {...rest}
-                        aria-expanded={this.state.bShowList}
-                        aria-haspopup='true'
-                        className={inputGroupClasses}
-                        compact={compact}
-                        disableStyles={disableStyles}
-                        disabled={disabled}
-                        onClick={this.showHideTagList}
-                        validationState={!this.state.bShowList ? validationState : null}>
-                        <div {...tagProps} className={tokenizerClassName}>
-                            <div className='fd-tokenizer__inner'>
-                                {this.state.tags.length > 0 && this.createTags()}
-                                <FormInput
-                                    {...inputProps}
-                                    className='fd-input-group__input fd-tokenizer__input'
-                                    compact={compact}
-                                    disableStyles={disableStyles}
-                                    placeholder={placeholder} />
-                            </div>
-                        </div>
-                        <InputGroup.Addon isButton>
-                            <Button
-                                {...buttonProps}
-                                disableStyles={disableStyles}
-                                glyph='value-help'
-                                option='transparent' />
-                        </InputGroup.Addon>
-                    </InputGroup>
-                }
-                disableStyles={disableStyles}
+                control={inputGroup}
+                disableKeyPressHandler
                 disabled={disabled}
                 noArrow
                 onClickOutside={this.handleClickOutside}
+                useArrowKeyNavigation
                 widthSizingType='matchTarget' />
         );
     }
@@ -251,8 +245,6 @@ MultiInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Additional props to be spread to the `<ul>` element */

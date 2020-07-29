@@ -3,8 +3,9 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
+import React from 'react';
 import shortId from '../utils/shortId';
-import React, { useEffect } from 'react';
+import 'fundamental-styles/dist/radio.css';
 
 const FormRadioItem = React.forwardRef(({
     checked,
@@ -13,7 +14,6 @@ const FormRadioItem = React.forwardRef(({
     compact,
     defaultChecked,
     disabled,
-    disableStyles,
     id,
     inline,
     inputProps,
@@ -22,12 +22,6 @@ const FormRadioItem = React.forwardRef(({
     state,
     value,
     ...props }, ref) => {
-
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/radio.css');
-        }
-    }, []);
 
     const inputClassName = classnames(
         'fd-radio',
@@ -43,7 +37,6 @@ const FormRadioItem = React.forwardRef(({
         <FormItem
             {...props}
             className={className}
-            disableStyles={disableStyles}
             isInline={inline}
             key={id}>
             <input
@@ -59,7 +52,6 @@ const FormRadioItem = React.forwardRef(({
             <FormLabel
                 {...labelProps}
                 className='fd-radio__label'
-                disableStyles={disableStyles}
                 disabled={disabled}
                 htmlFor={radioId}>
                 {children}
@@ -83,8 +75,6 @@ FormRadioItem.propTypes = {
     defaultChecked: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Value for the `id` attribute on the element */
     id: PropTypes.string,
     /** Internal use only */

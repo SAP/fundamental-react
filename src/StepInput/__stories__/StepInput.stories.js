@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import StepInput from '../StepInput';
 import {
@@ -22,6 +23,10 @@ export const compact = () => (
 
 export const disabled = () => (
     <StepInput disabled />
+);
+
+export const readOnly = () => (
+    <StepInput readOnly />
 );
 
 export const validationStates = () => (
@@ -53,8 +58,8 @@ export const validationStates = () => (
 export const dev = () => (
     <StepInput
         compact={boolean('compact', false)}
-        disableStyles={boolean('disableStyles', false)}
         disabled={boolean('disabled', false)}
+        onChange={action('step-value-change')}
         placeholder={text('Placeholder', 'Placeholder')}
         validationState={select('Validation State', {
             'none': '',
@@ -64,6 +69,4 @@ export const dev = () => (
             'warning': { state: 'warning', text: 'placeholder text' }
         })} />
 );
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

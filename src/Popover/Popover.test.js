@@ -3,7 +3,9 @@ import Icon from '../Icon/Icon';
 import Menu from '../Menu/Menu';
 import { mount } from 'enzyme';
 import Popover from './Popover';
+import Popper from '../utils/_Popper';
 import React from 'react';
+import { Popper as ReactPopper } from 'react-popper-2';
 
 describe('<Popover />', () => {
     const popOver = (
@@ -211,46 +213,70 @@ describe('<Popover />', () => {
     });
 
     describe('widthSizingType', () => {
-        const targetBoundaries = { left: 123, right: 456 };
-        beforeAll(()=>{
-            Object.defineProperty(window.HTMLElement.prototype, 'getBoundingClientRectTest', {
-                // because of getBoundingClientRectTest cannot be redefined
-                value: () => targetBoundaries,
-                writable: true
-            });
-        });
-
         test('matchTarget', () => {
             const popoverWithParent = mount(popOver).setProps({ widthSizingType: 'matchTarget' });
-            popoverWithParent.find('div.fd-popover__control .sap-icon--cart').simulate('click');
-            const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
-
-            expect(popoverStyle).toHaveProperty('left', targetBoundaries.left);
-            expect(popoverStyle).toHaveProperty('width', targetBoundaries.right - targetBoundaries.left);
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const modifier = popperComponent.props().modifiers.find(m => m.name === 'matchTargetModifier');
+            expect(modifier).toBeTruthy();
         });
 
         test('minTarget', () => {
             const popoverWithParent = mount(popOver).setProps({ widthSizingType: 'minTarget' });
-            popoverWithParent.find('div.fd-popover__control .sap-icon--cart').simulate('click');
-            const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
-
-            expect(popoverStyle).toHaveProperty('left');
-            const { left } = popoverStyle;
-            expect(popoverStyle).toHaveProperty('minWidth', targetBoundaries.right - left);
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const modifier = popperComponent.props().modifiers.find(m => m.name === 'minTargetModifier');
+            expect(modifier).toBeTruthy();
         });
 
         test('maxTarget', () => {
             const popoverWithParent = mount(popOver).setProps({ widthSizingType: 'maxTarget' });
-            popoverWithParent.find('div.fd-popover__control .sap-icon--cart').simulate('click');
-            const popoverStyle = popoverWithParent.find('.fd-popover__popper').prop('style');
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const modifier = popperComponent.props().modifiers.find(m => m.name === 'maxTargetModifier');
+            expect(modifier).toBeTruthy();
+        });
+    });
 
-            expect(popoverStyle).toHaveProperty('left');
-            const { left } = popoverStyle;
-            expect(popoverStyle).toHaveProperty('maxWidth', targetBoundaries.right - left);
+    describe('flip modifiers', () => {
+        test('disableEdgeDetection props', () => {
+            const popoverWithParent = mount(popOver).setProps({ disableEdgeDetection: true });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.enabled).toBe(false);
         });
 
-        afterAll(()=>{
-            delete window.HTMLElement.prototype.getBoundingClientRectTest;
+        test('disableEdgeDetection default', () => {
+            const popoverWithParent = mount(popOver).setProps({ });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.enabled).not.toBeDefined();
+        });
+
+        test('fallback placements', () => {
+            const popoverWithParent = mount(popOver).setProps({ placement: ['right', 'top'] });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.fallbackPlacements).toEqual(['top']);
+        });
+
+        test('fallback placements default', () => {
+            const popoverWithParent = mount(popOver).setProps({ });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.fallbackPlacements).toEqual(Popper.defaultProps.popperPlacement.slice(1));
+        });
+
+        test('flip container props', () => {
+            const boundary = document.createElement('div');
+            const popoverWithParent = mount(popOver).setProps({ flipContainer: boundary });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.boundary).toBe(boundary);
+        });
+
+        test('flip container default', () => {
+            const popoverWithParent = mount(popOver).setProps({ });
+            const popperComponent = popoverWithParent.find(ReactPopper);
+            const flipModifier = popperComponent.props().modifiers.find(m => m.name === 'flip');
+            expect(flipModifier.options.boundary).not.toBeDefined();
         });
     });
 

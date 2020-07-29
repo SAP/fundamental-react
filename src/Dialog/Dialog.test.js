@@ -163,7 +163,7 @@ describe('<Dialog />', () => {
                 backdropClassName='sample' show
                 title='Title' />);
 
-            expect(component.find('div.fd-overlay--dialog').hasClass('sample')).toBe(true);
+            expect(component.find('.sample').exists()).toBe(true);
         });
 
         test('should allow classes to be added to dialog', () => {
@@ -192,11 +192,7 @@ describe('<Dialog />', () => {
                     title='Title' />
             );
 
-            expect( component.find('div.fd-overlay--dialog').getDOMNode().attributes[
-                'data-sample'
-            ].value).toBe(
-                'Sample'
-            );
+            expect(component.exists('div[data-sample="Sample"]')).toBe(true);
         });
 
         test('should allow props to be spread to the Dialog component\'s content section', () => {

@@ -26,6 +26,8 @@ export const primary = () => (
     </Menu>
 );
 
+/** Menu items with horizontal line as separator. */
+
 export const separator = () => (
     <Menu>
         <Menu.List>
@@ -45,14 +47,9 @@ export const separator = () => (
     </Menu>
 );
 
-separator.story = {
-    name: 'With Separator',
-    parameters: {
-        docs: {
-            storyDescription: 'Menu items with horizontal line as separator.'
-        }
-    }
-};
+separator.storyName = 'With Separator';
+
+/** Menu item states - `selected`, `active`, and `disabled`. */
 
 export const states = () => (
     <Menu>
@@ -73,14 +70,9 @@ export const states = () => (
     </Menu>
 );
 
-states.story = {
-    name: 'With States',
-    parameters: {
-        docs: {
-            storyDescription: 'Menu item states - selected, active, and disabled.'
-        }
-    }
-};
+states.storyName = 'With States';
+
+/** Menu items with an add-on before or after. */
 
 export const addOns = () => (
     <Menu>
@@ -104,11 +96,4 @@ export const addOns = () => (
     </Menu>
 );
 
-addOns.story = {
-    name: 'With Addons',
-    parameters: {
-        docs: {
-            storyDescription: 'Menu items with an add-on before or after.'
-        }
-    }
-};
+addOns.storyName = 'With Addons';

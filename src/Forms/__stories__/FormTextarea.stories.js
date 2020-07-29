@@ -16,28 +16,16 @@ export const primary = () => (<FormTextarea defaultValue='Placeholder' />);
 
 export const compact = () => (<FormTextarea compact defaultValue='Compact textarea' />);
 
+/**
+ * **Disabled**: This indicates the field is not editable. A common use case is that this field is dependent on a previous entry or selection within the form.
+ */
+
 export const disabled = () => (<FormTextarea defaultValue='Disabled textarea' disabled />);
 
-disabled.story = {
-    parameters: {
-        docs: {
-            storyDescription: `**Disabled**: This indicates the field is not 
-            editable. A common use case is that this field is dependent on a previous entry or 
-            selection within the form.`
-        }
-    }
-};
+
+/** **Read Only**: Used to display static information in the context of a form. */
 
 export const readOnly = () => (<FormTextarea defaultValue='Placeholder' readOnly />);
-
-readOnly.story = {
-    parameters: {
-        docs: {
-            storyDescription: `**Read Only**: Used to display static information 
-            in the context of a form.`
-        }
-    }
-};
 
 export const maxLength = () => (
     <FormTextarea defaultValue='Max Length'
@@ -48,16 +36,16 @@ export const validationStates = () => (
     <div className='fddocs-container'>
         <FormTextarea
             defaultValue='Error State'
-            state='error' />
+            validationState={{ state: 'error', text: 'Test validation state' }} />
         <FormTextarea
             defaultValue='Warning State'
-            state='warning' />
+            validationState={{ state: 'warning', text: 'Test validation state' }} />
         <FormTextarea
             defaultValue='Information State'
-            state='information' />
+            validationState={{ state: 'information', text: 'Test validation state' }} />
         <FormTextarea
             defaultValue='Success State'
-            state='success' />
+            validationState={{ state: 'success', text: 'Test validation state' }} />
     </div>
 );
 
@@ -67,16 +55,14 @@ export const dev = () => (
         defaultValue={text('Default Value', 'Default')}
         disabled={boolean('disabled', false)}
         readOnly={boolean('readOnly', false)}
-        state={select('State', {
+        validationState={select('Validation State', {
             'none': '',
-            'success': 'success',
-            'error': 'error',
-            'information': 'information',
-            'warning': 'warning'
+            'success': { state: 'success', text: 'placeholder text' },
+            'error': { state: 'error', text: 'placeholder text' },
+            'information': { state: 'information', text: 'placeholder text' },
+            'warning': { state: 'warning', text: 'placeholder text' }
         })} />
 );
 
 
-dev.story = {
-    parameters: { docs: { disable: true } }
-};
+dev.parameters = { docs: { disable: true } };

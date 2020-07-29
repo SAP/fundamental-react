@@ -2,16 +2,12 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
+import 'fundamental-styles/dist/input.css';
 
 /** A **FormInput** is used to collect data from the user. When a field is required,
 the \`required\` property will include an asterisk (*). */
-const FormInput = React.forwardRef(({ className, compact, disabled, id, name, placeholder, readOnly, type, value, validationState, disableStyles, ...props }, ref) => {
-    useEffect(() => {
-        if (!disableStyles) {
-            require('fundamental-styles/dist/input.css');
-        }
-    }, []);
+const FormInput = React.forwardRef(({ className, compact, disabled, name, placeholder, readOnly, type, value, validationState, ...props }, ref) => {
 
     const formInputClasses = classnames(
         'fd-input',
@@ -27,7 +23,6 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
             {...props}
             className={formInputClasses}
             disabled={disabled}
-            id={id}
             name={name}
             placeholder={placeholder}
             readOnly={readOnly}
@@ -36,15 +31,11 @@ const FormInput = React.forwardRef(({ className, compact, disabled, id, name, pl
             value={value} />
     );
 
-    return (
-        validationState ? (
-            <FormValidationOverlay
-                control={formInput}
-                id={id}
-                validationState={validationState} />
-        ) :
-            formInput
-    );
+    return validationState ? (
+        <FormValidationOverlay
+            control={formInput}
+            validationState={validationState} />
+    ) : formInput;
 });
 
 FormInput.displayName = 'FormInput';
@@ -56,10 +47,6 @@ FormInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
-    /** Value for the `id` attribute on the element */
-    id: PropTypes.string,
     /** Value for the `name` attribute on the input */
     name: PropTypes.string,
     /** Localized placeholder text of the input */

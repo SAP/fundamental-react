@@ -1,5 +1,6 @@
 import chain from 'chain-function';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { findDOMNode } from 'react-dom';
 import FocusManager from '../utils/focusManager/focusManager';
 import keycode from 'keycode';
@@ -9,6 +10,8 @@ import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
 import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/popover.css';
+
 
 /** A **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
 anything that you want to trigger the interaction from. The body will be the contents of what you reveal
@@ -28,12 +31,6 @@ class Popover extends Component {
         //A generated shortId as fallback, in case props.popperProps.id is unset.
         //This ID binds the popover and its control by 'aria-controls'.
         this.popoverId = shortId.generate();
-    }
-
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/popover.css');
-        }
     }
 
     isButton = (node) => {
@@ -57,8 +54,8 @@ class Popover extends Component {
     };
 
     handleFocusManager = () => {
-        if (this.state.isExpanded && this.popover) {
-            this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation);
+        if (this.state.isExpanded && this.popover && this.controlRef) {
+            this.focusManager = new FocusManager(this.popover, this.controlRef, this.props.useArrowKeyNavigation, this.props.firstFocusIndex);
         }
     };
 
@@ -100,8 +97,9 @@ class Popover extends Component {
         const {
             disableEdgeDetection,
             disableKeyPressHandler,
-            disableStyles,
             disableTriggerOnClick,
+            flipContainer,
+            firstFocusIndex,
             onClickOutside,
             onEscapeKey,
             disabled,
@@ -119,7 +117,7 @@ class Popover extends Component {
             ...rest
         } = this.props;
 
-        let onClickFunctions;
+        let onClickFunctions = control?.props.onClick;
         if (!disableTriggerOnClick) {
             onClickFunctions = this.triggerBody;
 
@@ -130,7 +128,7 @@ class Popover extends Component {
 
         const id = popperProps.id || this.popoverId;
 
-        let controlProps = {
+        let newControlProps = {
             onClick: onClickFunctions,
             ref: (c) => {
                 this.controlRef = findDOMNode(c);
@@ -151,10 +149,10 @@ class Popover extends Component {
         };
 
         if (!disableKeyPressHandler) {
-            controlProps = {
-                ...controlProps,
+            newControlProps = {
+                ...newControlProps,
                 tabIndex: 0,
-                role: 'button',
+                role: !!control?.props.role ? control?.props.role : 'button',
                 'aria-controls': id,
                 'aria-expanded': this.state.isExpanded,
                 'aria-haspopup': !!type ? type : true,
@@ -162,7 +160,11 @@ class Popover extends Component {
             };
         }
 
-        const referenceComponent = React.cloneElement(control, controlProps);
+        const referenceClassName = classnames('fd-popover__control', {
+            'is-expanded': this.state.isExpanded
+        });
+
+        const referenceComponent = React.cloneElement(control, newControlProps);
 
         const popoverClasses = classnames('fd-popover', className);
 
@@ -171,15 +173,15 @@ class Popover extends Component {
                 <Popper
                     cssBlock='fd-popover'
                     disableEdgeDetection={disableEdgeDetection}
+                    flipContainer={flipContainer}
                     innerRef={innerRef}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
-                    placementTargetRef={this.controlRef}
                     popperClassName={popperClassName}
                     popperPlacement={placement}
                     popperProps={{ ...popperProps, id }}
-                    referenceClassName='fd-popover__control'
+                    referenceClassName={referenceClassName}
                     referenceComponent={referenceComponent}
                     show={!disabled && (typeof show === 'boolean' ? show : this.state.isExpanded)}
                     usePortal
@@ -207,14 +209,19 @@ Popover.propTypes = {
     /** Set to **true** to remove onKeyPress handler and aria-* roles.
      * Only do so if the control is a complex component such as a FormInput with Button */
     disableKeyPressHandler: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to remove default triggerBody handler used in onClick.
      * Useful for when a custom method is desired to open the Popover */
     disableTriggerOnClick: PropTypes.bool,
+    /** Index of the focusable item to focus first within the Popover */
+    firstFocusIndex: PropTypes.number,
+    /** The bounding container to use when determining if the popover is out of bounds */
+    flipContainer: CustomPropTypes.elementOrArrayOfElements(),
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
-    /** 'bottom-start',
+    /** The options are 'auto',
+    'auto-start',
+    'auto-end',
+    'bottom-start',
     'bottom',
     'bottom-end',
     'left-start',
@@ -225,8 +232,13 @@ Popover.propTypes = {
     'right-end',
     'top-start',
     'top',
-    'top-end' */
-    placement: PropTypes.oneOf(POPPER_PLACEMENTS),
+    'top-end'
+    You can also pass an array of these to specify which placements to fallback to
+    */
+    placement: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.oneOf(POPPER_PLACEMENTS)),
+        PropTypes.oneOf(POPPER_PLACEMENTS)
+    ]),
     /** Additional classeNames to be spread to the overlay element */
     popperClassName: PropTypes.string,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
@@ -237,11 +249,11 @@ Popover.propTypes = {
      * This value is attached to aria-haspopup and is useful to assistive tech. Defaulted to boolean true*/
     type: PropTypes.oneOf(POPOVER_TYPES),
     useArrowKeyNavigation: PropTypes.bool,
-    /** `<ul>
-<li>"matchTarget" - left and right edges align with the target</li>
-<li>"minTarget" - right edge aligns with target unless Popover content is bigger</li>
-<li>"maxTarget" - right edge aligns with target unless Popover content is smaller</li>
-</ul>`'none', 'matchTarget', 'minTarget', 'maxTarget' */
+    /** 'none', 'matchTarget', 'minTarget', 'maxTarget'
+     * - "matchTarget" - left and right edges align with the target
+     * - "minTarget" - right edge aligns with target unless Popover content is bigger
+     * - "maxTarget" - right edge aligns with target unless Popover content is smaller
+     */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     /** Callback for consumer clicking outside of popover body */
     onClickOutside: PropTypes.func,

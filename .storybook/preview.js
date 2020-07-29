@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/display-name */
 import fundamentals from './custom/fundamentals';
 import React from 'react';
-// import { withA11y } from '@storybook/addon-a11y';
 import { withCssResources } from '@storybook/addon-cssresources';
 import { withI18n } from 'storybook-addon-i18n';
+import { withKnobs } from '@storybook/addon-knobs';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import DocsPage from './custom/components/DocsPage';
 import { addDecorator, addParameters } from '@storybook/react';
@@ -43,7 +41,8 @@ addParameters({
     ],
     docs: {
         container: DocsContainer,
-        page: DocsPage
+        page: DocsPage,
+        theme: fundamentals,
     },
     i18n: {
         provider: ({ children }) => <>{children}</>,
@@ -52,7 +51,7 @@ addParameters({
         getDirection: locale => locale.toLowerCase()
     }
 });
-// TO DO: storybook@6 enable - there is an issue with visual regression tests
-// addDecorator(withA11y);
+
 addDecorator(withI18n);
 addDecorator(withCssResources);
+addDecorator(withKnobs);

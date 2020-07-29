@@ -2,6 +2,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
 import React, { Component } from 'react';
+import 'fundamental-styles/dist/time.css';
 
 /** A **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
 to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
@@ -39,12 +40,6 @@ class Time extends Component {
         };
     }
 
-    componentDidMount() {
-        if (!this.props.disableStyles) {
-            require('fundamental-styles/dist/time.css');
-        }
-    }
-
     componentWillReceiveProps(nextProps) {
         // check if props are different than the current state to prevent an unneeded render
         if (nextProps.time !== this.state.time) {
@@ -77,7 +72,6 @@ class Time extends Component {
 
     render() {
         const {
-            disableStyles,
             localizedText,
             showHour,
             showMinute,
@@ -121,7 +115,6 @@ class Time extends Component {
                         <TimeItem
                             active={active}
                             defaultValue={1}
-                            disableStyles={disableStyles}
                             disabled={disabled}
                             downButtonProps={hoursDownButtonProps}
                             format12Hours={format12Hours}
@@ -144,7 +137,6 @@ class Time extends Component {
                         <TimeItem
                             active={active}
                             defaultValue={1}
-                            disableStyles={disableStyles}
                             disabled={disabled}
                             downButtonProps={minutesDownButtonProps}
                             format12Hours={format12Hours}
@@ -167,7 +159,6 @@ class Time extends Component {
                         <TimeItem
                             active={active}
                             defaultValue={1}
-                            disableStyles={disableStyles}
                             disabled={disabled}
                             downButtonProps={secondsDownButtonProps}
                             format12Hours={format12Hours}
@@ -189,7 +180,6 @@ class Time extends Component {
                         <label className='fd-time__slider-label'>{localizedText.meridiemLabel}</label>
                         <TimeItem
                             active={active}
-                            disableStyles={disableStyles}
                             disabled={disabled}
                             downButtonProps={meridiemDownButtonProps}
                             inputProps={meridiemInputProps}
@@ -216,8 +206,6 @@ Time.displayName = 'Time';
 Time.propTypes = {
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
-    /** Internal use only */
-    disableStyles: PropTypes.bool,
     /** Set to **true** to use the 12-hour clock (hours ranging from 01 to 12) and to display a meridiem control */
     format12Hours: PropTypes.bool,
     /** Additional props to be spread to the hours down `<button>` element */

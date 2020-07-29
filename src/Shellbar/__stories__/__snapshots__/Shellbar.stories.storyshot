@@ -44,23 +44,23 @@ exports[`Storyshots Component API/Shellbar Basic 1`] = `
               <div
                 className="fd-popover__control"
               >
-                <div
+                <button
                   aria-controls="fd-shellbar-profile-popover"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-user-menu__control"
+                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
                     role=""
                   >
                     JS
                   </span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -90,37 +90,33 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
         />
       </span>
       <div
-        className="fd-product-menu"
+        className="fd-popover"
       >
         <div
-          className="fd-popover"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover__control"
           >
-            <div
-              className="fd-popover__control"
+            <button
+              aria-controls="fd-shellbar-product-popover"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+              type="button"
             >
-              <button
-                aria-controls="fd-shellbar-product-popover"
-                aria-expanded={false}
-                aria-haspopup={true}
-                className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
+              <span
+                className="fd-shellbar__title"
               >
-                <span
-                  className="fd-shellbar__title"
-                >
-                  Corporate Portal
-                </span>
-              </button>
-            </div>
+                Corporate Portal
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -161,27 +157,43 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-shellbar__input-group fd-input-group"
-                  onClick={[Function]}
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
                 >
-                  <input
-                    className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Search"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-shellbar__input-group fd-input-group"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -321,23 +333,23 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               <div
                 className="fd-popover__control"
               >
-                <div
+                <button
                   aria-controls="fd-shellbar-profile-popover"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-user-menu__control"
+                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
                     role=""
                   >
                     JS
                   </span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -364,6 +376,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   aria-controls="fd-shellbar-product-switch-popover"
                   aria-expanded={false}
                   aria-haspopup={true}
+                  aria-label="Product Switch"
                   className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -431,23 +444,23 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
               <div
                 className="fd-popover__control"
               >
-                <div
+                <button
                   aria-controls="fd-shellbar-profile-popover"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-user-menu__control"
+                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-has-background-color-accent-8"
+                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
                     role=""
                   >
                     JS
                   </span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -477,37 +490,33 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
         />
       </span>
       <div
-        className="fd-product-menu"
+        className="fd-popover"
       >
         <div
-          className="fd-popover"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover__control"
           >
-            <div
-              className="fd-popover__control"
+            <button
+              aria-controls="fd-shellbar-product-popover"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
+              type="button"
             >
-              <button
-                aria-controls="fd-shellbar-product-popover"
-                aria-expanded={false}
-                aria-haspopup={true}
-                className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
+              <span
+                className="fd-shellbar__title"
               >
-                <span
-                  className="fd-shellbar__title"
-                >
-                  Corporate Portal
-                </span>
-              </button>
-            </div>
+                Corporate Portal
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -538,27 +547,43 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 className="fd-popover__control"
               >
                 <div
-                  className="fd-shellbar__input-group fd-input-group"
-                  onClick={[Function]}
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
                 >
-                  <input
-                    className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Search"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        className="fd-shellbar__input-group fd-input-group"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                        >
+                          <button
+                            className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -640,18 +665,18 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               <div
                 className="fd-popover__control"
               >
-                <div
+                <button
                   aria-controls="fd-shellbar-profile-popover"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-user-menu__control"
+                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                 >
                   <span
-                    className="fd-identifier fd-identifier--xs fd-identifier--circle fd-identifier--thumbnail"
+                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
                     role="presentation"
                     style={
                       Object {
@@ -659,7 +684,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                       }
                     }
                   />
-                </div>
+                </button>
               </div>
             </div>
           </div>
