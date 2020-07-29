@@ -120,7 +120,6 @@ Button.propTypes = {
     allowFocusOnDisable: PropTypes.bool,
     /** Automatically set when disabled prop is passed into button */
     'aria-disabled': PropTypes.bool,
-    ariaDisabled: PropTypes.bool,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
