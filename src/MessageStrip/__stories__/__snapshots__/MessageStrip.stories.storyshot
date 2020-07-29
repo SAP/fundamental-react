@@ -36,6 +36,7 @@ exports[`Storyshots Component API/MessageStrip Dismissible 1`] = `
         onClick={[Function]}
         type="button"
       />
+      
       <p
         className="fd-message-strip__text"
       >

@@ -34,6 +34,7 @@ exports[`Storyshots Component API/ComboboxInput Compact 1`] = `
               className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
               type="button"
             />
+            
           </span>
         </div>
       </div>
@@ -78,6 +79,7 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
               className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
               type="button"
             />
+            
           </span>
         </div>
       </div>
@@ -122,6 +124,7 @@ exports[`Storyshots Component API/ComboboxInput Disabled 1`] = `
               className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
               type="button"
             />
+            
           </span>
         </div>
       </div>
@@ -164,6 +167,7 @@ exports[`Storyshots Component API/ComboboxInput Primary 1`] = `
               className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
               type="button"
             />
+            
           </span>
         </div>
       </div>
@@ -222,6 +226,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>
@@ -273,6 +278,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>
@@ -324,6 +330,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>
@@ -375,6 +382,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                       className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>

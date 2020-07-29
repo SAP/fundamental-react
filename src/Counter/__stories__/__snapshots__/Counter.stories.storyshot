@@ -73,6 +73,7 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         5
       </span>
     </button>
+    
     <button
       className="fd-button fd-button--transparent sap-icon--bell"
       type="button"
@@ -84,6 +85,7 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         25
       </span>
     </button>
+    
     <button
       className="fd-button fd-button--transparent sap-icon--bell"
       type="button"
@@ -95,6 +97,7 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         101
       </span>
     </button>
+    
     <button
       className="fd-button fd-button--transparent sap-icon--bell"
       type="button"
@@ -106,6 +109,7 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         999+
       </span>
     </button>
+    
   </div>
 </div>
 `;

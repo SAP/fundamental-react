@@ -11,6 +11,7 @@ exports[`Storyshots Component API/Dialog Header 1`] = `
   >
     Show Dialog
   </button>
+  
 </div>
 `;
 
@@ -25,6 +26,7 @@ exports[`Storyshots Component API/Dialog Primary 1`] = `
   >
     Show Dialog
   </button>
+  
 </div>
 `;
 
@@ -42,6 +44,7 @@ exports[`Storyshots Component API/Dialog Sizes 1`] = `
     >
       Show Small Dialog
     </button>
+    
     <button
       className="fd-button"
       onClick={[Function]}
@@ -49,6 +52,7 @@ exports[`Storyshots Component API/Dialog Sizes 1`] = `
     >
       Show Medium Dialog
     </button>
+    
     <button
       className="fd-button"
       onClick={[Function]}
@@ -56,6 +60,7 @@ exports[`Storyshots Component API/Dialog Sizes 1`] = `
     >
       Show Large Dialog
     </button>
+    
     <button
       className="fd-button"
       onClick={[Function]}
@@ -63,6 +68,7 @@ exports[`Storyshots Component API/Dialog Sizes 1`] = `
     >
       Show XL Dialog
     </button>
+    
   </div>
 </div>
 `;
@@ -78,5 +84,6 @@ exports[`Storyshots Component API/Dialog Subheader 1`] = `
   >
     Show Dialog
   </button>
+  
 </div>
 `;

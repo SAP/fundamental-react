@@ -50,6 +50,7 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
                       onClick={[Function]}
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>
@@ -112,6 +113,7 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
                       onClick={[Function]}
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>
@@ -176,6 +178,7 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
                       onClick={[Function]}
                       type="button"
                     />
+                    
                   </span>
                 </div>
               </div>
@@ -251,6 +254,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             onClick={[Function]}
                             type="button"
                           />
+                          
                         </span>
                       </div>
                     </div>
@@ -322,6 +326,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             onClick={[Function]}
                             type="button"
                           />
+                          
                         </span>
                       </div>
                     </div>
@@ -393,6 +398,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             onClick={[Function]}
                             type="button"
                           />
+                          
                         </span>
                       </div>
                     </div>
@@ -464,6 +470,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             onClick={[Function]}
                             type="button"
                           />
+                          
                         </span>
                       </div>
                     </div>

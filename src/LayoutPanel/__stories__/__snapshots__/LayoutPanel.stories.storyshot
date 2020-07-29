@@ -88,6 +88,7 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
         >
           Add New Button
         </button>
+        
       </div>
     </div>
     <div
@@ -121,6 +122,7 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
             >
               Color
             </button>
+            
           </div>
         </div>
       </div>
@@ -148,6 +150,7 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
             >
               Size
             </button>
+            
           </div>
         </div>
       </div>

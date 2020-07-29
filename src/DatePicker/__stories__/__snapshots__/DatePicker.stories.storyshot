@@ -44,6 +44,7 @@ exports[`Storyshots Component API/DatePicker Compact 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -108,6 +109,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -163,6 +165,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -218,6 +221,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -273,6 +277,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -328,6 +333,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -383,6 +389,7 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -438,6 +445,7 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -494,6 +502,7 @@ exports[`Storyshots Component API/DatePicker Disabled 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -547,6 +556,7 @@ exports[`Storyshots Component API/DatePicker Enabled Range Selection 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -603,6 +613,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
                   onClick={[Function]}
                   type="button"
                 />
+                
               </span>
             </div>
           </div>
@@ -649,6 +660,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
                   onClick={[Function]}
                   type="button"
                 />
+                
               </span>
             </div>
           </div>
@@ -714,6 +726,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] =
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -769,6 +782,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] =
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -835,6 +849,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -890,6 +905,7 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>
@@ -945,6 +961,7 @@ exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -998,6 +1015,7 @@ exports[`Storyshots Component API/DatePicker Primary 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -1053,6 +1071,7 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -1106,6 +1125,7 @@ exports[`Storyshots Component API/DatePicker Special Days 1`] = `
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -1175,6 +1195,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                         onClick={[Function]}
                         type="button"
                       />
+                      
                     </span>
                   </div>
                 </div>
@@ -1237,6 +1258,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                         onClick={[Function]}
                         type="button"
                       />
+                      
                     </span>
                   </div>
                 </div>
@@ -1299,6 +1321,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                         onClick={[Function]}
                         type="button"
                       />
+                      
                     </span>
                   </div>
                 </div>
@@ -1361,6 +1384,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                         onClick={[Function]}
                         type="button"
                       />
+                      
                     </span>
                   </div>
                 </div>
@@ -1418,6 +1442,7 @@ exports[`Storyshots Component API/DatePicker Weekday Start (Monday Start) 1`] = 
                 onClick={[Function]}
                 type="button"
               />
+              
             </span>
           </div>
         </div>
@@ -1487,6 +1512,7 @@ exports[`Storyshots Component API/DatePicker With Custom Flip Container 1`] = `
                     onClick={[Function]}
                     type="button"
                   />
+                  
                 </span>
               </div>
             </div>

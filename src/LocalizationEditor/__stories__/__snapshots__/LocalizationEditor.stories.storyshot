@@ -41,6 +41,7 @@ exports[`Storyshots Component API/LocalizationEditor Compact 1`] = `
               >
                 EN*
               </button>
+              
             </span>
           </div>
         </div>
@@ -91,6 +92,7 @@ exports[`Storyshots Component API/LocalizationEditor Primary 1`] = `
               >
                 EN*
               </button>
+              
             </span>
           </div>
         </div>
@@ -140,6 +142,7 @@ exports[`Storyshots Component API/LocalizationEditor Text Area 1`] = `
               >
                 EN*
               </button>
+              
             </span>
           </div>
         </div>

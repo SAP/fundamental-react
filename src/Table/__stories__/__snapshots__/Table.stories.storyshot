@@ -246,6 +246,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   tabIndex={0}
                   type="button"
                 />
+                
               </div>
             </div>
           </div>
@@ -338,6 +339,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   tabIndex={0}
                   type="button"
                 />
+                
               </div>
             </div>
           </div>
@@ -430,6 +432,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   tabIndex={0}
                   type="button"
                 />
+                
               </div>
             </div>
           </div>
@@ -522,6 +525,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   tabIndex={0}
                   type="button"
                 />
+                
               </div>
             </div>
           </div>

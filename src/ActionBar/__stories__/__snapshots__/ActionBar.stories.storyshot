@@ -18,6 +18,7 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
           onClick={[Function]}
           type="button"
         />
+        
       </div>
       <h2
         className="fd-action-bar__title"
@@ -33,12 +34,14 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
         >
           Button
         </button>
+        
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
           Button
         </button>
+        
       </div>
     </div>
     <p
@@ -94,12 +97,14 @@ exports[`Storyshots Component API/ActionBar No Back Button 1`] = `
         >
           Button
         </button>
+        
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
           Button
         </button>
+        
       </div>
     </div>
     <p
@@ -135,12 +140,14 @@ exports[`Storyshots Component API/ActionBar No Description 1`] = `
         >
           Button
         </button>
+        
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
           Button
         </button>
+        
       </div>
     </div>
   </div>
@@ -165,6 +172,7 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
           onClick={[Function]}
           type="button"
         />
+        
       </div>
       <h3
         className="fd-action-bar__title"
@@ -180,12 +188,14 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
         >
           Button
         </button>
+        
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
           Button
         </button>
+        
       </div>
     </div>
     <p
@@ -237,6 +247,7 @@ exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
                 tabIndex={0}
                 type="button"
               />
+              
             </div>
           </div>
         </div>
