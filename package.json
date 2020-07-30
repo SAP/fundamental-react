@@ -51,7 +51,7 @@
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
     "detect-browser": "^5.1.0",
-    "fundamental-styles": "0.11.3-rc.6",
+    "fundamental-styles": "0.11.3-rc.7",
     "keycode": "^2.2.0",
     "moment": "^2.26.0",
     "prop-types": "^15.7.1",
