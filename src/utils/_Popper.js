@@ -136,7 +136,7 @@ class Popper extends React.Component {
                 e.preventDefault();
                 e.stopPropagation();
 
-                this.props.onEscapeKey(e);
+                this.props.onEscapeKey();
             }
         }
     }
