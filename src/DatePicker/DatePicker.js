@@ -364,6 +364,7 @@ class DatePicker extends Component {
             todayAction,
             validationState,
             weekdayStart,
+            modalManager,
             ...props
         } = this.props;
 
@@ -476,6 +477,7 @@ class DatePicker extends Component {
                     disableKeyPressHandler
                     disableTriggerOnClick
                     disabled={disableButton}
+                    modalManager={modalManager}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
