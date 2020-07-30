@@ -93,10 +93,9 @@ describe('<SearchInput />', () => {
 
             expect(wrapper.find(SearchInput).prop('subStringSearch')).toBe(true);
 
-            wrapper
-                .find(searchInput)
-                .simulate('change', { target: { value: 'supp' } });
+            wrapper.find(searchInput).simulate('click');
 
+            wrapper.find(searchInput).simulate('change', { target: { value: 'sup' } });
             let rows = wrapper.find('li');
 
             expect(rows).toHaveLength(1);
