@@ -99,9 +99,9 @@ const validateStateTransitionMessage = (props, propName) => {
     if (props.allowFocusOnDisable && (props.disabled !== null || props['aria-disabled']) && !props[propName]) {
         return new Error(`
         Missing or invalid value for ${propName}.
-        If this button can recieve focus when disabled (i.e. allowFocusOnDisable prop is true),
+        If this button can receive focus when disabled (i.e. allowFocusOnDisable prop is true),
         you need to provide localized string values for the enabled and disabled states.
-        These strings are used to annouce the state change by assitive techonolgies.
+        These strings are used to announce the state change by assistive technologies.
         Hence, these should be specified for a better, accessible experience.
         For e.g. 
         <Button
