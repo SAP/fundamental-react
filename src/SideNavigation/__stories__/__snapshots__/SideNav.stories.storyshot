@@ -641,7 +641,6 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               onClick={[Function]}
               type="button"
             />
-            
           </div>
           <ul
             aria-expanded={false}
@@ -768,7 +767,6 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               onClick={[Function]}
               type="button"
             />
-            
           </div>
           <ul
             aria-expanded={false}

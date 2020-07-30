@@ -33,7 +33,6 @@ exports[`Storyshots Component API/Popover Dev 1`] = `
             tabIndex={0}
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -67,7 +66,6 @@ exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
           tabIndex={0}
           type="button"
         />
-        
       </div>
     </div>
   </div>
@@ -93,7 +91,6 @@ exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
           tabIndex={0}
           type="button"
         />
-        
       </div>
     </div>
   </div>
@@ -229,7 +226,6 @@ exports[`Storyshots Component API/Popover Out Of Boundaries 1`] = `
   >
     Show Dialog
   </button>
-  
 </div>
 `;
 
@@ -306,7 +302,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Top-Start
                 </button>
-                
               </div>
             </div>
           </div>
@@ -336,7 +331,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Top
                 </button>
-                
               </div>
             </div>
           </div>
@@ -366,7 +360,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Top-End
                 </button>
-                
               </div>
             </div>
           </div>
@@ -402,7 +395,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Left-Start
                 </button>
-                
               </div>
             </div>
           </div>
@@ -435,7 +427,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Right-Top
                 </button>
-                
               </div>
             </div>
           </div>
@@ -470,7 +461,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Left
                 </button>
-                
               </div>
             </div>
           </div>
@@ -503,7 +493,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Right
                 </button>
-                
               </div>
             </div>
           </div>
@@ -538,7 +527,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Left-End
                 </button>
-                
               </div>
             </div>
           </div>
@@ -571,7 +559,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Right-End
                 </button>
-                
               </div>
             </div>
           </div>
@@ -607,7 +594,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Bottom-Start
                 </button>
-                
               </div>
             </div>
           </div>
@@ -637,7 +623,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Bottom
                 </button>
-                
               </div>
             </div>
           </div>
@@ -667,7 +652,6 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                 >
                   Bottom-End
                 </button>
-                
               </div>
             </div>
           </div>
@@ -737,7 +721,6 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
             '
           </strong>
         </button>
-        
       </div>
     </div>
   </div>
@@ -770,7 +753,6 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
             '
           </strong>
         </button>
-        
       </div>
     </div>
   </div>
@@ -803,7 +785,6 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
             '
           </strong>
         </button>
-        
       </div>
     </div>
   </div>
@@ -836,7 +817,6 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
             '
           </strong>
         </button>
-        
       </div>
     </div>
   </div>
@@ -894,7 +874,6 @@ exports[`Storyshots Component API/Popover With Custom Flip Container 1`] = `
               tabIndex={0}
               type="button"
             />
-            
           </div>
         </div>
       </div>

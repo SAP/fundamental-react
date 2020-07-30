@@ -43,7 +43,6 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
                 disabled={true}
                 type="button"
               />
-              
             </span>
           </div>
         </div>
@@ -94,7 +93,6 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                 type="button"
               />
-              
             </span>
           </div>
         </div>
@@ -145,7 +143,6 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                 type="button"
               />
-              
             </span>
           </div>
         </div>
@@ -196,7 +193,6 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                 type="button"
               />
-              
             </span>
           </div>
         </div>
@@ -247,7 +243,6 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
                 type="button"
               />
-              
             </span>
           </div>
         </div>

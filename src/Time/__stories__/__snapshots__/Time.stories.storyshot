@@ -24,7 +24,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -112,7 +111,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -129,7 +127,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -146,7 +143,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -163,7 +159,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -180,7 +175,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -211,7 +205,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -300,7 +293,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -318,7 +310,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -336,7 +327,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -354,7 +344,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -372,7 +361,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -403,7 +391,6 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -491,7 +478,6 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -508,7 +494,6 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -525,7 +510,6 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -555,7 +539,6 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -643,7 +626,6 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
     <div
@@ -661,7 +643,6 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -678,7 +659,6 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -708,7 +688,6 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -796,7 +775,6 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -813,7 +791,6 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -830,7 +807,6 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
     
@@ -862,7 +838,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -950,7 +925,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -967,7 +941,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -984,7 +957,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1001,7 +973,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1018,7 +989,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -1048,7 +1018,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1136,7 +1105,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1153,7 +1121,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1170,7 +1137,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1187,7 +1153,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1204,7 +1169,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -1234,7 +1198,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1322,7 +1285,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1339,7 +1301,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1356,7 +1317,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1373,7 +1333,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1390,7 +1349,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1406,7 +1364,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--meridian"
       >
@@ -1423,7 +1380,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
   </div>
 </div>
@@ -1453,7 +1409,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1541,7 +1496,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1558,7 +1512,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1575,7 +1528,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1592,7 +1544,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1609,7 +1560,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     
   </div>
@@ -1639,7 +1589,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1727,7 +1676,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1744,7 +1692,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1761,7 +1708,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1778,7 +1724,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper"
       >
@@ -1795,7 +1740,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
     <div
       className="fd-time__col"
@@ -1811,7 +1755,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <div
         className="fd-time__wrapper fd-time__wrapper--meridian"
       >
@@ -1828,7 +1771,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
     </div>
   </div>
 </div>

@@ -28,7 +28,6 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -42,7 +41,6 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -78,7 +76,6 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             disabled={false}
@@ -94,7 +91,6 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -131,7 +127,6 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             disabled={true}
@@ -147,7 +142,6 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -183,7 +177,6 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -197,7 +190,6 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -233,7 +225,6 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -247,7 +238,6 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -283,7 +273,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -298,7 +287,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -327,7 +315,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -342,7 +329,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -371,7 +357,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -386,7 +371,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>
@@ -415,7 +399,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -430,7 +413,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             tabIndex="-1"
             type="button"
           />
-          
         </div>
       </div>
     </div>

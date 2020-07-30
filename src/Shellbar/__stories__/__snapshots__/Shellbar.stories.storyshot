@@ -117,7 +117,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 Corporate Portal
               </span>
             </button>
-            
           </div>
         </div>
       </div>
@@ -191,7 +190,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                             onClick={[Function]}
                             type="button"
                           />
-                          
                         </span>
                       </div>
                     </div>
@@ -235,7 +233,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   5
                 </span>
               </button>
-              
             </div>
           </div>
         </div>
@@ -273,7 +270,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   2
                 </span>
               </button>
-              
             </div>
           </div>
         </div>
@@ -315,7 +311,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                      
                   </span>
                 </button>
-                
               </div>
             </div>
           </div>
@@ -389,7 +384,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   tabIndex={0}
                   type="button"
                 />
-                
               </div>
             </div>
           </div>
@@ -416,7 +410,6 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
         onClick={[Function]}
         type="button"
       />
-      
       <span
         className="fd-shellbar__logo"
       >
@@ -524,7 +517,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 Corporate Portal
               </span>
             </button>
-            
           </div>
         </div>
       </div>
@@ -588,7 +580,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                             onClick={[Function]}
                             type="button"
                           />
-                          
                         </span>
                       </div>
                     </div>
@@ -614,7 +605,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
             2
           </span>
         </button>
-        
       </div>
       <div
         className="fd-shellbar__action fd-shellbar__action--mobile"
@@ -653,7 +643,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                      
                   </span>
                 </button>
-                
               </div>
             </div>
           </div>

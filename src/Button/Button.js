@@ -63,7 +63,7 @@ const Button = React.forwardRef(({
     const liveMessageForScreenReaders = disabledInAnyWay ? disabledMessage : enabledMessage;
 
     const renderButtonStateMessage = () => {
-        let content = '';
+        let content = null;
         if (allowFocusOnDisable && disabledInAnyWay !== null) {
             content = (
                 <p

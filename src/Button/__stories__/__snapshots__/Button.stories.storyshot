@@ -10,7 +10,6 @@ exports[`Storyshots Component API/Button/Button Dev 1`] = `
   >
     Dev
   </button>
-  
 </div>
 `;
 
@@ -27,49 +26,42 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
     >
       Add to Cart
     </button>
-    
     <button
       className="fd-button sap-icon--cart"
       type="button"
     >
       Add to Cart
     </button>
-    
     <button
       className="fd-button fd-button--transparent sap-icon--filter"
       type="button"
     >
       Filter
     </button>
-    
     <button
       className="fd-button fd-button--positive sap-icon--accept"
       type="button"
     >
       Approve
     </button>
-    
     <button
       className="fd-button fd-button--negative sap-icon--decline"
       type="button"
     >
       Reject
     </button>
-    
     <button
       className="fd-button fd-button--ghost sap-icon--edit"
       type="button"
     >
       Edit
     </button>
-    
     <button
       className="fd-button fd-button--attention sap-icon--warning"
       type="button"
     >
       Ignore
     </button>
-    
     <div
       className="fddocs-container--break"
     />
@@ -77,43 +69,36 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       className="fd-button fd-button--emphasized sap-icon--alert"
       type="button"
     />
-    
     <button
       aria-label="Add to cart"
       className="fd-button sap-icon--cart"
       type="button"
     />
-    
     <button
       aria-label="Filter"
       className="fd-button fd-button--transparent sap-icon--cart"
       type="button"
     />
-    
     <button
       aria-label="Accept"
       className="fd-button fd-button--positive sap-icon--accept"
       type="button"
     />
-    
     <button
       aria-label="Decline"
       className="fd-button fd-button--negative sap-icon--decline"
       type="button"
     />
-    
     <button
       aria-label="Edit"
       className="fd-button fd-button--ghost sap-icon--edit"
       type="button"
     />
-    
     <button
       aria-label="Ignore"
       className="fd-button fd-button--attention sap-icon--warning"
       type="button"
     />
-    
   </div>
 </div>
 `;
@@ -131,21 +116,18 @@ exports[`Storyshots Component API/Button/Button Options 1`] = `
     >
       Emphasized Button
     </button>
-    
     <button
       className="fd-button"
       type="button"
     >
       Default Button
     </button>
-    
     <button
       className="fd-button fd-button--transparent"
       type="button"
     >
       Transparent Button
     </button>
-    
   </div>
 </div>
 `;
@@ -160,7 +142,6 @@ exports[`Storyshots Component API/Button/Button Primary 1`] = `
   >
     Button
   </button>
-  
 </div>
 `;
 
@@ -177,14 +158,12 @@ exports[`Storyshots Component API/Button/Button Sizes 1`] = `
     >
       Default
     </button>
-    
     <button
       className="fd-button fd-button--compact"
       type="button"
     >
       Compact
     </button>
-    
   </div>
 </div>
 `;
@@ -202,7 +181,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Default
     </button>
-    
     <button
       className="fd-button is-selected"
       selected={true}
@@ -210,7 +188,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Selected
     </button>
-    
     <button
       className="fd-button is-disabled"
       disabled={true}
@@ -218,7 +195,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Disabled
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -244,7 +220,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Emphasized
     </button>
-    
     <button
       className="fd-button fd-button--emphasized is-selected"
       selected={true}
@@ -252,7 +227,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Emphasized
     </button>
-    
     <button
       className="fd-button fd-button--emphasized is-disabled"
       disabled={true}
@@ -260,7 +234,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Emphasized
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -286,7 +259,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Transparent
     </button>
-    
     <button
       className="fd-button fd-button--transparent is-selected"
       selected={true}
@@ -294,7 +266,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Transparent
     </button>
-    
     <button
       className="fd-button fd-button--transparent is-disabled"
       disabled={true}
@@ -302,7 +273,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Transparent
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -328,7 +298,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Positive Button
     </button>
-    
     <button
       className="fd-button fd-button--positive is-selected"
       selected={true}
@@ -336,7 +305,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Positive Button
     </button>
-    
     <button
       className="fd-button fd-button--positive is-disabled"
       disabled={true}
@@ -344,7 +312,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Positive Button
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -370,7 +337,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Negative Button
     </button>
-    
     <button
       className="fd-button fd-button--negative is-selected"
       selected={true}
@@ -378,7 +344,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Negative Button
     </button>
-    
     <button
       className="fd-button fd-button--negative is-disabled"
       disabled={true}
@@ -386,7 +351,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Negative Button
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -412,7 +376,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Ghost Button
     </button>
-    
     <button
       className="fd-button fd-button--ghost is-selected"
       selected={true}
@@ -420,7 +383,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Ghost Button
     </button>
-    
     <button
       className="fd-button fd-button--ghost is-disabled"
       disabled={true}
@@ -428,7 +390,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Ghost Button
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -454,7 +415,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Attention Button
     </button>
-    
     <button
       className="fd-button fd-button--attention is-selected"
       selected={true}
@@ -462,7 +422,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Attention Button
     </button>
-    
     <button
       className="fd-button fd-button--attention is-disabled"
       disabled={true}
@@ -470,7 +429,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Attention Button
     </button>
-    
     <button
       aria-describedby="fd-mocked-short-id"
       aria-disabled={true}
@@ -504,42 +462,36 @@ exports[`Storyshots Component API/Button/Button Types 1`] = `
     >
       Default Button
     </button>
-    
     <button
       className="fd-button fd-button--standard"
       type="button"
     >
       Standard Button
     </button>
-    
     <button
       className="fd-button fd-button--positive"
       type="button"
     >
       Positive Button
     </button>
-    
     <button
       className="fd-button fd-button--negative"
       type="button"
     >
       Negative Button
     </button>
-    
     <button
       className="fd-button fd-button--ghost"
       type="button"
     >
       Ghost Button
     </button>
-    
     <button
       className="fd-button fd-button--attention"
       type="button"
     >
       Attention Button
     </button>
-    
   </div>
 </div>
 `;
