@@ -37,6 +37,16 @@ export const disabled = () => (
         searchList={searchData} />
 );
 
+export const readOnly = () => (
+    <SearchInput
+        inputProps={{
+            value: 'apple'
+        }}
+        placeholder='Read Only'
+        readOnly
+        searchList={searchData} />
+);
+
 export const validationStates = () => (
     <>
         <SearchInput

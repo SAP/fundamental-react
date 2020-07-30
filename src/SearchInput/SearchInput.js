@@ -55,9 +55,11 @@ class SearchInput extends PureComponent {
     };
 
     handleClick = () => {
-        this.setState(prevState => ({
-            isExpanded: !prevState.isExpanded
-        }));
+        if (!this.props.readOnly) {
+            this.setState(prevState => ({
+                isExpanded: !prevState.isExpanded
+            }));
+        }
     };
 
     handleClickOutside = () => {
@@ -117,6 +119,8 @@ class SearchInput extends PureComponent {
             searchBtnProps,
             popoverProps,
             validationState,
+            disabled,
+            readOnly,
             ...rest
         } = this.props;
 
@@ -158,18 +162,23 @@ class SearchInput extends PureComponent {
                 {...inputGroupProps}
                 className={inputGroupClasses}
                 compact={compact}
+                disabled={disabled}
+                readOnly={readOnly}
                 validationState={validationState}>
                 <FormInput
                     {...inputProps}
+                    disabled={disabled}
                     onChange={this.handleChange}
                     onClick={this.handleClick}
                     onKeyPress={this.handleKeyPress}
                     placeholder={placeholder}
+                    readOnly={readOnly}
                     value={this.state.value} />
 
-                {!noSearchBtn && (
+                { !(noSearchBtn || readOnly) && (
                     <InputGroup.Addon {...inputGroupAddonProps} isButton>
                         <Button {...searchBtnProps}
+                            disabled={disabled}
                             glyph='search'
                             onClick={this.handleClick}
                             option='transparent' />
@@ -200,6 +209,7 @@ class SearchInput extends PureComponent {
                         </>)}
                     control={wrappedInputGroup}
                     disableKeyPressHandler
+                    disabled={readOnly}
                     noArrow
                     onClickOutside={this.handleClickOutside}
                     widthSizingType='minTarget' />
@@ -215,6 +225,8 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
+    disabled: PropTypes.bool,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */
@@ -230,6 +242,8 @@ SearchInput.propTypes = {
     placeholder: PropTypes.string,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Set to **true** to mark component as readonly */
+    readOnly: PropTypes.bool,
     /** Additional props to be spread to the search `<button>` element */
     searchBtnProps: PropTypes.object,
     /** Collection of items to display in the dropdown list */

@@ -128,9 +128,72 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    disabled={true}
-  >
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group is-disabled"
+                  onClick={[Function]}
+                >
+                  <input
+                    className="fd-input fd-input-group__input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    className="fd-input-group__addon fd-input-group__addon--button"
+                    disabled={true}
+                  >
+                    <button
+                      className="fd-button fd-button--transparent sap-icon--search is-disabled fd-input-group__button"
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/SearchInput Read Only 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
     <div
       className="fd-popover"
     >
@@ -158,25 +221,18 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                   onClick={[Function]}
+                  readOnly={true}
                 >
                   <input
                     className="fd-input fd-input-group__input"
                     onChange={[Function]}
                     onClick={[Function]}
                     onKeyPress={[Function]}
-                    placeholder="Placeholder"
+                    placeholder="Read Only"
+                    readOnly={true}
                     type="text"
-                    value=""
+                    value="apple"
                   />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
