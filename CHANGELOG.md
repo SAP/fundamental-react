@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.15...v0.11.1-rc.16) (2020-07-31)
+
+
+### Bug Fixes
+
+* [#1003](https://github.com/SAP/fundamental-react/issues/1003) Sub string search in search input ([#1138](https://github.com/SAP/fundamental-react/issues/1138)) ([ea0011f](https://github.com/SAP/fundamental-react/commit/ea0011fdadd266a53f65d7310e3bdff14907f41d))
+
 ### [0.11.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.14...v0.11.1-rc.15) (2020-07-31)
 
 ### [0.11.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.13...v0.11.1-rc.14) (2020-07-31)
