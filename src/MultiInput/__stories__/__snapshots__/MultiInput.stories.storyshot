@@ -4,6 +4,12 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="multiInputCompactExample"
+  >
+    Compact
+  </label>
   <div
     className="fd-popover"
   >
@@ -30,6 +36,7 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
             >
               <input
                 className="fd-input fd-input--compact fd-input-group__input fd-tokenizer__input"
+                id="multiInputCompactExample"
                 placeholder="Placeholder"
                 type="text"
               />
@@ -39,6 +46,7 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
             className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
           >
             <button
+              aria-label="Show options"
               className="fd-button fd-button--transparent fd-button--compact sap-icon--value-help fd-input-group__button"
               type="button"
             />
@@ -54,6 +62,12 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="multiInputDevExample"
+  >
+    Dev
+  </label>
   <div
     className="fd-popover"
   >
@@ -81,6 +95,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
             >
               <input
                 className="fd-input fd-input-group__input fd-tokenizer__input"
+                disabled={false}
                 placeholder="Select a Fruit"
                 type="text"
               />
@@ -91,6 +106,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
             disabled={false}
           >
             <button
+              aria-label="Show options"
               className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
               type="button"
             />
@@ -106,6 +122,12 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="multiInputDisabledExample"
+  >
+    Disabled
+  </label>
   <div
     className="fd-popover"
   >
@@ -132,6 +154,8 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
             >
               <input
                 className="fd-input fd-input-group__input fd-tokenizer__input"
+                disabled={true}
+                id="multiInputDisabledExample"
                 placeholder="Placeholder"
                 type="text"
               />
@@ -142,7 +166,9 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
             disabled={true}
           >
             <button
-              className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+              aria-label="Show options"
+              className="fd-button fd-button--transparent sap-icon--value-help is-disabled fd-input-group__button"
+              disabled={true}
               type="button"
             />
           </span>
@@ -157,6 +183,12 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="multiInputPrimaryExample"
+  >
+    Primary
+  </label>
   <div
     className="fd-popover"
   >
@@ -182,6 +214,7 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
             >
               <input
                 className="fd-input fd-input-group__input fd-tokenizer__input"
+                id="multiInputPrimaryExample"
                 placeholder="Placeholder"
                 type="text"
               />
@@ -191,6 +224,7 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
             className="fd-input-group__addon fd-input-group__addon--button"
           >
             <button
+              aria-label="Show options"
               className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
               type="button"
             />
@@ -210,56 +244,72 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-popover"
+      className="fd-form-group"
     >
+      <label
+        className="fd-form-label"
+        htmlFor="multiInputErrorExample"
+      >
+        Multi input with an error
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-form-item"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
                 <div
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-error fd-input-group is-error"
-                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
                 >
                   <div
-                    className="fd-tokenizer"
+                    className="fd-popover__control"
                   >
                     <div
-                      className="fd-tokenizer__inner"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      className="fd-input-group--control is-error fd-input-group is-error"
+                      onClick={[Function]}
                     >
-                      <input
-                        className="fd-input fd-input-group__input fd-tokenizer__input"
-                        placeholder="Error"
-                        type="text"
-                      />
+                      <div
+                        className="fd-tokenizer"
+                      >
+                        <div
+                          className="fd-tokenizer__inner"
+                        >
+                          <input
+                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            id="multiInputErrorExample"
+                            placeholder="Error"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <span
+                        className="fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Show options"
+                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          type="button"
+                        />
+                      </span>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -268,56 +318,72 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
       </div>
     </div>
     <div
-      className="fd-popover"
+      className="fd-form-group"
     >
+      <label
+        className="fd-form-label"
+        htmlFor="multiInputWarningExample"
+      >
+        Multi input with a warning
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-form-item"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
                 <div
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-warning fd-input-group is-warning"
-                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
                 >
                   <div
-                    className="fd-tokenizer"
+                    className="fd-popover__control"
                   >
                     <div
-                      className="fd-tokenizer__inner"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      className="fd-input-group--control is-warning fd-input-group is-warning"
+                      onClick={[Function]}
                     >
-                      <input
-                        className="fd-input fd-input-group__input fd-tokenizer__input"
-                        placeholder="Warning"
-                        type="text"
-                      />
+                      <div
+                        className="fd-tokenizer"
+                      >
+                        <div
+                          className="fd-tokenizer__inner"
+                        >
+                          <input
+                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            id="multiInputWarningExample"
+                            placeholder="Warning"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <span
+                        className="fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Show options"
+                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          type="button"
+                        />
+                      </span>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -326,56 +392,72 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
       </div>
     </div>
     <div
-      className="fd-popover"
+      className="fd-form-group"
     >
+      <label
+        className="fd-form-label"
+        htmlFor="multiInputSuccessExample"
+      >
+        Successful Multi input
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-form-item"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
                 <div
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-success fd-input-group is-success"
-                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
                 >
                   <div
-                    className="fd-tokenizer"
+                    className="fd-popover__control"
                   >
                     <div
-                      className="fd-tokenizer__inner"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      className="fd-input-group--control is-success fd-input-group is-success"
+                      onClick={[Function]}
                     >
-                      <input
-                        className="fd-input fd-input-group__input fd-tokenizer__input"
-                        placeholder="Success"
-                        type="text"
-                      />
+                      <div
+                        className="fd-tokenizer"
+                      >
+                        <div
+                          className="fd-tokenizer__inner"
+                        >
+                          <input
+                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            id="multiInputSuccessExample"
+                            placeholder="Success"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <span
+                        className="fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Show options"
+                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          type="button"
+                        />
+                      </span>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -384,56 +466,72 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
       </div>
     </div>
     <div
-      className="fd-popover"
+      className="fd-form-group"
     >
+      <label
+        className="fd-form-label"
+        htmlFor="multiInputInfoExample"
+      >
+        Multi input with some info
+      </label>
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-form-item"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
                 <div
-                  aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-information fd-input-group is-information"
-                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
                 >
                   <div
-                    className="fd-tokenizer"
+                    className="fd-popover__control"
                   >
                     <div
-                      className="fd-tokenizer__inner"
+                      aria-expanded={false}
+                      aria-haspopup="true"
+                      className="fd-input-group--control is-information fd-input-group is-information"
+                      onClick={[Function]}
                     >
-                      <input
-                        className="fd-input fd-input-group__input fd-tokenizer__input"
-                        placeholder="Information"
-                        type="text"
-                      />
+                      <div
+                        className="fd-tokenizer"
+                      >
+                        <div
+                          className="fd-tokenizer__inner"
+                        >
+                          <input
+                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            id="multiInputInfoExample"
+                            placeholder="Information"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <span
+                        className="fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Show options"
+                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          type="button"
+                        />
+                      </span>
                     </div>
                   </div>
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>

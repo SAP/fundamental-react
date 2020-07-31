@@ -4,12 +4,19 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="timepickerDisabledExample-input"
+  >
+    Time
+  </label>
   <div
+    id="timepickerDisabledExample"
     onChange={[Function]}
   >
     <div
       className="fd-popover"
-      id=""
+      id="timepickerDisabledExample-popover"
     >
       <div
         onFocus={[Function]}
@@ -25,6 +32,7 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
           >
             <input
               className="fd-input fd-input-group__input"
+              id="timepickerDisabledExample-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss"
@@ -39,8 +47,10 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
                 aria-controls="rthHR811"
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="Show/hide time picker"
                 className="fd-button fd-button--transparent sap-icon--time-entry-request is-disabled fd-input-group__button"
                 disabled={true}
+                id="timepickerDisabledExample-button"
                 type="button"
               />
             </span>
@@ -56,12 +66,19 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="timepicker12HrExample-input"
+  >
+    Time
+  </label>
   <div
+    id="timepicker12HrExample"
     onChange={[Function]}
   >
     <div
       className="fd-popover"
-      id=""
+      id="timepicker12HrExample-popover"
     >
       <div
         onFocus={[Function]}
@@ -77,6 +94,7 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
           >
             <input
               className="fd-input fd-input-group__input"
+              id="timepicker12HrExample-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss am/pm"
@@ -90,7 +108,9 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
                 aria-controls="rthHR811"
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="Show/hide time picker"
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                id="timepicker12HrExample-button"
                 type="button"
               />
             </span>
@@ -106,12 +126,19 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="timepickerHideSecondExample-input"
+  >
+    Time
+  </label>
   <div
+    id="timepickerHideSecondExample"
     onChange={[Function]}
   >
     <div
       className="fd-popover"
-      id=""
+      id="timepickerHideSecondExample-popover"
     >
       <div
         onFocus={[Function]}
@@ -127,6 +154,7 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
           >
             <input
               className="fd-input fd-input-group__input"
+              id="timepickerHideSecondExample-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm"
@@ -140,7 +168,9 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
                 aria-controls="rthHR811"
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="Show/hide time picker"
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                id="timepickerHideSecondExample-button"
                 type="button"
               />
             </span>
@@ -156,12 +186,19 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="timepickerInitExample-input"
+  >
+    Time
+  </label>
   <div
+    id="timepickerInitExample"
     onChange={[Function]}
   >
     <div
       className="fd-popover"
-      id=""
+      id="timepickerInitExample-popover"
     >
       <div
         onFocus={[Function]}
@@ -177,6 +214,7 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
           >
             <input
               className="fd-input fd-input-group__input"
+              id="timepickerInitExample-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss am/pm"
@@ -190,7 +228,9 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
                 aria-controls="rthHR811"
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="Show/hide time picker"
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                id="timepickerInitExample-button"
                 type="button"
               />
             </span>
@@ -206,12 +246,19 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="timepickerPrimaryExample-input"
+  >
+    Time
+  </label>
   <div
+    id="timepickerPrimaryExample"
     onChange={[Function]}
   >
     <div
       className="fd-popover"
-      id=""
+      id="timepickerPrimaryExample-popover"
     >
       <div
         onFocus={[Function]}
@@ -227,6 +274,7 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
           >
             <input
               className="fd-input fd-input-group__input"
+              id="timepickerPrimaryExample-input"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="hh:mm:ss"
@@ -240,7 +288,9 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
                 aria-controls="rthHR811"
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="Show/hide time picker"
                 className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                id="timepickerPrimaryExample-button"
                 type="button"
               />
             </span>
