@@ -5,6 +5,7 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
+import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
@@ -48,6 +49,12 @@ class MultiInput extends Component {
         ));
     };
 
+    handleTagKeyDown = (event, tag) => {
+        if (keycode(event) === 'backspace' || keycode(event) === 'delete') {
+            this.removeTag(tag);
+        }
+    };
+
     // create tag elements to display below input box
     createTags = () => {
         return this.state.tags.map((tag, index) => {
@@ -55,7 +62,8 @@ class MultiInput extends Component {
                 return (
                     <Token
                         key={index}
-                        onClick={() => this.removeTag(tag)}>
+                        onClick={() => this.removeTag(tag)}
+                        onKeyDown={(event) => this.handleTagKeyDown(event, tag)}>
                         {tag}
                     </Token>
                 );
