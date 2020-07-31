@@ -91,7 +91,7 @@ const maxTargetModifier = {
 class Popper extends React.Component {
     constructor(props) {
         super(props);
-        this.modalManager = getModalManager();
+        this.modalManager = props.modalManager ? props.modalManager : getModalManager();
     }
 
     componentDidMount() {
@@ -133,7 +133,9 @@ class Popper extends React.Component {
             this.props.onKeyDown(e);
 
             if (e.keyCode === keycode.codes.esc && this.props.onEscapeKey) {
+                e.preventDefault();
                 e.stopPropagation();
+
                 this.props.onEscapeKey();
             }
         }
@@ -256,6 +258,7 @@ Popper.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     flipContainer: CustomPropTypes.elementOrArrayOfElements(),
     innerRef: PropTypes.func,
+    modalManager: PropTypes.object,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.array,
