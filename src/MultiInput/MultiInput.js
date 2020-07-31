@@ -8,6 +8,7 @@ import InputGroup from '../InputGroup/InputGroup';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import requiredIf from 'react-required-if';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
@@ -132,6 +133,7 @@ class MultiInput extends Component {
     render() {
         const {
             popoverProps,
+            buttonLabel,
             buttonProps,
             compact,
             className,
@@ -179,6 +181,16 @@ class MultiInput extends Component {
             </List>
         );
 
+        let extendedButtonProps = buttonProps;
+
+        if (!extendedButtonProps) {
+            extendedButtonProps = {};
+        }
+
+        if (!extendedButtonProps['aria-label']) {
+            extendedButtonProps['aria-label'] = buttonLabel;
+        }
+
         const inputGroup = (
             <InputGroup
                 {...rest}
@@ -196,12 +208,14 @@ class MultiInput extends Component {
                             {...inputProps}
                             className='fd-input-group__input fd-tokenizer__input'
                             compact={compact}
+                            disabled={disabled}
                             placeholder={placeholder} />
                     </div>
                 </div>
                 <InputGroup.Addon isButton>
                     <Button
-                        {...buttonProps}
+                        {...extendedButtonProps}
+                        disabled={disabled}
                         glyph='value-help'
                         option='transparent' />
                 </InputGroup.Addon>
@@ -237,6 +251,8 @@ MultiInput.displayName = 'MultiInput';
 MultiInput.propTypes = {
     /** Collection of items to display in the list */
     data: PropTypes.array.isRequired,
+    /** Localized string label for dropdown button's aria-label. This is required if `buttonProps` doesn't have a valid `aria-label`. */
+    buttonLabel: requiredIf(PropTypes.string, props => !props?.buttonProps || !props.buttonProps['aria-label']?.trim()),
     /** Additional props to be spread to the `<button>` element */
     buttonProps: PropTypes.object,
     /** CSS class(es) to add to the element */
