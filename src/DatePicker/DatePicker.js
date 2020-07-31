@@ -517,6 +517,8 @@ DatePicker.propTypes = {
     inputProps: PropTypes.object,
     /** Language code to set the locale */
     locale: PropTypes.string,
+    /** If DatePicker is to be rendered in a modal, the parent modal manager can be passed as a prop */
+    modalManager: PropTypes.object,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
     /** Set to **true** to mark component as readonly */
