@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.12...v0.11.1-rc.13) (2020-07-31)
+
+
+### Bug Fixes
+
+* focusable disabled button ([#1134](https://github.com/SAP/fundamental-react/issues/1134)) ([d9bbbe0](https://github.com/SAP/fundamental-react/commit/d9bbbe0f39665e970a2eb34c67943101e9a4bd18))
+
 ### [0.11.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.11...v0.11.1-rc.12) (2020-07-27)
 
 
