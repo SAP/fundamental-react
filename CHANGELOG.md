@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.13...v0.11.1-rc.14) (2020-07-31)
+
+
+### Bug Fixes
+
+* allow custom modal manager for DatePicker ([#1141](https://github.com/SAP/fundamental-react/issues/1141)) ([8238c44](https://github.com/SAP/fundamental-react/commit/8238c4497885d4bab143aec61611c4abf706deb6))
+
 ### [0.11.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.12...v0.11.1-rc.13) (2020-07-31)
 
 
