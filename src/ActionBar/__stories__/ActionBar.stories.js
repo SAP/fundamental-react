@@ -19,6 +19,7 @@ export const primary = () => (
                 <Button option='emphasized'>Button</Button>
             </>
         )}
+        backButtonLabel='Back to home'
         description={'Action Bar Description'}
         onBackClick={() => {}}
         title={'Page Title'} />
@@ -41,18 +42,25 @@ more than 3-4 actions. This also works well for a responsive/adaptive applicatio
 
 export const contextualMenu = () => (
     <ActionBar
-        actions={<Popover
-            body={
-                <Menu>
-                    <Menu.List>
-                        <Menu.Item url='#'>Option 1</Menu.Item>
-                        <Menu.Item url='#'>Option 2</Menu.Item>
-                        <Menu.Item url='#'>Option 3</Menu.Item>
-                        <Menu.Item url='#'>Option 4</Menu.Item>
-                    </Menu.List>
-                </Menu>}
-            control={<Button glyph='vertical-grip' option='transparent' />}
-            placement='bottom-end' />}
+        actions={
+            <Popover
+                body={
+                    <Menu>
+                        <Menu.List>
+                            <Menu.Item url='#'>Option 1</Menu.Item>
+                            <Menu.Item url='#'>Option 2</Menu.Item>
+                            <Menu.Item url='#'>Option 3</Menu.Item>
+                            <Menu.Item url='#'>Option 4</Menu.Item>
+                        </Menu.List>
+                    </Menu>}
+                control={
+                    <Button
+                        aria-label='More actions'
+                        glyph='vertical-grip'
+                        option='transparent' />
+                }
+                placement='bottom-end' />
+        }
         description='Action Bar Description'
         title='Page Title' />
 );
@@ -64,6 +72,9 @@ export const dev = () => (
         actions={(<><Button>Button</Button>
             <Button option='emphasized'>Button</Button></>
         )}
+        buttonProps={{
+            'aria-label': 'Back to home'
+        }}
         description={text('description', 'Action Bar description')}
         headingLevel={number('headingLevel', 2, {
             range: true,
