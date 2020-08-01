@@ -10,11 +10,13 @@ exports[`Storyshots Component API/Forms/FormLabel Dev 1`] = `
     <label
       aria-required={true}
       className="fd-form-label fd-form-label--required"
+      htmlFor="devLabelExample"
     >
-      Default
+      Dev
     </label>
     <input
       className="fd-input"
+      id="devLabelExample"
       type="text"
     />
   </div>
@@ -51,11 +53,13 @@ exports[`Storyshots Component API/Forms/FormLabel Primary 1`] = `
   >
     <label
       className="fd-form-label"
+      htmlFor="primaryLabelExample"
     >
       Default Label
     </label>
     <input
       className="fd-input"
+      id="primaryLabelExample"
       type="text"
     />
   </div>
@@ -72,13 +76,45 @@ exports[`Storyshots Component API/Forms/FormLabel Required 1`] = `
     <label
       aria-required={true}
       className="fd-form-label fd-form-label--required"
+      htmlFor="requiredLabelExample"
     >
       Required Label
     </label>
     <input
       className="fd-input"
+      id="requiredLabelExample"
       type="text"
     />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Forms/FormLabel With Colon 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    style={
+      Object {
+        "maxWidth": "250px",
+      }
+    }
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label fd-form-label--colon"
+        htmlFor="withColonLabelExample"
+      >
+        Overflow proof colon, overflow proof colon, overflow proof colon
+      </label>
+      <input
+        className="fd-input"
+        id="withColonLabelExample"
+        type="text"
+      />
+    </div>
   </div>
 </div>
 `;
