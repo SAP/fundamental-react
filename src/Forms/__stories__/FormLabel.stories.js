@@ -12,16 +12,37 @@ export default {
 
 export const primary = () => (
     <FormItem>
-        <FormLabel>Default Label</FormLabel>
-        <FormInput />
+        <FormLabel htmlFor='primaryLabelExample' >Default Label</FormLabel>
+        <FormInput id='primaryLabelExample' />
     </FormItem>
 );
 
 export const required = () => (
     <FormItem>
-        <FormLabel required>Required Label</FormLabel>
-        <FormInput />
+        <FormLabel
+            htmlFor='requiredLabelExample'
+            required>
+            Required Label
+        </FormLabel >
+        <FormInput id='requiredLabelExample' />
     </FormItem>
+);
+
+/** To achieve overflow proof colon provide the `withColon` property. The `:` character will be added at the end of a label as pseudo element. */
+
+export const withColon = () => (
+    <div style={{
+        maxWidth: '250px'
+    }}>
+        <FormItem>
+            <FormLabel
+                htmlFor='withColonLabelExample'
+                withColon>
+                Overflow proof colon, overflow proof colon, overflow proof colon
+            </FormLabel>
+            <FormInput id='withColonLabelExample' />
+        </FormItem>
+    </div>
 );
 
 export const disabled = () => (
@@ -34,9 +55,12 @@ export const disabled = () => (
 export const dev = () => (
     <FormItem>
         <FormLabel
-            required={boolean('Required?', true)}>
-            Default</FormLabel>
-        <FormInput />
+            htmlFor='devLabelExample'
+            required={boolean('Required?', true)}
+            withColon={boolean('With colon?', false)} >
+            Dev
+        </FormLabel>
+        <FormInput id='devLabelExample' />
     </FormItem>
 );
 
