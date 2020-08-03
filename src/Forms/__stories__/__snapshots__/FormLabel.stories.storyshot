@@ -105,13 +105,13 @@ exports[`Storyshots Component API/Forms/FormLabel With Colon 1`] = `
     >
       <label
         className="fd-form-label fd-form-label--colon"
-        htmlFor="withColonLabelExample"
+        htmlFor="includeColonLabelExample"
       >
         Overflow proof colon, overflow proof colon, overflow proof colon
       </label>
       <input
         className="fd-input"
-        id="withColonLabelExample"
+        id="includeColonLabelExample"
         type="text"
       />
     </div>

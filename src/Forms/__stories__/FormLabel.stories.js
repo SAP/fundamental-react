@@ -28,19 +28,19 @@ export const required = () => (
     </FormItem>
 );
 
-/** To achieve overflow proof colon provide the `withColon` property. The `:` character will be added at the end of a label as pseudo element. */
+/** To achieve overflow proof colon provide the `includeColon` property. The `:` character will be added at the end of a label as pseudo element. */
 
-export const withColon = () => (
+export const includeColon = () => (
     <div style={{
         maxWidth: '250px'
     }}>
         <FormItem>
             <FormLabel
-                htmlFor='withColonLabelExample'
-                withColon>
+                htmlFor='includeColonLabelExample'
+                includeColon>
                 Overflow proof colon, overflow proof colon, overflow proof colon
             </FormLabel>
-            <FormInput id='withColonLabelExample' />
+            <FormInput id='includeColonLabelExample' />
         </FormItem>
     </div>
 );
@@ -56,8 +56,8 @@ export const dev = () => (
     <FormItem>
         <FormLabel
             htmlFor='devLabelExample'
-            required={boolean('Required?', true)}
-            withColon={boolean('With colon?', false)} >
+            includeColon={boolean('Include colon?', false)}
+            required={boolean('Required?', true)}>
             Dev
         </FormLabel>
         <FormInput id='devLabelExample' />

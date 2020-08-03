@@ -11,7 +11,7 @@ const FormLabel = React.forwardRef(({
     className,
     disabled,
     isInlineHelp,
-    withColon,
+    includeColon,
     ...props
 }, ref) => {
 
@@ -21,7 +21,7 @@ const FormLabel = React.forwardRef(({
             'is-disabled': disabled,
             'fd-form-label--inline-help': isInlineHelp,
             'fd-form-label--required': required,
-            'fd-form-label--colon': withColon
+            'fd-form-label--colon': includeColon
         },
         className
     );
@@ -46,12 +46,12 @@ FormLabel.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Set to **true** to add the `:` character at the end of a label as pseudo element.*/
+    includeColon: PropTypes.bool,
     /** Set to **true** if child is InlineHelp component */
     isInlineHelp: PropTypes.bool,
     /** Set to **true** for required input fields */
-    required: PropTypes.bool,
-    /** Set to **true** to add the `:` character at the end of a label as pseudo element.*/
-    withColon: PropTypes.bool
+    required: PropTypes.bool
 };
 
 export default FormLabel;
