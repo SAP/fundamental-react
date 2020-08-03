@@ -94,21 +94,26 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                   onClick={[Function]}
+                  readOnly={false}
                 >
                   <input
                     className="fd-input fd-input-group__input"
+                    disabled={false}
                     onChange={[Function]}
                     onClick={[Function]}
                     onKeyPress={[Function]}
                     placeholder="Select a Fruit"
+                    readOnly={false}
                     type="text"
                     value=""
                   />
                   <span
                     className="fd-input-group__addon fd-input-group__addon--button"
+                    disabled={false}
                   >
                     <button
                       className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
+                      disabled={false}
                       onClick={[Function]}
                       type="button"
                     />
