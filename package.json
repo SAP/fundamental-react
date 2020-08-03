@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.11.1-rc.16",
+  "version": "0.11.1-rc.17",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -86,7 +86,7 @@
     "@storybook/addon-viewport": "6.0.0-beta.21",
     "@storybook/components": "6.0.0-beta.21",
     "@storybook/react": "6.0.0-beta.21",
-    "@storybook/source-loader": "6.0.0-beta.21",
+    "@storybook/source-loader": "6.0.0-rc.21",
     "@storybook/theming": "6.0.0-beta.21",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.8.0",
