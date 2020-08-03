@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.18](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.17...v0.11.1-rc.18) (2020-08-03)
+
+
+### Features
+
+* combobox filtering and autocomplete ([#1125](https://github.com/SAP/fundamental-react/issues/1125)) ([d84ea0b](https://github.com/SAP/fundamental-react/commit/d84ea0bd8dd5dcb9a23b21afe9c4802b2630beaa)), closes [#1019](https://github.com/SAP/fundamental-react/issues/1019)
+
 ### [0.11.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.16...v0.11.1-rc.17) (2020-08-03)
 
 ### [0.11.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.15...v0.11.1-rc.16) (2020-07-31)
