@@ -189,16 +189,6 @@ class MultiInput extends Component {
             </List>
         );
 
-        let extendedButtonProps = buttonProps;
-
-        if (!extendedButtonProps) {
-            extendedButtonProps = {};
-        }
-
-        if (!extendedButtonProps['aria-label']) {
-            extendedButtonProps['aria-label'] = buttonLabel;
-        }
-
         const inputGroup = (
             <InputGroup
                 {...rest}
@@ -222,7 +212,8 @@ class MultiInput extends Component {
                 </div>
                 <InputGroup.Addon isButton>
                     <Button
-                        {...extendedButtonProps}
+                        aria-label={buttonLabel}
+                        {...buttonProps}
                         disabled={disabled}
                         glyph='value-help'
                         option='transparent' />

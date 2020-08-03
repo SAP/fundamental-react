@@ -138,6 +138,9 @@ export const dev = () => (
             compact={boolean('compact', false)}
             data={data}
             disabled={boolean('disabled', false)}
+            inputProps={{
+                id: 'multiInputDevExample'
+            }}
             placeholder={text('Placeholder', 'Select a Fruit')}
             validationState={select('Validation State', {
                 'none': '',

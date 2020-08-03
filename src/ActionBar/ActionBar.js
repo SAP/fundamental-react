@@ -57,14 +57,6 @@ const ActionBar = React.forwardRef(({
 
     const HeadingTag = `h${headingLevel}`;
 
-    if (!buttonProps) {
-        buttonProps = {};
-    }
-
-    if (!buttonProps['aria-label']) {
-        buttonProps['aria-label'] = backButtonLabel;
-    }
-
     return (
         <div {...props}
             className={actionBarClasses}
@@ -72,6 +64,7 @@ const ActionBar = React.forwardRef(({
             <div {...props} className={actionBarHeaderClasses}>
                 {onBackClick && (<div className={actionBarBackClasses}>
                     <Button
+                        aria-label={backButtonLabel}
                         {...buttonProps}
                         compact
                         glyph='navigation-left-arrow'
