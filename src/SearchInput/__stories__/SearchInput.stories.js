@@ -71,7 +71,9 @@ export const validationStates = () => (
 export const dev = () => (
     <SearchInput
         compact={boolean('compact', false)}
+        disabled={boolean('disabled', false)}
         placeholder={'Select a Fruit'}
+        readOnly={boolean('readOnly', false)}
         searchList={searchData}
         validationState={select('Validation State', {
             'none': '',
