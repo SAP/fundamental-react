@@ -44,6 +44,36 @@ exports[`Storyshots Component API/Forms/FormLabel Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/FormLabel Include Colon 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    style={
+      Object {
+        "maxWidth": "250px",
+      }
+    }
+  >
+    <div
+      className="fd-form-item"
+    >
+      <label
+        className="fd-form-label fd-form-label--colon"
+        htmlFor="includeColonLabelExample"
+      >
+        Overflow proof colon, overflow proof colon, overflow proof colon
+      </label>
+      <input
+        className="fd-input"
+        id="includeColonLabelExample"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormLabel Primary 1`] = `
 <div
   dir="ltr"
@@ -85,36 +115,6 @@ exports[`Storyshots Component API/Forms/FormLabel Required 1`] = `
       id="requiredLabelExample"
       type="text"
     />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Forms/FormLabel With Colon 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    style={
-      Object {
-        "maxWidth": "250px",
-      }
-    }
-  >
-    <div
-      className="fd-form-item"
-    >
-      <label
-        className="fd-form-label fd-form-label--colon"
-        htmlFor="includeColonLabelExample"
-      >
-        Overflow proof colon, overflow proof colon, overflow proof colon
-      </label>
-      <input
-        className="fd-input"
-        id="includeColonLabelExample"
-        type="text"
-      />
-    </div>
   </div>
 </div>
 `;
