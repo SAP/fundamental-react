@@ -24,6 +24,12 @@ export const BUTTON_TYPES = [
     'attention'
 ];
 
+export const COMBOBOX_SELECTION_TYPES = [
+    'manual',
+    'auto',
+    'auto-inline'
+];
+
 export const DIALOG_SIZES = [
     's',
     'm',
