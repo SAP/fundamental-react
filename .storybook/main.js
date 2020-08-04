@@ -1,4 +1,7 @@
 const path = require('path');
+const { merge } = require('webpack-merge');
+
+const maxAssetSize = 1024 * 1024;
 
 module.exports = {
     stories: ['../src/Docs/introduction.stories.mdx', '../src/**/*.@(stories|visual).js'],
@@ -27,6 +30,19 @@ module.exports = {
             include: path.resolve(__dirname, '../'),
           });
 
-        return config;
+        return merge(config, {
+            optimization: {
+                splitChunks: {
+                    chunks: 'all',
+                    minSize: 30 * 1024,
+                    maxSize: maxAssetSize,
+                },
+                runtimeChunk: true,
+              },
+              performance: {
+                hints: 'warning',
+                maxAssetSize: maxAssetSize
+              }
+        });
     }
 };

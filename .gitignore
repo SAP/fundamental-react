@@ -12,8 +12,6 @@ storybook-testing/__image_snapshots__/__diff_output__/*
 src/Docs/
 
 # documentation website assets
-.storybook/static/*.woff
-.storybook/static/*.css
 storybook-static
 
 #index files
