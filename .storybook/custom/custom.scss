@@ -243,3 +243,23 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
         height: 120px;
     }
 }
+
+/* blockquote e.g. depreciated warning */
+blockquote {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left-width: 5px;
+    border-radius: 5px;
+    background: #fffde4;
+    font-size: 1rem;
+
+    &.docs-deprecated {
+        background: #ffebeb;
+        background: var(--sapErrorBackground, #ffebeb);
+        color: #bb0000;
+        color: var(--sapNegativeColor, #bb0000);
+        border-color: #bb0000;
+        border-color: var(--sapNegativeColor, #bb0000);
+    }
+}

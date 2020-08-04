@@ -14,6 +14,7 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
         className="fd-action-bar__back"
       >
         <button
+          aria-label="Back to home"
           className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
           onClick={[Function]}
           type="button"
@@ -161,6 +162,7 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
         className="fd-action-bar__back"
       >
         <button
+          aria-label="Back to home"
           className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
           onClick={[Function]}
           type="button"
@@ -230,6 +232,7 @@ exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup={true}
+                aria-label="More actions"
                 className="fd-button fd-button--transparent sap-icon--vertical-grip"
                 onClick={[Function]}
                 onKeyPress={[Function]}

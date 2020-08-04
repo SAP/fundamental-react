@@ -7,6 +7,7 @@ import 'fundamental-styles/dist/token.css';
 /** A **Token** is used to represent contextual information. It can be useful to show
 applied filters, selected values for a form field or object metadata. */
 const Token = React.forwardRef(({
+    buttonLabel,
     children,
     className,
     compact,
@@ -33,6 +34,7 @@ const Token = React.forwardRef(({
             tabIndex='0'>
             <span className='fd-token__text'>{children}</span>
             <button
+                aria-label={buttonLabel}
                 className='fd-token__close'
                 onClick={onClick}
                 tabIndex='-1' />
@@ -43,6 +45,8 @@ const Token = React.forwardRef(({
 Token.displayName = 'Token';
 
 Token.propTypes = {
+    /** A localized string to be used as aria-label for the token's button */
+    buttonLabel: PropTypes.string.isRequired,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */

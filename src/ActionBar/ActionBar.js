@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import requiredIf from 'react-required-if';
 import 'fundamental-styles/dist/action-bar.css';
 
 /**
@@ -15,6 +16,7 @@ const ActionBar = React.forwardRef(({
     actionClassName,
     actionProps,
     className,
+    backButtonLabel,
     buttonContainerClassName,
     buttonProps,
     description,
@@ -62,6 +64,7 @@ const ActionBar = React.forwardRef(({
             <div {...props} className={actionBarHeaderClasses}>
                 {onBackClick && (<div className={actionBarBackClasses}>
                     <Button
+                        aria-label={backButtonLabel}
                         {...buttonProps}
                         compact
                         glyph='navigation-left-arrow'
@@ -93,6 +96,10 @@ ActionBar.propTypes = {
     actionProps: PropTypes.object,
     /** Button components to add to the ActionBar */
     actions: PropTypes.node,
+    /** Localized string for 'Back' button's aria-label. This is required if the button is enabled and `buttonProps` doesn't have a valid `aria-label` */
+    backButtonLabel: requiredIf(PropTypes.string, props => {
+        return typeof props?.onBackClick === 'function' && (!props?.buttonProps || !props.buttonProps['aria-label']?.trim());
+    }),
     /** Classnames to spread to the back Button container */
     buttonContainerClassName: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */
