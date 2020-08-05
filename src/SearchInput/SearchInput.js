@@ -22,7 +22,9 @@ class SearchInput extends PureComponent {
     }
 
     filterList = (list, query) => {
-        return list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
+        return this.props.subStringSearch ? list.filter((item) => {
+            return item.text.toLowerCase().includes(query.toLowerCase());
+        }) : list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
     }
 
     handleKeyPress = event => {
@@ -108,6 +110,7 @@ class SearchInput extends PureComponent {
             inShellbar,
             onEnter,
             searchList,
+            subStringSearch,
             onChange,
             onSelect,
             noSearchBtn,
@@ -142,14 +145,21 @@ class SearchInput extends PureComponent {
                     {filteredResult && filteredResult.length > 0 ? (
                         filteredResult.map((item, index) => {
                             return (
-                                <Menu.Item
+                                subStringSearch ? (<Menu.Item
                                     key={index}
                                     onClick={(e) => this.handleListItemClick(e, item)}>
-                                    <strong>{this.state.value}</strong>
-                                    {this.state.value && this.state.value.length
-                                        ? item.text.substring(this.state.value.length)
-                                        : item.text}
-                                </Menu.Item>
+                                    {item.text}
+                                </Menu.Item>) :
+                                    (
+                                        <Menu.Item
+                                            key={index}
+                                            onClick={(e) => this.handleListItemClick(e, item)}>
+                                            <strong>{this.state.value}</strong>
+                                            {this.state.value && this.state.value.length
+                                                ? item.text.substring(this.state.value.length)
+                                                : item.text}
+                                        </Menu.Item>
+                                    )
                             );
                         })
                     ) : (
@@ -203,10 +213,10 @@ class SearchInput extends PureComponent {
                     body={
                         (<>
                             {validationState &&
-                                <FormMessage
-                                    type={validationState.state}>
-                                    {validationState.text}
-                                </FormMessage>
+                            <FormMessage
+                                type={validationState.state}>
+                                {validationState.text}
+                            </FormMessage>
                             }
                             {popoverBody}
                         </>)}
@@ -260,6 +270,8 @@ SearchInput.propTypes = {
             callback: PropTypes.func
         })
     ),
+    /** enable substring search */
+    subStringSearch: PropTypes.bool,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

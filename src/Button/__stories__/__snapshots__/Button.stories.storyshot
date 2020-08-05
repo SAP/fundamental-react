@@ -6,7 +6,6 @@ exports[`Storyshots Component API/Button/Button Dev 1`] = `
 >
   <button
     className="fd-button"
-    disabled={false}
     type="button"
   >
     Dev
@@ -196,6 +195,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Disabled
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Disabled Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
     <div
       className="fddocs-container--break"
     />
@@ -219,6 +234,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Emphasized
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button fd-button--emphasized is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Emphasized Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
     <div
       className="fddocs-container--break"
     />
@@ -242,6 +273,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Transparent
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button fd-button--transparent is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Transparent Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
     <div
       className="fddocs-container--break"
     />
@@ -265,6 +312,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Positive Button
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button fd-button--positive is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Positive Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
     <div
       className="fddocs-container--break"
     />
@@ -288,6 +351,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Negative Button
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button fd-button--negative is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Negative Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
     <div
       className="fddocs-container--break"
     />
@@ -311,6 +390,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Ghost Button
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button fd-button--ghost is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Ghost Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
     <div
       className="fddocs-container--break"
     />
@@ -334,6 +429,22 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     >
       Attention Button
     </button>
+    <button
+      aria-describedby="fd-mocked-short-id"
+      aria-disabled={true}
+      className="fd-button fd-button--attention is-disabled"
+      onClick={[Function]}
+      type="button"
+    >
+      Attention Focusable
+    </button>
+    <p
+      aria-live="assertive"
+      className="fd-button__instructions"
+      id="fd-mocked-short-id"
+    >
+      To enable this button use the knob in the dev story
+    </p>
   </div>
 </div>
 `;

@@ -9,19 +9,20 @@ export default {
 };
 
 export const primary = () => (
-    <Token>Default</Token>
+    <Token buttonLabel='Clear' >Default</Token>
 );
 
 export const compact = () => (
-    <Token compact>Compact</Token>
+    <Token buttonLabel='Clear' compact>Compact</Token>
 );
 export const readOnly = () => (
-    <Token readOnly>Compact</Token>
+    <Token buttonLabel='Clear' readOnly>Read Only</Token>
 );
 
 export const dev = () => (
     <Token
+        buttonLabel='Clear'
         compact={boolean('compact', false)}
-        readOnly={boolean('readOnly', false)}>Default</Token>
+        readOnly={boolean('readOnly', false)}>Dev</Token>
 );
 dev.parameters = { docs: { disable: true } };

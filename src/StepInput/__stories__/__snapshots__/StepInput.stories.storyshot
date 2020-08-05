@@ -72,7 +72,6 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
           <button
             aria-label="Step Down"
             className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
-            disabled={false}
             onClick={[Function]}
             tabIndex="-1"
             type="button"
@@ -88,7 +87,6 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
           <button
             aria-label="Step Up"
             className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
-            disabled={false}
             onClick={[Function]}
             tabIndex="-1"
             type="button"

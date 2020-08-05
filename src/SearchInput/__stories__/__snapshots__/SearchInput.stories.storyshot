@@ -115,7 +115,6 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
                     <button
                       aria-label="Search"
                       className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      disabled={false}
                       onClick={[Function]}
                       type="button"
                     />

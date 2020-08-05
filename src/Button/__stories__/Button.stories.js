@@ -92,37 +92,69 @@ export const sizes = () => (
 
 sizes.storyName = 'Sizes';
 
-/** There are three states: default, `selected`, and `disabled` */
+/** There are four states: default, `selected`, `disabled`, and `allowFocusOnDisable`. `allowFocusOnDisabled` allows a
+ * disabled button to be focusable. This is to ensure a screen reader can tab into the button and read its state.
+ * if `allowFocusOnDisabled` is selected there must be a `disabledMessage` and `enabledMessage` prop within the button
+ * that is used by the screen reader to announce a message to the user informing them why the button is disabled, or give
+ * instructions on how to enable this button then subsequently announce to the user when the button becomes enabled.
+ */
 
 export const states = () => (
     <div className='fddocs-container'>
         <Button>Default</Button>
         <Button selected>Selected</Button>
         <Button disabled>Disabled</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'>Disabled Focusable</Button>
         <div className='fddocs-container--break' />
         <Button option='emphasized'>Emphasized</Button>
         <Button option='emphasized' selected>Emphasized</Button>
         <Button disabled option='emphasized'>Emphasized</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'
+            option='emphasized'>Emphasized Focusable</Button>
         <div className='fddocs-container--break' />
         <Button option='transparent'>Transparent</Button>
         <Button option='transparent' selected>Transparent</Button>
         <Button disabled option='transparent'>Transparent</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'
+            option='transparent'>Transparent Focusable</Button>
         <div className='fddocs-container--break' />
         <Button type='positive'>Positive Button</Button>
         <Button selected type='positive'>Positive Button</Button>
         <Button disabled type='positive'>Positive Button</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'
+            type='positive'>Positive Focusable</Button>
         <div className='fddocs-container--break' />
         <Button type='negative'>Negative Button</Button>
         <Button selected type='negative'>Negative Button</Button>
         <Button disabled type='negative'>Negative Button</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'
+            type='negative'>Negative Focusable</Button>
         <div className='fddocs-container--break' />
         <Button type='ghost'>Ghost Button</Button>
         <Button selected type='ghost'>Ghost Button</Button>
         <Button disabled type='ghost'>Ghost Button</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'
+            type='ghost'>Ghost Focusable</Button>
         <div className='fddocs-container--break' />
         <Button type='attention'>Attention Button</Button>
         <Button selected type='attention'>Attention Button</Button>
         <Button disabled type='attention'>Attention Button</Button>
+        <Button allowFocusOnDisable disabled
+            disabledMessage='To enable this button use the knob in the dev story'
+            enabledMessage='This button is now enabled'
+            type='attention'>Attention Focusable</Button>
     </div>
 );
 
@@ -130,8 +162,11 @@ states.storyName = 'States';
 
 export const dev = () => (
     <Button
-        compact={(boolean('compact'), false)}
-        disabled={(boolean('disabled'), false)}
+        allowFocusOnDisable={boolean('allowFocusOnDisable', false)}
+        compact={boolean('compact', false)}
+        disabled={boolean('disabled', false)}
+        disabledMessage={'This button is disabled'}
+        enabledMessage={'This button is now enabled'}
         option={select('option', {
             'emphasized': 'emphasized',
             'transparent': 'transparent'

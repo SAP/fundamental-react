@@ -114,6 +114,7 @@ class Popover extends Component {
             useArrowKeyNavigation,
             type,
             show,
+            modalManager,
             ...rest
         } = this.props;
 
@@ -175,6 +176,7 @@ class Popover extends Component {
                     disableEdgeDetection={disableEdgeDetection}
                     flipContainer={flipContainer}
                     innerRef={innerRef}
+                    modalManager={modalManager}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
@@ -216,6 +218,8 @@ Popover.propTypes = {
     firstFocusIndex: PropTypes.number,
     /** The bounding container to use when determining if the popover is out of bounds */
     flipContainer: CustomPropTypes.elementOrArrayOfElements(),
+    /** If Popover is to be rendered in a modal, the parent modal manager can be passed as a prop */
+    modalManager: PropTypes.object,
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
     /** The options are 'auto',

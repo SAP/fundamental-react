@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.20](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.19...v0.11.1-rc.20) (2020-08-04)
+
+
+### Features
+
+* update fundamental styles to 0.11.3-rc.8 ([#1142](https://github.com/SAP/fundamental-react/issues/1142)) ([282f771](https://github.com/SAP/fundamental-react/commit/282f77177edf41c4f761cc6a171c22892f021e31))
+
+### [0.11.1-rc.19](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.18...v0.11.1-rc.19) (2020-08-04)
+
+### [0.11.1-rc.18](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.17...v0.11.1-rc.18) (2020-08-03)
+
+
+### Features
+
+* combobox filtering and autocomplete ([#1125](https://github.com/SAP/fundamental-react/issues/1125)) ([d84ea0b](https://github.com/SAP/fundamental-react/commit/d84ea0bd8dd5dcb9a23b21afe9c4802b2630beaa)), closes [#1019](https://github.com/SAP/fundamental-react/issues/1019)
+
+### [0.11.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.16...v0.11.1-rc.17) (2020-08-03)
+
+### [0.11.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.15...v0.11.1-rc.16) (2020-07-31)
+
+
+### Bug Fixes
+
+* [#1003](https://github.com/SAP/fundamental-react/issues/1003) Sub string search in search input ([#1138](https://github.com/SAP/fundamental-react/issues/1138)) ([ea0011f](https://github.com/SAP/fundamental-react/commit/ea0011fdadd266a53f65d7310e3bdff14907f41d))
+
+### [0.11.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.14...v0.11.1-rc.15) (2020-07-31)
+
+### [0.11.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.13...v0.11.1-rc.14) (2020-07-31)
+
+
+### Bug Fixes
+
+* allow custom modal manager for DatePicker ([#1141](https://github.com/SAP/fundamental-react/issues/1141)) ([8238c44](https://github.com/SAP/fundamental-react/commit/8238c4497885d4bab143aec61611c4abf706deb6))
+
+### [0.11.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.12...v0.11.1-rc.13) (2020-07-31)
+
+
+### Bug Fixes
+
+* focusable disabled button ([#1134](https://github.com/SAP/fundamental-react/issues/1134)) ([d9bbbe0](https://github.com/SAP/fundamental-react/commit/d9bbbe0f39665e970a2eb34c67943101e9a4bd18))
+
 ### [0.11.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.11...v0.11.1-rc.12) (2020-07-27)
 
 
