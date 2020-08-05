@@ -239,7 +239,7 @@ SearchInput.propTypes = {
     inShellbar: PropTypes.bool,
     /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
-     /** Localized text to be updated based on location/language */
+    /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         searchBtnLabel: PropTypes.string
     }),
