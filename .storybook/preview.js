@@ -9,7 +9,7 @@ import { addDecorator, addParameters } from '@storybook/react';
 
 addParameters({
     options: {
-        showRoots: true,
+        showRoots: false,
         theme: fundamentals
     },
     cssresources: [
