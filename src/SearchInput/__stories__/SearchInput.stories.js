@@ -74,7 +74,7 @@ export const validationStates = () => (
             validationState={{ state: 'warning', text: 'Test validation state' }} />
         <SearchInput
             inputProps={{
-                'aria-label': 'Search input with warning'
+                'aria-label': 'Search input with success message'
             }}
             placeholder='Success'
             searchList={searchData}
