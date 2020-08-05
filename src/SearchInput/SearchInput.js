@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
@@ -121,6 +122,7 @@ class SearchInput extends PureComponent {
             validationState,
             disabled,
             readOnly,
+            localizedText,
             ...rest
         } = this.props;
 
@@ -178,6 +180,7 @@ class SearchInput extends PureComponent {
                 { !(noSearchBtn || readOnly) && (
                     <InputGroup.Addon {...inputGroupAddonProps} isButton>
                         <Button {...searchBtnProps}
+                            aria-label={localizedText.searchBtnLabel}
                             disabled={disabled}
                             glyph='search'
                             onClick={this.handleClick}
@@ -236,6 +239,10 @@ SearchInput.propTypes = {
     inShellbar: PropTypes.bool,
     /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+     /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        searchBtnLabel: PropTypes.string
+    }),
     /** Set to **true** to render without a search button */
     noSearchBtn: PropTypes.bool,
     /** Localized placeholder text of the input */
@@ -269,6 +276,9 @@ SearchInput.propTypes = {
 };
 
 SearchInput.defaultProps = {
+    localizedText: {
+        searchBtnLabel: 'Search'
+    },
     onChange: () => { },
     onEnter: () => { },
     onSelect: () => { }
