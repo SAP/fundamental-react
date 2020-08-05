@@ -35,7 +35,7 @@
     "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "npm run build:storybook && start-storybook -p 12123 -s .storybook/static/,node_modules/@sap-theming",
     "storybook:ci": "npm run storybook -- --ci --quiet",
-    "storybook:static": "rm -rf storybook-static && npm run build:storybook && build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs",
+    "storybook:static": "rm -rf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
