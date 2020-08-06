@@ -186,6 +186,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                           className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                         >
                           <button
+                            aria-label="Search"
                             className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
                             onClick={[Function]}
                             type="button"
@@ -576,6 +577,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                           className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
                         >
                           <button
+                            aria-label="Search"
                             className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
                             onClick={[Function]}
                             type="button"
