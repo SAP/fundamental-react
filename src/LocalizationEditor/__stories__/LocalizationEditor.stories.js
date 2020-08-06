@@ -4,7 +4,11 @@ import React from 'react';
 
 export default {
     title: 'Component API/LocalizationEditor',
-    component: LocalizationEditor
+    component: LocalizationEditor,
+    parameters: {
+        description: `
+> **DEPRECATED**. Localization Editor does not exist as a Fiori 3 component so it has been deprecated. `
+    }
 };
 
 

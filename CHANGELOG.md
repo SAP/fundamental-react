@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.21](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.20...v0.11.1-rc.21) (2020-08-06)
+
+
+### Bug Fixes
+
+* [#1130](https://github.com/SAP/fundamental-react/issues/1130) Adding disabled and readonly props to search input ([#1140](https://github.com/SAP/fundamental-react/issues/1140)) ([8934e9c](https://github.com/SAP/fundamental-react/commit/8934e9c2a49fbe8284c87683a550eb85cfaf4715))
+
+### [0.11.1-rc.20](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.19...v0.11.1-rc.20) (2020-08-04)
+
+
+### Features
+
+* update fundamental styles to 0.11.3-rc.8 ([#1142](https://github.com/SAP/fundamental-react/issues/1142)) ([282f771](https://github.com/SAP/fundamental-react/commit/282f77177edf41c4f761cc6a171c22892f021e31))
+
 ### [0.11.1-rc.19](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.18...v0.11.1-rc.19) (2020-08-04)
 
 ### [0.11.1-rc.18](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.17...v0.11.1-rc.18) (2020-08-03)

@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
@@ -57,9 +58,11 @@ class SearchInput extends PureComponent {
     };
 
     handleClick = () => {
-        this.setState(prevState => ({
-            isExpanded: !prevState.isExpanded
-        }));
+        if (!this.props.readOnly) {
+            this.setState(prevState => ({
+                isExpanded: !prevState.isExpanded
+            }));
+        }
     };
 
     handleClickOutside = () => {
@@ -120,6 +123,9 @@ class SearchInput extends PureComponent {
             searchBtnProps,
             popoverProps,
             validationState,
+            disabled,
+            readOnly,
+            localizedText,
             ...rest
         } = this.props;
 
@@ -168,18 +174,24 @@ class SearchInput extends PureComponent {
                 {...inputGroupProps}
                 className={inputGroupClasses}
                 compact={compact}
+                disabled={disabled}
+                readOnly={readOnly}
                 validationState={validationState}>
                 <FormInput
                     {...inputProps}
+                    disabled={disabled}
                     onChange={this.handleChange}
                     onClick={this.handleClick}
                     onKeyPress={this.handleKeyPress}
                     placeholder={placeholder}
+                    readOnly={readOnly}
                     value={this.state.value} />
 
-                {!noSearchBtn && (
+                { !(noSearchBtn || readOnly) && (
                     <InputGroup.Addon {...inputGroupAddonProps} isButton>
                         <Button {...searchBtnProps}
+                            aria-label={localizedText.searchBtnLabel}
+                            disabled={disabled}
                             glyph='search'
                             onClick={this.handleClick}
                             option='transparent' />
@@ -210,6 +222,7 @@ class SearchInput extends PureComponent {
                         </>)}
                     control={wrappedInputGroup}
                     disableKeyPressHandler
+                    disabled={readOnly}
                     noArrow
                     onClickOutside={this.handleClickOutside}
                     widthSizingType='minTarget' />
@@ -225,6 +238,8 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
+    disabled: PropTypes.bool,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */
@@ -234,12 +249,18 @@ SearchInput.propTypes = {
     inShellbar: PropTypes.bool,
     /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        searchBtnLabel: PropTypes.string
+    }),
     /** Set to **true** to render without a search button */
     noSearchBtn: PropTypes.bool,
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Set to **true** to mark component as readonly */
+    readOnly: PropTypes.bool,
     /** Additional props to be spread to the search `<button>` element */
     searchBtnProps: PropTypes.object,
     /** Collection of items to display in the dropdown list */
@@ -267,6 +288,9 @@ SearchInput.propTypes = {
 };
 
 SearchInput.defaultProps = {
+    localizedText: {
+        searchBtnLabel: 'Search'
+    },
     onChange: () => { },
     onEnter: () => { },
     onSelect: () => { }

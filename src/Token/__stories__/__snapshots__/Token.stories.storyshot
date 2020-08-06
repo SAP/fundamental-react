@@ -15,6 +15,7 @@ exports[`Storyshots Component API/Token Compact 1`] = `
       Compact
     </span>
     <button
+      aria-label="Clear"
       className="fd-token__close"
       onClick={[Function]}
       tabIndex="-1"
@@ -35,9 +36,10 @@ exports[`Storyshots Component API/Token Dev 1`] = `
     <span
       className="fd-token__text"
     >
-      Default
+      Dev
     </span>
     <button
+      aria-label="Clear"
       className="fd-token__close"
       onClick={[Function]}
       tabIndex="-1"
@@ -61,6 +63,7 @@ exports[`Storyshots Component API/Token Primary 1`] = `
       Default
     </span>
     <button
+      aria-label="Clear"
       className="fd-token__close"
       onClick={[Function]}
       tabIndex="-1"
@@ -81,9 +84,10 @@ exports[`Storyshots Component API/Token Read Only 1`] = `
     <span
       className="fd-token__text"
     >
-      Compact
+      Read Only
     </span>
     <button
+      aria-label="Clear"
       className="fd-token__close"
       onClick={[Function]}
       tabIndex="-1"

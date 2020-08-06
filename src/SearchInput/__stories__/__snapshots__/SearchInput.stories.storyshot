@@ -34,6 +34,7 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
                   onClick={[Function]}
                 >
                   <input
+                    aria-label="Compact search input"
                     className="fd-input fd-input--compact fd-input-group__input"
                     onChange={[Function]}
                     onClick={[Function]}
@@ -46,6 +47,7 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
                     className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
                   >
                     <button
+                      aria-label="Search"
                       className="fd-button fd-button--transparent fd-button--compact sap-icon--search fd-input-group__button"
                       onClick={[Function]}
                       type="button"
@@ -94,20 +96,26 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                   onClick={[Function]}
+                  readOnly={false}
                 >
                   <input
+                    aria-label="Search input for dev testing"
                     className="fd-input fd-input-group__input"
+                    disabled={false}
                     onChange={[Function]}
                     onClick={[Function]}
                     onKeyPress={[Function]}
                     placeholder="Select a Fruit"
+                    readOnly={false}
                     type="text"
                     value=""
                   />
                   <span
                     className="fd-input-group__addon fd-input-group__addon--button"
+                    disabled={false}
                   >
                     <button
+                      aria-label="Search"
                       className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
                       onClick={[Function]}
                       type="button"
@@ -128,9 +136,74 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    disabled={true}
-  >
+  <div>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-input-group--control fd-input-group is-disabled"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-label="Disabled search input"
+                    className="fd-input fd-input-group__input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    className="fd-input-group__addon fd-input-group__addon--button"
+                    disabled={true}
+                  >
+                    <button
+                      aria-label="Search"
+                      className="fd-button fd-button--transparent sap-icon--search is-disabled fd-input-group__button"
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/SearchInput Read Only 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
     <div
       className="fd-popover"
     >
@@ -158,25 +231,19 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
                 <div
                   className="fd-input-group--control fd-input-group"
                   onClick={[Function]}
+                  readOnly={true}
                 >
                   <input
+                    aria-label="Readonly search input"
                     className="fd-input fd-input-group__input"
                     onChange={[Function]}
                     onClick={[Function]}
                     onKeyPress={[Function]}
-                    placeholder="Placeholder"
+                    placeholder="Read Only"
+                    readOnly={true}
                     type="text"
-                    value=""
+                    value="apple"
                   />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                  >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    />
-                  </span>
                 </div>
               </div>
             </div>
@@ -235,6 +302,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                         onClick={[Function]}
                       >
                         <input
+                          aria-label="Search input with error"
                           className="fd-input fd-input-group__input"
                           onChange={[Function]}
                           onClick={[Function]}
@@ -247,6 +315,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           className="fd-input-group__addon fd-input-group__addon--button"
                         >
                           <button
+                            aria-label="Search"
                             className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
                             onClick={[Function]}
                             type="button"
@@ -306,6 +375,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                         onClick={[Function]}
                       >
                         <input
+                          aria-label="Search input with warning"
                           className="fd-input fd-input-group__input"
                           onChange={[Function]}
                           onClick={[Function]}
@@ -318,6 +388,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           className="fd-input-group__addon fd-input-group__addon--button"
                         >
                           <button
+                            aria-label="Search"
                             className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
                             onClick={[Function]}
                             type="button"
@@ -377,6 +448,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                         onClick={[Function]}
                       >
                         <input
+                          aria-label="Search input with success message"
                           className="fd-input fd-input-group__input"
                           onChange={[Function]}
                           onClick={[Function]}
@@ -389,6 +461,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           className="fd-input-group__addon fd-input-group__addon--button"
                         >
                           <button
+                            aria-label="Search"
                             className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
                             onClick={[Function]}
                             type="button"
@@ -448,6 +521,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                         onClick={[Function]}
                       >
                         <input
+                          aria-label="Search input with information"
                           className="fd-input fd-input-group__input"
                           onChange={[Function]}
                           onClick={[Function]}
@@ -460,6 +534,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                           className="fd-input-group__addon fd-input-group__addon--button"
                         >
                           <button
+                            aria-label="Search"
                             className="fd-button fd-button--transparent sap-icon--search fd-input-group__button"
                             onClick={[Function]}
                             type="button"

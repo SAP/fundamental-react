@@ -26,32 +26,63 @@ export default {
 
 
 export const compact = () => (
-    <SearchInput compact
+    <SearchInput
+        compact
+        inputProps={{
+            'aria-label': 'Compact search input'
+        }}
         placeholder='Placeholder'
         searchList={searchData} />
 );
 
 export const disabled = () => (
-    <SearchInput disabled
+    <SearchInput
+        disabled
+        inputProps={{
+            'aria-label': 'Disabled search input'
+        }}
         placeholder='Placeholder'
+        searchList={searchData} />
+);
+
+export const readOnly = () => (
+    <SearchInput
+        inputProps={{
+            'aria-label': 'Readonly search input',
+            value: 'apple'
+        }}
+        placeholder='Read Only'
+        readOnly
         searchList={searchData} />
 );
 
 export const validationStates = () => (
     <>
         <SearchInput
+            inputProps={{
+                'aria-label': 'Search input with error'
+            }}
             placeholder='Error'
             searchList={searchData}
             validationState={{ state: 'error', text: 'Test validation state' }} />
         <SearchInput
+            inputProps={{
+                'aria-label': 'Search input with warning'
+            }}
             placeholder='Warning'
             searchList={searchData}
             validationState={{ state: 'warning', text: 'Test validation state' }} />
         <SearchInput
+            inputProps={{
+                'aria-label': 'Search input with success message'
+            }}
             placeholder='Success'
             searchList={searchData}
             validationState={{ state: 'success', text: 'Test validation state' }} />
         <SearchInput
+            inputProps={{
+                'aria-label': 'Search input with information'
+            }}
             placeholder='Information'
             searchList={searchData}
             validationState={{ state: 'information', text: 'Test validation state' }} />
@@ -61,7 +92,12 @@ export const validationStates = () => (
 export const dev = () => (
     <SearchInput
         compact={boolean('compact', false)}
+        disabled={boolean('disabled', false)}
+        inputProps={{
+            'aria-label': 'Search input for dev testing'
+        }}
         placeholder={'Select a Fruit'}
+        readOnly={boolean('readOnly', false)}
         searchList={searchData}
         validationState={select('Validation State', {
             'none': '',
