@@ -136,6 +136,8 @@ const Select = React.forwardRef(({
 
     return (
         <Popover
+            placement='bottom-start'
+            widthSizingType='minTarget'
             {...popoverProps}
             body={
                 (<>
@@ -171,11 +173,9 @@ const Select = React.forwardRef(({
             disableTriggerOnClick={disabled || readOnly}
             firstFocusIndex={firstFocusIndex}
             noArrow
-            placement='bottom-start'
             ref={popoverRef}
             type='listbox'
-            useArrowKeyNavigation
-            widthSizingType='minTarget' />
+            useArrowKeyNavigation />
     );
 });
 
