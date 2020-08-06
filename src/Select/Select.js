@@ -25,6 +25,7 @@ const Select = React.forwardRef(({
     onClick,
     onSelect,
     placeholder,
+    popoverProps,
     readOnly,
     selectedKey,
     validationState,
@@ -135,6 +136,9 @@ const Select = React.forwardRef(({
 
     return (
         <Popover
+            placement='bottom-start'
+            widthSizingType='minTarget'
+            {...popoverProps}
             body={
                 (<>
                     {validationState &&
@@ -169,11 +173,9 @@ const Select = React.forwardRef(({
             disableTriggerOnClick={disabled || readOnly}
             firstFocusIndex={firstFocusIndex}
             noArrow
-            placement='bottom-start'
             ref={popoverRef}
             type='listbox'
-            useArrowKeyNavigation
-            widthSizingType='minTarget' />
+            useArrowKeyNavigation />
     );
 });
 
@@ -199,6 +201,8 @@ Select.propTypes = {
     })),
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
+    popoverProps: PropTypes.object,
     /** Set to **true** to enable readonly mode */
     readOnly: PropTypes.bool,
     /** The key corresponding to the selected option */
