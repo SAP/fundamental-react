@@ -21,6 +21,7 @@ const Select = React.forwardRef(({
     emptyAriaLabel,
     id,
     includeEmptyOption,
+    listBoxClassName,
     options,
     onClick,
     onSelect,
@@ -129,6 +130,7 @@ const Select = React.forwardRef(({
 
     const listClassName = classnames(
         'fd-list--dropdown',
+        listBoxClassName,
         {
             'fd-list--has-message': validationState?.state
         }
@@ -194,6 +196,8 @@ Select.propTypes = {
     id: PropTypes.string,
     /** Set to **true** to include an empty option. If true, also provide an `emptyAriaLabel` */
     includeEmptyOption: PropTypes.bool,
+    /** CSS class(es) to add to the option list element */
+    listBoxClassName: PropTypes.string,
     /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
