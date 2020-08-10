@@ -4,7 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Link from '../Link/Link';
 import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
-import shortId from '../utils/shortId';
+import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
 import 'fundamental-styles/dist/icon.css';
 import 'fundamental-styles/dist/message-strip.css';
@@ -48,10 +48,10 @@ const MessageStrip = (props) => {
         className
     );
 
-    const alertId = otherProps?.id || shortId.generate();
+    const alertId = otherProps?.id || useUniqueId();
 
     return (
-        <div>
+        <>
             {active && (
                 <div
                     {...otherProps}
@@ -80,7 +80,7 @@ const MessageStrip = (props) => {
                     </p>
                 </div>
             )}
-        </div>
+        </>
     );
 };
 
