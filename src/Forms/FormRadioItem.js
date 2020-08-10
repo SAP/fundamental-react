@@ -31,7 +31,8 @@ const FormRadioItem = React.forwardRef(({
         }
     );
 
-    const radioId = id ? id : useUniqueId();
+    const generatedRadioId = useUniqueId();
+    const radioId = id || generatedRadioId;
 
     return (
         <FormItem
