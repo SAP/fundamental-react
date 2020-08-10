@@ -10,8 +10,8 @@ import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
+import shortid from '../utils/shortId';
 import Token from '../Token/Token';
-import useUniqueId from '../utils/useUniqueId';
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/tokenizer.css';
 
@@ -28,7 +28,7 @@ class MultiInput extends Component {
             tags: []
         };
 
-        this.multiInputId = useUniqueId();
+        this.multiInputId = shortid.generate();
     }
 
     // create tags to display in dropdown list
