@@ -53,7 +53,8 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
-    const checkId = id ? id : useUniqueId();
+    const generatedCheckId = useUniqueId();
+    const checkId = id ? id : generatedCheckId;
 
     const checkboxChildren = (typeof children === 'string') ? (
         <span className='fd-checkbox__text'>

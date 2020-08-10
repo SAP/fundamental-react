@@ -48,7 +48,8 @@ const MessageStrip = (props) => {
         className
     );
 
-    const alertId = otherProps?.id || useUniqueId();
+    const generatedAlertId = useUniqueId();
+    const alertId = otherProps?.id || generatedAlertId;
 
     return (
         <>
