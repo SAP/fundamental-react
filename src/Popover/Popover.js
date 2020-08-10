@@ -6,8 +6,8 @@ import FocusManager from '../utils/focusManager/focusManager';
 import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
-import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
+import useUniqueId from '../utils/useUniqueId';
 import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/popover.css';
@@ -30,7 +30,7 @@ class Popover extends Component {
 
         //A generated shortId as fallback, in case props.popperProps.id is unset.
         //This ID binds the popover and its control by 'aria-controls'.
-        this.popoverId = shortId.generate();
+        this.popoverId = useUniqueId();
     }
 
     isButton = (node) => {

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import shortid from '../utils/shortId';
+import useUniqueId from '../utils/useUniqueId';
 import React, { Component } from 'react';
 
 class TreeItem extends Component {
@@ -12,7 +12,7 @@ class TreeItem extends Component {
         } = this.props;
 
         // Generate unique id for row to manage expand/collapse state in parent if prop isn't given
-        this.rowId = rowId || shortid.generate();
+        this.rowId = rowId || useUniqueId();
 
         // Initialize row in parent TreeView state
         onExpandClick(this.rowId);

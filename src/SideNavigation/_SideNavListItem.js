@@ -2,8 +2,8 @@ import Button from '../Button/Button';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
+import useUniqueId from '../utils/useUniqueId';
 
 class SideNavListItem extends React.Component {
     constructor(props) {
@@ -28,7 +28,7 @@ class SideNavListItem extends React.Component {
 
     render() {
         const { children, condensed, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, expandSubmenuLabel, ...props } = this.props;
-        const nestedListId = shortid.generate();
+        const nestedListId = useUniqueId();
         const getClasses = () => {
             return classnames(
                 'fd-nested-list__link',

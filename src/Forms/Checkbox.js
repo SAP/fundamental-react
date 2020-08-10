@@ -4,7 +4,7 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import shortId from '../utils/shortId';
+import useUniqueId from '../utils/useUniqueId';
 import React, { useEffect, useRef } from 'react';
 import 'fundamental-styles/dist/checkbox.css';
 
@@ -53,7 +53,7 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
-    const checkId = id ? id : shortId.generate();
+    const checkId = id ? id : useUniqueId();
 
     const checkboxChildren = (typeof children === 'string') ? (
         <span className='fd-checkbox__text'>
