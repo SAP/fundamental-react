@@ -4,18 +4,17 @@ exports[`Storyshots Component API/MessageStrip Dev 1`] = `
 <div
   dir="ltr"
 >
-  <div>
-    <div
-      className="fd-message-strip"
-      role="alert"
+  <div
+    className="fd-message-strip"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
-      >
-        Default MessageStrip
-        
-      </p>
-    </div>
+      Default MessageStrip
+      
+    </p>
   </div>
 </div>
 `;
@@ -24,24 +23,23 @@ exports[`Storyshots Component API/MessageStrip Dismissible 1`] = `
 <div
   dir="ltr"
 >
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--dismissible"
-      role="alert"
+  <div
+    className="fd-message-strip fd-message-strip--dismissible"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <button
+      aria-controls="fd-mocked-short-id"
+      aria-label="Close"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
     >
-      <button
-        aria-controls="j2ALl423"
-        aria-label="Close"
-        className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
-        onClick={[Function]}
-        type="button"
-      />
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
+      MessageStrip
+    </p>
   </div>
 </div>
 `;
@@ -50,17 +48,16 @@ exports[`Storyshots Component API/MessageStrip No Glyph 1`] = `
 <div
   dir="ltr"
 >
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--no-icon"
-      role="alert"
+  <div
+    className="fd-message-strip fd-message-strip--no-icon"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
+      MessageStrip
+    </p>
   </div>
 </div>
 `;
@@ -69,17 +66,16 @@ exports[`Storyshots Component API/MessageStrip Primary 1`] = `
 <div
   dir="ltr"
 >
-  <div>
-    <div
-      className="fd-message-strip"
-      role="alert"
+  <div
+    className="fd-message-strip"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
-      >
-        Default MessageStrip
-      </p>
-    </div>
+      Default MessageStrip
+    </p>
   </div>
 </div>
 `;
@@ -88,53 +84,183 @@ exports[`Storyshots Component API/MessageStrip States 1`] = `
 <div
   dir="ltr"
 >
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--error"
-      role="alert"
+  <div
+    className="fd-message-strip fd-message-strip--error"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
+      MessageStrip
+    </p>
   </div>
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--warning"
-      role="alert"
+  <div
+    className="fd-message-strip fd-message-strip--warning"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
+      MessageStrip
+    </p>
   </div>
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--success"
-      role="alert"
+  <div
+    className="fd-message-strip fd-message-strip--success"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
-      >
-        MessageStrip
-      </p>
-    </div>
+      MessageStrip
+    </p>
   </div>
-  <div>
-    <div
-      className="fd-message-strip fd-message-strip--information"
-      role="alert"
+  <div
+    className="fd-message-strip fd-message-strip--information"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="fd-message-strip__text"
     >
-      <p
-        className="fd-message-strip__text"
+      MessageStrip
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/MessageStrip States With Custom Content And Links 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-message-strip fd-message-strip--dismissible fd-message-strip--error"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <button
+      aria-controls="fd-mocked-short-id"
+      aria-label="Dismiss alert"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
+    >
+      <b>
+        Error
+      </b>
+      <br />
+      There was some error. There was some error. There was some error. There was some error.    
+      <a
+        className="fd-link"
+        href="https://experience.sap.com"
       >
-        MessageStrip
-      </p>
-    </div>
+        Learn more
+         
+      </a>
+    </p>
+  </div>
+  <div
+    className="fd-message-strip fd-message-strip--dismissible fd-message-strip--warning"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <button
+      aria-controls="fd-mocked-short-id"
+      aria-label="Dismiss alert"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
+    >
+      <b>
+        Issue
+      </b>
+      <br />
+      There is some problem.
+       
+      <br />
+       
+      There is some problem. There is some problem. There is some problem.    
+      <a
+        className="fd-link"
+        href="https://experience.sap.com"
+      >
+        Learn more
+         
+      </a>
+    </p>
+  </div>
+  <div
+    className="fd-message-strip fd-message-strip--dismissible fd-message-strip--success"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <button
+      aria-controls="fd-mocked-short-id"
+      aria-label="Dismiss alert"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
+    >
+      <b>
+        Done
+      </b>
+      <br />
+      Task completed successfully.
+       
+      <br />
+       Task completed successfully. 
+       
+      <br />
+        
+      Task completed successfully. Task completed successfully.    
+      <a
+        className="fd-link"
+        href="https://experience.sap.com"
+      >
+        Learn more
+         
+      </a>
+    </p>
+  </div>
+  <div
+    className="fd-message-strip fd-message-strip--dismissible fd-message-strip--information"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <button
+      aria-controls="fd-mocked-short-id"
+      aria-label="Dismiss alert"
+      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+      onClick={[Function]}
+      type="button"
+    />
+    <p
+      className="fd-message-strip__text"
+    >
+      <b>
+        Info
+      </b>
+      <br />
+      For your information. For your information. For your information. For your information. For your information.    
+      <a
+        className="fd-link"
+        href="https://experience.sap.com"
+      >
+        Learn more
+         
+      </a>
+    </p>
   </div>
 </div>
 `;

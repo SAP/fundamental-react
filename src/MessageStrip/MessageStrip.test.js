@@ -8,7 +8,7 @@ describe('<MessageStrip />', () => {
             const element = mount(<MessageStrip data-sample='Sample' />);
 
             expect(
-                element.getDOMNode().querySelector('div').attributes['data-sample'].value
+                element.find('div').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

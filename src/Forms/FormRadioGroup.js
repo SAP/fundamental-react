@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import shortId from '../utils/shortId';
+import useUniqueId from '../utils/useUniqueId';
 import 'fundamental-styles/dist/form-group.css';
 
 /** A **FormRadioGroup** is a type of FormGroup that groups a collection of radio buttons or checkboxes into a single input value.
@@ -18,7 +18,7 @@ const FormRadioGroup = ({
     onChange
 }) => {
 
-    const groupId = shortId.generate();
+    const groupId = useUniqueId();
 
     const formGroupClasses = classnames(
         'fd-form-group',
