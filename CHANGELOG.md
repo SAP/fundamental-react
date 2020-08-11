@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.24](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.23...v0.11.1-rc.24) (2020-08-11)
+
+
+### Bug Fixes
+
+* MessageStrip Accessibility + useUniqueId hook ([#1156](https://github.com/SAP/fundamental-react/issues/1156)) ([267e0bd](https://github.com/SAP/fundamental-react/commit/267e0bd94b5c96b4020a3ac546ea6739440e87f8))
+
 ### [0.11.1-rc.23](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.22...v0.11.1-rc.23) (2020-08-10)
 
 ### [0.11.1-rc.22](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.21...v0.11.1-rc.22) (2020-08-06)
