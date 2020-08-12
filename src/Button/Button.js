@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import shortId from '../utils/shortId';
+import useUniqueId from '../utils/useUniqueId';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 import 'fundamental-styles/dist/icon.css';
 import 'fundamental-styles/dist/button.css';
@@ -47,7 +47,7 @@ const Button = React.forwardRef(({
     //if button is disabled and focusable, remove onClick handler
     let onClickHandler = allowFocusOnDisable && disabledInAnyWay ? () => {} : onClick;
 
-    const ariaLiveId = shortId.generate();
+    const ariaLiveId = useUniqueId();
 
     const getDisabledProps = () => {
         let disabledProps = {};

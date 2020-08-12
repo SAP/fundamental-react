@@ -10,6 +10,10 @@ describe('<Select />', () => {
         { key: '4', text: 'List Item 4' }
     ];
 
+    const popoverProps = {
+        ['data-sample']: 'Popper-sample'
+    };
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Select component', () => {
             const element = mount(
@@ -17,6 +21,16 @@ describe('<Select />', () => {
             );
 
             expect(element.find('.fd-select').getDOMNode().attributes['data-sample'].value).toBe('Sample');
+        });
+
+        test('should allow props to be spread to the Popover component', () => {
+            const element = mount(
+                <Select options={options} popoverProps={popoverProps} />
+            );
+
+            expect(
+                element.find('.fd-popover').at(0).getDOMNode().attributes['data-sample'].value
+            ).toBe('Popper-sample');
         });
     });
 

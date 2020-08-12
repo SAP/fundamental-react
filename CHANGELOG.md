@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.26](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.25...v0.11.1-rc.26) (2020-08-12)
+
+
+### Bug Fixes
+
+* add prop for Select dropdown styling ([#1154](https://github.com/SAP/fundamental-react/issues/1154)) ([8d6d93e](https://github.com/SAP/fundamental-react/commit/8d6d93ed5329e1937ebfdffb0f9b6288ed1bbd48))
+
+### [0.11.1-rc.25](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.24...v0.11.1-rc.25) (2020-08-11)
+
+### [0.11.1-rc.24](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.23...v0.11.1-rc.24) (2020-08-11)
+
+
+### Bug Fixes
+
+* MessageStrip Accessibility + useUniqueId hook ([#1156](https://github.com/SAP/fundamental-react/issues/1156)) ([267e0bd](https://github.com/SAP/fundamental-react/commit/267e0bd94b5c96b4020a3ac546ea6739440e87f8))
+
+### [0.11.1-rc.23](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.22...v0.11.1-rc.23) (2020-08-10)
+
+### [0.11.1-rc.22](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.21...v0.11.1-rc.22) (2020-08-06)
+
+
+### Bug Fixes
+
+* add popoverProps to Select ([#1150](https://github.com/SAP/fundamental-react/issues/1150)) ([77ca775](https://github.com/SAP/fundamental-react/commit/77ca77517874e11141a7e6277ce31d8b85bba458))
+
+### [0.11.1-rc.21](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.20...v0.11.1-rc.21) (2020-08-06)
+
+
+### Bug Fixes
+
+* [#1130](https://github.com/SAP/fundamental-react/issues/1130) Adding disabled and readonly props to search input ([#1140](https://github.com/SAP/fundamental-react/issues/1140)) ([8934e9c](https://github.com/SAP/fundamental-react/commit/8934e9c2a49fbe8284c87683a550eb85cfaf4715))
+
+### [0.11.1-rc.20](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.19...v0.11.1-rc.20) (2020-08-04)
+
+
+### Features
+
+* update fundamental styles to 0.11.3-rc.8 ([#1142](https://github.com/SAP/fundamental-react/issues/1142)) ([282f771](https://github.com/SAP/fundamental-react/commit/282f77177edf41c4f761cc6a171c22892f021e31))
+
 ### [0.11.1-rc.19](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.18...v0.11.1-rc.19) (2020-08-04)
 
 ### [0.11.1-rc.18](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.17...v0.11.1-rc.18) (2020-08-03)

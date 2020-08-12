@@ -1,5 +1,6 @@
 import '../custom.scss';
 import Community from './Community';
+import Description from './Description';
 import { DocsContext } from '@storybook/addon-docs/blocks';
 import Footer from './Footer';
 import Header from './Header';
@@ -10,7 +11,6 @@ import React, { useContext, useEffect } from 'react';
 import {
     Title,
     Subtitle,
-    Description,
     Heading,
     Props,
     DocsStory,
@@ -46,8 +46,8 @@ const DocsPage = () => {
         <Title />
         <Toc />
         <Subtitle />
+        {context?.parameters?.description && <Description desc={context?.parameters?.description} />}
         <Import />
-        <Description />
         <Heading>Examples</Heading>
         {stories.map((story) => story && <DocsStory
             key={story.id}

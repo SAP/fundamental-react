@@ -4,7 +4,7 @@ import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
-import shortId from '../utils/shortId';
+import useUniqueId from '../utils/useUniqueId';
 import 'fundamental-styles/dist/radio.css';
 
 const FormRadioItem = React.forwardRef(({
@@ -31,7 +31,8 @@ const FormRadioItem = React.forwardRef(({
         }
     );
 
-    const radioId = id ? id : shortId.generate();
+    const generatedRadioId = useUniqueId();
+    const radioId = id || generatedRadioId;
 
     return (
         <FormItem

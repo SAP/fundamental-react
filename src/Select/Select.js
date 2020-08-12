@@ -21,10 +21,12 @@ const Select = React.forwardRef(({
     emptyAriaLabel,
     id,
     includeEmptyOption,
+    listClassName,
     options,
     onClick,
     onSelect,
     placeholder,
+    popoverProps,
     readOnly,
     selectedKey,
     validationState,
@@ -126,15 +128,19 @@ const Select = React.forwardRef(({
             validationState={validationState} />
     );
 
-    const listClassName = classnames(
+    const listBoxClassName = classnames(
         'fd-list--dropdown',
         {
             'fd-list--has-message': validationState?.state
-        }
+        },
+        listClassName
     );
 
     return (
         <Popover
+            placement='bottom-start'
+            widthSizingType='minTarget'
+            {...popoverProps}
             body={
                 (<>
                     {validationState &&
@@ -144,7 +150,7 @@ const Select = React.forwardRef(({
                     </FormMessage>
                     }
                     <List
-                        className={listClassName}
+                        className={listBoxClassName}
                         compact={compact}
                         ref={ulRef}
                         role='listbox'
@@ -169,11 +175,9 @@ const Select = React.forwardRef(({
             disableTriggerOnClick={disabled || readOnly}
             firstFocusIndex={firstFocusIndex}
             noArrow
-            placement='bottom-start'
             ref={popoverRef}
             type='listbox'
-            useArrowKeyNavigation
-            widthSizingType='minTarget' />
+            useArrowKeyNavigation />
     );
 });
 
@@ -192,6 +196,8 @@ Select.propTypes = {
     id: PropTypes.string,
     /** Set to **true** to include an empty option. If true, also provide an `emptyAriaLabel` */
     includeEmptyOption: PropTypes.bool,
+    /** CSS class(es) to add to the option list element */
+    listClassName: PropTypes.string,
     /** An array of objects with a key and text to render the selectable options */
     options: PropTypes.arrayOf(PropTypes.shape({
         key: PropTypes.string.isRequired,
@@ -199,6 +205,8 @@ Select.propTypes = {
     })),
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
+    /** Additional props to be spread to the Popover component */
+    popoverProps: PropTypes.object,
     /** Set to **true** to enable readonly mode */
     readOnly: PropTypes.bool,
     /** The key corresponding to the selected option */
