@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1-rc.26](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.25...v0.11.1-rc.26) (2020-08-12)
+
+
+### Bug Fixes
+
+* add prop for Select dropdown styling ([#1154](https://github.com/SAP/fundamental-react/issues/1154)) ([8d6d93e](https://github.com/SAP/fundamental-react/commit/8d6d93ed5329e1937ebfdffb0f9b6288ed1bbd48))
+
 ### [0.11.1-rc.25](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.24...v0.11.1-rc.25) (2020-08-11)
 
 ### [0.11.1-rc.24](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.23...v0.11.1-rc.24) (2020-08-11)
