@@ -32,7 +32,7 @@
     "size": "npm run build && size-limit",
     "size:debug": "npm run build && size-limit --why",
     "start": "npm run storybook",
-    "std-version": "standard-version -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
+    "std-version": "standard-version --releaseCommitMessageFormat \"chore(release): version {{currentTag}} build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "npm run build:storybook && start-storybook -p 12123 -s .storybook/static/,node_modules/@sap-theming",
     "storybook:ci": "npm run storybook -- --ci --quiet",
     "storybook:static": "rm -rf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs",
