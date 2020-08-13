@@ -87,7 +87,7 @@ List.propTypes = {
     noBorder: PropTypes.bool,
     /** Set to **true** if any list item is a link, but not all */
     partialNavigation: PropTypes.bool,
-    /** Set to **true** if list is an option list i.e. `List.Item` contain `List.Selection`. Do not add non-selectable list items to such lists, for accessibility */
+    /** Set to **true** if list is an option list i.e. `List.Item` contain `List.Selection`. Do not add non-selectable list items to such lists for accessibility reasons.*/
     selectable: PropTypes.bool
 };
 
