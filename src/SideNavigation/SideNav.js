@@ -28,9 +28,8 @@ class SideNav extends Component {
     handleSelect = (e, id) => {
         this.setState({
             selectedId: id
-        }, () => {
-            this.props.onItemSelect(e, id);
         });
+        this.props.onItemSelect(e, id);
     }
 
     render() {
