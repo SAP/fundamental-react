@@ -13,9 +13,9 @@ const ListHeader = ({
     );
 
     return (
-        <li {...props} className={ListItemClasses}>
+        <label {...props} className={ListItemClasses}>
             {children}
-        </li>
+        </label>
 
     );
 };
