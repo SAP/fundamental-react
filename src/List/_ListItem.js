@@ -67,7 +67,7 @@ const ListItem = ({
         );
     } else {
         content = React.Children.map(children, child => {
-            if (child?.type.displayName === ListSelection.displayName) {
+            if (child?.type?.displayName === ListSelection.displayName) {
                 selectionProps = {
                     'role': 'option',
                     'aria-selected': selected
