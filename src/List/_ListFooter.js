@@ -13,9 +13,9 @@ const ListFooter = ({
     );
 
     return (
-        <li {...props} className={ListItemClasses}>
+        <span {...props} className={ListItemClasses}>
             {children}
-        </li>
+        </span>
 
     );
 };
