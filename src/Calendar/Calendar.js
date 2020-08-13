@@ -37,6 +37,7 @@ class Calendar extends Component {
             refocusGrid: props.focusOnInit,
             currentDateDisplayed: currentDateDisplayed,
             arrSelectedDates: props.enableRangeSelection ? selectedDateOrDates : [],
+            screenReaderText: '',
             selectedDate: !props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
             showYears: false,
@@ -166,6 +167,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: newDate,
+            screenReaderText: this.props.localizedText.dayInstructions,
             showMonths: false
         });
     }
@@ -175,6 +177,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: newDate,
+            screenReaderText: this.props.localizedText.dayInstructions,
             showYears: false
         });
     }
@@ -353,23 +356,27 @@ class Calendar extends Component {
 
     handleNext = () => {
         const { currentDateDisplayed } = this.state;
+        const months = moment.localeData(this.props.locale).months();
+
         if (this.state.showYears) {
             const newDate = moment(currentDateDisplayed).add(12, 'year');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: newDate.year() });
         } else {
             const newDate = moment(currentDateDisplayed).add(1, 'month');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: `${months[newDate.month()]} ${newDate.year()}` });
         }
     }
 
     handlePrevious = () => {
         const { currentDateDisplayed } = this.state;
+        const months = moment.localeData(this.props.locale).months();
+
         if (this.state.showYears) {
             const newDate = moment(currentDateDisplayed).subtract(12, 'year');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: newDate.year() });
         } else {
             const newDate = moment(currentDateDisplayed).subtract(1, 'month');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: `${months[newDate.month()]} ${newDate.year()}` });
         }
     }
 
@@ -404,6 +411,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: day,
+            screenReaderText: isRangeEnabled ? this.props.localizedText.rangeInstructions : '',
             selectedDate: day,
             arrSelectedDates: selectedDates
         }, function() {
@@ -457,7 +465,7 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__header'>
-                <div aria-live='assertive' className='fd-calendar__navigation'>
+                <div className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
@@ -693,12 +701,27 @@ class Calendar extends Component {
                     className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
-                    <div className='fd-calendar__content'>
+                    <div className='fd-calendar__content'
+                        onBlur={(e) => {
+                            if (!e.currentTarget.contains(e.relatedTarget)) {
+                                this.setState({ screenReaderText: '' });
+                            }
+                        }}
+                        onFocus={() => {
+                            let instructions = localizedText.dayInstructions;
+                            if (this.state.showYears) {
+                                instructions = localizedText.yearInstructions;
+                            } else if (this.state.showMonths) {
+                                instructions = localizedText.monthInstructions;
+                            }
+                            this.setState({ screenReaderText: instructions });
+                        }}>
                         {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                     </div>
                 </div>
-                <div aria-live='polite' className='fd-calendar__content fd-calendar__content--screen-reader-only'>
-                    {localizedText.calendarInstructions}
+                <div aria-live='polite'
+                    className='fd-calendar__content fd-calendar__content--screen-reader-only'>
+                    {this.state.screenReaderText}
                 </div>
             </>
         );
@@ -741,8 +764,14 @@ Calendar.propTypes = {
     locale: PropTypes.string,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
-        /** Localized string informing screen reader users the calendar can be navigated by arrow keys */
-        calendarInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in day view */
+        dayInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in month view */
+        monthInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in year view */
+        yearInstructions: PropTypes.string,
+        /** Localized string informing screen reader users to select a second date when in range selection */
+        rangeInstructions: PropTypes.string,
         /** aria-label for next button */
         nextMonth: PropTypes.string,
         /** aria-label for previous button */
@@ -780,7 +809,10 @@ Calendar.defaultProps = {
     compact: false,
     locale: 'en',
     localizedText: {
-        calendarInstructions: 'Use arrow keys to move between dates.',
+        dayInstructions: 'Use arrow keys to move between days.',
+        monthInstructions: 'Use arrow keys to move between months.',
+        yearInstructions: 'Use arrow keys to move between years.',
+        rangeInstructions: 'First date selected. Please select a second date.',
         nextMonth: 'Next month',
         previousMonth: 'Previous month',
         show12NextYears: 'Show 12 next years',
