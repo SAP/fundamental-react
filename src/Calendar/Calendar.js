@@ -37,6 +37,7 @@ class Calendar extends Component {
             refocusGrid: props.focusOnInit,
             currentDateDisplayed: currentDateDisplayed,
             arrSelectedDates: props.enableRangeSelection ? selectedDateOrDates : [],
+            screenReaderText: props.localizedText.calendarInstructions,
             selectedDate: !props.enableRangeSelection ? selectedDateOrDates : null,
             showMonths: false,
             showYears: false,
@@ -166,6 +167,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: newDate,
+            screenReaderText: this.props.localizedText.calendarInstructions,
             showMonths: false
         });
     }
@@ -175,6 +177,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: newDate,
+            screenReaderText: this.props.localizedText.calendarInstructions,
             showYears: false
         });
     }
@@ -353,23 +356,27 @@ class Calendar extends Component {
 
     handleNext = () => {
         const { currentDateDisplayed } = this.state;
+        const months = moment.localeData(this.props.locale).months();
+
         if (this.state.showYears) {
             const newDate = moment(currentDateDisplayed).add(12, 'year');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: newDate.year() });
         } else {
             const newDate = moment(currentDateDisplayed).add(1, 'month');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: `${months[newDate.month()]} ${newDate.year()}` });
         }
     }
 
     handlePrevious = () => {
         const { currentDateDisplayed } = this.state;
+        const months = moment.localeData(this.props.locale).months();
+
         if (this.state.showYears) {
             const newDate = moment(currentDateDisplayed).subtract(12, 'year');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: newDate.year() });
         } else {
             const newDate = moment(currentDateDisplayed).subtract(1, 'month');
-            this.setState({ currentDateDisplayed: newDate });
+            this.setState({ currentDateDisplayed: newDate, screenReaderText: `${months[newDate.month()]} ${newDate.year()}` });
         }
     }
 
@@ -404,6 +411,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: day,
+            screenReaderText: '', // selected day
             selectedDate: day,
             arrSelectedDates: selectedDates
         }, function() {
@@ -457,7 +465,7 @@ class Calendar extends Component {
 
         return (
             <div className='fd-calendar__header'>
-                <div aria-live='assertive' className='fd-calendar__navigation'>
+                <div className='fd-calendar__navigation'>
                     <div className='fd-calendar__action'>
                         <Button
                             aria-label={previousButtonLabel}
@@ -693,12 +701,21 @@ class Calendar extends Component {
                     className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
-                    <div className='fd-calendar__content'>
+                    <div className='fd-calendar__content'
+                        onBlur={(e) => {
+                            if (!e.currentTarget.contains(e.relatedTarget)) {
+                                this.setState({ screenReaderText: '' });
+                            }
+                        }}
+                        onFocus={() => {
+                            this.setState({ screenReaderText: localizedText.calendarInstructions });
+                        }}>
                         {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                     </div>
                 </div>
-                <div aria-live='polite' className='fd-calendar__content fd-calendar__content--screen-reader-only'>
-                    {localizedText.calendarInstructions}
+                <div aria-live='polite' aria-relevant='all'
+                    className='fd-calendar__content fd-calendar__content--screen-reader-only'>
+                    {this.state.screenReaderText}
                 </div>
             </>
         );
