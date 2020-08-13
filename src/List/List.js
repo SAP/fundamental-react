@@ -8,8 +8,8 @@ import ListSelection from './_ListSelection';
 import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/list.css';
 import useUniqueId from '../utils/useUniqueId';
+import 'fundamental-styles/dist/list.css';
 
 /** **List** and **Table** are similar as both usually contain a vertical list of data,
 but lists generally contain basic data and tables tend to hold more complex data.
