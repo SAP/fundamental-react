@@ -9,6 +9,7 @@ import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React from 'react';
 import 'fundamental-styles/dist/list.css';
+import useUniqueId from '../utils/useUniqueId';
 
 /** **List** and **Table** are similar as both usually contain a vertical list of data,
 but lists generally contain basic data and tables tend to hold more complex data.
@@ -18,15 +19,18 @@ const List = React.forwardRef(({
     className,
     compact,
     hasByline,
+    id,
     navigation,
     noBorder,
     partialNavigation,
+    selectable,
     ...props
 }, ref) => {
 
     const ListClasses = classnames(
         'fd-list',
         {
+            'fd-list--selection': selectable,
             'fd-list--compact': compact,
             'fd-list--no-border': noBorder,
             'fd-list--byline': hasByline,
@@ -36,11 +40,31 @@ const List = React.forwardRef(({
         className
     );
 
+    const isHeader = (child) => child?.type?.displayName === ListHeader.displayName;
+    const isFooter = (child) => child?.type?.displayName === ListFooter.displayName;
+
+    const listHeader = React.Children.toArray(children).find(isHeader);
+    const listFooter = React.Children.toArray(children).find(isFooter);
+    const listId = useUniqueId(id);
+
     return (
-        <ul {...props} className={ListClasses}
-            ref={ref}>
-            { React.Children.map(children, child => React.cloneElement(child, { hasByline, navigation, partialNavigation })) }
-        </ul>
+        <>
+            {listHeader && React.cloneElement(listHeader, { id: `${listId}-label` })}
+            <ul
+                {...props}
+                {...(selectable ? { 'role': 'listbox' } : null)}
+                aria-labelledby={listHeader ? `${listId}-label` : null}
+                className={ListClasses}
+                id={`${listId}-list`}
+                ref={ref}>
+                { React.Children.map(children, child => {
+                    if (!(isHeader(child) || isFooter(child)) ) {
+                        return React.cloneElement(child, { hasByline, navigation, partialNavigation });
+                    }
+                } ) }
+            </ul>
+            {listFooter}
+        </>
     );
 });
 
@@ -55,12 +79,16 @@ List.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** if any list item has a byline. */
     hasByline: PropTypes.bool,
+    /** Unique id for the list, used to associate `List.Header` as the list label for accessibility. A generated value will be used if not set.*/
+    id: PropTypes.string,
     /** Set to **true** if all list items are links */
     navigation: PropTypes.bool,
     /** Set to **true** to remove borders from the List component. */
     noBorder: PropTypes.bool,
     /** Set to **true** if any list item is a link, but not all */
-    partialNavigation: PropTypes.bool
+    partialNavigation: PropTypes.bool,
+    /** Set to **true** if list is an option list i.e. `List.Item` contain `List.Selection`. Do not add non-selectable list items to such lists, for accessibility */
+    selectable: PropTypes.bool
 };
 
 
