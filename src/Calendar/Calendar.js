@@ -411,7 +411,7 @@ class Calendar extends Component {
 
         this.setState({
             currentDateDisplayed: day,
-            screenReaderText: '', // selected day
+            screenReaderText: isRangeEnabled ? this.props.localizedText.rangeInstructions : '',
             selectedDate: day,
             arrSelectedDates: selectedDates
         }, function() {
@@ -770,6 +770,8 @@ Calendar.propTypes = {
         monthInstructions: PropTypes.string,
         /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in year view */
         yearInstructions: PropTypes.string,
+        /** Localized string informing screen reader users to select a second date when in range selection */
+        rangeInstructions: PropTypes.string,
         /** aria-label for next button */
         nextMonth: PropTypes.string,
         /** aria-label for previous button */
@@ -810,6 +812,7 @@ Calendar.defaultProps = {
         dayInstructions: 'Use arrow keys to move between days.',
         monthInstructions: 'Use arrow keys to move between months.',
         yearInstructions: 'Use arrow keys to move between years.',
+        rangeInstructions: 'First date selected. Please select a second date.',
         nextMonth: 'Next month',
         previousMonth: 'Previous month',
         show12NextYears: 'Show 12 next years',
