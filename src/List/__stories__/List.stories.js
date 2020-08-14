@@ -40,8 +40,9 @@ export const simple = () => (
 simple.storyName = 'Simple List';
 
 export const headerFooter = () => (
-    <List>
-        <List.Header>Fruits</List.Header>
+    <List
+        footer={<List.Footer>Updated 3 minutes ago</List.Footer>}
+        header={<List.Header>Fruits</List.Header>}>
         <List.Item>
             <List.Text>Apple</List.Text>
         </List.Item>
@@ -54,15 +55,16 @@ export const headerFooter = () => (
         <List.Item>
             <List.Text>Grape</List.Text>
         </List.Item>
-        <List.Footer>Updated 3 minutes ago</List.Footer>
     </List>
 );
 
 headerFooter.storyName = 'with Header and Footer';
 
 export const noBorder = () => (
-    <List noBorder>
-        <List.Header>Fruits</List.Header>
+    <List
+        footer={<List.Footer>Updated 3 minutes ago</List.Footer>}
+        header={<List.Header>Fruits</List.Header>}
+        noBorder>
         <List.Item>
             <List.Text>Apple</List.Text>
         </List.Item>
@@ -75,15 +77,15 @@ export const noBorder = () => (
         <List.Item>
             <List.Text>Grape</List.Text>
         </List.Item>
-        <List.Footer>Updated 3 minutes ago</List.Footer>
     </List>
 );
 
 noBorder.storyName = 'with no borders';
 
 export const compact = () => (
-    <List compact >
-        <List.Header>Fruits</List.Header>
+    <List compact
+        footer={<List.Footer>Updated 3 minutes ago</List.Footer>}
+        header={<List.Header>Fruits</List.Header>}>
         <List.Item>
             <List.Text>Apple</List.Text>
         </List.Item>
@@ -96,13 +98,12 @@ export const compact = () => (
         <List.Item>
             <List.Text>Grape</List.Text>
         </List.Item>
-        <List.Footer>Updated 3 minutes ago</List.Footer>
     </List>
 );
 
 export const iconsLeft = () => (
-    <List >
-        <List.Header>Settings</List.Header>
+    <List
+        header={<List.Header>Settings</List.Header>}>
         <List.Item>
             <List.Icon glyph='cart' />
             <List.Text>Checkout Cart</List.Text>
@@ -122,8 +123,8 @@ export const iconsLeft = () => (
     </List>
 );
 export const iconsRight = () => (
-    <List >
-        <List.Header>Settings</List.Header>
+    <List
+        header={<List.Header>Settings</List.Header>} >
         <List.Item>
             <List.Text>Checkout Cart</List.Text>
             <List.Icon glyph='navigation-right-arrow' />
@@ -144,8 +145,14 @@ export const iconsRight = () => (
 );
 
 export const secondaryText = () => (
-    <List >
-        <List.Header>Order Receipt (4 items)</List.Header>
+    <List
+        footer={
+            <List.Footer>
+                <List.Text><b>Total</b></List.Text>
+                <List.Text secondary>7</List.Text>
+            </List.Footer>
+        }
+        header={<List.Header>Order Receipt (4 items)</List.Header>} >
         <List.Item>
             <List.Text>Apple</List.Text>
             <List.Text secondary>Quantity: 2</List.Text>
@@ -162,31 +169,29 @@ export const secondaryText = () => (
             <List.Text>Grape</List.Text>
             <List.Text secondary>Quantity: 1</List.Text>
         </List.Item>
-        <List.Footer>
-            <List.Text><b>Total</b></List.Text>
-            <List.Text secondary>7</List.Text>
-        </List.Footer>
     </List>
 );
 
 export const dev = () => (
     <List
         compact={boolean('compact', false)}
+        footer={<List.Footer>List Footer</List.Footer>}
+        header={<List.Header>Developer's List</List.Header>}
         noBorder={boolean('noBorder', false)}>
-        <List.Header>Developer's List</List.Header>
         <List.Item selected={boolean('selected', false)}>
             <List.Icon glyph={text('icon', 'accept')} />
             <List.Text
                 noWrap={boolean('noWrap', false)}
                 secondary={boolean('secondary', false)}>{text('text', 'List Item 1')}</List.Text>
         </List.Item>
-        <List.Footer>List Footer</List.Footer>
     </List>
 );
 
 export const byline = () => (
-    <List hasByline >
-        <List.Header>Order Summary (4 items)</List.Header>
+    <List
+        footer={<List.Footer>Updated 3 minutes ago</List.Footer>}
+        hasByline
+        header={<List.Header>Order Summary (4 items)</List.Header>} >
         <List.Item>
             <List.Text>Apple</List.Text>
             <List.Byline>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</List.Byline>
@@ -206,7 +211,6 @@ export const byline = () => (
                 <List.Text right> Out of stock</List.Text>
             </List.Byline>
         </List.Item>
-        <List.Footer>Updated 3 minutes ago</List.Footer>
     </List>
 );
 
@@ -216,9 +220,10 @@ export const selection = () => {
     return (
         <>
             <List
+                footer={<List.Footer>Company ©</List.Footer>}
+                header={<List.Header>Checkout options</List.Header>}
                 partialNavigation
                 selectable>
-                <List.Header>Checkout options</List.Header>
                 <List.Item selected>
                     <List.Selection checkBoxAriaLabel='Coupon Applied: FREE'>
                         <List.Text>Coupon Applied: FREE</List.Text>
@@ -240,15 +245,16 @@ export const selection = () => {
                         <List.Text>Less packaging</List.Text>
                     </List.Selection>
                 </List.Item>
-                <List.Footer>Company ©</List.Footer>
             </List>
         </>
     );
 };
 
 export const partialNavigation = () => (
-    <List partialNavigation>
-        <List.Header>Cart (3 items)</List.Header>
+    <List
+        footer={<List.Footer>Updated 3 minutes ago</List.Footer>}
+        header={<List.Header>Cart (3 items)</List.Header>}
+        partialNavigation>
         <List.Item url={'#'}>
             <List.Text>Add more items</List.Text>
         </List.Item>
@@ -264,13 +270,12 @@ export const partialNavigation = () => (
         <List.Item selected url={'#'}>
             <List.Text>Checkout</List.Text>
         </List.Item>
-        <List.Footer>Updated 3 minutes ago</List.Footer>
     </List>
 );
 
 export const navigationList = () => (
-    <List navigation>
-        <List.Header>Quick links</List.Header>
+    <List footer={<List.Footer>Company © </List.Footer>} header={<List.Header>Quick links</List.Header>}
+        navigation>
         <List.Item url={'#'}>
             <List.Text>Checkout Cart</List.Text>
         </List.Item>
@@ -283,13 +288,13 @@ export const navigationList = () => (
         <List.Item selected url={'#'}>
             <List.Text>Order History</List.Text>
         </List.Item>
-        <List.Footer>Company © </List.Footer>
     </List>
 );
 
 export const actionList = () => (
-    <List >
-        <List.Header>Cart (4 items)</List.Header>
+    <List
+        footer={<List.Footer>Company ©</List.Footer>}
+        header={<List.Header>Cart (4 items)</List.Header>} >
         <List.Item>
             <List.Text>Apple</List.Text>
             <List.Text secondary>Quantity: 2</List.Text>
@@ -315,7 +320,6 @@ export const actionList = () => (
         <List.Item action>
             Checkout
         </List.Item>
-        <List.Footer>Company ©</List.Footer>
     </List>
 );
 

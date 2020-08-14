@@ -18,7 +18,9 @@ const List = React.forwardRef(({
     children,
     className,
     compact,
+    footer,
     hasByline,
+    header,
     id,
     navigation,
     noBorder,
@@ -40,30 +42,21 @@ const List = React.forwardRef(({
         className
     );
 
-    const isHeader = (child) => child?.type?.displayName === ListHeader.displayName;
-    const isFooter = (child) => child?.type?.displayName === ListFooter.displayName;
-
-    const listHeader = React.Children.toArray(children).find(isHeader);
-    const listFooter = React.Children.toArray(children).find(isFooter);
     const listId = useUniqueId(id);
 
     return (
         <>
-            {listHeader && React.cloneElement(listHeader, { id: `${listId}-label` })}
+            {header && React.cloneElement(header, { id: `${listId}-label` })}
             <ul
                 {...props}
-                {...(selectable ? { 'role': 'listbox' } : null)}
-                aria-labelledby={listHeader ? `${listId}-label` : null}
+                aria-labelledby={header ? `${listId}-label` : null}
                 className={listClasses}
                 id={`${listId}-list`}
-                ref={ref}>
-                { React.Children.map(children, child => {
-                    if (!(isHeader(child) || isFooter(child)) ) {
-                        return React.cloneElement(child, { hasByline, navigation, partialNavigation });
-                    }
-                } ) }
+                ref={ref}
+                role={selectable ? 'listbox' : 'list'}>
+                { React.Children.map(children, child => React.cloneElement(child, { hasByline, navigation, partialNavigation })) }
             </ul>
-            {listFooter}
+            {footer}
         </>
     );
 });
@@ -77,8 +70,12 @@ List.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** The list footer as a React component. Use the `List.Footer` component. */
+    footer: PropTypes.object,
     /** Set to **true** if any list item has a byline. */
     hasByline: PropTypes.bool,
+    /** The list header as a React component. Use the `List.Header` component. */
+    header: PropTypes.object,
     /** Unique id for the list, used to associate `List.Header` as the list label for accessibility. A generated value will be used if not set.*/
     id: PropTypes.string,
     /** Set to **true** if all list items are links */
