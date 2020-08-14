@@ -27,7 +27,7 @@ const List = React.forwardRef(({
     ...props
 }, ref) => {
 
-    const ListClasses = classnames(
+    const listClasses = classnames(
         'fd-list',
         {
             'fd-list--selection': selectable,
@@ -54,7 +54,7 @@ const List = React.forwardRef(({
                 {...props}
                 {...(selectable ? { 'role': 'listbox' } : null)}
                 aria-labelledby={listHeader ? `${listId}-label` : null}
-                className={ListClasses}
+                className={listClasses}
                 id={`${listId}-list`}
                 ref={ref}>
                 { React.Children.map(children, child => {
