@@ -14,6 +14,7 @@ exports[`Storyshots Component API/List Action List 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -138,6 +139,7 @@ exports[`Storyshots Component API/List Byline 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list fd-list--byline"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -251,6 +253,7 @@ exports[`Storyshots Component API/List Compact 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list fd-list--compact"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -319,6 +322,7 @@ exports[`Storyshots Component API/List Dev 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -357,6 +361,7 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -432,6 +437,7 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -507,6 +513,7 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item fd-list__item--link"
@@ -599,6 +606,7 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item fd-list__item--link"
@@ -690,6 +698,7 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -907,6 +916,7 @@ exports[`Storyshots Component API/List Simple List 1`] = `
     aria-labelledby={null}
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -970,6 +980,7 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -1038,6 +1049,7 @@ exports[`Storyshots Component API/List with no borders 1`] = `
     aria-labelledby="fd-mocked-short-id-label"
     className="fd-list fd-list--no-border"
     id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
