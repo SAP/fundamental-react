@@ -587,7 +587,7 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
   <span
     className="fd-list__footer"
   >
-    Company © 
+    Company ©
   </span>
 </div>
 `;
