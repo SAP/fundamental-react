@@ -267,24 +267,22 @@ describe('<SearchInput />', () => {
         });
 
         test('should allow props list to be changed after creation', () => {
-            let ref;
             class Test extends React.Component {
                 constructor(props) {
                     super(props);
-                    ref = React.createRef();
                     this.state = {
                         list: searchData
                     };
                 }
 
-                handleChange = () => {
-                    if (ref.current.value === 'pe') {
+                handleChange = (e) => {
+                    if (e.target.value === 'pe') {
                         this.setState({
                             list: searchDataNew
                         });
                     }
                 }
-                render = () => (<SearchInput inputProps={{ ref: ref }} onChange={this.handleChange}
+                render = () => (<SearchInput onChange={this.handleChange}
                     searchList={this.state.list} />);
             }
             const wrapper = mount(<Test />);

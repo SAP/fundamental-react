@@ -38,10 +38,9 @@ class SearchInput extends PureComponent {
             value: item.text,
             isExpanded: false,
             searchExpanded: false
-        }, () => {
-            item?.callback();
-            this.props.onSelect(event, item);
         });
+        item?.callback();
+        this.props.onSelect(event, item);
     };
 
     handleChange = event => {
@@ -52,9 +51,8 @@ class SearchInput extends PureComponent {
         this.setState({
             value: event.target.value,
             isExpanded: true
-        }, () => {
-            this.props.onChange(event, filteredResult);
         });
+        this.props.onChange(event, filteredResult);
     };
 
     handleClick = () => {
