@@ -1,0 +1,21 @@
+{
+  "name": "@sap-theming/theming-base-content",
+  "version": "11.1.19",
+  "description": "Theming Base Content",
+  "author": "SAP SE (https://www.sap.com)",
+  "license": "Apache-2.0",
+  "keywords": [
+    "theming",
+    "sap-theming",
+    "themes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP/theming-base-content"
+  },
+  "dependencies": {}
+
+,"_resolved": "https://registry.npmjs.org/@sap-theming/theming-base-content/-/theming-base-content-11.1.19.tgz"
+,"_integrity": "sha512-0RIoniX0XgQDMfMsySvNDeXVGtH3UQRQMkJYFIkaq/nrTGSyfXT9k+B4CbTf4546dyrlLM0YoaHIOtxmMsh1ZA=="
+,"_from": "@sap-theming/theming-base-content@11.1.19"
+}
