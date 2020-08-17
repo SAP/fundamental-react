@@ -3,6 +3,7 @@ import CustomPropTypes from './CustomPropTypes/CustomPropTypes';
 import Foco from 'react-foco';
 import { getModalManager } from './modalManager';
 import keycode from 'keycode';
+import PopperContainer from './_PopperContainer';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -223,8 +224,11 @@ class Popper extends React.Component {
         );
 
         if (usePortal) {
-            // eslint-disable-next-line compat/compat
-            popper = ReactDOM.createPortal(popper, document.querySelector('body'));
+            popper = (
+                <PopperContainer>
+                    {popper}
+                </PopperContainer>
+            );
         }
 
         return (
