@@ -46,7 +46,7 @@ const List = React.forwardRef(({
 
     return (
         <>
-            {header && React.cloneElement(header, { id: `${listId}-label` })}
+            {header && <List.Header id={`${listId}-label`}>{header}</List.Header>}
             <ul
                 {...props}
                 aria-labelledby={header ? `${listId}-label` : null}
@@ -56,7 +56,7 @@ const List = React.forwardRef(({
                 role={selectable ? 'listbox' : 'list'}>
                 { React.Children.map(children, child => React.cloneElement(child, { hasByline, navigation, partialNavigation })) }
             </ul>
-            {footer}
+            {footer && <List.Footer>{footer}</List.Footer>}
         </>
     );
 });
@@ -70,12 +70,12 @@ List.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** The list footer as a React component. Use the `List.Footer` component. */
-    footer: PropTypes.object,
+    /** The list footer as a String or a React component.*/
+    footer: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     /** Set to **true** if any list item has a byline. */
     hasByline: PropTypes.bool,
-    /** The list header as a React component. Use the `List.Header` component. */
-    header: PropTypes.object,
+    /** The list header as a String or a React component.*/
+    header: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     /** Unique id for the list, used to associate `List.Header` as the list label for accessibility. A generated value will be used if not set.*/
     id: PropTypes.string,
     /** Set to **true** if all list items are links */
