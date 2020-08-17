@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.29...v0.12.0-rc.0) (2020-08-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* If consumers had used the SearchInput expecting the input's ref value to be updated inside of the callback, this is a breaking change, but that seems like an atypical, non-react way to handle changes
+
+### Bug Fixes
+
+* Move SearchInput and SideNav callbacks outside of the setState callback to maintain event properties ([#1165](https://github.com/SAP/fundamental-react/issues/1165)) ([e1127b1](https://github.com/SAP/fundamental-react/commit/e1127b131f4f5c3f4b49e1d1880ae8629f7d1285))
+
 ### [0.11.1-rc.29](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.28...v0.11.1-rc.29) (2020-08-13)
 
 
