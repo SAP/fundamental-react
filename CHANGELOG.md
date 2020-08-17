@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.0...v0.12.1-rc.0) (2020-08-17)
+
+
+### Bug Fixes
+
+* refactor popper portal ([#1169](https://github.com/SAP/fundamental-react/issues/1169)) ([05bc098](https://github.com/SAP/fundamental-react/commit/05bc09882b180b2ce40b05ea443e5d9f75763882))
+
 ## [0.12.0](https://github.com/SAP/fundamental-react/compare/v0.12.0-rc.0...v0.12.0) (2020-08-17)
 
 ## [0.12.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.29...v0.12.0-rc.0) (2020-08-17)
