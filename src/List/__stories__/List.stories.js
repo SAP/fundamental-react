@@ -1,7 +1,5 @@
 /* eslint-disable react/no-multi-comp */
 import List from '../List';
-import ListFooter from '../_ListFooter';
-import ListHeader from '../_ListHeader';
 import ListIcon from '../_ListIcon';
 import ListItem from '../_ListItem';
 import ListText from '../_ListText';
@@ -14,8 +12,7 @@ import React, { useState } from 'react';
 export default {
     title: 'Component API/List',
     component: List,
-    subcomponents: { ListFooter, ListHeader, ListIcon,
-        ListItem, ListText }
+    subcomponents: { ListIcon, ListItem, ListText }
 };
 
 
