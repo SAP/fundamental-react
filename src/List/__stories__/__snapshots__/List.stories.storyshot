@@ -4,14 +4,14 @@ exports[`Storyshots Component API/List Action List 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Cart (4 items)
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
     id="fd-mocked-short-id-list"
     role="list"
@@ -129,14 +129,14 @@ exports[`Storyshots Component API/List Byline 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Order Summary (4 items)
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--byline"
     id="fd-mocked-short-id-list"
     role="list"
@@ -243,14 +243,14 @@ exports[`Storyshots Component API/List Compact 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Fruits
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--compact"
     id="fd-mocked-short-id-list"
     role="list"
@@ -312,14 +312,14 @@ exports[`Storyshots Component API/List Dev 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Developer's List
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
     id="fd-mocked-short-id-list"
     role="list"
@@ -351,14 +351,14 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Settings
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
     id="fd-mocked-short-id-list"
     role="list"
@@ -427,14 +427,14 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Settings
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
     id="fd-mocked-short-id-list"
     role="list"
@@ -503,14 +503,14 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Quick links
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
     id="fd-mocked-short-id-list"
     role="list"
@@ -596,14 +596,14 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Cart (3 items)
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
     id="fd-mocked-short-id-list"
     role="list"
@@ -688,14 +688,14 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Order Receipt (4 items)
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
     id="fd-mocked-short-id-list"
     role="list"
@@ -788,14 +788,14 @@ exports[`Storyshots Component API/List Selection 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Checkout options
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--selection fd-list--navigation fd-list--navigation-indication"
     id="fd-mocked-short-id-list"
     role="listbox"
@@ -970,14 +970,14 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Fruits
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
     id="fd-mocked-short-id-list"
     role="list"
@@ -1039,14 +1039,14 @@ exports[`Storyshots Component API/List with no borders 1`] = `
 <div
   dir="ltr"
 >
-  <label
+  <h4
     className="fd-list__group-header"
-    id="fd-mocked-short-id-label"
+    id="fd-mocked-short-id-header"
   >
     Fruits
-  </label>
+  </h4>
   <ul
-    aria-labelledby="fd-mocked-short-id-label"
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--no-border"
     id="fd-mocked-short-id-list"
     role="list"
