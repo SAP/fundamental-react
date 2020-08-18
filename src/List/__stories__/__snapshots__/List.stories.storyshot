@@ -4,13 +4,33 @@ exports[`Storyshots Component API/List Action List 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Cart (4 items)
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
+      className="fd-list__item"
+      onClick={[Function]}
+      tabIndex="0"
     >
-      List Header
+      <span
+        className="fd-list__title"
+      >
+        Apple
+      </span>
+      <span
+        className="fd-list__secondary"
+      >
+        Quantity: 2
+      </span>
     </li>
     <li
       className="fd-list__item"
@@ -20,51 +40,88 @@ exports[`Storyshots Component API/List Action List 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Banana
+      </span>
+      <span
+        className="fd-list__secondary"
+      >
+        Quantity: 3
+      </span>
+    </li>
+    <li
+      className="fd-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="fd-list__title"
+      >
+        Durian
+      </span>
+      <span
+        className="fd-list__secondary"
+      >
+        Quantity: 1
+      </span>
+    </li>
+    <li
+      className="fd-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="fd-list__title"
+      >
+        Grape
+      </span>
+      <span
+        className="fd-list__secondary"
+      >
+        Quantity: 1
       </span>
     </li>
     <li
       className="fd-list__item fd-list__item--action"
       onClick={null}
-      tabIndex="0"
+      tabIndex="-1"
     >
       <button
         className="fd-list__title"
         onClick={[Function]}
       >
-        List Item 2
+        Empty cart
       </button>
     </li>
     <li
       className="fd-list__item fd-list__item--action"
       onClick={null}
-      tabIndex="0"
+      tabIndex="-1"
     >
       <button
         className="fd-list__title"
         onClick={[Function]}
       >
-        List Item 3
+        Apply Coupon
       </button>
     </li>
     <li
       className="fd-list__item fd-list__item--action"
       onClick={null}
-      tabIndex="0"
+      tabIndex="-1"
     >
       <button
         className="fd-list__title"
         onClick={[Function]}
       >
-        List Item 4
+        Checkout
       </button>
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Company ©
+  </span>
 </div>
 `;
 
@@ -72,16 +129,19 @@ exports[`Storyshots Component API/List Byline 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Order Summary (4 items)
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--byline"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-      hasByline={true}
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item"
       onClick={[Function]}
       tabIndex="0"
@@ -92,12 +152,12 @@ exports[`Storyshots Component API/List Byline 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 1
+          Apple
         </span>
         <div
           className="fd-list__byline"
         >
-          Byline
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
         </div>
       </div>
     </li>
@@ -112,12 +172,12 @@ exports[`Storyshots Component API/List Byline 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 2
+          Banana
         </span>
         <div
           className="fd-list__byline"
         >
-          Byline
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
         </div>
       </div>
     </li>
@@ -132,12 +192,12 @@ exports[`Storyshots Component API/List Byline 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 3
+          Durian
         </span>
         <div
           className="fd-list__byline"
         >
-          Byline
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
         </div>
       </div>
     </li>
@@ -152,7 +212,7 @@ exports[`Storyshots Component API/List Byline 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 4
+          Grape
         </span>
         <div
           className="fd-list__byline fd-list__byline--2-col"
@@ -160,23 +220,22 @@ exports[`Storyshots Component API/List Byline 1`] = `
           <span
             className="fd-list__byline-left"
           >
-            Left byline
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           </span>
           <span
             className="fd-list__byline-right"
           >
-            Right byline
+             Out of stock
           </span>
         </div>
       </div>
     </li>
-    <li
-      className="fd-list__footer"
-      hasByline={true}
-    >
-      List Footer
-    </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Updated 3 minutes ago
+  </span>
 </div>
 `;
 
@@ -184,15 +243,19 @@ exports[`Storyshots Component API/List Compact 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Fruits
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--compact"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item"
       onClick={[Function]}
       tabIndex="0"
@@ -200,7 +263,7 @@ exports[`Storyshots Component API/List Compact 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Apple
       </span>
     </li>
     <li
@@ -211,7 +274,7 @@ exports[`Storyshots Component API/List Compact 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Banana
       </span>
     </li>
     <li
@@ -222,7 +285,7 @@ exports[`Storyshots Component API/List Compact 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Durian
       </span>
     </li>
     <li
@@ -233,15 +296,15 @@ exports[`Storyshots Component API/List Compact 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Grape
       </span>
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Updated 3 minutes ago
+  </span>
 </div>
 `;
 
@@ -249,14 +312,18 @@ exports[`Storyshots Component API/List Dev 1`] = `
 <div
   dir="ltr"
 >
-  <ul
-    className="fd-list"
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
   >
-    <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
+    Developer's List
+  </h4>
+  <ul
+    aria-labelledby="fd-mocked-short-id-header"
+    className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
+  >
     <li
       className="fd-list__item"
       onClick={[Function]}
@@ -271,12 +338,12 @@ exports[`Storyshots Component API/List Dev 1`] = `
         List Item 1
       </span>
     </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
-    </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    List Footer
+  </span>
 </div>
 `;
 
@@ -284,14 +351,18 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
 <div
   dir="ltr"
 >
-  <ul
-    className="fd-list"
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
   >
-    <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
+    Settings
+  </h4>
+  <ul
+    aria-labelledby="fd-mocked-short-id-header"
+    className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
+  >
     <li
       className="fd-list__item"
       onClick={[Function]}
@@ -303,7 +374,7 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Checkout Cart
       </span>
     </li>
     <li
@@ -317,7 +388,7 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Profile Settings
       </span>
     </li>
     <li
@@ -331,7 +402,7 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Information
       </span>
     </li>
     <li
@@ -345,13 +416,8 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Order History
       </span>
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
 </div>
@@ -361,15 +427,19 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Settings
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item"
       onClick={[Function]}
       tabIndex="0"
@@ -377,7 +447,7 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Checkout Cart
       </span>
       <span
         className="fd-list__icon sap-icon--navigation-right-arrow"
@@ -391,7 +461,7 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Profile Settings
       </span>
       <span
         className="fd-list__icon sap-icon--navigation-right-arrow"
@@ -405,7 +475,7 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Information
       </span>
       <span
         className="fd-list__icon sap-icon--navigation-right-arrow"
@@ -419,16 +489,11 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Order History
       </span>
       <span
         className="fd-list__icon sap-icon--navigation-right-arrow"
       />
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
 </div>
@@ -438,16 +503,19 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Quick links
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-      navigation={true}
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item fd-list__item--link"
       onClick={null}
       tabIndex="-1"
@@ -460,7 +528,7 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 1
+          Checkout Cart
         </span>
       </a>
     </li>
@@ -477,7 +545,7 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 2
+          Profile Settings
         </span>
       </a>
     </li>
@@ -494,7 +562,7 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 3
+          Information
         </span>
       </a>
     </li>
@@ -511,17 +579,16 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 4
+          Order History
         </span>
       </a>
     </li>
-    <li
-      className="fd-list__footer"
-      navigation={true}
-    >
-      List Footer
-    </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Company ©
+  </span>
 </div>
 `;
 
@@ -529,15 +596,18 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
 <div
   dir="ltr"
 >
-  <ul
-    className="fd-list fd-list--navigation fd-list--navigation-indication"
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
   >
-    <li
-      className="fd-list__group-header"
-      partialNavigation={true}
-    >
-      List Header
-    </li>
+    Cart (3 items)
+  </h4>
+  <ul
+    aria-labelledby="fd-mocked-short-id-header"
+    className="fd-list fd-list--navigation fd-list--navigation-indication"
+    id="fd-mocked-short-id-list"
+    role="list"
+  >
     <li
       className="fd-list__item fd-list__item--link"
       onClick={null}
@@ -551,7 +621,7 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 1
+          Add more items
         </span>
       </a>
     </li>
@@ -563,7 +633,7 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Apple
       </span>
     </li>
     <li
@@ -574,7 +644,18 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Banana
+      </span>
+    </li>
+    <li
+      className="fd-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="fd-list__title"
+      >
+        Durian
       </span>
     </li>
     <li
@@ -590,17 +671,16 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
         <span
           className="fd-list__title"
         >
-          List Item 4
+          Checkout
         </span>
       </a>
     </li>
-    <li
-      className="fd-list__footer"
-      partialNavigation={true}
-    >
-      List Footer
-    </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Updated 3 minutes ago
+  </span>
 </div>
 `;
 
@@ -608,15 +688,19 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Order Receipt (4 items)
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item"
       onClick={[Function]}
       tabIndex="0"
@@ -624,28 +708,12 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Apple
       </span>
       <span
         className="fd-list__secondary"
       >
-        Positive
-      </span>
-    </li>
-    <li
-      className="fd-list__item"
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      <span
-        className="fd-list__title"
-      >
-        List Item 2
-      </span>
-      <span
-        className="fd-list__secondary"
-      >
-        Negative
+        Quantity: 2
       </span>
     </li>
     <li
@@ -656,12 +724,12 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Banana
       </span>
       <span
         className="fd-list__secondary"
       >
-        Positive
+        Quantity: 3
       </span>
     </li>
     <li
@@ -672,20 +740,47 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Durian
       </span>
       <span
         className="fd-list__secondary"
       >
-        Negative
+        Quantity: 1
       </span>
     </li>
     <li
-      className="fd-list__footer"
+      className="fd-list__item"
+      onClick={[Function]}
+      tabIndex="0"
     >
-      List Footer
+      <span
+        className="fd-list__title"
+      >
+        Grape
+      </span>
+      <span
+        className="fd-list__secondary"
+      >
+        Quantity: 1
+      </span>
     </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    <span
+      className="fd-list__title"
+    >
+      <b>
+        Total
+      </b>
+    </span>
+    <span
+      className="fd-list__secondary"
+    >
+      7
+    </span>
+  </span>
 </div>
 `;
 
@@ -693,17 +788,23 @@ exports[`Storyshots Component API/List Selection 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Checkout options
+  </h4>
   <ul
-    className="fd-list"
+    aria-labelledby="fd-mocked-short-id-header"
+    className="fd-list fd-list--selection fd-list--navigation fd-list--navigation-indication"
+    id="fd-mocked-short-id-list"
+    role="listbox"
   >
     <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
-    <li
+      aria-selected={true}
       className="fd-list__item"
       onClick={[Function]}
+      role="option"
       tabIndex="0"
     >
       <div
@@ -713,6 +814,8 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
+            aria-label="Coupon Applied: FREE"
+            checked={true}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -727,12 +830,14 @@ exports[`Storyshots Component API/List Selection 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Coupon Applied: FREE
       </span>
     </li>
     <li
+      aria-selected={false}
       className="fd-list__item"
       onClick={[Function]}
+      role="option"
       tabIndex="0"
     >
       <div
@@ -742,6 +847,8 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
+            aria-label="Add gift wrapping"
+            checked={false}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -756,12 +863,14 @@ exports[`Storyshots Component API/List Selection 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Add gift wrapping
       </span>
     </li>
     <li
+      aria-selected={false}
       className="fd-list__item"
       onClick={[Function]}
+      role="option"
       tabIndex="0"
     >
       <div
@@ -771,6 +880,8 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
+            aria-label="Less packaging"
+            checked={false}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -785,44 +896,15 @@ exports[`Storyshots Component API/List Selection 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Less packaging
       </span>
-    </li>
-    <li
-      className="fd-list__item"
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      <div
-        className="fd-form-item fd-list__form-item"
-      >
-        <div
-          className="fd-form-item fd-form-item--inline"
-        >
-          <input
-            className="fd-checkbox"
-            id="fd-mocked-short-id"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="fd-form-label fd-checkbox__label"
-            htmlFor="fd-mocked-short-id"
-          />
-        </div>
-      </div>
-      <span
-        className="fd-list__title"
-      >
-        List Item 4
-      </span>
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Company ©
+  </span>
 </div>
 `;
 
@@ -831,7 +913,10 @@ exports[`Storyshots Component API/List Simple List 1`] = `
   dir="ltr"
 >
   <ul
+    aria-labelledby={null}
     className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
       className="fd-list__item"
@@ -841,18 +926,7 @@ exports[`Storyshots Component API/List Simple List 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
-      </span>
-    </li>
-    <li
-      className="fd-list__item is-selected"
-      onClick={[Function]}
-      tabIndex="0"
-    >
-      <span
-        className="fd-list__title"
-      >
-        List Item 2
+        Apple
       </span>
     </li>
     <li
@@ -863,7 +937,7 @@ exports[`Storyshots Component API/List Simple List 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Banana
       </span>
     </li>
     <li
@@ -874,7 +948,18 @@ exports[`Storyshots Component API/List Simple List 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Durian
+      </span>
+    </li>
+    <li
+      className="fd-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="fd-list__title"
+      >
+        Grape
       </span>
     </li>
   </ul>
@@ -885,15 +970,19 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Fruits
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item"
       onClick={[Function]}
       tabIndex="0"
@@ -901,7 +990,7 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Apple
       </span>
     </li>
     <li
@@ -912,7 +1001,7 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Banana
       </span>
     </li>
     <li
@@ -923,7 +1012,7 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Durian
       </span>
     </li>
     <li
@@ -934,15 +1023,15 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Grape
       </span>
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Updated 3 minutes ago
+  </span>
 </div>
 `;
 
@@ -950,15 +1039,19 @@ exports[`Storyshots Component API/List with no borders 1`] = `
 <div
   dir="ltr"
 >
+  <h4
+    className="fd-list__group-header"
+    id="fd-mocked-short-id-header"
+  >
+    Fruits
+  </h4>
   <ul
+    aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--no-border"
+    id="fd-mocked-short-id-list"
+    role="list"
   >
     <li
-      className="fd-list__group-header"
-    >
-      List Header
-    </li>
-    <li
       className="fd-list__item"
       onClick={[Function]}
       tabIndex="0"
@@ -966,7 +1059,7 @@ exports[`Storyshots Component API/List with no borders 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 1
+        Apple
       </span>
     </li>
     <li
@@ -977,7 +1070,7 @@ exports[`Storyshots Component API/List with no borders 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 2
+        Banana
       </span>
     </li>
     <li
@@ -988,7 +1081,7 @@ exports[`Storyshots Component API/List with no borders 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 3
+        Durian
       </span>
     </li>
     <li
@@ -999,14 +1092,14 @@ exports[`Storyshots Component API/List with no borders 1`] = `
       <span
         className="fd-list__title"
       >
-        List Item 4
+        Grape
       </span>
-    </li>
-    <li
-      className="fd-list__footer"
-    >
-      List Footer
     </li>
   </ul>
+  <span
+    className="fd-list__footer"
+  >
+    Updated 3 minutes ago
+  </span>
 </div>
 `;

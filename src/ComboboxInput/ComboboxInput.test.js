@@ -372,12 +372,12 @@ describe('<ComboboxInput />', () => {
 
                     wrapper.find('button').simulate('click');
                 });
-                let list = document.querySelectorAll('ul#interactionTesting-listbox');
+                let list = document.querySelectorAll('ul#interactionTesting-listbox-list');
                 expect(list.length).toBeGreaterThan(0);
                 act(() => {
                     wrapper.find('button').simulate('click');
                 });
-                list = document.querySelectorAll('ul#interactionTesting-listbox');
+                list = document.querySelectorAll('ul#interactionTesting-listbox-list');
                 expect(list.length).toBe(0);
             });
 

@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import ListSelection from './_ListSelection';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -26,13 +27,12 @@ const ListItem = ({
         'fd-list__item',
         {
             'fd-list__item--link': isLink,
-            'fd-list__item--action': action,
-            'is-selected': !isLink && selected
+            'fd-list__item--action': action
         },
         className
     );
 
-    let content;
+    let content, selectionProps;
 
     if (hasByline) {
         content = (
@@ -45,7 +45,7 @@ const ListItem = ({
             'fd-list__link',
             {
                 'fd-list__link--navigation-indicator': partialNavigation,
-                'is-selected': isLink && selected
+                'is-selected': selected
             }
         );
 
@@ -66,15 +66,25 @@ const ListItem = ({
             </button>
         );
     } else {
-        content = children;
+        content = React.Children.map(children, child => {
+            if (child?.type?.displayName === ListSelection.displayName) {
+                selectionProps = {
+                    'role': 'option',
+                    'aria-selected': selected
+                };
+                return React.cloneElement(child, { selected });
+            }
+            return child;
+        });
     }
 
     const disableListItemOnClick = isLink || action;
 
     return (
         <li
-            tabIndex={isLink ? '-1' : '0'}
+            tabIndex={isLink || action ? '-1' : '0'}
             {...props}
+            {...selectionProps}
             className={ListItemClasses}
             onClick={disableListItemOnClick ? null : handleClick}>
             {content}
@@ -100,7 +110,7 @@ ListItem.propTypes = {
     navigation: PropTypes.bool,
     /** Interal use only */
     partialNavigation: PropTypes.bool,
-    /** Set to **true** if list item is currently selected (only supported for links) */
+    /** Set to **true** if list item is currently selected (only supported for links and List.Selection) */
     selected: PropTypes.bool,
     /** URL to navigate to if list item is a link */
     url: PropTypes.string,
