@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.1-rc.0...v0.13.0-rc.0) (2020-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* * List Header and Footer are now passed as props to a List component and not as its children
+* Use `List.headerClassName` and `List.footerClassName` to add classes
+* List header renders <h2-6> HTML headers, use `List.headerLevel` ; default is 4
+* If List contains selectable options set `List.selectable` to true, do not add non-selectable items to such lists for accessibility
+* List footer is rendered as a <span> outside the <ul> list element since it is not semantically a part of the list
+
+fix:
+* Selecting an item in a selectable list should also highlight it now
+
+feat:
+* You may now set the `List.id` that binds List header and body accessibly. If unset a generated value will be used.
+
+### Bug Fixes
+
+* list selection behavior + accessibility ([#1167](https://github.com/SAP/fundamental-react/issues/1167)) ([2c4cbed](https://github.com/SAP/fundamental-react/commit/2c4cbed61bf2b7c596d477696592ae27f858d580))
+
 ### [0.12.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.0...v0.12.1-rc.0) (2020-08-17)
 
 
