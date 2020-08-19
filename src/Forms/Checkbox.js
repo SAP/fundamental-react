@@ -15,7 +15,6 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
-    className,
     compact,
     defaultChecked,
     disabled,
@@ -39,8 +38,7 @@ const Checkbox = React.forwardRef(({
     });
 
 
-    const classes = classnames(
-        className,
+    const inputClassName = classnames(
         'fd-checkbox',
         {
             [`is-${state}`]: state,
@@ -72,7 +70,7 @@ const Checkbox = React.forwardRef(({
                 {...inputProps}
                 aria-label={ariaLabel}
                 checked={checked}
-                className={classes}
+                className={inputClassName}
                 defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
