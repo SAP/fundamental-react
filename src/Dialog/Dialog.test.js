@@ -96,7 +96,7 @@ describe('<Dialog />', () => {
 
     test('create information dialog', () => {
         component = mount(infoDialog);
-        expect(component.find('.fd-dialog__title').text()).toEqual(dialogInfoTitle);
+        expect(component.find('.fd-title').text()).toEqual(dialogInfoTitle);
 
         // close dialog
         component.find('button.fd-dialog__decisive-button').at(0).simulate('click');
@@ -120,19 +120,19 @@ describe('<Dialog />', () => {
 
     test('create confirm dialog', () => {
         component = mount(confirmDialog);
-        expect(component.find('.fd-dialog__title').text()).toEqual(
+        expect(component.find('.fd-title').text()).toEqual(
             dialogConfirmTitle
         );
     });
 
     test('create form dialog', () => {
         component = mount(formDialog);
-        expect(component.find('.fd-dialog__title').text()).toEqual(dialogFormTitle);
+        expect(component.find('.fd-title').text()).toEqual(dialogFormTitle);
     });
 
     test('do not show info dialog', () => {
         component = mount(infoNoShowDialog);
-        expect(component.find('.fd-dialog__title').exists()).toBeFalsy();
+        expect(component.find('.fd-title').exists()).toBeFalsy();
     });
 
     describe('Dialog Headings', () => {
@@ -148,7 +148,7 @@ describe('<Dialog />', () => {
                     title='Sample' />);
 
             expect(
-                component.find('.fd-dialog__title').type()
+                component.find('.fd-title').type()
             ).toBe('h2');
         });
     });
@@ -246,7 +246,7 @@ describe('<Dialog />', () => {
             );
 
             expect(
-                component.find('.fd-dialog__title').getDOMNode().attributes['data-sample']
+                component.find('.fd-title').getDOMNode().attributes['data-sample']
                     .value
             ).toBe('Sample Title');
         });

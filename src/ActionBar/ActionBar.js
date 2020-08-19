@@ -4,6 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import requiredIf from 'react-required-if';
+import Title from '../Title/Title';
 import 'fundamental-styles/dist/action-bar.css';
 
 /**
@@ -22,6 +23,7 @@ const ActionBar = React.forwardRef(({
     description,
     descriptionProps,
     headingLevel,
+    headingStyle,
     title,
     titleProps,
     onBackClick,
@@ -55,7 +57,8 @@ const ActionBar = React.forwardRef(({
         actionClassName
     );
 
-    const HeadingTag = `h${headingLevel}`;
+    const titleLevel = `h${headingLevel}`;
+    const titleStyle = headingStyle ? `h${headingStyle}` : titleLevel;
 
     return (
         <div {...props}
@@ -71,7 +74,14 @@ const ActionBar = React.forwardRef(({
                         onClick={onBackClick}
                         option='transparent' />
                 </div>)}
-                <HeadingTag {...titleProps} className='fd-action-bar__title'>{title}</HeadingTag>
+                <div className='fd-action-bar__title'>
+                    <Title
+                        {...titleProps}
+                        level={titleLevel}
+                        levelStyle={titleStyle}>
+                        {title}
+                    </Title>
+                </div>
                 {actions && (
                     <div {...actionProps} className={actionBarActionsClasses}>{actions}</div>
                 )}
@@ -112,6 +122,8 @@ ActionBar.propTypes = {
     descriptionProps: PropTypes.object,
     /** Heading level. `<h1>` is reserved for the page title */
     headingLevel: CustomPropTypes.range(2, 6),
+    /** Heading style, if it should be different from the default style for the heading level. */
+    headingStyle: CustomPropTypes.range(2, 6),
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     /** Callback to pass to the back Button */

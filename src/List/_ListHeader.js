@@ -2,11 +2,13 @@ import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Title from '../Title/Title';
 
 const ListHeader = ({
     className,
     children,
-    level,
+    headingLevel,
+    headingStyle,
     ...props
 }) => {
     const ListItemClasses = classnames(
@@ -14,12 +16,17 @@ const ListHeader = ({
         className
     );
 
-    const HeadingTag = `h${level}`;
+    const level = `h${headingLevel}`;
+    const style = headingStyle ? `h${headingStyle}` : level;
 
     return (
-        <HeadingTag {...props} className={ListItemClasses}>
+        <Title
+            {...props}
+            className={ListItemClasses}
+            level={level}
+            levelStyle={style}>
             {children}
-        </HeadingTag>
+        </Title>
 
     );
 };
@@ -32,7 +39,9 @@ ListHeader.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Header level. `<h1>` is reserved for the page title. It should not appear in components */
-    level: CustomPropTypes.range(2, 6)
+    headingLevel: CustomPropTypes.range(2, 6),
+    /** Heading style, if it should be different from the default style for the heading level. */
+    headingStyle: CustomPropTypes.range(2, 6)
 };
 
 export default ListHeader;
