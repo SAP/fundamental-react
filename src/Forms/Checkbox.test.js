@@ -88,6 +88,26 @@ describe('<Checkbox />', () => {
                 element.find('.fd-form-label').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        test('should set className on FormItem', () => {
+            const wrapper = setup({
+                className: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('FormItem').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set labelClassName on FormLabel', () => {
+            const wrapper = setup({
+                labelClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('FormLabel').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
     });
 
     test('forwards the ref', () => {
