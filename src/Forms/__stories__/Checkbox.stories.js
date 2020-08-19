@@ -3,7 +3,8 @@ import Checkbox from '../Checkbox';
 import React from 'react';
 import {
     boolean,
-    select
+    select,
+    text
 } from '@storybook/addon-knobs';
 
 export default {
@@ -40,6 +41,7 @@ export const validationState = () => (
 
 export const dev = () => (
     <Checkbox
+        className={text('className', '')}
         compact={boolean('compact', false)}
         disabled={boolean('disabled', false)}
         indeterminate={boolean('indeterminate', false)}
