@@ -45,7 +45,7 @@ Column.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
-    className: PropTypes.oneOf(['after', 'before']),
+    className: PropTypes.string,
     /** How many cells out of 12 should the column be offset by. */
     offset: PropTypes.oneOf(
         PropTypes.shape({
@@ -57,7 +57,7 @@ Column.propTypes = {
         PropTypes.oneOf(BREAK_POINTS)
     ),
     /** Are the offsets to be applied `before` or `after` the column? */
-    offsetPosition: PropTypes.string,
+    offsetPosition: PropTypes.oneOf(['after', 'before']),
     /** How many cells out of 12 should the column occupy on each screen size. Defaults to 12. */
     span: PropTypes.oneOf(
         PropTypes.shape({
