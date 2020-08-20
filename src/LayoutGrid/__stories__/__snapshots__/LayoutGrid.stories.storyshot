@@ -1,387 +1,600 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Component API/LayoutGrid Col Span 1`] = `
+exports[`Storyshots Layouts/Layout Grid Auto Span Available Cells 1`] = `
 <div
   dir="ltr"
 >
   <div
-    className="fd-layout-grid fd-layout-grid--col-6"
+    className="fd-container docs-layout-grid"
   >
     <div
-      className="fd-layout-panel fd-layout-grid__span-column-2"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--12 fd-col-md--8 fd-col-lg--7 fd-col-xl--6 docs-layout-grid-first"
       >
-        LayoutPanel with colSpan=2
+        <div
+          className="col-content"
+        >
+          We have defined col spans for this Column
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
       >
-        LayoutPanel
+         
+        <div
+          className="col-content"
+        >
+          This Column will share available cells
+        </div>
+         
       </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--2 fd-col-xl--3 docs-layout-grid-third"
       >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel fd-layout-grid__span-column-3"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel with colSpan=3
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel fd-layout-grid__span-column-4"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel with colSpan=4
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel fd-layout-grid__span-column-5"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel with colSpan=5
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel fd-layout-grid__span-column-6"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel with colSpan=6
+         
+        <div
+          className="col-content"
+        >
+          This Column will share available cells
+        </div>
+         
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/LayoutGrid Four Columns 1`] = `
+exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
 <div
   dir="ltr"
 >
   <div
-    className="fd-layout-grid fd-layout-grid--col-4"
+    className="fd-container docs-layout-grid"
   >
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--12 fd-col-md--12 fd-col-lg--12 fd-col-xl--12"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           12 Column Element 
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          11 Column Element
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1"
+      >
+         
+        <div
+          className="col-content"
+        >
+          1 Column Element
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--10 fd-col-md--10 fd-col-lg--10 fd-col-xl--10"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          We have defined col spans for this Column
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2"
+      >
+        <div
+          className="col-content"
+        >
+           2 Column Element 
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           9 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
+      >
+        <div
+          className="col-content"
+        >
+           3 Column Element 
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           8 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div
+          className="col-content"
+        >
+           4 Column Element 
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--7 fd-col-md--7 fd-col-lg--7 fd-col-xl--7"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           7 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--5 fd-col-md--5 fd-col-lg--5 fd-col-xl--5"
+      >
+        <div
+          className="col-content"
+        >
+           5 Column Element 
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           6 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
+      >
+        <div
+          className="col-content"
+        >
+           6 Column Element 
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--5 fd-col-md--5 fd-col-lg--5 fd-col-xl--5"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           5 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--7 fd-col-md--7 fd-col-lg--7 fd-col-xl--7"
+      >
+        <div
+          className="col-content"
+        >
+           7 Column Element 
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div
+          className="col-content"
+        >
+           4 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
+      >
+        <div
+          className="col-content"
+        >
+           8 Column Element 
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
+      >
+        <div
+          className="col-content"
+        >
+           3 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9"
+      >
+         
+        <div
+          className="col-content"
+        >
+          9 Column Element 
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2"
+      >
+        <div
+          className="col-content"
+        >
+           2 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--10 fd-col-md--10 fd-col-lg--10 fd-col-xl--10"
+      >
+        <div
+          className="col-content"
+        >
+           10 Column Element 
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1"
+      >
+         
+        <div
+          className="col-content"
+        >
+          1 Column Element 
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11"
+      >
+         
+        <div
+          className="col-content"
+        >
+          11 Column Element 
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/LayoutGrid No Gap 1`] = `
+exports[`Storyshots Layouts/Layout Grid Nesting 1`] = `
 <div
   dir="ltr"
 >
   <div
-    className="fd-layout-grid fd-layout-grid--no-gap"
+    className="fd-container docs-layout-grid"
   >
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
       >
-        LayoutPanel
+        <div
+          className="fd-row"
+        >
+          <div
+            className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
+          >
+            <div
+              className="col-content"
+            >
+              Nested Column Element
+            </div>
+          </div>
+          <div
+            className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
+          >
+            <div
+              className="col-content"
+            >
+              Nested Column Element
+            </div>
+          </div>
+          <div
+            className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
+          >
+            <div
+              className="col-content"
+            >
+              Nested Column Element
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2"
       >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/LayoutGrid Primary 1`] = `
+exports[`Storyshots Layouts/Layout Grid No Gap 1`] = `
 <div
   dir="ltr"
 >
   <div
-    className="fd-layout-grid"
+    className="fd-container fd-container--no-gap docs-layout-grid"
   >
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={8}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={4}&gt;
+           
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={6}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={6}&gt;
+           
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={4}&gt;
+           
+        </div>
       </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
       >
-        LayoutPanel
-      </div>
-    </div>
-    <div
-      className="fd-layout-panel"
-    >
-      <div
-        className="fd-layout-panel__body"
-      >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={8}&gt;
+           
+        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Component API/LayoutGrid Two Columns 1`] = `
+exports[`Storyshots Layouts/Layout Grid Offsetting 1`] = `
 <div
   dir="ltr"
 >
   <div
-    className="fd-layout-grid fd-layout-grid--col-2"
+    className="fd-container docs-layout-grid"
   >
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col-md--offset-2 fd-col-xl--offset-3"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Offset Column Element
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col--offset-6 fd-col-md--offset-6 fd-col-lg--offset-6 fd-col-xl--offset-6"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Offset Column Element
+        </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 fd-col--offset-after-1 fd-col-md--offset-after-2 fd-col-lg--offset-after-2 fd-col-xl--offset-after-1"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Offset Column Element
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 fd-col--offset-after-1"
+      >
+        <div
+          className="col-content"
+        >
+          Offset Column Element
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2"
+      >
+        <div
+          className="col-content"
+        >
+          Offset Column Element
+        </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Layouts/Layout Grid Responsive 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-container docs-layout-grid"
+  >
     <div
-      className="fd-layout-panel"
+      className="fd-row"
     >
       <div
-        className="fd-layout-panel__body"
+        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-first"
       >
-        LayoutPanel
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
+      >
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-third"
+      >
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-fourth"
+      >
+        <div
+          className="col-content"
+        >
+          Column Element
+        </div>
       </div>
     </div>
   </div>
