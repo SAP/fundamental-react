@@ -22,7 +22,6 @@ exports[`Storyshots Layouts/Layout Grid Auto Span Available Cells 1`] = `
       <div
         className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
       >
-         
         <div
           className="col-content"
         >
@@ -33,7 +32,6 @@ exports[`Storyshots Layouts/Layout Grid Auto Span Available Cells 1`] = `
       <div
         className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--2 fd-col-xl--3 docs-layout-grid-third"
       >
-         
         <div
           className="col-content"
         >
@@ -81,7 +79,6 @@ exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
       <div
         className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1"
       >
-         
         <div
           className="col-content"
         >
@@ -258,7 +255,6 @@ exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
       <div
         className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9"
       >
-         
         <div
           className="col-content"
         >
@@ -294,7 +290,6 @@ exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
       <div
         className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1"
       >
-         
         <div
           className="col-content"
         >
@@ -304,7 +299,6 @@ exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
       <div
         className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11"
       >
-         
         <div
           className="col-content"
         >
