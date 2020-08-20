@@ -47,7 +47,7 @@ const DocsPage = () => {
         <Toc />
         <Subtitle />
         {context?.parameters?.description && <Description desc={context?.parameters?.description} />}
-        <Import />
+        {!context?.parameters?.noImport && <Import />}
         <Heading>Examples</Heading>
         {stories.map((story) => story && <DocsStory
             key={story.id}
