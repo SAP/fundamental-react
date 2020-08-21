@@ -33,9 +33,9 @@ export const compact = () => (
 export const validationStates = () => (
     <div className='fddocs-container'>
         <Checkbox validationState={{ state: 'error', text: 'Test validation state' }}>Error State</Checkbox>
-        <Checkbox placeholder='Warning' validationState={{ state: 'warning', text: 'Test validation state' }}>Warning State</Checkbox>
-        <Checkbox placeholder='Information' validationState={{ state: 'information', text: 'Test validation state' }}>Information State</Checkbox>
-        <Checkbox placeholder='Success' validationState={{ state: 'success', text: 'Test validation state' }}>Success State</Checkbox>
+        <Checkbox validationState={{ state: 'warning', text: 'Test validation state' }}>Warning State</Checkbox>
+        <Checkbox validationState={{ state: 'information', text: 'Test validation state' }}>Information State</Checkbox>
+        <Checkbox validationState={{ state: 'success', text: 'Test validation state' }}>Success State</Checkbox>
     </div>
 );
 
