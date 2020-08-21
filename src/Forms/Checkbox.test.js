@@ -108,6 +108,16 @@ describe('<Checkbox />', () => {
                 wrapper.find('FormLabel').getDOMNode().classList
             ).toContain('wonderful-styles');
         });
+
+        test('should set inputClassName on the input', () => {
+            const wrapper = setup({
+                inputClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-checkbox').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
     });
 
     test('forwards the ref', () => {

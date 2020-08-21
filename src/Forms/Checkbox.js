@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
+import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useEffect, useRef } from 'react';
@@ -21,13 +22,14 @@ const Checkbox = React.forwardRef(({
     id,
     indeterminate,
     inline,
+    inputClassName,
     inputProps,
     labelClassName,
     labelProps,
     name,
     onChange,
     value,
-    state,
+    validationState,
     ...props
 }, ref) => {
 
@@ -38,12 +40,13 @@ const Checkbox = React.forwardRef(({
     });
 
 
-    const inputClassName = classnames(
+    const inputClassNames = classnames(
         'fd-checkbox',
         {
-            [`is-${state}`]: state,
+            [`is-${validationState?.state}`]: validationState?.state,
             'fd-checkbox--compact': compact
-        }
+        },
+        inputClassName
     );
 
     const labelClasses = classnames(
@@ -60,7 +63,7 @@ const Checkbox = React.forwardRef(({
         </span>
     ) : children;
 
-    return (
+    const checkbox = (
         <FormItem
             {...props}
             disabled={disabled}
@@ -70,7 +73,7 @@ const Checkbox = React.forwardRef(({
                 {...inputProps}
                 aria-label={ariaLabel}
                 checked={checked}
-                className={inputClassName}
+                className={inputClassNames}
                 defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
@@ -89,6 +92,12 @@ const Checkbox = React.forwardRef(({
             </FormLabel>
         </FormItem>
     );
+
+    return validationState ? (
+        <FormValidationOverlay
+            control={checkbox}
+            validationState={validationState} />
+    ) : checkbox;
 });
 
 Checkbox.displayName = 'Checkbox';
@@ -122,6 +131,8 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     indeterminate: PropTypes.bool,
     /** Internal use only */
     inline: PropTypes.bool,
+    /** Class name to be added to the component `<input>` element */
+    inputClassName: PropTypes.string,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Class name to be added to the component `<label>` element */
@@ -132,6 +143,13 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     name: PropTypes.string,
     /** State of validation: 'error', 'warning', 'information', 'success' */
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
+    validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
+        text: PropTypes.string
+    }),
     /** Sets the `value` for the checkbox input */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */
