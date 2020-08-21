@@ -253,7 +253,6 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
         >
           <div
             className="fd-form-item"
-            placeholder="Warning"
           >
             <input
               className="fd-checkbox is-warning"
@@ -290,7 +289,6 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
         >
           <div
             className="fd-form-item"
-            placeholder="Information"
           >
             <input
               className="fd-checkbox is-information"
@@ -327,7 +325,6 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
         >
           <div
             className="fd-form-item"
-            placeholder="Success"
           >
             <input
               className="fd-checkbox is-success"
