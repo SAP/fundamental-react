@@ -1,11 +1,14 @@
-name: Feature Checklist
+name: Checklist Comment
 on:
   pull_request:
     types: ['opened', 'reopened', 'edited']
 jobs:
-  featchecklist:
+  checklist:
+    name: Feature Checklist
+    runs-on: ubuntu-latest
     if: contains(github.event.pull_request.title, 'feat')
-    pr-message: |
-      ```
-        Hello @${{ github.actor }} , this should only comment on a feature branch.
-      ```
+    steps:
+        pr-message: |
+          ```
+            Hello @${{ github.actor }} , this should only comment on a feature branch.
+          ```
