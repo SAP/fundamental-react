@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Layouts/Layout Grid Auto Span Available Cells 1`] = `
+exports[`Storyshots Layout/Layout Grid Auto Span Available Cells 1`] = `
 <div
   dir="ltr"
 >
@@ -44,7 +44,7 @@ exports[`Storyshots Layouts/Layout Grid Auto Span Available Cells 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
+exports[`Storyshots Layout/Layout Grid Different Size Columns 1`] = `
 <div
   dir="ltr"
 >
@@ -310,7 +310,7 @@ exports[`Storyshots Layouts/Layout Grid Different Size Columns 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layouts/Layout Grid Nesting 1`] = `
+exports[`Storyshots Layout/Layout Grid Nesting 1`] = `
 <div
   dir="ltr"
 >
@@ -387,7 +387,7 @@ exports[`Storyshots Layouts/Layout Grid Nesting 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layouts/Layout Grid No Gap 1`] = `
+exports[`Storyshots Layout/Layout Grid No Gap 1`] = `
 <div
   dir="ltr"
 >
@@ -476,7 +476,7 @@ exports[`Storyshots Layouts/Layout Grid No Gap 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layouts/Layout Grid Offsetting 1`] = `
+exports[`Storyshots Layout/Layout Grid Offsetting 1`] = `
 <div
   dir="ltr"
 >
@@ -544,7 +544,7 @@ exports[`Storyshots Layouts/Layout Grid Offsetting 1`] = `
 </div>
 `;
 
-exports[`Storyshots Layouts/Layout Grid Responsive 1`] = `
+exports[`Storyshots Layout/Layout Grid Responsive 1`] = `
 <div
   dir="ltr"
 >
