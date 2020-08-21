@@ -141,8 +141,6 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     labelProps: PropTypes.object,
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
-    /** State of validation: 'error', 'warning', 'information', 'success' */
-    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
