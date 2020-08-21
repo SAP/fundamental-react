@@ -40,6 +40,32 @@ const DocsPage = () => {
         document.querySelectorAll('.toc-link').forEach( x => x.setAttribute('target','_self'));
     }, []);
 
+    const showImport = () => {
+        let groups = context.kind.split('/');
+        const name = groups[1];
+        return (
+            <div className='docs-single-import'>
+                <Import componentName={name} />
+            </div>
+        );
+    }
+
+    const showSubImports = () => {
+        const subComps = context?.parameters?.subcomponents;
+        const subImports = [];
+        if(subComps){
+            const compNames = Object.keys(subComps);
+            compNames?.forEach(name => {
+                subImports.push(<Import componentName={subComps[name]?.displayName}/>)
+            })
+        }
+        return (
+            <div className='docs-multi-imports'>
+                {subImports}
+            </div>
+        );
+    };
+
     return (
         <>
         <Header />
@@ -47,7 +73,8 @@ const DocsPage = () => {
         <Toc />
         <Subtitle />
         {context?.parameters?.description && <Description desc={context?.parameters?.description} />}
-        {!context?.parameters?.noImport && <Import />}
+        {!context?.parameters?.noImport && showImport()}
+        {context?.parameters?.displaySubComponentImports && showSubImports()}
         <Heading>Examples</Heading>
         {stories.map((story) => story && <DocsStory
             key={story.id}

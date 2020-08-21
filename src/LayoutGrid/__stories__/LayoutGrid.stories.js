@@ -1,18 +1,19 @@
 /* eslint-disable react/no-multi-comp */
-import Column from '../_Column';
-import Container from '../_Container';
+import Column from '../Column';
+import Container from '../Container';
 import React from 'react';
-import Row from '../_Row';
+import Row from '../Row';
 
 export default {
-    title: 'Layouts/Layout Grid',
+    title: 'Layout/Layout Grid',
     description: 'test',
     subcomponents: { Container, Row, Column },
     parameters: {
         description: `
 Use the layout grid system consisting of **Container**, **Row**, and **Column** components to arrange things evenly in a grid layout.
 `,
-        noImport: true
+        noImport: true,
+        displaySubComponentImports: true
     }
 
 };

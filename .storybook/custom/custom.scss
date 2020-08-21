@@ -408,3 +408,29 @@ blockquote {
         }
     }
 }
+
+.docs-import-statement {
+    display: inline-flex;
+}
+
+.docs-multi-imports,
+.docs-single-import {
+    margin-bottom: 5em;
+}
+
+.docs-single-import,
+.docs-multi-imports {
+    display: flex;
+    flex-direction: column;
+
+    pre {
+        margin: 0;
+    }
+}
+
+.docs-offscreen {
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
