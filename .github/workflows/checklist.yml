@@ -1,0 +1,11 @@
+name: Feature Checklist
+on:
+  pull_request:
+    types: ['opened', 'reopened', 'edited']
+jobs:
+  featchecklist:
+    if: contains(github.event.pull_request.title, 'feat')
+    pr-message: |
+      ```
+        Hello @${{ github.actor }} , this should only comment on a feature branch.
+      ```
