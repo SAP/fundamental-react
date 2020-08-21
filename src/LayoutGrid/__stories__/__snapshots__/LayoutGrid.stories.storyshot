@@ -95,7 +95,7 @@ exports[`Storyshots Layout/Layout Grid Different Size Columns 1`] = `
         <div
           className="col-content"
         >
-          We have defined col spans for this Column
+          10 Column Element
         </div>
       </div>
       <div

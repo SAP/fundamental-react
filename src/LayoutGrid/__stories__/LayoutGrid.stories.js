@@ -35,8 +35,7 @@ export const differentSizeColumns = () => (
         </Row>
         <Row>
             <Column span={10}>
-
-                <div className='col-content'>We have defined col spans for this Column</div>
+                <div className='col-content'>10 Column Element</div>
             </Column>
             <Column span={2}>
                 <div className='col-content'> 2 Column Element </div>
