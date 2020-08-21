@@ -2,7 +2,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getSpan, hasSpan, mapSize, validSpan } from './_gridUtils';
+import { getNodeSpan, hasSpan, mapSize, validSpan } from './_layoutGridUtils';
 import 'fundamental-styles/dist/layout-grid.css';
 
 const Row = React.forwardRef(({ children, className, ...props }, ref) => {
@@ -16,7 +16,7 @@ const Row = React.forwardRef(({ children, className, ...props }, ref) => {
 
 
     React.Children.forEach(children, (child) => {
-        occupiedSpans = mapSize((size) => occupiedSpans[size] + getSpan(child, size));
+        occupiedSpans = mapSize((size) => occupiedSpans[size] + getNodeSpan(child, size));
         unspannedChildren = mapSize((size) => unspannedChildren[size] + (hasSpan(child, size) ? 0 : 1));
     });
 
