@@ -388,9 +388,12 @@ class Shellbar extends Component {
                                                 <Avatar
                                                     backgroundImageUrl={profile.image}
                                                     circle
+                                                    className='fd-shellbar__avatar--circle'
                                                     size='xs' />
                                             ) : (
-                                                <Avatar circle
+                                                <Avatar
+                                                    circle
+                                                    className='fd-shellbar__avatar--circle'
                                                     color={profile.colorAccent}
                                                     size='xs'>
                                                     {profile.initials}
