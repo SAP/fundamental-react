@@ -17,7 +17,7 @@ const CopyButton = ({ copyText }) => {
         }
     }
     return (
-        <div className="docs-import-statement">
+        <>
             <Button
                 className='copy-import-statement-btn'
                 compact
@@ -34,7 +34,7 @@ const CopyButton = ({ copyText }) => {
                 type="text"
                 value={copyText}
             />
-        </div>
+        </>
     );
 };
 

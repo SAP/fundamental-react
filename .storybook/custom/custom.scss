@@ -2,15 +2,13 @@ body {
     font-family: '72', 'Open Sans', sans-serif;
 }
 
-/* override storybook max width */
-.sbdocs.sbdocs-content {
-    width: 100%;
-    max-width: none;
-}
-
 /* fix bug in storybook@6 where toolbar height is hardcoded - causes scrollbar */
 a[title='Open canvas in new tab'] {
     height: 34px;
+}
+
+.sbdocs.sbdocs-content {
+    max-width: 85%;
 }
 
 /* make room for TOCBot */
@@ -411,6 +409,10 @@ blockquote {
 
 .docs-import-statement {
     display: inline-flex;
+}
+
+.copy-import-statement-btn {
+    margin: 5px !important;
 }
 
 .docs-multi-imports,
