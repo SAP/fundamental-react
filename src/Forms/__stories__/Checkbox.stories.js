@@ -30,12 +30,12 @@ export const compact = () => (
     <Checkbox compact>Text Option</Checkbox>
 );
 
-export const validationState = () => (
+export const validationStates = () => (
     <div className='fddocs-container'>
-        <Checkbox state='error'>Text Option</Checkbox>
-        <Checkbox state='warning'>Text Option</Checkbox>
-        <Checkbox state='success'>Text Option</Checkbox>
-        <Checkbox state='information'>Text Option</Checkbox>
+        <Checkbox validationState={{ state: 'error', text: 'Test validation state' }}>Error State</Checkbox>
+        <Checkbox validationState={{ state: 'warning', text: 'Test validation state' }}>Warning State</Checkbox>
+        <Checkbox validationState={{ state: 'information', text: 'Test validation state' }}>Information State</Checkbox>
+        <Checkbox validationState={{ state: 'success', text: 'Test validation state' }}>Success State</Checkbox>
     </div>
 );
 
@@ -45,12 +45,12 @@ export const dev = () => (
         compact={boolean('compact', false)}
         disabled={boolean('disabled', false)}
         indeterminate={boolean('indeterminate', false)}
-        state={select('State', {
+        validationState={select('Validation State', {
             'none': '',
-            'success': 'success',
-            'error': 'error',
-            'information': 'information',
-            'warning': 'warning'
+            'success': { state: 'success', text: 'placeholder text' },
+            'error': { state: 'error', text: 'placeholder text' },
+            'information': { state: 'information', text: 'placeholder text' },
+            'warning': { state: 'warning', text: 'placeholder text' }
         })}>Text Option</Checkbox>
 );
 

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.2...v0.13.0-rc.3) (2020-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Checkbox: replace `state` property with `validationState`
+
+### Features
+
+* BREAKING CHANGE: checkbox replace state with validation states ([#1176](https://github.com/SAP/fundamental-react/issues/1176)) ([9a71277](https://github.com/SAP/fundamental-react/commit/9a7127733433378e0632f70b8a3ba0039488658e))
+
 ## [0.13.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.1...v0.13.0-rc.2) (2020-08-20)
 
 ## [0.13.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.0...v0.13.0-rc.1) (2020-08-19)
