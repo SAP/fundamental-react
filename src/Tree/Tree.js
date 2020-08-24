@@ -119,8 +119,7 @@ const Tree = React.forwardRef(({
         .filter(child => child.type && child.type.displayName === 'Tree.Node')
         .map(child => React.cloneElement(child, {
             level: 1,
-            parentId: 'root',
-            onExpandClick: (toggledAtLevel, lastLevelExpanding, itemId, parentId, parentPath) => {
+            onExpandClickInternal: (toggledAtLevel, lastLevelExpanding, itemId, parentId, parentPath) => {
                 updateTree({
                     toggledAtLevel,
                     lastLevelExpanding,
@@ -131,10 +130,12 @@ const Tree = React.forwardRef(({
                 const newExpansionDepth = getMaxExpandedNodeLevel(tree.root);
                 setExpansionDepth(newExpansionDepth);
             },
+            parentId: 'root',
             parentPath: 'root',
             selection,
             selectionPosition,
-            treeId
+            treeId,
+            treeActive: active
         }));
 
     const emptyTree = !levelOneNodes?.length > 0;
@@ -174,16 +175,30 @@ const Tree = React.forwardRef(({
 Tree.displayName = 'Tree';
 
 Tree.propTypes = {
+    /** Set to **true** to make all `TreeNode`s have styles for interaction states (hover, selected, active).*/
     active: PropTypes.bool,
+    /** React nodes to render within. Nest `TreeNode`s to create multiple levels in the `Tree`.*/
     children: PropTypes.node,
+    /** Set to **true** to apply compact styles.*/
     compact: PropTypes.bool,
+    /** Set to a **String** value to display when `Tree` is empty, i.e. has no children.*/
     emptyText: PropTypes.string,
+    /** Set to a **String** value to use as id for root node which is an `<ul>`. If unset, a generate value will be used.*/
     id: PropTypes.string,
+    /** Set to **true** to remove borders from all level 1 nodes.*/
     noBorders: PropTypes.bool,
+    /** Set to `multi` to enable selecting multiple selection of `TreeNode`s with Checkboxes.
+     *
+     * Set to `single` to enable selecting only one of the `TreeNode`s at a time, with radio buttons.
+    */
     selection: PropTypes.oneOf([
         'multi',
         'single'
     ]),
+    /** Set to `left` to show selection control before node contents.
+     *
+     * Set to `right` to show selection control after node contents.
+    */
     selectionPosition: PropTypes.oneOf([
         'left',
         'right'
@@ -191,6 +206,7 @@ Tree.propTypes = {
 };
 
 Tree.defaultProps = {
+    active: false,
     selectionPosition: 'left'
 };
 
