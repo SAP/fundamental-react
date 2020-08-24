@@ -6,7 +6,7 @@ export default {
     title: 'Component API/LocalizationEditor',
     component: LocalizationEditor,
     parameters: {
-        description: `
+        deprecated: `
 > **DEPRECATED**. Localization Editor does not exist as a Fiori 3 component so it has been deprecated. `
     }
 };

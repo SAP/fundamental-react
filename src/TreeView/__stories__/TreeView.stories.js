@@ -13,7 +13,7 @@ export default {
     component: TreeView,
     subcomponents: { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow },
     parameters: {
-        description: `
+        deprecated: `
 > **DEPRECATED**. TreeView has been deprecated in favor of the Tree component.`
     }
 };
