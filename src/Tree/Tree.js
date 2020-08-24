@@ -153,6 +153,7 @@ const Tree = React.forwardRef(({
 
     return (
         <ul
+            ref={ref}
             {...props}
             className={treeClasses}
             role='tree'>
