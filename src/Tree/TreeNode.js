@@ -144,7 +144,7 @@ const TreeNode = ({
         );
     }
 
-    const { parentId, parentPath, selectionPosition, treeId, ...otherProps } = rest;
+    const { level: removeLevel, parentId, parentPath, selectionPosition, treeId, treeActive, ...otherProps } = rest;
 
 
     const renderIcons = (icons) => {
