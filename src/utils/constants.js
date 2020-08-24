@@ -24,6 +24,23 @@ export const BUTTON_TYPES = [
     'attention'
 ];
 
+export const TREE_NODE_HIGHLIGHTS = [
+    'default',
+    'error',
+    'success',
+    'warning'
+];
+
+export const TREE_SELECTION_TYPES = [
+    'multi',
+    'single'
+];
+
+export const TREE_SELECTION_POSITIONS = [
+    'left',
+    'right'
+];
+
 export const COMBOBOX_SELECTION_TYPES = [
     'manual',
     'auto',
