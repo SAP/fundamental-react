@@ -11,7 +11,11 @@ import TreeView from '../TreeView';
 export default {
     title: 'Component API/TreeView',
     component: TreeView,
-    subcomponents: { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow }
+    subcomponents: { Tree, TreeBranch, TreeCol, TreeHead, TreeItem, TreeRow },
+    parameters: {
+        description: `
+> **DEPRECATED**. TreeView has been deprecated in favor of the Tree component.`
+    }
 };
 
 
