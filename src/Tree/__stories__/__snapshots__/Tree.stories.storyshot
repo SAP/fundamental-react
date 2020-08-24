@@ -12,51 +12,58 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
-        className="fd-tree__item-container"
+        className="fd-tree__item-container fd-tree__item-container--active"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
-        <div
+        
+        <a
           className="fd-tree__content"
+          href="#navigation-links"
         >
           <span
             className="fd-tree__text"
           >
             Level 1
           </span>
-        </div>
+        </a>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
       >
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -66,61 +73,70 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
           >
             <li
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
-                className="fd-tree__item-container"
+                className="fd-tree__item-container fd-tree__item-container--active"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
-                <div
+                
+                <a
                   className="fd-tree__content"
+                  href="#navigation-links"
                 >
                   <span
                     className="fd-tree__text"
                   >
                     Level 3
                   </span>
-                </div>
+                </a>
+                
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
               >
                 <li
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                 >
                   <div
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -130,38 +146,330 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                   >
                     <li
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                     >
                       <div
-                        className="fd-tree__item-container"
+                        className="fd-tree__item-container fd-tree__item-container--active"
                       >
-                        <div
+                        <button
+                          aria-controls="fd-mocked-short-id"
+                          aria-label="expand"
+                          aria-pressed={false}
+                          className="fd-tree__expander"
+                          onClick={[Function]}
+                        />
+                        
+                        <a
                           className="fd-tree__content"
+                          href="#navigation-links"
                         >
                           <span
                             className="fd-tree__text"
                           >
                             Level 5
                           </span>
-                        </div>
+                        </a>
+                        
+                      </div>
+                      <ul
+                        aria-hidden={true}
+                        className="fd-tree is-hidden"
+                        onExpandClickInternal={[Function]}
+                        role="group"
+                      >
+                        <li
+                          aria-expanded={false}
+                          aria-level={6}
+                          className="fd-tree__item"
+                          id="fd-mocked-short-id"
+                          onExpandClickInternal={[Function]}
+                          role="treeitem"
+                        >
+                          <div
+                            className="fd-tree__item-container"
+                          >
+                            <button
+                              aria-controls="fd-mocked-short-id"
+                              aria-label="expand"
+                              aria-pressed={false}
+                              className="fd-tree__expander"
+                              onClick={[Function]}
+                            />
+                            
+                            <div
+                              className="fd-tree__content"
+                            >
+                              <span
+                                className="fd-tree__text"
+                              >
+                                Level 6
+                              </span>
+                            </div>
+                            
+                          </div>
+                          <ul
+                            aria-hidden={true}
+                            className="fd-tree is-hidden"
+                            onExpandClickInternal={[Function]}
+                            role="group"
+                          >
+                            <li
+                              aria-expanded={false}
+                              aria-level={7}
+                              className="fd-tree__item"
+                              id="fd-mocked-short-id"
+                              onExpandClickInternal={[Function]}
+                              role="treeitem"
+                            >
+                              <div
+                                className="fd-tree__item-container fd-tree__item-container--active"
+                              >
+                                <button
+                                  aria-controls="fd-mocked-short-id"
+                                  aria-label="expand"
+                                  aria-pressed={false}
+                                  className="fd-tree__expander"
+                                  onClick={[Function]}
+                                />
+                                
+                                <a
+                                  className="fd-tree__content"
+                                  href="#navigation-links"
+                                >
+                                  <span
+                                    className="fd-tree__text"
+                                  >
+                                    Level 7
+                                  </span>
+                                </a>
+                                
+                              </div>
+                              <ul
+                                aria-hidden={true}
+                                className="fd-tree is-hidden"
+                                onExpandClickInternal={[Function]}
+                                role="group"
+                              >
+                                <li
+                                  aria-expanded={false}
+                                  aria-level={8}
+                                  className="fd-tree__item"
+                                  id="fd-mocked-short-id"
+                                  onExpandClickInternal={[Function]}
+                                  role="treeitem"
+                                >
+                                  <div
+                                    className="fd-tree__item-container"
+                                  >
+                                    
+                                    <div
+                                      className="fd-tree__content"
+                                    >
+                                      <span
+                                        className="fd-tree__text"
+                                      >
+                                        Level 8
+                                      </span>
+                                    </div>
+                                    
+                                  </div>
+                                </li>
+                                <li
+                                  aria-expanded={false}
+                                  aria-level={8}
+                                  className="fd-tree__item"
+                                  id="fd-mocked-short-id"
+                                  onExpandClickInternal={[Function]}
+                                  role="treeitem"
+                                >
+                                  <div
+                                    className="fd-tree__item-container fd-tree__item-container--active"
+                                  >
+                                    
+                                    <a
+                                      className="fd-tree__content"
+                                      href="#navigation-links"
+                                    >
+                                      <span
+                                        className="fd-tree__text"
+                                      >
+                                        Level 8
+                                      </span>
+                                    </a>
+                                    
+                                  </div>
+                                </li>
+                              </ul>
+                            </li>
+                            <li
+                              aria-expanded={false}
+                              aria-level={7}
+                              className="fd-tree__item"
+                              id="fd-mocked-short-id"
+                              onExpandClickInternal={[Function]}
+                              role="treeitem"
+                            >
+                              <div
+                                className="fd-tree__item-container"
+                              >
+                                
+                                <div
+                                  className="fd-tree__content"
+                                >
+                                  <span
+                                    className="fd-tree__text"
+                                  >
+                                    Level 7
+                                  </span>
+                                </div>
+                                
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li
+                          aria-expanded={false}
+                          aria-level={6}
+                          className="fd-tree__item"
+                          id="fd-mocked-short-id"
+                          onExpandClickInternal={[Function]}
+                          role="treeitem"
+                        >
+                          <div
+                            className="fd-tree__item-container fd-tree__item-container--active"
+                          >
+                            
+                            <a
+                              className="fd-tree__content"
+                              href="#navigation-links"
+                            >
+                              <span
+                                className="fd-tree__text"
+                              >
+                                Level 6
+                              </span>
+                            </a>
+                            
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      aria-expanded={false}
+                      aria-level={5}
+                      className="fd-tree__item"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
+                      role="treeitem"
+                    >
+                      <div
+                        className="fd-tree__item-container fd-tree__item-container--active"
+                      >
+                        
+                        <a
+                          className="fd-tree__content"
+                          href="#navigation-links"
+                        >
+                          <span
+                            className="fd-tree__text"
+                          >
+                            Level 5
+                          </span>
+                        </a>
+                        
                       </div>
                     </li>
                   </ul>
                 </li>
+                <li
+                  aria-expanded={false}
+                  aria-level={4}
+                  className="fd-tree__item"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
+                  role="treeitem"
+                >
+                  <div
+                    className="fd-tree__item-container"
+                  >
+                    
+                    <div
+                      className="fd-tree__content"
+                    >
+                      <span
+                        className="fd-tree__text"
+                      >
+                        Level 4
+                      </span>
+                    </div>
+                    
+                  </div>
+                </li>
               </ul>
             </li>
+            <li
+              aria-expanded={false}
+              aria-level={3}
+              className="fd-tree__item"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__item-container"
+              >
+                
+                <div
+                  className="fd-tree__content"
+                >
+                  <span
+                    className="fd-tree__text"
+                  >
+                    Level 3
+                  </span>
+                </div>
+                
+              </div>
+            </li>
           </ul>
+        </li>
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="fd-tree__item"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__item-container"
+          >
+            
+            <div
+              className="fd-tree__content"
+            >
+              <span
+                className="fd-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
         </li>
       </ul>
     </li>
@@ -169,158 +477,51 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
-        className="fd-tree__item-container"
+        className="fd-tree__item-container fd-tree__item-container--active is-navigated"
       >
-        <button
-          aria-controls="fd-mocked-short-id-level-1"
-          aria-label="expand"
-          aria-pressed={false}
-          className="fd-tree__expander"
-          onClick={[Function]}
-        />
-        <div
+        
+        <a
           className="fd-tree__content"
+          href="#navigation-links"
         >
           <span
             className="fd-tree__text"
           >
             Level 1
           </span>
-        </div>
+        </a>
+        
       </div>
-      <ul
-        aria-hidden={true}
-        className="fd-tree"
-        role="group"
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="fd-tree__item"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__item-container fd-tree__item-container--active"
       >
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
+        
+        <a
+          className="fd-tree__content"
+          href="#navigation-links"
         >
-          <div
-            className="fd-tree__item-container"
+          <span
+            className="fd-tree__text"
           >
-            <button
-              aria-controls="fd-mocked-short-id-level-2"
-              aria-label="expand"
-              aria-pressed={false}
-              className="fd-tree__expander"
-              onClick={[Function]}
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-          <ul
-            aria-hidden={true}
-            className="fd-tree is-hidden"
-            role="group"
-          >
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id-level-3"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__expander"
-                  onClick={[Function]}
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-              </div>
-              <ul
-                aria-hidden={true}
-                className="fd-tree is-hidden"
-                role="group"
-              >
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container"
-                  >
-                    <button
-                      aria-controls="fd-mocked-short-id-level-4"
-                      aria-label="expand"
-                      aria-pressed={false}
-                      className="fd-tree__expander"
-                      onClick={[Function]}
-                    />
-                    <div
-                      className="fd-tree__content"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </div>
-                  </div>
-                  <ul
-                    aria-hidden={true}
-                    className="fd-tree is-hidden"
-                    role="group"
-                  >
-                    <li
-                      aria-expanded={false}
-                      aria-level={5}
-                      className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
-                      role="treeitem"
-                    >
-                      <div
-                        className="fd-tree__item-container"
-                      >
-                        <div
-                          className="fd-tree__content"
-                        >
-                          <span
-                            className="fd-tree__text"
-                          >
-                            Level 5
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
+            Level 1
+          </span>
+        </a>
+        
+      </div>
     </li>
   </ul>
 </div>
@@ -338,19 +539,21 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-tree__content"
         >
@@ -360,29 +563,33 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
             Level 1
           </span>
         </div>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
       >
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -392,22 +599,26 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
           >
             <li
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
                 className="fd-tree__item-container"
               >
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -417,6 +628,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
                     Level 3
                   </span>
                 </div>
+                
               </div>
             </li>
           </ul>
@@ -425,12 +637,14 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
+            
             <div
               className="fd-tree__content"
             >
@@ -440,18 +654,21 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
         </li>
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
+            
             <div
               className="fd-tree__content"
             >
@@ -461,6 +678,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
         </li>
       </ul>
@@ -469,12 +687,14 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        
         <div
           className="fd-tree__content"
         >
@@ -484,18 +704,21 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
             Level 1
           </span>
         </div>
+        
       </div>
     </li>
     <li
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        
         <div
           className="fd-tree__content"
         >
@@ -505,18 +728,21 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
             Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
           </span>
         </div>
+        
       </div>
     </li>
     <li
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        
         <div
           className="fd-tree__content fd-tree__content--wrap"
         >
@@ -526,7 +752,530 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
             Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
           </span>
         </div>
+        
       </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots Component API/Tree Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    className="fd-tree"
+    role="tree"
+  >
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="fd-tree__item"
+      id="myCustomLevel1"
+      onExpandClickInternal={[Function]}
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__item-container"
+      >
+        <button
+          aria-controls="myCustomLevel1"
+          aria-label="expand"
+          aria-pressed={false}
+          className="fd-tree__expander"
+          onClick={[Function]}
+        />
+        
+        <div
+          className="fd-tree__content"
+        >
+          <span
+            className="fd-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+      <ul
+        aria-hidden={true}
+        className="fd-tree"
+        onExpandClickInternal={[Function]}
+        role="group"
+      >
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="fd-tree__item"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__item-container"
+          >
+            <button
+              aria-controls="fd-mocked-short-id"
+              aria-label="expand"
+              aria-pressed={false}
+              className="fd-tree__expander"
+              onClick={[Function]}
+            />
+            
+            <div
+              className="fd-tree__content"
+            >
+              <span
+                className="fd-tree__text"
+              >
+                Level 2
+                <button
+                  className="fd-button"
+                  type="button"
+                >
+                  Test
+                </button>
+              </span>
+            </div>
+            
+          </div>
+          <ul
+            aria-hidden={true}
+            className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
+            role="group"
+          >
+            <li
+              aria-expanded={false}
+              aria-level={3}
+              className="fd-tree__item"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__item-container"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-label="expand"
+                  aria-pressed={false}
+                  className="fd-tree__expander"
+                  onClick={[Function]}
+                />
+                
+                <div
+                  className="fd-tree__content"
+                >
+                  <span
+                    className="fd-tree__text"
+                  >
+                    Level 3
+                  </span>
+                </div>
+                
+              </div>
+              <ul
+                aria-hidden={true}
+                className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
+                role="group"
+              >
+                <li
+                  aria-expanded={false}
+                  aria-level={4}
+                  className="fd-tree__item"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
+                  role="treeitem"
+                >
+                  <div
+                    className="fd-tree__item-container"
+                  >
+                    <button
+                      aria-controls="fd-mocked-short-id"
+                      aria-label="expand"
+                      aria-pressed={false}
+                      className="fd-tree__expander"
+                      onClick={[Function]}
+                    />
+                    
+                    <div
+                      className="fd-tree__content"
+                    >
+                      <span
+                        className="fd-tree__text"
+                      >
+                        Level 4
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <ul
+                    aria-hidden={true}
+                    className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
+                    role="group"
+                  >
+                    <li
+                      aria-expanded={false}
+                      aria-level={5}
+                      className="fd-tree__item"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
+                      role="treeitem"
+                    >
+                      <div
+                        className="fd-tree__item-container"
+                      >
+                        <button
+                          aria-controls="fd-mocked-short-id"
+                          aria-label="expand"
+                          aria-pressed={false}
+                          className="fd-tree__expander"
+                          onClick={[Function]}
+                        />
+                        
+                        <div
+                          className="fd-tree__content"
+                        >
+                          <span
+                            className="fd-tree__text"
+                          >
+                            Level 5
+                          </span>
+                        </div>
+                        
+                      </div>
+                      <ul
+                        aria-hidden={true}
+                        className="fd-tree is-hidden"
+                        onExpandClickInternal={[Function]}
+                        role="group"
+                      >
+                        <li
+                          aria-expanded={false}
+                          aria-level={6}
+                          className="fd-tree__item"
+                          id="fd-mocked-short-id"
+                          onExpandClickInternal={[Function]}
+                          role="treeitem"
+                        >
+                          <div
+                            className="fd-tree__item-container"
+                          >
+                            <button
+                              aria-controls="fd-mocked-short-id"
+                              aria-label="expand"
+                              aria-pressed={false}
+                              className="fd-tree__expander"
+                              onClick={[Function]}
+                            />
+                            
+                            <div
+                              className="fd-tree__content"
+                            >
+                              <span
+                                className="fd-tree__text"
+                              >
+                                Level 6
+                              </span>
+                            </div>
+                            
+                          </div>
+                          <ul
+                            aria-hidden={true}
+                            className="fd-tree is-hidden"
+                            onExpandClickInternal={[Function]}
+                            role="group"
+                          >
+                            <li
+                              aria-expanded={false}
+                              aria-level={7}
+                              className="fd-tree__item"
+                              id="fd-mocked-short-id"
+                              onExpandClickInternal={[Function]}
+                              role="treeitem"
+                            >
+                              <div
+                                className="fd-tree__item-container"
+                              >
+                                
+                                <div
+                                  className="fd-tree__content"
+                                >
+                                  <span
+                                    className="fd-tree__text"
+                                  >
+                                    Level 7
+                                  </span>
+                                </div>
+                                
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="fd-tree__item"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__item-container"
+      >
+        <button
+          aria-controls="fd-mocked-short-id"
+          aria-label="expand"
+          aria-pressed={false}
+          className="fd-tree__expander"
+          onClick={[Function]}
+        />
+        
+        <div
+          className="fd-tree__content"
+        >
+          <span
+            className="fd-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+      <ul
+        aria-hidden={true}
+        className="fd-tree"
+        onExpandClickInternal={[Function]}
+        role="group"
+      >
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="fd-tree__item"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__item-container"
+          >
+            <button
+              aria-controls="fd-mocked-short-id"
+              aria-label="expand"
+              aria-pressed={false}
+              className="fd-tree__expander"
+              onClick={[Function]}
+            />
+            
+            <div
+              className="fd-tree__content"
+            >
+              <span
+                className="fd-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
+          <ul
+            aria-hidden={true}
+            className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
+            role="group"
+          >
+            <li
+              aria-expanded={false}
+              aria-level={3}
+              className="fd-tree__item"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__item-container"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-label="expand"
+                  aria-pressed={false}
+                  className="fd-tree__expander"
+                  onClick={[Function]}
+                />
+                
+                <div
+                  className="fd-tree__content"
+                >
+                  <span
+                    className="fd-tree__text"
+                  >
+                    Level 3
+                  </span>
+                </div>
+                
+              </div>
+              <ul
+                aria-hidden={true}
+                className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
+                role="group"
+              >
+                <li
+                  aria-expanded={false}
+                  aria-level={4}
+                  className="fd-tree__item"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
+                  role="treeitem"
+                >
+                  <div
+                    className="fd-tree__item-container"
+                  >
+                    <button
+                      aria-controls="fd-mocked-short-id"
+                      aria-label="expand"
+                      aria-pressed={false}
+                      className="fd-tree__expander"
+                      onClick={[Function]}
+                    />
+                    
+                    <div
+                      className="fd-tree__content"
+                    >
+                      <span
+                        className="fd-tree__text"
+                      >
+                        Level 4
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <ul
+                    aria-hidden={true}
+                    className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
+                    role="group"
+                  >
+                    <li
+                      aria-expanded={false}
+                      aria-level={5}
+                      className="fd-tree__item"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
+                      role="treeitem"
+                    >
+                      <div
+                        className="fd-tree__item-container"
+                      >
+                        <button
+                          aria-controls="fd-mocked-short-id"
+                          aria-label="expand"
+                          aria-pressed={false}
+                          className="fd-tree__expander"
+                          onClick={[Function]}
+                        />
+                        
+                        <div
+                          className="fd-tree__content"
+                        >
+                          <span
+                            className="fd-tree__text"
+                          >
+                            Level 5
+                          </span>
+                        </div>
+                        
+                      </div>
+                      <ul
+                        aria-hidden={true}
+                        className="fd-tree is-hidden"
+                        onExpandClickInternal={[Function]}
+                        role="group"
+                      >
+                        <li
+                          aria-expanded={false}
+                          aria-level={6}
+                          className="fd-tree__item"
+                          id="fd-mocked-short-id"
+                          onExpandClickInternal={[Function]}
+                          role="treeitem"
+                        >
+                          <div
+                            className="fd-tree__item-container"
+                          >
+                            <button
+                              aria-controls="fd-mocked-short-id"
+                              aria-label="expand"
+                              aria-pressed={false}
+                              className="fd-tree__expander"
+                              onClick={[Function]}
+                            />
+                            
+                            <div
+                              className="fd-tree__content"
+                            >
+                              <span
+                                className="fd-tree__text"
+                              >
+                                Level 6
+                              </span>
+                            </div>
+                            
+                          </div>
+                          <ul
+                            aria-hidden={true}
+                            className="fd-tree is-hidden"
+                            onExpandClickInternal={[Function]}
+                            role="group"
+                          >
+                            <li
+                              aria-expanded={false}
+                              aria-level={7}
+                              className="fd-tree__item"
+                              id="fd-mocked-short-id"
+                              onExpandClickInternal={[Function]}
+                              role="treeitem"
+                            >
+                              <div
+                                className="fd-tree__item-container"
+                              >
+                                
+                                <div
+                                  className="fd-tree__content"
+                                >
+                                  <span
+                                    className="fd-tree__text"
+                                  >
+                                    Level 7
+                                  </span>
+                                </div>
+                                
+                              </div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
@@ -575,18 +1324,334 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container has-highlight-indicator"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
+        />
+        
+        <div
+          className="fd-tree__content"
+        >
+          <span
+            className="fd-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+      <ul
+        aria-hidden={true}
+        className="fd-tree"
+        onExpandClickInternal={[Function]}
+        role="group"
+      >
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="fd-tree__item"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__item-container has-highlight-indicator--warning"
+          >
+            <button
+              aria-controls="fd-mocked-short-id"
+              aria-label="expand"
+              aria-pressed={false}
+              className="fd-tree__expander"
+              onClick={[Function]}
+            />
+            
+            <div
+              className="fd-tree__content"
+            >
+              <span
+                className="fd-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
+          <ul
+            aria-hidden={true}
+            className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
+            role="group"
+          >
+            <li
+              aria-expanded={false}
+              aria-level={3}
+              className="fd-tree__item"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__item-container has-highlight-indicator--error"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-label="expand"
+                  aria-pressed={false}
+                  className="fd-tree__expander"
+                  onClick={[Function]}
+                />
+                
+                <div
+                  className="fd-tree__content"
+                >
+                  <span
+                    className="fd-tree__text"
+                  >
+                    Level 3
+                  </span>
+                </div>
+                
+              </div>
+              <ul
+                aria-hidden={true}
+                className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
+                role="group"
+              >
+                <li
+                  aria-expanded={false}
+                  aria-level={4}
+                  className="fd-tree__item"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
+                  role="treeitem"
+                >
+                  <div
+                    className="fd-tree__item-container has-highlight-indicator--success"
+                  >
+                    <button
+                      aria-controls="fd-mocked-short-id"
+                      aria-label="expand"
+                      aria-pressed={false}
+                      className="fd-tree__expander"
+                      onClick={[Function]}
+                    />
+                    
+                    <div
+                      className="fd-tree__content"
+                    >
+                      <span
+                        className="fd-tree__text"
+                      >
+                        Level 4
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <ul
+                    aria-hidden={true}
+                    className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
+                    role="group"
+                  >
+                    <li
+                      aria-expanded={false}
+                      aria-level={5}
+                      className="fd-tree__item"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
+                      role="treeitem"
+                    >
+                      <div
+                        className="fd-tree__item-container"
+                      >
+                        
+                        <div
+                          className="fd-tree__content"
+                        >
+                          <span
+                            className="fd-tree__text"
+                          >
+                            Level 5
+                          </span>
+                        </div>
+                        
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  aria-expanded={false}
+                  aria-level={4}
+                  className="fd-tree__item"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
+                  role="treeitem"
+                >
+                  <div
+                    className="fd-tree__item-container"
+                  >
+                    
+                    <div
+                      className="fd-tree__content"
+                    >
+                      <span
+                        className="fd-tree__text"
+                      >
+                        Level 4
+                      </span>
+                    </div>
+                    
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li
+              aria-expanded={false}
+              aria-level={3}
+              className="fd-tree__item"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="fd-tree__item-container"
+              >
+                
+                <div
+                  className="fd-tree__content"
+                >
+                  <span
+                    className="fd-tree__text"
+                  >
+                    Level 3
+                  </span>
+                </div>
+                
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="fd-tree__item"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
+          role="treeitem"
+        >
+          <div
+            className="fd-tree__item-container"
+          >
+            
+            <div
+              className="fd-tree__content"
+            >
+              <span
+                className="fd-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="fd-tree__item"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__item-container"
+      >
+        
+        <div
+          className="fd-tree__content"
+        >
+          <span
+            className="fd-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="fd-tree__item"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__item-container"
+      >
+        
+        <div
+          className="fd-tree__content"
+        >
+          <span
+            className="fd-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Level 1 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    aria-label="Tree with Actions and no border"
+    className="fd-tree fd-tree--no-border"
+    role="tree"
+  >
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="fd-tree__item"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
+      role="treeitem"
+    >
+      <div
+        className="fd-tree__item-container"
+      >
+        <button
+          aria-controls="fd-mocked-short-id"
+          aria-label="expand"
+          aria-pressed={false}
+          className="fd-tree__expander"
+          onClick={[Function]}
+        />
+        <span
+          className="sap-icon--e-care fd-tree__icon"
+        />
+        <span
+          className="sap-icon--activate fd-tree__icon"
         />
         <div
           className="fd-tree__content"
@@ -597,28 +1662,44 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
             Level 1
           </span>
         </div>
+        
+        <button
+          aria-label="Edit"
+          className="fd-button fd-button--transparent sap-icon--edit"
+          type="button"
+        />
+        <button
+          aria-label="Decline"
+          className="fd-button fd-button--transparent sap-icon--decline"
+          type="button"
+        />
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
       >
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
-            className="fd-tree__item-container has-highlight-indicator--warning"
+            className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
+            />
+            <span
+              className="sap-icon--account fd-tree__icon"
             />
             <div
               className="fd-tree__content"
@@ -629,28 +1710,44 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                 Level 2
               </span>
             </div>
+            
+            <button
+              aria-label="Edit"
+              className="fd-button fd-button--transparent sap-icon--edit"
+              type="button"
+            />
+            <button
+              aria-label="Decline"
+              className="fd-button fd-button--transparent sap-icon--decline"
+              type="button"
+            />
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
           >
             <li
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
-                className="fd-tree__item-container has-highlight-indicator--error"
+                className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
+                />
+                <span
+                  className="sap-icon--product fd-tree__icon"
                 />
                 <div
                   className="fd-tree__content"
@@ -661,28 +1758,37 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                     Level 3
                   </span>
                 </div>
+                
+                <button
+                  aria-label="Edit"
+                  className="fd-button fd-button--transparent sap-icon--edit"
+                  type="button"
+                />
+                <button
+                  aria-label="Decline"
+                  className="fd-button fd-button--transparent sap-icon--decline"
+                  type="button"
+                />
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
               >
                 <li
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                 >
                   <div
-                    className="fd-tree__item-container has-highlight-indicator--success"
+                    className="fd-tree__item-container"
                   >
-                    <button
-                      aria-controls="fd-mocked-short-id-level-4"
-                      aria-label="expand"
-                      aria-pressed={false}
-                      className="fd-tree__expander"
-                      onClick={[Function]}
+                    <span
+                      className="sap-icon--wrench fd-tree__icon"
                     />
                     <div
                       className="fd-tree__content"
@@ -693,54 +1799,17 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                         Level 4
                       </span>
                     </div>
-                  </div>
-                  <ul
-                    aria-hidden={true}
-                    className="fd-tree is-hidden"
-                    role="group"
-                  >
-                    <li
-                      aria-expanded={false}
-                      aria-level={5}
-                      className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
-                      role="treeitem"
-                    >
-                      <div
-                        className="fd-tree__item-container"
-                      >
-                        <div
-                          className="fd-tree__content"
-                        >
-                          <span
-                            className="fd-tree__text"
-                          >
-                            Level 5
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container"
-                  >
-                    <div
-                      className="fd-tree__content"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </div>
+                    
+                    <button
+                      aria-label="Edit"
+                      className="fd-button fd-button--transparent sap-icon--edit"
+                      type="button"
+                    />
+                    <button
+                      aria-label="Decline"
+                      className="fd-button fd-button--transparent sap-icon--decline"
+                      type="button"
+                    />
                   </div>
                 </li>
               </ul>
@@ -749,12 +1818,16 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
                 className="fd-tree__item-container"
               >
+                <span
+                  className="sap-icon--history fd-tree__icon"
+                />
                 <div
                   className="fd-tree__content"
                 >
@@ -764,6 +1837,17 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                     Level 3
                   </span>
                 </div>
+                
+                <button
+                  aria-label="Edit"
+                  className="fd-button fd-button--transparent sap-icon--edit"
+                  type="button"
+                />
+                <button
+                  aria-label="Decline"
+                  className="fd-button fd-button--transparent sap-icon--decline"
+                  type="button"
+                />
               </div>
             </li>
           </ul>
@@ -772,12 +1856,16 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
+            <span
+              className="sap-icon--competitor fd-tree__icon"
+            />
             <div
               className="fd-tree__content"
             >
@@ -787,6 +1875,17 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                 Level 2
               </span>
             </div>
+            
+            <button
+              aria-label="Edit"
+              className="fd-button fd-button--transparent sap-icon--edit"
+              type="button"
+            />
+            <button
+              aria-label="Decline"
+              className="fd-button fd-button--transparent sap-icon--decline"
+              type="button"
+            />
           </div>
         </li>
       </ul>
@@ -795,12 +1894,16 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        <span
+          className="sap-icon--batch-payments fd-tree__icon"
+        />
         <div
           className="fd-tree__content"
         >
@@ -810,18 +1913,35 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
             Level 1
           </span>
         </div>
+        <span
+          className="sap-icon--bell fd-tree__icon"
+        />
+        <button
+          aria-label="Edit"
+          className="fd-button fd-button--transparent sap-icon--edit"
+          type="button"
+        />
+        <button
+          aria-label="Decline"
+          className="fd-button fd-button--transparent sap-icon--decline"
+          type="button"
+        />
       </div>
     </li>
     <li
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        <span
+          className="sap-icon--favorite fd-tree__icon"
+        />
         <div
           className="fd-tree__content"
         >
@@ -831,6 +1951,17 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
             Level 1
           </span>
         </div>
+        
+        <button
+          aria-label="Edit"
+          className="fd-button fd-button--transparent sap-icon--edit"
+          type="button"
+        />
+        <button
+          aria-label="Decline"
+          className="fd-button fd-button--transparent sap-icon--decline"
+          type="button"
+        />
       </div>
     </li>
   </ul>
@@ -849,7 +1980,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -857,12 +1989,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-form-item"
         >
@@ -887,10 +2020,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
             Level 1 - onSelectionChange
           </span>
         </div>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="multi"
       >
@@ -898,7 +2033,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -906,12 +2042,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-form-item"
             >
@@ -936,10 +2073,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                 Level 2 - onSelectionChange
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="multi"
           >
@@ -947,7 +2086,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -955,12 +2095,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-form-item"
                 >
@@ -985,10 +2126,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                     Level 3
                   </span>
                 </div>
+                
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -996,7 +2139,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -1004,12 +2148,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-form-item"
                     >
@@ -1034,10 +2179,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -1045,13 +2192,15 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-form-item"
                         >
@@ -1076,6 +2225,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                       </div>
                     </li>
                   </ul>
@@ -1090,7 +2240,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -1098,12 +2249,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-form-item"
         >
@@ -1128,10 +2280,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
             Level 1
           </span>
         </div>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="multi"
       >
@@ -1139,7 +2293,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -1147,12 +2302,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-form-item"
             >
@@ -1177,10 +2333,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="multi"
           >
@@ -1188,7 +2346,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -1196,12 +2355,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-form-item"
                 >
@@ -1226,10 +2386,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                     Level 3
                   </span>
                 </div>
+                
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -1237,7 +2399,8 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -1245,12 +2408,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-form-item"
                     >
@@ -1275,10 +2439,12 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -1286,13 +2452,15 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-form-item"
                         >
@@ -1317,6 +2485,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                       </div>
                     </li>
                   </ul>
@@ -1343,7 +2512,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -1351,12 +2521,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-tree__content"
         >
@@ -1366,6 +2537,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
             Level 1 - onSelectionChange
           </span>
         </div>
+        
         <div
           className="fd-form-item"
         >
@@ -1385,6 +2557,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="multi"
       >
@@ -1392,7 +2565,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -1400,12 +2574,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -1415,6 +2590,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                 Level 2 - onSelectionChange
               </span>
             </div>
+            
             <div
               className="fd-form-item"
             >
@@ -1434,6 +2610,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="multi"
           >
@@ -1441,7 +2618,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -1449,12 +2627,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -1464,6 +2643,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                     Level 3
                   </span>
                 </div>
+                
                 <div
                   className="fd-form-item"
                 >
@@ -1483,6 +2663,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -1490,7 +2671,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -1498,12 +2680,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -1513,6 +2696,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                     <div
                       className="fd-form-item"
                     >
@@ -1532,6 +2716,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -1539,13 +2724,15 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-tree__content"
                         >
@@ -1555,6 +2742,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                         <div
                           className="fd-form-item"
                         >
@@ -1584,7 +2772,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -1592,12 +2781,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-tree__content"
         >
@@ -1607,6 +2797,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
             Level 1
           </span>
         </div>
+        
         <div
           className="fd-form-item"
         >
@@ -1626,6 +2817,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="multi"
       >
@@ -1633,7 +2825,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -1641,12 +2834,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -1656,6 +2850,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                 Level 2
               </span>
             </div>
+            
             <div
               className="fd-form-item"
             >
@@ -1675,6 +2870,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="multi"
           >
@@ -1682,7 +2878,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -1690,12 +2887,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -1705,6 +2903,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                     Level 3
                   </span>
                 </div>
+                
                 <div
                   className="fd-form-item"
                 >
@@ -1724,6 +2923,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -1731,7 +2931,8 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -1739,12 +2940,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -1754,6 +2956,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                     <div
                       className="fd-form-item"
                     >
@@ -1773,6 +2976,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -1780,13 +2984,15 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-tree__content"
                         >
@@ -1796,6 +3002,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                         <div
                           className="fd-form-item"
                         >
@@ -1837,19 +3044,21 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
-        className="fd-tree__item-container has-highlight-indicator--success fd-tree__item-container--active"
+        className="fd-tree__item-container fd-tree__item-container--active"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <a
           className="fd-tree__content has-navigation-indicator"
           href="#navigation-links"
@@ -1860,29 +3069,33 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
             Level 1
           </span>
         </a>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
       >
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
-            className="fd-tree__item-container has-highlight-indicator--warning"
+            className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -1892,29 +3105,33 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
           >
             <li
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
-                className="fd-tree__item-container has-highlight-indicator--error fd-tree__item-container--active"
+                className="fd-tree__item-container fd-tree__item-container--active"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <a
                   className="fd-tree__content has-navigation-indicator"
                   href="#navigation-links"
@@ -1925,29 +3142,33 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                     Level 3
                   </span>
                 </a>
+                
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
               >
                 <li
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                 >
                   <div
-                    className="fd-tree__item-container has-highlight-indicator"
+                    className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -1957,29 +3178,33 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                   >
                     <li
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                     >
                       <div
                         className="fd-tree__item-container fd-tree__item-container--active"
                       >
                         <button
-                          aria-controls="fd-mocked-short-id-level-5"
+                          aria-controls="fd-mocked-short-id"
                           aria-label="expand"
                           aria-pressed={false}
                           className="fd-tree__expander"
                           onClick={[Function]}
                         />
+                        
                         <a
                           className="fd-tree__content has-navigation-indicator"
                           href="#navigation-links"
@@ -1990,29 +3215,33 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                             Level 5
                           </span>
                         </a>
+                        
                       </div>
                       <ul
                         aria-hidden={true}
                         className="fd-tree is-hidden"
+                        onExpandClickInternal={[Function]}
                         role="group"
                       >
                         <li
                           aria-expanded={false}
                           aria-level={6}
                           className="fd-tree__item"
-                          id="fd-mocked-short-id-level-6"
+                          id="fd-mocked-short-id"
+                          onExpandClickInternal={[Function]}
                           role="treeitem"
                         >
                           <div
                             className="fd-tree__item-container"
                           >
                             <button
-                              aria-controls="fd-mocked-short-id-level-6"
+                              aria-controls="fd-mocked-short-id"
                               aria-label="expand"
                               aria-pressed={false}
                               className="fd-tree__expander"
                               onClick={[Function]}
                             />
+                            
                             <div
                               className="fd-tree__content"
                             >
@@ -2022,29 +3251,33 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                 Level 6
                               </span>
                             </div>
+                            
                           </div>
                           <ul
                             aria-hidden={true}
                             className="fd-tree is-hidden"
+                            onExpandClickInternal={[Function]}
                             role="group"
                           >
                             <li
                               aria-expanded={false}
                               aria-level={7}
                               className="fd-tree__item"
-                              id="fd-mocked-short-id-level-7"
+                              id="fd-mocked-short-id"
+                              onExpandClickInternal={[Function]}
                               role="treeitem"
                             >
                               <div
                                 className="fd-tree__item-container fd-tree__item-container--active"
                               >
                                 <button
-                                  aria-controls="fd-mocked-short-id-level-7"
+                                  aria-controls="fd-mocked-short-id"
                                   aria-label="expand"
                                   aria-pressed={false}
                                   className="fd-tree__expander"
                                   onClick={[Function]}
                                 />
+                                
                                 <a
                                   className="fd-tree__content has-navigation-indicator"
                                   href="#navigation-links"
@@ -2055,22 +3288,26 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                     Level 7
                                   </span>
                                 </a>
+                                
                               </div>
                               <ul
                                 aria-hidden={true}
                                 className="fd-tree is-hidden"
+                                onExpandClickInternal={[Function]}
                                 role="group"
                               >
                                 <li
                                   aria-expanded={false}
                                   aria-level={8}
                                   className="fd-tree__item"
-                                  id="fd-mocked-short-id-level-8"
+                                  id="fd-mocked-short-id"
+                                  onExpandClickInternal={[Function]}
                                   role="treeitem"
                                 >
                                   <div
                                     className="fd-tree__item-container"
                                   >
+                                    
                                     <div
                                       className="fd-tree__content"
                                     >
@@ -2080,18 +3317,21 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                         Level 8
                                       </span>
                                     </div>
+                                    
                                   </div>
                                 </li>
                                 <li
                                   aria-expanded={false}
                                   aria-level={8}
                                   className="fd-tree__item"
-                                  id="fd-mocked-short-id-level-8"
+                                  id="fd-mocked-short-id"
+                                  onExpandClickInternal={[Function]}
                                   role="treeitem"
                                 >
                                   <div
-                                    className="fd-tree__item-container has-highlight-indicator--warning fd-tree__item-container--active"
+                                    className="fd-tree__item-container fd-tree__item-container--active"
                                   >
+                                    
                                     <a
                                       className="fd-tree__content has-navigation-indicator"
                                       href="#navigation-links"
@@ -2102,6 +3342,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                         Level 8
                                       </span>
                                     </a>
+                                    
                                   </div>
                                 </li>
                               </ul>
@@ -2110,12 +3351,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                               aria-expanded={false}
                               aria-level={7}
                               className="fd-tree__item"
-                              id="fd-mocked-short-id-level-7"
+                              id="fd-mocked-short-id"
+                              onExpandClickInternal={[Function]}
                               role="treeitem"
                             >
                               <div
-                                className="fd-tree__item-container has-highlight-indicator--error"
+                                className="fd-tree__item-container"
                               >
+                                
                                 <div
                                   className="fd-tree__content"
                                 >
@@ -2125,6 +3368,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                     Level 7
                                   </span>
                                 </div>
+                                
                               </div>
                             </li>
                           </ul>
@@ -2133,12 +3377,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                           aria-expanded={false}
                           aria-level={6}
                           className="fd-tree__item"
-                          id="fd-mocked-short-id-level-6"
+                          id="fd-mocked-short-id"
+                          onExpandClickInternal={[Function]}
                           role="treeitem"
                         >
                           <div
-                            className="fd-tree__item-container has-highlight-indicator fd-tree__item-container--active"
+                            className="fd-tree__item-container fd-tree__item-container--active"
                           >
+                            
                             <a
                               className="fd-tree__content has-navigation-indicator"
                               href="#navigation-links"
@@ -2149,6 +3395,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                 Level 6
                               </span>
                             </a>
+                            
                           </div>
                         </li>
                       </ul>
@@ -2157,12 +3404,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                     >
                       <div
-                        className="fd-tree__item-container has-highlight-indicator--success fd-tree__item-container--active"
+                        className="fd-tree__item-container fd-tree__item-container--active"
                       >
+                        
                         <a
                           className="fd-tree__content has-navigation-indicator"
                           href="#navigation-links"
@@ -2173,6 +3422,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                             Level 5
                           </span>
                         </a>
+                        
                       </div>
                     </li>
                   </ul>
@@ -2181,12 +3431,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                 >
                   <div
                     className="fd-tree__item-container"
                   >
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -2196,6 +3448,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                 </li>
               </ul>
@@ -2204,12 +3457,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
                 className="fd-tree__item-container"
               >
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -2219,6 +3474,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                     Level 3
                   </span>
                 </div>
+                
               </div>
             </li>
           </ul>
@@ -2227,12 +3483,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
+            
             <div
               className="fd-tree__content"
             >
@@ -2242,6 +3500,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
         </li>
       </ul>
@@ -2250,12 +3509,14 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
-        className="fd-tree__item-container has-highlight-indicator--success fd-tree__item-container--active is-navigated"
+        className="fd-tree__item-container fd-tree__item-container--active is-navigated"
       >
+        
         <a
           className="fd-tree__content has-navigation-indicator"
           href="#navigation-links"
@@ -2266,18 +3527,21 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
             Level 1
           </span>
         </a>
+        
       </div>
     </li>
     <li
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
-        className="fd-tree__item-container has-highlight-indicator--success fd-tree__item-container--active"
+        className="fd-tree__item-container fd-tree__item-container--active"
       >
+        
         <a
           className="fd-tree__content has-navigation-indicator"
           href="#navigation-links"
@@ -2288,1139 +3552,8 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
             Level 1
           </span>
         </a>
+        
       </div>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots Component API/Tree New Tree 1`] = `
-<div
-  dir="ltr"
->
-  <ul
-    aria-label="New Tree Yo"
-    className="fd-tree fd-tree--no-border"
-    role="tree"
-  >
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <button
-          aria-controls="fd-mocked-short-id-level-1"
-          aria-label="expand"
-          aria-pressed={false}
-          className="fd-tree__expander"
-          onClick={[Function]}
-        />
-        <span
-          className="sap-icon--e-care fd-tree__icon"
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-        <button
-          className="fd-button fd-button--transparent sap-icon--edit"
-          type="button"
-        />
-        <button
-          className="fd-button fd-button--transparent sap-icon--decline"
-          type="button"
-        />
-      </div>
-      <ul
-        aria-hidden={true}
-        className="fd-tree"
-        role="group"
-      >
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container has-highlight-indicator--success"
-          >
-            <button
-              aria-controls="fd-mocked-short-id-level-2"
-              aria-label="expand"
-              aria-pressed={false}
-              className="fd-tree__expander"
-              onClick={[Function]}
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-          <ul
-            aria-hidden={true}
-            className="fd-tree is-hidden"
-            role="group"
-          >
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id-level-3"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__expander"
-                  onClick={[Function]}
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-              </div>
-              <ul
-                aria-hidden={true}
-                className="fd-tree is-hidden"
-                role="group"
-              >
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container fd-tree__item-container--active"
-                  >
-                    <button
-                      aria-controls="fd-mocked-short-id-level-4"
-                      aria-label="expand"
-                      aria-pressed={false}
-                      className="fd-tree__expander"
-                      onClick={[Function]}
-                    />
-                    <a
-                      className="fd-tree__content has-navigation-indicator"
-                      href="#tree-with-expanded-level-6-and-navigation-links"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </a>
-                  </div>
-                  <ul
-                    aria-hidden={true}
-                    className="fd-tree is-hidden"
-                    role="group"
-                  >
-                    <li
-                      aria-expanded={false}
-                      aria-level={5}
-                      className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
-                      role="treeitem"
-                    >
-                      <div
-                        className="fd-tree__item-container fd-tree__item-container--active"
-                      >
-                        <button
-                          aria-controls="fd-mocked-short-id-level-5"
-                          aria-label="expand"
-                          aria-pressed={false}
-                          className="fd-tree__expander"
-                          onClick={[Function]}
-                        />
-                        <a
-                          className="fd-tree__content has-navigation-indicator"
-                          href="#tree-with-expanded-level-6-and-navigation-links"
-                        >
-                          <span
-                            className="fd-tree__text"
-                          >
-                            Level 5
-                          </span>
-                        </a>
-                      </div>
-                      <ul
-                        aria-hidden={true}
-                        className="fd-tree is-hidden"
-                        role="group"
-                      >
-                        <li
-                          aria-expanded={false}
-                          aria-level={6}
-                          className="fd-tree__item"
-                          id="fd-mocked-short-id-level-6"
-                          role="treeitem"
-                        >
-                          <div
-                            className="fd-tree__item-container fd-tree__item-container--active"
-                          >
-                            <button
-                              aria-controls="fd-mocked-short-id-level-6"
-                              aria-label="expand"
-                              aria-pressed={false}
-                              className="fd-tree__expander"
-                              onClick={[Function]}
-                            />
-                            <a
-                              className="fd-tree__content has-navigation-indicator"
-                              href="#tree-with-expanded-level-6-and-navigation-links"
-                            >
-                              <span
-                                className="fd-tree__text"
-                              >
-                                Level 6
-                              </span>
-                            </a>
-                          </div>
-                          <ul
-                            aria-hidden={true}
-                            className="fd-tree is-hidden"
-                            role="group"
-                          >
-                            <li
-                              aria-expanded={false}
-                              aria-level={7}
-                              className="fd-tree__item"
-                              id="fd-mocked-short-id-level-7"
-                              role="treeitem"
-                            >
-                              <div
-                                className="fd-tree__item-container fd-tree__item-container--active"
-                              >
-                                <button
-                                  aria-controls="fd-mocked-short-id-level-7"
-                                  aria-label="expand"
-                                  aria-pressed={false}
-                                  className="fd-tree__expander"
-                                  onClick={[Function]}
-                                />
-                                <a
-                                  className="fd-tree__content has-navigation-indicator"
-                                  href="#tree-with-expanded-level-6-and-navigation-links"
-                                >
-                                  <span
-                                    className="fd-tree__text"
-                                  >
-                                    Level 7
-                                  </span>
-                                </a>
-                              </div>
-                              <ul
-                                aria-hidden={true}
-                                className="fd-tree is-hidden"
-                                role="group"
-                              >
-                                <li
-                                  aria-expanded={false}
-                                  aria-level={8}
-                                  className="fd-tree__item"
-                                  id="fd-mocked-short-id-level-8"
-                                  role="treeitem"
-                                >
-                                  <div
-                                    className="fd-tree__item-container fd-tree__item-container--active"
-                                  >
-                                    <a
-                                      className="fd-tree__content has-navigation-indicator"
-                                      href="#tree-with-expanded-level-6-and-navigation-links"
-                                    >
-                                      <span
-                                        className="fd-tree__text"
-                                      >
-                                        Level 8
-                                      </span>
-                                    </a>
-                                  </div>
-                                </li>
-                              </ul>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <button
-          aria-controls="fd-mocked-short-id-level-1"
-          aria-label="expand"
-          aria-pressed={false}
-          className="fd-tree__expander"
-          onClick={[Function]}
-        />
-        <span
-          className="sap-icon--account fd-tree__icon"
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-      </div>
-      <ul
-        aria-hidden={true}
-        className="fd-tree"
-        role="group"
-      >
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <button
-              aria-controls="fd-mocked-short-id-level-2"
-              aria-label="expand"
-              aria-pressed={false}
-              className="fd-tree__expander"
-              onClick={[Function]}
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-          <ul
-            aria-hidden={true}
-            className="fd-tree is-hidden"
-            role="group"
-          >
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id-level-3"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__expander"
-                  onClick={[Function]}
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-              </div>
-              <ul
-                aria-hidden={true}
-                className="fd-tree is-hidden"
-                role="group"
-              >
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container"
-                  >
-                    <div
-                      className="fd-tree__content"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          </span>
-        </div>
-      </div>
-    </li>
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <div
-          className="fd-tree__content fd-tree__content--wrap"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          </span>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots Component API/Tree Node Actions And No Border 1`] = `
-<div
-  dir="ltr"
->
-  <ul
-    aria-label="Tree with Actions and no border"
-    className="fd-tree fd-tree--no-border"
-    role="tree"
-  >
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <button
-          aria-controls="fd-mocked-short-id-level-1"
-          aria-label="expand"
-          aria-pressed={false}
-          className="fd-tree__expander"
-          onClick={[Function]}
-        />
-        <span
-          className="sap-icon--e-care fd-tree__icon"
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-        <button
-          className="fd-button fd-button--transparent sap-icon--edit"
-          type="button"
-        />
-        <button
-          className="fd-button fd-button--transparent sap-icon--decline"
-          type="button"
-        />
-      </div>
-      <ul
-        aria-hidden={true}
-        className="fd-tree"
-        role="group"
-      >
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <button
-              aria-controls="fd-mocked-short-id-level-2"
-              aria-label="expand"
-              aria-pressed={false}
-              className="fd-tree__expander"
-              onClick={[Function]}
-            />
-            <span
-              className="sap-icon--account fd-tree__icon"
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-            <button
-              className="fd-button fd-button--transparent sap-icon--edit"
-              type="button"
-            />
-            <button
-              className="fd-button fd-button--transparent sap-icon--decline"
-              type="button"
-            />
-          </div>
-          <ul
-            aria-hidden={true}
-            className="fd-tree is-hidden"
-            role="group"
-          >
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id-level-3"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__expander"
-                  onClick={[Function]}
-                />
-                <span
-                  className="sap-icon--product fd-tree__icon"
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-                <button
-                  className="fd-button fd-button--transparent sap-icon--edit"
-                  type="button"
-                />
-                <button
-                  className="fd-button fd-button--transparent sap-icon--decline"
-                  type="button"
-                />
-              </div>
-              <ul
-                aria-hidden={true}
-                className="fd-tree is-hidden"
-                role="group"
-              >
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container"
-                  >
-                    <span
-                      className="sap-icon--wrench fd-tree__icon"
-                    />
-                    <div
-                      className="fd-tree__content"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </div>
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--edit"
-                      type="button"
-                    />
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--decline"
-                      type="button"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <span
-                  className="sap-icon--history fd-tree__icon"
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-                <button
-                  className="fd-button fd-button--transparent sap-icon--edit"
-                  type="button"
-                />
-                <button
-                  className="fd-button fd-button--transparent sap-icon--decline"
-                  type="button"
-                />
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <span
-              className="sap-icon--competitor fd-tree__icon"
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-            <button
-              className="fd-button fd-button--transparent sap-icon--edit"
-              type="button"
-            />
-            <button
-              className="fd-button fd-button--transparent sap-icon--decline"
-              type="button"
-            />
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <span
-          className="sap-icon--batch-payments fd-tree__icon"
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-        <button
-          className="fd-button fd-button--transparent sap-icon--edit"
-          type="button"
-        />
-        <button
-          className="fd-button fd-button--transparent sap-icon--decline"
-          type="button"
-        />
-      </div>
-    </li>
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <span
-          className="sap-icon--favorite fd-tree__icon"
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-        <button
-          className="fd-button fd-button--transparent sap-icon--edit"
-          type="button"
-        />
-        <button
-          className="fd-button fd-button--transparent sap-icon--decline"
-          type="button"
-        />
-      </div>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storyshots Component API/Tree Simple New Tree 1`] = `
-<div
-  dir="ltr"
->
-  <ul
-    className="fd-tree"
-    role="tree"
-  >
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <button
-          aria-controls="fd-mocked-short-id-level-1"
-          aria-label="expand"
-          aria-pressed={false}
-          className="fd-tree__expander"
-          onClick={[Function]}
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-      </div>
-      <ul
-        aria-hidden={true}
-        className="fd-tree"
-        role="group"
-      >
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <button
-              aria-controls="fd-mocked-short-id-level-2"
-              aria-label="expand"
-              aria-pressed={false}
-              className="fd-tree__expander"
-              onClick={[Function]}
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-          <ul
-            aria-hidden={true}
-            className="fd-tree is-hidden"
-            role="group"
-          >
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id-level-3"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__expander"
-                  onClick={[Function]}
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-              </div>
-              <ul
-                aria-hidden={true}
-                className="fd-tree is-hidden"
-                role="group"
-              >
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container"
-                  >
-                    <button
-                      aria-controls="fd-mocked-short-id-level-4"
-                      aria-label="expand"
-                      aria-pressed={false}
-                      className="fd-tree__expander"
-                      onClick={[Function]}
-                    />
-                    <div
-                      className="fd-tree__content"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </div>
-                  </div>
-                  <ul
-                    aria-hidden={true}
-                    className="fd-tree is-hidden"
-                    role="group"
-                  >
-                    <li
-                      aria-expanded={false}
-                      aria-level={5}
-                      className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
-                      role="treeitem"
-                    >
-                      <div
-                        className="fd-tree__item-container"
-                      >
-                        <div
-                          className="fd-tree__content"
-                        >
-                          <span
-                            className="fd-tree__text"
-                          >
-                            Level 5
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li
-      aria-expanded={false}
-      aria-level={1}
-      className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
-      role="treeitem"
-    >
-      <div
-        className="fd-tree__item-container"
-      >
-        <button
-          aria-controls="fd-mocked-short-id-level-1"
-          aria-label="expand"
-          aria-pressed={false}
-          className="fd-tree__expander"
-          onClick={[Function]}
-        />
-        <div
-          className="fd-tree__content"
-        >
-          <span
-            className="fd-tree__text"
-          >
-            Level 1
-          </span>
-        </div>
-      </div>
-      <ul
-        aria-hidden={true}
-        className="fd-tree"
-        role="group"
-      >
-        <li
-          aria-expanded={false}
-          aria-level={2}
-          className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
-          role="treeitem"
-        >
-          <div
-            className="fd-tree__item-container"
-          >
-            <button
-              aria-controls="fd-mocked-short-id-level-2"
-              aria-label="expand"
-              aria-pressed={false}
-              className="fd-tree__expander"
-              onClick={[Function]}
-            />
-            <div
-              className="fd-tree__content"
-            >
-              <span
-                className="fd-tree__text"
-              >
-                Level 2
-              </span>
-            </div>
-          </div>
-          <ul
-            aria-hidden={true}
-            className="fd-tree is-hidden"
-            role="group"
-          >
-            <li
-              aria-expanded={false}
-              aria-level={3}
-              className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
-              role="treeitem"
-            >
-              <div
-                className="fd-tree__item-container"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id-level-3"
-                  aria-label="expand"
-                  aria-pressed={false}
-                  className="fd-tree__expander"
-                  onClick={[Function]}
-                />
-                <div
-                  className="fd-tree__content"
-                >
-                  <span
-                    className="fd-tree__text"
-                  >
-                    Level 3
-                  </span>
-                </div>
-              </div>
-              <ul
-                aria-hidden={true}
-                className="fd-tree is-hidden"
-                role="group"
-              >
-                <li
-                  aria-expanded={false}
-                  aria-level={4}
-                  className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
-                  role="treeitem"
-                >
-                  <div
-                    className="fd-tree__item-container"
-                  >
-                    <button
-                      aria-controls="fd-mocked-short-id-level-4"
-                      aria-label="expand"
-                      aria-pressed={false}
-                      className="fd-tree__expander"
-                      onClick={[Function]}
-                    />
-                    <div
-                      className="fd-tree__content"
-                    >
-                      <span
-                        className="fd-tree__text"
-                      >
-                        Level 4
-                      </span>
-                    </div>
-                  </div>
-                  <ul
-                    aria-hidden={true}
-                    className="fd-tree is-hidden"
-                    role="group"
-                  >
-                    <li
-                      aria-expanded={false}
-                      aria-level={5}
-                      className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
-                      role="treeitem"
-                    >
-                      <div
-                        className="fd-tree__item-container"
-                      >
-                        <div
-                          className="fd-tree__content"
-                        >
-                          <span
-                            className="fd-tree__text"
-                          >
-                            Level 5
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
     </li>
   </ul>
 </div>
@@ -3438,7 +3571,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -3446,16 +3580,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-form-item"
         >
           <input
+            aria-label="Level 1 - onSelectionChange"
             className="fd-radio"
             id="fd-mocked-short-id"
             name="fd-mocked-short-id"
@@ -3476,10 +3612,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
             Level 1 - onSelectionChange
           </span>
         </div>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="single"
       >
@@ -3487,7 +3625,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -3495,16 +3634,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-form-item"
             >
               <input
+                aria-label="Level 2 - onSelectionChange"
                 className="fd-radio"
                 id="fd-mocked-short-id"
                 name="fd-mocked-short-id"
@@ -3525,10 +3666,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                 Level 2 - onSelectionChange
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="single"
           >
@@ -3536,7 +3679,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -3544,16 +3688,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-form-item"
                 >
                   <input
+                    aria-label="Level 3"
                     className="fd-radio"
                     id="fd-mocked-short-id"
                     name="fd-mocked-short-id"
@@ -3574,10 +3720,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                     Level 3
                   </span>
                 </div>
+                
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="single"
               >
@@ -3585,7 +3733,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -3593,16 +3742,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-form-item"
                     >
                       <input
+                        aria-label="Level 4"
                         className="fd-radio"
                         id="fd-mocked-short-id"
                         name="fd-mocked-short-id"
@@ -3623,10 +3774,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -3634,17 +3787,20 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="single"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-form-item"
                         >
                           <input
+                            aria-label="Level 5"
                             className="fd-radio"
                             id="fd-mocked-short-id"
                             name="fd-mocked-short-id"
@@ -3665,6 +3821,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                       </div>
                     </li>
                   </ul>
@@ -3679,7 +3836,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -3687,16 +3845,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-form-item"
         >
           <input
+            aria-label="Level 1"
             className="fd-radio"
             id="fd-mocked-short-id"
             name="fd-mocked-short-id"
@@ -3717,10 +3877,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
             Level 1
           </span>
         </div>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="single"
       >
@@ -3728,7 +3890,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -3736,16 +3899,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-form-item"
             >
               <input
+                aria-label="Level 2"
                 className="fd-radio"
                 id="fd-mocked-short-id"
                 name="fd-mocked-short-id"
@@ -3766,10 +3931,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                 Level 2
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="single"
           >
@@ -3777,7 +3944,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -3785,16 +3953,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-form-item"
                 >
                   <input
+                    aria-label="Level 3"
                     className="fd-radio"
                     id="fd-mocked-short-id"
                     name="fd-mocked-short-id"
@@ -3815,10 +3985,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                     Level 3
                   </span>
                 </div>
+                
               </div>
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="single"
               >
@@ -3826,7 +3998,8 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -3834,16 +4007,18 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-form-item"
                     >
                       <input
+                        aria-label="Level 4"
                         className="fd-radio"
                         id="fd-mocked-short-id"
                         name="fd-mocked-short-id"
@@ -3864,10 +4039,12 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                   </div>
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -3875,17 +4052,20 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="single"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-form-item"
                         >
                           <input
+                            aria-label="Level 5"
                             className="fd-radio"
                             id="fd-mocked-short-id"
                             name="fd-mocked-short-id"
@@ -3906,6 +4086,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                       </div>
                     </li>
                   </ul>
@@ -3932,7 +4113,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -3940,12 +4122,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-tree__content"
         >
@@ -3955,10 +4138,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
             Level 1 - onSelectionChange
           </span>
         </div>
+        
         <div
           className="fd-form-item"
         >
           <input
+            aria-label="Level 1 - onSelectionChange"
             className="fd-radio"
             id="fd-mocked-short-id"
             name="fd-mocked-short-id"
@@ -3974,6 +4159,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="single"
       >
@@ -3981,7 +4167,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -3989,12 +4176,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -4004,10 +4192,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                 Level 2 - onSelectionChange
               </span>
             </div>
+            
             <div
               className="fd-form-item"
             >
               <input
+                aria-label="Level 2 - onSelectionChange"
                 className="fd-radio"
                 id="fd-mocked-short-id"
                 name="fd-mocked-short-id"
@@ -4023,6 +4213,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="single"
           >
@@ -4030,7 +4221,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -4038,12 +4230,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -4053,10 +4246,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                     Level 3
                   </span>
                 </div>
+                
                 <div
                   className="fd-form-item"
                 >
                   <input
+                    aria-label="Level 3"
                     className="fd-radio"
                     id="fd-mocked-short-id"
                     name="fd-mocked-short-id"
@@ -4072,6 +4267,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="single"
               >
@@ -4079,7 +4275,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -4087,12 +4284,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -4102,10 +4300,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                     <div
                       className="fd-form-item"
                     >
                       <input
+                        aria-label="Level 4"
                         className="fd-radio"
                         id="fd-mocked-short-id"
                         name="fd-mocked-short-id"
@@ -4121,6 +4321,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -4128,13 +4329,15 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="single"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-tree__content"
                         >
@@ -4144,10 +4347,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                         <div
                           className="fd-form-item"
                         >
                           <input
+                            aria-label="Level 5"
                             className="fd-radio"
                             id="fd-mocked-short-id"
                             name="fd-mocked-short-id"
@@ -4173,7 +4378,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -4181,12 +4387,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-tree__content"
         >
@@ -4196,10 +4403,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
             Level 1
           </span>
         </div>
+        
         <div
           className="fd-form-item"
         >
           <input
+            aria-label="Level 1"
             className="fd-radio"
             id="fd-mocked-short-id"
             name="fd-mocked-short-id"
@@ -4215,6 +4424,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
         selection="single"
       >
@@ -4222,7 +4432,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -4230,12 +4441,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -4245,10 +4457,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                 Level 2
               </span>
             </div>
+            
             <div
               className="fd-form-item"
             >
               <input
+                aria-label="Level 2"
                 className="fd-radio"
                 id="fd-mocked-short-id"
                 name="fd-mocked-short-id"
@@ -4264,6 +4478,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
             selection="single"
           >
@@ -4271,7 +4486,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -4279,12 +4495,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                 className="fd-tree__item-container"
               >
                 <button
-                  aria-controls="fd-mocked-short-id-level-3"
+                  aria-controls="fd-mocked-short-id"
                   aria-label="expand"
                   aria-pressed={false}
                   className="fd-tree__expander"
                   onClick={[Function]}
                 />
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -4294,10 +4511,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                     Level 3
                   </span>
                 </div>
+                
                 <div
                   className="fd-form-item"
                 >
                   <input
+                    aria-label="Level 3"
                     className="fd-radio"
                     id="fd-mocked-short-id"
                     name="fd-mocked-short-id"
@@ -4313,6 +4532,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
+                onExpandClickInternal={[Function]}
                 role="group"
                 selection="single"
               >
@@ -4320,7 +4540,8 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   aria-expanded={false}
                   aria-level={4}
                   className="fd-tree__item"
-                  id="fd-mocked-short-id-level-4"
+                  id="fd-mocked-short-id"
+                  onExpandClickInternal={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -4328,12 +4549,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                     className="fd-tree__item-container"
                   >
                     <button
-                      aria-controls="fd-mocked-short-id-level-4"
+                      aria-controls="fd-mocked-short-id"
                       aria-label="expand"
                       aria-pressed={false}
                       className="fd-tree__expander"
                       onClick={[Function]}
                     />
+                    
                     <div
                       className="fd-tree__content"
                     >
@@ -4343,10 +4565,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                         Level 4
                       </span>
                     </div>
+                    
                     <div
                       className="fd-form-item"
                     >
                       <input
+                        aria-label="Level 4"
                         className="fd-radio"
                         id="fd-mocked-short-id"
                         name="fd-mocked-short-id"
@@ -4362,6 +4586,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
+                    onExpandClickInternal={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -4369,13 +4594,15 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                       aria-expanded={false}
                       aria-level={5}
                       className="fd-tree__item"
-                      id="fd-mocked-short-id-level-5"
+                      id="fd-mocked-short-id"
+                      onExpandClickInternal={[Function]}
                       role="treeitem"
                       selection="single"
                     >
                       <div
                         className="fd-tree__item-container"
                       >
+                        
                         <div
                           className="fd-tree__content"
                         >
@@ -4385,10 +4612,12 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                             Level 5
                           </span>
                         </div>
+                        
                         <div
                           className="fd-form-item"
                         >
                           <input
+                            aria-label="Level 5"
                             className="fd-radio"
                             id="fd-mocked-short-id"
                             name="fd-mocked-short-id"
@@ -4426,19 +4655,21 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
         <button
-          aria-controls="fd-mocked-short-id-level-1"
+          aria-controls="fd-mocked-short-id"
           aria-label="expand"
           aria-pressed={false}
           className="fd-tree__expander"
           onClick={[Function]}
         />
+        
         <div
           className="fd-tree__content"
         >
@@ -4448,29 +4679,33 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
             Level 1
           </span>
         </div>
+        
       </div>
       <ul
         aria-hidden={true}
         className="fd-tree"
+        onExpandClickInternal={[Function]}
         role="group"
       >
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
             <button
-              aria-controls="fd-mocked-short-id-level-2"
+              aria-controls="fd-mocked-short-id"
               aria-label="expand"
               aria-pressed={false}
               className="fd-tree__expander"
               onClick={[Function]}
             />
+            
             <div
               className="fd-tree__content"
             >
@@ -4480,22 +4715,26 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
                 Level 2
               </span>
             </div>
+            
           </div>
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
+            onExpandClickInternal={[Function]}
             role="group"
           >
             <li
               aria-expanded={false}
               aria-level={3}
               className="fd-tree__item"
-              id="fd-mocked-short-id-level-3"
+              id="fd-mocked-short-id"
+              onExpandClickInternal={[Function]}
               role="treeitem"
             >
               <div
                 className="fd-tree__item-container"
               >
+                
                 <div
                   className="fd-tree__content"
                 >
@@ -4505,6 +4744,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
                     Level 3
                   </span>
                 </div>
+                
               </div>
             </li>
           </ul>
@@ -4513,12 +4753,14 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
+            
             <div
               className="fd-tree__content"
             >
@@ -4528,18 +4770,21 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
                 Level 2
               </span>
             </div>
+            
           </div>
         </li>
         <li
           aria-expanded={false}
           aria-level={2}
           className="fd-tree__item"
-          id="fd-mocked-short-id-level-2"
+          id="fd-mocked-short-id"
+          onExpandClickInternal={[Function]}
           role="treeitem"
         >
           <div
             className="fd-tree__item-container"
           >
+            
             <div
               className="fd-tree__content"
             >
@@ -4549,6 +4794,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
                 Level 2
               </span>
             </div>
+            
           </div>
         </li>
       </ul>
@@ -4557,12 +4803,14 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        
         <div
           className="fd-tree__content"
         >
@@ -4572,18 +4820,21 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
             Level 1
           </span>
         </div>
+        
       </div>
     </li>
     <li
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        
         <div
           className="fd-tree__content"
         >
@@ -4593,18 +4844,21 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
             Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
           </span>
         </div>
+        
       </div>
     </li>
     <li
       aria-expanded={false}
       aria-level={1}
       className="fd-tree__item"
-      id="fd-mocked-short-id-level-1"
+      id="fd-mocked-short-id"
+      onExpandClickInternal={[Function]}
       role="treeitem"
     >
       <div
         className="fd-tree__item-container"
       >
+        
         <div
           className="fd-tree__content fd-tree__content--wrap"
         >
@@ -4614,6 +4868,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
             Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
           </span>
         </div>
+        
       </div>
     </li>
   </ul>
