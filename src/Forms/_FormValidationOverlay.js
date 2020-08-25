@@ -77,7 +77,7 @@ FormValidationOverlay.propTypes = {
         /** State of validation: 'error', 'warning', 'information', 'success' */
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         /** Text of the validation message */
-        text: PropTypes.stringng
+        text: PropTypes.string
     })
 };
 
