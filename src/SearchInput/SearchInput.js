@@ -205,6 +205,7 @@ class SearchInput extends PureComponent {
             <FormValidationOverlay
                 {...validationOverlayProps}
                 control={inputGroup}
+                controlProps={{ onClick }}
                 validationState={validationState} />
         );
 
