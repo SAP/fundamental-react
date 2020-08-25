@@ -29,6 +29,7 @@ const Select = React.forwardRef(({
     popoverProps,
     readOnly,
     selectedKey,
+    validationOverlayProps,
     validationState,
     ...props
 }, ref) => {
@@ -119,6 +120,7 @@ const Select = React.forwardRef(({
 
     const wrappedSelectControl = (
         <FormValidationOverlay
+            {...validationOverlayProps}
             aria-disabled={disabled}
             aria-readonly={readOnly}
             control={selectControl}
@@ -211,6 +213,15 @@ Select.propTypes = {
     readOnly: PropTypes.bool,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

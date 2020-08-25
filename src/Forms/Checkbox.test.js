@@ -139,6 +139,17 @@ describe('<Checkbox />', () => {
                 ).toContain('wonderful-styles');
             });
 
+            test('should allow spreading className to ValidationOverlay reference div', () => {
+                const wrapper = setup({
+                    validationState: { state: 'error', text: 'Test validation state' },
+                    validationOverlayProps: { referenceClassName: 'wonderful-styles' }
+                });
+
+                expect(
+                    wrapper.find('.fd-popover__control').getDOMNode().classList
+                ).toContain('wonderful-styles');
+            });
+
             test('should spread formMessageProps to ValidationOverlay\'s FormMessage', async() => {
                 await act(async() => {
                     setup({

@@ -1,3 +1,4 @@
+import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import React from 'react';
 import { StepInput } from '../';
@@ -31,6 +32,62 @@ describe('<StepInput />', () => {
             expect(
                 element.find('.fd-step-input').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+        });
+
+        describe('validationOverlayProps', () => {
+            afterEach(() => {
+                document.body.innerHTML = '';
+            });
+
+            const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+
+
+            test('should allow spreading className to ValidationOverlay popover', () => {
+                const wrapper = setup({
+                    validationState: { state: 'error', text: 'Test validation state' },
+                    validationOverlayProps: { className: 'wonderful-styles' }
+                });
+
+                expect(
+                    wrapper.find('.fd-popover').getDOMNode().classList
+                ).toContain('wonderful-styles');
+            });
+
+            test('should allow spreading className to ValidationOverlay reference div', () => {
+                const wrapper = setup({
+                    validationState: { state: 'error', text: 'Test validation state' },
+                    validationOverlayProps: { referenceClassName: 'wonderful-styles' }
+                });
+
+                expect(
+                    wrapper.find('.fd-popover__control').getDOMNode().classList
+                ).toContain('wonderful-styles');
+            });
+
+            test('should spread formMessageProps to ValidationOverlay\'s FormMessage', async() => {
+                await act(async() => {
+                    setup({
+                        validationState: {
+                            state: 'error',
+                            text: 'Test validation state'
+                        },
+                        validationOverlayProps: {
+                            formMessageProps: { 'data-sample': 'Sample', className: 'wonderful-styles' },
+                            show: true
+                        }
+                    });
+                });
+
+                const messageNode = getFormMessage();
+
+                expect(
+                    messageNode.attributes['data-sample'].value
+                ).toBe('Sample');
+
+                expect(
+                    messageNode.classList
+                ).toContain('wonderful-styles');
+            });
         });
     });
     describe('onChange handler', () => {
