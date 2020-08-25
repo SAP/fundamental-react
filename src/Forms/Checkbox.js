@@ -29,7 +29,7 @@ const Checkbox = React.forwardRef(({
     name,
     onChange,
     value,
-    validationClassName,
+    validationOverlayProps,
     validationState,
     ...props
 }, ref) => {
@@ -96,7 +96,7 @@ const Checkbox = React.forwardRef(({
 
     return validationState ? (
         <FormValidationOverlay
-            className={validationClassName}
+            {...validationOverlayProps}
             control={checkbox}
             validationState={validationState} />
     ) : checkbox;
@@ -143,8 +143,15 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     labelProps: PropTypes.object,
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
-    /** Additional classes to apply to validation popover */
-    validationClassName: PropTypes.string,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
