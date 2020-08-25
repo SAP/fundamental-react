@@ -121,20 +121,19 @@ const Select = React.forwardRef(({
     const wrappedSelectControl = (
         <FormValidationOverlay
             {...validationOverlayProps}
-            aria-disabled={disabled}
-            aria-readonly={readOnly}
             control={selectControl}
-            onClick={handleClick}
-            role={'combobox'}
-            tabIndex={tabIndex}
+            controlProps={{
+                'aria-disabled': disabled,
+                'aria-readonly': readOnly,
+                onClick: handleClick,
+                role: 'combobox',
+                tabIndex
+            }}
             validationState={validationState} />
     );
 
     const listBoxClassName = classnames(
         'fd-list--dropdown',
-        {
-            'fd-list--has-message': validationState?.state
-        },
         listClassName
     );
 
