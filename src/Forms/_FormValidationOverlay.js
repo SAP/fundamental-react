@@ -5,7 +5,7 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const FormValidationOverlay = React.forwardRef(({ className, control, popperProps, validationState, validationOverlayProps, ...rest }, ref) => {
+const FormValidationOverlay = React.forwardRef(({ className, control, popperProps, validationState, ...rest }, ref) => {
     let [showValidationMessage, setShowValidationMessage] = useState(false);
 
     const _handleBlur = () => {
@@ -18,15 +18,7 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
         }
     };
 
-    // const popoverClasses = classnames('fd-popover', className);
-
-    const popoverClasses = classnames(
-        'fd-popover',
-        className,
-        {
-            [validationOverlayProps]: validationOverlayProps
-        },
-    );
+    const popoverClasses = classnames('fd-popover', className);
 
     const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
 
