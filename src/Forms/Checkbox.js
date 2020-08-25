@@ -16,6 +16,7 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
+    childrenClassName,
     compact,
     defaultChecked,
     disabled,
@@ -55,11 +56,16 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
+    const childrenClasses = classnames(
+        'fd-checkbox__text',
+        childrenClassName
+    );
+
     const generatedCheckId = useUniqueId();
     const checkId = id ? id : generatedCheckId;
 
     const checkboxChildren = (typeof children === 'string') ? (
-        <span className='fd-checkbox__text'>
+        <span className={childrenClasses}>
             {children}
         </span>
     ) : children;
@@ -119,6 +125,8 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
             );
         }
     },
+    /** Additional classes to apply to children */
+    childrenClassName: PropTypes.string,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */

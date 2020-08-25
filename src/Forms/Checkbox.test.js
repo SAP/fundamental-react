@@ -121,6 +121,16 @@ describe('<Checkbox />', () => {
 
         test('should set validationClassName on the popover', () => {
             const wrapper = setup({
+                childrenClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-checkbox__text').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set validationClassName on the popover', () => {
+            const wrapper = setup({
                 validationState: { state: 'error', text: 'Test validation state' },
                 validationClassName: 'wonderful-styles'
             });
