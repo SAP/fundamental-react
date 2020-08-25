@@ -118,6 +118,17 @@ describe('<Checkbox />', () => {
                 wrapper.find('.fd-checkbox').getDOMNode().classList
             ).toContain('wonderful-styles');
         });
+
+        test('should set validationClassName on the popover', () => {
+            const wrapper = setup({
+                validationState: { state: 'error', text: 'Test validation state' },
+                validationClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-popover').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
     });
 
     test('forwards the ref', () => {
