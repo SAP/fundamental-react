@@ -45,14 +45,14 @@ const FormValidationOverlay = React.forwardRef((
     const bodyContent = (<FormMessage {...formMessageProps} type={validationState?.state}>{validationState?.text}</FormMessage>);
 
     const controlElementProps = {
-        ...controlProps,
         'aria-controls': ariaControls,
         'aria-haspopup': ariaHasPopup,
         'aria-expanded': ariaExpanded,
         onClick,
         onKeyPress,
         role,
-        tabIndex
+        tabIndex,
+        ...controlProps // spread must be after to override automatic props
     };
 
     const referenceComponent = React.cloneElement(control, controlElementProps);
