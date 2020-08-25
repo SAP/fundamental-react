@@ -5,8 +5,19 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const FormValidationOverlay = React.forwardRef(({ className, control, popperProps, validationState, ...rest }, ref) => {
-    let [showValidationMessage, setShowValidationMessage] = useState(false);
+const FormValidationOverlay = React.forwardRef((
+    {
+        className,
+        control,
+        formMessageProps,
+        popperProps,
+        referenceClassName,
+        show,
+        validationState,
+        ...rest
+    }, ref) => {
+
+    let [showValidationMessage, setShowValidationMessage] = useState(show);
 
     const _handleBlur = () => {
         setShowValidationMessage(false);
@@ -20,12 +31,15 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
 
     const popoverClasses = classnames('fd-popover', className);
 
-    const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
+    const referenceClasses = classnames('fd-popover__control', referenceClassName);
 
-    const referenceComponent = React.cloneElement(control, rest);
+    const bodyContent = (<FormMessage {...formMessageProps} type={validationState?.state}>{validationState?.text}</FormMessage>);
+
+    const referenceComponent = React.cloneElement(control);
 
     return (
         <div
+            {...rest}
             className={popoverClasses}
             onBlur={_handleBlur}
             onFocus={_handleFocus}
@@ -35,7 +49,7 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
                 noArrow
                 popperPlacement={'bottom-start'}
                 popperProps={popperProps}
-                referenceClassName='fd-popover__control'
+                referenceClassName={referenceClasses}
                 referenceComponent={referenceComponent}
                 show={showValidationMessage}
                 usePortal>
@@ -47,11 +61,17 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
 FormValidationOverlay.displayName = 'FormValidationOverlay';
 
 FormValidationOverlay.propTypes = {
-    /** CSS class(es) to add to the element */
+    /** CSS class(es) to add to the outer wrapping div */
     className: PropTypes.string,
     control: PropTypes.node,
+    /** Additional props to be spread to the FormMessage component */
+    formMessageProps: PropTypes.object,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
+    /** CSS class(es) to add to the reference div */
+    referenceClassName: PropTypes.string,
+    /** Set to **true** to default ValidationOverlay to an open state */
+    show: PropTypes.bool,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
