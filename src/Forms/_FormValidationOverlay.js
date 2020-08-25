@@ -52,8 +52,6 @@ FormValidationOverlay.propTypes = {
     control: PropTypes.node,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
-    /** An object idendifying a popover class name coming from the child component in order to be used for additional styles targeting via classnames. */
-    validationOverlayProps: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
