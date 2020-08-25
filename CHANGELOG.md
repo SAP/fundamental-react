@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.3...v0.13.0-rc.4) (2020-08-25)
+
+
+### Features
+
+* validation class prop ([#1181](https://github.com/SAP/fundamental-react/issues/1181)) ([250d75e](https://github.com/SAP/fundamental-react/commit/250d75ec9832ef0bafc7d3c180cc8536d107fbd5))
+
 ## [0.13.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.2...v0.13.0-rc.3) (2020-08-21)
 
 
