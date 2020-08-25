@@ -394,6 +394,12 @@ class DatePicker extends Component {
                 className={inputGroupClass}
                 compact={compact}
                 disabled={disabled}
+                validationOverlayProps={{
+                    controlProps: {
+                        'aria-expanded': this.state.isExpanded,
+                        'aria-haspopup': 'true'
+                    }
+                }}
                 validationState={validationState} >
                 <FormInput
                     {...inputProps}

@@ -175,6 +175,9 @@ class SearchInput extends PureComponent {
                 compact={compact}
                 disabled={disabled}
                 readOnly={readOnly}
+                validationOverlayProps={{
+                    controlProps: inputGroupProps
+                }}
                 validationState={validationState}>
                 <FormInput
                     {...inputProps}

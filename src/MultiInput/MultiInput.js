@@ -198,6 +198,13 @@ class MultiInput extends Component {
                 compact={compact}
                 disabled={disabled}
                 onClick={this.showHideTagList}
+                validationOverlayProps={{
+                    controlProps: {
+                        'aria-expanded': this.state.bShowList,
+                        'aria-haspopup': 'true',
+                        onClick: this.showHideTagList
+                    }
+                }}
                 validationState={validationState}>
                 <div {...tagProps} className={tokenizerClassName}>
                     <div className='fd-tokenizer__inner'>

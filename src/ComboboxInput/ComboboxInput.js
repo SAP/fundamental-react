@@ -401,6 +401,11 @@ const ComboboxInput = React.forwardRef(({
                 compact={compact}
                 disabled={disabled}
                 onClick={handleInputGroupClick}
+                validationOverlayProps={{
+                    controlProps: {
+                        onClick: handleInputGroupClick
+                    }
+                }}
                 validationState={validationState}>
                 <FormInput
                     autoComplete='off'
