@@ -18,13 +18,14 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
         }
     };
 
-    const popoverClasses = classnames('fd-popover', className);
+    // const popoverClasses = classnames('fd-popover', className);
 
-    const referenceClasses = classnames(
-        'fd-popover__control',
+    const popoverClasses = classnames(
+        'fd-popover',
+        className,
         {
-            [validationOverlayProps?.className]: validationOverlayProps?.className
-        }
+            [validationOverlayProps]: validationOverlayProps
+        },
     );
 
     const bodyContent = (<FormMessage type={validationState?.state}>{validationState?.text}</FormMessage>);
@@ -42,7 +43,7 @@ const FormValidationOverlay = React.forwardRef(({ className, control, popperProp
                 noArrow
                 popperPlacement={'bottom-start'}
                 popperProps={popperProps}
-                referenceClassName={referenceClasses}
+                referenceClassName='fd-popover__control'
                 referenceComponent={referenceComponent}
                 show={showValidationMessage}
                 usePortal>
@@ -60,9 +61,7 @@ FormValidationOverlay.propTypes = {
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
     /** An object idendifying a popover class name coming from the child component in order to be used for additional styles targeting via classnames. */
-    validationOverlayProps: PropTypes.shape({
-        className: PropTypes.string
-    }),
+    validationOverlayProps: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

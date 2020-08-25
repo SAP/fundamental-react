@@ -144,7 +144,7 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
     /** An object idendifying a popover class name coming from the child component in order to be used for additional styles targeting via classnames. */
-    validationOverlayProps: PropTypes.object,
+    validationOverlayProps: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
