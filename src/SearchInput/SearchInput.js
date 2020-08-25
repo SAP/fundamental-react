@@ -60,7 +60,6 @@ class SearchInput extends PureComponent {
             this.setState(prevState => ({
                 isExpanded: !prevState.isExpanded
             }));
-            this.props.onClick(event);
         }
     };
 
@@ -111,7 +110,6 @@ class SearchInput extends PureComponent {
             searchList,
             subStringSearch,
             onChange,
-            onClick,
             onSelect,
             noSearchBtn,
             compact,
@@ -205,7 +203,6 @@ class SearchInput extends PureComponent {
             <FormValidationOverlay
                 {...validationOverlayProps}
                 control={inputGroup}
-                controlProps={{ onClick }}
                 validationState={validationState} />
         );
 
@@ -294,8 +291,6 @@ SearchInput.propTypes = {
     }),
     /** Callback function when the change event fires on the component */
     onChange: PropTypes.func,
-    /** Callback function when user clicks on the component */
-    onClick: PropTypes.func,
     /** Callback function when the user hits the <enter> key */
     onEnter: PropTypes.func,
     /** Callback function when user clicks on an option */
@@ -307,7 +302,6 @@ SearchInput.defaultProps = {
         searchBtnLabel: 'Search'
     },
     onChange: () => { },
-    onClick: () => { },
     onEnter: () => { },
     onSelect: () => { }
 };
