@@ -147,6 +147,7 @@ const Select = React.forwardRef(({
                 (<>
                     {validationState &&
                     <FormMessage
+                        {...validationOverlayProps?.formMessageProps}
                         type={validationState.state}>
                         {validationState.text}
                     </FormMessage>

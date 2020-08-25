@@ -216,6 +216,7 @@ class SearchInput extends PureComponent {
                         (<>
                             {validationState &&
                             <FormMessage
+                                {...validationOverlayProps?.formMessageProps}
                                 type={validationState.state}>
                                 {validationState.text}
                             </FormMessage>
