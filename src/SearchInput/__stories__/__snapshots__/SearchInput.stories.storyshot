@@ -299,6 +299,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-error fd-input-group is-error"
+                        onClick={[Function]}
                       >
                         <input
                           aria-label="Search input with error"
@@ -371,6 +372,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-warning fd-input-group is-warning"
+                        onClick={[Function]}
                       >
                         <input
                           aria-label="Search input with warning"
@@ -443,6 +445,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-success fd-input-group is-success"
+                        onClick={[Function]}
                       >
                         <input
                           aria-label="Search input with success message"
@@ -515,6 +518,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                     >
                       <div
                         className="fd-input-group--control is-information fd-input-group is-information"
+                        onClick={[Function]}
                       >
                         <input
                           aria-label="Search input with information"

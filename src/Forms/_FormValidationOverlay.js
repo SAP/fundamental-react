@@ -7,22 +7,14 @@ import React, { useState } from 'react';
 
 const FormValidationOverlay = React.forwardRef((
     {
-        // lint disabled props are coming from react-popper
-        'aria-controls': ariaControls, // eslint-disable-line
-        'aria-expanded': ariaExpanded, // eslint-disable-line
-        'aria-haspopup': ariaHasPopup, // eslint-disable-line
         className,
         control,
-        controlProps,
         formMessageProps,
-        onClick, // eslint-disable-line
-        onKeyPress, // eslint-disable-line
         popperProps,
         referenceClassName,
-        role, // eslint-disable-line
         show,
-        tabIndex, // eslint-disable-line
         validationState,
+        wrapperProps,
         ...rest
     }, ref) => {
 
@@ -44,22 +36,11 @@ const FormValidationOverlay = React.forwardRef((
 
     const bodyContent = (<FormMessage {...formMessageProps} type={validationState?.state}>{validationState?.text}</FormMessage>);
 
-    const controlElementProps = {
-        'aria-controls': ariaControls,
-        'aria-haspopup': ariaHasPopup,
-        'aria-expanded': ariaExpanded,
-        onClick,
-        onKeyPress,
-        role,
-        tabIndex,
-        ...controlProps // spread must be after to override automatic props
-    };
-
-    const referenceComponent = React.cloneElement(control, controlElementProps);
+    const referenceComponent = React.cloneElement(control, rest);
 
     return (
         <div
-            {...rest}
+            {...wrapperProps}
             className={popoverClasses}
             onBlur={_handleBlur}
             onFocus={_handleFocus}
@@ -84,8 +65,6 @@ FormValidationOverlay.propTypes = {
     /** CSS class(es) to add to the outer wrapping div */
     className: PropTypes.string,
     control: PropTypes.node,
-    /** Additional props to be spread to the reference component component */
-    controlProps: PropTypes.object,
     /** Additional props to be spread to the FormMessage component */
     formMessageProps: PropTypes.object,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
@@ -100,7 +79,9 @@ FormValidationOverlay.propTypes = {
         state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
         /** Text of the validation message */
         text: PropTypes.string
-    })
+    }),
+    /** Additional props to be spread to the wrapping `<div>` element */
+    wrapperProps: PropTypes.object
 };
 
 FormValidationOverlay.defaultProps = {

@@ -31,7 +31,7 @@ describe('<FormValidationOverlay />', () => {
 
     describe('Props', () => {
         test('should allow props to be spread to the wrapping div component', () => {
-            let element = setup({ 'data-sample': 'Sample' });
+            let element = setup({ wrapperProps: { 'data-sample': 'Sample' } });
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
