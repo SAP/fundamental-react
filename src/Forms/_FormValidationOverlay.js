@@ -7,13 +7,21 @@ import React, { useState } from 'react';
 
 const FormValidationOverlay = React.forwardRef((
     {
+        // lint disabled props are coming from react-popper
+        'aria-controls': ariaControls, // eslint-disable-line
+        'aria-expanded': ariaExpanded, // eslint-disable-line
+        'aria-haspopup': ariaHasPopup, // eslint-disable-line
         className,
         control,
         controlProps,
         formMessageProps,
+        onClick, // eslint-disable-line
+        onKeyPress, // eslint-disable-line
         popperProps,
         referenceClassName,
+        role, // eslint-disable-line
         show,
+        tabIndex, // eslint-disable-line
         validationState,
         ...rest
     }, ref) => {
@@ -36,7 +44,18 @@ const FormValidationOverlay = React.forwardRef((
 
     const bodyContent = (<FormMessage {...formMessageProps} type={validationState?.state}>{validationState?.text}</FormMessage>);
 
-    const referenceComponent = React.cloneElement(control, controlProps);
+    const controlElementProps = {
+        ...controlProps,
+        'aria-controls': ariaControls,
+        'aria-haspopup': ariaHasPopup,
+        'aria-expanded': ariaExpanded,
+        onClick,
+        onKeyPress,
+        role,
+        tabIndex
+    };
+
+    const referenceComponent = React.cloneElement(control, controlElementProps);
 
     return (
         <div
