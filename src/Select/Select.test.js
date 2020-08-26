@@ -133,7 +133,7 @@ describe('<Select />', () => {
     describe('interactions', () => {
         let onSelect;
         let element;
-        beforeEach(async() => {
+        beforeEach(() => {
             onSelect = jest.fn();
             element = mount(
                 <Select onSelect={onSelect} options={options} />

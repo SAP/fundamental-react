@@ -201,7 +201,7 @@ const Select = React.forwardRef(({
 Select.displayName = 'Select';
 
 Select.propTypes = {
-    /** CSS class(es) to add to the outermost wrapping `<div>` element */
+    /** CSS class(es) to add to the select `<div>` element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,

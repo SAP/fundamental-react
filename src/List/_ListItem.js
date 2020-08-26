@@ -13,7 +13,6 @@ const ListItem = ({
     navigation,
     partialNavigation,
     selected,
-    titleClassName,
     url,
     ...props
 }) => {
@@ -113,8 +112,6 @@ ListItem.propTypes = {
     partialNavigation: PropTypes.bool,
     /** Set to **true** if list item is currently selected (only supported for links and List.Selection) */
     selected: PropTypes.bool,
-    /** CSS class(es) to add to the title element */
-    titleClassName: PropTypes.string,
     /** URL to navigate to if list item is a link */
     url: PropTypes.string,
     /** Callback function when user clicks on the component (not supported for links) */
