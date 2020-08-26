@@ -1,3 +1,4 @@
+import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import React from 'react';
 import SearchInput from './SearchInput';
@@ -216,6 +217,63 @@ describe('<SearchInput />', () => {
         document.dispatchEvent(event);
 
         expect(wrapper.state('isExpanded')).toBeFalsy();
+    });
+
+    describe('validationOverlayProps', () => {
+        let setup = (props) => mount(<SearchInput searchList={searchData} {...props} />);
+        afterEach(() => {
+            document.body.innerHTML = '';
+        });
+
+        const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+
+
+        test('should allow spreading className to ValidationOverlay popover', () => {
+            const wrapper = setup({
+                validationState: { state: 'error', text: 'Test validation state' },
+                validationOverlayProps: { className: 'wonderful-styles' }
+            });
+
+            expect(
+                wrapper.find('.fd-popover').at(1).getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should allow spreading className to ValidationOverlay reference div', () => {
+            const wrapper = setup({
+                validationState: { state: 'error', text: 'Test validation state' },
+                validationOverlayProps: { referenceClassName: 'wonderful-styles' }
+            });
+
+            expect(
+                wrapper.find('.fd-popover__control').at(1).getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should spread formMessageProps to ValidationOverlay\'s FormMessage', async() => {
+            await act(async() => {
+                setup({
+                    validationState: {
+                        state: 'error',
+                        text: 'Test validation state'
+                    },
+                    validationOverlayProps: {
+                        formMessageProps: { 'data-sample': 'Sample', className: 'wonderful-styles' },
+                        show: true
+                    }
+                });
+            });
+
+            const messageNode = getFormMessage();
+
+            expect(
+                messageNode.attributes['data-sample'].value
+            ).toBe('Sample');
+
+            expect(
+                messageNode.classList
+            ).toContain('wonderful-styles');
+        });
     });
 
     describe('Prop spreading', () => {

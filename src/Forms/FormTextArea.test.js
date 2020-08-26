@@ -1,8 +1,11 @@
+import { act } from 'react-dom/test-utils';
 import FormTextarea from './FormTextarea';
 import { mount } from 'enzyme';
 import React from 'react';
 
 describe('<FormTextArea />', () => {
+    let setup = (props) => mount(<FormTextarea {...props} />);
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the FormTextarea component', () => {
             const element = mount(<FormTextarea data-sample='Sample' />);
@@ -10,6 +13,62 @@ describe('<FormTextArea />', () => {
             expect(
                 element.find('.fd-textarea').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+        });
+    });
+
+    describe('validationOverlayProps', () => {
+        afterEach(() => {
+            document.body.innerHTML = '';
+        });
+
+        const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+
+
+        test('should allow spreading className to ValidationOverlay popover', () => {
+            const wrapper = setup({
+                validationState: { state: 'error', text: 'Test validation state' },
+                validationOverlayProps: { className: 'wonderful-styles' }
+            });
+
+            expect(
+                wrapper.find('.fd-popover').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should allow spreading className to ValidationOverlay reference div', () => {
+            const wrapper = setup({
+                validationState: { state: 'error', text: 'Test validation state' },
+                validationOverlayProps: { referenceClassName: 'wonderful-styles' }
+            });
+
+            expect(
+                wrapper.find('.fd-popover__control').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should spread formMessageProps to ValidationOverlay\'s FormMessage', async() => {
+            await act(async() => {
+                setup({
+                    validationState: {
+                        state: 'error',
+                        text: 'Test validation state'
+                    },
+                    validationOverlayProps: {
+                        formMessageProps: { 'data-sample': 'Sample', className: 'wonderful-styles' },
+                        show: true
+                    }
+                });
+            });
+
+            const messageNode = getFormMessage();
+
+            expect(
+                messageNode.attributes['data-sample'].value
+            ).toBe('Sample');
+
+            expect(
+                messageNode.classList
+            ).toContain('wonderful-styles');
         });
     });
 
@@ -28,9 +87,6 @@ describe('<FormTextArea />', () => {
     });
 
     describe('FormTextArea counter', () => {
-        const setup = props => {
-            return mount(<FormTextarea {...props} />);
-        };
         const counterClass = '.fd-textarea-counter';
 
         test('should allow counterprops to be spread', () => {
