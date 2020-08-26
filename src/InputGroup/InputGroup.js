@@ -19,6 +19,7 @@ class InputGroup extends Component {
             className,
             compact,
             disabled,
+            validationOverlayProps,
             validationState,
             ...props
         } = this.props;
@@ -62,6 +63,7 @@ class InputGroup extends Component {
 
         return validationState?.state ? (
             <FormValidationOverlay
+                {...validationOverlayProps}
                 control={inputGroup}
                 validationState={validationState} />
         ) : inputGroup;
@@ -81,6 +83,15 @@ InputGroup.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
