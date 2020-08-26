@@ -47,7 +47,6 @@ export { default as Table } from './Table/Table';
 export { default as Token } from './Token/Token';
 export { default as Tile } from './Tile/Tile';
 export { default as Tree } from './Tree/Tree';
-export { default as TreeView } from './TreeView/TreeView';
 export { default as Time } from './Time/Time';
 export { default as TimePicker } from './TimePicker/TimePicker';
 export { default as Shellbar } from './Shellbar/Shellbar';
