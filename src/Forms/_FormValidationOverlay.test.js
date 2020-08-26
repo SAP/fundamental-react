@@ -2,36 +2,18 @@ import { act } from 'react-dom/test-utils';
 import FormValidationOverlay from './_FormValidationOverlay';
 import { mount } from 'enzyme';
 import React from 'react';
-import { unmountComponentAtNode } from 'react-dom';
-
-// Ensure the popper is accessible with enzyme
-jest.mock('react-dom', () => {
-    const original = jest.requireActual('react-dom');
-    return {
-        ...original,
-        createPortal: (node) => node
-    };
-});
 
 describe('<FormValidationOverlay />', () => {
-    let container = null;
 
-    const setup = (props = {}, domContainer) => mount(
-        <FormValidationOverlay control={(<input onChange={() => {}} value='Test' />)} {...props} />
-        ,
-        {
-            attachTo: domContainer
-        });
+    const setup = (props = {}) => mount(
+        <FormValidationOverlay control={(<input onChange={() => {}} value='Test' />)} {...props} />);
 
-    beforeEach(() => {
-        container = document.createElement('div');
-        document.body.appendChild(container);
-    });
+    const getPopover = () => {
+        return document.body.querySelector('.fd-popover__popper');
+    };
 
     afterEach(() => {
-        unmountComponentAtNode(container);
-        container.remove();
-        container = null;
+        document.body.innerHTML = '';
     });
 
     describe('default rendering', () => {
@@ -90,6 +72,31 @@ describe('<FormValidationOverlay />', () => {
             expect(
                 element.find('FormMessage').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+        });
+    });
+
+    describe('Interactions', () => {
+        test('Should show popover when trigger receives focus & hide popover when trigger loses focus (i.e. blurs)', async() => {
+            let element = setup({
+                formMessageProps: { 'data-sample': 'Sample' },
+                validationState: { state: 'error', message: 'test message' }
+            });
+            await act(async() => {
+                element.find('input').simulate('focus');
+            });
+            let popover = getPopover();
+            expect(
+                popover
+            ).not.toBe(true);
+
+            await act(async() => {
+                element.find('input').simulate('blur');
+            });
+
+            popover = getPopover();
+            expect(
+                popover
+            ).toBe(null);
         });
     });
 
