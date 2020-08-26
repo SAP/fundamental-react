@@ -23,7 +23,7 @@ module.exports = {
         config.entry = ['core-js', ...config.entry];
         config.module.rules.push({
             test: /\.stories\.js?$/,
-            use: [{ loader: 'story-description-loader' }],
+            use: [{ loader: './devtools/story-loader.js' }],
         });
 
         config.module.rules.push({
