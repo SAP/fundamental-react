@@ -88,6 +88,7 @@
     "@storybook/react": "6.0.16",
     "@storybook/source-loader": "6.0.16",
     "@storybook/theming": "6.0.16",
+    "@testing-library/jest-dom": "^5.11.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.8.0",
     "babel-loader": "8.1.0",
