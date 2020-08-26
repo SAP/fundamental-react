@@ -417,7 +417,7 @@ blockquote {
 
 .docs-multi-imports,
 .docs-single-import {
-    margin-bottom: 2em;
+    margin-bottom: 5em;
 }
 
 .docs-single-import,
@@ -435,4 +435,8 @@ blockquote {
     position: absolute;
     top: -9999px;
     left: -9999px;
+}
+
+.docs-component-description {
+    margin-bottom: 4em;
 }

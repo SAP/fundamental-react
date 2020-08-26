@@ -55,8 +55,8 @@ const DocsPage = () => {
         const subImports = [];
         if(subComps){
             const compNames = Object.keys(subComps);
-            compNames?.forEach(name => {
-                subImports.push(<Import componentName={subComps[name]?.displayName}/>)
+            compNames?.forEach((name, index) => {
+                subImports.push(<Import key={index} componentName={subComps[name]?.displayName}/>)
             })
         }
         return (
