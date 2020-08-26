@@ -111,6 +111,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               aria-label="Select all rows"
               checked={false}
               className="fd-checkbox"
@@ -170,6 +171,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               aria-label="Select row"
               checked={false}
               className="fd-checkbox"
@@ -262,6 +264,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               aria-label="Select row"
               checked={false}
               className="fd-checkbox"
@@ -354,6 +357,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               aria-label="Select row"
               checked={false}
               className="fd-checkbox"
@@ -446,6 +450,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               aria-label="Select row"
               checked={false}
               className="fd-checkbox"
