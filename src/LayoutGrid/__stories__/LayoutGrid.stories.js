@@ -6,6 +6,7 @@ import Row from '../Row';
 
 export default {
     title: 'Layout/Layout Grid',
+    component: Container,
     description: 'test',
     subcomponents: { Container, Row, Column },
     parameters: {
@@ -205,7 +206,7 @@ export const autoSpanAvailableCells = () => (
 autoSpanAvailableCells.parameters = {
     docs: {
         storyDescription: `
-When there no span set on a \`Column\` enclosed in a \`Row\` - then the \`Row\` will try to distribute the remaining cells equally among such \`Column\`s.
+When \`span\` is not set on a \`Column\` enclosed in a \`Row\` - then the \`Row\` will try to distribute the remaining cells equally among such \`Column\`s.
 If there are no cells available to span the default of 12 will be set.
 `
     }
