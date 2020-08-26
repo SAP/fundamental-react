@@ -19,6 +19,51 @@ describe('<Select />', () => {
         return mount(<Select options={options} {...props} />);
     };
 
+    describe('validationOverlayProps', () => {
+        afterEach(() => {
+            document.body.innerHTML = '';
+        });
+
+        const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+
+
+        test('should allow spreading className to ValidationOverlay popover', () => {
+            const wrapper = setup({
+                validationState: { state: 'error', text: 'Test validation state' },
+                validationOverlayProps: { className: 'wonderful-styles' }
+            });
+
+            expect(
+                wrapper.find('.fd-popover').at(1).getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should spread formMessageProps to ValidationOverlay\'s FormMessage', async() => {
+            await act(async() => {
+                setup({
+                    validationState: {
+                        state: 'error',
+                        text: 'Test validation state'
+                    },
+                    validationOverlayProps: {
+                        formMessageProps: { 'data-sample': 'Sample', className: 'wonderful-styles' },
+                        show: true
+                    }
+                });
+            });
+
+            const messageNode = getFormMessage();
+
+            expect(
+                messageNode.attributes['data-sample'].value
+            ).toBe('Sample');
+
+            expect(
+                messageNode.classList
+            ).toContain('wonderful-styles');
+        });
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Select component', () => {
             const element = mount(
