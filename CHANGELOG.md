@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.4...v0.13.0-rc.5) (2020-08-26)
+
+
+### Features
+
+* normalize FormValidationOverlay usage in other components ([#1183](https://github.com/SAP/fundamental-react/issues/1183)) ([1baafc8](https://github.com/SAP/fundamental-react/commit/1baafc816d85bf5dfb8f08561567b27ee4f9fab8))
+
 ## [0.13.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.3...v0.13.0-rc.4) (2020-08-25)
 
 
