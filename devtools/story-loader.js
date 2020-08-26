@@ -1,6 +1,8 @@
 /**
-copied and updated from https://github.com/izhan/storybook-description-loader
-will replace once repo accepts pull request + publishes
+improvement from https://github.com/izhan/storybook-description-loader
+will replace if repo accepts pull request + publishes
+
+This version will create a new story parameter block or ammend an existing parameter block
  */
 const babel = require('@babel/core');
 
@@ -47,7 +49,45 @@ function annotateDescriptionPlugin() {
 
                     const declaration = path.node.declaration.declarations[0];
 
-                    path.insertAfter(createDescriptionNode(declaration.id.name, description));
+                    let existingParameters;
+                    path.parent.body.forEach(n => {
+                        if (n.type === 'ExpressionStatement' && n.expression.left.object.name === declaration.id.name) {
+                            existingParameters = n.expression;
+                        }
+                    });
+
+                    if (existingParameters) {
+                        if (existingParameters.right.properties) {
+                            let match = false;
+                            existingParameters.right.properties.forEach(prop => {
+                                if (prop && prop.key && prop.key.name === 'docs') {
+                                    match = true;
+                                    prop.value.properties.push(
+                                        babel.types.objectProperty(
+                                            babel.types.identifier('storyDescription'),
+                                            babel.types.stringLiteral(description),
+                                        ));
+                                }
+                            });
+                            if (!match) {
+                                existingParameters.right.properties.push(
+                                    babel.types.objectProperty(
+                                        babel.types.identifier('docs'),
+                                        babel.types.objectExpression([
+                                            babel.types.objectProperty(
+                                                babel.types.identifier('storyDescription'),
+                                                babel.types.stringLiteral(description),
+                                            )
+                                        ]),
+                                    )
+
+                                );
+                            }
+                        }
+                    } else {
+                        path.insertAfter(createDescriptionNode(declaration.id.name, description));
+                    }
+
                 }
             }
         }
