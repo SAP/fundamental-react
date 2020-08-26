@@ -119,7 +119,7 @@ describe('<Checkbox />', () => {
             ).toContain('wonderful-styles');
         });
 
-        test('should set validationClassName on the popover', () => {
+        test('should set childrenClassName on the checkbox children', () => {
             const wrapper = setup({
                 childrenClassName: 'wonderful-styles'
             });
