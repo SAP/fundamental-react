@@ -24,23 +24,6 @@ export const BUTTON_TYPES = [
     'attention'
 ];
 
-export const TREE_NODE_HIGHLIGHTS = [
-    'default',
-    'error',
-    'success',
-    'warning'
-];
-
-export const TREE_SELECTION_TYPES = [
-    'multi',
-    'single'
-];
-
-export const TREE_SELECTION_POSITIONS = [
-    'left',
-    'right'
-];
-
 export const COMBOBOX_SELECTION_TYPES = [
     'manual',
     'auto',
@@ -148,3 +131,17 @@ export const OBJECT_STATUS_TYPES = [
 
 export const DATEPICKER_TODAY_ACTIONS_TYPES = ['none', 'select', 'navigate'];
 
+
+export const SCREEN_SIZE_MAP = {
+    'smallScreen': 'fd-col--',
+    'mediumScreen': 'fd-col-md--',
+    'largeScreen': 'fd-col-lg--',
+    'xLargeScreen': 'fd-col-xl--'
+};
+
+export const TREE_NODE_HIGHLIGHTS = [
+    'default',
+    'error',
+    'success',
+    'warning'
+];

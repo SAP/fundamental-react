@@ -1,3 +1,5 @@
+import { SCREEN_SIZE_MAP } from '../utils/constants';
+
 export const validSpan = (span) => typeof span === 'number' && 0 < span && span < 13;
 
 
@@ -20,11 +22,20 @@ export const hasSpan = (node, size) => {
     return validSpan(nodeSpan) || (nodeSpan && validSpan(nodeSpan[size]));
 };
 
-export const SCREEN_SIZE_MAP = {
-    'smallScreen': 'fd-col--',
-    'mediumScreen': 'fd-col-md--',
-    'largeScreen': 'fd-col-lg--',
-    'xLargeScreen': 'fd-col-xl--'
+
+
+export const calculateSpan = (child, avail, siblings, size ) => {
+    let calculatedSpan = 12;
+    if (validSpan(child?.props?.span)) {
+        calculatedSpan = child?.props?.span;
+    } else if (validSpan(child?.props?.span?.[size])) {
+        calculatedSpan = child?.props?.span?.[size];
+    } else {
+        calculatedSpan = Math.round(avail[size] / siblings[size]);
+        avail[size] = avail[size] - calculatedSpan;
+        siblings[size] = siblings[size] - 1;
+    }
+    return 0 < calculatedSpan && calculatedSpan < 13 ? calculatedSpan : 12;
 };
 
 export const mapSize = (action) => {

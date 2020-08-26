@@ -8,11 +8,6 @@ import 'fundamental-styles/dist/layout-grid.css';
 const Column = React.forwardRef(({ children, className, offset, offsetPosition, span, ...props }, ref) => {
 
     const offsets = mapSize((size) => resolveSpan(offset, size, false));
-    // {
-    //     if (validSpan(offset)) return offset;
-    //     if (offset && validSpan(offset[size])) return offset[size];
-    //     return false;
-    // });
 
     const offsetPositionModifier = offsetPosition === 'after' ? '-after' : '';
 
@@ -25,10 +20,6 @@ const Column = React.forwardRef(({ children, className, offset, offsetPosition, 
     const colClasses = classnames(
         'fd-col',
         responsiveColClasses,
-        // `fd-col--${span?.smallScreen || span || 12}`,
-        // `fd-col-md--${span?.mediumScreen || span || 12}`,
-        // `fd-col-lg--${span?.largeScreen || span || 12}`,
-        // `fd-col-xl--${span?.xLargeScreen || span || 12}`,
         {
             [`fd-col--offset${offsetPositionModifier}-${offsets.smallScreen}`]: offsets.smallScreen,
             [`fd-col-md--offset${offsetPositionModifier}-${offsets.mediumScreen}`]: offsets.mediumScreen,
@@ -43,7 +34,6 @@ const Column = React.forwardRef(({ children, className, offset, offsetPosition, 
             {...props}
             className={colClasses}
             ref={ref}>
-            {/* {span?.smallScreen}, {span?.mediumScreen}, {span?.largeScreen}, {span?.xLargeScreen} */}
             {children}
         </div>
     );

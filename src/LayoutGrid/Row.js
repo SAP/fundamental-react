@@ -2,7 +2,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getNodeSpan, hasSpan, mapSize, validSpan } from './_layoutGridUtils';
+import { calculateSpan, getNodeSpan, hasSpan, mapSize } from './_layoutGridUtils';
 import 'fundamental-styles/dist/layout-grid.css';
 
 const Row = React.forwardRef(({ children, className, ...props }, ref) => {
@@ -22,27 +22,11 @@ const Row = React.forwardRef(({ children, className, ...props }, ref) => {
 
     let availableSpans = mapSize((size) => 12 - (( -1 < occupiedSpans[size] && occupiedSpans[size] < 13 ) ? occupiedSpans[size] : 0));
 
-    let spannedChildren = [];
-
-    const calculateSpan = (child, avail, siblings, size ) => {
-        let calculatedSpan = 12;
-        if (validSpan(child?.props?.span)) {
-            calculatedSpan = child?.props?.span;
-        } else if (validSpan(child?.props?.span?.[size])) {
-            calculatedSpan = child?.props?.span?.[size];
-        } else {
-            calculatedSpan = Math.round(avail[size] / siblings[size]);
-            availableSpans[size] = availableSpans[size] - calculatedSpan;
-            unspannedChildren[size] = unspannedChildren[size] - 1;
-        }
-        return 0 < calculatedSpan && calculatedSpan < 13 ? calculatedSpan : 12;
-    };
-
-    React.Children.forEach(children, (child) => {
+    let spannedChildren = React.Children.map(children, (child) => {
         const childSpan = mapSize((size) => calculateSpan(child, availableSpans, unspannedChildren, size));
-        spannedChildren.push(React.cloneElement(child, {
+        return React.cloneElement(child, {
             span: childSpan
-        }));
+        });
     });
 
 

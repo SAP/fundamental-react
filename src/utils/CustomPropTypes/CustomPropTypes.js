@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import { SCREEN_SIZE_MAP, validSpan } from '../../LayoutGrid/_layoutGridUtils';
+import { SCREEN_SIZE_MAP } from '../constants';
+import { validSpan } from '../../LayoutGrid/_layoutGridUtils';
 const ANONYMOUS = '<<anonymous>>';
 
 /* eslint-disable no-console */
@@ -15,7 +16,8 @@ const elementOrArrayOfElements = () => {
     ]);
 };
 const validColumnProp = (props, propName, componentName) => {
-    const spanValue = props[propName];
+    const spanValue = props?.[propName];
+    if (!spanValue) return;
     switch (typeof spanValue) {
         case 'number':
             if (!validSpan(spanValue)) {
@@ -26,7 +28,7 @@ const validColumnProp = (props, propName, componentName) => {
             break;
         case 'object':
             Object.keys(SCREEN_SIZE_MAP).forEach(size => {
-                const spanForSize = spanValue[size];
+                const spanForSize = spanValue?.[size];
                 if (!validSpan(spanForSize)) {
                     return new Error(
                         `Invalid property ${propName}.${size} supplied to ${componentName}. Value should be a number between 1-12 (including).`
