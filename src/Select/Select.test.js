@@ -85,33 +85,123 @@ describe('<Select />', () => {
     });
 
     describe('interactions', () => {
-        let onSelect;
-        let element;
-        beforeEach(() => {
-            onSelect = jest.fn();
-            element = mount(
-                <Select onSelect={onSelect} options={options} />
+        describe('onSelect', () => {
+            let onSelect;
+            let element;
+            beforeEach(() => {
+                onSelect = jest.fn();
+                element = mount(
+                    <Select onSelect={onSelect} options={options} />
+                );
+                element.find('.fd-select__button').simulate('click');
+            });
+
+            afterEach(() => {
+                let event = new MouseEvent('mousedown', {});
+                document.dispatchEvent(event);
+            });
+
+            test('should call onSelect when the first checkbox option is clicked', () => {
+                element.find('.fd-list__item').at(0).simulate('click');
+
+                expect(onSelect).toHaveBeenCalledTimes(1);
+                expect(onSelect).toHaveBeenCalledWith(expect.anything(), options[0]);
+            });
+
+            test('should call onSelect when the second checkbox option is clicked', () => {
+                element.find('.fd-list__item').at(1).simulate('click');
+
+                expect(onSelect).toHaveBeenCalledTimes(1);
+                expect(onSelect).toHaveBeenCalledWith(expect.anything(), options[1]);
+            });
+        });
+
+        test('should trigger callback, with valid event object as argument, on input onFocus event', async() => {
+            const focusSpy = jest.fn();
+            const wrapper = setup({
+                onFocus: focusSpy
+            });
+
+            await act(async() => {
+                wrapper.find('.fd-select').simulate('focus');
+            });
+
+            expect(focusSpy).toHaveBeenCalledTimes(1);
+
+            expect(
+                focusSpy
+            ).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    target: wrapper.find('.fd-select').getDOMNode()
+                })
             );
-            element.find('.fd-select__button').simulate('click');
         });
 
-        afterEach(() => {
-            let event = new MouseEvent('mousedown', {});
-            document.dispatchEvent(event);
+        test('should trigger callback, with valid event object as argument, on input onBlur event', async() => {
+            const blurSpy = jest.fn();
+            const wrapper = setup({
+                onBlur: blurSpy
+            });
+
+            await act(async() => {
+                wrapper.find('.fd-select').simulate('blur');
+            });
+
+            expect(blurSpy).toHaveBeenCalledTimes(1);
+
+            expect(
+                blurSpy
+            ).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    target: wrapper.find('.fd-select').getDOMNode()
+                })
+            );
         });
 
-        test('should call onSelect when the first checkbox option is clicked', () => {
-            element.find('.fd-list__item').at(0).simulate('click');
+        test('should not trigger onBlur callback if opening dropdown', async() => {
+            const blurSpy = jest.fn();
+            const wrapper = setup({
+                onBlur: blurSpy
+            });
 
-            expect(onSelect).toHaveBeenCalledTimes(1);
-            expect(onSelect).toHaveBeenCalledWith(expect.anything(), options[0]);
+            await act(async() => {
+                wrapper.find('.fd-select').simulate('keydown',
+                    {
+                        key: 'Enter',
+                        keyCode: 13,
+                        which: 13
+                    }
+                );
+            });
+
+            expect(blurSpy).toHaveBeenCalledTimes(0);
         });
 
-        test('should call onSelect when the second checkbox option is clicked', () => {
-            element.find('.fd-list__item').at(1).simulate('click');
+        test('should not trigger onBlur callback if closing dropdown', async() => {
+            const blurSpy = jest.fn();
+            const focusSpy = jest.fn();
+            const wrapper = setup({
+                onBlur: blurSpy,
+                onFocus: focusSpy
+            });
 
-            expect(onSelect).toHaveBeenCalledTimes(1);
-            expect(onSelect).toHaveBeenCalledWith(expect.anything(), options[1]);
+            // open dropdown
+            await act(async() => {
+                wrapper.find('.fd-select').simulate('click');
+            });
+
+            // close dropdown
+            await act(async() => {
+                wrapper.find('.fd-popover').at(0).simulate('keydown',
+                    {
+                        key: 'Esc',
+                        keyCode: 27,
+                        which: 27
+                    }
+                );
+            });
+
+            expect(blurSpy).toHaveBeenCalledTimes(0);
         });
     });
 

@@ -23,6 +23,7 @@ const Select = React.forwardRef(({
     includeEmptyOption,
     listClassName,
     options,
+    onBlur,
     onClick,
     onSelect,
     placeholder,
@@ -45,6 +46,12 @@ const Select = React.forwardRef(({
     const handleClick = (e) => {
         if (!disabled && !readOnly) {
             onClick(e);
+        }
+    };
+
+    const handleBlur = (e) => {
+        if (!popoverRef?.current?.state?.isExpanded && onBlur) {
+            onBlur(e);
         }
     };
 
@@ -175,6 +182,8 @@ const Select = React.forwardRef(({
             disableTriggerOnClick={disabled || readOnly}
             firstFocusIndex={firstFocusIndex}
             noArrow
+            onBlur={handleBlur}
+            onClickOutside={handleBlur}
             ref={popoverRef}
             type='listbox'
             useArrowKeyNavigation />
@@ -227,6 +236,8 @@ Select.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
+    /** Callback function for select field onBlur. Will be called only if select field loses focus and the popover is closed. */
+    onBlur: PropTypes.func,
     /** Callback function when user clicks on the component*/
     onClick: PropTypes.func,
     /** Callback function when user clicks on an option */
@@ -235,6 +246,7 @@ Select.propTypes = {
 
 Select.defaultProps = {
     options: [],
+    onBlur: () => {},
     onClick: () => {},
     onSelect: () => {}
 };
