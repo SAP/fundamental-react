@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.5...v0.13.0-rc.6) (2020-08-26)
+
+
+### Features
+
+* add custom classes to Select component ([#1185](https://github.com/SAP/fundamental-react/issues/1185)) ([6724eab](https://github.com/SAP/fundamental-react/commit/6724eab7ede0996e369f88307237f0b756ebdeaa))
+
+
+### Bug Fixes
+
+* remove detect-browser from package.json, bump standard version and run audit fix ([#1187](https://github.com/SAP/fundamental-react/issues/1187)) ([c2c952f](https://github.com/SAP/fundamental-react/commit/c2c952f0e1e6bb4723ada9c79e44f5f42d403e44))
+
 ## [0.13.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.4...v0.13.0-rc.5) (2020-08-26)
 
 
