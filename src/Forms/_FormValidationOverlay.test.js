@@ -2,30 +2,49 @@ import { act } from 'react-dom/test-utils';
 import FormValidationOverlay from './_FormValidationOverlay';
 import { mount } from 'enzyme';
 import React from 'react';
+import { unmountComponentAtNode } from 'react-dom';
+
+// Ensure the popper is accessible with enzyme
+jest.mock('react-dom', () => {
+    const original = jest.requireActual('react-dom');
+    return {
+        ...original,
+        createPortal: (node) => node
+    };
+});
 
 describe('<FormValidationOverlay />', () => {
-    const setup = (props = {}) => mount(
-        <FormValidationOverlay control={(<input onChange={() => {}} value='Test' />)} {...props} />
-    );
+    let container = null;
 
-    afterEach(() => {
-        document.body.innerHTML = '';
+    const setup = (props = {}, domContainer) => mount(
+        <FormValidationOverlay control={(<input onChange={() => {}} value='Test' />)} {...props} />
+        ,
+        {
+            attachTo: domContainer
+        });
+
+    beforeEach(() => {
+        container = document.createElement('div');
+        document.body.appendChild(container);
     });
 
-    const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+    afterEach(() => {
+        unmountComponentAtNode(container);
+        container.remove();
+        container = null;
+    });
 
     describe('default rendering', () => {
         test('should render', () => {
             let element = setup();
+
             expect(element).toBeDefined();
         });
 
         test('should not render a FormMessage by default', () => {
-            setup();
+            let element = setup();
 
-            const messageNode = getFormMessage();
-
-            expect(messageNode).toBeNull();
+            expect(element.find('FormMessage').length).toBe(0);
         });
     });
 
@@ -59,65 +78,18 @@ describe('<FormValidationOverlay />', () => {
         });
 
         test('should allow props to be spread to the FormMessage component', async() => {
+            let element;
             await act(async() => {
-                setup({
+                element = setup({
                     formMessageProps: { 'data-sample': 'Sample' },
                     validationState: { state: 'error', message: 'test message' },
                     show: true
                 });
             });
 
-            const messageNode = getFormMessage();
-
             expect(
-                messageNode.attributes['data-sample'].value
+                element.find('FormMessage').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
-        });
-
-        test('should not show the FormMessage if there is no text', async() => {
-            const element = setup({
-                validationState: { state: 'error', message: 'test message' }
-            });
-
-            await act(async() => {
-                element.find('.fd-popover').simulate('click');
-            });
-
-            const messageNode = getFormMessage();
-
-            expect(messageNode).toBeNull();
-        });
-
-    });
-
-    describe('interaction', () => {
-        test('should show the FormMessage onFocus', async() => {
-            let element = setup({ validationState: { state: 'error', message: 'test message' } });
-
-            await act(async() => {
-                element.find('.fd-popover').simulate('focus');
-            });
-
-            const messageNode = getFormMessage();
-
-            expect(messageNode).toBeDefined();
-        });
-
-        test('should show hide the FormMessage onBlur', async() => {
-            let element = setup({ validationState: { state: 'error', message: 'test message' } });
-            const messageNode = getFormMessage();
-
-            await act(async() => {
-                element.find('.fd-popover').simulate('focus');
-            });
-
-            expect(messageNode).toBeDefined();
-
-            await act(async() => {
-                element.find('.fd-popover').simulate('blur');
-            });
-
-            expect(messageNode).toBeNull();
         });
     });
 
