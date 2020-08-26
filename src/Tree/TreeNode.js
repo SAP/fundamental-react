@@ -11,13 +11,14 @@ const TreeNode = ({
     actions,
     active,
     children,
+    className,
     glyphsAfter,
     glyphsBefore,
     highlight,
     id,
     isNavigated,
     link,
-    onExpandClick,
+    onExpandToggle,
     onSelectionChange,
     selectionProps,
     nodeData,
@@ -29,11 +30,11 @@ const TreeNode = ({
 
     const { level } = rest;
     const nodeId = `${useUniqueId(id)}`;
-    let myPath = rest?.parentPath?.split('/') || ['root'];
-    if (myPath?.includes ? !myPath.includes(nodeId) && myPath?.push : false) {
-        myPath.push(nodeId);
+    let nodePath = rest?.parentPath?.split?.('/') || ['root'];
+    if (!nodePath?.includes?.(nodeId) && nodePath?.push) {
+        nodePath.push(nodeId);
     }
-    myPath = myPath?.join && myPath.join('/');
+    nodePath = nodePath?.join && nodePath.join('/');
 
     const nodeContentPayload = React.Children.toArray(children).filter(child => child?.type?.displayName !== 'Tree.Node');
     const nodeTextContent = React.Children.toArray(children).find(child => typeof child === 'string');
@@ -47,19 +48,19 @@ const TreeNode = ({
         .map(child => React.cloneElement(child, {
             active,
             level: childrenLevel,
-            onExpandClickInternal: rest?.onExpandClickInternal,
+            expansionEventBubbler: rest?.expansionEventBubbler,
             parentId: nodeId,
-            parentPath: myPath,
+            parentPath: nodePath,
             selection: rest.selection,
             selectionPosition: rest.selectionPosition,
             treeId: rest.treeId,
             treeActive: rest?.treeActive
         }));
 
-    const handleButtonClick = () => {
+    const handleButtonClick = (event) => {
         const toggledExpansionState = !isExpanded;
-        rest.onExpandClickInternal && rest.onExpandClickInternal(level, toggledExpansionState, nodeId, rest?.parentId, myPath);
-        onExpandClick && onExpandClick(nodeData, toggledExpansionState);
+        rest?.expansionEventBubbler?.(level, toggledExpansionState, nodeId, rest?.parentId, nodePath);
+        onExpandToggle?.(event, toggledExpansionState, nodeData);
         setExpanded(toggledExpansionState);
     };
 
@@ -74,6 +75,11 @@ const TreeNode = ({
     };
 
     const hasNavigation = !!link?.trim();
+
+    const nodeClasses = classnames(
+        'fd-tree__item',
+        className
+    );
 
     const containerClasses = classnames(
         'fd-tree__item-container',
@@ -110,6 +116,7 @@ const TreeNode = ({
 
     let checkBox;
     let radioItem;
+    const selectionControlId = `${nodeId}-selection-control`;
 
     if ( rest?.selection === 'multi' ) {
         const { onChange } = selectionProps || {};
@@ -117,9 +124,10 @@ const TreeNode = ({
             <Checkbox
                 ariaLabel={nodeTextContent}
                 {...selectionProps}
+                id={selectionControlId}
                 onChange={(event, checked) => {
                     onChange && onChange(event, checked);
-                    onSelectionChange && onSelectionChange(event, checked, nodeData);
+                    onSelectionChange?.(event, checked, nodeData);
                     setSelected(checked);
                 }} />
         );
@@ -130,33 +138,39 @@ const TreeNode = ({
 
         radioItem = (
             <FormRadioItem
+                children=''
                 {...selectionProps}
+                id={ selectionControlId }
                 inputProps={{
                     'aria-label': nodeTextContent,
                     ...selectionProps?.inputProps,
                     onChange: (event) => {
                         onChange && onChange(event);
-                        const radioSelected = event?.target?.checked;
-                        onSelectionChange && onSelectionChange(event, radioSelected, nodeData);
+                        // always return true because radio item change is only triggered on selection not de-selection
+                        onSelectionChange && onSelectionChange(event, true, nodeData);
                     }
                 }}
                 name={name ? name : radioItemName } />
         );
     }
 
-    const { level: removeLevel, parentId, parentPath, selectionPosition, treeId, treeActive, ...otherProps } = rest;
+    const { expansionEventBubbler, level: removeLevel, parentId, parentPath, selectionPosition, treeId, treeActive, ...otherProps } = rest;
 
 
     const renderIcons = (icons) => {
-        return icons && icons?.length && icons?.map(icon => <Icon className='fd-tree__icon' glyph={icon} />) || '';
+        return icons && icons?.length && icons?.map((icon, index) => (<Icon className='fd-tree__icon' glyph={icon}
+            key={index} />)) || '';
     };
+
+    const buttonId = `${nodeId}-expansion-toggle-button`;
+    const subTreeId = `${nodeId}-subtree-root`;
 
     return (
         <li
             {...otherProps}
             aria-expanded={isExpanded}
             aria-level={level}
-            className='fd-tree__item'
+            className={nodeClasses}
             id={nodeId}
             role='treeitem'>
             <div className={containerClasses}>
@@ -166,6 +180,7 @@ const TreeNode = ({
                         aria-label={isExpanded ? 'collapse' : 'expand'}
                         aria-pressed={isExpanded}
                         className={buttonClasses}
+                        id={buttonId}
                         onClick={handleButtonClick} />
                 }
                 {
@@ -205,9 +220,9 @@ const TreeNode = ({
             </div>
             {nodeChildren?.length > 0 &&
             <ul
-                {...otherProps}
                 aria-hidden={!isExpanded}
                 className={branchClasses}
+                id={subTreeId}
                 role='group'>
                 {nodeChildren}
             </ul>
@@ -226,6 +241,8 @@ TreeNode.propTypes = {
     active: PropTypes.bool,
     /** React nodes to render within. Nest `TreeNode`s to create multiple levels in the `Tree`.*/
     children: PropTypes.node,
+    /** Custom classes to add to TreeNode.*/
+    className: PropTypes.string,
     /** An **Array of string** values to representing icon names to display before node contents.*/
     glyphsAfter: PropTypes.arrayOf(PropTypes.string),
     /** An **Array of string** values to representing icon names to display before after contents.*/
@@ -243,22 +260,22 @@ TreeNode.propTypes = {
     isNavigated: PropTypes.bool,
     /** Set to a **String**  value to use as href and make this node an `<a>` tag with appropriate styles.*/
     link: PropTypes.string,
-    /** **Object** to be received in the `onExpandClick` and `onSelectionChange` callbacks of this node.*/
+    /** **Object** to be received in the `onExpandToggle` and `onSelectionChange` callbacks of this node.*/
     nodeData: PropTypes.object,
     /** Additional props to be spread to the selection control, if any.*/
     selectionProps: PropTypes.object,
     /** Set to **true** to make node contents wrap to next line(s).*/
     wrapContent: PropTypes.bool,
     /** Callback function triggered when a node's expansion button is clicked.
-     * This function is called with the `event`, `checked` state, and `nodeData` parameters.
+     * This function is called with the `event` object, `expansion` state boolean, and `nodeData` parameters.
     */
-    onExpandClick: PropTypes.func,
+    onExpandToggle: PropTypes.func,
     /** If selection is enabled , this is a callback function triggered when a node:
      *
      * * multi: selection state changes
      * * single: is selected
      *
-     * This function is called with the `event`, `checked` state, and `nodeData` parameters.
+     * This function is called with the `event` object, `checked` state boolean, and `nodeData` parameters.
     */
     onSelectionChange: PropTypes.func
 };

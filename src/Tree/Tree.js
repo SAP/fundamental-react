@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 const Tree = React.forwardRef(({
     active,
     children,
+    className,
     compact,
     id,
     noBorders,
@@ -24,39 +25,6 @@ const Tree = React.forwardRef(({
             children: {}
         }
     });
-
-
-    // const getExpansionDepth = (newExpansionState) => {
-    //     const levels = Object.keys(newExpansionState);
-    //     levels.sort((a, b) => a - b);
-    //     let maxLevel = 0;
-    //     for (const lvl of levels) {
-    //         const levelInt = parseInt(lvl, 10);
-    //         if (newExpansionState[lvl] < 1) {
-    //             return levelInt - 1;
-    //         }
-    //         maxLevel = levelInt;
-    //     }
-    //     return maxLevel;
-    // };
-
-
-    // const getExpansionState = (lastLevelExpanding, toggledAtLevel, prevExpansionSate) => {
-    //     if (typeof toggledAtLevel === 'number') {
-    //         if (lastLevelExpanding) {
-    //             return {
-    //                 ...prevExpansionSate,
-    //                 [toggledAtLevel]: (prevExpansionSate[toggledAtLevel] || 0) + 1
-    //             };
-    //         } else {
-    //             return {
-    //                 ...prevExpansionSate,
-    //                 [toggledAtLevel]: (prevExpansionSate[toggledAtLevel] || 0) - 1
-    //             };
-    //         }
-    //     }
-    //     return prevExpansionSate;
-    // };
 
     const updateTree = ({
         toggledAtLevel,
@@ -118,8 +86,9 @@ const Tree = React.forwardRef(({
     const levelOneNodes = React.Children.toArray(children)
         .filter(child => child.type && child.type.displayName === 'Tree.Node')
         .map(child => React.cloneElement(child, {
+            ...child?.props,
             level: 1,
-            onExpandClickInternal: (toggledAtLevel, lastLevelExpanding, itemId, parentId, parentPath) => {
+            expansionEventBubbler: (toggledAtLevel, lastLevelExpanding, itemId, parentId, parentPath) => {
                 updateTree({
                     toggledAtLevel,
                     lastLevelExpanding,
@@ -149,7 +118,8 @@ const Tree = React.forwardRef(({
             'fd-tree--compact': compact,
             'fd-tree--no-border': noBorders,
             'fd-tree--no-data': emptyTree
-        }
+        },
+        className
     );
 
     return (
@@ -157,6 +127,7 @@ const Tree = React.forwardRef(({
             ref={ref}
             {...props}
             className={treeClasses}
+            id={treeId}
             role='tree'>
             {!emptyTree ?
                 levelOneNodes
@@ -179,6 +150,8 @@ Tree.propTypes = {
     active: PropTypes.bool,
     /** React nodes to render within. Nest `TreeNode`s to create multiple levels in the `Tree`.*/
     children: PropTypes.node,
+    /** Custom classes to add to Tree.*/
+    className: PropTypes.string,
     /** Set to **true** to apply compact styles.*/
     compact: PropTypes.bool,
     /** Set to a **String** value to display when `Tree` is empty, i.e. has no children.*/
