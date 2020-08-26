@@ -1,3 +1,4 @@
+import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import React from 'react';
 import Select from './Select';
@@ -12,6 +13,10 @@ describe('<Select />', () => {
 
     const popoverProps = {
         ['data-sample']: 'Popper-sample'
+    };
+
+    let setup = (props) => {
+        return mount(<Select options={options} {...props} />);
     };
 
     describe('Prop spreading', () => {
@@ -34,10 +39,101 @@ describe('<Select />', () => {
         });
     });
 
+    describe('Classnames', () => {
+        test('should set class on the outermost div', () => {
+            const wrapper = setup({
+                popoverProps: { className: 'wonderful-styles' }
+            });
+
+            expect(
+                wrapper.getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on the Popper', async() => {
+            const wrapper = setup({
+                popoverProps: { popperClassName: 'wonderful-styles' }
+            });
+
+            await act(async() => {
+                wrapper.find('.fd-select').simulate('click');
+            });
+
+            expect(
+                document.body.querySelector('.fd-popover__popper').classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on the select div', () => {
+            const wrapper = setup({
+                className: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-select').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on control div', () => {
+            const wrapper = setup({
+                controlClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-select__control').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on trigger span', () => {
+            const wrapper = setup({
+                triggerClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-select__button').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on text content span', () => {
+            const wrapper = setup({
+                textContentClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-select__text-content').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on ListItems', async() => {
+            const wrapper = setup({
+                listItemClassName: 'wonderful-styles'
+            });
+
+            await act(async() => {
+                wrapper.find('.fd-select').simulate('click');
+            });
+
+
+            wrapper.find('ListItem').forEach((node) => {
+                expect(node.getDOMNode().classList).toContain('wonderful-styles');
+            });
+        });
+
+        test('should set class on ListItem.Text spans', () => {
+            const wrapper = setup({
+                listItemTextClassName: 'wonderful-styles'
+            });
+
+            wrapper.find('ListItem.Text').forEach((node) => {
+                expect(node.getDOMNode().classList).toContain('wonderful-styles');
+            });
+        });
+    });
+
     describe('interactions', () => {
         let onSelect;
         let element;
-        beforeEach(() => {
+        beforeEach(async() => {
             onSelect = jest.fn();
             element = mount(
                 <Select onSelect={onSelect} options={options} />
