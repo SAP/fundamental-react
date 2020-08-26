@@ -7,12 +7,8 @@ import Row from '../Row';
 export default {
     title: 'Layout/Layout Grid',
     component: Container,
-    description: 'test',
     subcomponents: { Container, Row, Column },
     parameters: {
-        description: `
-Use the layout grid system consisting of **Container**, **Row**, and **Column** components to arrange things evenly in a grid layout.
-`,
         noImport: true,
         displaySubComponentImports: true
     }

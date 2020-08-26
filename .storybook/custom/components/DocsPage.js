@@ -11,6 +11,7 @@ import React, { useContext, useEffect } from 'react';
 import {
     Title,
     Subtitle,
+    Description as DocsStoryDescription,
     Heading,
     Props,
     DocsStory,
@@ -75,7 +76,9 @@ const DocsPage = () => {
         {context?.parameters?.deprecated && <Description desc={context?.parameters?.deprecated} />}
         {!context?.parameters?.noImport && showImport()}
         {context?.parameters?.displaySubComponentImports && showSubImports()}
-        {context?.parameters?.description && <Description desc={context?.parameters?.description} />}
+        <div className='docs-component-description'>
+                    <DocsStoryDescription />
+        </div>
         <Heading>Examples</Heading>
         {stories.map((story) => story && <DocsStory
             key={story.id}

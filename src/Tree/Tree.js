@@ -3,7 +3,36 @@ import PropTypes from 'prop-types';
 import TreeNode from './TreeNode';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
-
+/**
+ *
+ *
+ * Unlike tree tables, trees are used for rather basic data.
+ *
+ * USE THE TREE IF:
+ *
+ * * You need to display the key identifier of hierarchically structured items
+ * * Selecting one or more items out of a set of hierarchically structured items is a main use case.
+ * * The hierarchy has a restricted number of levels (up to about 12, depending on the content) and items (around 200).
+ * * You want to have only one implementation for all devices.
+ *
+ * DO NOT USE THE TREE IF:
+ *
+ * * The main use case is to select one item from a very small number of non-hierarchical items,
+ * without viewing additional details. In this case, a <a href="/?path=/docs/component-api-select" target="_blank">Select</a> or
+ *  <a href="/?path=/docs/component-api-comboboxinput" target="_blank">ComboboxInput</a> might be more appropriate.
+ * * Items are not structured hierarchically. Use a <a href="/?path=/docs/component-api-list" target="_blank">List</a> instead.
+ * * The hierarchy turns out to have only two levels. In this case, use a grouped list.
+ * * The hierarchy turns out to be just a categorization based on several details of the item.
+ * In this case, an analytical table provides multi-level grouping. Note that the analytical table is not fully responsive.
+ * It is only available for desktops and tablets, so you will need to take an adaptive approach by offering an additional UI for smartphones.
+ * * You need to display very deep hierarchies with additional data per item. In this case, use a tree table (not available yet in Fundamental-styles).
+ * Note that the tree table is not fully responsive. It is only available for desktops and tablets,
+ * so you will need to take an adaptive approach by offering an additional UI for smartphones.
+ * * The structure contains more than around 200 items. In this case, use the tree table (not available yet in Fundamental-styles).
+ * It is optimized for large item sets and provides better performance. Note that the tree table is not fully responsive.
+ * It is only available for desktops and tablets, so you will need to take an adaptive approach by offering an additional UI for smartphones.
+ * * You need an overview of a large amount of data. In this case, use a chart.
+*/
 const Tree = React.forwardRef(({
     active,
     children,
