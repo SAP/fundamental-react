@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import LayoutPanelActions from './_LayoutPanelActions';
 import LayoutPanelBody from './_LayoutPanelBody';
 import LayoutPanelFilters from './_LayoutPanelFilters';
@@ -14,13 +13,10 @@ import 'fundamental-styles/dist/layout-panel.css';
 /** A **LayoutPanel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
 Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand
 with the information displayed inside the panel. */
-const LayoutPanel = React.forwardRef(({ colSpan, children, className, ...props }, ref) => {
+const LayoutPanel = React.forwardRef(({ children, className, ...props }, ref) => {
 
     const panelClasses = classnames(
         'fd-layout-panel',
-        {
-            [`fd-layout-grid__span-column-${colSpan}`]: !!colSpan
-        },
         className
     );
 
@@ -36,9 +32,7 @@ LayoutPanel.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
-    className: PropTypes.string,
-    /** The number of columns to span inside a `LayoutGrid` */
-    colSpan: CustomPropTypes.range(2, 6)
+    className: PropTypes.string
 };
 
 LayoutPanel.Actions = LayoutPanelActions;
