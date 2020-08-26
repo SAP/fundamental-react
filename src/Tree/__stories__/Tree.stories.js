@@ -504,7 +504,8 @@ export const singleSelectionLeft = () => {
     const selectionHandler = (event, checked, nodeData) => alert(`${nodeData.item} was ${checked ? 'checked' : 'unchecked'}`);
 
     return (
-        <Tree selection='single' selectionPosition='left'>
+        <Tree id='radioTree' selection='single'
+            selectionPosition='left'>
             <Tree.Node
                 nodeData={{ level: 1, item: 'Level 1', id: 'level-1' }}
                 onSelectionChange={selectionHandler}>
@@ -609,6 +610,7 @@ Set the \`emptyText\` property to a string vaule to be shown when \`Tree\` has n
 export const dev = () => (
     <Tree
         active={boolean('active', false)}
+        className={text('Tree.className', '')}
         compact={boolean('compact', false)}
         id={text('id', 'myDevTree')}
         noBorders={boolean('noBorders', false)}
@@ -618,15 +620,17 @@ export const dev = () => (
             'single': 'single'
         })}
         selectionPosition={select('selectionPostion', {
-            'left': 'left',
-            'right': 'right'
+            'right': 'right',
+            'left': 'left'
         })}>
-        <Tree.Node id='myCustomLevel1'>
+        <Tree.Node id='myCustomLevel1' nodeData={{ text: 'Level 1' }}
+            onExpandToggle={(event, expanded, data) =>{
+                alert(`${data?.text} was ${expanded ? 'expanded' : 'collapsed'}`);
+            }}>
             Level 1
             <Tree.Node>
-                Level 2
-                <Button>Test</Button>
-                <Tree.Node>
+                Level 2  <Button style={{ marginLeft: '1em' }}>Test</Button>
+                <Tree.Node className='wonderful'>
                     Level 3
                     <Tree.Node>
                         Level 4

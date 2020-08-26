@@ -13,7 +13,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -42,7 +42,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -50,7 +50,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -78,7 +78,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -86,7 +86,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -115,7 +115,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
               >
                 <li
@@ -123,7 +123,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -151,7 +151,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                   >
                     <li
@@ -159,7 +159,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -188,7 +188,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                       <ul
                         aria-hidden={true}
                         className="fd-tree is-hidden"
-                        onExpandClickInternal={[Function]}
+                        expansionEventBubbler={[Function]}
                         role="group"
                       >
                         <li
@@ -196,7 +196,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                           aria-level={6}
                           className="fd-tree__item"
                           id="fd-mocked-short-id"
-                          onExpandClickInternal={[Function]}
+                          expansionEventBubbler={[Function]}
                           role="treeitem"
                         >
                           <div
@@ -224,7 +224,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                           <ul
                             aria-hidden={true}
                             className="fd-tree is-hidden"
-                            onExpandClickInternal={[Function]}
+                            expansionEventBubbler={[Function]}
                             role="group"
                           >
                             <li
@@ -232,7 +232,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                               aria-level={7}
                               className="fd-tree__item"
                               id="fd-mocked-short-id"
-                              onExpandClickInternal={[Function]}
+                              expansionEventBubbler={[Function]}
                               role="treeitem"
                             >
                               <div
@@ -261,7 +261,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                               <ul
                                 aria-hidden={true}
                                 className="fd-tree is-hidden"
-                                onExpandClickInternal={[Function]}
+                                expansionEventBubbler={[Function]}
                                 role="group"
                               >
                                 <li
@@ -269,7 +269,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                                   aria-level={8}
                                   className="fd-tree__item"
                                   id="fd-mocked-short-id"
-                                  onExpandClickInternal={[Function]}
+                                  expansionEventBubbler={[Function]}
                                   role="treeitem"
                                 >
                                   <div
@@ -293,7 +293,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                                   aria-level={8}
                                   className="fd-tree__item"
                                   id="fd-mocked-short-id"
-                                  onExpandClickInternal={[Function]}
+                                  expansionEventBubbler={[Function]}
                                   role="treeitem"
                                 >
                                   <div
@@ -320,7 +320,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                               aria-level={7}
                               className="fd-tree__item"
                               id="fd-mocked-short-id"
-                              onExpandClickInternal={[Function]}
+                              expansionEventBubbler={[Function]}
                               role="treeitem"
                             >
                               <div
@@ -346,7 +346,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                           aria-level={6}
                           className="fd-tree__item"
                           id="fd-mocked-short-id"
-                          onExpandClickInternal={[Function]}
+                          expansionEventBubbler={[Function]}
                           role="treeitem"
                         >
                           <div
@@ -373,7 +373,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -400,7 +400,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -426,7 +426,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -452,7 +452,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -478,7 +478,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -503,7 +503,7 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -540,7 +540,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -568,7 +568,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -576,7 +576,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -604,7 +604,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -612,7 +612,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -638,7 +638,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -662,7 +662,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -688,7 +688,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -712,7 +712,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -736,7 +736,7 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -772,7 +772,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="myCustomLevel1"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -800,7 +800,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -808,7 +808,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -842,7 +842,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -850,7 +850,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -878,7 +878,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
               >
                 <li
@@ -886,7 +886,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -914,7 +914,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                   >
                     <li
@@ -922,7 +922,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -950,7 +950,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                       <ul
                         aria-hidden={true}
                         className="fd-tree is-hidden"
-                        onExpandClickInternal={[Function]}
+                        expansionEventBubbler={[Function]}
                         role="group"
                       >
                         <li
@@ -958,7 +958,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                           aria-level={6}
                           className="fd-tree__item"
                           id="fd-mocked-short-id"
-                          onExpandClickInternal={[Function]}
+                          expansionEventBubbler={[Function]}
                           role="treeitem"
                         >
                           <div
@@ -986,7 +986,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                           <ul
                             aria-hidden={true}
                             className="fd-tree is-hidden"
-                            onExpandClickInternal={[Function]}
+                            expansionEventBubbler={[Function]}
                             role="group"
                           >
                             <li
@@ -994,7 +994,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                               aria-level={7}
                               className="fd-tree__item"
                               id="fd-mocked-short-id"
-                              onExpandClickInternal={[Function]}
+                              expansionEventBubbler={[Function]}
                               role="treeitem"
                             >
                               <div
@@ -1030,7 +1030,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1058,7 +1058,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -1066,7 +1066,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -1094,7 +1094,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -1102,7 +1102,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -1130,7 +1130,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
               >
                 <li
@@ -1138,7 +1138,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -1166,7 +1166,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                   >
                     <li
@@ -1174,7 +1174,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -1202,7 +1202,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                       <ul
                         aria-hidden={true}
                         className="fd-tree is-hidden"
-                        onExpandClickInternal={[Function]}
+                        expansionEventBubbler={[Function]}
                         role="group"
                       >
                         <li
@@ -1210,7 +1210,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                           aria-level={6}
                           className="fd-tree__item"
                           id="fd-mocked-short-id"
-                          onExpandClickInternal={[Function]}
+                          expansionEventBubbler={[Function]}
                           role="treeitem"
                         >
                           <div
@@ -1238,7 +1238,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                           <ul
                             aria-hidden={true}
                             className="fd-tree is-hidden"
-                            onExpandClickInternal={[Function]}
+                            expansionEventBubbler={[Function]}
                             role="group"
                           >
                             <li
@@ -1246,7 +1246,7 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                               aria-level={7}
                               className="fd-tree__item"
                               id="fd-mocked-short-id"
-                              onExpandClickInternal={[Function]}
+                              expansionEventBubbler={[Function]}
                               role="treeitem"
                             >
                               <div
@@ -1325,7 +1325,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1353,7 +1353,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -1361,7 +1361,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -1389,7 +1389,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -1397,7 +1397,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -1425,7 +1425,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
               >
                 <li
@@ -1433,7 +1433,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -1461,7 +1461,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                   >
                     <li
@@ -1469,7 +1469,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -1495,7 +1495,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -1521,7 +1521,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -1547,7 +1547,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -1573,7 +1573,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1597,7 +1597,7 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1634,7 +1634,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1677,7 +1677,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -1685,7 +1685,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -1725,7 +1725,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -1733,7 +1733,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -1773,7 +1773,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
               >
                 <li
@@ -1781,7 +1781,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -1819,7 +1819,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -1857,7 +1857,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -1895,7 +1895,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1933,7 +1933,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -1981,7 +1981,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -2025,7 +2025,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="multi"
       >
@@ -2034,7 +2034,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -2078,7 +2078,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="multi"
           >
@@ -2087,7 +2087,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -2131,7 +2131,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -2140,7 +2140,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -2184,7 +2184,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -2193,7 +2193,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
@@ -2241,7 +2241,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -2285,7 +2285,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="multi"
       >
@@ -2294,7 +2294,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -2338,7 +2338,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="multi"
           >
@@ -2347,7 +2347,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -2391,7 +2391,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -2400,7 +2400,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -2444,7 +2444,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -2453,7 +2453,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
@@ -2513,7 +2513,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -2557,7 +2557,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="multi"
       >
@@ -2566,7 +2566,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -2610,7 +2610,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="multi"
           >
@@ -2619,7 +2619,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -2663,7 +2663,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -2672,7 +2672,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -2716,7 +2716,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -2725,7 +2725,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
@@ -2773,7 +2773,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="multi"
     >
@@ -2817,7 +2817,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="multi"
       >
@@ -2826,7 +2826,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="multi"
         >
@@ -2870,7 +2870,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="multi"
           >
@@ -2879,7 +2879,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="multi"
             >
@@ -2923,7 +2923,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="multi"
               >
@@ -2932,7 +2932,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="multi"
                 >
@@ -2976,7 +2976,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="multi"
                   >
@@ -2985,7 +2985,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="multi"
                     >
@@ -3045,7 +3045,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -3074,7 +3074,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -3082,7 +3082,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -3110,7 +3110,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -3118,7 +3118,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -3147,7 +3147,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
               >
                 <li
@@ -3155,7 +3155,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -3183,7 +3183,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                   >
                     <li
@@ -3191,7 +3191,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -3220,7 +3220,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                       <ul
                         aria-hidden={true}
                         className="fd-tree is-hidden"
-                        onExpandClickInternal={[Function]}
+                        expansionEventBubbler={[Function]}
                         role="group"
                       >
                         <li
@@ -3228,7 +3228,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                           aria-level={6}
                           className="fd-tree__item"
                           id="fd-mocked-short-id"
-                          onExpandClickInternal={[Function]}
+                          expansionEventBubbler={[Function]}
                           role="treeitem"
                         >
                           <div
@@ -3256,7 +3256,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                           <ul
                             aria-hidden={true}
                             className="fd-tree is-hidden"
-                            onExpandClickInternal={[Function]}
+                            expansionEventBubbler={[Function]}
                             role="group"
                           >
                             <li
@@ -3264,7 +3264,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                               aria-level={7}
                               className="fd-tree__item"
                               id="fd-mocked-short-id"
-                              onExpandClickInternal={[Function]}
+                              expansionEventBubbler={[Function]}
                               role="treeitem"
                             >
                               <div
@@ -3293,7 +3293,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                               <ul
                                 aria-hidden={true}
                                 className="fd-tree is-hidden"
-                                onExpandClickInternal={[Function]}
+                                expansionEventBubbler={[Function]}
                                 role="group"
                               >
                                 <li
@@ -3301,7 +3301,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                   aria-level={8}
                                   className="fd-tree__item"
                                   id="fd-mocked-short-id"
-                                  onExpandClickInternal={[Function]}
+                                  expansionEventBubbler={[Function]}
                                   role="treeitem"
                                 >
                                   <div
@@ -3325,7 +3325,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                   aria-level={8}
                                   className="fd-tree__item"
                                   id="fd-mocked-short-id"
-                                  onExpandClickInternal={[Function]}
+                                  expansionEventBubbler={[Function]}
                                   role="treeitem"
                                 >
                                   <div
@@ -3352,7 +3352,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                               aria-level={7}
                               className="fd-tree__item"
                               id="fd-mocked-short-id"
-                              onExpandClickInternal={[Function]}
+                              expansionEventBubbler={[Function]}
                               role="treeitem"
                             >
                               <div
@@ -3378,7 +3378,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                           aria-level={6}
                           className="fd-tree__item"
                           id="fd-mocked-short-id"
-                          onExpandClickInternal={[Function]}
+                          expansionEventBubbler={[Function]}
                           role="treeitem"
                         >
                           <div
@@ -3405,7 +3405,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                     >
                       <div
@@ -3432,7 +3432,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                 >
                   <div
@@ -3458,7 +3458,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -3484,7 +3484,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -3510,7 +3510,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -3535,7 +3535,7 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -3572,7 +3572,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -3617,7 +3617,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="single"
       >
@@ -3626,7 +3626,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -3671,7 +3671,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="single"
           >
@@ -3680,7 +3680,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -3725,7 +3725,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="single"
               >
@@ -3734,7 +3734,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -3779,7 +3779,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -3788,7 +3788,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="single"
                     >
@@ -3837,7 +3837,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -3882,7 +3882,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="single"
       >
@@ -3891,7 +3891,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -3936,7 +3936,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="single"
           >
@@ -3945,7 +3945,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -3990,7 +3990,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="single"
               >
@@ -3999,7 +3999,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -4044,7 +4044,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -4053,7 +4053,7 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="single"
                     >
@@ -4114,7 +4114,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -4159,7 +4159,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="single"
       >
@@ -4168,7 +4168,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -4213,7 +4213,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="single"
           >
@@ -4222,7 +4222,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -4267,7 +4267,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="single"
               >
@@ -4276,7 +4276,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -4321,7 +4321,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -4330,7 +4330,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="single"
                     >
@@ -4379,7 +4379,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
       selection="single"
     >
@@ -4424,7 +4424,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
         selection="single"
       >
@@ -4433,7 +4433,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
           selection="single"
         >
@@ -4478,7 +4478,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
             selection="single"
           >
@@ -4487,7 +4487,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
               selection="single"
             >
@@ -4532,7 +4532,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               <ul
                 aria-hidden={true}
                 className="fd-tree is-hidden"
-                onExpandClickInternal={[Function]}
+                expansionEventBubbler={[Function]}
                 role="group"
                 selection="single"
               >
@@ -4541,7 +4541,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   aria-level={4}
                   className="fd-tree__item"
                   id="fd-mocked-short-id"
-                  onExpandClickInternal={[Function]}
+                  expansionEventBubbler={[Function]}
                   role="treeitem"
                   selection="single"
                 >
@@ -4586,7 +4586,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   <ul
                     aria-hidden={true}
                     className="fd-tree is-hidden"
-                    onExpandClickInternal={[Function]}
+                    expansionEventBubbler={[Function]}
                     role="group"
                     selection="single"
                   >
@@ -4595,7 +4595,7 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                       aria-level={5}
                       className="fd-tree__item"
                       id="fd-mocked-short-id"
-                      onExpandClickInternal={[Function]}
+                      expansionEventBubbler={[Function]}
                       role="treeitem"
                       selection="single"
                     >
@@ -4656,7 +4656,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -4684,7 +4684,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       <ul
         aria-hidden={true}
         className="fd-tree"
-        onExpandClickInternal={[Function]}
+        expansionEventBubbler={[Function]}
         role="group"
       >
         <li
@@ -4692,7 +4692,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -4720,7 +4720,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
           <ul
             aria-hidden={true}
             className="fd-tree is-hidden"
-            onExpandClickInternal={[Function]}
+            expansionEventBubbler={[Function]}
             role="group"
           >
             <li
@@ -4728,7 +4728,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
               aria-level={3}
               className="fd-tree__item"
               id="fd-mocked-short-id"
-              onExpandClickInternal={[Function]}
+              expansionEventBubbler={[Function]}
               role="treeitem"
             >
               <div
@@ -4754,7 +4754,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -4778,7 +4778,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
           aria-level={2}
           className="fd-tree__item"
           id="fd-mocked-short-id"
-          onExpandClickInternal={[Function]}
+          expansionEventBubbler={[Function]}
           role="treeitem"
         >
           <div
@@ -4804,7 +4804,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -4828,7 +4828,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
@@ -4852,7 +4852,7 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
       aria-level={1}
       className="fd-tree__item"
       id="fd-mocked-short-id"
-      onExpandClickInternal={[Function]}
+      expansionEventBubbler={[Function]}
       role="treeitem"
     >
       <div
