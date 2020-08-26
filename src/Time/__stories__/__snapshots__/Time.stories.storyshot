@@ -7,7 +7,6 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
   <div
     className="fd-time"
     name="custom"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -187,7 +186,6 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -373,7 +371,6 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     
     <div
@@ -522,7 +519,6 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -671,7 +667,6 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -821,7 +816,6 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
   <div
     className="fd-time"
     name="meridiem"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -1001,7 +995,6 @@ exports[`Storyshots Component API/Time Primary 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -1181,7 +1174,6 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -1392,7 +1384,6 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
   <div
     className="fd-time"
     name="meridiem"
-    spinners={true}
   >
     <div
       className="fd-time__col"
@@ -1572,7 +1563,6 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
 >
   <div
     className="fd-time"
-    spinners={true}
   >
     <div
       className="fd-time__col"
