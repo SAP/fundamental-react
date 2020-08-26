@@ -33,7 +33,7 @@ const Checkbox = React.forwardRef(({
     validationState,
     ...props
 }, ref) => {
-    const [checkedState, setCheckedState] = useState(checked);
+    const [checkedState, setCheckedState] = useState(!!checked);
     const inputEl = useRef();
 
     useEffect(() => {
@@ -55,8 +55,7 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
-    const generatedCheckId = useUniqueId();
-    const checkId = id ? id : generatedCheckId;
+    const checkId = useUniqueId(id);
 
     const checkboxChildren = (typeof children === 'string') ? (
         <span className='fd-checkbox__text'>
@@ -72,8 +71,9 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
+                aria-checked={checkedState}
                 aria-label={ariaLabel}
-                checked={checkedState}
+                checked={checked}
                 className={inputClassNames}
                 defaultChecked={defaultChecked}
                 disabled={disabled}
