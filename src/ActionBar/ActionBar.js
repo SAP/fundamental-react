@@ -57,8 +57,7 @@ const ActionBar = React.forwardRef(({
         actionClassName
     );
 
-    const titleLevel = `h${headingLevel}`;
-    const titleStyle = headingStyle ? `h${headingStyle}` : titleLevel;
+    const titleStyle = headingStyle || headingLevel;
 
     return (
         <div {...props}
@@ -77,7 +76,7 @@ const ActionBar = React.forwardRef(({
                 <div className='fd-action-bar__title'>
                     <Title
                         {...titleProps}
-                        level={titleLevel}
+                        level={headingLevel}
                         levelStyle={titleStyle}>
                         {title}
                     </Title>

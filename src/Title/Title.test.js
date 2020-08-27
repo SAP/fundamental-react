@@ -8,7 +8,7 @@ describe('<Title />', () => {
             const element = mount(
                 <Title
                     data-sample='Sample'
-                    level='h1' />
+                    level={1} />
             );
 
             expect(
@@ -22,7 +22,7 @@ describe('<Title />', () => {
             const element = mount(
                 <Title
                     data-sample='Sample'
-                    level='h1' />
+                    level={1} />
             );
 
             expect(element.getDOMNode().tagName).toBe('H1');
@@ -32,7 +32,7 @@ describe('<Title />', () => {
             const element = mount(
                 <Title
                     data-sample='Sample'
-                    level='h1' />
+                    level={1} />
             );
 
             expect(
@@ -44,8 +44,8 @@ describe('<Title />', () => {
             const element = mount(
                 <Title
                     data-sample='Sample'
-                    level='h1'
-                    levelStyle='h3' />
+                    level={1}
+                    levelStyle={3} />
             );
 
             expect(
@@ -59,7 +59,7 @@ describe('<Title />', () => {
             const element = mount(
                 <Title
                     data-sample='Sample'
-                    level='h1'
+                    level={1}
                     wrap />
             );
 
@@ -76,7 +76,7 @@ describe('<Title />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Title level='h1' ref={ref} />;
+            render = () => <Title level={1} ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('H1');

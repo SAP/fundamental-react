@@ -12,14 +12,13 @@ const LayoutPanelHead = props => {
         className
     );
 
-    const titleLevel = `h${headingLevel}`;
-    const titleStyle = headingStyle ? `h${headingStyle}` : titleLevel;
+    const titleStyle = headingStyle || headingLevel;
 
     return (
         <div {...rest} className={panelHeadClasses}>
             {title ?
                 <div className='fd-layout-panel__title'>
-                    <Title level={titleLevel} levelStyle={titleStyle}>{title}</Title>
+                    <Title level={headingLevel} levelStyle={titleStyle}>{title}</Title>
                 </div> : null}
             {description ? <p className='fd-layout-panel__description'>{description}</p> : null}
         </div>

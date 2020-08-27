@@ -88,10 +88,6 @@ class Dialog extends Component {
             className
         );
 
-
-        const titleLevel = `h${headingLevel}`;
-        const titleStyle = `h${headingStyle}`;
-
         if (!show) {
             return null;
         }
@@ -116,8 +112,8 @@ class Dialog extends Component {
                             <div className='fd-bar__element'>
                                 <Title
                                     {...titleProps}
-                                    level={titleLevel}
-                                    levelStyle={titleStyle}>
+                                    level={headingLevel}
+                                    levelStyle={headingStyle}>
                                     {title}
                                 </Title>
                             </div>

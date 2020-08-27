@@ -16,14 +16,13 @@ const ListHeader = ({
         className
     );
 
-    const level = `h${headingLevel}`;
-    const style = headingStyle ? `h${headingStyle}` : level;
+    const style = headingStyle || headingLevel;
 
     return (
         <Title
             {...props}
             className={ListItemClasses}
-            level={level}
+            level={headingLevel}
             levelStyle={style}>
             {children}
         </Title>

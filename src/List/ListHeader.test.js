@@ -5,7 +5,7 @@ import React from 'react';
 describe('<ListHeader />', () => {
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ListHeader component', () => {
-            const element = mount(<List.Header data-sample='Sample' />);
+            const element = mount(<List.Header data-sample='Sample' headingLevel={4} />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
