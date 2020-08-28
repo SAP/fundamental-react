@@ -59,6 +59,19 @@ describe('<FormValidationOverlay />', () => {
             ).toContain('wonderful-styles');
         });
 
+        test('should set className on the popper component', async() => {
+            await act(async() => {
+                setup({
+                    popperClassName: 'wonderful-styles',
+                    show: true
+                });
+            });
+            const popoverNode = getPopover();
+            expect(
+                popoverNode.className
+            ).toContain('wonderful-styles');
+        });
+
         test('should allow props to be spread to the FormMessage component', async() => {
             let element;
             await act(async() => {

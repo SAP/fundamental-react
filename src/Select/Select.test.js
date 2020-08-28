@@ -62,6 +62,16 @@ describe('<Select />', () => {
                 messageNode.classList
             ).toContain('wonderful-styles');
         });
+
+        test('should spread props to Validation overlay wrapper div', async() => {
+            const element = setup({
+                validationOverlayProps: { wrapperProps: { 'data-sample': 'Sample' }, show: true }
+            });
+
+            expect(
+                element.find('.fd-popover').at(1).getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
     });
 
     describe('Prop spreading', () => {
@@ -95,13 +105,26 @@ describe('<Select />', () => {
             ).toContain('wonderful-styles');
         });
 
-        test('should set class on the Popper', async() => {
+        test('should set class on the dropdown Popper', async() => {
             const wrapper = setup({
                 popoverProps: { popperClassName: 'wonderful-styles' }
             });
 
             await act(async() => {
                 wrapper.find('.fd-select').simulate('click');
+            });
+
+            expect(
+                document.body.querySelector('.fd-popover__popper').classList
+            ).toContain('wonderful-styles');
+        });
+
+        test('should set class on the Validation Overlay Popper', async() => {
+            await act(async() => {
+                setup({
+                    validationState: { state: 'error', text: 'Test validation state' },
+                    validationOverlayProps: { popperClassName: 'wonderful-styles', show: true }
+                });
             });
 
             expect(
