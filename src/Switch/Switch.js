@@ -4,7 +4,7 @@ import FormLabel from '../Forms/FormLabel';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import 'fundamental-styles/dist/icon.css';
 import 'fundamental-styles/dist/switch.css';
 
@@ -30,6 +30,10 @@ const Switch = React.forwardRef(({
 }, ref) => {
 
     let [isChecked, setIsChecked] = useState(!!checked);
+
+    useEffect(() => {
+        if (checked) setIsChecked(checked);
+    }, [checked]);
 
     const handleChange = (e) => {
         setIsChecked(!isChecked);
