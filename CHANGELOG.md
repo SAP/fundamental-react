@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.9...v0.13.0-rc.10) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* In this change we
+* Update fundamental-styles to 0.12.0-rc.18 and support the new features and fixes therein.
+  * Removed LayoutGrid component in favor of the new grid system based on Container, Row, and Column components
+  * Remove LayoutPanel.colSpan property; added story for LayoutPanel in the new grid system.
+  * Removed the TreeViewcomponent in favor of the new Tree component.
+  * Shellbar avatar now has a branded border.
+
+* Docs/Storybook:
+  * update storybook to v6.0.16
+  * fix missing storyDescriptions and component descriptions.
+  * Add copy button to easily copy import statements to clipboard.
+
+### Features
+
+* update fundamental-styles to v0.12.0-rc.18 ([#1172](https://github.com/SAP/fundamental-react/issues/1172)) ([efb2d17](https://github.com/SAP/fundamental-react/commit/efb2d179156d785230cb8fba8bb9dcc72cad9488))
+
 ## [0.13.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.8...v0.13.0-rc.9) (2020-08-31)
 
 
