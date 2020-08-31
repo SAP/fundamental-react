@@ -59,25 +59,20 @@ const MenuItem = ({
                 children.props.className
             );
 
-            const addonChildBefore = addonBefore ? (<span
-                key='addonChildBefore'
-                {...addonProps}
-                className={addonBeforeClassnames} />) : null;
-            const addonChildAfter = addonAfter ? (<span
-                key='addonChildAfter'
-                {...addonProps}
-                className={addonAfterClassnames} />) : null;
-
             return (
                 <>
-                    {React.Children.toArray(children).map((child, key) => {
-                        return React.cloneElement(child, {
-                            'className': childrenClassnames,
-                            key: `menu-item-${key}`,
-                            ...urlProps
-                        },
-                        [addonChildBefore, (<span className='fd-menu__title' key='menuTitle'>{child.props.children}</span>), addonChildAfter]);
-                    })}
+                    {addonBefore && <span {...addonProps} {...urlProps}
+                        className={addonBeforeClassnames} />}
+                    <span className='fd-menu__title'>
+                        {React.Children.map(children, child => {
+                            return React.cloneElement(child, {
+                                className: childrenClassnames,
+                                ...urlProps
+                            });
+                        })}
+                    </span>
+                    {addonAfter && <span {...addonProps} {...urlProps}
+                        className={addonAfterClassnames} />}
                 </>
             );
         } else if (children) {
