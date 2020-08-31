@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import TreeNode from './TreeNode';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
+import 'fundamental-styles/dist/tree.css';
+
 /**
  *
  *
