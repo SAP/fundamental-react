@@ -89,6 +89,28 @@ describe('<ComboboxInput />', () => {
         });
     });
 
+    describe('validationOverlayProps', () => {
+
+        test('pass validationOverlayProps to InputGroup', () => {
+            const element = mount(
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    id='validationOverlayTest'
+                    options={defaultOptions}
+                    validationOverlayProps={{
+                        className: 'foo'
+                    }} />
+            );
+
+            expect(
+                element.find('InputGroup').prop('validationOverlayProps')
+            ).toMatchObject({
+                className: 'foo'
+            });
+        });
+    });
+
     describe('interactions', () => {
         beforeEach(() => {
             container = document.createElement('div');
