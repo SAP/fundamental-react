@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.8...v0.13.0-rc.9) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed unused `spinners` prop from TimePicker and Time components
+
+* cleanup some test warnings ([#1188](https://github.com/SAP/fundamental-react/issues/1188)) ([dc93883](https://github.com/SAP/fundamental-react/commit/dc938831e1851efaa253c92693c2e3f638d051b7))
+
 ## [0.13.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.7...v0.13.0-rc.8) (2020-08-27)
 
 
