@@ -59,19 +59,21 @@ const MenuItem = ({
                 children.props.className
             );
 
-            const addonChildBefore = addonBefore ? (<span {...addonProps} className={addonBeforeClassnames} />) : null;
-            const addonChildAfter = addonAfter ? (<span {...addonProps} className={addonAfterClassnames} />) : null;
-
             return (
-                <React.Fragment>
-                    {React.Children.toArray(children).map(child => {
-                        return React.cloneElement(child, {
-                            'className': childrenClassnames,
-                            ...urlProps
-                        },
-                        [addonChildBefore, (<span className='fd-menu__title'>{child.props.children}</span>), addonChildAfter]);
-                    })}
-                </React.Fragment>
+                <>
+                    {addonBefore && <span {...addonProps} {...urlProps}
+                        className={addonBeforeClassnames} />}
+                    <span className='fd-menu__title'>
+                        {React.Children.map(children, child => {
+                            return React.cloneElement(child, {
+                                className: childrenClassnames,
+                                ...urlProps
+                            });
+                        })}
+                    </span>
+                    {addonAfter && <span {...addonProps} {...urlProps}
+                        className={addonAfterClassnames} />}
+                </>
             );
         } else if (children) {
             return (<a {...urlProps}
@@ -91,7 +93,7 @@ const MenuItem = ({
     );
 
     return (
-        <React.Fragment>
+        <>
             <li
                 {...props}
                 className={listClassNames}
@@ -99,7 +101,7 @@ const MenuItem = ({
                 {renderLink()}
             </li>
             {separator && <span className='fd-menu__separator' />}
-        </React.Fragment>
+        </>
     );
 };
 
