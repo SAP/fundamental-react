@@ -3,9 +3,10 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
+import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'fundamental-styles/dist/checkbox.css';
 
 /** With a **Checkbox**, all options are visible and the user can make one or more selections.
@@ -15,23 +16,24 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
-    className,
     compact,
     defaultChecked,
     disabled,
     id,
     indeterminate,
     inline,
+    inputClassName,
     inputProps,
     labelClassName,
     labelProps,
     name,
     onChange,
     value,
-    state,
+    validationOverlayProps,
+    validationState,
     ...props
 }, ref) => {
-
+    const [checkedState, setCheckedState] = useState(!!checked);
     const inputEl = useRef();
 
     useEffect(() => {
@@ -39,13 +41,13 @@ const Checkbox = React.forwardRef(({
     });
 
 
-    const classes = classnames(
-        className,
+    const inputClassNames = classnames(
         'fd-checkbox',
         {
-            [`is-${state}`]: state,
+            [`is-${validationState?.state}`]: validationState?.state,
             'fd-checkbox--compact': compact
-        }
+        },
+        inputClassName
     );
 
     const labelClasses = classnames(
@@ -53,8 +55,7 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
-    const generatedCheckId = useUniqueId();
-    const checkId = id ? id : generatedCheckId;
+    const checkId = useUniqueId(id);
 
     const checkboxChildren = (typeof children === 'string') ? (
         <span className='fd-checkbox__text'>
@@ -62,7 +63,7 @@ const Checkbox = React.forwardRef(({
         </span>
     ) : children;
 
-    return (
+    const checkbox = (
         <FormItem
             {...props}
             disabled={disabled}
@@ -70,15 +71,18 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
+                aria-checked={checkedState}
                 aria-label={ariaLabel}
                 checked={checked}
-                className={classes}
+                className={inputClassNames}
                 defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
                 name={name}
                 onChange={(e) => {
-                    onChange(e, !checked);
+                    const toggledState = !checkedState;
+                    setCheckedState(toggledState);
+                    onChange(e, toggledState);
                 }}
                 ref={inputEl}
                 type='checkbox'
@@ -91,6 +95,13 @@ const Checkbox = React.forwardRef(({
             </FormLabel>
         </FormItem>
     );
+
+    return validationState ? (
+        <FormValidationOverlay
+            {...validationOverlayProps}
+            control={checkbox}
+            validationState={validationState} />
+    ) : checkbox;
 });
 
 Checkbox.displayName = 'Checkbox';
@@ -124,6 +135,8 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     indeterminate: PropTypes.bool,
     /** Internal use only */
     inline: PropTypes.bool,
+    /** Class name to be added to the component `<input>` element */
+    inputClassName: PropTypes.string,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Class name to be added to the component `<label>` element */
@@ -132,8 +145,22 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     labelProps: PropTypes.object,
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
-    /** State of validation: 'error', 'warning', 'information', 'success' */
-    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string
+    }),
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
+    validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
+        text: PropTypes.string
+    }),
     /** Sets the `value` for the checkbox input */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */

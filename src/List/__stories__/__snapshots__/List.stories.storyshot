@@ -814,6 +814,7 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
+            aria-checked={true}
             aria-label="Coupon Applied: FREE"
             checked={true}
             className="fd-checkbox"
@@ -847,6 +848,7 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
+            aria-checked={false}
             aria-label="Add gift wrapping"
             checked={false}
             className="fd-checkbox"
@@ -880,6 +882,7 @@ exports[`Storyshots Component API/List Selection 1`] = `
           className="fd-form-item fd-form-item--inline"
         >
           <input
+            aria-checked={false}
             aria-label="Less packaging"
             checked={false}
             className="fd-checkbox"

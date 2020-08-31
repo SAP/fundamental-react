@@ -1,9 +1,11 @@
 /* eslint-disable react/no-multi-comp */
 import Button from '../../Button/Button';
+import Column from '../../LayoutGrid/Column';
 import ComboboxInput from '../ComboboxInput';
+import Container from '../../LayoutGrid/Container';
 import countriesData from '../../../data/countries.json';
-import LayoutGrid from '../../LayoutGrid/LayoutGrid';
 import List from '../../List/List';
+import Row from '../../LayoutGrid/Row';
 import Switch from '../../Switch/Switch';
 import {
     boolean,
@@ -47,33 +49,43 @@ export const compact = () => (
 );
 
 export const validationState = () => (
-    <LayoutGrid cols={4}>
-        <ComboboxInput
-            id='errorComboboxExample'
-            label='Combobox with error'
-            options={countriesData}
-            placeholder={placeholder}
-            required
-            validationState={{ state: 'error', text: 'Please select country of residence' }} />
-        <ComboboxInput
-            id='warningComboboxExample'
-            label='Combobox with warning'
-            options={countriesData}
-            placeholder={placeholder}
-            validationState={{ state: 'warning', text: 'Country can be edited only once' }} />
-        <ComboboxInput
-            id='infoComboboxExample'
-            label='Combobox with information'
-            options={countriesData}
-            placeholder={placeholder}
-            validationState={{ state: 'information', text: 'This data will not be shared.' }} />
-        <ComboboxInput
-            id='successComboboxExample'
-            label='Combobox with success'
-            options={countriesData}
-            placeholder={placeholder}
-            validationState={{ state: 'success', text: 'Service is supported in these countries.' }} />
-    </LayoutGrid>
+    <Container>
+        <Row>
+            <Column>
+                <ComboboxInput
+                    id='errorComboboxExample'
+                    label='Combobox with error'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    required
+                    validationState={{ state: 'error', text: 'Please select country of residence' }} />
+            </Column>
+            <Column>
+                <ComboboxInput
+                    id='warningComboboxExample'
+                    label='Combobox with warning'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    validationState={{ state: 'warning', text: 'Country can be edited only once' }} />
+            </Column>
+            <Column>
+                <ComboboxInput
+                    id='infoComboboxExample'
+                    label='Combobox with information'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    validationState={{ state: 'information', text: 'This data will not be shared.' }} />
+            </Column>
+            <Column>
+                <ComboboxInput
+                    id='successComboboxExample'
+                    label='Combobox with success'
+                    options={countriesData}
+                    placeholder={placeholder}
+                    validationState={{ state: 'success', text: 'Service is supported in these countries.' }} />
+            </Column>
+        </Row>
+    </Container>
 );
 
 /**
@@ -83,8 +95,8 @@ export const validationState = () => (
  *
  * Historically, setting `autocomplete=“off”` has disabled browser's own autocomplete but Chrome continues to change its
  * stance on `autcomplete=“off”` on the basis of usability. With some Chrome versions, `autocomplete=“off”` will work, while in others, `autocomplete=“nope”`
- * or other [semantic values](https://www.w3.org/TR/WCAG21/#input-purposes) like `autocomplete=“street-address”` will work. This back and forth has been going on for a while
- * leaving many developers unhappy and [frustrated with this Chrome behavior](https://bugs.chromium.org/p/chromium/issues/detail?id=914451).
+ * or other <a href="https://www.w3.org/TR/WCAG21/#input-purposes" target="_blank">semantic values</a> like `autocomplete=“street-address”` will work. This back and forth has been going on for a while
+ * leaving many developers unhappy and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=914451" target="_blank">frustrated with this Chrome behavior</a>.
  *
  *
  * We have tried to disable the browser's own autocomplete by setting `autocomplete="off"` as default but you may use any custom value by setting the `inputProps.autoComplete` attribute.
@@ -96,65 +108,73 @@ export const selectionType = () => {
     const [selectedCountryObj3, setSelectedCountry3] = useState();
     return (
         <>
-            <LayoutGrid>
-                <div>
-                    Selected country code: {selectedCountryObj1?.key || 'none'}
-                    <br />
-                    <ComboboxInput
-                        arrowLabel='Show country options'
-                        id='comboboxManualSelectExample'
-                        inputProps={{
-                            autoComplete: 'nope'
-                        }}
-                        label='Country (Manual Select)'
-                        maxHeight='250px'
-                        noMatchesText='No Matches'
-                        onSelectionChange={(event, option) => {
-                            setSelectedCountry1(option);
-                        }}
-                        options={countriesData}
-                        placeholder='🔎   Enter Country Name'
-                        selectionType='manual' />
-                </div>
-                <div>
-                    Selected country code: {selectedCountryObj2?.key || 'none'}
-                    <br />
-                    <ComboboxInput
-                        arrowLabel='Show country options'
-                        id='comboboxAutoSelectExample'
-                        inputProps={{
-                            autoComplete: 'nope'
-                        }}
-                        label='Country (Auto Select)'
-                        maxHeight='250px'
-                        noMatchesText='No Matches'
-                        onSelectionChange={(event, option) => {
-                            setSelectedCountry2(option);
-                        }}
-                        options={countriesData}
-                        placeholder='🔎   Enter Country Name'
-                        selectionType='auto' />
-                </div>
-                <div>
-                    Selected country code: {selectedCountryObj3?.key || 'none'}
-                    <br />
-                    <ComboboxInput
-                        arrowLabel='Show country options'
-                        id='comboboxAutoInlineSelectExample'
-                        inputProps={{
-                            autoComplete: 'nope'
-                        }}
-                        label='Country (Auto Select and Inline Auto Complete)'
-                        maxHeight='250px'
-                        noMatchesText='No Matches'
-                        onSelectionChange={(event, option) => {
-                            setSelectedCountry3(option);
-                        }}
-                        options={countriesData}
-                        placeholder='🔎   Enter Country Name'
-                        selectionType='auto-inline' />
-                </div>
-            </LayoutGrid>
+            <Container>
+                <Row>
+                    <Column>
+                        <div>
+                            Selected country code: {selectedCountryObj1?.key || 'none'}
+                            <br />
+                            <ComboboxInput
+                                arrowLabel='Show country options'
+                                id='comboboxManualSelectExample'
+                                inputProps={{
+                                    autoComplete: 'nope'
+                                }}
+                                label='Country (Manual Select)'
+                                maxHeight='250px'
+                                noMatchesText='No Matches'
+                                onSelectionChange={(event, option) => {
+                                    setSelectedCountry1(option);
+                                }}
+                                options={countriesData}
+                                placeholder='🔎   Enter Country Name'
+                                selectionType='manual' />
+                        </div>
+                    </Column>
+                    <Column>
+                        <div>
+                            Selected country code: {selectedCountryObj2?.key || 'none'}
+                            <br />
+                            <ComboboxInput
+                                arrowLabel='Show country options'
+                                id='comboboxAutoSelectExample'
+                                inputProps={{
+                                    autoComplete: 'nope'
+                                }}
+                                label='Country (Auto Select)'
+                                maxHeight='250px'
+                                noMatchesText='No Matches'
+                                onSelectionChange={(event, option) => {
+                                    setSelectedCountry2(option);
+                                }}
+                                options={countriesData}
+                                placeholder='🔎   Enter Country Name'
+                                selectionType='auto' />
+                        </div>
+                    </Column>
+                    <Column>
+                        <div>
+                            Selected country code: {selectedCountryObj3?.key || 'none'}
+                            <br />
+                            <ComboboxInput
+                                arrowLabel='Show country options'
+                                id='comboboxAutoInlineSelectExample'
+                                inputProps={{
+                                    autoComplete: 'nope'
+                                }}
+                                label='Country (Auto Select and Inline Auto Complete)'
+                                maxHeight='250px'
+                                noMatchesText='No Matches'
+                                onSelectionChange={(event, option) => {
+                                    setSelectedCountry3(option);
+                                }}
+                                options={countriesData}
+                                placeholder='🔎   Enter Country Name'
+                                selectionType='auto-inline' />
+                        </div>
+                    </Column>
+                </Row>
+            </Container>
         </>
     );
 };
@@ -181,60 +201,68 @@ export const dev = () => {
 
     return (
         <>
-            <LayoutGrid>
-                <div>
-                    <Button>Dummy</Button>
-                </div>
-                <div>
-                    <Switch
-                        checked
-                        compact
-                        onChange={() => {
-                            setUseCustomRenderer(!useCustomRenderer);
-                        }}>
-                        Use custom option renderer
-                    </Switch>
+            <Container>
+                <Row>
+                    <Column>
+                        <div>
+                            <Button>Dummy</Button>
+                        </div>
+                    </Column>
+                    <Column>
+                        <div>
+                            <Switch
+                                checked
+                                compact
+                                onChange={() => {
+                                    setUseCustomRenderer(!useCustomRenderer);
+                                }}>
+                                Use custom option renderer
+                            </Switch>
 
-                    Selected country code: {selectedCountryObj?.key || 'none'}
+                            Selected country code: {selectedCountryObj?.key || 'none'}
 
-                    <br />
-                    <ComboboxInput
-                        ariaLabel={text('ariaLabel', '')}
-                        arrowLabel='Show country options'
-                        buttonProps={{
-                            'data-sample': 'combobox-dev-story-example'
-                        }}
-                        compact={boolean('compact', false)}
-                        disabled={boolean('disabled', false)}
-                        filterable={boolean('filterable', true)}
-                        id='comboboxDevExample'
-                        label={text('label', 'Country')}
-                        maxHeight='250px'
-                        noMatchesText='No Matches'
-                        onSelectionChange={(event, option) => {
-                            setSelectedCountry(option);
-                        }}
-                        optionRenderer={useCustomRenderer ? withFlags : null}
-                        options={countriesData}
-                        placeholder={text('Placeholder', placeholder)}
-                        required={boolean('required', false)}
-                        selectionType={select('selectionType', {
-                            'manual': 'manual',
-                            'auto': 'auto',
-                            'auto-inline': 'auto-inline'
-                        })}
-                        validationState={select('Validation State', {
-                            'none': '',
-                            'success': { state: 'success', text: 'placeholder text' },
-                            'error': { state: 'error', text: 'placeholder text' },
-                            'information': { state: 'information', text: 'placeholder text' },
-                            'warning': { state: 'warning', text: 'placeholder text' }
-                        })} />
-                </div>
-                <div>
-                    <Button>Dummy</Button>
-                </div>
-            </LayoutGrid>
+                            <br />
+                            <ComboboxInput
+                                ariaLabel={text('ariaLabel', '')}
+                                arrowLabel='Show country options'
+                                buttonProps={{
+                                    'data-sample': 'combobox-dev-story-example'
+                                }}
+                                compact={boolean('compact', false)}
+                                disabled={boolean('disabled', false)}
+                                filterable={boolean('filterable', true)}
+                                id='comboboxDevExample'
+                                label={text('label', 'Country')}
+                                maxHeight='250px'
+                                noMatchesText='No Matches'
+                                onSelectionChange={(event, option) => {
+                                    setSelectedCountry(option);
+                                }}
+                                optionRenderer={useCustomRenderer ? withFlags : null}
+                                options={countriesData}
+                                placeholder={text('Placeholder', placeholder)}
+                                required={boolean('required', false)}
+                                selectionType={select('selectionType', {
+                                    'manual': 'manual',
+                                    'auto': 'auto',
+                                    'auto-inline': 'auto-inline'
+                                })}
+                                validationState={select('Validation State', {
+                                    'none': '',
+                                    'success': { state: 'success', text: 'placeholder text' },
+                                    'error': { state: 'error', text: 'placeholder text' },
+                                    'information': { state: 'information', text: 'placeholder text' },
+                                    'warning': { state: 'warning', text: 'placeholder text' }
+                                })} />
+                        </div>
+                    </Column>
+                    <Column>
+                        <div>
+                            <Button>Dummy</Button>
+                        </div>
+                    </Column>
+                </Row>
+            </Container>
         </>
     );
 };
@@ -253,18 +281,22 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
     }, [comboboxVS3ExampleButtonRef]);
 
     return (
-        <LayoutGrid>
-            <div>
-                <ComboboxInput
-                    id='comboboxVS3Example'
-                    label='Country selector, auto-inline selection'
-                    maxHeight='250px'
-                    noMatchesText='No Matches'
-                    options={countriesData}
-                    placeholder={placeholder}
-                    ref={comboboxVS3ExampleButtonRef}
-                    selectionType='auto-inline' />
-            </div>
-        </LayoutGrid>
+        <Container>
+            <Row>
+                <Column>
+                    <div>
+                        <ComboboxInput
+                            id='comboboxVS3Example'
+                            label='Country selector, auto-inline selection'
+                            maxHeight='250px'
+                            noMatchesText='No Matches'
+                            options={countriesData}
+                            placeholder={placeholder}
+                            ref={comboboxVS3ExampleButtonRef}
+                            selectionType='auto-inline' />
+                    </div>
+                </Column>
+            </Row>
+        </Container>
     );
 };

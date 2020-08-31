@@ -2,6 +2,95 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.8...v0.13.0-rc.9) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed unused `spinners` prop from TimePicker and Time components
+
+* cleanup some test warnings ([#1188](https://github.com/SAP/fundamental-react/issues/1188)) ([dc93883](https://github.com/SAP/fundamental-react/commit/dc938831e1851efaa253c92693c2e3f638d051b7))
+
+## [0.13.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.7...v0.13.0-rc.8) (2020-08-27)
+
+
+### Bug Fixes
+
+* select onfocus onblur callbacks called at appropriate times ([#1186](https://github.com/SAP/fundamental-react/issues/1186)) ([f9e1282](https://github.com/SAP/fundamental-react/commit/f9e1282c63aae4d2e9a2d309182fbf2c76e0de53))
+
+## [0.13.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.6...v0.13.0-rc.7) (2020-08-26)
+
+## [0.13.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.5...v0.13.0-rc.6) (2020-08-26)
+
+
+### Features
+
+* add custom classes to Select component ([#1185](https://github.com/SAP/fundamental-react/issues/1185)) ([6724eab](https://github.com/SAP/fundamental-react/commit/6724eab7ede0996e369f88307237f0b756ebdeaa))
+
+
+### Bug Fixes
+
+* remove detect-browser from package.json, bump standard version and run audit fix ([#1187](https://github.com/SAP/fundamental-react/issues/1187)) ([c2c952f](https://github.com/SAP/fundamental-react/commit/c2c952f0e1e6bb4723ada9c79e44f5f42d403e44))
+
+## [0.13.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.4...v0.13.0-rc.5) (2020-08-26)
+
+
+### Features
+
+* normalize FormValidationOverlay usage in other components ([#1183](https://github.com/SAP/fundamental-react/issues/1183)) ([1baafc8](https://github.com/SAP/fundamental-react/commit/1baafc816d85bf5dfb8f08561567b27ee4f9fab8))
+
+## [0.13.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.3...v0.13.0-rc.4) (2020-08-25)
+
+
+### Features
+
+* validation class prop ([#1181](https://github.com/SAP/fundamental-react/issues/1181)) ([250d75e](https://github.com/SAP/fundamental-react/commit/250d75ec9832ef0bafc7d3c180cc8536d107fbd5))
+
+## [0.13.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.2...v0.13.0-rc.3) (2020-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Checkbox: replace `state` property with `validationState`
+
+### Features
+
+* BREAKING CHANGE: checkbox replace state with validation states ([#1176](https://github.com/SAP/fundamental-react/issues/1176)) ([9a71277](https://github.com/SAP/fundamental-react/commit/9a7127733433378e0632f70b8a3ba0039488658e))
+
+## [0.13.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.1...v0.13.0-rc.2) (2020-08-20)
+
+## [0.13.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.0...v0.13.0-rc.1) (2020-08-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Checkbox component now sets the `className` value on the `FormItem` component that wraps the `input`; instead of on the `input` itself. This is consistent with the behavior in other Form components.
+
+### Bug Fixes
+
+* Checkbox classname ([#1170](https://github.com/SAP/fundamental-react/issues/1170)) ([bd49054](https://github.com/SAP/fundamental-react/commit/bd49054478d997920d0bcf9a9268f9e375bff251))
+
+## [0.13.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.1-rc.0...v0.13.0-rc.0) (2020-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* * List Header and Footer are now passed as props to a List component and not as its children
+* Use `List.headerClassName` and `List.footerClassName` to add classes
+* List header renders <h2-6> HTML headers, use `List.headerLevel` ; default is 4
+* If List contains selectable options set `List.selectable` to true, do not add non-selectable items to such lists for accessibility
+* List footer is rendered as a <span> outside the <ul> list element since it is not semantically a part of the list
+
+fix:
+* Selecting an item in a selectable list should also highlight it now
+
+feat:
+* You may now set the `List.id` that binds List header and body accessibly. If unset a generated value will be used.
+
+### Bug Fixes
+
+* list selection behavior + accessibility ([#1167](https://github.com/SAP/fundamental-react/issues/1167)) ([2c4cbed](https://github.com/SAP/fundamental-react/commit/2c4cbed61bf2b7c596d477696592ae27f858d580))
+
 ### [0.12.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.0...v0.12.1-rc.0) (2020-08-17)
 
 

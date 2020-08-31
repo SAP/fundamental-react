@@ -10,7 +10,6 @@ import 'fundamental-styles/dist/radio.css';
 const FormRadioItem = React.forwardRef(({
     checked,
     children,
-    className,
     compact,
     defaultChecked,
     disabled,
@@ -37,7 +36,6 @@ const FormRadioItem = React.forwardRef(({
     return (
         <FormItem
             {...props}
-            className={className}
             isInline={inline}
             key={id}>
             <input

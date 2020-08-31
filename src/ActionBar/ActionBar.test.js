@@ -3,9 +3,11 @@ import { mount } from 'enzyme';
 import React from 'react';
 
 describe('<ActionBar />', () => {
+    const setup = (props = {}) => mount(<ActionBar title='Page Title' {...props} />);
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the ActionBar component', () => {
-            const element = mount(<ActionBar data-sample='Sample' title='Page Title' />);
+            const element = setup({ 'data-sample': 'Sample' });
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -13,8 +15,11 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the back Button component', () => {
-            const element = mount(<ActionBar buttonProps={{ 'data-sample': 'Sample' }} onBackClick={() => {}}
-                title='Page Title' />);
+            const element = setup({
+                backButtonLabel: 'Placeholder label',
+                buttonProps: { 'data-sample': 'Sample' },
+                onBackClick: () => {}
+            });
 
             expect(
                 element.find('.sap-icon--navigation-left-arrow').getDOMNode().attributes['data-sample'].value
@@ -22,7 +27,7 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the title', () => {
-            const element = mount(<ActionBar title='Page Title' titleProps={{ 'data-sample': 'Sample' }} />);
+            const element = setup({ titleProps: { 'data-sample': 'Sample' } });
 
             expect(
                 element.find('.fd-title').getDOMNode().attributes['data-sample'].value
@@ -30,8 +35,7 @@ describe('<ActionBar />', () => {
         });
 
         test('should allow props to be spread to the action container', () => {
-            const element = mount(<ActionBar actionProps={{ 'data-sample': 'Sample' }} actions={(<button>Button</button>)}
-                title='Page Title' />);
+            const element = setup({ actionProps: { 'data-sample': 'Sample' }, actions: (<button>Button</button>) });
 
             expect(
                 element.find('.fd-action-bar__actions').getDOMNode().attributes['data-sample'].value
