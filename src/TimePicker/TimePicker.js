@@ -112,7 +112,6 @@ class TimePicker extends Component {
             showHour,
             showMinute,
             showSecond,
-            spinners,
             time,
             value,
             timeProps,
@@ -200,7 +199,6 @@ TimePicker.defaultProps = {
     showHour: true,
     showMinute: true,
     showSecond: true,
-    spinners: true,
     time: {
         hour: '00',
         minute: '00',
