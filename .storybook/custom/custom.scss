@@ -2,15 +2,13 @@ body {
     font-family: '72', 'Open Sans', sans-serif;
 }
 
-/* override storybook max width */
-.sbdocs.sbdocs-content {
-    width: 100%;
-    max-width: none;
-}
-
 /* fix bug in storybook@6 where toolbar height is hardcoded - causes scrollbar */
 a[title='Open canvas in new tab'] {
     height: 34px;
+}
+
+.sbdocs.sbdocs-content {
+    max-width: 85%;
 }
 
 /* make room for TOCBot */
@@ -310,4 +308,135 @@ blockquote {
         border-color: #bb0000;
         border-color: var(--sapNegativeColor, #bb0000);
     }
+}
+
+.docs-layout-grid {
+    .col-content {
+        min-height: 4rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fd-col--10 {
+        .col-content {
+            background-color: #3694b5;
+            color: black;
+        }
+    }
+
+    .fd-col--9 {
+        .col-content {
+            background-color: #3a73a2;
+            color: black;
+        }
+    }
+
+    .fd-col--7 {
+        .col-content {
+            background-color: #43317c;
+            color: white;
+        }
+    }
+
+    .fd-col--6 {
+        .col-content {
+            background-color: #471069;
+            color: white;
+        }
+    }
+
+    .fd-col--5 {
+        .col-content {
+            background-color: #452073;
+            color: white;
+        }
+    }
+
+    .fd-col--4 {
+        .col-content {
+            background-color: #414186;
+            color: white;
+        }
+    }
+
+    .fd-col--3 {
+        .col-content {
+            background-color: #3d6299;
+            color: white;
+        }
+    }
+    .fd-col--1 {
+        .col-content {
+            background-color: #34a4bf;
+            color: black;
+        }
+    }
+
+    .docs-layout-grid-first,
+    .fd-col--12 {
+        .col-content {
+            background-color: #30c5d2;
+            color: black;
+        }
+    }
+
+    .docs-layout-grid-second,
+    .fd-col--11 {
+        .col-content {
+            background-color: #32b5c8;
+            color: black;
+        }
+    }
+
+    .docs-layout-grid-third,
+    .fd-col--8 {
+        .col-content {
+            background-color: #3f528f;
+            color: white;
+        }
+    }
+
+    .docs-layout-grid-fourth,
+    .fd-col--2 {
+        .col-content {
+            background-color: #3883ac;
+            color: black;
+        }
+    }
+}
+
+.docs-import-statement {
+    display: inline-flex;
+}
+
+.copy-import-statement-btn {
+    margin: 5px !important;
+}
+
+.docs-multi-imports,
+.docs-single-import {
+    margin-bottom: 5em;
+}
+
+.docs-single-import,
+.docs-multi-imports {
+    display: flex;
+    flex-direction: column;
+
+    pre {
+        margin: 0;
+    }
+}
+
+.docs-offscreen {
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.docs-component-description {
+    margin-bottom: 80px;
 }

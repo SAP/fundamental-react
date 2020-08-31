@@ -6,7 +6,7 @@ import FormLabel from './FormLabel';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import 'fundamental-styles/dist/checkbox.css';
 
 /** With a **Checkbox**, all options are visible and the user can make one or more selections.
@@ -33,7 +33,7 @@ const Checkbox = React.forwardRef(({
     validationState,
     ...props
 }, ref) => {
-
+    const [checkedState, setCheckedState] = useState(!!checked);
     const inputEl = useRef();
 
     useEffect(() => {
@@ -55,8 +55,7 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
-    const generatedCheckId = useUniqueId();
-    const checkId = id ? id : generatedCheckId;
+    const checkId = useUniqueId(id);
 
     const checkboxChildren = (typeof children === 'string') ? (
         <span className='fd-checkbox__text'>
@@ -72,6 +71,7 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
+                aria-checked={checkedState}
                 aria-label={ariaLabel}
                 checked={checked}
                 className={inputClassNames}
@@ -80,7 +80,9 @@ const Checkbox = React.forwardRef(({
                 id={checkId}
                 name={name}
                 onChange={(e) => {
-                    onChange(e, !checked);
+                    const toggledState = !checkedState;
+                    setCheckedState(toggledState);
+                    onChange(e, toggledState);
                 }}
                 ref={inputEl}
                 type='checkbox'

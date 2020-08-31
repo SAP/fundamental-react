@@ -55,7 +55,7 @@ exports[`Storyshots Component API/Shellbar Basic 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
+                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
                     role=""
                   >
                     JS
@@ -345,7 +345,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
+                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
                     role=""
                   >
                     JS
@@ -456,7 +456,7 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle"
+                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
                     role=""
                   >
                     JS
@@ -678,7 +678,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                   tabIndex={0}
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle fd-shellbar__avatar--circle"
                     role="presentation"
                     style={
                       Object {

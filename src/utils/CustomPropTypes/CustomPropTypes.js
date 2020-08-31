@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { SCREEN_SIZE_MAP } from '../constants';
+import { validSpan } from '../../LayoutGrid/_layoutGridUtils';
 const ANONYMOUS = '<<anonymous>>';
 
 /* eslint-disable no-console */
@@ -12,6 +14,31 @@ const elementOrArrayOfElements = () => {
         PropTypes.arrayOf(PropTypes.instanceOf(Element)),
         PropTypes.instanceOf(Element)
     ]);
+};
+const validColumnProp = (props, propName, componentName) => {
+    const spanValue = props?.[propName];
+    if (!spanValue) return;
+    switch (typeof spanValue) {
+        case 'number':
+            if (!validSpan(spanValue)) {
+                return new Error(
+                    `Invalid property ${propName} supplied to ${componentName}. Value should be a number between 1-12 (including).`
+                );
+            }
+            break;
+        case 'object':
+            Object.keys(SCREEN_SIZE_MAP).forEach(size => {
+                const spanForSize = spanValue?.[size];
+                if (!validSpan(spanForSize)) {
+                    return new Error(
+                        `Invalid property ${propName}.${size} supplied to ${componentName}. Value should be a number between 1-12 (including).`
+                    );
+                }
+            });
+            break;
+        default:
+            break;
+    }
 };
 
 const wrapValidator = (validator, typeName, typeChecker = null) => {
@@ -125,4 +152,4 @@ const i18n = (obj) => {
     return wrapValidator(createChainableTypeChecker(validate), 'i18n', obj);
 };
 
-export default { elementOrArrayOfElements, range, i18n };
+export default { elementOrArrayOfElements, range, i18n, validColumnProp };

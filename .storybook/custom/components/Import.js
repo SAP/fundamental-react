@@ -1,19 +1,22 @@
-import { DocsContext } from '@storybook/addon-docs/blocks';
-import { googlecode } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import React, { useContext } from 'react';
+import { googlecode } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import CopyButton from './CopyButton';
 
-const Import = () => {
-    const context = useContext(DocsContext);
-    let groups = context.kind.split('/');
+const Import = ({ componentName }) => {
+    const importStatement = `import { ${componentName} } from 'fundamental-react/lib/${componentName}';`
     return (
-    <SyntaxHighlighter
-        customStyle={{ padding: 10, whiteSpace: 'pre-wrap', fontSize: 14 }}
-        language='javascript'
-        style={googlecode}>
-        {`import { ${groups[groups.length - 1]} } from 'fundamental-react/lib/${groups[1]}';`}
-    </SyntaxHighlighter>)
-}
+        <div className="docs-import-statement">
+            <SyntaxHighlighter
+                customStyle={{ padding: 10, whiteSpace: 'pre-wrap', fontSize: 14 }}
+                language='javascript'
+                style={googlecode}>
+                {importStatement}
+            </SyntaxHighlighter>
+            <CopyButton copyText={importStatement} />
+        </div>
+    );
+};
 
 Import.displayName = 'Import';
 

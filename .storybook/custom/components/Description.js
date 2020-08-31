@@ -3,7 +3,9 @@ import React from 'react';
 
 const Description = (props) => {
     return (
-        <Markdown options={{ forceBlock: true}}>{props.desc}</Markdown>
+        <div className='docs-component-description'>
+            <Markdown options={{ forceBlock: true}}>{props.desc}</Markdown>
+        </div>
     )
 }
 
