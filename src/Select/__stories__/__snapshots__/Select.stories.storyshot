@@ -6,6 +6,7 @@ exports[`Storyshots Component API/Select Compact 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -67,6 +68,7 @@ exports[`Storyshots Component API/Select Dev 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -96,6 +98,7 @@ exports[`Storyshots Component API/Select Dev 1`] = `
                 aria-haspopup="listbox"
                 className="fd-select"
                 onClick={[Function]}
+                onFocus={[Function]}
                 onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}
@@ -129,6 +132,7 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -187,6 +191,7 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -246,6 +251,7 @@ exports[`Storyshots Component API/Select Primary 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -307,6 +313,7 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -365,6 +372,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
   >
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -419,6 +427,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
     </div>
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -473,6 +482,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
     </div>
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -527,6 +537,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
     </div>
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
