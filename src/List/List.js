@@ -24,9 +24,9 @@ const List = React.forwardRef(({
     hasByline,
     header,
     headerClassName,
-    headerLevel,
     headerStyle,
     id,
+    level,
     navigation,
     noBorder,
     partialNavigation,
@@ -55,9 +55,9 @@ const List = React.forwardRef(({
             {header &&
                 <List.Header
                     className={headerClassName}
-                    headingLevel={headerLevel}
                     headingStyle={headerStyle}
-                    id={listHeaderId}>
+                    id={listHeaderId}
+                    level={level}>
                     {header}
                 </List.Header>
             }
@@ -98,12 +98,12 @@ List.propTypes = {
     header: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     /** CSS class(es) to add to the list header */
     headerClassName: PropTypes.string,
-    /** List header's semantic level. `<h1>` is reserved for the page title. It should not appear in components */
-    headerLevel: CustomPropTypes.range(2, 6),
     /** Heading style, if it should be different from the default style for the heading level. */
     headerStyle: CustomPropTypes.range(2, 6),
     /** Unique id for the list, used to associate `List.Header` as the list label for accessibility. A generated value will be used if not set.*/
     id: PropTypes.string,
+    /** List header's semantic level. `<h1>` is reserved for the page title. It should not appear in components */
+    level: CustomPropTypes.range(2, 6),
     /** Set to **true** if all list items are links */
     navigation: PropTypes.bool,
     /** Set to **true** to remove borders from the List component. */
@@ -115,7 +115,7 @@ List.propTypes = {
 };
 
 List.defaultProps = {
-    headerLevel: 4
+    level: 4
 };
 
 
