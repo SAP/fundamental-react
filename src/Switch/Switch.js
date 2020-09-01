@@ -32,7 +32,7 @@ const Switch = React.forwardRef(({
     let [isChecked, setIsChecked] = useState(!!checked);
 
     useEffect(() => {
-        if (checked) setIsChecked(checked);
+        setIsChecked(!!checked);
     }, [checked]);
 
     const handleChange = (e) => {

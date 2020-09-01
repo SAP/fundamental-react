@@ -63,4 +63,26 @@ describe('<Switch />', () => {
             ).toBe('Sample');
         });
     });
+
+    describe('Switch state change on props update', () => {
+        const wrapper = mount(<Switch checked />);
+
+        test('should change to not checked state if new props are sent with checked as false', () => {
+            //updating prop to checked as false
+            wrapper.setProps({ checked: false });
+            wrapper.update();
+
+            // check that switch is not checked
+            expect(wrapper.find('input').props().checked).toBe(false);
+        });
+
+        test('should change to checked state if new props are sent with checked as true', () => {
+            //updating prop to checked as true
+            wrapper.setProps({ checked: true });
+            wrapper.update();
+
+            // check that switch is checked
+            expect(wrapper.find('input').props().checked).toBe(true);
+        });
+    });
 });
