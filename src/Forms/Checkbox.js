@@ -151,8 +151,12 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
         className: PropTypes.string,
         /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
         formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
         /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
-        referenceClassName: PropTypes.string
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
     }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({

@@ -1,5 +1,4 @@
 import { mount } from 'enzyme';
-
 import MultiInput from './MultiInput';
 import React from 'react';
 
@@ -221,6 +220,25 @@ describe('<MultiInput />', () => {
 
         // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(1);
+    });
+
+    describe('validationOverlayProps', () => {
+
+        test('pass validationOverlayProps to InputGroup', () => {
+            const element = mount(
+                <MultiInput
+                    data={data}
+                    validationOverlayProps={{
+                        className: 'foo'
+                    }} />
+            );
+
+            expect(
+                element.find('InputGroup').prop('validationOverlayProps')
+            ).toMatchObject({
+                className: 'foo'
+            });
+        });
     });
 
     describe('Prop spreading', () => {

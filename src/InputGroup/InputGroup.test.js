@@ -111,6 +111,30 @@ describe('<InputGroup />', () => {
                     messageNode.classList
                 ).toContain('wonderful-styles');
             });
+
+            test('should spread props to Validation overlay wrapper div', async() => {
+                const wrapper = setup({
+                    validationState: { state: 'error', text: 'Test validation state' },
+                    validationOverlayProps: { wrapperProps: { 'data-sample': 'Sample' }, show: true }
+                });
+
+                expect(
+                    wrapper.find('.fd-popover').getDOMNode().attributes['data-sample'].value
+                ).toBe('Sample');
+            });
+
+            test('should set class on the Validation Overlay Popper', async() => {
+                await act(async() => {
+                    setup({
+                        validationState: { state: 'error', text: 'Test validation state' },
+                        validationOverlayProps: { popperClassName: 'wonderful-styles', show: true }
+                    });
+                });
+
+                expect(
+                    document.body.querySelector('.fd-popover__popper').classList
+                ).toContain('wonderful-styles');
+            });
         });
     });
 });

@@ -10,6 +10,7 @@ const FormValidationOverlay = React.forwardRef((
         className,
         control,
         formMessageProps,
+        popperClassName,
         popperProps,
         referenceClassName,
         show,
@@ -38,6 +39,7 @@ const FormValidationOverlay = React.forwardRef((
 
     const referenceComponent = React.cloneElement(control, rest);
 
+
     return (
         <div
             {...wrapperProps}
@@ -48,6 +50,7 @@ const FormValidationOverlay = React.forwardRef((
             <Popper
                 cssBlock='fd-popover'
                 noArrow
+                popperClassName={popperClassName}
                 popperPlacement={'bottom-start'}
                 popperProps={popperProps}
                 referenceClassName={referenceClasses}
@@ -67,6 +70,8 @@ FormValidationOverlay.propTypes = {
     control: PropTypes.node,
     /** Additional props to be spread to the FormMessage component */
     formMessageProps: PropTypes.object,
+    /** CSS class(es) to add to the popper div */
+    popperClassName: PropTypes.string,
     /** Additional props to be spread to the overlay element, supported by <a href="https://popper.js.org" target="_blank">popper.js</a> */
     popperProps: PropTypes.object,
     /** CSS class(es) to add to the reference div */

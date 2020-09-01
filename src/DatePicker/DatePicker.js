@@ -352,6 +352,7 @@ class DatePicker extends Component {
             disableWeekends,
             enableRangeSelection,
             inputProps,
+            inputGroupProps,
             locale,
             localizedText,
             onBlur,
@@ -362,6 +363,7 @@ class DatePicker extends Component {
             showToday,
             specialDays,
             todayAction,
+            validationOverlayProps,
             validationState,
             weekdayStart,
             modalManager,
@@ -389,11 +391,13 @@ class DatePicker extends Component {
 
         const inputGroup = (
             <InputGroup
+                {...inputGroupProps}
                 aria-expanded={this.state.isExpanded}
                 aria-haspopup='true'
                 className={inputGroupClass}
                 compact={compact}
                 disabled={disabled}
+                validationOverlayProps={validationOverlayProps}
                 validationState={validationState} >
                 <FormInput
                     {...inputProps}
@@ -424,6 +428,7 @@ class DatePicker extends Component {
                         <>
                             {validationState?.text?.length > 0 &&
                                 <FormMessage
+                                    {...validationOverlayProps?.formMessageProps}
                                     type={validationState.state}>
                                     {validationState.text}
                                 </FormMessage>
@@ -513,6 +518,8 @@ DatePicker.propTypes = {
     disabled: PropTypes.bool,
     /** Set to **true** to enable the selection of a date range (begin and end) */
     enableRangeSelection: PropTypes.bool,
+    /** Additional props to be spread to the `InputGroup` component */
+    inputGroupProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Language code to set the locale */
@@ -547,6 +554,19 @@ DatePicker.propTypes = {
             const todayActionType = todayAction?.type?.trim();
             return todayActionType === 'select' || todayActionType === 'navigate';
         })
+    }),
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
     }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`;
      * _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
