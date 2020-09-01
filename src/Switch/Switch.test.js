@@ -74,6 +74,7 @@ describe('<Switch />', () => {
 
             // check that switch is not checked
             expect(wrapper.find('input').props().checked).toBe(false);
+            expect(wrapper.find('input').props()['aria-checked']).toBe(false);
         });
 
         test('should change to checked state if new props are sent with checked as true', () => {
@@ -83,6 +84,7 @@ describe('<Switch />', () => {
 
             // check that switch is checked
             expect(wrapper.find('input').props().checked).toBe(true);
+            expect(wrapper.find('input').props()['aria-checked']).toBe(true);
         });
     });
 });
