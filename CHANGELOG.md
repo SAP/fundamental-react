@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.10...v0.13.0-rc.11) (2020-09-01)
+
+
+### Bug Fixes
+
+* fundamental Switch state doesn't refresh  ([#1193](https://github.com/SAP/fundamental-react/issues/1193)) ([1a7ac92](https://github.com/SAP/fundamental-react/commit/1a7ac928031c8224cc5eea7d5bb5bb4eea471201))
+
 ## [0.13.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.9...v0.13.0-rc.10) (2020-08-31)
 
 
