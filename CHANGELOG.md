@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.11...v0.13.0-rc.12) (2020-09-01)
+
+
+### Features
+
+* add additional props for customization to validationOverlayProps ([#1192](https://github.com/SAP/fundamental-react/issues/1192)) ([ebbbd31](https://github.com/SAP/fundamental-react/commit/ebbbd3108f068debe08e0eefdaee66bca8ff3a91))
+
 ## [0.13.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.10...v0.13.0-rc.11) (2020-09-01)
 
 
