@@ -22,11 +22,15 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
             <div
               className="fd-layout-panel__head"
             >
-              <h3
+              <div
                 className="fd-layout-panel__title"
               >
-                LayoutPanel Header with Actions
-              </h3>
+                <h3
+                  className="fd-title fd-title--h5 fd-title--wrap"
+                >
+                  LayoutPanel Header with Actions
+                </h3>
+              </div>
               <p
                 className="fd-layout-panel__description"
               >
@@ -164,11 +168,15 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
             <div
               className="fd-layout-panel__head"
             >
-              <h3
+              <div
                 className="fd-layout-panel__title"
               >
-                LayoutPanel Header with Actions
-              </h3>
+                <h3
+                  className="fd-title fd-title--h5 fd-title--wrap"
+                >
+                  LayoutPanel Header with Actions
+                </h3>
+              </div>
               <p
                 className="fd-layout-panel__description"
               >
@@ -310,11 +318,15 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
             <div
               className="fd-layout-panel__head"
             >
-              <h3
+              <div
                 className="fd-layout-panel__title"
               >
-                LayoutPanel Header with Actions
-              </h3>
+                <h3
+                  className="fd-title fd-title--h5 fd-title--wrap"
+                >
+                  LayoutPanel Header with Actions
+                </h3>
+              </div>
               <p
                 className="fd-layout-panel__description"
               >
@@ -452,11 +464,15 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
             <div
               className="fd-layout-panel__head"
             >
-              <h3
+              <div
                 className="fd-layout-panel__title"
               >
-                LayoutPanel Header with Actions
-              </h3>
+                <h3
+                  className="fd-title fd-title--h5 fd-title--wrap"
+                >
+                  LayoutPanel Header with Actions
+                </h3>
+              </div>
               <p
                 className="fd-layout-panel__description"
               >
@@ -604,7 +620,7 @@ exports[`Storyshots Component API/LayoutPanel Primary 1`] = `
           className="fd-layout-panel__title"
         >
           <h3
-            className="fd-title fd-title--h3"
+            className="fd-title fd-title--h5 fd-title--wrap"
           >
             LayoutPanel Header with Actions
           </h3>
@@ -663,7 +679,7 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
           className="fd-layout-panel__title"
         >
           <h3
-            className="fd-title fd-title--h3"
+            className="fd-title fd-title--h5 fd-title--wrap"
           >
             LayoutPanel Header with Actions
           </h3>

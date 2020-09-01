@@ -16,7 +16,12 @@ const LayoutPanelHead = props => {
         <div {...rest} className={panelHeadClasses}>
             {title ?
                 <div className='fd-layout-panel__title'>
-                    <Title level={headingLevel} levelStyle={headingStyle}>{title}</Title>
+                    <Title
+                        level={headingLevel}
+                        levelStyle={headingStyle}
+                        wrap>
+                        {title}
+                    </Title>
                 </div> : null}
             {description ? <p className='fd-layout-panel__description'>{description}</p> : null}
         </div>
@@ -39,7 +44,8 @@ LayoutPanelHead.propTypes = {
 };
 
 LayoutPanelHead.defaultProps = {
-    headingLevel: 3
+    headingLevel: 3,
+    headingStyle: 5
 };
 
 export default LayoutPanelHead;
