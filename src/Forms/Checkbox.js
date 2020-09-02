@@ -60,6 +60,7 @@ const Checkbox = React.forwardRef(({
         'fd-checkbox__text',
         textClassName
     );
+
     const checkId = useUniqueId(id);
 
     const checkboxChildren = (typeof children === 'string') ? (

@@ -129,6 +129,7 @@ describe('<Checkbox />', () => {
                 wrapper.find('.fd-checkbox__text').getDOMNode().classList
             ).toContain('wonderful-styles');
         });
+
         describe('validationOverlayProps', () => {
             afterEach(() => {
                 document.body.innerHTML = '';
