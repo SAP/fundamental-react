@@ -5,6 +5,7 @@ import { DIALOG_SIZES } from '../utils/constants';
 import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import Title from '../Title/Title';
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/bar.css';
 import 'fundamental-styles/dist/dialog.css';
@@ -51,6 +52,7 @@ class Dialog extends Component {
             contentProps,
             headerProps,
             headingLevel,
+            headingStyle,
             header,
             footerProps,
             onClose,
@@ -86,9 +88,6 @@ class Dialog extends Component {
             className
         );
 
-
-        const HeadingTag = `h${headingLevel}`;
-
         if (!show) {
             return null;
         }
@@ -111,9 +110,12 @@ class Dialog extends Component {
                                 {header}
                             </div>)}
                             <div className='fd-bar__element'>
-                                <HeadingTag {...titleProps} className='fd-dialog__title'>
+                                <Title
+                                    {...titleProps}
+                                    level={headingLevel}
+                                    levelStyle={headingStyle}>
                                     {title}
-                                </HeadingTag>
+                                </Title>
                             </div>
                             {subheader && (
                                 <div className='fd-dialog__subheader fd-bar fd-bar--subheader'>
@@ -172,6 +174,8 @@ Dialog.propTypes = {
     headerProps: PropTypes.object,
     /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */
     headingLevel: CustomPropTypes.range(2, 6),
+    /** Heading style, if it should be different from the default style for the Dialog. */
+    headingStyle: CustomPropTypes.range(2, 6),
     /** Set to **true** to make the dialog visible */
     show: PropTypes.bool,
     /** By default dialog body has no horizontal paddings. Add a size to modify the padding: 's', 'm', 'l', 'xl' */
@@ -186,6 +190,7 @@ Dialog.propTypes = {
 
 Dialog.defaultProps = {
     headingLevel: 3,
+    headingStyle: 5,
     size: 'l',
     onClose: () => { }
 };

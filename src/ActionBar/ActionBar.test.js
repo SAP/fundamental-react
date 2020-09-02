@@ -30,7 +30,7 @@ describe('<ActionBar />', () => {
             const element = setup({ titleProps: { 'data-sample': 'Sample' } });
 
             expect(
-                element.find('.fd-action-bar__title').getDOMNode().attributes['data-sample'].value
+                element.find('.fd-title').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

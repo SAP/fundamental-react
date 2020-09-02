@@ -9,17 +9,14 @@ describe('<ListHeader />', () => {
         test('should render h2 when passed level 2', () => {
             const element = setup({ level: 2 });
 
-            expect(
-                element.find('.fd-list__group-header').type()
-            ).toBe('h2');
+            expect(element.getDOMNode().tagName).toBe('H2');
+
         });
 
         test('should render h3 when passed level 3', () => {
             const element = setup({ level: 3 });
 
-            expect(
-                element.find('.fd-list__group-header').type()
-            ).toBe('h3');
+            expect(element.getDOMNode().tagName).toBe('H3');
         });
     });
 

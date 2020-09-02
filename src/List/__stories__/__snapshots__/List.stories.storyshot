@@ -5,7 +5,7 @@ exports[`Storyshots Component API/List Action List 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Cart (4 items)
@@ -130,7 +130,7 @@ exports[`Storyshots Component API/List Byline 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Order Summary (4 items)
@@ -244,7 +244,7 @@ exports[`Storyshots Component API/List Compact 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Fruits
@@ -313,7 +313,7 @@ exports[`Storyshots Component API/List Dev 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Developer's List
@@ -352,7 +352,7 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Settings
@@ -428,7 +428,7 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Settings
@@ -504,7 +504,7 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Quick links
@@ -597,7 +597,7 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Cart (3 items)
@@ -689,7 +689,7 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Order Receipt (4 items)
@@ -789,7 +789,7 @@ exports[`Storyshots Component API/List Selection 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Checkout options
@@ -974,7 +974,7 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Fruits
@@ -1043,7 +1043,7 @@ exports[`Storyshots Component API/List with no borders 1`] = `
   dir="ltr"
 >
   <h4
-    className="fd-list__group-header"
+    className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Fruits
