@@ -119,9 +119,9 @@ describe('<Checkbox />', () => {
             ).toContain('wonderful-styles');
         });
 
-        test('should set childrenClassName on the checkbox children', () => {
+        test('should set textClassName on the checkbox children', () => {
             const wrapper = setup({
-                childrenClassName: 'wonderful-styles'
+                textClassName: 'wonderful-styles'
             });
 
             expect(
