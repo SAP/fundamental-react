@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.12...v0.13.0-rc.13) (2020-09-02)
+
+
+### Features
+
+* create Title component ([#1171](https://github.com/SAP/fundamental-react/issues/1171)) ([0f96960](https://github.com/SAP/fundamental-react/commit/0f96960cfebd338f4e537ce98def32f2ab76dcf1))
+
 ## [0.13.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.11...v0.13.0-rc.12) (2020-09-01)
 
 
