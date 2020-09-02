@@ -16,7 +16,7 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
-    childrenClassName,
+    textClassName,
     compact,
     defaultChecked,
     disabled,
@@ -58,7 +58,7 @@ const Checkbox = React.forwardRef(({
 
     const childrenClasses = classnames(
         'fd-checkbox__text',
-        childrenClassName
+        textClassName
     );
 
     const generatedCheckId = useUniqueId();
@@ -125,8 +125,6 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
             );
         }
     },
-    /** Additional classes to apply to children */
-    childrenClassName: PropTypes.string,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
@@ -151,6 +149,8 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     labelProps: PropTypes.object,
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
+    /** Additional classes to apply to children */
+    textClassName: PropTypes.string,
     /** Additional classes to apply to validation popover */
     validationClassName: PropTypes.string,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
