@@ -31,6 +31,7 @@ const StepInput = React.forwardRef(({
     readOnly,
     localizedText,
     onChange,
+    validationOverlayProps,
     validationState,
     value,
     ...rest
@@ -131,6 +132,7 @@ const StepInput = React.forwardRef(({
 
     return (
         <FormValidationOverlay
+            {...validationOverlayProps}
             control={stepInputControl}
             validationState={validationState} />
     );
@@ -156,6 +158,19 @@ StepInput.propTypes = {
     placeholder: PropTypes.string,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

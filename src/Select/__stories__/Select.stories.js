@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/no-multi-comp */
 import React from 'react';
 import Select from '../Select';
@@ -76,6 +77,8 @@ export const dev = () => (
     <Select
         compact={boolean('compact', false)}
         disabled={boolean('disabled', false)}
+        onBlur={() => console.log('on-blur-callback')}
+        onFocus={() => console.log('on-focus-callback')}
         options={options}
         placeholder={text('placeholder', 'select')}
         validationState={select('Validation State', {

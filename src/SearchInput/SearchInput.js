@@ -120,6 +120,7 @@ class SearchInput extends PureComponent {
             listProps,
             searchBtnProps,
             popoverProps,
+            validationOverlayProps,
             validationState,
             disabled,
             readOnly,
@@ -200,6 +201,7 @@ class SearchInput extends PureComponent {
 
         const wrappedInputGroup = (
             <FormValidationOverlay
+                {...validationOverlayProps}
                 control={inputGroup}
                 validationState={validationState} />
         );
@@ -212,6 +214,7 @@ class SearchInput extends PureComponent {
                         (<>
                             {validationState &&
                             <FormMessage
+                                {...validationOverlayProps?.formMessageProps}
                                 type={validationState.state}>
                                 {validationState.text}
                             </FormMessage>
@@ -270,6 +273,19 @@ SearchInput.propTypes = {
     ),
     /** enable substring search */
     subStringSearch: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

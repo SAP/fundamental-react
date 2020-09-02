@@ -41,6 +41,7 @@ const ComboboxInput = React.forwardRef(({
     required,
     selectedKey,
     selectionType,
+    validationOverlayProps,
     validationState,
     ...props
 }, ref) => {
@@ -401,6 +402,7 @@ const ComboboxInput = React.forwardRef(({
                 compact={compact}
                 disabled={disabled}
                 onClick={handleInputGroupClick}
+                validationOverlayProps={validationOverlayProps}
                 validationState={validationState}>
                 <FormInput
                     autoComplete='off'
@@ -452,6 +454,7 @@ const ComboboxInput = React.forwardRef(({
                         }}>
                         {validationState &&
                             <FormMessage
+                                {...validationOverlayProps?.formMessageProps}
                                 type={validationState.state}>
                                 {validationState.text}
                             </FormMessage>
@@ -570,6 +573,19 @@ Please set 'arrowLabel' property to a non-empty localized string.
      * * `'auto-inline'`: First option from the filtered options is automatically selected and its options.text value is populated inline (type-ahead), user chooses different option by navigating through the list
     */
     selectionType: PropTypes.oneOf(COMBOBOX_SELECTION_TYPES),
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

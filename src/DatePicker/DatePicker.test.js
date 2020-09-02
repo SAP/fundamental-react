@@ -509,6 +509,14 @@ describe('<DatePicker />', () => {
             ).toBe('Sample');
         });
 
+        test('should allow props to be spread to the DatePicker component\'s inputGroup element', () => {
+            const element = mount(<DatePicker inputGroupProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('InputGroup').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
         test('should allow props to be spread to the DatePicker component\'s button element', () => {
             const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
 
@@ -587,6 +595,23 @@ describe('<DatePicker />', () => {
             expect(
                 wrapper.find('tbody').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+        });
+    });
+
+    describe('validationOverlayProps', () => {
+        test('pass validationOverlayProps to InputGroup', () => {
+            const element = mount(
+                <DatePicker
+                    validationOverlayProps={{
+                        className: 'foo'
+                    }} />
+            );
+
+            expect(
+                element.find('InputGroup').prop('validationOverlayProps')
+            ).toMatchObject({
+                className: 'foo'
+            });
         });
     });
 });

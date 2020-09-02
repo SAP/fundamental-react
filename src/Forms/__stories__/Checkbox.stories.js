@@ -41,10 +41,16 @@ export const validationStates = () => (
 
 export const dev = () => (
     <Checkbox
+        checked={boolean('checked', false)}
         className={text('className', '')}
         compact={boolean('compact', false)}
         disabled={boolean('disabled', false)}
         indeterminate={boolean('indeterminate', false)}
+        onChange={
+            (event, checked) => {
+                alert(checked ? 'checked' : 'unchecked');
+            }
+        }
         validationState={select('Validation State', {
             'none': '',
             'success': { state: 'success', text: 'placeholder text' },

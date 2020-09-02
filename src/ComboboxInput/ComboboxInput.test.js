@@ -89,6 +89,28 @@ describe('<ComboboxInput />', () => {
         });
     });
 
+    describe('validationOverlayProps', () => {
+
+        test('pass validationOverlayProps to InputGroup', () => {
+            const element = mount(
+                <ComboboxInput
+                    ariaLabel='Dummy options'
+                    arrowLabel='Show options'
+                    id='validationOverlayTest'
+                    options={defaultOptions}
+                    validationOverlayProps={{
+                        className: 'foo'
+                    }} />
+            );
+
+            expect(
+                element.find('InputGroup').prop('validationOverlayProps')
+            ).toMatchObject({
+                className: 'foo'
+            });
+        });
+    });
+
     describe('interactions', () => {
         beforeEach(() => {
             container = document.createElement('div');
@@ -138,7 +160,11 @@ describe('<ComboboxInput />', () => {
 
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
-                wrapper.find('input').simulate('blur');
+
+                act(() => {
+                    wrapper.find('input').simulate('blur');
+                });
+
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), {
                     text: 'island',
                     key: -1 // key is set to -1 for custom input in manual combobox
@@ -236,7 +262,11 @@ describe('<ComboboxInput />', () => {
 
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
-                wrapper.find('input').simulate('blur');
+
+                act(() => {
+                    wrapper.find('input').simulate('blur');
+                });
+
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Ascension Island',
                     key: 'AC'
@@ -353,7 +383,11 @@ describe('<ComboboxInput />', () => {
 
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
-                wrapper.find('input').simulate('blur');
+
+                act(() => {
+                    wrapper.find('input').simulate('blur');
+                });
+
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Ascension Island',
                     key: 'AC'

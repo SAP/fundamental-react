@@ -15,6 +15,7 @@ export const primary = () => (<Button>Button</Button>);
 
 /**
  * There are three emphasis styles used to indicate the importance of the button on the page.
+ *
  * * **Emphasized Button**: There should only be one highlighted button on the page. This is the primary call to action.
  * * **Regular Button**: The default button style and the most common button. There may be more than one on a page.
  * * **Transparent Button**: This is the lowest priority button and most often used with page content like appearing in a table or list.

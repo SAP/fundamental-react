@@ -2,6 +2,85 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.12...v0.13.0-rc.13) (2020-09-02)
+
+
+### Features
+
+* create Title component ([#1171](https://github.com/SAP/fundamental-react/issues/1171)) ([0f96960](https://github.com/SAP/fundamental-react/commit/0f96960cfebd338f4e537ce98def32f2ab76dcf1))
+
+## [0.13.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.11...v0.13.0-rc.12) (2020-09-01)
+
+
+### Features
+
+* add additional props for customization to validationOverlayProps ([#1192](https://github.com/SAP/fundamental-react/issues/1192)) ([ebbbd31](https://github.com/SAP/fundamental-react/commit/ebbbd3108f068debe08e0eefdaee66bca8ff3a91))
+
+## [0.13.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.10...v0.13.0-rc.11) (2020-09-01)
+
+
+### Bug Fixes
+
+* fundamental Switch state doesn't refresh  ([#1193](https://github.com/SAP/fundamental-react/issues/1193)) ([1a7ac92](https://github.com/SAP/fundamental-react/commit/1a7ac928031c8224cc5eea7d5bb5bb4eea471201))
+
+## [0.13.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.9...v0.13.0-rc.10) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* In this change we
+* Update fundamental-styles to 0.12.0-rc.18 and support the new features and fixes therein.
+  * Removed LayoutGrid component in favor of the new grid system based on Container, Row, and Column components
+  * Remove LayoutPanel.colSpan property; added story for LayoutPanel in the new grid system.
+  * Removed the TreeViewcomponent in favor of the new Tree component.
+  * Shellbar avatar now has a branded border.
+
+* Docs/Storybook:
+  * update storybook to v6.0.16
+  * fix missing storyDescriptions and component descriptions.
+  * Add copy button to easily copy import statements to clipboard.
+
+### Features
+
+* update fundamental-styles to v0.12.0-rc.18 ([#1172](https://github.com/SAP/fundamental-react/issues/1172)) ([efb2d17](https://github.com/SAP/fundamental-react/commit/efb2d179156d785230cb8fba8bb9dcc72cad9488))
+
+## [0.13.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.8...v0.13.0-rc.9) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed unused `spinners` prop from TimePicker and Time components
+
+* cleanup some test warnings ([#1188](https://github.com/SAP/fundamental-react/issues/1188)) ([dc93883](https://github.com/SAP/fundamental-react/commit/dc938831e1851efaa253c92693c2e3f638d051b7))
+
+## [0.13.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.7...v0.13.0-rc.8) (2020-08-27)
+
+
+### Bug Fixes
+
+* select onfocus onblur callbacks called at appropriate times ([#1186](https://github.com/SAP/fundamental-react/issues/1186)) ([f9e1282](https://github.com/SAP/fundamental-react/commit/f9e1282c63aae4d2e9a2d309182fbf2c76e0de53))
+
+## [0.13.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.6...v0.13.0-rc.7) (2020-08-26)
+
+## [0.13.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.5...v0.13.0-rc.6) (2020-08-26)
+
+
+### Features
+
+* add custom classes to Select component ([#1185](https://github.com/SAP/fundamental-react/issues/1185)) ([6724eab](https://github.com/SAP/fundamental-react/commit/6724eab7ede0996e369f88307237f0b756ebdeaa))
+
+
+### Bug Fixes
+
+* remove detect-browser from package.json, bump standard version and run audit fix ([#1187](https://github.com/SAP/fundamental-react/issues/1187)) ([c2c952f](https://github.com/SAP/fundamental-react/commit/c2c952f0e1e6bb4723ada9c79e44f5f42d403e44))
+
+## [0.13.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.4...v0.13.0-rc.5) (2020-08-26)
+
+
+### Features
+
+* normalize FormValidationOverlay usage in other components ([#1183](https://github.com/SAP/fundamental-react/issues/1183)) ([1baafc8](https://github.com/SAP/fundamental-react/commit/1baafc816d85bf5dfb8f08561567b27ee4f9fab8))
+
 ## [0.13.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.3...v0.13.0-rc.4) (2020-08-25)
 
 

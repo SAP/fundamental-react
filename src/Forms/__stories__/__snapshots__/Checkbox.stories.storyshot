@@ -8,6 +8,7 @@ exports[`Storyshots Component API/Forms/Checkbox Compact 1`] = `
     className="fd-form-item"
   >
     <input
+      aria-checked={false}
       className="fd-checkbox fd-checkbox--compact"
       id="fd-mocked-short-id"
       onChange={[Function]}
@@ -35,6 +36,7 @@ exports[`Storyshots Component API/Forms/Checkbox Controlled Checked 1`] = `
     className="fd-form-item"
   >
     <input
+      aria-checked={false}
       checked={false}
       className="fd-checkbox"
       id="fd-mocked-short-id"
@@ -63,6 +65,7 @@ exports[`Storyshots Component API/Forms/Checkbox Default Checked 1`] = `
     className="fd-form-item"
   >
     <input
+      aria-checked={false}
       className="fd-checkbox"
       defaultChecked={true}
       id="fd-mocked-short-id"
@@ -92,6 +95,8 @@ exports[`Storyshots Component API/Forms/Checkbox Dev 1`] = `
     disabled={false}
   >
     <input
+      aria-checked={false}
+      checked={false}
       className="fd-checkbox"
       disabled={false}
       id="fd-mocked-short-id"
@@ -121,6 +126,7 @@ exports[`Storyshots Component API/Forms/Checkbox Disabled 1`] = `
     disabled={true}
   >
     <input
+      aria-checked={false}
       className="fd-checkbox"
       disabled={true}
       id="fd-mocked-short-id"
@@ -149,6 +155,7 @@ exports[`Storyshots Component API/Forms/Checkbox Indeterminate 1`] = `
     className="fd-form-item"
   >
     <input
+      aria-checked={false}
       className="fd-checkbox"
       id="fd-mocked-short-id"
       onChange={[Function]}
@@ -176,6 +183,7 @@ exports[`Storyshots Component API/Forms/Checkbox Primary 1`] = `
     className="fd-form-item"
   >
     <input
+      aria-checked={false}
       className="fd-checkbox"
       id="fd-mocked-short-id"
       onChange={[Function]}
@@ -219,6 +227,7 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               className="fd-checkbox is-error"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -255,6 +264,7 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               className="fd-checkbox is-warning"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -291,6 +301,7 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               className="fd-checkbox is-information"
               id="fd-mocked-short-id"
               onChange={[Function]}
@@ -327,6 +338,7 @@ exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
             className="fd-form-item"
           >
             <input
+              aria-checked={false}
               className="fd-checkbox is-success"
               id="fd-mocked-short-id"
               onChange={[Function]}

@@ -7,7 +7,19 @@ import 'fundamental-styles/dist/input.css';
 
 /** A **FormInput** is used to collect data from the user. When a field is required,
 the \`required\` property will include an asterisk (*). */
-const FormInput = React.forwardRef(({ className, compact, disabled, name, placeholder, readOnly, type, value, validationState, ...props }, ref) => {
+const FormInput = React.forwardRef(({
+    className,
+    compact,
+    disabled,
+    name,
+    placeholder,
+    readOnly,
+    type,
+    value,
+    validationOverlayProps,
+    validationState,
+    ...props
+}, ref) => {
 
     const formInputClasses = classnames(
         'fd-input',
@@ -33,6 +45,7 @@ const FormInput = React.forwardRef(({ className, compact, disabled, name, placeh
 
     return validationState ? (
         <FormValidationOverlay
+            {...validationOverlayProps}
             control={formInput}
             validationState={validationState} />
     ) : formInput;
@@ -55,6 +68,19 @@ FormInput.propTypes = {
     readOnly: PropTypes.bool,
     /** Value for the `type` attribute on the input */
     type: PropTypes.string,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */

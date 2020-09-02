@@ -133,7 +133,7 @@ class Pagination extends Component {
             {...this.props.linkProps}
             className={paginationLinkClasses}
             href='#'
-            key={index}
+            key={`link-${index}`}
             onClick={this.pageClicked}>
             {index + pageNumberOffset}
         </a>);

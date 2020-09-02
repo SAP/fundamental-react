@@ -131,3 +131,17 @@ export const OBJECT_STATUS_TYPES = [
 
 export const DATEPICKER_TODAY_ACTIONS_TYPES = ['none', 'select', 'navigate'];
 
+
+export const SCREEN_SIZE_MAP = {
+    'smallScreen': 'fd-col--',
+    'mediumScreen': 'fd-col-md--',
+    'largeScreen': 'fd-col-lg--',
+    'xLargeScreen': 'fd-col-xl--'
+};
+
+export const TREE_NODE_HIGHLIGHTS = [
+    'default',
+    'error',
+    'success',
+    'warning'
+];
