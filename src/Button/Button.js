@@ -25,6 +25,7 @@ const Button = React.forwardRef(({
     onClick,
     children,
     className,
+    textClassName,
     ...props
 }, ref) => {
 
@@ -34,11 +35,15 @@ const Button = React.forwardRef(({
             [`fd-button--${option}`]: !!option,
             [`fd-button--${type}`]: !!type,
             'fd-button--compact': compact,
-            [`sap-icon--${glyph}`]: !!glyph,
             'is-selected': selected,
             'is-disabled': disabled
         },
         className
+    );
+
+    const buttonTextClasses = classnames(
+        'fd-button__text',
+        textClassName
     );
 
     const ariaDisabled = props['aria-disabled'];
@@ -86,7 +91,8 @@ const Button = React.forwardRef(({
                 ref={ref}
                 selected={selected}
                 type={typeAttr}>
-                {children}
+                {children && <span className={buttonTextClasses}>{children}</span>}
+                {glyph && <i className={`sap-icon--${glyph}`} />}
             </button>
             {renderButtonStateMessage()}
         </>
@@ -138,6 +144,8 @@ Button.propTypes = {
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     /** Set to **true** to set state of the button to "selected" */
     selected: PropTypes.bool,
+    /** CSS class(es) to add to the text element */
+    textClassName: PropTypes.string,
     /** Sets the variation of the component. Primarily used for styling: 'standard',
     'positive',
     'negative',

@@ -479,9 +479,7 @@ class Calendar extends Component {
                             compact={this.props.compact}
                             onClick={this.showMonths}
                             option='transparent'>
-                            <span>
-                                {months[this.state.currentDateDisplayed.month()]}
-                            </span>
+                            {months[this.state.currentDateDisplayed.month()]}
                         </Button>
                     </div>
                     <div className='fd-calendar__action'>
@@ -489,9 +487,7 @@ class Calendar extends Component {
                             compact={this.props.compact}
                             onClick={this.showYears}
                             option='transparent'>
-                            <span>
-                                {this.state.currentDateDisplayed.year()}
-                            </span>
+                            {this.state.currentDateDisplayed.year()}
                         </Button>
                     </div>
 
