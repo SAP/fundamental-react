@@ -120,6 +120,16 @@ describe('<Checkbox />', () => {
             ).toContain('wonderful-styles');
         });
 
+        test('should set textClassName on the checkbox children', () => {
+            const wrapper = setup({
+                textClassName: 'wonderful-styles'
+            });
+
+            expect(
+                wrapper.find('.fd-checkbox__text').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
+
         describe('validationOverlayProps', () => {
             afterEach(() => {
                 document.body.innerHTML = '';

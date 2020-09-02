@@ -16,6 +16,7 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
+    textClassName,
     compact,
     defaultChecked,
     disabled,
@@ -55,10 +56,15 @@ const Checkbox = React.forwardRef(({
         labelClassName
     );
 
+    const childrenClasses = classnames(
+        'fd-checkbox__text',
+        textClassName
+    );
+
     const checkId = useUniqueId(id);
 
     const checkboxChildren = (typeof children === 'string') ? (
-        <span className='fd-checkbox__text'>
+        <span className={childrenClasses}>
             {children}
         </span>
     ) : children;
@@ -145,6 +151,8 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     labelProps: PropTypes.object,
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
+    /** Additional classes to apply to children */
+    textClassName: PropTypes.string,
     /** Additional props to be spread to the ValidationOverlay */
     validationOverlayProps: PropTypes.shape({
         /** Additional classes to apply to validation popover's outermost `<div>` element  */
