@@ -105,7 +105,6 @@ const Select = React.forwardRef(({
     const triggerClassNames = classnames(
         'fd-button',
         'fd-button--transparent',
-        'sap-icon--slim-arrow-down',
         'fd-select__button',
         triggerClassName
     );
@@ -134,7 +133,11 @@ const Select = React.forwardRef(({
             ref={divRef}>
             <div className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className={textContentClassNames}>{textContent}</span>
-                {!readOnly && <span className={triggerClassNames} />}
+                {!readOnly &&
+                    <span className={triggerClassNames}>
+                        <i className='sap-icon--slim-arrow-down' />
+                    </span>
+                }
             </div>
         </div>
     );
