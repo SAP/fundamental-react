@@ -1,10 +1,9 @@
 /* eslint-disable compat/compat */
+import { act } from 'react-test-renderer';
 import DatePicker from '../DatePicker/DatePicker';
 import moment from 'moment';
 import { mount } from 'enzyme';
-
 import React from 'react';
-import { act } from 'react-test-renderer';
 
 describe('<DatePicker />', () => {
     const defaultDatePicker = <DatePicker dateFormat='MM/DD/YYYY' />;
