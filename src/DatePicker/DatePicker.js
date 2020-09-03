@@ -419,6 +419,13 @@ class DatePicker extends Component {
             </InputGroup>
         );
 
+        const calendarClasses = classnames(
+            {
+                'fd-list--has-message': validationState?.state
+            },
+            calendarProps?.className
+        );
+
         return (
             <div
                 {...props}>
@@ -429,6 +436,7 @@ class DatePicker extends Component {
                             {validationState?.text?.length > 0 &&
                                 <FormMessage
                                     {...validationOverlayProps?.formMessageProps}
+                                    forPopoverList
                                     type={validationState.state}>
                                     {validationState.text}
                                 </FormMessage>
@@ -436,6 +444,7 @@ class DatePicker extends Component {
                             <Calendar
                                 {...calendarProps}
                                 blockedDates={blockedDates}
+                                className={calendarClasses}
                                 compact={compact}
                                 customDate={
                                     enableRangeSelection
