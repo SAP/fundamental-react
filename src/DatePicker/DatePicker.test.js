@@ -625,7 +625,7 @@ describe('<DatePicker />', () => {
                 datepickerButton.simulate('click');
                 datepickerInput.simulate('focus');
             });
-            expect(wrapper.find('.fd-form-message').length).toBe(1);
+            expect(wrapper.find('.fd-list__message').length).toBe(1);
         });
     });
 });
