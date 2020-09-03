@@ -200,7 +200,7 @@ class MultiInput extends Component {
                 disabled={disabled}
                 onClick={this.showHideTagList}
                 validationOverlayProps={validationOverlayProps}
-                validationState={validationState}>
+                validationState={!this.state.bShowList && validationState}>
                 <div {...tagProps} className={tokenizerClassName}>
                     <div className='fd-tokenizer__inner'>
                         {this.state.tags.length > 0 && this.createTags()}

@@ -398,7 +398,7 @@ class DatePicker extends Component {
                 compact={compact}
                 disabled={disabled}
                 validationOverlayProps={validationOverlayProps}
-                validationState={validationState} >
+                validationState={!this.state.isExpanded && validationState} >
                 <FormInput
                     {...inputProps}
                     onBlur={this.handleBlur}
