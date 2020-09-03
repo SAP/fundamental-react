@@ -615,7 +615,7 @@ describe('<DatePicker />', () => {
             });
         });
 
-        test('does not show multiple validation overlays', () => {
+        test('should not show multiple validation overlays', () => {
             wrapper = mount(
                 <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
             );
