@@ -155,6 +155,9 @@ const Select = React.forwardRef(({
 
     const listBoxClassName = classnames(
         'fd-list--dropdown',
+        {
+            'fd-list--has-message': validationState?.state
+        },
         listClassName
     );
 
@@ -167,6 +170,7 @@ const Select = React.forwardRef(({
                 (<>
                     {validationState &&
                     <FormMessage
+                        forPopoverList
                         {...validationOverlayProps?.formMessageProps}
                         type={validationState.state}>
                         {validationState.text}
