@@ -231,6 +231,7 @@ class MultiInput extends Component {
                         {validationState &&
                         <FormMessage
                             {...validationOverlayProps?.formMessageProps}
+                            inPopoverList
                             type={validationState.state}>
                             {validationState.text}
                         </FormMessage>
