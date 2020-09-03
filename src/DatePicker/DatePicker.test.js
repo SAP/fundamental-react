@@ -4,6 +4,7 @@ import moment from 'moment';
 import { mount } from 'enzyme';
 
 import React from 'react';
+import { act } from 'react-test-renderer';
 
 describe('<DatePicker />', () => {
     const defaultDatePicker = <DatePicker dateFormat='MM/DD/YYYY' />;
@@ -612,6 +613,20 @@ describe('<DatePicker />', () => {
             ).toMatchObject({
                 className: 'foo'
             });
+        });
+
+        test('does not show multiple validation overlays', () => {
+            wrapper = mount(
+                <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
+            );
+
+            const datepickerButton = wrapper.find('button.fd-button--transparent.sap-icon--appointment-2');
+            const datepickerInput = wrapper.find('input[type="text"]');
+            act(() => {
+                datepickerButton.simulate('click');
+                datepickerInput.simulate('focus');
+            });
+            expect(wrapper.find('.fd-form-message').length).toBe(1);
         });
     });
 });
