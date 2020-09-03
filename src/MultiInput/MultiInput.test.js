@@ -100,7 +100,7 @@ describe('<MultiInput />', () => {
 
         wrapper.find('input[type="text"].fd-input').simulate('click');
         wrapper.find('input[type="text"].fd-input').simulate('focus');
-        expect(document.querySelectorAll('.fd-form-message').length).toBe(1);
+        expect(document.querySelectorAll('.fd-list__message').length).toBe(1);
 
     });
 
