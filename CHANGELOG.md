@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.14...v0.13.0-rc.15) (2020-09-04)
+
+
+### Bug Fixes
+
+* In SSR null is not a valid prop-type ([#1198](https://github.com/SAP/fundamental-react/issues/1198)) ([7d614db](https://github.com/SAP/fundamental-react/commit/7d614db043240533fc9d59c5eed7d98f7c3e8da2))
+
 ## [0.13.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.13...v0.13.0-rc.14) (2020-09-02)
 
 
