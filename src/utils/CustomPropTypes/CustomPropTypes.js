@@ -8,7 +8,7 @@ const ANONYMOUS = '<<anonymous>>';
 const elementOrArrayOfElements = () => {
     // Element is not defined unless the Browser API is defined
     if (typeof Element === 'undefined') {
-        return null;
+        return PropTypes.any;
     }
     return PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.instanceOf(Element)),
