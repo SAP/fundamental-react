@@ -19,12 +19,14 @@ describe('<MultiInput />', () => {
         'Cranberry',
         'Cupuacu'
     ];
-    const multiInput = (
+    const getMultiInput = (props) => (
         <MultiInput
+            {...props}
             data={data}
             onTagsUpdate={mockOnTagsUpdate}
             placeholder='Select a Fruit' />
     );
+    const multiInput = getMultiInput();
 
     const compactMultiInput = (
         <MultiInput
@@ -89,6 +91,17 @@ describe('<MultiInput />', () => {
         let results = getListStatus();
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
+    });
+
+    test('check that multiple validation overlays are not displayed', () => {
+        wrapper = mount(getMultiInput({
+            validationState: { state: 'error', text: 'Test validation state' }
+        }));
+
+        wrapper.find('input[type="text"].fd-input').simulate('click');
+        wrapper.find('input[type="text"].fd-input').simulate('focus');
+        expect(document.querySelectorAll('.fd-list__message').length).toBe(1);
+
     });
 
     // check that tag list is shown on drop down click

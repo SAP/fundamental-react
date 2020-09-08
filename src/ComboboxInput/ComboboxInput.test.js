@@ -125,6 +125,18 @@ describe('<ComboboxInput />', () => {
 
         describe('When selectionType is \'manual\'', () => {
 
+            test('should not show multiple validation overlays', () => {
+                let wrapper;
+                act(() => {
+                    wrapper = setupForInteraction({
+                        validationState: { state: 'error', text: 'Test validation state' }
+                    }, container);
+                    wrapper.find('input').simulate('change', { target: { value: 'mal' } });
+                    wrapper.find('input').simulate('focus');
+                });
+                expect(document.querySelectorAll('.fd-form-message').length).toBe(1);
+            });
+
             test('should show filtered options when text is entered in the input field', () => {
                 let wrapper;
                 act(() => {
