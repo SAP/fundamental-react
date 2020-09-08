@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.17...v0.13.0-rc.18) (2020-09-08)
+
+
+### Bug Fixes
+
+* multiple validationState messages + popover validation message styles ([#1196](https://github.com/SAP/fundamental-react/issues/1196)) ([dd769c9](https://github.com/SAP/fundamental-react/commit/dd769c9f4a3ed597187ef95272f13f4433099653))
+
 ## [0.13.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.16...v0.13.0-rc.17) (2020-09-08)
 
 ## [0.13.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.15...v0.13.0-rc.16) (2020-09-08)
