@@ -49,8 +49,12 @@ exports[`Storyshots Component API/Select Compact 1`] = `
                     Select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      className="sap-icon--slim-arrow-down"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -113,8 +117,12 @@ exports[`Storyshots Component API/Select Dev 1`] = `
                     select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      className="sap-icon--slim-arrow-down"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -172,8 +180,12 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
                     Select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      className="sap-icon--slim-arrow-down"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -232,8 +244,12 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
                     className="fd-select__text-content"
                   />
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      className="sap-icon--slim-arrow-down"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -294,8 +310,12 @@ exports[`Storyshots Component API/Select Primary 1`] = `
                     Select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      className="sap-icon--slim-arrow-down"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -415,8 +435,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Error
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        className="sap-icon--slim-arrow-down"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -470,8 +494,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Warning
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        className="sap-icon--slim-arrow-down"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -525,8 +553,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Success
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        className="sap-icon--slim-arrow-down"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -580,8 +612,12 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Information
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        className="sap-icon--slim-arrow-down"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>

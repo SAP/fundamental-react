@@ -825,7 +825,11 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   }
                   type="button"
                 >
-                  Test
+                  <span
+                    className="fd-button__text"
+                  >
+                    Test
+                  </span>
                 </button>
               </span>
             </div>
@@ -1652,14 +1656,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
         
         <button
           aria-label="Edit"
-          className="fd-button fd-button--transparent sap-icon--edit"
+          className="fd-button fd-button--transparent"
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--edit"
+          />
+        </button>
         <button
           aria-label="Decline"
-          className="fd-button fd-button--transparent sap-icon--decline"
+          className="fd-button fd-button--transparent"
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--decline"
+          />
+        </button>
       </div>
       <ul
         aria-hidden={true}
@@ -1700,14 +1712,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
             
             <button
               aria-label="Edit"
-              className="fd-button fd-button--transparent sap-icon--edit"
+              className="fd-button fd-button--transparent"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--edit"
+              />
+            </button>
             <button
               aria-label="Decline"
-              className="fd-button fd-button--transparent sap-icon--decline"
+              className="fd-button fd-button--transparent"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--decline"
+              />
+            </button>
           </div>
           <ul
             aria-hidden={true}
@@ -1748,14 +1768,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                 
                 <button
                   aria-label="Edit"
-                  className="fd-button fd-button--transparent sap-icon--edit"
+                  className="fd-button fd-button--transparent"
                   type="button"
-                />
+                >
+                  <i
+                    className="sap-icon--edit"
+                  />
+                </button>
                 <button
                   aria-label="Decline"
-                  className="fd-button fd-button--transparent sap-icon--decline"
+                  className="fd-button fd-button--transparent"
                   type="button"
-                />
+                >
+                  <i
+                    className="sap-icon--decline"
+                  />
+                </button>
               </div>
               <ul
                 aria-hidden={true}
@@ -1788,14 +1816,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                     
                     <button
                       aria-label="Edit"
-                      className="fd-button fd-button--transparent sap-icon--edit"
+                      className="fd-button fd-button--transparent"
                       type="button"
-                    />
+                    >
+                      <i
+                        className="sap-icon--edit"
+                      />
+                    </button>
                     <button
                       aria-label="Decline"
-                      className="fd-button fd-button--transparent sap-icon--decline"
+                      className="fd-button fd-button--transparent"
                       type="button"
-                    />
+                    >
+                      <i
+                        className="sap-icon--decline"
+                      />
+                    </button>
                   </div>
                 </li>
               </ul>
@@ -1825,14 +1861,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                 
                 <button
                   aria-label="Edit"
-                  className="fd-button fd-button--transparent sap-icon--edit"
+                  className="fd-button fd-button--transparent"
                   type="button"
-                />
+                >
+                  <i
+                    className="sap-icon--edit"
+                  />
+                </button>
                 <button
                   aria-label="Decline"
-                  className="fd-button fd-button--transparent sap-icon--decline"
+                  className="fd-button fd-button--transparent"
                   type="button"
-                />
+                >
+                  <i
+                    className="sap-icon--decline"
+                  />
+                </button>
               </div>
             </li>
           </ul>
@@ -1862,14 +1906,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
             
             <button
               aria-label="Edit"
-              className="fd-button fd-button--transparent sap-icon--edit"
+              className="fd-button fd-button--transparent"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--edit"
+              />
+            </button>
             <button
               aria-label="Decline"
-              className="fd-button fd-button--transparent sap-icon--decline"
+              className="fd-button fd-button--transparent"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--decline"
+              />
+            </button>
           </div>
         </li>
       </ul>
@@ -1901,14 +1953,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
         />
         <button
           aria-label="Edit"
-          className="fd-button fd-button--transparent sap-icon--edit"
+          className="fd-button fd-button--transparent"
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--edit"
+          />
+        </button>
         <button
           aria-label="Decline"
-          className="fd-button fd-button--transparent sap-icon--decline"
+          className="fd-button fd-button--transparent"
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--decline"
+          />
+        </button>
       </div>
     </li>
     <li
@@ -1936,14 +1996,22 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
         
         <button
           aria-label="Edit"
-          className="fd-button fd-button--transparent sap-icon--edit"
+          className="fd-button fd-button--transparent"
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--edit"
+          />
+        </button>
         <button
           aria-label="Decline"
-          className="fd-button fd-button--transparent sap-icon--decline"
+          className="fd-button fd-button--transparent"
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--decline"
+          />
+        </button>
       </div>
     </li>
   </ul>

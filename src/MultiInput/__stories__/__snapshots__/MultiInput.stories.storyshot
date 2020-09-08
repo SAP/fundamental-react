@@ -47,9 +47,13 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
           >
             <button
               aria-label="Show options"
-              className="fd-button fd-button--transparent fd-button--compact sap-icon--value-help fd-input-group__button"
+              className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--value-help"
+              />
+            </button>
           </span>
         </div>
       </div>
@@ -108,9 +112,13 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
           >
             <button
               aria-label="Show options"
-              className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+              className="fd-button fd-button--transparent fd-input-group__button"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--value-help"
+              />
+            </button>
           </span>
         </div>
       </div>
@@ -168,10 +176,14 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
           >
             <button
               aria-label="Show options"
-              className="fd-button fd-button--transparent sap-icon--value-help is-disabled fd-input-group__button"
+              className="fd-button fd-button--transparent is-disabled fd-input-group__button"
               disabled={true}
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--value-help"
+              />
+            </button>
           </span>
         </div>
       </div>
@@ -226,9 +238,13 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
           >
             <button
               aria-label="Show options"
-              className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+              className="fd-button fd-button--transparent fd-input-group__button"
               type="button"
-            />
+            >
+              <i
+                className="sap-icon--value-help"
+              />
+            </button>
           </span>
         </div>
       </div>
@@ -305,9 +321,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                       >
                         <button
                           aria-label="Show options"
-                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          className="fd-button fd-button--transparent fd-input-group__button"
                           type="button"
-                        />
+                        >
+                          <i
+                            className="sap-icon--value-help"
+                          />
+                        </button>
                       </span>
                     </div>
                   </div>
@@ -379,9 +399,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                       >
                         <button
                           aria-label="Show options"
-                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          className="fd-button fd-button--transparent fd-input-group__button"
                           type="button"
-                        />
+                        >
+                          <i
+                            className="sap-icon--value-help"
+                          />
+                        </button>
                       </span>
                     </div>
                   </div>
@@ -453,9 +477,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                       >
                         <button
                           aria-label="Show options"
-                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          className="fd-button fd-button--transparent fd-input-group__button"
                           type="button"
-                        />
+                        >
+                          <i
+                            className="sap-icon--value-help"
+                          />
+                        </button>
                       </span>
                     </div>
                   </div>
@@ -527,9 +555,13 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                       >
                         <button
                           aria-label="Show options"
-                          className="fd-button fd-button--transparent sap-icon--value-help fd-input-group__button"
+                          className="fd-button fd-button--transparent fd-input-group__button"
                           type="button"
-                        />
+                        >
+                          <i
+                            className="sap-icon--value-help"
+                          />
+                        </button>
                       </span>
                     </div>
                   </div>

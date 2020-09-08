@@ -34,7 +34,11 @@ exports[`Storyshots Component API/MessageStrip Dismissible 1`] = `
       className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--decline"
+      />
+    </button>
     <p
       className="fd-message-strip__text"
     >
@@ -146,7 +150,11 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--decline"
+      />
+    </button>
     <p
       className="fd-message-strip__text"
     >
@@ -175,7 +183,11 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--decline"
+      />
+    </button>
     <p
       className="fd-message-strip__text"
     >
@@ -208,7 +220,11 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--decline"
+      />
+    </button>
     <p
       className="fd-message-strip__text"
     >
@@ -244,7 +260,11 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
       onClick={[Function]}
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--decline"
+      />
+    </button>
     <p
       className="fd-message-strip__text"
     >

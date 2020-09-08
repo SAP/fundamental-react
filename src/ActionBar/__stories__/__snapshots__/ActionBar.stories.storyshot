@@ -15,10 +15,14 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
       >
         <button
           aria-label="Back to home"
-          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+          className="fd-button fd-button--transparent fd-button--compact"
           onClick={[Function]}
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--navigation-left-arrow"
+          />
+        </button>
       </div>
       <div
         className="fd-action-bar__title"
@@ -36,13 +40,21 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -105,13 +117,21 @@ exports[`Storyshots Component API/ActionBar No Back Button 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -150,13 +170,21 @@ exports[`Storyshots Component API/ActionBar No Description 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -179,10 +207,14 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
       >
         <button
           aria-label="Back to home"
-          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+          className="fd-button fd-button--transparent fd-button--compact"
           onClick={[Function]}
           type="button"
-        />
+        >
+          <i
+            className="sap-icon--navigation-left-arrow"
+          />
+        </button>
       </div>
       <div
         className="fd-action-bar__title"
@@ -200,13 +232,21 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -257,13 +297,17 @@ exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
                 aria-expanded={false}
                 aria-haspopup={true}
                 aria-label="More actions"
-                className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                className="fd-button fd-button--transparent"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
                 type="button"
-              />
+              >
+                <i
+                  className="sap-icon--vertical-grip"
+                />
+              </button>
             </div>
           </div>
         </div>

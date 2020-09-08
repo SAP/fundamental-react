@@ -13,20 +13,32 @@ exports[`Storyshots Component API/Button/ButtonSegmented Compact 1`] = `
       className="fd-button fd-button--compact"
       type="button"
     >
-      Left
+      <span
+        className="fd-button__text"
+      >
+        Left
+      </span>
     </button>
     <button
       className="fd-button fd-button--compact is-selected"
       selected={true}
       type="button"
     >
-      Middle
+      <span
+        className="fd-button__text"
+      >
+        Middle
+      </span>
     </button>
     <button
       className="fd-button fd-button--compact"
       type="button"
     >
-      Right
+      <span
+        className="fd-button__text"
+      >
+        Right
+      </span>
     </button>
   </div>
 </div>
@@ -42,18 +54,30 @@ exports[`Storyshots Component API/Button/ButtonSegmented Primary 1`] = `
     role="group"
   >
     <button
-      className="fd-button sap-icon--survey"
+      className="fd-button"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--survey"
+      />
+    </button>
     <button
-      className="fd-button sap-icon--pie-chart is-selected"
+      className="fd-button is-selected"
       selected={true}
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--pie-chart"
+      />
+    </button>
     <button
-      className="fd-button sap-icon--pool"
+      className="fd-button"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--pool"
+      />
+    </button>
   </div>
 </div>
 `;

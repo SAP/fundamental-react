@@ -8,7 +8,11 @@ exports[`Storyshots Component API/Button/Button Dev 1`] = `
     className="fd-button"
     type="button"
   >
-    Dev
+    <span
+      className="fd-button__text"
+    >
+      Dev
+    </span>
   </button>
 </div>
 `;
@@ -21,84 +25,161 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
     className="fddocs-container"
   >
     <button
-      className="fd-button fd-button--emphasized sap-icon--cart"
+      className="fd-button fd-button--emphasized"
       type="button"
     >
-      Add to Cart
+      <span
+        className="fd-button__text"
+      >
+        Add to Cart
+      </span>
+      <i
+        className="sap-icon--cart"
+      />
     </button>
     <button
-      className="fd-button sap-icon--cart"
+      className="fd-button"
       type="button"
     >
-      Add to Cart
+      <span
+        className="fd-button__text"
+      >
+        Add to Cart
+      </span>
+      <i
+        className="sap-icon--cart"
+      />
     </button>
     <button
-      className="fd-button fd-button--transparent sap-icon--filter"
+      className="fd-button fd-button--transparent"
       type="button"
     >
-      Filter
+      <span
+        className="fd-button__text"
+      >
+        Filter
+      </span>
+      <i
+        className="sap-icon--filter"
+      />
     </button>
     <button
-      className="fd-button fd-button--positive sap-icon--accept"
+      className="fd-button fd-button--positive"
       type="button"
     >
-      Approve
+      <span
+        className="fd-button__text"
+      >
+        Approve
+      </span>
+      <i
+        className="sap-icon--accept"
+      />
     </button>
     <button
-      className="fd-button fd-button--negative sap-icon--decline"
+      className="fd-button fd-button--negative"
       type="button"
     >
-      Reject
+      <span
+        className="fd-button__text"
+      >
+        Reject
+      </span>
+      <i
+        className="sap-icon--decline"
+      />
     </button>
     <button
-      className="fd-button fd-button--ghost sap-icon--edit"
+      className="fd-button fd-button--ghost"
       type="button"
     >
-      Edit
+      <span
+        className="fd-button__text"
+      >
+        Edit
+      </span>
+      <i
+        className="sap-icon--edit"
+      />
     </button>
     <button
-      className="fd-button fd-button--attention sap-icon--warning"
+      className="fd-button fd-button--attention"
       type="button"
     >
-      Ignore
+      <span
+        className="fd-button__text"
+      >
+        Ignore
+      </span>
+      <i
+        className="sap-icon--warning"
+      />
     </button>
     <div
       className="fddocs-container--break"
     />
     <button
-      className="fd-button fd-button--emphasized sap-icon--alert"
+      className="fd-button fd-button--emphasized"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--alert"
+      />
+    </button>
     <button
       aria-label="Add to cart"
-      className="fd-button sap-icon--cart"
+      className="fd-button"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--cart"
+      />
+    </button>
     <button
       aria-label="Filter"
-      className="fd-button fd-button--transparent sap-icon--cart"
+      className="fd-button fd-button--transparent"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--cart"
+      />
+    </button>
     <button
       aria-label="Accept"
-      className="fd-button fd-button--positive sap-icon--accept"
+      className="fd-button fd-button--positive"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--accept"
+      />
+    </button>
     <button
       aria-label="Decline"
-      className="fd-button fd-button--negative sap-icon--decline"
+      className="fd-button fd-button--negative"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--decline"
+      />
+    </button>
     <button
       aria-label="Edit"
-      className="fd-button fd-button--ghost sap-icon--edit"
+      className="fd-button fd-button--ghost"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--edit"
+      />
+    </button>
     <button
       aria-label="Ignore"
-      className="fd-button fd-button--attention sap-icon--warning"
+      className="fd-button fd-button--attention"
       type="button"
-    />
+    >
+      <i
+        className="sap-icon--warning"
+      />
+    </button>
   </div>
 </div>
 `;
@@ -114,19 +195,31 @@ exports[`Storyshots Component API/Button/Button Options 1`] = `
       className="fd-button fd-button--emphasized"
       type="button"
     >
-      Emphasized Button
+      <span
+        className="fd-button__text"
+      >
+        Emphasized Button
+      </span>
     </button>
     <button
       className="fd-button"
       type="button"
     >
-      Default Button
+      <span
+        className="fd-button__text"
+      >
+        Default Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--transparent"
       type="button"
     >
-      Transparent Button
+      <span
+        className="fd-button__text"
+      >
+        Transparent Button
+      </span>
     </button>
   </div>
 </div>
@@ -140,7 +233,11 @@ exports[`Storyshots Component API/Button/Button Primary 1`] = `
     className="fd-button"
     type="button"
   >
-    Button
+    <span
+      className="fd-button__text"
+    >
+      Button
+    </span>
   </button>
 </div>
 `;
@@ -156,13 +253,21 @@ exports[`Storyshots Component API/Button/Button Sizes 1`] = `
       className="fd-button"
       type="button"
     >
-      Default
+      <span
+        className="fd-button__text"
+      >
+        Default
+      </span>
     </button>
     <button
       className="fd-button fd-button--compact"
       type="button"
     >
-      Compact
+      <span
+        className="fd-button__text"
+      >
+        Compact
+      </span>
     </button>
   </div>
 </div>
@@ -179,21 +284,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button"
       type="button"
     >
-      Default
+      <span
+        className="fd-button__text"
+      >
+        Default
+      </span>
     </button>
     <button
       className="fd-button is-selected"
       selected={true}
       type="button"
     >
-      Selected
+      <span
+        className="fd-button__text"
+      >
+        Selected
+      </span>
     </button>
     <button
       className="fd-button is-disabled"
       disabled={true}
       type="button"
     >
-      Disabled
+      <span
+        className="fd-button__text"
+      >
+        Disabled
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -202,7 +319,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Disabled Focusable
+      <span
+        className="fd-button__text"
+      >
+        Disabled Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -218,21 +339,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button fd-button--emphasized"
       type="button"
     >
-      Emphasized
+      <span
+        className="fd-button__text"
+      >
+        Emphasized
+      </span>
     </button>
     <button
       className="fd-button fd-button--emphasized is-selected"
       selected={true}
       type="button"
     >
-      Emphasized
+      <span
+        className="fd-button__text"
+      >
+        Emphasized
+      </span>
     </button>
     <button
       className="fd-button fd-button--emphasized is-disabled"
       disabled={true}
       type="button"
     >
-      Emphasized
+      <span
+        className="fd-button__text"
+      >
+        Emphasized
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -241,7 +374,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Emphasized Focusable
+      <span
+        className="fd-button__text"
+      >
+        Emphasized Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -257,21 +394,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button fd-button--transparent"
       type="button"
     >
-      Transparent
+      <span
+        className="fd-button__text"
+      >
+        Transparent
+      </span>
     </button>
     <button
       className="fd-button fd-button--transparent is-selected"
       selected={true}
       type="button"
     >
-      Transparent
+      <span
+        className="fd-button__text"
+      >
+        Transparent
+      </span>
     </button>
     <button
       className="fd-button fd-button--transparent is-disabled"
       disabled={true}
       type="button"
     >
-      Transparent
+      <span
+        className="fd-button__text"
+      >
+        Transparent
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -280,7 +429,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Transparent Focusable
+      <span
+        className="fd-button__text"
+      >
+        Transparent Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -296,21 +449,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button fd-button--positive"
       type="button"
     >
-      Positive Button
+      <span
+        className="fd-button__text"
+      >
+        Positive Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--positive is-selected"
       selected={true}
       type="button"
     >
-      Positive Button
+      <span
+        className="fd-button__text"
+      >
+        Positive Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--positive is-disabled"
       disabled={true}
       type="button"
     >
-      Positive Button
+      <span
+        className="fd-button__text"
+      >
+        Positive Button
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -319,7 +484,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Positive Focusable
+      <span
+        className="fd-button__text"
+      >
+        Positive Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -335,21 +504,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button fd-button--negative"
       type="button"
     >
-      Negative Button
+      <span
+        className="fd-button__text"
+      >
+        Negative Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--negative is-selected"
       selected={true}
       type="button"
     >
-      Negative Button
+      <span
+        className="fd-button__text"
+      >
+        Negative Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--negative is-disabled"
       disabled={true}
       type="button"
     >
-      Negative Button
+      <span
+        className="fd-button__text"
+      >
+        Negative Button
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -358,7 +539,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Negative Focusable
+      <span
+        className="fd-button__text"
+      >
+        Negative Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -374,21 +559,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button fd-button--ghost"
       type="button"
     >
-      Ghost Button
+      <span
+        className="fd-button__text"
+      >
+        Ghost Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--ghost is-selected"
       selected={true}
       type="button"
     >
-      Ghost Button
+      <span
+        className="fd-button__text"
+      >
+        Ghost Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--ghost is-disabled"
       disabled={true}
       type="button"
     >
-      Ghost Button
+      <span
+        className="fd-button__text"
+      >
+        Ghost Button
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -397,7 +594,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Ghost Focusable
+      <span
+        className="fd-button__text"
+      >
+        Ghost Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -413,21 +614,33 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       className="fd-button fd-button--attention"
       type="button"
     >
-      Attention Button
+      <span
+        className="fd-button__text"
+      >
+        Attention Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--attention is-selected"
       selected={true}
       type="button"
     >
-      Attention Button
+      <span
+        className="fd-button__text"
+      >
+        Attention Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--attention is-disabled"
       disabled={true}
       type="button"
     >
-      Attention Button
+      <span
+        className="fd-button__text"
+      >
+        Attention Button
+      </span>
     </button>
     <button
       aria-describedby="fd-mocked-short-id"
@@ -436,7 +649,11 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Attention Focusable
+      <span
+        className="fd-button__text"
+      >
+        Attention Focusable
+      </span>
     </button>
     <p
       aria-live="assertive"
@@ -460,37 +677,61 @@ exports[`Storyshots Component API/Button/Button Types 1`] = `
       className="fd-button"
       type="button"
     >
-      Default Button
+      <span
+        className="fd-button__text"
+      >
+        Default Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--standard"
       type="button"
     >
-      Standard Button
+      <span
+        className="fd-button__text"
+      >
+        Standard Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--positive"
       type="button"
     >
-      Positive Button
+      <span
+        className="fd-button__text"
+      >
+        Positive Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--negative"
       type="button"
     >
-      Negative Button
+      <span
+        className="fd-button__text"
+      >
+        Negative Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--ghost"
       type="button"
     >
-      Ghost Button
+      <span
+        className="fd-button__text"
+      >
+        Ghost Button
+      </span>
     </button>
     <button
       className="fd-button fd-button--attention"
       type="button"
     >
-      Attention Button
+      <span
+        className="fd-button__text"
+      >
+        Attention Button
+      </span>
     </button>
   </div>
 </div>
