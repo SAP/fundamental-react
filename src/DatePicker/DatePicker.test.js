@@ -315,10 +315,10 @@ describe('<DatePicker />', () => {
                         type: 'select',
                         label: 'Today'
                     }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
-            expect(todayButtonWrapper.getDOMNode().innerHTML).toBe('Today');
+            expect(todayButtonWrapper.text()).toBe('Today');
         });
 
         test('doesn\'t render today button when todayAction.type=\'select\' AND valid todayAction.label is specified but date range selection is enabled', () => {
@@ -329,7 +329,7 @@ describe('<DatePicker />', () => {
                         type: 'select',
                         label: 'Today'
                     }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(false);
         });
@@ -341,7 +341,7 @@ describe('<DatePicker />', () => {
                         type: 'select',
                         label: 'Today'
                     }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
             todayButtonWrapper.simulate('click');
@@ -358,7 +358,7 @@ describe('<DatePicker />', () => {
                         type: 'select',
                         label: 'Today'
                     }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             todayButtonWrapper.simulate('click');
             expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
@@ -409,7 +409,7 @@ describe('<DatePicker />', () => {
             const datePickerClose = jest.fn();
             const element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
                 onDatePickerClose={datePickerClose} />);
-            element.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            element.find('button.fd-button--transparent').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
             expect(datePickerClose).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '2020-03-02' }));
             expect(datePickerClose).toHaveBeenCalledTimes(1);
@@ -468,7 +468,7 @@ describe('<DatePicker />', () => {
             element = element.setProps({
                 dateFormat: 'MM/DD/YYYY'
             });
-            element.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            element.find('button.fd-button--transparent').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
 
             expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }));
@@ -521,7 +521,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('button.fd-button--transparent.sap-icon--appointment-2').getDOMNode().attributes['data-sample'].value
+                element.find('button.fd-button--transparent').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -532,7 +532,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             wrapper.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
 
             expect(
@@ -547,7 +547,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             wrapper.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
 
             expect(
@@ -562,7 +562,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
 
             expect(
                 wrapper.find('.fd-calendar__dates').childAt(0).getDOMNode().attributes['data-sample'].value
@@ -576,7 +576,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
 
             expect(
                 wrapper.find('.fd-calendar__group').at(0).getDOMNode().attributes['data-sample'].value
@@ -590,7 +590,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
 
             expect(
                 wrapper.find('tbody').getDOMNode().attributes['data-sample'].value
