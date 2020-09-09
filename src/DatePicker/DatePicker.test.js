@@ -619,7 +619,7 @@ describe('<DatePicker />', () => {
                 <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
             );
 
-            const datepickerButton = wrapper.find('button.fd-button--transparent.sap-icon--appointment-2');
+            const datepickerButton = wrapper.find('button.fd-button--transparent');
             const datepickerInput = wrapper.find('input[type="text"]');
             act(() => {
                 datepickerButton.simulate('click');
