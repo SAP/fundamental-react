@@ -116,6 +116,9 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               >
                 Corporate Portal
               </span>
+              <i
+                className="sap-icon--megamenu fd-shellbar__button--icon"
+              />
             </button>
           </div>
         </div>
@@ -231,6 +234,9 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 tabIndex={0}
                 type="button"
               >
+                <i
+                  className="sap-icon--settings"
+                />
                 <span
                   className="fd-button__text"
                 >
@@ -241,9 +247,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                     5
                   </span>
                 </span>
-                <i
-                  className="sap-icon--settings"
-                />
               </button>
             </div>
           </div>
@@ -275,6 +278,9 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 className="fd-button fd-shellbar__button"
                 type="button"
               >
+                <i
+                  className="sap-icon--bell"
+                />
                 <span
                   className="fd-button__text"
                 >
@@ -285,9 +291,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                     2
                   </span>
                 </span>
-                <i
-                  className="sap-icon--bell"
-                />
               </button>
             </div>
           </div>
@@ -550,6 +553,9 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               >
                 Corporate Portal
               </span>
+              <i
+                className="sap-icon--megamenu fd-shellbar__button--icon"
+              />
             </button>
           </div>
         </div>
@@ -637,6 +643,9 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
           className="fd-button fd-shellbar__button"
           type="button"
         >
+          <i
+            className="sap-icon--bell"
+          />
           <span
             className="fd-button__text"
           >
@@ -647,9 +656,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               2
             </span>
           </span>
-          <i
-            className="sap-icon--bell"
-          />
         </button>
       </div>
       <div
