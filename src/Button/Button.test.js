@@ -11,6 +11,14 @@ describe('<Button />', () => {
                 element.find('.fd-button').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        test('should allow spreading className to inner text', () => {
+            const element = mount(<Button textClassName='wonderful-styles'>Button</Button>);
+
+            expect(
+                element.find('.fd-button__text').getDOMNode().classList
+            ).toContain('wonderful-styles');
+        });
     });
     test('forwards the ref', () => {
         let ref;

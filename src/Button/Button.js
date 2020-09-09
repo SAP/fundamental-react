@@ -19,6 +19,8 @@ const Button = React.forwardRef(({
     disabledMessage,
     enabledMessage,
     glyph,
+    iconBeforeText,
+    iconClassName,
     selected,
     disabled,
     typeAttr,
@@ -44,6 +46,13 @@ const Button = React.forwardRef(({
     const buttonTextClasses = classnames(
         'fd-button__text',
         textClassName
+    );
+
+    const iconClasses = classnames(
+        {
+            [`sap-icon--${glyph}`]: !!glyph
+        },
+        iconClassName
     );
 
     const ariaDisabled = props['aria-disabled'];
@@ -91,8 +100,9 @@ const Button = React.forwardRef(({
                 ref={ref}
                 selected={selected}
                 type={typeAttr}>
+                {iconBeforeText && glyph && <i className={iconClasses} />}
                 {children && <span className={buttonTextClasses}>{children}</span>}
-                {glyph && <i className={`sap-icon--${glyph}`} />}
+                {!iconBeforeText && glyph && <i className={iconClasses} />}
             </button>
             {renderButtonStateMessage()}
         </>
@@ -140,6 +150,10 @@ Button.propTypes = {
     enabledMessage: validateStateTransitionMessage,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
+    /** Determines whether the icon should be placed before the text */
+    iconBeforeText: PropTypes.bool,
+    /** CSS class(es) to add to the icon element */
+    iconClassName: PropTypes.string,
     /** Indicates the importance of the button: 'empahsized' or 'transparent' */
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     /** Set to **true** to set state of the button to "selected" */
