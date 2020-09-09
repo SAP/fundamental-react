@@ -26,6 +26,7 @@ export const primary = () => (
     <ComboboxInput
         id='primaryComboboxExample'
         label='Default'
+        maxHeight='250px'
         options={countriesData}
         placeholder={placeholder} />
 );
@@ -44,6 +45,7 @@ export const compact = () => (
         ariaLabel='Compact'
         compact
         id='compactComboboxExample'
+        maxHeight='250px'
         options={countriesData}
         placeholder={placeholder} />
 );
@@ -55,6 +57,7 @@ export const validationState = () => (
                 <ComboboxInput
                     id='errorComboboxExample'
                     label='Combobox with error'
+                    maxHeight='250px'
                     options={countriesData}
                     placeholder={placeholder}
                     required
@@ -64,6 +67,7 @@ export const validationState = () => (
                 <ComboboxInput
                     id='warningComboboxExample'
                     label='Combobox with warning'
+                    maxHeight='250px'
                     options={countriesData}
                     placeholder={placeholder}
                     validationState={{ state: 'warning', text: 'Country can be edited only once' }} />
@@ -72,6 +76,7 @@ export const validationState = () => (
                 <ComboboxInput
                     id='infoComboboxExample'
                     label='Combobox with information'
+                    maxHeight='250px'
                     options={countriesData}
                     placeholder={placeholder}
                     validationState={{ state: 'information', text: 'This data will not be shared.' }} />
@@ -80,6 +85,7 @@ export const validationState = () => (
                 <ComboboxInput
                     id='successComboboxExample'
                     label='Combobox with success'
+                    maxHeight='250px'
                     options={countriesData}
                     placeholder={placeholder}
                     validationState={{ state: 'success', text: 'Service is supported in these countries.' }} />
