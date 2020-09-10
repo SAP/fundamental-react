@@ -54,6 +54,7 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--time-entry-request"
                 />
               </button>
@@ -118,6 +119,7 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--time-entry-request"
                 />
               </button>
@@ -182,6 +184,7 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--time-entry-request"
                 />
               </button>
@@ -246,6 +249,7 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--time-entry-request"
                 />
               </button>
@@ -310,6 +314,7 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--time-entry-request"
                 />
               </button>

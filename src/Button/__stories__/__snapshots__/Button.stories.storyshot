@@ -34,6 +34,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Add to Cart
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--cart"
       />
     </button>
@@ -47,6 +48,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Add to Cart
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--cart"
       />
     </button>
@@ -60,6 +62,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Filter
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--filter"
       />
     </button>
@@ -73,6 +76,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Approve
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--accept"
       />
     </button>
@@ -86,6 +90,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Reject
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--decline"
       />
     </button>
@@ -99,6 +104,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Edit
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--edit"
       />
     </button>
@@ -112,6 +118,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
         Ignore
       </span>
       <i
+        aria-hidden="true"
         className="sap-icon--warning"
       />
     </button>
@@ -123,6 +130,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--alert"
       />
     </button>
@@ -132,6 +140,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--cart"
       />
     </button>
@@ -141,6 +150,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--cart"
       />
     </button>
@@ -150,6 +160,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--accept"
       />
     </button>
@@ -159,6 +170,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--decline"
       />
     </button>
@@ -168,6 +180,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--edit"
       />
     </button>
@@ -177,6 +190,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       type="button"
     >
       <i
+        aria-hidden="true"
         className="sap-icon--warning"
       />
     </button>

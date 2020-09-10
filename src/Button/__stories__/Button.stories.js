@@ -53,7 +53,7 @@ export const types = () => (
 
 types.storyName = 'Types';
 
-/** Button can have an icon with text or just and icon. */
+/** Button can have an icon with text or just an icon. Be sure to use an `aria-label` if there is no text. */
 
 export const icons = () => (
     <div className='fddocs-container'>

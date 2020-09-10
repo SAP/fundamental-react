@@ -90,6 +90,7 @@ const Button = React.forwardRef(({
         }
         return content;
     };
+
     return (
         <>
             <button
@@ -100,9 +101,9 @@ const Button = React.forwardRef(({
                 ref={ref}
                 selected={selected}
                 type={typeAttr}>
-                {iconBeforeText && glyph && <i className={iconClasses} />}
+                {iconBeforeText && glyph && <i aria-hidden='true' className={iconClasses} />}
                 {children && <span className={buttonTextClasses}>{children}</span>}
-                {!iconBeforeText && glyph && <i className={iconClasses} />}
+                {!iconBeforeText && glyph && <i aria-hidden='true' className={iconClasses} />}
             </button>
             {renderButtonStateMessage()}
         </>
@@ -154,7 +155,7 @@ Button.propTypes = {
     iconBeforeText: PropTypes.bool,
     /** CSS class(es) to add to the icon element */
     iconClassName: PropTypes.string,
-    /** Indicates the importance of the button: 'empahsized' or 'transparent' */
+    /** Indicates the importance of the button: 'emphasized' or 'transparent' */
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     /** Set to **true** to set state of the button to "selected" */
     selected: PropTypes.bool,

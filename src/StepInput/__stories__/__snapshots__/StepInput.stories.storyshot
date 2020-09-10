@@ -29,6 +29,7 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -46,6 +47,7 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -85,6 +87,7 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -104,6 +107,7 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -144,6 +148,7 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -163,6 +168,7 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -202,6 +208,7 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -219,6 +226,7 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -258,6 +266,7 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -275,6 +284,7 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -314,6 +324,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -332,6 +343,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -364,6 +376,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -382,6 +395,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -414,6 +428,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -432,6 +447,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>
@@ -464,6 +480,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--less"
             />
           </button>
@@ -482,6 +499,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--add"
             />
           </button>

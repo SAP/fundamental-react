@@ -34,6 +34,7 @@ exports[`Storyshots Component API/Popover Dev 1`] = `
             type="button"
           >
             <i
+              aria-hidden="true"
               className="sap-icon--navigation-up-arrow"
             />
           </button>
@@ -71,6 +72,7 @@ exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="sap-icon--navigation-up-arrow"
           />
         </button>
@@ -100,6 +102,7 @@ exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="sap-icon--navigation-down-arrow"
           />
         </button>
@@ -322,6 +325,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Top-Start
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-up-arrow"
                   />
                 </button>
@@ -358,6 +362,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Top
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-up-arrow"
                   />
                 </button>
@@ -394,6 +399,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Top-End
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-up-arrow"
                   />
                 </button>
@@ -436,6 +442,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Left-Start
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-left-arrow"
                   />
                 </button>
@@ -475,6 +482,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Right-Top
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-right-arrow"
                   />
                 </button>
@@ -516,6 +524,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Left
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-left-arrow"
                   />
                 </button>
@@ -555,6 +564,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Right
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-right-arrow"
                   />
                 </button>
@@ -596,6 +606,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Left-End
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-left-arrow"
                   />
                 </button>
@@ -635,6 +646,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Right-End
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-right-arrow"
                   />
                 </button>
@@ -677,6 +689,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Bottom-Start
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-down-arrow"
                   />
                 </button>
@@ -713,6 +726,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Bottom
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-down-arrow"
                   />
                 </button>
@@ -749,6 +763,7 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                     Bottom-End
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--navigation-down-arrow"
                   />
                 </button>
@@ -991,6 +1006,7 @@ exports[`Storyshots Component API/Popover With Custom Flip Container 1`] = `
               type="button"
             >
               <i
+                aria-hidden="true"
                 className="sap-icon--navigation-up-arrow"
               />
             </button>

@@ -20,6 +20,7 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="sap-icon--navigation-left-arrow"
           />
         </button>
@@ -212,6 +213,7 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="sap-icon--navigation-left-arrow"
           />
         </button>
@@ -305,6 +307,7 @@ exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--vertical-grip"
                 />
               </button>

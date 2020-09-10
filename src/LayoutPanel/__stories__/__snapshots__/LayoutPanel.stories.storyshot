@@ -50,6 +50,7 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                   Add New Button
                 </span>
                 <i
+                  aria-hidden="true"
                   className="sap-icon--add"
                 />
               </button>
@@ -211,6 +212,7 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                   Add New Button
                 </span>
                 <i
+                  aria-hidden="true"
                   className="sap-icon--add"
                 />
               </button>
@@ -376,6 +378,7 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                   Add New Button
                 </span>
                 <i
+                  aria-hidden="true"
                   className="sap-icon--add"
                 />
               </button>
@@ -537,6 +540,7 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                   Add New Button
                 </span>
                 <i
+                  aria-hidden="true"
                   className="sap-icon--add"
                 />
               </button>
@@ -763,6 +767,7 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
             Add New Button
           </span>
           <i
+            aria-hidden="true"
             className="sap-icon--add"
           />
         </button>

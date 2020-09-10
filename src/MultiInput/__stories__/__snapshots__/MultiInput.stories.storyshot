@@ -51,6 +51,7 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
               type="button"
             >
               <i
+                aria-hidden="true"
                 className="sap-icon--value-help"
               />
             </button>
@@ -116,6 +117,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
               type="button"
             >
               <i
+                aria-hidden="true"
                 className="sap-icon--value-help"
               />
             </button>
@@ -181,6 +183,7 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
               type="button"
             >
               <i
+                aria-hidden="true"
                 className="sap-icon--value-help"
               />
             </button>
@@ -242,6 +245,7 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
               type="button"
             >
               <i
+                aria-hidden="true"
                 className="sap-icon--value-help"
               />
             </button>
@@ -325,6 +329,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           type="button"
                         >
                           <i
+                            aria-hidden="true"
                             className="sap-icon--value-help"
                           />
                         </button>
@@ -403,6 +408,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           type="button"
                         >
                           <i
+                            aria-hidden="true"
                             className="sap-icon--value-help"
                           />
                         </button>
@@ -481,6 +487,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           type="button"
                         >
                           <i
+                            aria-hidden="true"
                             className="sap-icon--value-help"
                           />
                         </button>
@@ -559,6 +566,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           type="button"
                         >
                           <i
+                            aria-hidden="true"
                             className="sap-icon--value-help"
                           />
                         </button>

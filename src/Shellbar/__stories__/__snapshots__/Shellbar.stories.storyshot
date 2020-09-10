@@ -117,6 +117,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 Corporate Portal
               </span>
               <i
+                aria-hidden="true"
                 className="sap-icon--megamenu fd-shellbar__button--icon"
               />
             </button>
@@ -195,6 +196,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                             type="button"
                           >
                             <i
+                              aria-hidden="true"
                               className="sap-icon--search"
                             />
                           </button>
@@ -235,6 +237,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--settings"
                 />
                 <span
@@ -279,6 +282,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 type="button"
               >
                 <i
+                  aria-hidden="true"
                   className="sap-icon--bell"
                 />
                 <span
@@ -337,6 +341,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                     </span>
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--overflow"
                   />
                 </button>
@@ -414,6 +419,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   type="button"
                 >
                   <i
+                    aria-hidden="true"
                     className="sap-icon--grid"
                   />
                 </button>
@@ -444,6 +450,7 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
         type="button"
       >
         <i
+          aria-hidden="true"
           className="sap-icon--nav-back"
         />
       </button>
@@ -554,6 +561,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 Corporate Portal
               </span>
               <i
+                aria-hidden="true"
                 className="sap-icon--megamenu fd-shellbar__button--icon"
               />
             </button>
@@ -622,6 +630,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                             type="button"
                           >
                             <i
+                              aria-hidden="true"
                               className="sap-icon--search"
                             />
                           </button>
@@ -644,6 +653,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
           type="button"
         >
           <i
+            aria-hidden="true"
             className="sap-icon--bell"
           />
           <span
@@ -699,6 +709,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                     </span>
                   </span>
                   <i
+                    aria-hidden="true"
                     className="sap-icon--overflow"
                   />
                 </button>
