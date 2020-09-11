@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
+import Icon from '../Icon/Icon';
 import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
@@ -135,7 +136,10 @@ const Select = React.forwardRef(({
                 <span aria-label={selectAriaLabel} className={textContentClassNames}>{textContent}</span>
                 {!readOnly &&
                     <span className={triggerClassNames}>
-                        <i className='sap-icon--slim-arrow-down' />
+                        <Icon
+                            ariaHidden
+                            glyph='slim-arrow-down'
+                            isInButton />
                     </span>
                 }
             </div>

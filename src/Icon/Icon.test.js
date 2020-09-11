@@ -4,16 +4,16 @@ import React from 'react';
 
 describe('<Icon />', () => {
     const mockOnClick = jest.fn();
-    const defaultIcon = (
-        <Icon
-            className='blue'
-            glyph='cart'
-            onClick={mockOnClick} />
-    );
-    const iconWithSize = <Icon glyph='cart' size='s' />;
+
+    const defaultProps = { ariaHidden: true, glyph: 'cart' };
+    const defaultIcon = <Icon {...defaultProps} />;
+    const clickIcon = <Icon {...defaultProps} onClick={mockOnClick} />;
+    const iconWithSize = <Icon {...defaultProps} size='s' />;
+    const ariaLabelIcon = <Icon ariaLabel='Add to cart' glyph='cart' />;
+    const propSpreadIcon = <Icon {...defaultProps} data-sample='Sample' />;
 
     test('click on icon', () => {
-        let wrapper = mount(defaultIcon);
+        let wrapper = mount(clickIcon);
         wrapper.find('.sap-icon--cart').simulate('click');
         expect(wrapper.prop('onClick')).toBeCalledTimes(1);
 
@@ -22,9 +22,19 @@ describe('<Icon />', () => {
         expect(wrapper.prop('onClick')).toBeUndefined;
     });
 
+    test('passes aria-label prop', () => {
+        const element = mount(ariaLabelIcon);
+        expect(element.getDOMNode().getAttribute('aria-label')).toBe('Add to cart');
+    });
+
+    test('passes the aria-hidden prop', () => {
+        const element = mount(defaultIcon);
+        expect(element.getDOMNode().getAttribute('aria-hidden')).toBe('true');
+    });
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Icon component', () => {
-            const element = mount(<Icon data-sample='Sample' glyph='cart' />);
+            const element = mount(propSpreadIcon);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -39,7 +49,7 @@ describe('<Icon />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Icon glyph='cart' ref={ref} />;
+            render = () => <Icon {...defaultProps} ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('SPAN');

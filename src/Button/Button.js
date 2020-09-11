@@ -1,9 +1,9 @@
 import classnames from 'classnames';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
-import 'fundamental-styles/dist/icon.css';
 import 'fundamental-styles/dist/button.css';
 
 /** A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
@@ -20,7 +20,7 @@ const Button = React.forwardRef(({
     enabledMessage,
     glyph,
     iconBeforeText,
-    iconClassName,
+    iconProps,
     selected,
     disabled,
     typeAttr,
@@ -46,13 +46,6 @@ const Button = React.forwardRef(({
     const buttonTextClasses = classnames(
         'fd-button__text',
         textClassName
-    );
-
-    const iconClasses = classnames(
-        {
-            [`sap-icon--${glyph}`]: !!glyph
-        },
-        iconClassName
     );
 
     const ariaDisabled = props['aria-disabled'];
@@ -91,6 +84,18 @@ const Button = React.forwardRef(({
         return content;
     };
 
+    const renderIcon = () => {
+        const content = glyph ? (
+            <Icon
+                {...iconProps}
+                ariaHidden
+                glyph={glyph}
+                isInButton />
+        ) : null;
+
+        return content;
+    };
+
     return (
         <>
             <button
@@ -101,9 +106,9 @@ const Button = React.forwardRef(({
                 ref={ref}
                 selected={selected}
                 type={typeAttr}>
-                {iconBeforeText && glyph && <i aria-hidden='true' className={iconClasses} />}
+                {iconBeforeText && renderIcon()}
                 {children && <span className={buttonTextClasses}>{children}</span>}
-                {!iconBeforeText && glyph && <i aria-hidden='true' className={iconClasses} />}
+                {!iconBeforeText && renderIcon()}
             </button>
             {renderButtonStateMessage()}
         </>
@@ -153,8 +158,8 @@ Button.propTypes = {
     glyph: PropTypes.string,
     /** Determines whether the icon should be placed before the text */
     iconBeforeText: PropTypes.bool,
-    /** CSS class(es) to add to the icon element */
-    iconClassName: PropTypes.string,
+    /** Additional props to be spread to the Icon component */
+    iconProps: PropTypes.object,
     /** Indicates the importance of the button: 'emphasized' or 'transparent' */
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     /** Set to **true** to set state of the button to "selected" */

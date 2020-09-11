@@ -20,12 +20,12 @@ describe('<Button />', () => {
             ).toContain('wonderful-styles');
         });
 
-        test('should allow spreading className to icon', () => {
-            const element = mount(<Button glyph='bell' iconClassName='wonderful-styles'>Button</Button>);
+        test('should allow spreading props to icon', () => {
+            const element = mount(<Button glyph='bell'iconProps={{ 'data-sample': 'Sample' }}>Button</Button>);
 
             expect(
-                element.find('.sap-icon--bell').getDOMNode().classList
-            ).toContain('wonderful-styles');
+                element.find('i.sap-icon--bell').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
         });
     });
     test('forwards the ref', () => {
