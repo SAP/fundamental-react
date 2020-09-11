@@ -133,6 +133,7 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
       className="fddocs-container--break"
     />
     <button
+      aria-label="See warning"
       className="fd-button fd-button--emphasized"
       type="button"
     >

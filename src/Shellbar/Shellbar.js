@@ -168,7 +168,7 @@ class Shellbar extends Component {
                                 <Button
                                     className='fd-shellbar__button--menu fd-button--menu'
                                     glyph='megamenu'
-                                    iconClassName='fd-shellbar__button--icon'
+                                    iconProps={{ className: 'fd-shellbar__button--icon' }}
                                     option='transparent'
                                     textClassName='fd-shellbar__title'>
                                     {productTitle}

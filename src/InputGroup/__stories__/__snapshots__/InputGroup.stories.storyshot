@@ -159,7 +159,7 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       <span
         className="fd-input-group__addon"
       >
-        <span
+        <i
           className="sap-icon--globe"
           role="img"
         />
@@ -181,7 +181,7 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       <span
         className="fd-input-group__addon"
       >
-        <span
+        <i
           className="sap-icon--hide"
           role="img"
         />
@@ -235,7 +235,7 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
     <span
       className="fd-input-group__addon"
     >
-      <span
+      <i
         className="sap-icon--hide"
         role="img"
       />

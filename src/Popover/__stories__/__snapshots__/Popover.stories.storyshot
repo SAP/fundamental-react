@@ -130,7 +130,7 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
       <div
         className="fd-popover__control"
       >
-        <span
+        <i
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
@@ -212,7 +212,7 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
       <div
         className="fd-popover__control"
       >
-        <span
+        <i
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}

@@ -18,7 +18,7 @@ describe('<Icon />', () => {
         expect(wrapper.prop('onClick')).toBeCalledTimes(1);
 
         wrapper = mount(iconWithSize);
-        wrapper.find('span.sap-icon--cart').simulate('click');
+        wrapper.find('.sap-icon--cart').simulate('click');
         expect(wrapper.prop('onClick')).toBeUndefined;
     });
 
@@ -52,7 +52,7 @@ describe('<Icon />', () => {
             render = () => <Icon {...defaultProps} ref={ref} />;
         }
         mount(<Test />);
-        expect(ref.current.tagName).toEqual('SPAN');
+        expect(ref.current.tagName).toEqual('I');
         expect(ref.current.className).toEqual('sap-icon--cart');
     });
 });

@@ -89,8 +89,7 @@ const Button = React.forwardRef(({
             <Icon
                 {...iconProps}
                 ariaHidden
-                glyph={glyph}
-                isInButton />
+                glyph={glyph} />
         ) : null;
 
         return content;

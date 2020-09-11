@@ -8,7 +8,7 @@ import 'fundamental-styles/dist/icon.css';
 and focus, and for fun. Icons can be used adaptively if desired, but at
 this point they are used more as visual elements within other
 components. */
-const Icon = React.forwardRef(({ ariaHidden, ariaLabel, glyph, size, className, isInButton, ...props }, ref) => {
+const Icon = React.forwardRef(({ ariaHidden, ariaLabel, glyph, size, className, ...props }, ref) => {
 
     const iconClasses = classnames(
         {
@@ -22,10 +22,8 @@ const Icon = React.forwardRef(({ ariaHidden, ariaLabel, glyph, size, className, 
         style = { fontSize: ICON_SIZES[size] };
     }
 
-    const Tag = isInButton ? 'i' : 'span';
-
     return (
-        <Tag
+        <i
             {...props}
             aria-hidden={ariaHidden}
             aria-label={ariaLabel}
@@ -55,8 +53,6 @@ Icon.propTypes = {
     },
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** If the icon is in a button */
-    isInButton: PropTypes.bool,
     /** Size of the component: 's', 'm', 'l', 'xl' */
     size: PropTypes.oneOf(Object.keys(ICON_SIZES))
 };

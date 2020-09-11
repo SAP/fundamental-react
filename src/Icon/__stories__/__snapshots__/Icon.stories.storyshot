@@ -10,7 +10,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--accelerated"
         role="img"
         style={
@@ -27,7 +27,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--accept"
         role="img"
         style={
@@ -44,7 +44,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--accidental-leave"
         role="img"
         style={
@@ -61,7 +61,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--account"
         role="img"
         style={
@@ -78,7 +78,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--accounting-document-verification"
         role="img"
         style={
@@ -95,7 +95,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--action"
         role="img"
         style={
@@ -112,7 +112,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--action-settings"
         role="img"
         style={
@@ -129,7 +129,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--activate"
         role="img"
         style={
@@ -146,7 +146,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--activities"
         role="img"
         style={
@@ -163,7 +163,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--activity-2"
         role="img"
         style={
@@ -180,7 +180,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--activity-assigned-to-goal"
         role="img"
         style={
@@ -197,7 +197,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--activity-individual"
         role="img"
         style={
@@ -214,7 +214,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--activity-items"
         role="img"
         style={
@@ -231,7 +231,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add"
         role="img"
         style={
@@ -248,7 +248,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-activity"
         role="img"
         style={
@@ -265,7 +265,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-activity-2"
         role="img"
         style={
@@ -282,7 +282,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-contact"
         role="img"
         style={
@@ -299,7 +299,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-coursebook"
         role="img"
         style={
@@ -316,7 +316,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-document"
         role="img"
         style={
@@ -333,7 +333,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-equipment"
         role="img"
         style={
@@ -350,7 +350,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-favorite"
         role="img"
         style={
@@ -367,7 +367,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-filter"
         role="img"
         style={
@@ -384,7 +384,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-photo"
         role="img"
         style={
@@ -401,7 +401,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-process"
         role="img"
         style={
@@ -418,7 +418,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--add-product"
         role="img"
         style={
@@ -435,7 +435,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--address-book"
         role="img"
         style={
@@ -452,7 +452,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--addresses"
         role="img"
         style={
@@ -469,7 +469,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--alert"
         role="img"
         style={
@@ -486,7 +486,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--along-stacked-chart"
         role="img"
         style={
@@ -503,7 +503,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--alphabetical-order"
         role="img"
         style={
@@ -520,7 +520,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--appointment"
         role="img"
         style={
@@ -537,7 +537,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--appointment-2"
         role="img"
         style={
@@ -554,7 +554,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--approvals"
         role="img"
         style={
@@ -571,7 +571,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--area-chart"
         role="img"
         style={
@@ -588,7 +588,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--arobase"
         role="img"
         style={
@@ -605,7 +605,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--arrow-bottom"
         role="img"
         style={
@@ -622,7 +622,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--arrow-down"
         role="img"
         style={
@@ -639,7 +639,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--arrow-left"
         role="img"
         style={
@@ -656,7 +656,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--arrow-right"
         role="img"
         style={
@@ -673,7 +673,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--arrow-top"
         role="img"
         style={
@@ -690,7 +690,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment"
         role="img"
         style={
@@ -707,7 +707,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-audio"
         role="img"
         style={
@@ -724,7 +724,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-e-pub"
         role="img"
         style={
@@ -741,7 +741,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-html"
         role="img"
         style={
@@ -758,7 +758,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-photo"
         role="img"
         style={
@@ -775,7 +775,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-text-file"
         role="img"
         style={
@@ -792,7 +792,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-video"
         role="img"
         style={
@@ -809,7 +809,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--attachment-zip-file"
         role="img"
         style={
@@ -826,7 +826,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--back-to-top"
         role="img"
         style={
@@ -843,7 +843,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--background"
         role="img"
         style={
@@ -860,7 +860,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--badge"
         role="img"
         style={
@@ -877,7 +877,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bar-chart"
         role="img"
         style={
@@ -894,7 +894,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bar-code"
         role="img"
         style={
@@ -911,7 +911,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--basket"
         role="img"
         style={
@@ -928,7 +928,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--batch-payments"
         role="img"
         style={
@@ -945,7 +945,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bbyd-active-sales"
         role="img"
         style={
@@ -962,7 +962,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bbyd-dashboard"
         role="img"
         style={
@@ -979,7 +979,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bed"
         role="img"
         style={
@@ -996,7 +996,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--begin"
         role="img"
         style={
@@ -1013,7 +1013,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bell"
         role="img"
         style={
@@ -1030,7 +1030,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--blank-tag"
         role="img"
         style={
@@ -1047,7 +1047,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--blank-tag-2"
         role="img"
         style={
@@ -1064,7 +1064,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bo-strategy-management"
         role="img"
         style={
@@ -1081,7 +1081,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bold-text"
         role="img"
         style={
@@ -1098,7 +1098,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bookmark"
         role="img"
         style={
@@ -1115,7 +1115,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--border"
         role="img"
         style={
@@ -1132,7 +1132,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--broken-link"
         role="img"
         style={
@@ -1149,7 +1149,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bubble-chart"
         role="img"
         style={
@@ -1166,7 +1166,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--building"
         role="img"
         style={
@@ -1183,7 +1183,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bullet-text"
         role="img"
         style={
@@ -1200,7 +1200,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--burglary"
         role="img"
         style={
@@ -1217,7 +1217,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--bus-public-transport"
         role="img"
         style={
@@ -1234,7 +1234,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--business-by-design"
         role="img"
         style={
@@ -1251,7 +1251,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--business-card"
         role="img"
         style={
@@ -1268,7 +1268,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--business-objects-experience"
         role="img"
         style={
@@ -1285,7 +1285,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--business-objects-explorer"
         role="img"
         style={
@@ -1302,7 +1302,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--business-objects-mobile"
         role="img"
         style={
@@ -1319,7 +1319,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--business-one"
         role="img"
         style={
@@ -1336,7 +1336,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--calendar"
         role="img"
         style={
@@ -1353,7 +1353,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--call"
         role="img"
         style={
@@ -1370,7 +1370,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--camera"
         role="img"
         style={
@@ -1387,7 +1387,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cancel"
         role="img"
         style={
@@ -1404,7 +1404,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cancel-maintenance"
         role="img"
         style={
@@ -1421,7 +1421,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cancel-share"
         role="img"
         style={
@@ -1438,7 +1438,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--capital-projects"
         role="img"
         style={
@@ -1455,7 +1455,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--car-rental"
         role="img"
         style={
@@ -1472,7 +1472,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--card"
         role="img"
         style={
@@ -1489,7 +1489,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cargo-train"
         role="img"
         style={
@@ -1506,7 +1506,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart"
         role="img"
         style={
@@ -1523,7 +1523,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart-2"
         role="img"
         style={
@@ -1540,7 +1540,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart-3"
         role="img"
         style={
@@ -1557,7 +1557,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart-4"
         role="img"
         style={
@@ -1574,7 +1574,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart-5"
         role="img"
         style={
@@ -1591,7 +1591,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart-approval"
         role="img"
         style={
@@ -1608,7 +1608,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cart-full"
         role="img"
         style={
@@ -1625,7 +1625,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cause"
         role="img"
         style={
@@ -1642,7 +1642,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--chain-link"
         role="img"
         style={
@@ -1659,7 +1659,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--chalkboard"
         role="img"
         style={
@@ -1676,7 +1676,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--chart-axis"
         role="img"
         style={
@@ -1693,7 +1693,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--chart-table-view"
         role="img"
         style={
@@ -1710,7 +1710,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--Chart-Tree-Map"
         role="img"
         style={
@@ -1727,7 +1727,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--check-availability"
         role="img"
         style={
@@ -1744,7 +1744,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--checklist"
         role="img"
         style={
@@ -1761,7 +1761,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--checklist-2"
         role="img"
         style={
@@ -1778,7 +1778,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--checklist-item"
         role="img"
         style={
@@ -1795,7 +1795,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--checklist-item-2"
         role="img"
         style={
@@ -1812,7 +1812,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--chevron-phase"
         role="img"
         style={
@@ -1829,7 +1829,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--chevron-phase-2"
         role="img"
         style={
@@ -1846,7 +1846,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--choropleth-chart"
         role="img"
         style={
@@ -1863,7 +1863,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--circle-task"
         role="img"
         style={
@@ -1880,7 +1880,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--circle-task-2"
         role="img"
         style={
@@ -1897,7 +1897,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--citizen-connect"
         role="img"
         style={
@@ -1914,7 +1914,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--clear-filter"
         role="img"
         style={
@@ -1931,7 +1931,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--clinical-order"
         role="img"
         style={
@@ -1948,7 +1948,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--clinical-tast-tracker"
         role="img"
         style={
@@ -1965,7 +1965,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--close-command-field"
         role="img"
         style={
@@ -1982,7 +1982,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cloud"
         role="img"
         style={
@@ -1999,7 +1999,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--co"
         role="img"
         style={
@@ -2016,7 +2016,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--collaborate"
         role="img"
         style={
@@ -2033,7 +2033,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--collapse"
         role="img"
         style={
@@ -2050,7 +2050,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--collapse-group"
         role="img"
         style={
@@ -2067,7 +2067,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--collections-insight"
         role="img"
         style={
@@ -2084,7 +2084,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--collections-management"
         role="img"
         style={
@@ -2101,7 +2101,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--collision"
         role="img"
         style={
@@ -2118,7 +2118,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--color-fill"
         role="img"
         style={
@@ -2135,7 +2135,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--column-chart-dual-axis"
         role="img"
         style={
@@ -2152,7 +2152,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--comment"
         role="img"
         style={
@@ -2169,7 +2169,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--commission-check"
         role="img"
         style={
@@ -2186,7 +2186,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--company-view"
         role="img"
         style={
@@ -2203,7 +2203,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--compare"
         role="img"
         style={
@@ -2220,7 +2220,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--compare-2"
         role="img"
         style={
@@ -2237,7 +2237,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--competitor"
         role="img"
         style={
@@ -2254,7 +2254,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--complete"
         role="img"
         style={
@@ -2271,7 +2271,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--connected"
         role="img"
         style={
@@ -2288,7 +2288,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--contacts"
         role="img"
         style={
@@ -2305,7 +2305,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--copy"
         role="img"
         style={
@@ -2322,7 +2322,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--course-book"
         role="img"
         style={
@@ -2339,7 +2339,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--course-program"
         role="img"
         style={
@@ -2356,7 +2356,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--create"
         role="img"
         style={
@@ -2373,7 +2373,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--create-entry-time"
         role="img"
         style={
@@ -2390,7 +2390,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--create-form"
         role="img"
         style={
@@ -2407,7 +2407,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--create-leave-request"
         role="img"
         style={
@@ -2424,7 +2424,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--create-session"
         role="img"
         style={
@@ -2441,7 +2441,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--credit-card"
         role="img"
         style={
@@ -2458,7 +2458,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--crm-sales"
         role="img"
         style={
@@ -2475,7 +2475,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--crm-service-manager"
         role="img"
         style={
@@ -2492,7 +2492,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--crop"
         role="img"
         style={
@@ -2509,7 +2509,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--crossed-line-chart"
         role="img"
         style={
@@ -2526,7 +2526,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--curriculum"
         role="img"
         style={
@@ -2543,7 +2543,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--cursor"
         role="img"
         style={
@@ -2560,7 +2560,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer"
         role="img"
         style={
@@ -2577,7 +2577,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-and-contacts"
         role="img"
         style={
@@ -2594,7 +2594,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-and-supplier"
         role="img"
         style={
@@ -2611,7 +2611,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-briefing"
         role="img"
         style={
@@ -2628,7 +2628,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-financial-fact-sheet"
         role="img"
         style={
@@ -2645,7 +2645,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-history"
         role="img"
         style={
@@ -2662,7 +2662,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-order-entry"
         role="img"
         style={
@@ -2679,7 +2679,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customer-view"
         role="img"
         style={
@@ -2696,7 +2696,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--customize"
         role="img"
         style={
@@ -2713,7 +2713,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--database"
         role="img"
         style={
@@ -2730,7 +2730,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--date-time"
         role="img"
         style={
@@ -2747,7 +2747,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--decision"
         role="img"
         style={
@@ -2764,7 +2764,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--decline"
         role="img"
         style={
@@ -2781,7 +2781,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--decrease-line-height"
         role="img"
         style={
@@ -2798,7 +2798,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--delete"
         role="img"
         style={
@@ -2815,7 +2815,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--detail-view"
         role="img"
         style={
@@ -2832,7 +2832,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--developer-settings"
         role="img"
         style={
@@ -2849,7 +2849,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--dimension"
         role="img"
         style={
@@ -2866,7 +2866,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--disconnected"
         role="img"
         style={
@@ -2883,7 +2883,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--discussion"
         role="img"
         style={
@@ -2900,7 +2900,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--discussion-2"
         role="img"
         style={
@@ -2917,7 +2917,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--dishwasher"
         role="img"
         style={
@@ -2934,7 +2934,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--display"
         role="img"
         style={
@@ -2951,7 +2951,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--display-more"
         role="img"
         style={
@@ -2968,7 +2968,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--doc-attachment"
         role="img"
         style={
@@ -2985,7 +2985,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--doctor"
         role="img"
         style={
@@ -3002,7 +3002,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--document"
         role="img"
         style={
@@ -3019,7 +3019,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--document-text"
         role="img"
         style={
@@ -3036,7 +3036,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--documents"
         role="img"
         style={
@@ -3053,7 +3053,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--donut-chart"
         role="img"
         style={
@@ -3070,7 +3070,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--down"
         role="img"
         style={
@@ -3087,7 +3087,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--download"
         role="img"
         style={
@@ -3104,7 +3104,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--download-from-cloud"
         role="img"
         style={
@@ -3121,7 +3121,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--draw-rectangle"
         role="img"
         style={
@@ -3138,7 +3138,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--drill-down"
         role="img"
         style={
@@ -3155,7 +3155,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--drill-up"
         role="img"
         style={
@@ -3172,7 +3172,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--drop-down-list"
         role="img"
         style={
@@ -3189,7 +3189,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--dropdown"
         role="img"
         style={
@@ -3206,7 +3206,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--duplicate"
         role="img"
         style={
@@ -3223,7 +3223,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--e-care"
         role="img"
         style={
@@ -3240,7 +3240,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--e-learning"
         role="img"
         style={
@@ -3257,7 +3257,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--eam-work-order"
         role="img"
         style={
@@ -3274,7 +3274,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--edit"
         role="img"
         style={
@@ -3291,7 +3291,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--edit-outside"
         role="img"
         style={
@@ -3308,7 +3308,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--education"
         role="img"
         style={
@@ -3325,7 +3325,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--electrocardiogram"
         role="img"
         style={
@@ -3342,7 +3342,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--electronic-medical-record"
         role="img"
         style={
@@ -3359,7 +3359,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--email"
         role="img"
         style={
@@ -3376,7 +3376,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--email-read"
         role="img"
         style={
@@ -3393,7 +3393,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--employee"
         role="img"
         style={
@@ -3410,7 +3410,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--employee-approvals"
         role="img"
         style={
@@ -3427,7 +3427,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--employee-lookup"
         role="img"
         style={
@@ -3444,7 +3444,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--employee-pane"
         role="img"
         style={
@@ -3461,7 +3461,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--employee-rejections"
         role="img"
         style={
@@ -3478,7 +3478,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--end-user-experience-monitoring"
         role="img"
         style={
@@ -3495,7 +3495,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--endoscopy"
         role="img"
         style={
@@ -3512,7 +3512,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--energy-saving-lightbulb"
         role="img"
         style={
@@ -3529,7 +3529,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--enter-more"
         role="img"
         style={
@@ -3546,7 +3546,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--eraser"
         role="img"
         style={
@@ -3563,7 +3563,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--error"
         role="img"
         style={
@@ -3580,7 +3580,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--example"
         role="img"
         style={
@@ -3597,7 +3597,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--excel-attachment"
         role="img"
         style={
@@ -3614,7 +3614,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--exitfullscreen"
         role="img"
         style={
@@ -3631,7 +3631,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--expand"
         role="img"
         style={
@@ -3648,7 +3648,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--expand-group"
         role="img"
         style={
@@ -3665,7 +3665,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--expense-report"
         role="img"
         style={
@@ -3682,7 +3682,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--explorer"
         role="img"
         style={
@@ -3699,7 +3699,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--factory"
         role="img"
         style={
@@ -3716,7 +3716,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--fallback"
         role="img"
         style={
@@ -3733,7 +3733,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--family-care"
         role="img"
         style={
@@ -3750,7 +3750,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--family-protection"
         role="img"
         style={
@@ -3767,7 +3767,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--favorite"
         role="img"
         style={
@@ -3784,7 +3784,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--favorite-list"
         role="img"
         style={
@@ -3801,7 +3801,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--fax-machine"
         role="img"
         style={
@@ -3818,7 +3818,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--feed"
         role="img"
         style={
@@ -3835,7 +3835,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--feeder-arrow"
         role="img"
         style={
@@ -3852,7 +3852,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--filter"
         role="img"
         style={
@@ -3869,7 +3869,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--filter-analytics"
         role="img"
         style={
@@ -3886,7 +3886,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--filter-facets"
         role="img"
         style={
@@ -3903,7 +3903,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--filter-fields"
         role="img"
         style={
@@ -3920,7 +3920,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--flag"
         role="img"
         style={
@@ -3937,7 +3937,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--flight"
         role="img"
         style={
@@ -3954,7 +3954,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--fob-watch"
         role="img"
         style={
@@ -3971,7 +3971,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--folder"
         role="img"
         style={
@@ -3988,7 +3988,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--folder-blank"
         role="img"
         style={
@@ -4005,7 +4005,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--folder-full"
         role="img"
         style={
@@ -4022,7 +4022,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--form"
         role="img"
         style={
@@ -4039,7 +4039,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--forward"
         role="img"
         style={
@@ -4056,7 +4056,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--fridge"
         role="img"
         style={
@@ -4073,7 +4073,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--full-screen"
         role="img"
         style={
@@ -4090,7 +4090,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--full-stacked-chart"
         role="img"
         style={
@@ -4107,7 +4107,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--full-stacked-column-chart"
         role="img"
         style={
@@ -4124,7 +4124,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--functional-location"
         role="img"
         style={
@@ -4141,7 +4141,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--future"
         role="img"
         style={
@@ -4158,7 +4158,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--gantt-bars"
         role="img"
         style={
@@ -4175,7 +4175,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--general-leave-request"
         role="img"
         style={
@@ -4192,7 +4192,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--generate-shortcut"
         role="img"
         style={
@@ -4209,7 +4209,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--geographic-bubble-chart"
         role="img"
         style={
@@ -4226,7 +4226,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--globe"
         role="img"
         style={
@@ -4243,7 +4243,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--goal"
         role="img"
         style={
@@ -4260,7 +4260,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--goalseek"
         role="img"
         style={
@@ -4277,7 +4277,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--grid"
         role="img"
         style={
@@ -4294,7 +4294,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--group"
         role="img"
         style={
@@ -4311,7 +4311,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--group-2"
         role="img"
         style={
@@ -4328,7 +4328,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--header"
         role="img"
         style={
@@ -4345,7 +4345,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--heading-1"
         role="img"
         style={
@@ -4362,7 +4362,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--heading-2"
         role="img"
         style={
@@ -4379,7 +4379,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--heading-3"
         role="img"
         style={
@@ -4396,7 +4396,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--headset"
         role="img"
         style={
@@ -4413,7 +4413,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--heating-cooling"
         role="img"
         style={
@@ -4430,7 +4430,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--heatmap-chart"
         role="img"
         style={
@@ -4447,7 +4447,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--hello-world"
         role="img"
         style={
@@ -4464,7 +4464,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--hide"
         role="img"
         style={
@@ -4481,7 +4481,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--hint"
         role="img"
         style={
@@ -4498,7 +4498,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--history"
         role="img"
         style={
@@ -4515,7 +4515,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--home"
         role="img"
         style={
@@ -4532,7 +4532,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--home-share"
         role="img"
         style={
@@ -4549,7 +4549,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--horizontal-bar-chart"
         role="img"
         style={
@@ -4566,7 +4566,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--horizontal-bar-chart-2"
         role="img"
         style={
@@ -4583,7 +4583,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--horizontal-bullet-chart"
         role="img"
         style={
@@ -4600,7 +4600,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--horizontal-grip"
         role="img"
         style={
@@ -4617,7 +4617,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--horizontal-stacked-chart"
         role="img"
         style={
@@ -4634,7 +4634,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--horizontal-waterfall-chart"
         role="img"
         style={
@@ -4651,7 +4651,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--hr-approval"
         role="img"
         style={
@@ -4668,7 +4668,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--idea-wall"
         role="img"
         style={
@@ -4685,7 +4685,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--image-viewer"
         role="img"
         style={
@@ -4702,7 +4702,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--inbox"
         role="img"
         style={
@@ -4719,7 +4719,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--incident"
         role="img"
         style={
@@ -4736,7 +4736,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--incoming-call"
         role="img"
         style={
@@ -4753,7 +4753,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--increase-line-height"
         role="img"
         style={
@@ -4770,7 +4770,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--indent"
         role="img"
         style={
@@ -4787,7 +4787,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--initiative"
         role="img"
         style={
@@ -4804,7 +4804,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--inspect"
         role="img"
         style={
@@ -4821,7 +4821,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--inspect-down"
         role="img"
         style={
@@ -4838,7 +4838,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--inspection"
         role="img"
         style={
@@ -4855,7 +4855,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--instance"
         role="img"
         style={
@@ -4872,7 +4872,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--insurance-car"
         role="img"
         style={
@@ -4889,7 +4889,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--insurance-house"
         role="img"
         style={
@@ -4906,7 +4906,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--insurance-life"
         role="img"
         style={
@@ -4923,7 +4923,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--internet-browser"
         role="img"
         style={
@@ -4940,7 +4940,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--inventory"
         role="img"
         style={
@@ -4957,7 +4957,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--ipad"
         role="img"
         style={
@@ -4974,7 +4974,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--ipad-2"
         role="img"
         style={
@@ -4991,7 +4991,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--iphone"
         role="img"
         style={
@@ -5008,7 +5008,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--iphone-2"
         role="img"
         style={
@@ -5025,7 +5025,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--it-host"
         role="img"
         style={
@@ -5042,7 +5042,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--it-instance"
         role="img"
         style={
@@ -5059,7 +5059,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--it-system"
         role="img"
         style={
@@ -5076,7 +5076,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--italic-text"
         role="img"
         style={
@@ -5093,7 +5093,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--jam"
         role="img"
         style={
@@ -5110,7 +5110,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--journey-arrive"
         role="img"
         style={
@@ -5127,7 +5127,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--journey-change"
         role="img"
         style={
@@ -5144,7 +5144,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--journey-depart"
         role="img"
         style={
@@ -5161,7 +5161,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--key"
         role="img"
         style={
@@ -5178,7 +5178,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--key-user-settings"
         role="img"
         style={
@@ -5195,7 +5195,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--kpi-corporate-performance"
         role="img"
         style={
@@ -5212,7 +5212,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--kpi-managing-my-area"
         role="img"
         style={
@@ -5229,7 +5229,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--lab"
         role="img"
         style={
@@ -5246,7 +5246,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--laptop"
         role="img"
         style={
@@ -5263,7 +5263,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--lateness"
         role="img"
         style={
@@ -5280,7 +5280,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--lead"
         role="img"
         style={
@@ -5297,7 +5297,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--lead-outdated"
         role="img"
         style={
@@ -5314,7 +5314,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--leads"
         role="img"
         style={
@@ -5331,7 +5331,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--learning-assistant"
         role="img"
         style={
@@ -5348,7 +5348,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--legend"
         role="img"
         style={
@@ -5365,7 +5365,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--less"
         role="img"
         style={
@@ -5382,7 +5382,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--letter"
         role="img"
         style={
@@ -5399,7 +5399,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--lightbulb"
         role="img"
         style={
@@ -5416,7 +5416,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--line-chart"
         role="img"
         style={
@@ -5433,7 +5433,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--line-chart-dual-axis"
         role="img"
         style={
@@ -5450,7 +5450,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--line-chart-time-axis"
         role="img"
         style={
@@ -5467,7 +5467,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--line-charts"
         role="img"
         style={
@@ -5484,7 +5484,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--list"
         role="img"
         style={
@@ -5501,7 +5501,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--loan"
         role="img"
         style={
@@ -5518,7 +5518,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--locate-me"
         role="img"
         style={
@@ -5535,7 +5535,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--locked"
         role="img"
         style={
@@ -5552,7 +5552,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--log"
         role="img"
         style={
@@ -5569,7 +5569,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--machine"
         role="img"
         style={
@@ -5586,7 +5586,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--manager"
         role="img"
         style={
@@ -5603,7 +5603,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--manager-insight"
         role="img"
         style={
@@ -5620,7 +5620,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--map"
         role="img"
         style={
@@ -5637,7 +5637,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--map-2"
         role="img"
         style={
@@ -5654,7 +5654,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--map-3"
         role="img"
         style={
@@ -5671,7 +5671,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--marketing-campaign"
         role="img"
         style={
@@ -5688,7 +5688,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--master-task-triangle"
         role="img"
         style={
@@ -5705,7 +5705,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--master-task-triangle-2"
         role="img"
         style={
@@ -5722,7 +5722,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--meal"
         role="img"
         style={
@@ -5739,7 +5739,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--measure"
         role="img"
         style={
@@ -5756,7 +5756,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--measurement-document"
         role="img"
         style={
@@ -5773,7 +5773,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--measuring-point"
         role="img"
         style={
@@ -5790,7 +5790,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--media-forward"
         role="img"
         style={
@@ -5807,7 +5807,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--media-pause"
         role="img"
         style={
@@ -5824,7 +5824,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--media-play"
         role="img"
         style={
@@ -5841,7 +5841,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--media-reverse"
         role="img"
         style={
@@ -5858,7 +5858,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--media-rewind"
         role="img"
         style={
@@ -5875,7 +5875,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--meeting-room"
         role="img"
         style={
@@ -5892,7 +5892,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--menu"
         role="img"
         style={
@@ -5909,7 +5909,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--menu2"
         role="img"
         style={
@@ -5926,7 +5926,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--message-error"
         role="img"
         style={
@@ -5943,7 +5943,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--message-information"
         role="img"
         style={
@@ -5960,7 +5960,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--message-popup"
         role="img"
         style={
@@ -5977,7 +5977,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--message-success"
         role="img"
         style={
@@ -5994,7 +5994,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--message-warning"
         role="img"
         style={
@@ -6011,7 +6011,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--microphone"
         role="img"
         style={
@@ -6028,7 +6028,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--mileage"
         role="img"
         style={
@@ -6045,7 +6045,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--minimize"
         role="img"
         style={
@@ -6062,7 +6062,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--mirrored-task-circle"
         role="img"
         style={
@@ -6079,7 +6079,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--mirrored-task-circle-2"
         role="img"
         style={
@@ -6096,7 +6096,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--money-bills"
         role="img"
         style={
@@ -6113,7 +6113,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--monitor-payments"
         role="img"
         style={
@@ -6130,7 +6130,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--move"
         role="img"
         style={
@@ -6147,7 +6147,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--mri-scan"
         role="img"
         style={
@@ -6164,7 +6164,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiple-bar-chart"
         role="img"
         style={
@@ -6181,7 +6181,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiple-line-chart"
         role="img"
         style={
@@ -6198,7 +6198,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiple-pie-chart"
         role="img"
         style={
@@ -6215,7 +6215,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiple-radar-chart"
         role="img"
         style={
@@ -6232,7 +6232,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiselect"
         role="img"
         style={
@@ -6249,7 +6249,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiselect-all"
         role="img"
         style={
@@ -6266,7 +6266,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--multiselect-none"
         role="img"
         style={
@@ -6283,7 +6283,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--my-sales-order"
         role="img"
         style={
@@ -6300,7 +6300,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--my-view"
         role="img"
         style={
@@ -6317,7 +6317,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--nav-back"
         role="img"
         style={
@@ -6334,7 +6334,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--navigation-down-arrow"
         role="img"
         style={
@@ -6351,7 +6351,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--navigation-left-arrow"
         role="img"
         style={
@@ -6368,7 +6368,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--navigation-right-arrow"
         role="img"
         style={
@@ -6385,7 +6385,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--navigation-up-arrow"
         role="img"
         style={
@@ -6402,7 +6402,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--negative"
         role="img"
         style={
@@ -6419,7 +6419,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--Netweaver-business-client"
         role="img"
         style={
@@ -6436,7 +6436,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--newspaper"
         role="img"
         style={
@@ -6453,7 +6453,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--notes"
         role="img"
         style={
@@ -6470,7 +6470,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--notification-2"
         role="img"
         style={
@@ -6487,7 +6487,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--number-sign"
         role="img"
         style={
@@ -6504,7 +6504,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--numbered-text"
         role="img"
         style={
@@ -6521,7 +6521,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--nurse"
         role="img"
         style={
@@ -6538,7 +6538,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--nutrition-activity"
         role="img"
         style={
@@ -6555,7 +6555,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--official-service"
         role="img"
         style={
@@ -6572,7 +6572,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--offsite-work"
         role="img"
         style={
@@ -6589,7 +6589,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--open-command-field"
         role="img"
         style={
@@ -6606,7 +6606,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--open-folder"
         role="img"
         style={
@@ -6623,7 +6623,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--opportunities"
         role="img"
         style={
@@ -6640,7 +6640,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--opportunity"
         role="img"
         style={
@@ -6657,7 +6657,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--order-status"
         role="img"
         style={
@@ -6674,7 +6674,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--org-chart"
         role="img"
         style={
@@ -6691,7 +6691,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--outbox"
         role="img"
         style={
@@ -6708,7 +6708,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--outdent"
         role="img"
         style={
@@ -6725,7 +6725,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--outgoing-call"
         role="img"
         style={
@@ -6742,7 +6742,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--overflow"
         role="img"
         style={
@@ -6759,7 +6759,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--overlay"
         role="img"
         style={
@@ -6776,7 +6776,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--overview-chart"
         role="img"
         style={
@@ -6793,7 +6793,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--paging"
         role="img"
         style={
@@ -6810,7 +6810,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--paid-leave"
         role="img"
         style={
@@ -6827,7 +6827,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--palette"
         role="img"
         style={
@@ -6844,7 +6844,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--paper-plane"
         role="img"
         style={
@@ -6861,7 +6861,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--passenger-train"
         role="img"
         style={
@@ -6878,7 +6878,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--past"
         role="img"
         style={
@@ -6895,7 +6895,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--paste"
         role="img"
         style={
@@ -6912,7 +6912,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pause"
         role="img"
         style={
@@ -6929,7 +6929,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--payment-approval"
         role="img"
         style={
@@ -6946,7 +6946,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pdf-attachment"
         role="img"
         style={
@@ -6963,7 +6963,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pdf-reader"
         role="img"
         style={
@@ -6980,7 +6980,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pending"
         role="img"
         style={
@@ -6997,7 +6997,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--per-diem"
         role="img"
         style={
@@ -7014,7 +7014,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--performance"
         role="img"
         style={
@@ -7031,7 +7031,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--permission"
         role="img"
         style={
@@ -7048,7 +7048,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--person-placeholder"
         role="img"
         style={
@@ -7065,7 +7065,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--personnel-view"
         role="img"
         style={
@@ -7082,7 +7082,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pharmacy"
         role="img"
         style={
@@ -7099,7 +7099,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--phone"
         role="img"
         style={
@@ -7116,7 +7116,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--photo-voltaic"
         role="img"
         style={
@@ -7133,7 +7133,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--physical-activity"
         role="img"
         style={
@@ -7150,7 +7150,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--picture"
         role="img"
         style={
@@ -7167,7 +7167,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pie-chart"
         role="img"
         style={
@@ -7184,7 +7184,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pipeline-analysis"
         role="img"
         style={
@@ -7201,7 +7201,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--play"
         role="img"
         style={
@@ -7218,7 +7218,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pool"
         role="img"
         style={
@@ -7235,7 +7235,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--popup-window"
         role="img"
         style={
@@ -7252,7 +7252,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--positive"
         role="img"
         style={
@@ -7269,7 +7269,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--post"
         role="img"
         style={
@@ -7286,7 +7286,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--ppt-attachment"
         role="img"
         style={
@@ -7303,7 +7303,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--present"
         role="img"
         style={
@@ -7320,7 +7320,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--print"
         role="img"
         style={
@@ -7337,7 +7337,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--private"
         role="img"
         style={
@@ -7354,7 +7354,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--process"
         role="img"
         style={
@@ -7371,7 +7371,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--product"
         role="img"
         style={
@@ -7388,7 +7388,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--program-triangles"
         role="img"
         style={
@@ -7405,7 +7405,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--program-triangles-2"
         role="img"
         style={
@@ -7422,7 +7422,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--project-definition-triangle"
         role="img"
         style={
@@ -7439,7 +7439,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--project-definition-triangle-2"
         role="img"
         style={
@@ -7456,7 +7456,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--projector"
         role="img"
         style={
@@ -7473,7 +7473,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--provision"
         role="img"
         style={
@@ -7490,7 +7490,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pull-down"
         role="img"
         style={
@@ -7507,7 +7507,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pushpin-off"
         role="img"
         style={
@@ -7524,7 +7524,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--pushpin-on"
         role="img"
         style={
@@ -7541,7 +7541,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--puzzle"
         role="img"
         style={
@@ -7558,7 +7558,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--quality-issue"
         role="img"
         style={
@@ -7575,7 +7575,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--question-mark"
         role="img"
         style={
@@ -7592,7 +7592,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--radar-chart"
         role="img"
         style={
@@ -7609,7 +7609,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--receipt"
         role="img"
         style={
@@ -7626,7 +7626,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--record"
         role="img"
         style={
@@ -7643,7 +7643,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--redo"
         role="img"
         style={
@@ -7660,7 +7660,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--refresh"
         role="img"
         style={
@@ -7677,7 +7677,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--repost"
         role="img"
         style={
@@ -7694,7 +7694,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--request"
         role="img"
         style={
@@ -7711,7 +7711,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--reset"
         role="img"
         style={
@@ -7728,7 +7728,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--resize"
         role="img"
         style={
@@ -7745,7 +7745,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--resize-corner"
         role="img"
         style={
@@ -7762,7 +7762,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--resize-horizontal"
         role="img"
         style={
@@ -7779,7 +7779,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--resize-vertical"
         role="img"
         style={
@@ -7796,7 +7796,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--response"
         role="img"
         style={
@@ -7813,7 +7813,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--restart"
         role="img"
         style={
@@ -7830,7 +7830,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--retail-store"
         role="img"
         style={
@@ -7847,7 +7847,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--retail-store-manager"
         role="img"
         style={
@@ -7864,7 +7864,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--rhombus-milestone"
         role="img"
         style={
@@ -7881,7 +7881,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--rhombus-milestone-2"
         role="img"
         style={
@@ -7898,7 +7898,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--role"
         role="img"
         style={
@@ -7915,7 +7915,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sales-document"
         role="img"
         style={
@@ -7932,7 +7932,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sales-notification"
         role="img"
         style={
@@ -7949,7 +7949,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sales-order"
         role="img"
         style={
@@ -7966,7 +7966,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sales-order-item"
         role="img"
         style={
@@ -7983,7 +7983,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sales-quote"
         role="img"
         style={
@@ -8000,7 +8000,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sap-box"
         role="img"
         style={
@@ -8017,7 +8017,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sap-logo-shape"
         role="img"
         style={
@@ -8034,7 +8034,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sap-ui5"
         role="img"
         style={
@@ -8051,7 +8051,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--save"
         role="img"
         style={
@@ -8068,7 +8068,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--scatter-chart"
         role="img"
         style={
@@ -8085,7 +8085,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--scissors"
         role="img"
         style={
@@ -8102,7 +8102,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--screen-split-one"
         role="img"
         style={
@@ -8119,7 +8119,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--screen-split-three"
         role="img"
         style={
@@ -8136,7 +8136,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--screen-split-two"
         role="img"
         style={
@@ -8153,7 +8153,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--search"
         role="img"
         style={
@@ -8170,7 +8170,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--settings"
         role="img"
         style={
@@ -8187,7 +8187,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--share"
         role="img"
         style={
@@ -8204,7 +8204,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--share-2"
         role="img"
         style={
@@ -8221,7 +8221,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--shelf"
         role="img"
         style={
@@ -8238,7 +8238,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--shield"
         role="img"
         style={
@@ -8255,7 +8255,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--shipping-status"
         role="img"
         style={
@@ -8272,7 +8272,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--shortcut"
         role="img"
         style={
@@ -8289,7 +8289,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--show"
         role="img"
         style={
@@ -8306,7 +8306,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--signature"
         role="img"
         style={
@@ -8323,7 +8323,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--simple-payment"
         role="img"
         style={
@@ -8340,7 +8340,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--simulate"
         role="img"
         style={
@@ -8357,7 +8357,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--slim-arrow-down"
         role="img"
         style={
@@ -8374,7 +8374,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--slim-arrow-left"
         role="img"
         style={
@@ -8391,7 +8391,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--slim-arrow-right"
         role="img"
         style={
@@ -8408,7 +8408,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--slim-arrow-up"
         role="img"
         style={
@@ -8425,7 +8425,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--soccor"
         role="img"
         style={
@@ -8442,7 +8442,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sonography"
         role="img"
         style={
@@ -8459,7 +8459,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sort"
         role="img"
         style={
@@ -8476,7 +8476,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sort-ascending"
         role="img"
         style={
@@ -8493,7 +8493,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sort-descending"
         role="img"
         style={
@@ -8510,7 +8510,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sorting-ranking"
         role="img"
         style={
@@ -8527,7 +8527,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sound"
         role="img"
         style={
@@ -8544,7 +8544,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sound-loud"
         role="img"
         style={
@@ -8561,7 +8561,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sound-off"
         role="img"
         style={
@@ -8578,7 +8578,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--source-code"
         role="img"
         style={
@@ -8595,7 +8595,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--status-critical"
         role="img"
         style={
@@ -8612,7 +8612,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--status-inactive"
         role="img"
         style={
@@ -8629,7 +8629,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--status-negative"
         role="img"
         style={
@@ -8646,7 +8646,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--status-positive"
         role="img"
         style={
@@ -8663,7 +8663,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--step"
         role="img"
         style={
@@ -8680,7 +8680,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--stethoscope"
         role="img"
         style={
@@ -8697,7 +8697,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--stop"
         role="img"
         style={
@@ -8714,7 +8714,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--study-leave"
         role="img"
         style={
@@ -8731,7 +8731,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--subway-train"
         role="img"
         style={
@@ -8748,7 +8748,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--suitcase"
         role="img"
         style={
@@ -8765,7 +8765,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--supplier"
         role="img"
         style={
@@ -8782,7 +8782,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--survey"
         role="img"
         style={
@@ -8799,7 +8799,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--switch-classes"
         role="img"
         style={
@@ -8816,7 +8816,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--switch-views"
         role="img"
         style={
@@ -8833,7 +8833,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--synchronize"
         role="img"
         style={
@@ -8850,7 +8850,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--syntax"
         role="img"
         style={
@@ -8867,7 +8867,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--syringe"
         role="img"
         style={
@@ -8884,7 +8884,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-add"
         role="img"
         style={
@@ -8901,7 +8901,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-back"
         role="img"
         style={
@@ -8918,7 +8918,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-back-2"
         role="img"
         style={
@@ -8935,7 +8935,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-cancel"
         role="img"
         style={
@@ -8952,7 +8952,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-cancel-2"
         role="img"
         style={
@@ -8969,7 +8969,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-enter"
         role="img"
         style={
@@ -8986,7 +8986,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-enter-2"
         role="img"
         style={
@@ -9003,7 +9003,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-find"
         role="img"
         style={
@@ -9020,7 +9020,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-find-next"
         role="img"
         style={
@@ -9037,7 +9037,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-first-page"
         role="img"
         style={
@@ -9054,7 +9054,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-help"
         role="img"
         style={
@@ -9071,7 +9071,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-help-2"
         role="img"
         style={
@@ -9088,7 +9088,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-last-page"
         role="img"
         style={
@@ -9105,7 +9105,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-minus"
         role="img"
         style={
@@ -9122,7 +9122,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-monitor"
         role="img"
         style={
@@ -9139,7 +9139,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-next-page"
         role="img"
         style={
@@ -9156,7 +9156,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--sys-prev-page"
         role="img"
         style={
@@ -9173,7 +9173,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--system-exit"
         role="img"
         style={
@@ -9190,7 +9190,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--system-exit-2"
         role="img"
         style={
@@ -9207,7 +9207,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--table-chart"
         role="img"
         style={
@@ -9224,7 +9224,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--table-view"
         role="img"
         style={
@@ -9241,7 +9241,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--tag"
         role="img"
         style={
@@ -9258,7 +9258,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--tag-cloud-chart"
         role="img"
         style={
@@ -9275,7 +9275,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--tags"
         role="img"
         style={
@@ -9292,7 +9292,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--target-group"
         role="img"
         style={
@@ -9309,7 +9309,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--task"
         role="img"
         style={
@@ -9326,7 +9326,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--taxi"
         role="img"
         style={
@@ -9343,7 +9343,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--technical-object"
         role="img"
         style={
@@ -9360,7 +9360,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--temperature"
         role="img"
         style={
@@ -9377,7 +9377,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--text-align-center"
         role="img"
         style={
@@ -9394,7 +9394,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--text-align-justified"
         role="img"
         style={
@@ -9411,7 +9411,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--text-align-left"
         role="img"
         style={
@@ -9428,7 +9428,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--text-align-right"
         role="img"
         style={
@@ -9445,7 +9445,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--text-formatting"
         role="img"
         style={
@@ -9462,7 +9462,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--theater"
         role="img"
         style={
@@ -9479,7 +9479,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--thing-type"
         role="img"
         style={
@@ -9496,7 +9496,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--thumb-down"
         role="img"
         style={
@@ -9513,7 +9513,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--thumb-up"
         role="img"
         style={
@@ -9530,7 +9530,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--time-account"
         role="img"
         style={
@@ -9547,7 +9547,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--time-entry-request"
         role="img"
         style={
@@ -9564,7 +9564,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--time-overtime"
         role="img"
         style={
@@ -9581,7 +9581,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--timesheet"
         role="img"
         style={
@@ -9598,7 +9598,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--to-be-reviewed"
         role="img"
         style={
@@ -9615,7 +9615,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--toaster-down"
         role="img"
         style={
@@ -9632,7 +9632,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--toaster-top"
         role="img"
         style={
@@ -9649,7 +9649,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--toaster-up"
         role="img"
         style={
@@ -9666,7 +9666,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--tools-opportunity"
         role="img"
         style={
@@ -9683,7 +9683,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--travel-expense"
         role="img"
         style={
@@ -9700,7 +9700,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--travel-expense-report"
         role="img"
         style={
@@ -9717,7 +9717,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--travel-itinerary"
         role="img"
         style={
@@ -9734,7 +9734,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--travel-request"
         role="img"
         style={
@@ -9751,7 +9751,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--tree"
         role="img"
         style={
@@ -9768,7 +9768,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--trend-down"
         role="img"
         style={
@@ -9785,7 +9785,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--trend-up"
         role="img"
         style={
@@ -9802,7 +9802,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--trip-report"
         role="img"
         style={
@@ -9819,7 +9819,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--ui-notifications"
         role="img"
         style={
@@ -9836,7 +9836,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--umbrella"
         role="img"
         style={
@@ -9853,7 +9853,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--underline-text"
         role="img"
         style={
@@ -9870,7 +9870,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--undo"
         role="img"
         style={
@@ -9887,7 +9887,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--unfavorite"
         role="img"
         style={
@@ -9904,7 +9904,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--unlocked"
         role="img"
         style={
@@ -9921,7 +9921,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--unpaid-leave"
         role="img"
         style={
@@ -9938,7 +9938,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--unwired"
         role="img"
         style={
@@ -9955,7 +9955,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--up"
         role="img"
         style={
@@ -9972,7 +9972,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--upload"
         role="img"
         style={
@@ -9989,7 +9989,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--upload-to-cloud"
         role="img"
         style={
@@ -10006,7 +10006,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--upstacked-chart"
         role="img"
         style={
@@ -10023,7 +10023,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--user-edit"
         role="img"
         style={
@@ -10040,7 +10040,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--user-settings"
         role="img"
         style={
@@ -10057,7 +10057,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--value-help"
         role="img"
         style={
@@ -10074,7 +10074,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vds-file"
         role="img"
         style={
@@ -10091,7 +10091,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vehicle-repair"
         role="img"
         style={
@@ -10108,7 +10108,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vertical-bar-chart"
         role="img"
         style={
@@ -10125,7 +10125,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vertical-bar-chart-2"
         role="img"
         style={
@@ -10142,7 +10142,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vertical-bullet-chart"
         role="img"
         style={
@@ -10159,7 +10159,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vertical-grip"
         role="img"
         style={
@@ -10176,7 +10176,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vertical-stacked-chart"
         role="img"
         style={
@@ -10193,7 +10193,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--vertical-waterfall-chart"
         role="img"
         style={
@@ -10210,7 +10210,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--video"
         role="img"
         style={
@@ -10227,7 +10227,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--visits"
         role="img"
         style={
@@ -10244,7 +10244,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--waiver"
         role="img"
         style={
@@ -10261,7 +10261,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--wallet"
         role="img"
         style={
@@ -10278,7 +10278,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--warning"
         role="img"
         style={
@@ -10295,7 +10295,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--warning2"
         role="img"
         style={
@@ -10312,7 +10312,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--washing-machine"
         role="img"
         style={
@@ -10329,7 +10329,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--weather-proofing"
         role="img"
         style={
@@ -10346,7 +10346,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--web-cam"
         role="img"
         style={
@@ -10363,7 +10363,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--widgets"
         role="img"
         style={
@@ -10380,7 +10380,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--windows-doors"
         role="img"
         style={
@@ -10397,7 +10397,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--work-history"
         role="img"
         style={
@@ -10414,7 +10414,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--workflow-tasks"
         role="img"
         style={
@@ -10431,7 +10431,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--world"
         role="img"
         style={
@@ -10448,7 +10448,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--wounds-doc"
         role="img"
         style={
@@ -10465,7 +10465,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--wrench"
         role="img"
         style={
@@ -10482,7 +10482,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--write-new"
         role="img"
         style={
@@ -10499,7 +10499,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--write-new-document"
         role="img"
         style={
@@ -10516,7 +10516,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--x-ray"
         role="img"
         style={
@@ -10533,7 +10533,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--zoom-in"
         role="img"
         style={
@@ -10550,7 +10550,7 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
     <div
       className="fddocs-container--icon"
     >
-      <span
+      <i
         className="sap-icon--zoom-out"
         role="img"
         style={
@@ -10572,7 +10572,7 @@ exports[`Storyshots Component API/Icon Primary 1`] = `
 <div
   dir="ltr"
 >
-  <span
+  <i
     className="sap-icon--cart"
     role="img"
   />
@@ -10586,7 +10586,7 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
   <div
     className="fddocs-container"
   >
-    <span
+    <i
       className="sap-icon--cart"
       role="img"
       style={
@@ -10595,11 +10595,11 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
         }
       }
     />
-    <span
+    <i
       className="sap-icon--cart"
       role="img"
     />
-    <span
+    <i
       className="sap-icon--cart"
       role="img"
       style={
@@ -10608,7 +10608,7 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
         }
       }
     />
-    <span
+    <i
       className="sap-icon--cart"
       role="img"
       style={
@@ -10617,7 +10617,7 @@ exports[`Storyshots Component API/Icon Sizes 1`] = `
         }
       }
     />
-    <span
+    <i
       className="sap-icon--cart"
       role="img"
       style={

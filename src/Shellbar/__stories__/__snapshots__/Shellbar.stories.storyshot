@@ -105,7 +105,6 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
-              iconClassName="fd-shellbar__button--icon"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -119,7 +118,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               </span>
               <i
                 aria-hidden={true}
-                className="sap-icon--megamenu"
+                className="sap-icon--megamenu fd-shellbar__button--icon"
                 role="img"
               />
             </button>
@@ -557,7 +556,6 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
-              iconClassName="fd-shellbar__button--icon"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -571,7 +569,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               </span>
               <i
                 aria-hidden={true}
-                className="sap-icon--megamenu"
+                className="sap-icon--megamenu fd-shellbar__button--icon"
                 role="img"
               />
             </button>

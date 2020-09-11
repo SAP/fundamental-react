@@ -138,8 +138,7 @@ const Select = React.forwardRef(({
                     <span className={triggerClassNames}>
                         <Icon
                             ariaHidden
-                            glyph='slim-arrow-down'
-                            isInButton />
+                            glyph='slim-arrow-down' />
                     </span>
                 }
             </div>

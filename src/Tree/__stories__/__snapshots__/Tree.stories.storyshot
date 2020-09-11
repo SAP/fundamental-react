@@ -1638,11 +1638,11 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
         />
-        <span
+        <i
           className="sap-icon--e-care fd-tree__icon"
           role="img"
         />
-        <span
+        <i
           className="sap-icon--activate fd-tree__icon"
           role="img"
         />
@@ -1703,7 +1703,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
             />
-            <span
+            <i
               className="sap-icon--account fd-tree__icon"
               role="img"
             />
@@ -1764,7 +1764,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
                 />
-                <span
+                <i
                   className="sap-icon--product fd-tree__icon"
                   role="img"
                 />
@@ -1817,7 +1817,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   <div
                     className="fd-tree__item-container"
                   >
-                    <span
+                    <i
                       className="sap-icon--wrench fd-tree__icon"
                       role="img"
                     />
@@ -1867,7 +1867,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               <div
                 className="fd-tree__item-container"
               >
-                <span
+                <i
                   className="sap-icon--history fd-tree__icon"
                   role="img"
                 />
@@ -1917,7 +1917,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           <div
             className="fd-tree__item-container"
           >
-            <span
+            <i
               className="sap-icon--competitor fd-tree__icon"
               role="img"
             />
@@ -1967,7 +1967,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       <div
         className="fd-tree__item-container"
       >
-        <span
+        <i
           className="sap-icon--batch-payments fd-tree__icon"
           role="img"
         />
@@ -1980,7 +1980,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
             Level 1
           </span>
         </div>
-        <span
+        <i
           className="sap-icon--bell fd-tree__icon"
           role="img"
         />
@@ -2018,7 +2018,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       <div
         className="fd-tree__item-container"
       >
-        <span
+        <i
           className="sap-icon--favorite fd-tree__icon"
           role="img"
         />
