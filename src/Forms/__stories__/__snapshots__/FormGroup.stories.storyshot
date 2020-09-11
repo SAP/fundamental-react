@@ -26,8 +26,9 @@ exports[`Storyshots Component API/Forms/FormGroup Primary 1`] = `
             type="button"
           >
             <i
-              aria-hidden="true"
+              aria-hidden={true}
               className="sap-icon--accept"
+              role="img"
             />
           </button>
         </span>

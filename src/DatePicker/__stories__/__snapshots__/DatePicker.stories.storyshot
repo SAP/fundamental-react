@@ -45,8 +45,9 @@ exports[`Storyshots Component API/DatePicker Compact 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -120,8 +121,9 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -184,8 +186,9 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -252,8 +255,9 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -316,8 +320,9 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -384,8 +389,9 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -448,8 +454,9 @@ exports[`Storyshots Component API/DatePicker Date Formats 1`] = `
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -510,8 +517,9 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -571,8 +579,9 @@ exports[`Storyshots Component API/DatePicker Disabled 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -629,8 +638,9 @@ exports[`Storyshots Component API/DatePicker Enabled Range Selection 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -696,8 +706,9 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--appointment-2"
+                        role="img"
                       />
                     </button>
                   </span>
@@ -751,8 +762,9 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--appointment-2"
+                        role="img"
                       />
                     </button>
                   </span>
@@ -829,8 +841,9 @@ exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] =
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -893,8 +906,9 @@ exports[`Storyshots Component API/DatePicker Localized Today Footer Button 1`] =
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -972,8 +986,9 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -1036,8 +1051,9 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
                         type="button"
                       >
                         <i
-                          aria-hidden="true"
+                          aria-hidden={true}
                           className="sap-icon--appointment-2"
+                          role="img"
                         />
                       </button>
                     </span>
@@ -1098,8 +1114,9 @@ exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -1156,8 +1173,9 @@ exports[`Storyshots Component API/DatePicker Primary 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -1216,8 +1234,9 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -1274,8 +1293,9 @@ exports[`Storyshots Component API/DatePicker Special Days 1`] = `
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -1354,8 +1374,9 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--appointment-2"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -1425,8 +1446,9 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--appointment-2"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -1496,8 +1518,9 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--appointment-2"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -1567,8 +1590,9 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--appointment-2"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -1631,8 +1655,9 @@ exports[`Storyshots Component API/DatePicker Weekday Start (Monday Start) 1`] = 
                 type="button"
               >
                 <i
-                  aria-hidden="true"
+                  aria-hidden={true}
                   className="sap-icon--appointment-2"
+                  role="img"
                 />
               </button>
             </span>
@@ -1705,8 +1730,9 @@ exports[`Storyshots Component API/DatePicker With Custom Flip Container 1`] = `
                     type="button"
                   >
                     <i
-                      aria-hidden="true"
+                      aria-hidden={true}
                       className="sap-icon--appointment-2"
+                      role="img"
                     />
                   </button>
                 </span>

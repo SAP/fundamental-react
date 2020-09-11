@@ -77,8 +77,9 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         </span>
       </span>
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--bell"
+        role="img"
       />
     </button>
     <button
@@ -96,8 +97,9 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         </span>
       </span>
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--bell"
+        role="img"
       />
     </button>
     <button
@@ -115,8 +117,9 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         </span>
       </span>
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--bell"
+        role="img"
       />
     </button>
     <button
@@ -134,8 +137,9 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
         </span>
       </span>
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--bell"
+        role="img"
       />
     </button>
   </div>

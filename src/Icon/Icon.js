@@ -31,6 +31,7 @@ const Icon = React.forwardRef(({ ariaHidden, ariaLabel, glyph, size, className, 
             aria-label={ariaLabel}
             className={iconClasses}
             ref={ref}
+            role='img'
             style={style} />
     );
 });

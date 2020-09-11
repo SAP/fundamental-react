@@ -22,8 +22,9 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--navigation-down-arrow"
+            role="img"
           />
         </button>
       </span>
@@ -39,8 +40,9 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--navigation-down-arrow"
+            role="img"
           />
         </button>
       </span>
@@ -68,8 +70,9 @@ exports[`Storyshots Component API/InputGroup Compact 1`] = `
         type="button"
       >
         <i
-          aria-hidden="true"
+          aria-hidden={true}
           className="sap-icon--navigation-down-arrow"
+          role="img"
         />
       </button>
     </span>
@@ -102,8 +105,9 @@ exports[`Storyshots Component API/InputGroup Dev 1`] = `
         type="button"
       >
         <i
-          aria-hidden="true"
+          aria-hidden={true}
           className="sap-icon--navigation-down-arrow"
+          role="img"
         />
       </button>
     </span>
@@ -127,8 +131,9 @@ exports[`Storyshots Component API/InputGroup Disabled 1`] = `
         type="button"
       >
         <i
-          aria-hidden="true"
+          aria-hidden={true}
           className="sap-icon--navigation-down-arrow"
+          role="img"
         />
       </button>
     </span>
@@ -156,6 +161,7 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       >
         <span
           className="sap-icon--globe"
+          role="img"
         />
       </span>
       <input
@@ -177,6 +183,7 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       >
         <span
           className="sap-icon--hide"
+          role="img"
         />
       </span>
     </div>
@@ -199,8 +206,9 @@ exports[`Storyshots Component API/InputGroup Primary 1`] = `
         type="button"
       >
         <i
-          aria-hidden="true"
+          aria-hidden={true}
           className="sap-icon--navigation-down-arrow"
+          role="img"
         />
       </button>
     </span>
@@ -229,6 +237,7 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
     >
       <span
         className="sap-icon--hide"
+        role="img"
       />
     </span>
   </div>

@@ -249,8 +249,9 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--vertical-grip"
+                    role="img"
                   />
                 </button>
               </div>
@@ -347,8 +348,9 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--vertical-grip"
+                    role="img"
                   />
                 </button>
               </div>
@@ -445,8 +447,9 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--vertical-grip"
+                    role="img"
                   />
                 </button>
               </div>
@@ -543,8 +546,9 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--vertical-grip"
+                    role="img"
                   />
                 </button>
               </div>

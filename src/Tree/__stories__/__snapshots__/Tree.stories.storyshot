@@ -1640,9 +1640,11 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
         />
         <span
           className="sap-icon--e-care fd-tree__icon"
+          role="img"
         />
         <span
           className="sap-icon--activate fd-tree__icon"
+          role="img"
         />
         <div
           className="fd-tree__content"
@@ -1660,8 +1662,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--edit"
+            role="img"
           />
         </button>
         <button
@@ -1670,8 +1673,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--decline"
+            role="img"
           />
         </button>
       </div>
@@ -1701,6 +1705,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
             />
             <span
               className="sap-icon--account fd-tree__icon"
+              role="img"
             />
             <div
               className="fd-tree__content"
@@ -1718,8 +1723,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               type="button"
             >
               <i
-                aria-hidden="true"
+                aria-hidden={true}
                 className="sap-icon--edit"
+                role="img"
               />
             </button>
             <button
@@ -1728,8 +1734,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               type="button"
             >
               <i
-                aria-hidden="true"
+                aria-hidden={true}
                 className="sap-icon--decline"
+                role="img"
               />
             </button>
           </div>
@@ -1759,6 +1766,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                 />
                 <span
                   className="sap-icon--product fd-tree__icon"
+                  role="img"
                 />
                 <div
                   className="fd-tree__content"
@@ -1776,8 +1784,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--edit"
+                    role="img"
                   />
                 </button>
                 <button
@@ -1786,8 +1795,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--decline"
+                    role="img"
                   />
                 </button>
               </div>
@@ -1809,6 +1819,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   >
                     <span
                       className="sap-icon--wrench fd-tree__icon"
+                      role="img"
                     />
                     <div
                       className="fd-tree__content"
@@ -1826,8 +1837,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--edit"
+                        role="img"
                       />
                     </button>
                     <button
@@ -1836,8 +1848,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--decline"
+                        role="img"
                       />
                     </button>
                   </div>
@@ -1856,6 +1869,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               >
                 <span
                   className="sap-icon--history fd-tree__icon"
+                  role="img"
                 />
                 <div
                   className="fd-tree__content"
@@ -1873,8 +1887,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--edit"
+                    role="img"
                   />
                 </button>
                 <button
@@ -1883,8 +1898,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   type="button"
                 >
                   <i
-                    aria-hidden="true"
+                    aria-hidden={true}
                     className="sap-icon--decline"
+                    role="img"
                   />
                 </button>
               </div>
@@ -1903,6 +1919,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           >
             <span
               className="sap-icon--competitor fd-tree__icon"
+              role="img"
             />
             <div
               className="fd-tree__content"
@@ -1920,8 +1937,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               type="button"
             >
               <i
-                aria-hidden="true"
+                aria-hidden={true}
                 className="sap-icon--edit"
+                role="img"
               />
             </button>
             <button
@@ -1930,8 +1948,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               type="button"
             >
               <i
-                aria-hidden="true"
+                aria-hidden={true}
                 className="sap-icon--decline"
+                role="img"
               />
             </button>
           </div>
@@ -1950,6 +1969,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       >
         <span
           className="sap-icon--batch-payments fd-tree__icon"
+          role="img"
         />
         <div
           className="fd-tree__content"
@@ -1962,6 +1982,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
         </div>
         <span
           className="sap-icon--bell fd-tree__icon"
+          role="img"
         />
         <button
           aria-label="Edit"
@@ -1969,8 +1990,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--edit"
+            role="img"
           />
         </button>
         <button
@@ -1979,8 +2001,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--decline"
+            role="img"
           />
         </button>
       </div>
@@ -1997,6 +2020,7 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
       >
         <span
           className="sap-icon--favorite fd-tree__icon"
+          role="img"
         />
         <div
           className="fd-tree__content"
@@ -2014,8 +2038,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--edit"
+            role="img"
           />
         </button>
         <button
@@ -2024,8 +2049,9 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           type="button"
         >
           <i
-            aria-hidden="true"
+            aria-hidden={true}
             className="sap-icon--decline"
+            role="img"
           />
         </button>
       </div>

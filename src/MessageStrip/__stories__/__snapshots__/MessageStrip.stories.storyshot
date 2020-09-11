@@ -36,8 +36,9 @@ exports[`Storyshots Component API/MessageStrip Dismissible 1`] = `
       type="button"
     >
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--decline"
+        role="img"
       />
     </button>
     <p
@@ -153,8 +154,9 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       type="button"
     >
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--decline"
+        role="img"
       />
     </button>
     <p
@@ -187,8 +189,9 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       type="button"
     >
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--decline"
+        role="img"
       />
     </button>
     <p
@@ -225,8 +228,9 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       type="button"
     >
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--decline"
+        role="img"
       />
     </button>
     <p
@@ -266,8 +270,9 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
       type="button"
     >
       <i
-        aria-hidden="true"
+        aria-hidden={true}
         className="sap-icon--decline"
+        role="img"
       />
     </button>
     <p

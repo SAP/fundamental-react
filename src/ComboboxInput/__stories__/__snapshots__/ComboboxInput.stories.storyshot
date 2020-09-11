@@ -494,8 +494,9 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                           type="button"
                         >
                           <i
-                            aria-hidden="true"
+                            aria-hidden={true}
                             className="sap-icon--navigation-down-arrow"
+                            role="img"
                           />
                         </button>
                       </span>

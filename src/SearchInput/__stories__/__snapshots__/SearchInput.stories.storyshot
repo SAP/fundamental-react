@@ -53,8 +53,9 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--search"
+                        role="img"
                       />
                     </button>
                   </span>
@@ -126,8 +127,9 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--search"
+                        role="img"
                       />
                     </button>
                   </span>
@@ -198,8 +200,9 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
                       type="button"
                     >
                       <i
-                        aria-hidden="true"
+                        aria-hidden={true}
                         className="sap-icon--search"
+                        role="img"
                       />
                     </button>
                   </span>
@@ -336,8 +339,9 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--search"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -414,8 +418,9 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--search"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -492,8 +497,9 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--search"
+                              role="img"
                             />
                           </button>
                         </span>
@@ -570,8 +576,9 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
                             type="button"
                           >
                             <i
-                              aria-hidden="true"
+                              aria-hidden={true}
                               className="sap-icon--search"
+                              role="img"
                             />
                           </button>
                         </span>
