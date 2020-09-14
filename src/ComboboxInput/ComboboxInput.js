@@ -232,7 +232,7 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handlePopoverOutsideClick = () => {
-        closePopover();
+        isExpanded && closePopover();
         switch (resolvedSelectionType) {
             case 'manual':
                 setFilterString(textInputRef?.current?.value);
