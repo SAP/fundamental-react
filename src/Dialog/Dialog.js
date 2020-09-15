@@ -185,6 +185,12 @@ Dialog.propTypes = {
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     /** Callback function passing event when any action is clicked */
+    /** Callback function triggered when dialog closes either dues to `Escape` keydown or any of the actions' `onClick`.
+     * `onClose` is executed BEFORE any of the actions' `onClick` handler.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+     */
     onClose: PropTypes.func
 };
 
