@@ -123,7 +123,13 @@ ActionBar.propTypes = {
     headingStyle: CustomPropTypes.range(2, 6),
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
-    /** Callback to pass to the back Button */
+    /**
+     * Callback function triggered when the back button is clicked.
+     * If this is not set to a function, the back button won't be rendered.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onBackClick: PropTypes.func
 };
 
