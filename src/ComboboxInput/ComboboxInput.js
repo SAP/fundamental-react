@@ -232,7 +232,7 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const handlePopoverOutsideClick = () => {
-        closePopover();
+        isExpanded && closePopover();
         switch (resolvedSelectionType) {
             case 'manual':
                 setFilterString(textInputRef?.current?.value);
@@ -403,7 +403,7 @@ const ComboboxInput = React.forwardRef(({
                 disabled={disabled}
                 onClick={handleInputGroupClick}
                 validationOverlayProps={validationOverlayProps}
-                validationState={!isExpanded && validationState}>
+                validationState={isExpanded ? null : validationState}>
                 <FormInput
                     autoComplete='off'
                     {...inputProps}
@@ -461,20 +461,26 @@ const ComboboxInput = React.forwardRef(({
                         }
                         <List
                             {...labelProps}
+                            className='fd-list--dropdown'
                             compact={compact}
                             id={`${id}-listbox`}
                             noBorder
                             role='listbox'>
                             {filteredOptions?.length ? filteredOptions.map(option => {
+
+                                const listItemClasses = classnames({
+                                    'is-selected': selectedOption?.key ? option?.key === selectedOption?.key : false
+                                });
+
                                 return (
                                     <List.Item
+                                        className={listItemClasses}
                                         id={`${id}-listbox-option-${option.key}`}
                                         key={option.key}
                                         onClick={(e) => handleOptionSelect(e, option)}
                                         onFocus={(e) => handleOptionFocus(e, option)}
                                         onKeyDown={(e) => handleOptionKeyDown(e, option)}
-                                        role='option'
-                                        selected={selectedOption?.key ? option?.key === selectedOption?.key : false}>
+                                        role='option'>
                                         {renderListOption(option)}
                                     </List.Item>
                                 );
@@ -495,10 +501,11 @@ const ComboboxInput = React.forwardRef(({
                 disabled={disabled}
                 noArrow
                 onClickOutside={handlePopoverOutsideClick}
+                popperClassName='fd-popover__body--dropdown'
                 ref={popoverRef}
                 show={showPopover}
                 useArrowKeyNavigation
-                widthSizingType='minTarget' />
+                widthSizingType='maxTarget' />
         </FormItem>
     );
 });
