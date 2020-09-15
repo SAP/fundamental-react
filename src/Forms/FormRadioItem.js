@@ -11,6 +11,7 @@ const FormRadioItem = React.forwardRef(({
     checked,
     children,
     compact,
+    data,
     defaultChecked,
     disabled,
     id,
@@ -70,6 +71,8 @@ FormRadioItem.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Payload to be used for onChange callback when this `FormRadioItem` is selected in a `FormRadioGroup`.*/
+    data: PropTypes.any,
     /** Set to **true** when the radio input is checked and an uncontrolled component */
     defaultChecked: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
