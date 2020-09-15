@@ -594,36 +594,36 @@ DatePicker.propTypes = {
      * The reason is available as a String and could be one of `todaySelected`, `todayNavigated`, `calendarDateClicked`,
      * `inputChange`, `autoFormat` or `invalidInput`
      *
-     * @param {Object} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
-     * array of dates objects containing the start and end date if enableRangeSelection is true.
+     * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+     * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+     * array of date objects containing the start and end date if enableRangeSelection is true.
      * @param {String} reason - what caused the selection to change
      * @returns {void}
      */
     onChange: PropTypes.func,
     /** Callback function which triggers when datepicker popover closes after date selection.
      *
-     * @param {Object} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
-     * array of dates objects containing the start and end date if enableRangeSelection is true.
+     * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+     * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+     * array of date objects containing the start and end date if enableRangeSelection is true.
      * @returns {void}
      */
     onDatePickerClose: PropTypes.func,
     /** Callback function triggered when text input field loses focus.
       * Input value is validated before calling onInputBlur.
-      * If input field value can be formatted to a valid date object then this is used as the selectedDate, else field is reset.
+      * If input field value can be formatted to a valid date object then this is used as the data, else field is reset.
       *
-      * @param {Object} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-      * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
-      * array of dates objects containing the start and end date if enableRangeSelection is true.
+      * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+      * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+      * array of date objects containing the start and end date if enableRangeSelection is true.
       * @returns {void}
      */
     onInputBlur: PropTypes.func,
     /** Callback function triggered when datepicker input is focused.
      *
-     * @param {Object|SyntheticEvent} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
-     * array of dates objects containing the start and end date if enableRangeSelection is true.
+     * @param {Object|SyntheticEvent} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+     * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+     * array of date objects containing the start and end date if enableRangeSelection is true.
      * @returns {void}
      */
     onInputFocus: PropTypes.func
