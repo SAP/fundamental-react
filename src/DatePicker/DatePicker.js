@@ -601,7 +601,7 @@ DatePicker.propTypes = {
      * @returns {void}
      */
     onChange: PropTypes.func,
-    /** Callback function which triggers when datepicker popover closes after date selection.
+    /** Callback function triggered when datepicker popover closes after date selection.
      *
      * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
      * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
