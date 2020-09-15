@@ -62,7 +62,7 @@ const ActionBar = React.forwardRef(({
             className={actionBarClasses}
             ref={ref}>
             <div {...props} className={actionBarHeaderClasses}>
-                {onBackClick && (<div className={actionBarBackClasses}>
+                {typeof onBackClick === 'function' && (<div className={actionBarBackClasses}>
                     <Button
                         aria-label={backButtonLabel}
                         {...buttonProps}
