@@ -39,7 +39,11 @@ exports[`Storyshots Component API/LocalizationEditor Compact 1`] = `
                 className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
                 type="button"
               >
-                EN*
+                <span
+                  className="fd-button__text"
+                >
+                  EN*
+                </span>
               </button>
             </span>
           </div>
@@ -89,7 +93,11 @@ exports[`Storyshots Component API/LocalizationEditor Primary 1`] = `
                 className="fd-button fd-button--transparent fd-input-group__button"
                 type="button"
               >
-                EN*
+                <span
+                  className="fd-button__text"
+                >
+                  EN*
+                </span>
               </button>
             </span>
           </div>
@@ -138,7 +146,11 @@ exports[`Storyshots Component API/LocalizationEditor Text Area 1`] = `
                 className="fd-button fd-button--transparent fd-input-group__button"
                 type="button"
               >
-                EN*
+                <span
+                  className="fd-button__text"
+                >
+                  EN*
+                </span>
               </button>
             </span>
           </div>

@@ -1,9 +1,9 @@
 import classnames from 'classnames';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
-import 'fundamental-styles/dist/icon.css';
 import 'fundamental-styles/dist/button.css';
 
 /** A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
@@ -19,12 +19,15 @@ const Button = React.forwardRef(({
     disabledMessage,
     enabledMessage,
     glyph,
+    iconBeforeText,
+    iconProps,
     selected,
     disabled,
     typeAttr,
     onClick,
     children,
     className,
+    textClassName,
     ...props
 }, ref) => {
 
@@ -34,11 +37,15 @@ const Button = React.forwardRef(({
             [`fd-button--${option}`]: !!option,
             [`fd-button--${type}`]: !!type,
             'fd-button--compact': compact,
-            [`sap-icon--${glyph}`]: !!glyph,
             'is-selected': selected,
             'is-disabled': disabled
         },
         className
+    );
+
+    const buttonTextClasses = classnames(
+        'fd-button__text',
+        textClassName
     );
 
     const ariaDisabled = props['aria-disabled'];
@@ -76,6 +83,18 @@ const Button = React.forwardRef(({
         }
         return content;
     };
+
+    const renderIcon = () => {
+        const content = glyph ? (
+            <Icon
+                {...iconProps}
+                ariaHidden
+                glyph={glyph} />
+        ) : null;
+
+        return content;
+    };
+
     return (
         <>
             <button
@@ -86,7 +105,9 @@ const Button = React.forwardRef(({
                 ref={ref}
                 selected={selected}
                 type={typeAttr}>
-                {children}
+                {iconBeforeText && renderIcon()}
+                {children && <span className={buttonTextClasses}>{children}</span>}
+                {!iconBeforeText && renderIcon()}
             </button>
             {renderButtonStateMessage()}
         </>
@@ -134,10 +155,16 @@ Button.propTypes = {
     enabledMessage: validateStateTransitionMessage,
     /** The icon to include. See the icon page for the list of icons */
     glyph: PropTypes.string,
-    /** Indicates the importance of the button: 'empahsized' or 'transparent' */
+    /** Determines whether the icon should be placed before the text */
+    iconBeforeText: PropTypes.bool,
+    /** Additional props to be spread to the Icon component */
+    iconProps: PropTypes.object,
+    /** Indicates the importance of the button: 'emphasized' or 'transparent' */
     option: PropTypes.oneOf(BUTTON_OPTIONS),
     /** Set to **true** to set state of the button to "selected" */
     selected: PropTypes.bool,
+    /** CSS class(es) to add to the text element */
+    textClassName: PropTypes.string,
     /** Sets the variation of the component. Primarily used for styling: 'standard',
     'positive',
     'negative',

@@ -53,7 +53,7 @@ export const types = () => (
 
 types.storyName = 'Types';
 
-/** Button can have an icon with text or just and icon. */
+/** Button can have an icon with text or just an icon. Be sure to use an `aria-label` if there is no text. */
 
 export const icons = () => (
     <div className='fddocs-container'>
@@ -65,7 +65,8 @@ export const icons = () => (
         <Button glyph='edit' type='ghost'>Edit</Button>
         <Button glyph='warning' type='attention'>Ignore</Button>
         <div className='fddocs-container--break' />
-        <Button glyph='alert' option='emphasized' />
+        <Button aria-label='See warning' glyph='alert'
+            option='emphasized' />
         <Button aria-label='Add to cart' glyph='cart' />
         <Button aria-label='Filter' glyph='cart'
             option='transparent' />

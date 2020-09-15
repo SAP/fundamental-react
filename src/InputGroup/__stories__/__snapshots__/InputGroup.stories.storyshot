@@ -18,9 +18,15 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
         className="fd-input-group__addon fd-input-group__addon--button"
       >
         <button
-          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+          className="fd-button fd-button--transparent fd-input-group__button"
           type="button"
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-down-arrow"
+            role="img"
+          />
+        </button>
       </span>
     </div>
     <div
@@ -30,9 +36,15 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
         className="fd-input-group__addon fd-input-group__addon--button"
       >
         <button
-          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+          className="fd-button fd-button--transparent fd-input-group__button"
           type="button"
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-down-arrow"
+            role="img"
+          />
+        </button>
       </span>
       <input
         className="fd-input fd-input-group__input"
@@ -54,9 +66,15 @@ exports[`Storyshots Component API/InputGroup Compact 1`] = `
       className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
     >
       <button
-        className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
+        className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </span>
     <input
       className="fd-input fd-input--compact fd-input-group__input"
@@ -83,9 +101,15 @@ exports[`Storyshots Component API/InputGroup Dev 1`] = `
       disabled={false}
     >
       <button
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+        className="fd-button fd-button--transparent fd-input-group__button"
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </span>
   </div>
 </div>
@@ -103,9 +127,15 @@ exports[`Storyshots Component API/InputGroup Disabled 1`] = `
       disabled={true}
     >
       <button
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+        className="fd-button fd-button--transparent fd-input-group__button"
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </span>
     <input
       className="fd-input fd-input-group__input"
@@ -129,8 +159,9 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       <span
         className="fd-input-group__addon"
       >
-        <span
+        <i
           className="sap-icon--globe"
+          role="img"
         />
       </span>
       <input
@@ -150,8 +181,9 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
       <span
         className="fd-input-group__addon"
       >
-        <span
+        <i
           className="sap-icon--hide"
+          role="img"
         />
       </span>
     </div>
@@ -170,9 +202,15 @@ exports[`Storyshots Component API/InputGroup Primary 1`] = `
       className="fd-input-group__addon fd-input-group__addon--button"
     >
       <button
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+        className="fd-button fd-button--transparent fd-input-group__button"
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </span>
     <input
       className="fd-input fd-input-group__input"
@@ -197,8 +235,9 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
     <span
       className="fd-input-group__addon"
     >
-      <span
+      <i
         className="sap-icon--hide"
+        role="img"
       />
     </span>
   </div>

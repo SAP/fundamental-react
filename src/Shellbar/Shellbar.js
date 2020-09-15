@@ -167,10 +167,11 @@ class Shellbar extends Component {
                             control={
                                 <Button
                                     className='fd-shellbar__button--menu fd-button--menu'
-                                    option='transparent'>
-                                    <span className='fd-shellbar__title'>
-                                        {productTitle}
-                                    </span>
+                                    glyph='megamenu'
+                                    iconProps={{ className: 'fd-shellbar__button--icon' }}
+                                    option='transparent'
+                                    textClassName='fd-shellbar__title'>
+                                    {productTitle}
                                 </Button>
                             }
                             noArrow
@@ -218,7 +219,8 @@ class Shellbar extends Component {
                                                     <Button
                                                         aria-label={action.label}
                                                         className='fd-shellbar__button'
-                                                        glyph={action.glyph}>
+                                                        glyph={action.glyph}
+                                                        iconBeforeText>
                                                         {action.notificationCount > 0 && (
                                                             <Counter
                                                                 aria-label={localizedText.counterLabel}
@@ -236,8 +238,9 @@ class Shellbar extends Component {
                                                 aria-label={action.label}
                                                 className='fd-shellbar__button'
                                                 glyph={action.glyph}
+                                                iconBeforeText
                                                 key={index}
-                                                onClick={action.callback} >
+                                                onClick={action.callback}>
                                                 {action.notificationCount > 0 && (
                                                     <Counter
                                                         aria-label={localizedText.counterLabel}
@@ -262,7 +265,8 @@ class Shellbar extends Component {
                                         <Button
                                             aria-label={localizedText.notificationsButton}
                                             className='fd-shellbar__button'
-                                            glyph='bell'>
+                                            glyph='bell'
+                                            iconBeforeText>
                                             {notifications.notificationCount > 0 && (
                                                 <Counter
                                                     aria-label={localizedText.counterLabel}
@@ -281,6 +285,7 @@ class Shellbar extends Component {
                                     aria-label={localizedText.notificationsButton}
                                     className='fd-shellbar__button'
                                     glyph='bell'
+                                    iconBeforeText
                                     onClick={notifications.callback}>
                                     {notifications.notificationCount > 0 && (
                                         <Counter

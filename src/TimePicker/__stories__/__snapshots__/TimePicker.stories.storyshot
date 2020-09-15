@@ -48,11 +48,17 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Show/hide time picker"
-                className="fd-button fd-button--transparent sap-icon--time-entry-request is-disabled fd-input-group__button"
+                className="fd-button fd-button--transparent is-disabled fd-input-group__button"
                 disabled={true}
                 id="timepickerDisabledExample-button"
                 type="button"
-              />
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
             </span>
           </div>
         </div>
@@ -109,10 +115,16 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Show/hide time picker"
-                className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                className="fd-button fd-button--transparent fd-input-group__button"
                 id="timepicker12HrExample-button"
                 type="button"
-              />
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
             </span>
           </div>
         </div>
@@ -169,10 +181,16 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Show/hide time picker"
-                className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                className="fd-button fd-button--transparent fd-input-group__button"
                 id="timepickerHideSecondExample-button"
                 type="button"
-              />
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
             </span>
           </div>
         </div>
@@ -229,10 +247,16 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Show/hide time picker"
-                className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                className="fd-button fd-button--transparent fd-input-group__button"
                 id="timepickerInitExample-button"
                 type="button"
-              />
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
             </span>
           </div>
         </div>
@@ -289,10 +313,16 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Show/hide time picker"
-                className="fd-button fd-button--transparent sap-icon--time-entry-request fd-input-group__button"
+                className="fd-button fd-button--transparent fd-input-group__button"
                 id="timepickerPrimaryExample-button"
                 type="button"
-              />
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
             </span>
           </div>
         </div>

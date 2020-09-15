@@ -69,7 +69,11 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
             className="fd-button"
             type="button"
           >
-            Dummy
+            <span
+              className="fd-button__text"
+            >
+              Dummy
+            </span>
           </button>
         </div>
       </div>
@@ -177,7 +181,11 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
             className="fd-button"
             type="button"
           >
-            Dummy
+            <span
+              className="fd-button__text"
+            >
+              Dummy
+            </span>
           </button>
         </div>
       </div>
@@ -479,12 +487,18 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                       >
                         <button
                           aria-label="Show country options"
-                          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
+                          className="fd-button fd-button--transparent fd-input-group__button"
                           id="comboboxAutoInlineSelectExample-combobox-arrow"
                           onClick={[Function]}
                           tabIndex="-1"
                           type="button"
-                        />
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--navigation-down-arrow"
+                            role="img"
+                          />
+                        </button>
                       </span>
                     </div>
                   </div>

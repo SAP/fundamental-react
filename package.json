@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.13.0-rc.20",
+  "version": "0.13.0-rc.21",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -50,7 +50,7 @@
     "@popperjs/core": "^2.4.3",
     "chain-function": "^1.0.1",
     "classnames": "^2.2.6",
-    "fundamental-styles": "0.12.0-rc.18",
+    "fundamental-styles": "0.12.0-rc.44",
     "keycode": "^2.2.0",
     "moment": "^2.26.0",
     "prop-types": "^15.7.1",

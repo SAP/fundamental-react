@@ -112,10 +112,15 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               type="button"
             >
               <span
-                className="fd-shellbar__title"
+                className="fd-button__text fd-shellbar__title"
               >
                 Corporate Portal
               </span>
+              <i
+                aria-hidden={true}
+                className="sap-icon--megamenu fd-shellbar__button--icon"
+                role="img"
+              />
             </button>
           </div>
         </div>
@@ -187,10 +192,16 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                         >
                           <button
                             aria-label="Search"
-                            className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
+                            className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
                             onClick={[Function]}
                             type="button"
-                          />
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--search"
+                              role="img"
+                            />
+                          </button>
                         </span>
                       </div>
                     </div>
@@ -220,18 +231,27 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 aria-expanded={false}
                 aria-haspopup={true}
                 aria-label="Settings"
-                className="fd-button sap-icon--settings fd-shellbar__button"
+                className="fd-button fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
                 type="button"
               >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--settings"
+                  role="img"
+                />
                 <span
-                  aria-label="Unread count"
-                  className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
+                  className="fd-button__text"
                 >
-                  5
+                  <span
+                    aria-label="Unread count"
+                    className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
+                  >
+                    5
+                  </span>
                 </span>
               </button>
             </div>
@@ -261,14 +281,23 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
             >
               <button
                 aria-label="Notifications"
-                className="fd-button sap-icon--bell fd-shellbar__button"
+                className="fd-button fd-shellbar__button"
                 type="button"
               >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--bell"
+                  role="img"
+                />
                 <span
-                  aria-label="Unread count"
-                  className="fd-counter fd-counter--notification"
+                  className="fd-button__text"
                 >
-                  2
+                  <span
+                    aria-label="Unread count"
+                    className="fd-counter fd-counter--notification"
+                  >
+                    2
+                  </span>
                 </span>
               </button>
             </div>
@@ -300,17 +329,26 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 tabIndex={0}
               >
                 <button
-                  className="fd-button sap-icon--overflow fd-shellbar__button"
+                  className="fd-button fd-shellbar__button"
                   type="button"
                 >
                   <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification"
+                    className="fd-button__text"
                   >
-                     
-                    7
-                     
+                    <span
+                      aria-label="Unread count"
+                      className="fd-counter fd-counter--notification"
+                    >
+                       
+                      7
+                       
+                    </span>
                   </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--overflow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -378,13 +416,19 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                   aria-expanded={false}
                   aria-haspopup={true}
                   aria-label="Product Switch"
-                  className="fd-button sap-icon--grid fd-product-switch__control fd-shellbar__button"
+                  className="fd-button fd-product-switch__control fd-shellbar__button"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--grid"
+                    role="img"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -407,10 +451,16 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
     >
       <button
         aria-label="Back button"
-        className="fd-button fd-button--transparent sap-icon--nav-back fd-shellbar__button"
+        className="fd-button fd-button--transparent fd-shellbar__button"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--nav-back"
+          role="img"
+        />
+      </button>
       <span
         className="fd-shellbar__logo"
       >
@@ -513,10 +563,15 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               type="button"
             >
               <span
-                className="fd-shellbar__title"
+                className="fd-button__text fd-shellbar__title"
               >
                 Corporate Portal
               </span>
+              <i
+                aria-hidden={true}
+                className="sap-icon--megamenu fd-shellbar__button--icon"
+                role="img"
+              />
             </button>
           </div>
         </div>
@@ -578,10 +633,16 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                         >
                           <button
                             aria-label="Search"
-                            className="fd-button fd-button--transparent sap-icon--search fd-shellbar__button fd-input-group__button"
+                            className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
                             onClick={[Function]}
                             type="button"
-                          />
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--search"
+                              role="img"
+                            />
+                          </button>
                         </span>
                       </div>
                     </div>
@@ -597,14 +658,23 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
       >
         <button
           aria-label="Notifications"
-          className="fd-button sap-icon--bell fd-shellbar__button"
+          className="fd-button fd-shellbar__button"
           type="button"
         >
+          <i
+            aria-hidden={true}
+            className="sap-icon--bell"
+            role="img"
+          />
           <span
-            aria-label="Unread count"
-            className="fd-counter fd-counter--notification"
+            className="fd-button__text"
           >
-            2
+            <span
+              aria-label="Unread count"
+              className="fd-counter fd-counter--notification"
+            >
+              2
+            </span>
           </span>
         </button>
       </div>
@@ -633,17 +703,26 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
                 tabIndex={0}
               >
                 <button
-                  className="fd-button sap-icon--overflow fd-shellbar__button"
+                  className="fd-button fd-shellbar__button"
                   type="button"
                 >
                   <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification"
+                    className="fd-button__text"
                   >
-                     
-                    2
-                     
+                    <span
+                      aria-label="Unread count"
+                      className="fd-counter fd-counter--notification"
+                    >
+                       
+                      2
+                       
+                    </span>
                   </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--overflow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>

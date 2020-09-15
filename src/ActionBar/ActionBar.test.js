@@ -22,7 +22,7 @@ describe('<ActionBar />', () => {
             });
 
             expect(
-                element.find('.sap-icon--navigation-left-arrow').getDOMNode().attributes['data-sample'].value
+                element.find('button.fd-button--transparent').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
