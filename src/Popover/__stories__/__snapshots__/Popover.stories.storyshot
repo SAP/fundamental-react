@@ -26,13 +26,19 @@ exports[`Storyshots Component API/Popover Dev 1`] = `
             aria-controls="fd-mocked-short-id"
             aria-expanded={false}
             aria-haspopup={true}
-            className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+            className="fd-button fd-button--transparent"
             onClick={[Function]}
             onKeyPress={[Function]}
             role="button"
             tabIndex={0}
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--navigation-up-arrow"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -59,13 +65,19 @@ exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+          className="fd-button fd-button--transparent"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
           type="button"
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-up-arrow"
+            role="img"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -84,13 +96,19 @@ exports[`Storyshots Component API/Popover Disable Edge Detection 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+          className="fd-button fd-button--transparent"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
           type="button"
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-down-arrow"
+            role="img"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -112,14 +130,14 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
       <div
         className="fd-popover__control"
       >
-        <span
+        <i
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
           className="sap-icon--cart"
           onClick={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="img"
           style={
             Object {
               "fontSize": "1.5rem",
@@ -194,14 +212,14 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
       <div
         className="fd-popover__control"
       >
-        <span
+        <i
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
           className="sap-icon--menu2"
           onClick={[Function]}
           onKeyPress={[Function]}
-          role="button"
+          role="img"
           style={
             Object {
               "fontSize": "1.5rem",
@@ -224,7 +242,11 @@ exports[`Storyshots Component API/Popover Out Of Boundaries 1`] = `
     onClick={[Function]}
     type="button"
   >
-    Show Dialog
+    <span
+      className="fd-button__text"
+    >
+      Show Dialog
+    </span>
   </button>
 </div>
 `;
@@ -293,14 +315,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-top-start-popover-placement-story"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Top-Start
+                  <span
+                    className="fd-button__text"
+                  >
+                    Top-Start
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-up-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -322,14 +353,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Top
+                  <span
+                    className="fd-button__text"
+                  >
+                    Top
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-up-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -351,14 +391,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Top-End
+                  <span
+                    className="fd-button__text"
+                  >
+                    Top-End
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-up-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -386,14 +435,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-left-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Left-Start
+                  <span
+                    className="fd-button__text"
+                  >
+                    Left-Start
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-left-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -418,80 +476,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-right-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Right-Top
-                </button>
-              </div>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td />
-        <td />
-        <td>
-          <div
-            className="fd-popover"
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id"
-                  aria-expanded={false}
-                  aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-left-arrow"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
-                  type="button"
-                >
-                  Left
-                </button>
-              </div>
-            </div>
-          </div>
-        </td>
-        <td />
-        <td />
-        <td />
-        <td>
-          <div
-            className="fd-popover"
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <button
-                  aria-controls="fd-mocked-short-id"
-                  aria-expanded={false}
-                  aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-right-arrow"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
-                  type="button"
-                >
-                  Right
+                  <span
+                    className="fd-button__text"
+                  >
+                    Right-Top
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -518,14 +519,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-left-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Left-End
+                  <span
+                    className="fd-button__text"
+                  >
+                    Left
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-left-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -550,14 +560,107 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-right-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Right-End
+                  <span
+                    className="fd-button__text"
+                  >
+                    Right
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow"
+                    role="img"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Left-End
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-left-arrow"
+                    role="img"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="menu"
+                  className="fd-button fd-button--transparent"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Right-End
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -585,14 +688,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Bottom-Start
+                  <span
+                    className="fd-button__text"
+                  >
+                    Bottom-Start
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-down-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -614,14 +726,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Bottom
+                  <span
+                    className="fd-button__text"
+                  >
+                    Bottom
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-down-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -643,14 +764,23 @@ exports[`Storyshots Component API/Popover Placements 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="menu"
-                  className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
                 >
-                  Bottom-End
+                  <span
+                    className="fd-button__text"
+                  >
+                    Bottom-End
+                  </span>
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-down-arrow"
+                    role="img"
+                  />
                 </button>
               </div>
             </div>
@@ -714,12 +844,16 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthSizingType: 
-          <strong>
-            '
-            none
-            '
-          </strong>
+          <span
+            className="fd-button__text"
+          >
+            widthSizingType: 
+            <strong>
+              '
+              none
+              '
+            </strong>
+          </span>
         </button>
       </div>
     </div>
@@ -746,12 +880,16 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthSizingType: 
-          <strong>
-            '
-            matchTarget
-            '
-          </strong>
+          <span
+            className="fd-button__text"
+          >
+            widthSizingType: 
+            <strong>
+              '
+              matchTarget
+              '
+            </strong>
+          </span>
         </button>
       </div>
     </div>
@@ -778,12 +916,16 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthSizingType: 
-          <strong>
-            '
-            minTarget
-            '
-          </strong>
+          <span
+            className="fd-button__text"
+          >
+            widthSizingType: 
+            <strong>
+              '
+              minTarget
+              '
+            </strong>
+          </span>
         </button>
       </div>
     </div>
@@ -810,12 +952,16 @@ exports[`Storyshots Component API/Popover Width Sizing Types 1`] = `
           tabIndex={0}
           type="button"
         >
-          widthSizingType: 
-          <strong>
-            '
-            maxTarget
-            '
-          </strong>
+          <span
+            className="fd-button__text"
+          >
+            widthSizingType: 
+            <strong>
+              '
+              maxTarget
+              '
+            </strong>
+          </span>
         </button>
       </div>
     </div>
@@ -867,13 +1013,19 @@ exports[`Storyshots Component API/Popover With Custom Flip Container 1`] = `
               aria-controls="fd-mocked-short-id"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+              className="fd-button fd-button--transparent"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
               type="button"
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-up-arrow"
+                role="img"
+              />
+            </button>
           </div>
         </div>
       </div>

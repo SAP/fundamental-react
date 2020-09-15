@@ -22,9 +22,15 @@ exports[`Storyshots Component API/Forms/FormGroup Primary 1`] = `
           className="fd-input-group__addon fd-input-group__addon--button"
         >
           <button
-            className="fd-button fd-button--transparent sap-icon--accept fd-input-group__button"
+            className="fd-button fd-button--transparent fd-input-group__button"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--accept"
+              role="img"
+            />
+          </button>
         </span>
         <input
           className="fd-input fd-input-group__input"

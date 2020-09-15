@@ -23,11 +23,17 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent fd-button--compact sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-button--compact fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -36,11 +42,17 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent fd-button--compact sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-button--compact fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -71,11 +83,17 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             disabled={false}
@@ -86,11 +104,17 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -121,12 +145,18 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less is-disabled fd-step-input__button"
+            className="fd-button fd-button--transparent is-disabled fd-step-input__button"
             disabled={true}
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             disabled={true}
@@ -136,12 +166,18 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add is-disabled fd-step-input__button"
+            className="fd-button fd-button--transparent is-disabled fd-step-input__button"
             disabled={true}
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -172,11 +208,17 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -185,11 +227,17 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -220,11 +268,17 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -233,11 +287,17 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -268,11 +328,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -282,11 +348,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -310,11 +382,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -324,11 +402,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -352,11 +436,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -366,11 +456,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -394,11 +490,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             onChange={[Function]}
@@ -408,11 +510,17 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>

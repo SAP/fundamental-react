@@ -2,6 +2,7 @@ import classnames from 'classnames';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
+import Icon from '../Icon/Icon';
 import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
@@ -105,7 +106,6 @@ const Select = React.forwardRef(({
     const triggerClassNames = classnames(
         'fd-button',
         'fd-button--transparent',
-        'sap-icon--slim-arrow-down',
         'fd-select__button',
         triggerClassName
     );
@@ -134,7 +134,13 @@ const Select = React.forwardRef(({
             ref={divRef}>
             <div className={selectControlClasses}>
                 <span aria-label={selectAriaLabel} className={textContentClassNames}>{textContent}</span>
-                {!readOnly && <span className={triggerClassNames} />}
+                {!readOnly &&
+                    <span className={triggerClassNames}>
+                        <Icon
+                            ariaHidden
+                            glyph='slim-arrow-down' />
+                    </span>
+                }
             </div>
         </div>
     );

@@ -63,48 +63,84 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
     className="fddocs-container"
   >
     <button
-      className="fd-button fd-button--transparent sap-icon--bell"
+      className="fd-button fd-button--transparent"
       type="button"
     >
       <span
-        aria-label="Unread count"
-        className="fd-counter fd-counter--notification"
+        className="fd-button__text"
       >
-        5
+        <span
+          aria-label="Unread count"
+          className="fd-counter fd-counter--notification"
+        >
+          5
+        </span>
       </span>
+      <i
+        aria-hidden={true}
+        className="sap-icon--bell"
+        role="img"
+      />
     </button>
     <button
-      className="fd-button fd-button--transparent sap-icon--bell"
+      className="fd-button fd-button--transparent"
       type="button"
     >
       <span
-        aria-label="Unread count"
-        className="fd-counter fd-counter--notification"
+        className="fd-button__text"
       >
-        25
+        <span
+          aria-label="Unread count"
+          className="fd-counter fd-counter--notification"
+        >
+          25
+        </span>
       </span>
+      <i
+        aria-hidden={true}
+        className="sap-icon--bell"
+        role="img"
+      />
     </button>
     <button
-      className="fd-button fd-button--transparent sap-icon--bell"
+      className="fd-button fd-button--transparent"
       type="button"
     >
       <span
-        aria-label="Unread count"
-        className="fd-counter fd-counter--notification"
+        className="fd-button__text"
       >
-        101
+        <span
+          aria-label="Unread count"
+          className="fd-counter fd-counter--notification"
+        >
+          101
+        </span>
       </span>
+      <i
+        aria-hidden={true}
+        className="sap-icon--bell"
+        role="img"
+      />
     </button>
     <button
-      className="fd-button fd-button--transparent sap-icon--bell"
+      className="fd-button fd-button--transparent"
       type="button"
     >
       <span
-        aria-label="Unread count"
-        className="fd-counter fd-counter--notification"
+        className="fd-button__text"
       >
-        999+
+        <span
+          aria-label="Unread count"
+          className="fd-counter fd-counter--notification"
+        >
+          999+
+        </span>
       </span>
+      <i
+        aria-hidden={true}
+        className="sap-icon--bell"
+        role="img"
+      />
     </button>
   </div>
 </div>

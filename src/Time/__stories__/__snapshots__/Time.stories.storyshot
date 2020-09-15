@@ -19,10 +19,16 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -106,10 +112,16 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -122,10 +134,16 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -138,10 +156,16 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -154,10 +178,16 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -170,10 +200,16 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -198,11 +234,17 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
+        className="fd-button fd-button--transparent is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -286,11 +328,17 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
+        className="fd-button fd-button--transparent is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -303,11 +351,17 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
+        className="fd-button fd-button--transparent is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -320,11 +374,17 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
+        className="fd-button fd-button--transparent is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -337,11 +397,17 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow is-disabled"
+        className="fd-button fd-button--transparent is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -354,11 +420,17 @@ exports[`Storyshots Component API/Time Disabled Time 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow is-disabled"
+        className="fd-button fd-button--transparent is-disabled"
         disabled={true}
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -384,10 +456,16 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -471,10 +549,16 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -487,10 +571,16 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -503,10 +593,16 @@ exports[`Storyshots Component API/Time Hide Hours 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -531,10 +627,16 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -618,10 +720,16 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
     <div
@@ -635,10 +743,16 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -651,10 +765,16 @@ exports[`Storyshots Component API/Time Hide Minutes 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -679,10 +799,16 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -766,10 +892,16 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -782,10 +914,16 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -798,10 +936,16 @@ exports[`Storyshots Component API/Time Hide Seconds 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
     
@@ -828,10 +972,16 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -915,10 +1065,16 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -931,10 +1087,16 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -947,10 +1109,16 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -963,10 +1131,16 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -979,10 +1153,16 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -1007,10 +1187,16 @@ exports[`Storyshots Component API/Time Primary 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1094,10 +1280,16 @@ exports[`Storyshots Component API/Time Primary 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1110,10 +1302,16 @@ exports[`Storyshots Component API/Time Primary 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1126,10 +1324,16 @@ exports[`Storyshots Component API/Time Primary 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1142,10 +1346,16 @@ exports[`Storyshots Component API/Time Primary 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1158,10 +1368,16 @@ exports[`Storyshots Component API/Time Primary 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -1186,10 +1402,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1273,10 +1495,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1289,10 +1517,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1305,10 +1539,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1321,10 +1561,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1337,10 +1583,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1352,10 +1604,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </label>
       <button
         aria-label="Increase period"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--meridian"
       >
@@ -1368,10 +1626,16 @@ exports[`Storyshots Component API/Time Time 12 Set 1`] = `
       </div>
       <button
         aria-label="Decrease period"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -1396,10 +1660,16 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1483,10 +1753,16 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1499,10 +1775,16 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1515,10 +1797,16 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1531,10 +1819,16 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1547,10 +1841,16 @@ exports[`Storyshots Component API/Time Time Meridiem Set 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     
   </div>
@@ -1575,10 +1875,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </label>
       <button
         aria-label="Increase hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--active"
       >
@@ -1662,10 +1968,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1678,10 +1990,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </label>
       <button
         aria-label="Increase minutes"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1694,10 +2012,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </div>
       <button
         aria-label="Decrease hours"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1710,10 +2034,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </label>
       <button
         aria-label="Increase seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper"
       >
@@ -1726,10 +2056,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </div>
       <button
         aria-label="Decrease seconds"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
     <div
       className="fd-time__col"
@@ -1741,10 +2077,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </label>
       <button
         aria-label="Increase period"
-        className="fd-button fd-button--transparent sap-icon--navigation-up-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
       <div
         className="fd-time__wrapper fd-time__wrapper--meridian"
       >
@@ -1757,10 +2099,16 @@ exports[`Storyshots Component API/Time Twelve Hour 1`] = `
       </div>
       <button
         aria-label="Decrease period"
-        className="fd-button fd-button--transparent sap-icon--navigation-down-arrow"
+        className="fd-button fd-button--transparent"
         onClick={[Function]}
         type="button"
-      />
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
     </div>
   </div>
 </div>

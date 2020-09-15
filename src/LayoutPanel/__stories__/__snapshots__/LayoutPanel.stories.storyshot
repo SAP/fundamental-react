@@ -41,10 +41,19 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
               className="fd-layout-panel__actions"
             >
               <button
-                className="fd-button fd-button--compact sap-icon--add"
+                className="fd-button fd-button--compact"
                 type="button"
               >
-                Add New Button
+                <span
+                  className="fd-button__text"
+                >
+                  Add New Button
+                </span>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--add"
+                  role="img"
+                />
               </button>
             </div>
           </div>
@@ -77,7 +86,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Color
+                    <span
+                      className="fd-button__text"
+                    >
+                      Color
+                    </span>
                   </button>
                 </div>
               </div>
@@ -104,7 +117,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Size
+                    <span
+                      className="fd-button__text"
+                    >
+                      Size
+                    </span>
                   </button>
                 </div>
               </div>
@@ -187,10 +204,19 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
               className="fd-layout-panel__actions"
             >
               <button
-                className="fd-button fd-button--compact sap-icon--add"
+                className="fd-button fd-button--compact"
                 type="button"
               >
-                Add New Button
+                <span
+                  className="fd-button__text"
+                >
+                  Add New Button
+                </span>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--add"
+                  role="img"
+                />
               </button>
             </div>
           </div>
@@ -223,7 +249,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Color
+                    <span
+                      className="fd-button__text"
+                    >
+                      Color
+                    </span>
                   </button>
                 </div>
               </div>
@@ -250,7 +280,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Size
+                    <span
+                      className="fd-button__text"
+                    >
+                      Size
+                    </span>
                   </button>
                 </div>
               </div>
@@ -337,10 +371,19 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
               className="fd-layout-panel__actions"
             >
               <button
-                className="fd-button fd-button--compact sap-icon--add"
+                className="fd-button fd-button--compact"
                 type="button"
               >
-                Add New Button
+                <span
+                  className="fd-button__text"
+                >
+                  Add New Button
+                </span>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--add"
+                  role="img"
+                />
               </button>
             </div>
           </div>
@@ -373,7 +416,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Color
+                    <span
+                      className="fd-button__text"
+                    >
+                      Color
+                    </span>
                   </button>
                 </div>
               </div>
@@ -400,7 +447,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Size
+                    <span
+                      className="fd-button__text"
+                    >
+                      Size
+                    </span>
                   </button>
                 </div>
               </div>
@@ -483,10 +534,19 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
               className="fd-layout-panel__actions"
             >
               <button
-                className="fd-button fd-button--compact sap-icon--add"
+                className="fd-button fd-button--compact"
                 type="button"
               >
-                Add New Button
+                <span
+                  className="fd-button__text"
+                >
+                  Add New Button
+                </span>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--add"
+                  role="img"
+                />
               </button>
             </div>
           </div>
@@ -519,7 +579,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Color
+                    <span
+                      className="fd-button__text"
+                    >
+                      Color
+                    </span>
                   </button>
                 </div>
               </div>
@@ -546,7 +610,11 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
                     tabIndex={0}
                     type="button"
                   >
-                    Size
+                    <span
+                      className="fd-button__text"
+                    >
+                      Size
+                    </span>
                   </button>
                 </div>
               </div>
@@ -694,10 +762,19 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
         className="fd-layout-panel__actions"
       >
         <button
-          className="fd-button fd-button--compact sap-icon--add"
+          className="fd-button fd-button--compact"
           type="button"
         >
-          Add New Button
+          <span
+            className="fd-button__text"
+          >
+            Add New Button
+          </span>
+          <i
+            aria-hidden={true}
+            className="sap-icon--add"
+            role="img"
+          />
         </button>
       </div>
     </div>
@@ -730,7 +807,11 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
               tabIndex={0}
               type="button"
             >
-              Color
+              <span
+                className="fd-button__text"
+              >
+                Color
+              </span>
             </button>
           </div>
         </div>
@@ -757,7 +838,11 @@ exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
               tabIndex={0}
               type="button"
             >
-              Size
+              <span
+                className="fd-button__text"
+              >
+                Size
+              </span>
             </button>
           </div>
         </div>

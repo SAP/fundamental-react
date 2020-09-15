@@ -66,6 +66,7 @@ const MessageStrip = (props) => {
                             aria-label={localizedText.close}
                             className='fd-message-strip__close'
                             compact
+                            glyph='decline'
                             onClick={closeMessageStripHandler}
                             option='transparent' />
                     )}

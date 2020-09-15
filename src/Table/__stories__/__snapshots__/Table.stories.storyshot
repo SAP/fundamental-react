@@ -241,13 +241,19 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--vertical-grip"
+                    role="img"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -334,13 +340,19 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--vertical-grip"
+                    role="img"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -427,13 +439,19 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--vertical-grip"
+                    role="img"
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -520,13 +538,19 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup={true}
-                  className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                  className="fd-button fd-button--transparent"
                   onClick={[Function]}
                   onKeyPress={[Function]}
                   role="button"
                   tabIndex={0}
                   type="button"
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--vertical-grip"
+                    role="img"
+                  />
+                </button>
               </div>
             </div>
           </div>

@@ -84,7 +84,7 @@ describe('<ComboboxInput />', () => {
                     selectionType='auto-inline' />
             );
             expect(
-                element.find('button.sap-icon--navigation-down-arrow').getDOMNode().attributes['data-sample'].value
+                element.find('button').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });
