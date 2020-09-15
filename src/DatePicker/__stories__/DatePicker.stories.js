@@ -420,6 +420,7 @@ export const dev = () => (
         disableWeekends={boolean('disable weekends', false)}
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        enableRangeSelection={boolean('enableRangeSelection', false)}
         locale={text('locale', 'en')}
         onChange={action('on-change')}
         onDatePickerClose={action('on-date-picker-close')}
