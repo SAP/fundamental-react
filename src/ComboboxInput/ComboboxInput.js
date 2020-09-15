@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
 import tabbable from 'tabbable';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
-import React, { useRef, useState } from 'react';
+import React, { useImperativeHandle, useRef, useState } from 'react';
 
 /** A **ComboboxInput** allows users to select an item from a predefined list.
 It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.
@@ -50,6 +50,7 @@ const ComboboxInput = React.forwardRef(({
     let [selectedOption, setSelectedOption] = useState();
 
     const textInputRef = useRef(null);
+    const inputAddonBtnRef = useRef(null);
     const popoverRef = useRef(null);
     const popoverBodyRef = useRef(null);
 
@@ -96,18 +97,18 @@ const ComboboxInput = React.forwardRef(({
                         event.preventDefault();
                         break;
                     default:
-                        autoSelectFirstOption(event, textFieldValue);
+                        autoSelectFirstOption(event, textFieldValue, 'inputKeyDown');
                         break;
                 }
                 break;
             case 'esc':
-                reset();
+                reset(event);
                 break;
             case 'tab':
                 switch (resolvedSelectionType) {
                     case 'auto':
                     case 'auto-inline':
-                        autoSelectFirstOption(event, textFieldValue);
+                        autoSelectFirstOption(event, textFieldValue, 'inputKeyDown');
                         break;
                     default:
                 }
@@ -145,15 +146,18 @@ const ComboboxInput = React.forwardRef(({
     const handleInputChange = (event) => {
         const inputValue = event?.target?.value;
         setFilterString(inputValue);
-        select(event, null);
 
         if (inputValue?.trim()) {
             setIsExpanded(true);
             switch (resolvedSelectionType) {
                 case 'manual':
+                    select(event, {
+                        key: -1,
+                        text: inputValue
+                    }, 'inputChange');
                     break;
                 case 'auto':
-                    select(event, getFirstFilteredOption(inputValue));
+                    select(event, getFirstFilteredOption(inputValue), 'inputChange');
                     break;
                 case 'auto-inline':
                     //try type ahead nudge
@@ -165,11 +169,15 @@ const ComboboxInput = React.forwardRef(({
                         textInputRef.current.value = firstOption?.text;
                         createSelection(textInputRef.current, inputValue?.length, firstOption?.text?.length);
                     }
-                    select(event, firstOption);
+                    select(event, firstOption, 'inputChange');
                     break;
                 default:
             }
         } else {
+            select(event, {
+                key: -1,
+                text: inputValue
+            }, 'inputChange');
             closePopover();
         }
     };
@@ -181,7 +189,7 @@ const ComboboxInput = React.forwardRef(({
                     onSelectionChange && onSelectionChange(event, {
                         'text': filterString,
                         'key': -1 //key is set to -1 for custom input in manual combobox
-                    });
+                    }, 'inputBlur');
                 }
                 break;
             case 'auto':
@@ -197,11 +205,11 @@ const ComboboxInput = React.forwardRef(({
             case 'manual':
                 break;
             case 'auto':
-                select(event, option);
+                select(event, option, 'optionFocus');
                 break;
             case 'auto-inline':
                 textInputRef.current.value = option?.text;
-                select(event, option);
+                select(event, option, 'optionFocus');
                 break;
             default:
         }
@@ -210,22 +218,22 @@ const ComboboxInput = React.forwardRef(({
     const handleOptionKeyDown = (event, option) => {
         switch (keycode(event)) {
             case 'esc':
-                reset();
+                reset(event);
                 break;
             case 'tab':
-                handleOptionSelect(event, option);
+                handleOptionSelect(event, option, 'optionKeyDown');
                 break;
             case 'enter':
             case 'space':
                 event.preventDefault();
-                handleOptionSelect(event, option);
+                handleOptionSelect(event, option, 'optionKeyDown');
                 break;
             default:
         }
     };
 
-    const handleOptionSelect = (event, option) => {
-        select(event, option);
+    const handleOptionSelect = (event, option, reason) => {
+        select(event, option, reason);
         textInputRef.current.value = option?.text;
         setFilterString(option?.text);
         closePopover();
@@ -255,11 +263,11 @@ const ComboboxInput = React.forwardRef(({
             new FocusManager(popoverBodyRef?.current, textInputRef?.current, true, focusNodeIndex);
     };
 
-    const autoSelectFirstOption = (event, searchString) => {
+    const autoSelectFirstOption = (event, searchString, reason) => {
         if (searchString) {
             const firstOption = getFirstFilteredOption(searchString);
             if (firstOption) {
-                handleOptionSelect(event, firstOption);
+                handleOptionSelect(event, firstOption, reason);
             }
         }
     };
@@ -290,16 +298,22 @@ const ComboboxInput = React.forwardRef(({
         queueFocusManagerAttachment(index);
     };
 
-    const reset = () => {
+    const reset = (event) => {
         closePopover();
         textInputRef.current.value = '';
-        select(null, null);
+        select(event, {
+            key: -1,
+            text: ''
+        }, 'escKeyDown');
         setFilterString('');
     };
 
-    const select = (event, option) => {
-        onSelectionChange && onSelectionChange(event, option);
-        setSelectedOption(option);
+    const select = (event, option, reason) => {
+        // at least key or text has to be different to count as a true selection change
+        if (selectedOption?.key !== option?.key || selectedOption.text !== option?.text) {
+            onSelectionChange && onSelectionChange(event, option, reason);
+            setSelectedOption(option);
+        }
     };
 
     const queueFocusManagerAttachment = (initialFocusIndex) => {
@@ -311,7 +325,10 @@ const ComboboxInput = React.forwardRef(({
     //String, collection, and DOM utils
     const getFirstFilteredOption = (searchString) => {
         const matchedOptions = getFilteredOptions(searchString);
-        return matchedOptions?.length ? matchedOptions[0] : null;
+        return matchedOptions?.length ? matchedOptions[0] : {
+            key: -1,
+            text: searchString
+        };
     };
 
     const lastTabbableNodeIndex = (container) => {
@@ -376,7 +393,7 @@ const ComboboxInput = React.forwardRef(({
             id={`${id}-combobox-arrow`}
             onClick={handleAddonButtonClick}
             option='transparent'
-            ref={ref}
+            ref={inputAddonBtnRef}
             tabIndex='-1' />
     );
 
@@ -386,6 +403,15 @@ const ComboboxInput = React.forwardRef(({
     } else if (ariaLabel?.trim()) {
         labelProps['aria-label'] = ariaLabel;
     }
+
+    useImperativeHandle(ref, () => ({
+        get input() {
+            return textInputRef.current;
+        },
+        get button() {
+            return inputAddonBtnRef.current;
+        }
+    }));
 
     const inputGroup = (
         <div
@@ -477,7 +503,7 @@ const ComboboxInput = React.forwardRef(({
                                         className={listItemClasses}
                                         id={`${id}-listbox-option-${option.key}`}
                                         key={option.key}
-                                        onClick={(e) => handleOptionSelect(e, option)}
+                                        onClick={(e) => handleOptionSelect(e, option, 'optionClick')}
                                         onFocus={(e) => handleOptionFocus(e, option)}
                                         onKeyDown={(e) => handleOptionKeyDown(e, option)}
                                         role='option'>
@@ -600,13 +626,22 @@ Please set 'arrowLabel' property to a non-empty localized string.
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function when user clicks on the input group i.e. the input field or addon button*/
-    onClick: PropTypes.func,
-    /** Callback function when selected option changes after
+    /** Callback function triggered when user clicks in the text input field.
      *
-     * * user clicks on an option
-     * * enters text that causes de-selection
-     * */
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
+    onClick: PropTypes.func,
+    /** Callback function triggered when the selected option changes.
+     * There can be many reasons for a selection change depending on the `selectionType` of the combobox.
+     * The reason is available as a String and could be one of `inputBlur`, `inputChange`, `inputKeyDown`,
+     * `optionFocus`, `optionKeyDown`, `optionClick`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Object} selected - the selected option object. Will contain at least the 'key' and 'text' properties.
+     * @param {String} reason - what caused the selection to change
+     * @returns {void}
+    */
     onSelectionChange: PropTypes.func
 };
 
