@@ -396,7 +396,7 @@ class Calendar extends Component {
         this.setState({ currentFocusYear: year });
     }
 
-    dateClick = (day, isRangeEnabled, forceStayOpen) => {
+    dateClick = (day, isRangeEnabled, forceStayOpen = false) => {
         let selectedDates = [];
         if (typeof isRangeEnabled !== 'undefined' && isRangeEnabled) {
             selectedDates = this.state.arrSelectedDates;
