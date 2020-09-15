@@ -31,7 +31,7 @@ class DatePicker extends Component {
         this.state = {
             isExpanded: false,
             selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
-            arrSelectedDates: [],
+            startAndEndDates: [],
             formattedDate,
             isoFormattedDate
         };
@@ -167,7 +167,8 @@ class DatePicker extends Component {
         return {
             date: this.state.selectedDate,
             formattedDate: this.state.formattedDate,
-            isoFormattedDate: this.state.isoFormattedDate
+            isoFormattedDate: this.state.isoFormattedDate,
+            startAndEndDates: this.state.startAndEndDates
         };
     }
 
@@ -193,7 +194,7 @@ class DatePicker extends Component {
                 const newFormattedDateRangeStr = this.getFormattedDateRangeStr(arrSelected);
                 this.setState({
                     selectedDate: null,
-                    arrSelectedDates: arrSelected,
+                    startAndEndDates: arrSelected,
                     formattedDate: newFormattedDateRangeStr
                 }, () => {
                     if (formattedDate !== newFormattedDateRangeStr) {
@@ -232,7 +233,7 @@ class DatePicker extends Component {
             formattedDate: '',
             isoFormattedDate: '',
             selectedDate: null,
-            arrSelectedDates: []
+            startAndEndDates: []
         }, () => {
             if (formattedDate !== '') {
                 this.executeCallback(this.props.onChange, 'invalidInput');
@@ -270,7 +271,7 @@ class DatePicker extends Component {
             }
             const newFormattedDateRangeStr = this.getFormattedDateRangeStr(date);
             this.setState({
-                arrSelectedDates: date,
+                startAndEndDates: date,
                 formattedDate: newFormattedDateRangeStr,
                 isoFormattedDate: isoFormatDate
             }, () => {
@@ -356,6 +357,7 @@ class DatePicker extends Component {
             locale,
             localizedText,
             onInputBlur,
+            onInputFocus,
             onDatePickerClose,
             openToDate,
             popoverProps,
@@ -448,7 +450,7 @@ class DatePicker extends Component {
                                 compact={compact}
                                 customDate={
                                     enableRangeSelection
-                                        ? this.state.arrSelectedDates
+                                        ? this.state.startAndEndDates
                                         : this.state.selectedDate
                                 }
                                 disableAfterDate={disableAfterDate}
@@ -593,7 +595,8 @@ DatePicker.propTypes = {
      * `inputChange`, `autoFormat` or `invalidInput`
      *
      * @param {Object} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD
+     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
+     * array of dates objects containing the start and end date if enableRangeSelection is true.
      * @param {String} reason - what caused the selection to change
      * @returns {void}
      */
@@ -601,7 +604,8 @@ DatePicker.propTypes = {
     /** Callback function which triggers when datepicker popover closes after date selection.
      *
      * @param {Object} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD
+     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
+     * array of dates objects containing the start and end date if enableRangeSelection is true.
      * @returns {void}
      */
     onDatePickerClose: PropTypes.func,
@@ -610,14 +614,16 @@ DatePicker.propTypes = {
       * If input field value can be formatted to a valid date object then this is used as the selectedDate, else field is reset.
       *
       * @param {Object} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-      * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD
+      * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
+      * array of dates objects containing the start and end date if enableRangeSelection is true.
       * @returns {void}
      */
     onInputBlur: PropTypes.func,
     /** Callback function triggered when datepicker input is focused.
      *
      * @param {Object|SyntheticEvent} selectedDate - selectedDate.date is the selected date object; selectedDate.formattedDate is the formatted date string;
-     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD
+     * selectedDate.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; selectedDate.startAndEndDates is an
+     * array of dates objects containing the start and end date if enableRangeSelection is true.
      * @returns {void}
      */
     onInputFocus: PropTypes.func
