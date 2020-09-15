@@ -1,9 +1,13 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Button from '../../Button/Button';
 import Column from '../../LayoutGrid/Column';
 import ComboboxInput from '../ComboboxInput';
 import Container from '../../LayoutGrid/Container';
 import countriesData from '../../../data/countries.json';
+import FormGroup from '../../Forms/FormGroup';
+import FormItem from '../../Forms/FormItem';
+import FormLabel from '../../Forms/FormLabel';
 import List from '../../List/List';
 import Row from '../../LayoutGrid/Row';
 import Switch from '../../Switch/Switch';
@@ -187,7 +191,8 @@ export const selectionType = () => {
 
 export const dev = () => {
     const [selectedCountryObj, setSelectedCountry] = useState();
-    const [useCustomRenderer, setUseCustomRenderer] = useState(true);
+    const [useCustomRenderer, setUseCustomRenderer] = useState(false);
+    const comboboxRef = useRef();
 
     const withFlags = (option) => {
         return (
@@ -217,7 +222,6 @@ export const dev = () => {
                     <Column>
                         <div>
                             <Switch
-                                checked
                                 compact
                                 onChange={() => {
                                     setUseCustomRenderer(!useCustomRenderer);
@@ -228,38 +232,57 @@ export const dev = () => {
                             Selected country code: {selectedCountryObj?.key || 'none'}
 
                             <br />
-                            <ComboboxInput
-                                ariaLabel={text('ariaLabel', '')}
-                                arrowLabel='Show country options'
-                                buttonProps={{
-                                    'data-sample': 'combobox-dev-story-example'
-                                }}
-                                compact={boolean('compact', false)}
-                                disabled={boolean('disabled', false)}
-                                filterable={boolean('filterable', true)}
-                                id='comboboxDevExample'
-                                label={text('label', 'Country')}
-                                maxHeight='250px'
-                                noMatchesText='No Matches'
-                                onSelectionChange={(event, option) => {
-                                    setSelectedCountry(option);
-                                }}
-                                optionRenderer={useCustomRenderer ? withFlags : null}
-                                options={countriesData}
-                                placeholder={text('Placeholder', placeholder)}
-                                required={boolean('required', false)}
-                                selectionType={select('selectionType', {
-                                    'manual': 'manual',
-                                    'auto': 'auto',
-                                    'auto-inline': 'auto-inline'
-                                })}
-                                validationState={select('Validation State', {
-                                    'none': '',
-                                    'success': { state: 'success', text: 'placeholder text' },
-                                    'error': { state: 'error', text: 'placeholder text' },
-                                    'information': { state: 'information', text: 'placeholder text' },
-                                    'warning': { state: 'warning', text: 'placeholder text' }
-                                })} />
+                            <FormGroup>
+                                <FormItem isHorizontal>
+                                    <FormLabel htmlFor='comboboxDevExample'>Country</FormLabel>
+                                    <br />
+                                    <ComboboxInput
+                                        ariaLabel={text('ariaLabel', '')}
+                                        arrowLabel='Show country options'
+                                        buttonProps={{
+                                            'data-sample': 'combobox-dev-story-example'
+                                        }}
+                                        compact={boolean('compact', false)}
+                                        disabled={boolean('disabled', false)}
+                                        filterable={boolean('filterable', true)}
+                                        id='comboboxDevExample'
+                                        maxHeight='250px'
+                                        noMatchesText='No Matches'
+                                        onClick={action('on-click')}
+                                        onSelectionChange={(e, option, reason)=> {
+                                            action('on-selection-change')(e, option, reason);
+                                            setSelectedCountry(option);
+                                        }}
+                                        optionRenderer={useCustomRenderer ? withFlags : null}
+                                        options={countriesData}
+                                        placeholder={text('Placeholder', placeholder)}
+                                        ref={comboboxRef}
+                                        required={boolean('required', false)}
+                                        selectionType={select('selectionType', {
+                                            'manual': 'manual',
+                                            'auto': 'auto',
+                                            'auto-inline': 'auto-inline'
+                                        })}
+                                        validationState={select('Validation State', {
+                                            'none': '',
+                                            'success': { state: 'success', text: 'placeholder text' },
+                                            'error': { state: 'error', text: 'placeholder text' },
+                                            'information': { state: 'information', text: 'placeholder text' },
+                                            'warning': { state: 'warning', text: 'placeholder text' }
+                                        })} />
+                                    <Button
+                                        glyph='decline'
+                                        onClick={() => {
+                                            if (comboboxRef?.current?.input) {
+                                                comboboxRef.current.input.value = '';
+                                            }
+                                        }}>
+                                        Clear
+                                    </Button>
+                                </FormItem>
+
+                            </FormGroup>
+                            <Container />
                         </div>
                     </Column>
                     <Column>
@@ -280,11 +303,11 @@ dev.parameters = { docs: { disable: true } };
 
 // Visual snapshot testing stories below
 export const autoInlineButtonClickVisualStoryShotOnly = () => {
-    const comboboxVS3ExampleButtonRef = useRef();
+    const comboboxVS3Ref = useRef();
 
     useEffect(() => {
-        comboboxVS3ExampleButtonRef?.current?.click();
-    }, [comboboxVS3ExampleButtonRef]);
+        comboboxVS3Ref?.current?.button?.click();
+    }, [comboboxVS3Ref]);
 
     return (
         <Container>
@@ -298,7 +321,7 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
                             noMatchesText='No Matches'
                             options={countriesData}
                             placeholder={placeholder}
-                            ref={comboboxVS3ExampleButtonRef}
+                            ref={comboboxVS3Ref}
                             selectionType='auto-inline' />
                     </div>
                 </Column>
