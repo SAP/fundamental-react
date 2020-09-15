@@ -28,7 +28,7 @@ class Dialog extends Component {
     // check for Escape key press
     handleKeyPress = event => {
         if (event.key === 'Escape' || event.key === 'Esc') {
-            this.handleCloseClick();
+            this.handleCloseClick(event);
         }
     };
 
