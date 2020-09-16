@@ -1,5 +1,4 @@
 /* eslint-disable react/no-multi-comp */
-import { action } from '@storybook/addon-actions';
 import React from 'react';
 import SideNav from '../SideNav';
 import SideNavList from '../_SideNavList';
