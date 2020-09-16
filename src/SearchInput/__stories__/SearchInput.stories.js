@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import SearchInput from '../SearchInput';
 import {
@@ -96,6 +97,9 @@ export const dev = () => (
         inputProps={{
             'aria-label': 'Search input for dev testing'
         }}
+        onChange={action('on-change')}
+        onEnter={action('on-enter')}
+        onSelect={action('on-select')}
         placeholder={'Select a Fruit'}
         readOnly={boolean('readOnly', false)}
         searchList={searchData}

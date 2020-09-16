@@ -6,6 +6,7 @@ import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
+import keycode from 'keycode';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
@@ -28,7 +29,7 @@ class SearchInput extends PureComponent {
     }
 
     handleKeyPress = event => {
-        if (event.key === 'enter') {
+        if (keycode(event) === 'enter') {
             this.props.onEnter(this.state.value);
         }
     };
@@ -294,10 +295,28 @@ SearchInput.propTypes = {
         text: PropTypes.string
     }),
     /** Callback function when the change event fires on the component */
+    /**
+     * Callback function triggered when a change event is fired on the underlying `<input>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Object[]} matches - array of objects from searchList that match the search string.
+     * @returns {void}
+    */
     onChange: PropTypes.func,
-    /** Callback function when the user hits the <enter> key */
+    /**
+     * Callback function triggered when the user hits the `enter` key in the text `<input>`.
+     *
+     * @param {string} text current string value of input field.
+     * @returns {void}
+     * */
     onEnter: PropTypes.func,
-    /** Callback function when user clicks on an option */
+    /**
+     * Callback function triggered when user clicks on an option.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {object} data - selected object from searchList
+     * @returns {void}
+     * */
     onSelect: PropTypes.func
 };
 
