@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import SideNav from '../SideNav';
 import SideNavList from '../_SideNavList';
@@ -246,15 +247,15 @@ export const withSubList = () => (
                         name='Item 1'
                         url='#' />
                     <SideNav.ListItem
-                        id='subitem_41'
+                        id='subitem_42'
                         name='Item 2'
                         url='#' />
                     <SideNav.ListItem
-                        id='subitem_41'
+                        id='subitem_43'
                         name='Item 3'
                         url='#' />
                     <SideNav.ListItem
-                        id='subitem_41'
+                        id='subitem_44'
                         name='Item 4'
                         url='#' />
                 </SideNav.List>
@@ -272,12 +273,13 @@ export const withIcons = () => (
         selectedId='item-2'
         skipLink={skipLink}>
         <SideNav.List
-            data-sample='Sample'>
+            data-sample='Sample'
+            onItemSelected={action('on-item-selected')}>
             <SideNav.ListItem
                 glyph='home'
                 id='item-1'
                 name='Link item'
-                url='/' />
+                url='http://localhost:12123/?path=/story/component-api-sidenav--with-icons' />
             <SideNav.ListItem
                 glyph='home'
                 id='item-2'
