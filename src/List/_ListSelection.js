@@ -47,7 +47,14 @@ ListSelection.propTypes = {
     className: PropTypes.string,
     /** Boolean value controlled by parent List.Item*/
     selected: PropTypes.bool,
-    /** Callback function when the change event fires on the Checkbox component */
+    /**
+     * Callback function triggered when the change event fires on the underlying HTML checkbox `<input>`
+     * of the parent `<li>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Boolean} checkedState - represents the final checked state of the HTML checkbox input.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 
