@@ -15,7 +15,7 @@ import {
 export default {
     title: 'Component API/InputGroup',
     component: InputGroup,
-    subcomponents: InputGroupAddon
+    subcomponents: { InputGroupAddon }
 };
 
 
