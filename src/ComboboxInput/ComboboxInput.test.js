@@ -158,7 +158,7 @@ describe('<ComboboxInput />', () => {
 
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
-                expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), null);
+                expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), { key: -1, text: 'island' }, 'inputChange');
             });
 
             test('should not auto select the first filtered option on input field blur', () => {
@@ -180,7 +180,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), {
                     text: 'island',
                     key: -1 // key is set to -1 for custom input in manual combobox
-                });
+                }, 'inputChange');
             });
 
             test('should select the clicked option and update input field value', () => {
@@ -202,7 +202,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Cocos (Keeling) Islands',
                     key: 'CC'
-                }));
+                }), 'optionClick');
                 expect(wrapper.find('input').getDOMNode().value).toBe('Cocos (Keeling) Islands');
             });
 
@@ -259,7 +259,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Ascension Island',
                     key: 'AC'
-                }));
+                }), 'inputChange');
             });
 
             test('should auto select the first filtered option on input field blur', () => {
@@ -282,7 +282,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Ascension Island',
                     key: 'AC'
-                }));
+                }), 'inputChange');
             });
 
             test('should select the clicked option and update input field value', () => {
@@ -305,7 +305,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Cocos (Keeling) Islands',
                     key: 'CC'
-                }));
+                }), 'optionClick');
                 expect(wrapper.find('input').getDOMNode().value).toBe('Cocos (Keeling) Islands');
             });
 
@@ -362,7 +362,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Ascension Island',
                     key: 'AC'
-                }));
+                }), 'inputChange');
             });
 
             test('should auto complete the input field with text from the first filtered option', () => {
@@ -403,7 +403,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Ascension Island',
                     key: 'AC'
-                }));
+                }), 'inputChange');
             });
 
             test('should toggle listbox visibility when addon button is clicked', () => {
@@ -447,7 +447,7 @@ describe('<ComboboxInput />', () => {
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Morocco',
                     key: 'MA'
-                }));
+                }), 'optionClick');
                 expect(wrapper.find('input').getDOMNode().value).toBe('Morocco');
             });
 
@@ -492,6 +492,6 @@ describe('<ComboboxInput />', () => {
             );
         }
         mount(<Test />);
-        expect(ref.current.tagName).toEqual('BUTTON');
+        expect(ref.current.button.tagName).toEqual('BUTTON');
     });
 });
