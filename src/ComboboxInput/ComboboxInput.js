@@ -639,7 +639,7 @@ Please set 'arrowLabel' property to a non-empty localized string.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @param {Object} selected - the selected option object. Will contain at least the 'key' and 'text' properties.
-     * @param {String} reason - what caused the selection to change
+     * @param {string} reason - what caused the selection to change
      * @returns {void}
     */
     onSelectionChange: PropTypes.func

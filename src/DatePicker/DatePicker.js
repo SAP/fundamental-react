@@ -597,7 +597,7 @@ DatePicker.propTypes = {
      * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
      * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
      * array of date objects containing the start and end date if enableRangeSelection is true.
-     * @param {String} reason - what caused the selection to change
+     * @param {string} reason - what caused the selection to change
      * @returns {void}
      */
     onChange: PropTypes.func,

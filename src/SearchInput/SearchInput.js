@@ -314,7 +314,7 @@ SearchInput.propTypes = {
      * Callback function triggered when user clicks on an option.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
-     * @param {object} data - selected object from searchList
+     * @param {Object} data - selected object from searchList
      * @returns {void}
      * */
     onSelect: PropTypes.func
