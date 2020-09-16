@@ -252,4 +252,88 @@ describe('GridManager', () => {
             expect(global.scrollTo).toHaveBeenCalled();
         });
     });
+
+    describe('Edit Mode', () => {
+        it('should not focus on an inner text input if disabled', () => {
+            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 2, col: 3 } });
+
+            const event = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-2-3'),
+                keyCode: keycode.codes.down
+            };
+            manager.handleKeyDown(event);
+
+            expect(document.activeElement).not.toEqual(gridNode.querySelector('#textinput-3-3'));
+        });
+
+        it('should toggle focus between a cell and its inner text input by pressing enter', () => {
+            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+            const event = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-3-3'),
+                keyCode: keycode.codes.enter
+            };
+
+            manager.handleKeyDown(event);
+            expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
+            manager.handleKeyDown(event);
+            expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-3'));
+        });
+
+        it('should return focus from inner input to containing cell by pressing escape', () => {
+            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+            const enterEvent = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-3-3'),
+                keyCode: keycode.codes.enter
+            };
+
+            const escapeEvent = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-3-3'),
+                keyCode: keycode.codes.esc
+            };
+
+            manager.handleKeyDown(enterEvent);
+            expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
+            manager.handleKeyDown(escapeEvent);
+            expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-3'));
+        });
+
+        it('should disable navigating to other cells if enabled', () => {
+            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+            const enableEvent = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-3-3'),
+                keyCode: keycode.codes.enter
+            };
+
+            const keyEvent = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-3-3'),
+                keyCode: keycode.codes.left
+            };
+
+            manager.handleKeyDown(enableEvent);
+            manager.handleKeyDown(keyEvent);
+            expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
+        });
+
+        it('should allow navigating to other cells if disabled', () => {
+            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+            const keyEvent = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#cell-3-3'),
+                keyCode: keycode.codes.left
+            };
+
+            manager.handleKeyDown(keyEvent);
+            expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-2'));
+        });
+    });
 });

@@ -117,7 +117,6 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                         displayCells = row.rowData.splice(1, row.rowData.length);
                     }
 
-
                     return (
                         <tr
                             className={tableRowClasses}
