@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
 import tabbable from 'tabbable';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
-import React, { useImperativeHandle, useRef, useState } from 'react';
+import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
 
 /** A **ComboboxInput** allows users to select an item from a predefined list.
 It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.
@@ -53,6 +53,17 @@ const ComboboxInput = React.forwardRef(({
     const inputAddonBtnRef = useRef(null);
     const popoverRef = useRef(null);
     const popoverBodyRef = useRef(null);
+
+    useEffect(() => {
+        const preSelectedOption = options?.find(option => option?.key === selectedKey) || null;
+        if (preSelectedOption) {
+            select(null, preSelectedOption, 'preSelection');
+            setFilterString(preSelectedOption?.text || '');
+            if (textInputRef?.current) {
+                textInputRef.current.value = preSelectedOption?.text || '';
+            }
+        }
+    }, [selectedKey, textInputRef]);
 
     const inputGroupClass = classnames(
         'fd-input-group--control',
@@ -634,7 +645,7 @@ Please set 'arrowLabel' property to a non-empty localized string.
     onClick: PropTypes.func,
     /** Callback function; triggered when the selected option changes.
      * There can be many reasons for a selection change depending on the `selectionType` of the combobox.
-     * The reason is available as a String and could be one of `inputBlur`, `inputChange`, `inputKeyDown`,
+     * The reason is available as a String and could be one of `preSelection`, `inputBlur`, `inputChange`, `inputKeyDown`,
      * `optionFocus`, `optionKeyDown`, `optionClick`.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.

@@ -123,6 +123,23 @@ describe('<ComboboxInput />', () => {
             container = null;
         });
 
+        describe('should pre select an option when selectedKey is passed', () => {
+            const selectionChangeHandler = jest.fn();
+            act(() => {
+
+                setupForInteraction({
+                    selectedKey: 'CR',
+                    selectionType: 'auto-inline',
+                    onSelectionChange: selectionChangeHandler
+                }, container);
+
+            });
+            expect(selectionChangeHandler).toHaveBeenLastCalledWith(null, expect.objectContaining({
+                text: 'Costa Rica',
+                key: 'CR'
+            }), 'preSelection');
+        });
+
         describe('When selectionType is \'manual\'', () => {
 
             test('should not show multiple validation overlays', () => {

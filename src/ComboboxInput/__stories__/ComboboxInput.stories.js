@@ -258,6 +258,7 @@ export const dev = () => {
                                         placeholder={text('Placeholder', placeholder)}
                                         ref={comboboxRef}
                                         required={boolean('required', false)}
+                                        selectedKey={text('selectedKey', 'US')}
                                         selectionType={select('selectionType', {
                                             'manual': 'manual',
                                             'auto': 'auto',
