@@ -25,6 +25,9 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
 
     const tableHeaderRowClasses = classnames(
         'fd-table__row',
+        {
+            'fd-table__row--focusable': keyboardNavigation === 'row'
+        },
         tableHeaderRowClassName
     );
 
@@ -35,11 +38,17 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
 
     const tableRowClasses = classnames(
         'fd-table__row',
+        {
+            'fd-table__cell--focusable': keyboardNavigation === 'row'
+        },
         tableRowClassName
     );
 
     const tableCellClasses = classnames(
         'fd-table__cell',
+        {
+            'fd-table__cell--focusable': keyboardNavigation === 'cell'
+        },
         tableCellClassName
     );
 

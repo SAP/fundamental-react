@@ -209,6 +209,7 @@ export const withCellNavigation = (props) => {
 
     return (
         <Table
+            {...props}
             headers={[
                 <Checkbox
                     ariaLabel='Select all rows'
@@ -238,8 +239,7 @@ export const withCellNavigation = (props) => {
                         ]
                     });
                 })
-            }
-            {...props} />
+            } />
     );
 };
 
