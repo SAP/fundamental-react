@@ -91,7 +91,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             <tbody className={tableBodyClasses} {...tableBodyProps}>
                 {tableData.map((row, index) => {
                     let rowProps, checkboxCell;
-                    let displayRows = row.rowData;
+                    let displayCells = row.rowData;
                     if (tableBodyRowProps) {
                         rowProps = (typeof tableBodyRowProps === 'function'
                             ? tableBodyRowProps(row, index)
@@ -105,8 +105,9 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                                 {row.rowData[0]}
                             </td>
                         );
-                        displayRows = row.rowData.splice(1, row.rowData.length);
+                        displayCells = row.rowData.splice(1, row.rowData.length);
                     }
+
 
                     return (
                         <tr
@@ -115,8 +116,11 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                             aria-selected={row?.rowData[0]?.props?.checked}
                             key={index}>
                             {richTable && checkboxCell}
-                            {displayRows.map((rowData, cellIndex) => {
-                                return <td className={tableCellClasses} key={cellIndex}>{rowData}</td>;
+                            {displayCells.map((cellData, cellIndex) => {
+                                if (cellData.type?.propTypes?.compact) {
+                                    cellData = React.cloneElement(cellData, { compact: compact || condensed });
+                                }
+                                return <td className={tableCellClasses} key={cellIndex}>{cellData}</td>;
                             })}
                         </tr>
                     );
@@ -131,7 +135,7 @@ Table.displayName = 'Table';
 Table.propTypes = {
     /** Array of localized text strings for the column headers */
     headers: PropTypes.array.isRequired,
-    /** Array of objects that contain one property: `rowData` (an array of strings containing data for each column in the row) */
+    /** Array of objects that contain one property: `rowData` (an array of nodes containing data for each column in the row) */
     tableData: PropTypes.arrayOf(
         PropTypes.shape({
             rowData: PropTypes.array

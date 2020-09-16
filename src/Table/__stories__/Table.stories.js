@@ -1,5 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 import Avatar from '../../Avatar/Avatar';
+import { boolean } from '@storybook/addon-knobs';
 import Button from '../../Button/Button';
 import Checkbox from '../../Forms/Checkbox';
 import DatePicker from '../../DatePicker/DatePicker';
@@ -17,23 +18,42 @@ export default {
     component: Table
 };
 
+const defaultHeaders = [
+    'Column Header 1',
+    'Column Header 2',
+    'Column Header 3',
+    'Column Header 4'
+];
+const defaultData = [
+    {
+        rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
+    },
+    {
+        rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
+    }
+];
+
 export const primary = () => {
-    const defaultHeaders = [
-        'Column Header 1',
-        'Column Header 2',
-        'Column Header 3',
-        'Column Header 4'
-    ];
-    const defaultData = [
-        {
-            rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
-        },
-        {
-            rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
-        }
-    ];
     return (
         <Table
+            headers={defaultHeaders}
+            tableData={defaultData} />
+    );
+};
+
+export const compact = () => {
+    return (
+        <Table
+            compact
+            headers={defaultHeaders}
+            tableData={defaultData} />
+    );
+};
+
+export const condensed = () => {
+    return (
+        <Table
+            condensed
             headers={defaultHeaders}
             tableData={defaultData} />
     );
@@ -126,7 +146,7 @@ export const richTable = () => {
     );
 };
 
-export const withCellNavigation = () => {
+export const withCellNavigation = (props) => {
     const tableRowData = [
         {
             'productId': 'HT-1000',
@@ -143,8 +163,8 @@ export const withCellNavigation = () => {
             'productName': 'Notebook Basic 17',
             'deliveryDate': '2017-04-17',
             'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg',
-            'status': 'Available',
-            'quantity': 20
+            'status': 'Unavailable',
+            'quantity': 0
         },
         {
             'productId': 'HT-1002',
@@ -167,12 +187,6 @@ export const withCellNavigation = () => {
     ];
 
     const [checkedItems, setCheckedItems] = useState({});
-    const [productIds, setProductIds] = useState(
-        tableRowData.reduce((map, obj) => {
-            map[obj.productName] = obj.productId;
-            return map;
-        }, {})
-    );
 
     const handleChange = (event) => {
         setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked });
@@ -180,12 +194,8 @@ export const withCellNavigation = () => {
 
     const handleHeaderChange = (event) => {
         const newCheckedItems = {};
-        tableRowData.forEach(row => newCheckedItems[row.name] = event.target.checked);
+        tableRowData.forEach(row => newCheckedItems[row.productName] = event.target.checked);
         setCheckedItems(newCheckedItems);
-    };
-
-    const handleProductIdChange = (event) => {
-        setProductIds({ ...productIds, [event.target.name]: event.target.value });
     };
 
     const suppliers = [
@@ -216,10 +226,9 @@ export const withCellNavigation = () => {
                                 name={item.productName}
                                 onChange={handleChange} />,
                             <span>{item.productName}</span>,
-                            <FormInput defaultValue={item.productId} name={item.productName}
-                                onChange={handleProductIdChange} />,
+                            <FormInput defaultValue={item.productId} name={item.productName} />,
                             <span>{item.quantity}</span>,
-                            <ObjectStatus status={'positive'/*getStatus(item.status)*/}>{item.status}</ObjectStatus>,
+                            <ObjectStatus status={item.status === 'Available' ? 'positive' : 'negative'}>{item.status}</ObjectStatus>,
                             <Select options={suppliers} placeholder='Select a supplier'
                                 selectedKey={suppliers[suppliers.findIndex((supplier) => supplier.text === item.supplierName)].key} />,
                             <Link href={item.imageUrl}>Show image</Link>,
@@ -229,6 +238,19 @@ export const withCellNavigation = () => {
                         ]
                     });
                 })
-            } />
+            }
+            {...props} />
     );
+};
+
+
+export const dev = () => {
+    return withCellNavigation({
+        compact: boolean('compact', false),
+        condensed: boolean('condensed', false)
+    });
+};
+
+dev.parameters = {
+    docs: { disable: true }
 };
