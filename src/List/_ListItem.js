@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import ListSelection from './_ListSelection';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ListItem = ({
     action,
@@ -16,6 +16,7 @@ const ListItem = ({
     url,
     ...props
 }) => {
+    const [selectedState, setSelectedState] = useState(selected || false);
 
     const handleClick = (e) => {
         onClick(e);
@@ -70,9 +71,15 @@ const ListItem = ({
             if (child?.type?.displayName === ListSelection.displayName) {
                 selectionProps = {
                     'role': 'option',
-                    'aria-selected': selected
+                    'aria-selected': selectedState
                 };
-                return React.cloneElement(child, { selected });
+                return React.cloneElement(child, {
+                    selected: selected || selectedState,
+                    onChange: (e, checked) => {
+                        setSelectedState(checked);
+                        child?.props?.onChange?.(e, checked);
+                    }
+                });
             }
             return child;
         });
