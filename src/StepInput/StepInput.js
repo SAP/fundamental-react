@@ -180,7 +180,12 @@ StepInput.propTypes = {
     }),
     /** Value of the number input */
     value: PropTypes.number,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function triggered when the step value changes.
+     *
+     * @param {number} stepValue - current step value as number.
+     * @returns {void}
+     * */
     onChange: PropTypes.func
 };
 
