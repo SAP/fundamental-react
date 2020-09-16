@@ -1,8 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 import { action } from '@storybook/addon-actions';
 import List from '../List';
-import ListFooter from '../_ListFooter';
-import ListHeader from '../_ListHeader';
 import ListIcon from '../_ListIcon';
 import ListItem from '../_ListItem';
 import ListSelection from '../_ListSelection';
@@ -16,7 +14,7 @@ import {
 export default {
     title: 'Component API/List',
     component: List,
-    subcomponents: { ListHeader, ListFooter, ListIcon, ListItem, ListSelection, ListText }
+    subcomponents: { ListItem, ListSelection, ListText, ListIcon }
 };
 
 
