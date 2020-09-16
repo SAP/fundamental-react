@@ -94,9 +94,9 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
               className="fd-switch fd-switch--compact"
             >
               <input
-                aria-checked={true}
+                aria-checked={false}
                 aria-label="Switch"
-                checked={true}
+                checked={false}
                 className="fd-switch__input"
                 onChange={[Function]}
                 type="checkbox"
@@ -119,58 +119,84 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
           none
           <br />
           <div
-            className="fd-form-item"
+            className="fd-form-group"
           >
-            <label
-              aria-required={false}
-              className="fd-form-label"
-              id="comboboxDevExample-label"
-            >
-              Country
-            </label>
             <div
-              className="fd-popover"
+              className="fd-form-item fd-form-item--horizontal"
             >
+              <label
+                className="fd-form-label"
+                htmlFor="comboboxDevExample"
+              >
+                Country
+              </label>
+              <br />
               <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
+                className="fd-form-item"
               >
                 <div
-                  className="fd-popover__control"
+                  className="fd-popover"
                 >
                   <div
-                    aria-expanded={false}
-                    aria-haspopup="listbox"
-                    aria-owns="comboboxDevExample-listbox"
-                    id="comboboxDevExample-combobox"
-                    role="combobox"
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
                   >
                     <div
-                      className="fd-input-group--control fd-input-group"
-                      onClick={[Function]}
+                      className="fd-popover__control"
                     >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="comboboxDevExample-listbox"
-                        aria-labelledby="comboboxDevExample-label"
-                        autoComplete="off"
-                        className="fd-input fd-input-group__input"
-                        disabled={false}
-                        id="comboboxDevExample-input"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Enter country"
-                        required={false}
-                        type="text"
-                      />
+                      <div
+                        aria-expanded={false}
+                        aria-haspopup="listbox"
+                        aria-owns="comboboxDevExample-listbox"
+                        id="comboboxDevExample-combobox"
+                        role="combobox"
+                      >
+                        <div
+                          className="fd-input-group--control fd-input-group"
+                          onClick={[Function]}
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="comboboxDevExample-listbox"
+                            autoComplete="off"
+                            className="fd-input fd-input-group__input"
+                            disabled={false}
+                            id="comboboxDevExample-input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Enter country"
+                            required={false}
+                            type="text"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button
+                className="fd-button"
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="fd-button__text"
+                >
+                  Clear
+                </span>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--decline"
+                  role="img"
+                />
+              </button>
             </div>
           </div>
+          <div
+            className="fd-container"
+          />
         </div>
       </div>
       <div

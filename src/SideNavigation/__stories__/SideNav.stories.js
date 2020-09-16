@@ -273,8 +273,7 @@ export const withIcons = () => (
         selectedId='item-2'
         skipLink={skipLink}>
         <SideNav.List
-            data-sample='Sample'
-            onItemSelected={action('on-item-selected')}>
+            data-sample='Sample'>
             <SideNav.ListItem
                 glyph='home'
                 id='item-1'
