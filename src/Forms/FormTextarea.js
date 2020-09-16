@@ -145,6 +145,12 @@ FormTextarea.propTypes = {
     /** Value for the textarea */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */
+    /**
+     * Callback function triggered when the change event fires on the HTML `<textarea>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 
