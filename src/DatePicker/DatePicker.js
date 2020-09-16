@@ -135,7 +135,8 @@ class DatePicker extends Component {
             isoFormattedDate: defaultValue && defaultValue.length > 0
                 ? moment(defaultValue, dateFormat).format(ISO_DATE_FORMAT)
                 : '',
-            formattedDate: formattedNewDefault
+            formattedDate: formattedNewDefault,
+            startAndEndDates: []
         }, () => {
             this.validateDates();
         });
@@ -214,7 +215,8 @@ class DatePicker extends Component {
                     formattedDate: newFormattedDateStr,
                     isoFormattedDate: formattedDate
                         ? moment(formattedDate, this.props.dateFormat).format(ISO_DATE_FORMAT)
-                        : ''
+                        : '',
+                    startAndEndDates: []
                 }, () => {
                     if (formattedDate !== newFormattedDateStr) {
                         this.executeCallback(this.props.onChange, 'autoFormat');
@@ -285,7 +287,8 @@ class DatePicker extends Component {
             this.setState({
                 selectedDate: date,
                 formattedDate: newFormattedDate,
-                isoFormattedDate: date.format(ISO_DATE_FORMAT)
+                isoFormattedDate: date.format(ISO_DATE_FORMAT),
+                startAndEndDates: []
             }, () => {
                 if (formattedDate !== newFormattedDate) {
                     this.props.onChange(this.getCallbackData(), reason);
