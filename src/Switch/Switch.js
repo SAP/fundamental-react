@@ -146,7 +146,12 @@ Switch.propTypes = {
     semantic: PropTypes.bool,
     /** Set to true to display text from `internalLabels` next to the switch */
     showInternalLabels: PropTypes.bool,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function triggered when the switch state changes i.e. a change event is fired on the underlying HTML `<input>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+     * */
     onChange: PropTypes.func
 };
 
