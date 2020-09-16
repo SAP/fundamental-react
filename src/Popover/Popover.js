@@ -259,9 +259,18 @@ Popover.propTypes = {
      * - "maxTarget" - right edge aligns with target unless Popover content is smaller
      */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
-    /** Callback for consumer clicking outside of popover body */
+    /**
+     * Callback triggered on clicking outside of popover body.
+     *
+     * @param {MouseEvent} event
+     * @returns {void}
+     * */
     onClickOutside: PropTypes.func,
-    /** Callback when escape key is pressed when popover body is visible */
+    /**
+     * Callback triggered when `escape` key is pressed and popover body is visible.
+     *
+     * @returns {void}
+     * */
     onEscapeKey: PropTypes.func
 };
 
