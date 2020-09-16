@@ -116,7 +116,12 @@ MessageStrip.propTypes = {
     'success',
     'information'*/
     type: PropTypes.oneOf(MESSAGESTRIP_TYPES),
-    /** Callback function passing event when close button is clicked */
+    /**
+     * Callback function triggered when a dismissible MessageStrip's close button is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onCloseClicked: PropTypes.func
 };
 
