@@ -189,7 +189,7 @@ TimePicker.propTypes = {
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */
     /**
-     * Callback function triggered when the current time is changed by picking from popover or editing the `<input>` field.
+     * Callback function; triggered when the current time is changed by picking from popover or editing the `<input>` field.
      * Fired only when formatted string is valid.
      *
      * @param {Object} data - has formattedTime string and time.hour, time.meridiem, time.minute, and time.second as numbers

@@ -48,7 +48,7 @@ ListSelection.propTypes = {
     /** Boolean value controlled by parent List.Item*/
     selected: PropTypes.bool,
     /**
-     * Callback function triggered when the change event fires on the underlying HTML checkbox `<input>`
+     * Callback function; triggered when the change event fires on the underlying HTML checkbox `<input>`
      * of the parent `<li>`.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.

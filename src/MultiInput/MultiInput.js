@@ -295,7 +295,7 @@ MultiInput.propTypes = {
         text: PropTypes.string
     }),
     /**
-     * Callback function triggered when a tag is added or removed.
+     * Callback function; triggered when a tag is added or removed.
      *
      * @param {string[]} selectedTags array of selected tags as strings
      * @returns {void}

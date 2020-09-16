@@ -162,7 +162,7 @@ SideNavListItem.propTypes = {
     /** Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute */
     url: PropTypes.string,
     /**
-     * Callback function triggered when SideNavListItem is clicked.
+     * Callback function; triggered when SideNavListItem is clicked.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @returns {void}

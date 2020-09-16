@@ -279,7 +279,7 @@ export const withIcons = () => (
                 glyph='home'
                 id='item-1'
                 name='Link item'
-                url='http://localhost:12123/?path=/story/component-api-sidenav--with-icons' />
+                url='/' />
             <SideNav.ListItem
                 glyph='home'
                 id='item-2'

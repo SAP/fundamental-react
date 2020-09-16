@@ -77,7 +77,7 @@ SideNav.propTypes = {
     /** The `id` of the selected `SideNavListItem` */
     selectedId: PropTypes.string,
     /**
-     * Callback function triggered when a navigation item is selected.
+     * Callback function; triggered when a navigation item is selected.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @param {string} id - id of selected item.

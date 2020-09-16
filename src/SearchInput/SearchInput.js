@@ -296,7 +296,7 @@ SearchInput.propTypes = {
     }),
     /** Callback function when the change event fires on the component */
     /**
-     * Callback function triggered when a change event is fired on the underlying `<input>`.
+     * Callback function; triggered when a change event is fired on the underlying `<input>`.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @param {Object[]} matches - array of objects from searchList that match the search string.
@@ -304,14 +304,14 @@ SearchInput.propTypes = {
     */
     onChange: PropTypes.func,
     /**
-     * Callback function triggered when the user hits the `enter` key in the text `<input>`.
+     * Callback function; triggered when the user hits the `enter` key in the text `<input>`.
      *
-     * @param {string} text current string value of input field.
+     * @param {string} text - current string value of input field.
      * @returns {void}
      * */
     onEnter: PropTypes.func,
     /**
-     * Callback function triggered when user clicks on an option.
+     * Callback function; triggered when user clicks on an option.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @param {Object} data - selected object from searchList

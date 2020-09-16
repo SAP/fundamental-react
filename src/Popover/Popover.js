@@ -260,14 +260,14 @@ Popover.propTypes = {
      */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
     /**
-     * Callback triggered on clicking outside of popover body.
+     * Callback function; triggered on clicking outside of popover body.
      *
      * @param {MouseEvent} event
      * @returns {void}
      * */
     onClickOutside: PropTypes.func,
     /**
-     * Callback triggered when `escape` key is pressed and popover body is visible.
+     * Callback function; triggered when `escape` key is pressed and popover body is visible.
      *
      * @returns {void}
      * */

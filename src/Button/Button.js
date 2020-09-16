@@ -173,7 +173,7 @@ Button.propTypes = {
     /** Value for the `type` attribute on the `<button>` element */
     typeAttr: PropTypes.string,
     /**
-     * Callback function triggered when the button is clicked.
+     * Callback function; triggered when the button is clicked.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @returns {void}

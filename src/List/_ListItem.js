@@ -122,7 +122,7 @@ ListItem.propTypes = {
     /** URL to navigate to if list item is a link */
     url: PropTypes.string,
     /**
-     * Callback function triggered when user clicks on the list item i.e. `<li>`
+     * Callback function; triggered when user clicks on the list item i.e. `<li>`
      *
      *  (not supported for links as they are supposed to navigate).
      *

@@ -59,7 +59,7 @@ FormRadioGroup.propTypes = {
     /** Set to **true** to display radio buttons in a row */
     inline: PropTypes.bool,
     /**
-     * Callback function triggered when the selected `FormRadioItem` in the `FormRadioGroup` changes.
+     * Callback function; triggered when the selected `FormRadioItem` in the `FormRadioGroup` changes.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @param {*} radioItemData - anything set on the data property of the last selected FormRadioItem within this group.

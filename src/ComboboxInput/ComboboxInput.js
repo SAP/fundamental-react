@@ -626,13 +626,13 @@ Please set 'arrowLabel' property to a non-empty localized string.
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function triggered when user clicks in the text input field.
+    /** Callback function; triggered when user clicks in the text input field.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @returns {void}
     */
     onClick: PropTypes.func,
-    /** Callback function triggered when the selected option changes.
+    /** Callback function; triggered when the selected option changes.
      * There can be many reasons for a selection change depending on the `selectionType` of the combobox.
      * The reason is available as a String and could be one of `inputBlur`, `inputChange`, `inputKeyDown`,
      * `optionFocus`, `optionKeyDown`, `optionClick`.

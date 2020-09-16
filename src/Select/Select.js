@@ -278,21 +278,21 @@ Select.propTypes = {
         text: PropTypes.string
     }),
     /**
-     * Callback function triggered when the select field loses focus and the popover is closed.
+     * Callback function; triggered when the select field loses focus and the popover is closed.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @returns {void}
      * */
     onBlur: PropTypes.func,
     /**
-     * Callback function triggered when user clicks on the select field.
+     * Callback function; triggered when user clicks on the select field.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @returns {void}
      * */
     onClick: PropTypes.func,
     /**
-     * Callback function triggered when user selects on an option from the dropdown option list by clicking
+     * Callback function; triggered when user selects on an option from the dropdown option list by clicking
      * or by pressing `enter` or `space`.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.

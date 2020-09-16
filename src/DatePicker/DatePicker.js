@@ -592,7 +592,7 @@ DatePicker.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function triggered when the selected date changes.
+    /** Callback function; triggered when the selected date changes.
      * There can be many reasons for a date change.
      * The reason is available as a String and could be one of `todaySelected`, `todayNavigated`, `calendarDateClicked`,
      * `inputChange`, `autoFormat` or `invalidInput`
@@ -604,7 +604,7 @@ DatePicker.propTypes = {
      * @returns {void}
      */
     onChange: PropTypes.func,
-    /** Callback function triggered when datepicker popover closes after date selection.
+    /** Callback function; triggered when datepicker popover closes after date selection.
      *
      * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
      * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
@@ -612,7 +612,7 @@ DatePicker.propTypes = {
      * @returns {void}
      */
     onDatePickerClose: PropTypes.func,
-    /** Callback function triggered when text input field loses focus.
+    /** Callback function; triggered when text input field loses focus.
       * Input value is validated before calling onInputBlur.
       * If input field value can be formatted to a valid date object then this is used as the data, else field is reset.
       *
@@ -622,7 +622,7 @@ DatePicker.propTypes = {
       * @returns {void}
      */
     onInputBlur: PropTypes.func,
-    /** Callback function triggered when datepicker input is focused.
+    /** Callback function; triggered when datepicker input is focused.
      *
      * @param {Object|SyntheticEvent} data - data.date is the selected date object; data.formattedDate is the formatted date string;
      * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an

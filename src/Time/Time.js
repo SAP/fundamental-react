@@ -266,7 +266,7 @@ Time.propTypes = {
       * **meridiem** (with values 0 for AM or 1 for PM) */
     time: PropTypes.object,
     /**
-     * Callback function triggered when the current time is changed by user interaction.
+     * Callback function; triggered when the current time is changed by user interaction.
      *
      * @param {Object} time - has hour, meridiem, minute, second properties as numbers
      * @returns {void}

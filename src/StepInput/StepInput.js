@@ -181,7 +181,7 @@ StepInput.propTypes = {
     /** Value of the number input */
     value: PropTypes.number,
     /**
-     * Callback function triggered when the step value changes.
+     * Callback function; triggered when the step value changes.
      *
      * @param {number} stepValue - current step value as number.
      * @returns {void}

@@ -217,7 +217,7 @@ Pagination.propTypes = {
      * how many navigation items should be shown in the control */
     itemsTotal: PropTypes.number.isRequired,
     /**
-     * Callback function triggered when user clicks on any navigation item link.
+     * Callback function; triggered when user clicks on any navigation item link
      * i.e. page number or previous or next arrow indicators.
      *
      * @param {number} selectedPage - page number to navigate to.
