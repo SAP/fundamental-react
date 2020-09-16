@@ -24,7 +24,6 @@ export default {
     excludeStories: /.*VisualStoryShotOnly/
 };
 
-const placeholder = 'Enter country';
 
 export const primary = () => (
     <ComboboxInput
@@ -32,7 +31,7 @@ export const primary = () => (
         label='Default'
         maxHeight='250px'
         options={countriesData}
-        placeholder={placeholder} />
+        placeholder='Enter country' />
 );
 
 export const disabled = () => (
@@ -41,7 +40,7 @@ export const disabled = () => (
         disabled
         id='disabledComboboxExample'
         options={countriesData}
-        placeholder={placeholder} />
+        placeholder='Enter country' />
 );
 
 export const compact = () => (
@@ -51,7 +50,7 @@ export const compact = () => (
         id='compactComboboxExample'
         maxHeight='250px'
         options={countriesData}
-        placeholder={placeholder} />
+        placeholder='Enter country' />
 );
 
 export const validationState = () => (
@@ -63,7 +62,7 @@ export const validationState = () => (
                     label='Combobox with error'
                     maxHeight='250px'
                     options={countriesData}
-                    placeholder={placeholder}
+                    placeholder='Enter country'
                     required
                     validationState={{ state: 'error', text: 'Please select country of residence' }} />
             </Column>
@@ -73,7 +72,7 @@ export const validationState = () => (
                     label='Combobox with warning'
                     maxHeight='250px'
                     options={countriesData}
-                    placeholder={placeholder}
+                    placeholder='Enter country'
                     validationState={{ state: 'warning', text: 'Country can be edited only once' }} />
             </Column>
             <Column>
@@ -82,7 +81,7 @@ export const validationState = () => (
                     label='Combobox with information'
                     maxHeight='250px'
                     options={countriesData}
-                    placeholder={placeholder}
+                    placeholder='Enter country'
                     validationState={{ state: 'information', text: 'This data will not be shared.' }} />
             </Column>
             <Column>
@@ -91,7 +90,7 @@ export const validationState = () => (
                     label='Combobox with success'
                     maxHeight='250px'
                     options={countriesData}
-                    placeholder={placeholder}
+                    placeholder='Enter country'
                     validationState={{ state: 'success', text: 'Service is supported in these countries.' }} />
             </Column>
         </Row>
@@ -189,6 +188,33 @@ export const selectionType = () => {
     );
 };
 
+export const preSelectedKey = () => (
+    <>
+        <Container>
+            <Row>
+                <Column>
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='preSelectedKeyComboboxExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
+                        label='Pre Selected Combobox'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        options={countriesData}
+                        placeholder='Enter country'
+                        selectedKey='CR'
+                        selectionType='auto-inline' />
+                    <small>Clear the field to see more options</small>
+                </Column>
+                <Column />
+                <Column />
+            </Row>
+        </Container>
+    </>
+);
+
 export const dev = () => {
     const [selectedCountryObj, setSelectedCountry] = useState();
     const [useCustomRenderer, setUseCustomRenderer] = useState(false);
@@ -249,13 +275,13 @@ export const dev = () => {
                                         maxHeight='250px'
                                         noMatchesText='No Matches'
                                         onClick={action('on-click')}
-                                        onSelectionChange={(e, option, reason)=> {
+                                        onSelectionChange={(e, option, reason) => {
                                             action('on-selection-change')(e, option, reason);
                                             setSelectedCountry(option);
                                         }}
                                         optionRenderer={useCustomRenderer ? withFlags : null}
                                         options={countriesData}
-                                        placeholder={text('Placeholder', placeholder)}
+                                        placeholder={text('Placeholder', 'Enter country')}
                                         ref={comboboxRef}
                                         required={boolean('required', false)}
                                         selectedKey={text('selectedKey', 'US')}
@@ -321,7 +347,7 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
                             maxHeight='250px'
                             noMatchesText='No Matches'
                             options={countriesData}
-                            placeholder={placeholder}
+                            placeholder='Enter country'
                             ref={comboboxVS3Ref}
                             selectionType='auto-inline' />
                     </div>
