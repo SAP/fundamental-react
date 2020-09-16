@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useRef } from 'react';
 import 'fundamental-styles/dist/table.css';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
-const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, tableBodyClassName,
+const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
     tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
 
@@ -54,7 +54,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     function useHookWithRefCallback() {
         const newRef = useRef(null);
         const setRef = useCallback(node => {
-            if (node) {
+            if (node && keyboardNavigation !== 'none') {
                 gridManager.attachTo({ gridNode: node });
             }
             newRef.current = node;
@@ -143,6 +143,8 @@ Table.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to enable condensed mode */
     condensed: PropTypes.bool,
+    /** Determines the type of keyboard navigation for the table. Set to `'cell'` for cell-level navigation or `'row'` for row-level navigation */
+    keyboardNavigation: PropTypes.oneOf(['none', 'cell', 'row']),
     /** Set to **true** if Table contains checkboxes */
     richTable: PropTypes.bool,
     /** Additional classes to be added to the `<tbody>` element */
@@ -169,6 +171,10 @@ Table.propTypes = {
     tableHeaderRowProps: PropTypes.object,
     /** Additional classes to be added to the `<tr>` elements */
     tableRowClassName: PropTypes.string
+};
+
+Table.defaultProps = {
+    keyboardNavigation: 'none'
 };
 
 export default Table;

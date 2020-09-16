@@ -126,7 +126,7 @@ export const richTable = () => {
     );
 };
 
-export const withInputs = () => {
+export const withCellNavigation = () => {
     const tableRowData = [
         {
             'productId': 'HT-1000',
@@ -204,6 +204,7 @@ export const withInputs = () => {
                     ariaLabel='Select all rows'
                     checked={allItemsChecked}
                     onChange={handleHeaderChange} />, 'Product Name', 'Product ID', 'Quantity', 'Status', 'Supplier', 'Image', 'Heavy Weight', 'Categories', 'Delivery Date']}
+            keyboardNavigation='cell'
             richTable
             tableData={
                 tableRowData.map(item => {
