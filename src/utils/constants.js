@@ -117,7 +117,9 @@ export const GridSelector = {
     ROW: 'tr, [role="row"]',
     HEADER: 'th',
     CELL: 'td, [role="gridcell"]',
-    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
+    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [role="button"], [tabindex]',
+    EDITABLE: 'input:enabled[type="text"], input:enabled[type="number"], select, textarea',
+    HAS_ENTER_KEY_HANDLING: 'a, button, textarea'
 };
 
 export const OBJECT_STATUS_SIZES = ['l'];

@@ -1,15 +1,20 @@
 import classnames from 'classnames';
+import GridManager from '../utils/gridManager/gridManager';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import 'fundamental-styles/dist/table.css';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
-const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,
+const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
     tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
 
     const tableClasses = classnames(
         'fd-table',
+        {
+            'fd-table--compact': compact,
+            'fd-table--condensed': condensed
+        },
         className
     );
 
@@ -44,6 +49,26 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
         tableCheckboxClassName
     );
 
+    const gridManager = new GridManager();
+
+    function useHookWithRefCallback() {
+        const newRef = useRef(null);
+        const setRef = useCallback(node => {
+            if (node) {
+                gridManager.attachTo({ gridNode: node });
+            }
+            newRef.current = node;
+        }, []);
+
+        return setRef;
+    }
+
+    const tableRef = ref || useHookWithRefCallback();
+
+    useEffect(() => {
+        gridManager.attachTo({ gridNode: tableRef.current });
+    });
+
     let checkboxHeader;
     let displayHeaders = headers;
 
@@ -54,7 +79,7 @@ const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassN
 
     return (
         <table {...props} className={tableClasses}
-            ref={ref}>
+            ref={tableRef}>
             <thead className={tableHeaderClasses} {...tableHeaderProps}>
                 <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
                     {richTable && checkboxHeader}
@@ -114,6 +139,10 @@ Table.propTypes = {
     ).isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** to enable compact mode */
+    compact: PropTypes.bool,
+    /** Set to **true** to enable condensed mode */
+    condensed: PropTypes.bool,
     /** Set to **true** if Table contains checkboxes */
     richTable: PropTypes.bool,
     /** Additional classes to be added to the `<tbody>` element */

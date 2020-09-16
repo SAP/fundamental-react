@@ -31,12 +31,14 @@ export default class GridManager {
         if (gridNode) {
             this.gridNode = gridNode;
             this.enableHeaderCells = enableHeaderCells;
+            this.cellSelector = `${GridSelector.CELL}, ${this.enableHeaderCells && GridSelector.HEADER}`;
             this.wrapRows = wrapRows;
             this.wrapCols = wrapCols;
             this.onPassBoundary = onPassBoundary;
             this.disabledCells = disabledCells;
             this.focusedRow = 0;
             this.focusedCol = 0;
+            this.editMode = false;
             this.setupFocusGrid();
 
             if (this.grid.length) {
@@ -76,22 +78,12 @@ export default class GridManager {
                 const rowCells = [];
 
                 Array.prototype.forEach.call(
-                    row.querySelectorAll(`${GridSelector.CELL}, ${this.enableHeaderCells && GridSelector.HEADER}`), (cell) => {
-                        let cellToPush = cell;
+                    row.querySelectorAll(this.cellSelector), (cell) => {
+                        let colSpan = cell.colSpan;
                         cell.setAttribute('tabindex', -1);
+                        cell.addEventListener('focus', this.handleFocusCell);
 
-                        const focusableElements = cell.querySelectorAll(GridSelector.FOCUSABLE);
-                        if (focusableElements) {
-                            // disable default tabbing behavior of links, buttons, etc.
-                            focusableElements.forEach(element => {
-                                element.setAttribute('tabindex', -1);
-                            });
-
-                            if (focusableElements.length === 1) {
-                                cellToPush = focusableElements[0];
-                            }
-                        }
-                        rowCells.push(cellToPush);
+                        colSpan > 0 ? rowCells.push(...this.createFilledArray(colSpan, cell)) : rowCells.push(cell);
                     }
                 );
 
@@ -100,7 +92,16 @@ export default class GridManager {
                 }
             }
         );
+        this.toggleTabbableElements(false);
     };
+
+    createFilledArray = (length, value) => {
+        const array = [];
+        while (length--) {
+            array.push(value);
+        }
+        return array;
+    }
 
     clearEvents = () => {
         this.gridNode.removeEventListener('keydown', this.handleKeyDown);
@@ -124,6 +125,7 @@ export default class GridManager {
             };
             if (element) {
                 cell.focusableElements = cell.element.querySelectorAll(GridSelector.FOCUSABLE);
+                cell.editableElement = cell.element.querySelector(GridSelector.EDITABLE);
             }
         }
 
@@ -182,22 +184,59 @@ export default class GridManager {
         return isDisabled;
     }
 
-    focusCell = ({ row, col, element, focusableElements }) => {
+    isEditableCell = ({ focusableElements, editableElement }) => {
+        return (focusableElements?.length > 1 || editableElement);
+    }
+
+    focusCell = ({ row, col, element, focusableElements }, event) => {
         this.setFocusPointer(row, col);
         const posX = window.pageXOffset;
         const posY = window.pageYOffset;
 
-        if (
-            focusableElements &&
-            focusableElements.length === 1
-        ) {
-            focusableElements[0].focus();
+        if (this.editMode) {
+            element.setAttribute('tabindex', -1);
+            // only redirect focus upon clicking or entering edit mode on table cell element
+            if (event.target === element) {
+                focusableElements[0]?.focus();
+            }
         } else {
             element.focus();
         }
 
         window.scrollTo(posX, posY);
     };
+
+    handleFocusCell = (event) => {
+        if (event.target.matches && event.target.matches(this.cellSelector)) {
+            const { focusableElements } = this.getCellProperties(event.target);
+            if (
+                focusableElements?.length === 1 &&
+                !focusableElements[0].matches(GridSelector.EDITABLE)
+            ) {
+                focusableElements[0].focus();
+            }
+        }
+    }
+
+    toggleEditMode = (currentCell, enable) => {
+        this.editMode = !!enable;
+        currentCell.element.setAttribute('tabindex', enable ? -1 : 0);
+        this.toggleTabbableElements(enable);
+    }
+
+    toggleTabbableElements = (enable) => {
+        let focusableElements = [];
+        const cells = this.gridNode.querySelectorAll(this.cellSelector);
+        cells.forEach(cell => {
+            focusableElements = [...focusableElements, ...cell.querySelectorAll(GridSelector.FOCUSABLE)];
+        });
+
+        if (focusableElements.length) {
+            focusableElements.forEach(element => {
+                element.setAttribute('tabindex', enable ? 0 : -1);
+            });
+        }
+    }
 
     handleKeyDown = (event) => {
         this.syncFocusPointerToActiveElement(event.target);
@@ -209,19 +248,24 @@ export default class GridManager {
         );
 
         let nextCell = currentCell;
+        let pressedArrowKey = false;
 
         switch (key) {
             case keycode.codes.up:
                 nextCell = this.getNextCell(currentCell, 0, -1);
+                pressedArrowKey = true;
                 break;
             case keycode.codes.down:
                 nextCell = this.getNextCell(currentCell, 0, 1);
+                pressedArrowKey = true;
                 break;
             case keycode.codes.left:
                 nextCell = this.getNextCell(currentCell, -1, 0);
+                pressedArrowKey = true;
                 break;
             case keycode.codes.right:
                 nextCell = this.getNextCell(currentCell, 1, 0);
+                pressedArrowKey = true;
                 break;
             case keycode.codes.home:
                 nextCell = this.getNextCell(
@@ -239,19 +283,40 @@ export default class GridManager {
                     ), -1, 0
                 );
                 break;
+            case keycode.codes.enter:
+                if (event.target.matches(this.cellSelector)) {
+                    event.preventDefault();
+                }
+                if (this.isEditableCell(currentCell) && !event.target.matches(GridSelector.HAS_ENTER_KEY_HANDLING)) {
+                    this.toggleEditMode(currentCell, !this.editMode);
+                }
+                if (!this.editMode) {
+                    nextCell = this.getParentCell(event.target);
+                }
+                break;
+            case keycode.codes.esc:
+                this.toggleEditMode(currentCell, false);
+                nextCell = this.getParentCell(event.target);
+                break;
             case keycode.codes.tab:
-                const nextElement = this.getNextOutsideTabbableElement(event.shiftKey);
-                nextElement && nextElement.focus();
-                event.preventDefault();
+                if (!this.editMode) {
+                    this.toggleEditMode(currentCell, false);
+                    const nextElement = this.getNextOutsideTabbableElement(event.shiftKey);
+                    nextElement?.focus();
+                    event.preventDefault();
+                }
                 return;
             default:
                 return;
         }
 
         if (nextCell) {
-            this.focusCell(nextCell);
+            this.focusCell(nextCell, event);
         }
-        event.preventDefault();
+
+        if (!this.editMode && pressedArrowKey) {
+            event.preventDefault();
+        }
     };
 
     syncFocusPointerToActiveElement = (focusedTarget) => {
@@ -268,17 +333,30 @@ export default class GridManager {
     };
 
     handleClickCell = (event) => {
-        const clickedGridCell = this.getCellProperties(
-            this.findClosestMatch(event.target, `${GridSelector.CELL}, ${GridSelector.FOCUSABLE}`)
+        // reset current edit state
+        const currentCell = this.getCellProperties(
+            this.grid[this.focusedRow][this.focusedCol],
+            { row: this.focusedRow, col: this.focusedCol }
         );
+
+        if (this.isEditableCell(currentCell) && this.editMode) {
+            this.toggleEditMode(currentCell, false);
+        }
+
+        const clickedGridCell = this.getParentCell(event.target);
+
+        if (this.isEditableCell(clickedGridCell)) {
+            this.toggleEditMode(clickedGridCell, true);
+        }
 
         if (clickedGridCell) {
             this.focusCell({
                 row: clickedGridCell.row,
                 col: clickedGridCell.col,
                 element: clickedGridCell.element,
-                focusableElements: clickedGridCell.focusableElements
-            });
+                focusableElements: clickedGridCell.focusableElements,
+                editableElement: clickedGridCell.editableElement
+            }, event);
         }
     };
 
@@ -310,6 +388,10 @@ export default class GridManager {
     getNextCell = (currentCell, directionX, directionY) => {
         // directionX: 1 = right, -1 = left
         // directionY: 1 = down, -1 = up
+
+        if (this.editMode) {
+            return null;
+        }
 
         let nextCellElement = currentCell;
 
@@ -389,13 +471,15 @@ export default class GridManager {
             row: nextCellElement.row,
             col: nextCellElement.col,
             element: nextCellElement.element,
-            focusableElements: nextCellElement.focusableElements
+            focusableElements: nextCellElement.focusableElements,
+            editableElement: nextCellElement.editableElement
         };
     };
 
     getNextOutsideTabbableElement = (shiftKey) => {
         const tabbableElements = tabbable(document);
         let nextElement;
+
         tabbableElements.forEach((element, index) => {
             if (element.contains(document.activeElement)) {
                 let currIndex = index;
@@ -410,6 +494,10 @@ export default class GridManager {
             }
         });
         return nextElement;
+    }
+
+    getParentCell = (element) => {
+        return this.getCellProperties(this.findClosestMatch(element, this.cellSelector));
     }
 
     findClosestMatch = (element, selector) => {
