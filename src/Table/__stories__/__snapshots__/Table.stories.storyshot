@@ -7,6 +7,7 @@ exports[`Storyshots Component API/Table Compact 1`] = `
   <table
     aria-describedBy="mocked-short-id"
     className="fd-table fd-table--compact"
+    role="grid"
   >
     <caption
       aria-live="polite"
@@ -106,6 +107,7 @@ exports[`Storyshots Component API/Table Condensed 1`] = `
   <table
     aria-describedBy="mocked-short-id"
     className="fd-table fd-table--condensed"
+    role="grid"
   >
     <caption
       aria-live="polite"
@@ -205,6 +207,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
   <table
     aria-describedBy="mocked-short-id"
     className="fd-table"
+    role="grid"
   >
     <caption
       aria-live="polite"
@@ -1194,6 +1197,7 @@ exports[`Storyshots Component API/Table Primary 1`] = `
   <table
     aria-describedBy="mocked-short-id"
     className="fd-table"
+    role="grid"
   >
     <caption
       aria-live="polite"
@@ -1293,6 +1297,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
   <table
     aria-describedBy="mocked-short-id"
     className="fd-table"
+    role="grid"
   >
     <caption
       aria-live="polite"
