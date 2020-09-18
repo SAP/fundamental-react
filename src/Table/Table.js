@@ -1,11 +1,13 @@
 import classnames from 'classnames';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
 import PropTypes from 'prop-types';
-import React, { useCallback, useEffect, useRef } from 'react';
+import shortid from 'shortid';
+import React, { useCallback, useRef, useState } from 'react';
 import 'fundamental-styles/dist/table.css';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
-const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, tableBodyClassName,
+const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
     tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
 
@@ -58,37 +60,56 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
         tableCheckboxClassName
     );
 
-    const gridManager = new GridManager();
-
-    function useHookWithRefCallback() {
+    const useHookWithRefCallback = () => {
         const newRef = useRef(null);
         const setRef = useCallback(node => {
             if (node && keyboardNavigation !== 'none') {
-                gridManager.attachTo({ gridNode: node });
+                gridManager.current.attachTo({ gridNode: node, onFocusCell, onToggleEditMode });
             }
             newRef.current = node;
         }, []);
 
         return setRef;
-    }
+    };
 
+    const captionId = shortid.generate();
+    const gridManager = useRef(new GridManager());
     const tableRef = ref || useHookWithRefCallback();
+    const [instructionsText, setInstructionsText] = useState('');
 
-    useEffect(() => {
-        gridManager.attachTo({ gridNode: tableRef.current });
-    });
+    const onToggleEditMode = (enable) => {
+        setInstructionsText(enable ? localizedText.editModeDisable : localizedText.editModeEnable);
+    };
+
+    const onFocusCell = () => {
+        const currentCell = gridManager.current?.getCurrentCellProperties();
+        if (gridManager.current?.editMode) {
+            setInstructionsText(localizedText.editModeDisable);
+        } else {
+            if (gridManager.current?.isEditableCell(currentCell)) {
+                setInstructionsText(`${localizedText.arrowKeys} ${localizedText.editModeEnable}`);
+            } else {
+                setInstructionsText(localizedText.arrowKeys);
+            }
+        }
+    };
 
     let checkboxHeader;
-    let displayHeaders = headers;
+    let displayHeaders = [...headers];
 
     if (richTable) {
         checkboxHeader = <th className={tableCheckboxClasses}>{headers[0]}</th>;
-        displayHeaders = headers.splice(1, headers.length);
+        displayHeaders = displayHeaders.splice(1, headers.length);
     }
 
     return (
-        <table {...props} className={tableClasses}
+        <table {...props} aria-describedBy={captionId}
+            className={tableClasses}
             ref={tableRef}>
+            <caption aria-live='polite' className='fd-table__instructions'
+                id={captionId}>
+                {instructionsText}
+            </caption>
             <thead className={tableHeaderClasses} {...tableHeaderProps}>
                 <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
                     {richTable && checkboxHeader}
@@ -100,7 +121,8 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             <tbody className={tableBodyClasses} {...tableBodyProps}>
                 {tableData.map((row, index) => {
                     let rowProps, checkboxCell;
-                    let displayCells = row.rowData;
+                    let displayCells = [...row.rowData];
+
                     if (tableBodyRowProps) {
                         rowProps = (typeof tableBodyRowProps === 'function'
                             ? tableBodyRowProps(row, index)
@@ -114,7 +136,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                                 {row.rowData[0]}
                             </td>
                         );
-                        displayCells = row.rowData.splice(1, row.rowData.length);
+                        displayCells = displayCells.splice(1, row.rowData.length);
                     }
 
                     return (
@@ -157,6 +179,15 @@ Table.propTypes = {
     condensed: PropTypes.bool,
     /** Determines the type of keyboard navigation for the table. Set to `'cell'` for cell-level navigation or `'row'` for row-level navigation */
     keyboardNavigation: PropTypes.oneOf(['none', 'cell', 'row']),
+    /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        /** Localized string informing screen reader users the table can be navigated by arrow keys */
+        arrowKeys: PropTypes.string,
+        /** Localized string informing screen reader users the current cell can be edited  */
+        editModeEnable: PropTypes.string,
+        /** Localized string informing screen reader users how to return to cell navigation */
+        editModeDisable: PropTypes.string
+    }),
     /** Set to **true** if Table contains checkboxes */
     richTable: PropTypes.bool,
     /** Additional classes to be added to the `<tbody>` element */
@@ -186,7 +217,12 @@ Table.propTypes = {
 };
 
 Table.defaultProps = {
-    keyboardNavigation: 'none'
+    keyboardNavigation: 'none',
+    localizedText: {
+        arrowKeys: 'Use arrow keys to navigate between cells',
+        editModeEnable: 'Press Enter to edit this cell',
+        editModeDisable: 'Press Escape to return to cell navigation'
+    }
 };
 
 export default Table;

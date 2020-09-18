@@ -25,7 +25,9 @@ export default class GridManager {
         focusOnInit = false,
         wrapRows = false,
         wrapCols = false,
+        onFocusCell = () => {},
         onPassBoundary = () => {},
+        onToggleEditMode = () => {},
         disabledCells = []
     }) {
         if (gridNode) {
@@ -34,7 +36,9 @@ export default class GridManager {
             this.cellSelector = `${GridSelector.CELL}, ${this.enableHeaderCells && GridSelector.HEADER}`;
             this.wrapRows = wrapRows;
             this.wrapCols = wrapCols;
+            this.onFocusCell = onFocusCell;
             this.onPassBoundary = onPassBoundary;
+            this.onToggleEditMode = onToggleEditMode;
             this.disabledCells = disabledCells;
             this.focusedRow = 0;
             this.focusedCol = 0;
@@ -147,13 +151,20 @@ export default class GridManager {
         return null;
     }
 
+    getCurrentCellProperties = () => {
+        return this.getCellProperties(
+            this.grid[this.focusedRow][this.focusedCol],
+            { row: this.focusedRow, col: this.focusedCol }
+        );
+    }
+
     setFocusPointer = (row, col) => {
         if (this.isValidCell({ row, col })) {
-            const currentCell = this.grid[this.focusedRow][this.focusedCol];
-            const nextCell = this.grid[row][col];
+            const currentCellElement = this.grid[this.focusedRow][this.focusedCol];
+            const nextCellElement = this.grid[row][col];
 
-            currentCell.setAttribute('tabindex', -1);
-            nextCell.setAttribute('tabindex', 0);
+            currentCellElement.setAttribute('tabindex', -1);
+            nextCellElement.setAttribute('tabindex', 0);
 
             this.focusedRow = row;
             this.focusedCol = col;
@@ -204,6 +215,7 @@ export default class GridManager {
         }
 
         window.scrollTo(posX, posY);
+        this.onFocusCell();
     };
 
     handleFocusCell = (event) => {
@@ -222,6 +234,7 @@ export default class GridManager {
         this.editMode = !!enable;
         currentCell.element.setAttribute('tabindex', enable ? -1 : 0);
         this.toggleTabbableElements(enable);
+        this.onToggleEditMode(enable);
     }
 
     toggleTabbableElements = (enable) => {
@@ -242,10 +255,7 @@ export default class GridManager {
         this.syncFocusPointerToActiveElement(event.target);
 
         const key = event.which || event.keyCode;
-        const currentCell = this.getCellProperties(
-            this.grid[this.focusedRow][this.focusedCol],
-            { row: this.focusedRow, col: this.focusedCol }
-        );
+        const currentCell = this.getCurrentCellProperties();
 
         let nextCell = currentCell;
         let pressedArrowKey = false;
@@ -300,7 +310,6 @@ export default class GridManager {
                 break;
             case keycode.codes.tab:
                 if (!this.editMode) {
-                    this.toggleEditMode(currentCell, false);
                     const nextElement = this.getNextOutsideTabbableElement(event.shiftKey);
                     nextElement?.focus();
                     event.preventDefault();
@@ -334,10 +343,7 @@ export default class GridManager {
 
     handleClickCell = (event) => {
         // reset current edit state
-        const currentCell = this.getCellProperties(
-            this.grid[this.focusedRow][this.focusedCol],
-            { row: this.focusedRow, col: this.focusedCol }
-        );
+        const currentCell = this.getCurrentCellProperties();
 
         if (this.isEditableCell(currentCell) && this.editMode) {
             this.toggleEditMode(currentCell, false);

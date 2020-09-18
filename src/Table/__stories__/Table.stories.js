@@ -146,7 +146,7 @@ export const richTable = () => {
     );
 };
 
-export const withCellNavigation = (props) => {
+export const withCellNavigation = () => {
     const tableRowData = [
         {
             'productId': 'HT-1000',
@@ -209,7 +209,8 @@ export const withCellNavigation = (props) => {
 
     return (
         <Table
-            {...props}
+            compact={boolean('compact', false)}
+            condensed={boolean('condensed', false)}
             headers={[
                 <Checkbox
                     ariaLabel='Select all rows'
@@ -241,16 +242,4 @@ export const withCellNavigation = (props) => {
                 })
             } />
     );
-};
-
-
-export const dev = () => {
-    return withCellNavigation({
-        compact: boolean('compact', false),
-        condensed: boolean('condensed', false)
-    });
-};
-
-dev.parameters = {
-    docs: { disable: true }
 };
