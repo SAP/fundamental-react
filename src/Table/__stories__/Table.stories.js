@@ -146,7 +146,7 @@ export const richTable = () => {
     );
 };
 
-export const withCellNavigation = () => {
+export const gridTable = () => {
     const tableRowData = [
         {
             'productId': 'HT-1000',
@@ -223,20 +223,22 @@ export const withCellNavigation = () => {
                     return ({
                         rowData: [
                             <Checkbox
-                                ariaLabel={'Select row'}
+                                ariaLabel='Select row'
                                 checked={checkedItems[item.productName] || false}
                                 name={item.productName}
                                 onChange={handleChange} />,
                             <span>{item.productName}</span>,
-                            <FormInput defaultValue={item.productId} name={item.productName} />,
+                            <FormInput ariaLabel='Product ID' defaultValue={item.productId}
+                                name={item.productName} />,
                             <span>{item.quantity}</span>,
                             <ObjectStatus status={item.status === 'Available' ? 'positive' : 'negative'}>{item.status}</ObjectStatus>,
                             <Select options={suppliers} placeholder='Select a supplier'
-                                selectedKey={suppliers[suppliers.findIndex((supplier) => supplier.text === item.supplierName)].key} />,
+                                selectedKey={suppliers[suppliers.findIndex((supplier) => supplier.text === item.supplierName)].key}
+                                validationOverlayProps={{ 'aria-label': 'Supplier' }} />,
                             <Link href={item.imageUrl}>Show image</Link>,
                             <Checkbox ariaLabel='Heavy Weight' />,
-                            <FormInput />,
-                            <DatePicker defaultValue={item.deliveryDate} />
+                            <FormInput ariaLabel='Categories' />,
+                            <DatePicker defaultValue={item.deliveryDate} inputProps={{ 'aria-label': 'Delivery Date' }} />
                         ]
                     });
                 })

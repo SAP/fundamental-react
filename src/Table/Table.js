@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
+import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import React, { useCallback, useRef, useState } from 'react';
@@ -78,19 +79,29 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const [instructionsText, setInstructionsText] = useState('');
 
     const onToggleEditMode = (enable) => {
-        setInstructionsText(enable ? localizedText.editModeDisable : localizedText.editModeEnable);
+        setInstructionsText(enable ? localizedText.editModeDisable : '');
     };
 
-    const onFocusCell = () => {
-        const currentCell = gridManager.current?.getCurrentCellProperties();
+    const onFocusCell = (cell, event) => {
+        const { row, col } = cell;
+        const key = event.which || event.keyCode;
+        const navigatedHorizontally = (key === keycode.codes.left || key === keycode.codes.right) && col > 0;
+        const navigatedVertically = (key === keycode.codes.up || key === keycode.codes.down) && row > 0;
         if (gridManager.current?.editMode) {
             setInstructionsText(localizedText.editModeDisable);
         } else {
-            if (gridManager.current?.isEditableCell(currentCell)) {
-                setInstructionsText(`${localizedText.arrowKeys} ${localizedText.editModeEnable}`);
+            let newInstructionsText = '';
+            if (navigatedVertically) {
+                newInstructionsText += `${localizedText.row} ${row} `;
+            } else if (navigatedHorizontally) {
+                newInstructionsText += `${localizedText.column} ${col} ${headers[col]} `;
             } else {
-                setInstructionsText(localizedText.arrowKeys);
+                newInstructionsText += `${localizedText.arrowKeys} `;
             }
+            if (gridManager.current?.isEditableCell(cell)) {
+                newInstructionsText += localizedText.editModeEnable;
+            }
+            setInstructionsText(newInstructionsText);
         }
     };
 
@@ -221,7 +232,9 @@ Table.defaultProps = {
     localizedText: {
         arrowKeys: 'Use arrow keys to navigate between cells',
         editModeEnable: 'Press Enter to edit this cell',
-        editModeDisable: 'Press Escape to return to cell navigation'
+        editModeDisable: 'Press Escape to return to cell navigation',
+        row: 'row',
+        column: 'column'
     }
 };
 

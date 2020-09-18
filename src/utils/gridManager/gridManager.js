@@ -199,7 +199,8 @@ export default class GridManager {
         return (focusableElements?.length > 1 || editableElement);
     }
 
-    focusCell = ({ row, col, element, focusableElements }, event) => {
+    focusCell = (currentCell, event) => {
+        const { row, col, element, focusableElements } = currentCell;
         this.setFocusPointer(row, col);
         const posX = window.pageXOffset;
         const posY = window.pageYOffset;
@@ -215,7 +216,7 @@ export default class GridManager {
         }
 
         window.scrollTo(posX, posY);
-        this.onFocusCell();
+        this.onFocusCell(currentCell, event);
     };
 
     handleFocusCell = (event) => {
