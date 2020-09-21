@@ -55,7 +55,12 @@ Token.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when the Token's close `<button>` is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onClick: PropTypes.func
 };
 

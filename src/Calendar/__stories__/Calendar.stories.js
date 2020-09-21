@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Calendar from '../Calendar';
 import moment from 'moment';
 import React from 'react';
@@ -46,23 +47,35 @@ export const primary = () => (<Calendar />);
 
 export const compact = () => (<Calendar compact />);
 
+
+/**
+ * Disable weekends and all previous days.
+ */
+
 export const disableWeekends = () => (
     <Calendar
-        disableBeforeDate={new Date()}
+        disableBeforeDate={moment()}
         disableWeekends />
 );
 
 disableWeekends.storyName = 'Disabled Weekends and Disabled Before Date';
 
-export const blockedDates = () => (
+/**
+ * Block(disable) next 10 days and all Mondays and Tuesdays.
+ */
+
+export const blockedDatesAndDisableWeekday = () => (
     <Calendar
-        blockedDates={[new Date(2018, 1, 1, 0, 0, 0, 0), new Date(2018, 3, 3, 0, 0, 0, 0)]}
+        blockedDates={[moment(), moment().add(10, 'days')]}
         disableWeekday={['Monday', 'Tuesday']} />
 );
 
+/**
+ * Focus on 1st January 2000 after rendering the Calendar.
+ */
+
 export const openToDate = () => {
-    const _openToDate = moment().year('2000').month(0).date(1);
-    return <Calendar openToDate={_openToDate} />;
+    return <Calendar openToDate={moment().year('2000').month(0).date(1)} />;
 };
 
 export const specialDays = () => (
@@ -79,9 +92,20 @@ export const rangeSelection = () => (
     <Calendar enableRangeSelection />
 );
 
+/**
+ * Start (left to right) weekday columns from Monday.
+ */
+
 export const weekdayStart = () => {
-    const _weekdayStart = number('weekdayStart', 1);
-    return <Calendar weekdayStart={_weekdayStart} />;
+    return <Calendar weekdayStart={1} />;
+};
+
+/**
+ * Show a today button in the header that navigates to the current date in the set timezone.
+ */
+
+export const todayButton = () => {
+    return <Calendar showToday />;
 };
 
 export const dev = () => (
@@ -97,7 +121,9 @@ export const dev = () => (
         disableWeekends={boolean('disable weekends', false)}
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        enableRangeSelection={boolean('enableRangeSelection', false)}
         locale={text('locale', 'en')}
+        onChange={action('on-change')}
         openToDate={dateKnobToDate('open to date', new Date())}
         showToday={boolean('showToday', false)}
         weekdayStart={number('weekdayStart', 0)} />

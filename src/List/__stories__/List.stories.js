@@ -1,18 +1,20 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import List from '../List';
 import ListIcon from '../_ListIcon';
 import ListItem from '../_ListItem';
+import ListSelection from '../_ListSelection';
 import ListText from '../_ListText';
+import React from 'react';
 import {
     boolean,
     text
 } from '@storybook/addon-knobs';
-import React, { useState } from 'react';
 
 export default {
     title: 'Component API/List',
     component: List,
-    subcomponents: { ListIcon, ListItem, ListText }
+    subcomponents: { ListItem, ListSelection, ListText, ListIcon }
 };
 
 
@@ -39,7 +41,9 @@ simple.storyName = 'Simple List';
 export const headerFooter = () => (
     <List
         footer='Updated 3 minutes ago'
-        header='Fruits'>
+        header='Fruits'
+        headerStyle={2}
+        level={6}>
         <List.Item>
             <List.Text>Apple</List.Text>
         </List.Item>
@@ -169,21 +173,6 @@ export const secondaryText = () => (
     </List>
 );
 
-export const dev = () => (
-    <List
-        compact={boolean('compact', false)}
-        footer='List Footer'
-        header={'Developer\'s List'}
-        noBorder={boolean('noBorder', false)}>
-        <List.Item selected={boolean('selected', false)}>
-            <List.Icon glyph={text('icon', 'accept')} />
-            <List.Text
-                noWrap={boolean('noWrap', false)}
-                secondary={boolean('secondary', false)}>{text('text', 'List Item 1')}</List.Text>
-        </List.Item>
-    </List>
-);
-
 export const byline = () => (
     <List
         footer='Updated 3 minutes ago'
@@ -212,8 +201,6 @@ export const byline = () => (
 );
 
 export const selection = () => {
-    const [secondSelected, setSecondSelected] = useState(false);
-    const [thirdSelected, setThirdSelected] = useState(false);
     return (
         <>
             <List
@@ -226,19 +213,15 @@ export const selection = () => {
                         <List.Text>Coupon Applied: FREE</List.Text>
                     </List.Selection>
                 </List.Item>
-                <List.Item selected={secondSelected}>
+                <List.Item>
                     <List.Selection
-                        checkBoxAriaLabel='Add gift wrapping'
-                        onChange={(event) => setSecondSelected(event?.target?.checked)}
-                        selected>
+                        checkBoxAriaLabel='Add gift wrapping'>
                         <List.Text>Add gift wrapping</List.Text>
                     </List.Selection>
                 </List.Item>
-                <List.Item selected={thirdSelected}>
+                <List.Item>
                     <List.Selection
-                        checkBoxAriaLabel='Less packaging'
-                        onChange={(event) => setThirdSelected(event?.target?.checked)}
-                        selected>
+                        checkBoxAriaLabel='Less packaging'>
                         <List.Text>Less packaging</List.Text>
                     </List.Selection>
                 </List.Item>
@@ -318,6 +301,52 @@ export const actionList = () => (
             Checkout
         </List.Item>
     </List>
+);
+
+
+
+export const dev = () => (
+    <>
+        <List
+            compact={boolean('compact', false)}
+            footer='List Footer'
+            header={'Developer\'s List'}
+            noBorder={boolean('noBorder', false)}>
+            <List.Item selected={boolean('selected', false)}>
+                <List.Icon glyph={text('icon', 'accept')} />
+                <List.Text
+                    noWrap={boolean('noWrap', false)}
+                    secondary={boolean('secondary', false)}>{text('text', 'List Item 1')}</List.Text>
+            </List.Item>
+        </List>
+        <List
+            footer='Company ©'
+            header='Selectable Checkout options'
+            partialNavigation
+            selectable>
+            <List.Item>
+                <List.Selection
+                    checkBoxAriaLabel='Coupon Applied: FREE'
+                    onChange={action('option-1-change')}>
+                    <List.Text>Coupon Applied: FREE</List.Text>
+                </List.Selection>
+            </List.Item>
+            <List.Item>
+                <List.Selection
+                    checkBoxAriaLabel='Add gift wrapping'
+                    onChange={action('option-2-change')}>
+                    <List.Text>Add gift wrapping</List.Text>
+                </List.Selection>
+            </List.Item>
+            <List.Item>
+                <List.Selection
+                    checkBoxAriaLabel='Less packaging'
+                    onChange={action('option-3-change')}>
+                    <List.Text>Less packaging</List.Text>
+                </List.Selection>
+            </List.Item>
+        </List>
+    </>
 );
 
 dev.parameters = { docs: { disable: true } };

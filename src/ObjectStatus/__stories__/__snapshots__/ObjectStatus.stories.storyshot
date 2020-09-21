@@ -138,6 +138,144 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
 </div>
 `;
 
+exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--negative fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--critical fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-positive fd-object-status--positive fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Positive
+    </span>
+    <a
+      className="fd-object-status sap-icon--hint fd-object-status--informative fd-object-status--link"
+      href="#"
+    >
+      Info
+    </a>
+    <span
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Neutral
+    </span>
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <a
+      className="fd-object-status sap-icon--status-negative fd-object-status--inverted fd-object-status--negative fd-object-status--link"
+      href="#"
+    >
+      Negative
+    </a>
+    <a
+      className="fd-object-status sap-icon--status-critical fd-object-status--inverted fd-object-status--critical fd-object-status--link"
+      href="#"
+    >
+      Critical
+    </a>
+    <a
+      className="fd-object-status fd-object-status--indication-1 fd-object-status--inverted fd-object-status--link"
+      href="#"
+    >
+      Dark Red
+    </a>
+    <a
+      className="fd-object-status fd-object-status--indication-2 fd-object-status--inverted fd-object-status--link"
+      href="#"
+    >
+      Red
+    </a>
+    <a
+      aria-label="informative"
+      className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative fd-object-status--link"
+      href="#"
+    />
+    <a
+      aria-label="neutral"
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted fd-object-status--link"
+      href="#"
+    />
+  </div>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Negative
+    </span>
+    <span
+      className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Critical
+    </span>
+    <span
+      className="fd-object-status fd-object-status--indication-1 fd-object-status--large fd-object-status--link"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      Dark Red
+    </span>
+    <a
+      className="fd-object-status fd-object-status--indication-2 fd-object-status--large fd-object-status--link"
+      href="#"
+    >
+      Red
+    </a>
+    <a
+      aria-label="info"
+      className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative fd-object-status--link"
+      href="#"
+    />
+    <a
+      aria-label="info"
+      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large fd-object-status--link"
+      href="#"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Generic Indication Colors 1`] = `
 <div
   dir="ltr"

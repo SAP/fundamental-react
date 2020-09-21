@@ -36,7 +36,9 @@ const FormRadioGroup = ({
                     disabled: child.props.disabled || disabled,
                     inline: child.props.inline || inline,
                     name: child.props.name || groupId,
-                    onChange: child.props.onChange || onChange
+                    onChange: e => {
+                        child.props.onChange?.(e, child.props.data) || onChange(e, child.props.data);
+                    }
                 });
             })}
         </div>
@@ -56,7 +58,13 @@ FormRadioGroup.propTypes = {
     disabled: PropTypes.bool,
     /** Set to **true** to display radio buttons in a row */
     inline: PropTypes.bool,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the selected `FormRadioItem` in the `FormRadioGroup` changes.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {*} radioItemData - anything set on the data property of the last selected FormRadioItem within this group.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 

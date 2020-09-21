@@ -41,7 +41,7 @@ describe('<DatePicker />', () => {
         let arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
 
         //trigger onBlur by clicking outside
         simulateBlur();
@@ -66,7 +66,7 @@ describe('<DatePicker />', () => {
         let switchFormattedDate = `${endRangeDate.format('L')} - ${startRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
 
         //trigger onBlur by clicking outside
         simulateBlur();
@@ -92,7 +92,7 @@ describe('<DatePicker />', () => {
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('arrSelectedDates')).toEqual([]);
+        expect(wrapper.state('startAndEndDates')).toEqual([]);
     });
 
     test('updateDate method', () => {
@@ -117,7 +117,7 @@ describe('<DatePicker />', () => {
         formattedDate = startRangeDate.format('L');
         isoFormattedDate = startRangeDate.format(ISO_FORMAT);
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(1);
+        expect(wrapper.state('startAndEndDates').length).toEqual(1);
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 2 days in range picker
@@ -133,7 +133,7 @@ describe('<DatePicker />', () => {
         isoFormattedDate = `${startRangeDate.format(ISO_FORMAT)} - ${endRangeDate.format(ISO_FORMAT)}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
     });
 
@@ -146,7 +146,7 @@ describe('<DatePicker />', () => {
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
@@ -160,7 +160,7 @@ describe('<DatePicker />', () => {
 
         //check if date start date is less than end date i.e. switched
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
     });
 
     test('enter a valid date string', () => {
@@ -361,15 +361,15 @@ describe('<DatePicker />', () => {
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             todayButtonWrapper.simulate('click');
-            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }), 'todaySelected');
 
         });
     });
 
-    describe('onBlur callback', () => {
-        test('should call onBlur after leaving input', () => {
+    describe('onInputBlur callback', () => {
+        test('should call onInputBlur after leaving input', () => {
             const blur = jest.fn();
-            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
+            const element = mount(<DatePicker onInputBlur={blur} />).find('input[type="text"]');
             element.find('input[type="text"]').simulate('click');
             element.find('input[type="text"]').simulate('blur');
 
@@ -380,7 +380,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker
                 dateFormat='DD-MM-YYYY'
                 defaultValue='01-06-2020'
-                onBlur={blur} />).find('input[type="text"]');
+                onInputBlur={blur} />).find('input[type="text"]');
             element.find('input[type="text"]').simulate('click');
             element.find('input[type="text"]').simulate('change', { target: { value: '30-06-2020' } });
             element.find('input[type="text"]').simulate('blur');
@@ -390,9 +390,9 @@ describe('<DatePicker />', () => {
                 isoFormattedDate: '2020-06-30'
             }));
         });
-        test('should call onBlur after leaving input, with validated data', () => {
+        test('should call onInputBlur after leaving input, with validated data', () => {
             const blur = jest.fn();
-            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
+            const element = mount(<DatePicker onInputBlur={blur} />).find('input[type="text"]');
             element.simulate('change', { target: { value: 'rubbish' } });
             element.find('input[type="text"]').simulate('blur');
 
@@ -458,7 +458,7 @@ describe('<DatePicker />', () => {
                 .find('input[type="text"]')
                 .simulate('change', { target: { value: '04/14/2020' } });
 
-            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '04/14/2020' }));
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '04/14/2020' }), 'inputChange');
         });
 
         test('should call onChange on selecting a calendar item', () => {
@@ -471,18 +471,18 @@ describe('<DatePicker />', () => {
             element.find('button.fd-button--transparent').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
 
-            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }));
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }), 'calendarDateClicked');
         });
     });
 
-    describe('onFocus callback', () => {
-        test('should call onFocus on focusing input', () => {
+    describe('onInputFocus callback', () => {
+        test('should call onInputFocus on focusing input', () => {
             const focus = jest.fn();
             const element = mount(
                 <DatePicker
                     dateFormat='YYYY-MM-DD'
                     defaultValue='2020-03-13'
-                    onFocus={focus} />
+                    onInputFocus={focus} />
             );
 
             element.find('input[type="text"]').prop('onFocus')();

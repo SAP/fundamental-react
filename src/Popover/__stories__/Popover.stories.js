@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Avatar from '../../Avatar/Avatar';
 import Button from '../../Button/Button';
 import Dialog from '../../Dialog/Dialog';
@@ -351,6 +352,8 @@ export const dev = () => {
             // eslint-disable-next-line no-undefined
             flipContainer={useContainer ? container : undefined}
             noArrow={boolean('noArrow', false)}
+            onClickOutside={action('on-click-outside')}
+            onEscapeKey={action('on-escape-key')}
             placement={select(
                 'placement',
                 POPPER_PLACEMENTS.reduce((a, b) => ({ ...a, [b]: b }), {}),

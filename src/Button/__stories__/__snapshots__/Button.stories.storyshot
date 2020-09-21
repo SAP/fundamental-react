@@ -6,6 +6,7 @@ exports[`Storyshots Component API/Button/Button Dev 1`] = `
 >
   <button
     className="fd-button"
+    onClick={[Function]}
     type="button"
   >
     <span

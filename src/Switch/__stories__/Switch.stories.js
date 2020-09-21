@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import Switch from '../Switch';
 import SwitchItem from '../_SwitchItem';
@@ -88,6 +89,7 @@ export const dev = () => (
                 glyph: 'decline'
             }
         })}
+        onChange={action('on-change')}
         semantic={boolean('semantic', false)}>{text('label', 'label')}</Switch>
 );
 

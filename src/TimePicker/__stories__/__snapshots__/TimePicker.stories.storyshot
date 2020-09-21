@@ -1,5 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/TimePicker Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="fd-form-label"
+    htmlFor="timepickerInitExample-input"
+  >
+    Time
+  </label>
+  <div
+    id="timepickerInitExample"
+    onChange={[Function]}
+  >
+    <div
+      className="fd-popover"
+      id="timepickerInitExample-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              id="timepickerInitExample-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm:ss am/pm"
+              type="text"
+              value="10:30:34 am"
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Show/hide time picker"
+                className="fd-button fd-button--transparent fd-input-group__button"
+                id="timepickerInitExample-button"
+                type="button"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/TimePicker Disabled 1`] = `
 <div
   dir="ltr"

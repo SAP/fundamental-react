@@ -294,7 +294,12 @@ MultiInput.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function when a tag is added or removed. Returns array of tags selected */
+    /**
+     * Callback function; triggered when a tag is added or removed.
+     *
+     * @param {string[]} selectedTags array of selected tags as strings
+     * @returns {void}
+     * */
     onTagsUpdate: PropTypes.func
 };
 

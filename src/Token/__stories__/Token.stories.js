@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
 import Token from '../Token';
@@ -23,6 +24,7 @@ export const dev = () => (
     <Token
         buttonLabel='Clear'
         compact={boolean('compact', false)}
+        onClick={action('on-click')}
         readOnly={boolean('readOnly', false)}>Dev</Token>
 );
 dev.parameters = { docs: { disable: true } };

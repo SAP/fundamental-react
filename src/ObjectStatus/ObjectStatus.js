@@ -87,7 +87,13 @@ ObjectStatus.propTypes = {
     'positive',
     'informative'*/
     status: PropTypes.oneOf(OBJECT_STATUS_TYPES),
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when user clicks on the ObjectStatus.
+     * This is not supported for links as they are supposed to navigate.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onClick: PropTypes.func
 };
 

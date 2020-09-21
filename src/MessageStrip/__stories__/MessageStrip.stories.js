@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import MessageStrip from '../MessageStrip';
 import React from 'react';
 import {
@@ -97,6 +98,7 @@ export const dev = () => (
         link={text('href', '')}
         linkText={text('linkText', 'Default MessageStrip')}
         noGlyph={boolean('noGlyph', false)}
+        onCloseClicked={action('on-close-clicked')}
         type={select('Validation State', {
             'default': null,
             'warning': 'warning',

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import FormLabel from '../../Forms/FormLabel';
 import React from 'react';
 import TimePicker from '../TimePicker';
@@ -66,3 +67,18 @@ export const hideSeconds = () => (
             showSecond={false} />
     </>
 );
+
+export const dev = () => (
+    <>
+        <FormLabel htmlFor='timepickerInitExample-input' >Time</FormLabel>
+        <TimePicker
+            buttonProps={{
+                'aria-label': 'Show/hide time picker'
+            }}
+            format12Hours
+            id='timepickerInitExample'
+            onChange={action('on-change')}
+            value='10:30:34 am' />
+    </>
+);
+

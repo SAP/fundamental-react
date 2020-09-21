@@ -28,7 +28,7 @@ class Dialog extends Component {
     // check for Escape key press
     handleKeyPress = event => {
         if (event.key === 'Escape' || event.key === 'Esc') {
-            this.handleCloseClick();
+            this.handleCloseClick(event);
         }
     };
 
@@ -184,7 +184,12 @@ Dialog.propTypes = {
     subheader: PropTypes.string,
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
-    /** Callback function passing event when any action is clicked */
+    /** Callback function; triggered when dialog closes either due to `Escape` keydown or any of the actions' `onClick`.
+     * `onClose` is executed BEFORE any of the actions' `onClick` handler.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+     */
     onClose: PropTypes.func
 };
 

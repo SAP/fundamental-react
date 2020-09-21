@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import FormGroup from '../../Forms/FormGroup';
 import FormItem from '../../Forms/FormItem';
 import FormLabel from '../../Forms/FormLabel';
@@ -141,6 +142,7 @@ export const dev = () => (
             inputProps={{
                 id: 'multiInputDevExample'
             }}
+            onTagsUpdate={action('on-tags-update')}
             placeholder={text('Placeholder', 'Select a Fruit')}
             validationState={select('Validation State', {
                 'none': '',
