@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.21...v0.13.0-rc.22) (2020-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* In this change we
+* improve the callback API for various components
+  * Calendar.onChange - added `todayPressed` param which is true only if the change was caused by the today button
+  * ComboboxInput - Forwarded reference now contains both button (ref.current.button) and input (ref.current.input) refs
+  * ComboboxInput.onSelectionChange - added `reason` string param which represents what caused the selection to change
+  * ComboboxInput.selectedKey should work now
+  * DatePicker - added `startAndEndDates` array to callback data which contains start and end dates when ranged selection is enabled, else it is an empty array
+  * DatePicker.onChange - added `reason` string param which represents what caused the selection to change
+  * DatePicker.onFocus changed to DatePicker.onInputFocus
+  * DatePicker.onBlur changed to DatePicker.onInputBlur
+  * Dialog.onClose now contains the event param
+  * FormRadioItem.data property added which is available in the FormRadioGroup.onChange's callback
+  * ListSelection and it's parent ListItem now self manage their selected states based on internal checkbox onChange events
+  * SearchInput.onEnter should work now
+* update tests accordingly
+* document the callback API using JSDoc syntax
+* wire-up @storybook/actions to log callback events in the dev stories of these components
+
+### Bug Fixes
+
+* refine and document component event callbacks ([#1210](https://github.com/SAP/fundamental-react/issues/1210)) ([42391f9](https://github.com/SAP/fundamental-react/commit/42391f9809120df422131769ac175c85cfa69abe))
+
 ## [0.13.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.20...v0.13.0-rc.21) (2020-09-15)
 
 
