@@ -114,7 +114,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     }
 
     return (
-        <table {...props} aria-describedBy={captionId}
+        <table {...props} aria-describedby={captionId}
             className={tableClasses}
             ref={tableRef}
             role={keyboardNavigation ? 'grid' : 'table'}>
@@ -198,7 +198,11 @@ Table.propTypes = {
         /** Localized string informing screen reader users the current cell can be edited  */
         editModeEnable: PropTypes.string,
         /** Localized string informing screen reader users how to return to cell navigation */
-        editModeDisable: PropTypes.string
+        editModeDisable: PropTypes.string,
+        /** Localized string for 'row' */
+        row: PropTypes.string,
+        /** Localized string for 'column' */
+        column: PropTypes.string
     }),
     /** Set to **true** if Table contains checkboxes */
     richTable: PropTypes.bool,

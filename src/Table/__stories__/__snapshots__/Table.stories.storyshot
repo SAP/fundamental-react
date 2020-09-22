@@ -5,7 +5,7 @@ exports[`Storyshots Component API/Table Compact 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedBy="mocked-short-id"
+    aria-describedby="mocked-short-id"
     className="fd-table fd-table--compact"
     role="grid"
   >
@@ -105,7 +105,7 @@ exports[`Storyshots Component API/Table Condensed 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedBy="mocked-short-id"
+    aria-describedby="mocked-short-id"
     className="fd-table fd-table--condensed"
     role="grid"
   >
@@ -205,7 +205,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedBy="mocked-short-id"
+    aria-describedby="mocked-short-id"
     className="fd-table"
     role="grid"
   >
@@ -454,7 +454,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            aria-Label="Categories"
+            aria-label="Categories"
             className="fd-input"
             type="text"
           />
@@ -677,7 +677,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            aria-Label="Categories"
+            aria-label="Categories"
             className="fd-input"
             type="text"
           />
@@ -900,7 +900,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            aria-Label="Categories"
+            aria-label="Categories"
             className="fd-input"
             type="text"
           />
@@ -1123,7 +1123,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            aria-Label="Categories"
+            aria-label="Categories"
             className="fd-input"
             type="text"
           />
@@ -1195,7 +1195,7 @@ exports[`Storyshots Component API/Table Primary 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedBy="mocked-short-id"
+    aria-describedby="mocked-short-id"
     className="fd-table"
     role="grid"
   >
@@ -1295,7 +1295,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedBy="mocked-short-id"
+    aria-describedby="mocked-short-id"
     className="fd-table"
     role="grid"
   >

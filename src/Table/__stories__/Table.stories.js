@@ -237,7 +237,7 @@ export const gridTable = () => {
                                 validationOverlayProps={{ 'aria-label': 'Supplier' }} />,
                             <Link aria-label={`Show image: ${item.productName}`} href={item.imageUrl}>Show image</Link>,
                             <Checkbox ariaLabel='Heavy Weight' />,
-                            <FormInput aria-Label='Categories' />,
+                            <FormInput aria-label='Categories' />,
                             <DatePicker defaultValue={item.deliveryDate} inputProps={{ 'aria-label': 'Delivery Date' }} />
                         ]
                     });
