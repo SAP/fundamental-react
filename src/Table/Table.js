@@ -118,7 +118,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             className={tableClasses}
             ref={tableRef}
             role={keyboardNavigation ? 'grid' : 'table'}>
-            <caption aria-live='polite' className='fd-table__instructions'
+            <caption aria-live='polite' className='fd-table__caption'
                 id={captionId}>
                 {instructionsText}
             </caption>

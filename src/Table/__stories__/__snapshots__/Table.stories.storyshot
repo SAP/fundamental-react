@@ -11,7 +11,7 @@ exports[`Storyshots Component API/Table Compact 1`] = `
   >
     <caption
       aria-live="polite"
-      className="fd-table__instructions"
+      className="fd-table__caption"
       id="mocked-short-id"
     >
       
@@ -111,7 +111,7 @@ exports[`Storyshots Component API/Table Condensed 1`] = `
   >
     <caption
       aria-live="polite"
-      className="fd-table__instructions"
+      className="fd-table__caption"
       id="mocked-short-id"
     >
       
@@ -211,7 +211,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
   >
     <caption
       aria-live="polite"
-      className="fd-table__instructions"
+      className="fd-table__caption"
       id="mocked-short-id"
     >
       
@@ -330,7 +330,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Product ID"
+            aria-label="Product ID"
             className="fd-input"
             defaultValue="HT-1000"
             name="Notebook Basic 15"
@@ -423,6 +423,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <a
+            aria-label="Show image: Notebook Basic 15"
             className="fd-link"
             href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg"
           >
@@ -453,7 +454,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Categories"
+            aria-Label="Categories"
             className="fd-input"
             type="text"
           />
@@ -553,7 +554,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Product ID"
+            aria-label="Product ID"
             className="fd-input"
             defaultValue="HT-1001"
             name="Notebook Basic 17"
@@ -646,6 +647,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <a
+            aria-label="Show image: Notebook Basic 17"
             className="fd-link"
             href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg"
           >
@@ -676,7 +678,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Categories"
+            aria-Label="Categories"
             className="fd-input"
             type="text"
           />
@@ -776,7 +778,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Product ID"
+            aria-label="Product ID"
             className="fd-input"
             defaultValue="HT-1002"
             name="Notebook Basic 18"
@@ -869,6 +871,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <a
+            aria-label="Show image: Notebook Basic 18"
             className="fd-link"
             href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1002.jpg"
           >
@@ -899,7 +902,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Categories"
+            aria-Label="Categories"
             className="fd-input"
             type="text"
           />
@@ -999,7 +1002,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Product ID"
+            aria-label="Product ID"
             className="fd-input"
             defaultValue="HT-1003"
             name="Notebook Basic 19"
@@ -1092,6 +1095,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <a
+            aria-label="Show image: Notebook Basic 19"
             className="fd-link"
             href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg"
           >
@@ -1122,7 +1126,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           className="fd-table__cell fd-table__cell--focusable"
         >
           <input
-            ariaLabel="Categories"
+            aria-Label="Categories"
             className="fd-input"
             type="text"
           />
@@ -1201,7 +1205,7 @@ exports[`Storyshots Component API/Table Primary 1`] = `
   >
     <caption
       aria-live="polite"
-      className="fd-table__instructions"
+      className="fd-table__caption"
       id="mocked-short-id"
     >
       
@@ -1301,7 +1305,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
   >
     <caption
       aria-live="polite"
-      className="fd-table__instructions"
+      className="fd-table__caption"
       id="mocked-short-id"
     >
       

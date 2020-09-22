@@ -228,16 +228,16 @@ export const gridTable = () => {
                                 name={item.productName}
                                 onChange={handleChange} />,
                             <span>{item.productName}</span>,
-                            <FormInput ariaLabel='Product ID' defaultValue={item.productId}
+                            <FormInput aria-label='Product ID' defaultValue={item.productId}
                                 name={item.productName} />,
                             <span>{item.quantity}</span>,
                             <ObjectStatus status={item.status === 'Available' ? 'positive' : 'negative'}>{item.status}</ObjectStatus>,
                             <Select options={suppliers} placeholder='Select a supplier'
                                 selectedKey={suppliers[suppliers.findIndex((supplier) => supplier.text === item.supplierName)].key}
                                 validationOverlayProps={{ 'aria-label': 'Supplier' }} />,
-                            <Link href={item.imageUrl}>Show image</Link>,
+                            <Link aria-label={`Show image: ${item.productName}`} href={item.imageUrl}>Show image</Link>,
                             <Checkbox ariaLabel='Heavy Weight' />,
-                            <FormInput ariaLabel='Categories' />,
+                            <FormInput aria-Label='Categories' />,
                             <DatePicker defaultValue={item.deliveryDate} inputProps={{ 'aria-label': 'Delivery Date' }} />
                         ]
                     });
