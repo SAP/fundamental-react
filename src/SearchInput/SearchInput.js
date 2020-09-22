@@ -10,228 +10,202 @@ import keycode from 'keycode';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import React, { useEffect, useState } from 'react';
 
-class SearchInput extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isExpanded: false,
-            searchExpanded: false,
-            value: props.inputProps?.value ? props.inputProps.value : ''
-        };
-    }
+const SearchInput = React.forwardRef( ({
+    className,
+    compact,
+    disabled,
+    inputProps,
+    inputGroupAddonProps,
+    inputGroupProps,
+    inShellbar,
+    listProps,
+    localizedText,
+    noSearchBtn,
+    onChange,
+    onEnter,
+    onSelect,
+    placeholder,
+    popoverProps,
+    readOnly,
+    searchList,
+    subStringSearch,
+    searchBtnProps,
+    validationOverlayProps,
+    validationState,
+    ...rest
+}, ref) => {
+    const [isExpanded, setIsExpanded ] = useState(false);
+    const [searchExpanded, setSearchExpanded] = useState(false);
+    const [value, setValue] = useState(inputProps?.value ? inputProps.value : '');
 
-    filterList = (list, query) => {
-        return this.props.subStringSearch ? list.filter((item) => {
+    const filterList = (list, query) => {
+        return subStringSearch ? list.filter((item) => {
             return item.text.toLowerCase().includes(query.toLowerCase());
         }) : list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
-    }
+    };
 
-    handleKeyPress = event => {
+    const handleKeyPress = event => {
         if (keycode(event) === 'enter') {
-            this.props.onEnter(this.state.value);
+            onEnter(value);
         }
     };
 
-    handleListItemClick = (event, item) => {
-        this.setState({
-            value: item.text,
-            isExpanded: false,
-            searchExpanded: false
-        });
+    const handleListItemClick = (event, item) => {
+        setValue(item.text);
+        setIsExpanded(false);
+        setSearchExpanded(false);
         item?.callback();
-        this.props.onSelect(event, item);
+        onSelect(event, item);
     };
 
-    handleChange = event => {
+    const handleChange = event => {
         let filteredResult;
-        if (this.props.searchList) {
-            filteredResult = this.filterList(this.props.searchList, event.target.value);
+        if (searchList) {
+            filteredResult = filterList(searchList, event.target.value);
         }
-        this.setState({
-            value: event.target.value,
-            isExpanded: true
-        });
-        this.props.onChange(event, filteredResult);
+        setValue(event.target.value);
+        setIsExpanded(true);
+        onChange(event, filteredResult);
     };
 
-    handleClick = () => {
-        if (!this.props.readOnly) {
-            this.setState(prevState => ({
-                isExpanded: !prevState.isExpanded
-            }));
+    const handleClick = () => {
+        if (!readOnly) {
+            setIsExpanded(!isExpanded);
         }
     };
 
-    handleClickOutside = () => {
-        this.setState({
-            isExpanded: false,
-            searchExpanded: false
-        });
+    const handleClickOutside = () => {
+        setIsExpanded(false);
+        setSearchExpanded(false);
     };
 
-    handleSearchBtn = () => {
-        this.setState(prevState => ({
-            searchExpanded: !prevState.searchExpanded
-        }));
-
-        if (this.state.searchExpanded && this.state.isExpanded) {
-            this.setState({
-                isExpanded: false
-            });
-        }
-    };
-
-    handleEsc = event => {
+    const handleEsc = event => {
         if (
-            (event.keyCode === 27 && this.state.isExpanded === true) ||
-            (event.keyCode === 27 && this.state.searchExpanded === true)
+            (event.keyCode === 27 && isExpanded === true) ||
+            (event.keyCode === 27 && searchExpanded === true)
         ) {
-            this.setState({
-                isExpanded: false,
-                searchExpanded: false,
-                value: ''
-            });
+            setIsExpanded(false);
+            setSearchExpanded(false);
+            setValue('');
         }
     };
 
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleEsc, false);
-    }
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleEsc, false);
-    }
+    useEffect(() => {
+        document.addEventListener('keydown', handleEsc, false);
 
-    render() {
-        const {
-            placeholder,
-            inShellbar,
-            onEnter,
-            searchList,
-            subStringSearch,
-            onChange,
-            onSelect,
-            noSearchBtn,
-            compact,
-            className,
-            inputProps,
-            inputGroupAddonProps,
-            inputGroupProps,
-            listProps,
-            searchBtnProps,
-            popoverProps,
-            validationOverlayProps,
-            validationState,
-            disabled,
-            readOnly,
-            localizedText,
-            ...rest
-        } = this.props;
+        return () => {
+            document.removeEventListener('keydown', handleEsc, false);
+        };
+    });
 
-        let inputGroupClasses = inputGroupProps && inputGroupProps.className;
 
-        inputGroupClasses = !inShellbar ? classnames(
-            inputGroupClasses,
-            'fd-input-group--control',
-            {
-                [`is-${validationState?.state}`]: validationState?.state
-            }
-        ) : inputGroupClasses;
-        let filteredResult = this.state.value && this.props.searchList ? this.filterList(this.props.searchList, this.state.value) : this.props.searchList;
-        const popoverBody = (
-            <Menu>
-                <Menu.List {...listProps}>
-                    {filteredResult && filteredResult.length > 0 ? (
-                        filteredResult.map((item, index) => {
-                            return (
-                                subStringSearch ? (<Menu.Item
-                                    key={index}
-                                    onClick={(e) => this.handleListItemClick(e, item)}>
-                                    {item.text}
-                                </Menu.Item>) :
-                                    (
-                                        <Menu.Item
-                                            key={index}
-                                            onClick={(e) => this.handleListItemClick(e, item)}>
-                                            <strong>{this.state.value}</strong>
-                                            {this.state.value && this.state.value.length
-                                                ? item.text.substring(this.state.value.length)
-                                                : item.text}
-                                        </Menu.Item>
-                                    )
-                            );
-                        })
-                    ) : (
-                        <Menu.Item>No result</Menu.Item>
-                    )}
-                </Menu.List>
-            </Menu>
-        );
+    let inputGroupClasses = inputGroupProps && inputGroupProps.className;
 
-        const inputGroup = (
-            <InputGroup
-                {...inputGroupProps}
-                className={inputGroupClasses}
-                compact={compact}
-                disabled={disabled}
-                readOnly={readOnly}
-                validationState={validationState}>
-                <FormInput
-                    {...inputProps}
-                    disabled={disabled}
-                    onChange={this.handleChange}
-                    onClick={this.handleClick}
-                    onKeyPress={this.handleKeyPress}
-                    placeholder={placeholder}
-                    readOnly={readOnly}
-                    value={this.state.value} />
-
-                { !(noSearchBtn || readOnly) && (
-                    <InputGroup.Addon {...inputGroupAddonProps} isButton>
-                        <Button {...searchBtnProps}
-                            aria-label={localizedText.searchBtnLabel}
-                            disabled={disabled}
-                            glyph='search'
-                            onClick={this.handleClick}
-                            option='transparent' />
-                    </InputGroup.Addon>
+    inputGroupClasses = !inShellbar ? classnames(
+        inputGroupClasses,
+        'fd-input-group--control',
+        {
+            [`is-${validationState?.state}`]: validationState?.state
+        }
+    ) : inputGroupClasses;
+    let filteredResult = value && searchList ? filterList(searchList, value) : searchList;
+    const popoverBody = (
+        <Menu>
+            <Menu.List {...listProps}>
+                {filteredResult && filteredResult.length > 0 ? (
+                    filteredResult.map((item, index) => {
+                        return (
+                            subStringSearch ? (<Menu.Item
+                                key={index}
+                                onClick={(e) => handleListItemClick(e, item)}>
+                                {item.text}
+                            </Menu.Item>) :
+                                (
+                                    <Menu.Item
+                                        key={index}
+                                        onClick={(e) => handleListItemClick(e, item)}>
+                                        <strong>{value}</strong>
+                                        {value && value.length
+                                            ? item.text.substring(value.length)
+                                            : item.text}
+                                    </Menu.Item>
+                                )
+                        );
+                    })
+                ) : (
+                    <Menu.Item>No result</Menu.Item>
                 )}
-            </InputGroup>
-        );
+            </Menu.List>
+        </Menu>
+    );
 
-        const wrappedInputGroup = (
-            <FormValidationOverlay
-                {...validationOverlayProps}
-                control={inputGroup}
-                validationState={validationState} />
-        );
+    const inputGroup = (
+        <InputGroup
+            {...inputGroupProps}
+            className={inputGroupClasses}
+            compact={compact}
+            disabled={disabled}
+            readOnly={readOnly}
+            validationState={validationState}>
+            <FormInput
+                {...inputProps}
+                disabled={disabled}
+                onChange={handleChange}
+                onClick={handleClick}
+                onKeyPress={handleKeyPress}
+                placeholder={placeholder}
+                readOnly={readOnly}
+                value={value} />
 
-        return (
-            <div {...rest} className={className}>
-                <Popover
-                    {...popoverProps}
-                    body={
-                        (<>
-                            {validationState &&
+            { !(noSearchBtn || readOnly) && (
+                <InputGroup.Addon {...inputGroupAddonProps} isButton>
+                    <Button {...searchBtnProps}
+                        aria-label={localizedText.searchBtnLabel}
+                        disabled={disabled}
+                        glyph='search'
+                        onClick={handleClick}
+                        option='transparent' />
+                </InputGroup.Addon>
+            )}
+        </InputGroup>
+    );
+
+    const wrappedInputGroup = (
+        <FormValidationOverlay
+            {...validationOverlayProps}
+            control={inputGroup}
+            validationState={validationState} />
+    );
+
+    return (
+        <div
+            {...rest}
+            className={className}
+            ref={ref}>
+            <Popover
+                {...popoverProps}
+                body={
+                    (<>
+                        {validationState &&
                             <FormMessage
                                 {...validationOverlayProps?.formMessageProps}
                                 type={validationState.state}>
                                 {validationState.text}
                             </FormMessage>
-                            }
-                            {popoverBody}
-                        </>)}
-                    control={wrappedInputGroup}
-                    disableKeyPressHandler
-                    disabled={readOnly}
-                    noArrow
-                    onClickOutside={this.handleClickOutside}
-                    widthSizingType='minTarget' />
-            </div>
-        );
-    }
-}
+                        }
+                        {popoverBody}
+                    </>)}
+                control={wrappedInputGroup}
+                disableKeyPressHandler
+                disabled={readOnly}
+                noArrow
+                onClickOutside={handleClickOutside}
+                widthSizingType='minTarget' />
+        </div>
+    );
+});
 
 SearchInput.displayName = 'SearchInput';
 
