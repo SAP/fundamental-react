@@ -38,7 +38,7 @@ const SearchInput = React.forwardRef( ({
 }, ref) => {
     const [isExpanded, setIsExpanded ] = useState(false);
     const [searchExpanded, setSearchExpanded] = useState(false);
-    const [value, setValue] = useState(inputProps?.value ? inputProps.value : '');
+    const [value, setValue] = useState(inputProps?.value || '');
 
     const filterList = (list, query) => {
         return subStringSearch ? list.filter((item) => {
@@ -268,7 +268,6 @@ SearchInput.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function when the change event fires on the component */
     /**
      * Callback function; triggered when a change event is fired on the underlying `<input>`.
      *
