@@ -246,15 +246,15 @@ export const withSubList = () => (
                         name='Item 1'
                         url='#' />
                     <SideNav.ListItem
-                        id='subitem_41'
+                        id='subitem_42'
                         name='Item 2'
                         url='#' />
                     <SideNav.ListItem
-                        id='subitem_41'
+                        id='subitem_43'
                         name='Item 3'
                         url='#' />
                     <SideNav.ListItem
-                        id='subitem_41'
+                        id='subitem_44'
                         name='Item 4'
                         url='#' />
                 </SideNav.List>

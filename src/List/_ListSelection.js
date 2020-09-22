@@ -1,7 +1,7 @@
 import Checkbox from '../Forms/Checkbox';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ListSelection = ({
     checkBoxAriaLabel,
@@ -11,6 +11,7 @@ const ListSelection = ({
     selected,
     ...props
 }) => {
+    const [selectedState, setSelectedState] = useState(selected || false);
 
     const ListSelectionClasses = classnames(
         'fd-form-item',
@@ -23,9 +24,12 @@ const ListSelection = ({
             <div {...props} className={ListSelectionClasses}>
                 <Checkbox
                     ariaLabel={checkBoxAriaLabel}
-                    checked={selected}
+                    checked={selectedState}
                     inline
-                    onChange={onChange} />
+                    onChange={(e, checked) => {
+                        setSelectedState(checked);
+                        onChange(e, checked);
+                    }} />
             </div>
             {children}
         </>
@@ -43,7 +47,14 @@ ListSelection.propTypes = {
     className: PropTypes.string,
     /** Boolean value controlled by parent List.Item*/
     selected: PropTypes.bool,
-    /** Callback function when the change event fires on the Checkbox component */
+    /**
+     * Callback function; triggered when the change event fires on the underlying HTML checkbox `<input>`
+     * of the parent `<li>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Boolean} checkedState - represents the final checked state of the HTML checkbox input.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 

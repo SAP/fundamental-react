@@ -216,6 +216,263 @@ exports[`Storyshots Component API/Time Custom Time 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Time Dev 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-time"
+  >
+    <div
+      className="fd-time__col"
+      onClick={[Function]}
+    >
+      <label
+        className="fd-time__slider-label"
+      >
+        Hours
+      </label>
+      <button
+        aria-label="Increase hours"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="fd-time__wrapper fd-time__wrapper--active"
+      >
+        <ul
+          className="fd-time__list"
+        >
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <div
+              className="fd-time__current-indicator"
+            />
+            <span
+              className="fd-time__unit"
+            >
+              09
+            </span>
+          </li>
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-time__unit"
+            >
+              10
+            </span>
+          </li>
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-time__unit"
+            >
+              11
+            </span>
+          </li>
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-time__unit"
+            >
+              12
+            </span>
+          </li>
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-time__unit"
+            >
+              01
+            </span>
+          </li>
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-time__unit"
+            >
+              02
+            </span>
+          </li>
+          <li
+            className="fd-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="fd-time__unit"
+            >
+              03
+            </span>
+          </li>
+        </ul>
+      </div>
+      <button
+        aria-label="Decrease hours"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-time__col"
+      onClick={[Function]}
+    >
+      <label
+        className="fd-time__slider-label"
+      >
+        Minutes
+      </label>
+      <button
+        aria-label="Increase minutes"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="fd-time__wrapper"
+      >
+        <span
+          className="fd-time__item fd-time__item--collapsed"
+          onClick={null}
+        >
+          55
+        </span>
+      </div>
+      <button
+        aria-label="Decrease hours"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-time__col"
+      onClick={[Function]}
+    >
+      <label
+        className="fd-time__slider-label"
+      >
+        Seconds
+      </label>
+      <button
+        aria-label="Increase seconds"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="fd-time__wrapper"
+      >
+        <span
+          className="fd-time__item fd-time__item--collapsed"
+          onClick={null}
+        >
+          06
+        </span>
+      </div>
+      <button
+        aria-label="Decrease seconds"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-time__col"
+    >
+      <label
+        className="fd-time__slider-label"
+      >
+        AM/PM
+      </label>
+      <button
+        aria-label="Increase period"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="fd-time__wrapper fd-time__wrapper--meridian"
+      >
+        <span
+          className="fd-time__item fd-time__item--collapsed"
+          onClick={[Function]}
+        >
+          am
+        </span>
+      </div>
+      <button
+        aria-label="Decrease period"
+        className="fd-button fd-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Time Disabled Time 1`] = `
 <div
   dir="ltr"

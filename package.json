@@ -1,6 +1,6 @@
 {
   "name": "fundamental-react",
-  "version": "0.13.0-rc.21",
+  "version": "0.13.0",
   "private": false,
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
@@ -43,7 +43,7 @@
     "test": "npm run test:dev -- --watch",
     "test:storybook:setup": "npm run build:storybook && cross-env BABEL_ENV=test jest --no-cache --config=./storybook-testing/jest.config.js",
     "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
-    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'npm run test:storybook:setup -- --updateSnapshot'"
+    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rm -rf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.10.2",

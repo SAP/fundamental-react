@@ -133,7 +133,12 @@ MenuItem.propTypes = {
     url: PropTypes.string,
     /** Additional props to be spread to the Menu Item links (when using `url`). */
     urlProps: PropTypes.object,
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when the MenuItem (i.e. the `<a>` element) is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onClick: PropTypes.func
 };
 

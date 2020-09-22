@@ -96,7 +96,6 @@ exports[`Storyshots Component API/Forms/Checkbox Dev 1`] = `
   >
     <input
       aria-checked={false}
-      checked={false}
       className="fd-checkbox"
       disabled={false}
       id="fd-mocked-short-id"

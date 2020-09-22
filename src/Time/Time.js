@@ -265,7 +265,12 @@ Time.propTypes = {
       * is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59),
       * **meridiem** (with values 0 for AM or 1 for PM) */
     time: PropTypes.object,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the current time is changed by user interaction.
+     *
+     * @param {Object} time - has hour, meridiem, minute, second properties as numbers
+     * @returns {void}
+     * */
     onChange: PropTypes.func
 };
 

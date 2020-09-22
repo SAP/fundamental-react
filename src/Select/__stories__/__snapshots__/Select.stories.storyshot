@@ -104,7 +104,6 @@ exports[`Storyshots Component API/Select Dev 1`] = `
                 aria-haspopup="listbox"
                 className="fd-select"
                 onClick={[Function]}
-                onFocus={[Function]}
                 onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}

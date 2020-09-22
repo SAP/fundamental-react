@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Column from '../../LayoutGrid/Column';
 import Container from '../../LayoutGrid/Container';
 import DatePicker from '../DatePicker';
@@ -419,7 +420,12 @@ export const dev = () => (
         disableWeekends={boolean('disable weekends', false)}
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        enableRangeSelection={boolean('enableRangeSelection', false)}
         locale={text('locale', 'en')}
+        onChange={action('on-change')}
+        onDatePickerClose={action('on-date-picker-close')}
+        onInputBlur={action('on-input-blur')}
+        onInputFocus={action('on-input-focus')}
         openToDate={dateKnobToDate('open to date', new Date())}
         todayAction={{
             type: select('Today Action Type',

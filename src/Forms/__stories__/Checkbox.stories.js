@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Checkbox from '../Checkbox';
 import React from 'react';
 import {
@@ -41,16 +42,11 @@ export const validationStates = () => (
 
 export const dev = () => (
     <Checkbox
-        checked={boolean('checked', false)}
         className={text('className', '')}
         compact={boolean('compact', false)}
         disabled={boolean('disabled', false)}
         indeterminate={boolean('indeterminate', false)}
-        onChange={
-            (event, checked) => {
-                alert(checked ? 'checked' : 'unchecked');
-            }
-        }
+        onChange={action('on-change')}
         validationState={select('Validation State', {
             'none': '',
             'success': { state: 'success', text: 'placeholder text' },

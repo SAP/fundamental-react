@@ -267,7 +267,7 @@ TreeNode.propTypes = {
     /** Set to **true** to make node contents wrap to next line(s).*/
     wrapContent: PropTypes.bool,
     /**
-     * Callback function triggered when a node's expansion button is clicked.
+     * Callback function; triggered when a node's expansion button is clicked.
      * @param {SyntheticEvent} event - React's original SyntheticEvent.
      * @param {Boolean} expansion - Boolean representing if this event will expand TreeNode's subtree.
      * @param {Object} nodeData - TreeNode.nodeData
@@ -275,7 +275,7 @@ TreeNode.propTypes = {
     */
     onExpandToggle: PropTypes.func,
     /**
-     * Callback function triggered when a node is selected (if selection is enabled)
+     * Callback function; triggered when a node is selected (if selection is enabled)
      *
      * * multi: selection state changes
      * * single: is selected

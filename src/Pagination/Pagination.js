@@ -216,7 +216,13 @@ Pagination.propTypes = {
     /** Total number of items. itemsTotal / itemsPerPage calculates
      * how many navigation items should be shown in the control */
     itemsTotal: PropTypes.number.isRequired,
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when user clicks on any navigation item link
+     * i.e. page number or previous or next arrow indicators.
+     *
+     * @param {number} selectedPage - page number to navigate to.
+     * @returns {void}
+    */
     onClick: PropTypes.func.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,

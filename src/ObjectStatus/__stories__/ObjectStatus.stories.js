@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import ObjectStatus from '../ObjectStatus';
 import React from 'react';
 
@@ -191,3 +192,52 @@ export const clickable = () => (
     </>
 );
 clickable.storyName = 'Clickable';
+
+
+
+export const dev = () => (
+    <>
+        <div className='fddocs-container'>
+            <ObjectStatus glyph='status-negative' onClick={action('status-negative-on-click')}
+                status='negative'>Negative</ObjectStatus>
+            <ObjectStatus glyph='status-critical' onClick={action('status-critical-on-click')}
+                status='critical'>Critical</ObjectStatus>
+            <ObjectStatus glyph='status-positive' onClick={action('status-positive-on-click')}
+                status='positive'>Positive</ObjectStatus>
+            <ObjectStatus glyph='hint' link='#'
+                status='informative'>Info</ObjectStatus>
+            <ObjectStatus glyph='to-be-reviewed'
+                onClick={action('to-be-reviewed-on-click')}>Neutral</ObjectStatus>
+        </div>
+        <div className='fddocs-container'>
+            <ObjectStatus glyph='status-negative' inverted
+                link='#' status='negative'>Negative</ObjectStatus>
+            <ObjectStatus glyph='status-critical' inverted
+                link='#' status='critical'>Critical</ObjectStatus>
+            <ObjectStatus indication='1' inverted
+                link='#'>Dark Red</ObjectStatus>
+            <ObjectStatus indication='2' inverted
+                link='#'>Red</ObjectStatus>
+            <ObjectStatus ariaLabel='informative' glyph='hint'
+                inverted link='#'
+                status='informative' />
+            <ObjectStatus ariaLabel='neutral' glyph='to-be-reviewed'
+                inverted link='#' />
+        </div>
+        <div className='fddocs-container'>
+            <ObjectStatus glyph='status-negative' onClick={action('large-status-negative-on-click')}
+                size='l' status='negative'>Negative</ObjectStatus>
+            <ObjectStatus glyph='status-critical' onClick={action('large-status-critical-on-click')}
+                size='l' status='critical'>Critical</ObjectStatus>
+            <ObjectStatus indication='1' onClick={action('indication-1-on-click')}
+                size='l'>Dark Red</ObjectStatus>
+            <ObjectStatus indication='2' link='#'
+                size='l'>Red</ObjectStatus>
+            <ObjectStatus ariaLabel='info' glyph='hint'
+                link='#' size='l'
+                status='informative' />
+            <ObjectStatus ariaLabel='info' glyph='to-be-reviewed'
+                link='#' size='l' />
+        </div>
+    </>
+);

@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import ListSelection from './_ListSelection';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ListItem = ({
     action,
@@ -16,6 +16,7 @@ const ListItem = ({
     url,
     ...props
 }) => {
+    const [selectedState, setSelectedState] = useState(selected || false);
 
     const handleClick = (e) => {
         onClick(e);
@@ -70,9 +71,15 @@ const ListItem = ({
             if (child?.type?.displayName === ListSelection.displayName) {
                 selectionProps = {
                     'role': 'option',
-                    'aria-selected': selected
+                    'aria-selected': selectedState
                 };
-                return React.cloneElement(child, { selected });
+                return React.cloneElement(child, {
+                    selected: selected || selectedState,
+                    onChange: (e, checked) => {
+                        setSelectedState(checked);
+                        child?.props?.onChange?.(e, checked);
+                    }
+                });
             }
             return child;
         });
@@ -108,13 +115,20 @@ ListItem.propTypes = {
     hasByline: PropTypes.bool,
     /** Internal use only */
     navigation: PropTypes.bool,
-    /** Interal use only */
+    /** Internal use only */
     partialNavigation: PropTypes.bool,
     /** Set to **true** if list item is currently selected (only supported for links and List.Selection) */
     selected: PropTypes.bool,
     /** URL to navigate to if list item is a link */
     url: PropTypes.string,
-    /** Callback function when user clicks on the component (not supported for links) */
+    /**
+     * Callback function; triggered when user clicks on the list item i.e. `<li>`
+     *
+     *  (not supported for links as they are supposed to navigate).
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+     */
     onClick: PropTypes.func
 };
 

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import Time from '../Time';
 
@@ -28,5 +29,12 @@ export const timeMeridiemSet = () => (
 export const time12Set = () => (
     <Time
         format12Hours
+        time={{ hour: 12, minute: 55, second: 6, meridiem: 0 }} />
+);
+
+export const dev = () => (
+    <Time
+        format12Hours
+        onChange={action('on-change')}
         time={{ hour: 12, minute: 55, second: 6, meridiem: 0 }} />
 );

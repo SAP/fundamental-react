@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import ActionBar from '../ActionBar';
 import Button from '../../Button/Button';
 import Menu from '../../Menu/Menu';
@@ -67,27 +68,6 @@ export const contextualMenu = () => (
 
 contextualMenu.storyName = 'With a ContextualMenu';
 
-export const dev = () => (
-    <ActionBar
-        actions={(<><Button>Button</Button>
-            <Button option='emphasized'>Button</Button></>
-        )}
-        buttonProps={{
-            'aria-label': 'Back to home'
-        }}
-        description={text('description', 'Action Bar description')}
-        headingLevel={number('headingLevel', 2, {
-            range: true,
-            min: 2,
-            max: 6,
-            step: 1
-        })}
-        onBackClick={() => {}}
-        title={text('title', 'Page Title')} />
-);
-
-dev.parameters = { docs: { disable: true } };
-
 export const noDescription = () => (
     <ActionBar
         actions={(<><Button>Button</Button>
@@ -103,3 +83,24 @@ export const noActions = () => (
 );
 
 noActions.parameters = { docs: { disable: true } };
+
+export const dev = () => (
+    <ActionBar
+        actions={(<><Button>Button</Button>
+            <Button option='emphasized'>Button</Button></>
+        )}
+        buttonProps={{
+            'aria-label': 'Back to home'
+        }}
+        description={text('description', 'Action Bar description')}
+        headingLevel={number('headingLevel', 2, {
+            range: true,
+            min: 2,
+            max: 6,
+            step: 1
+        })}
+        onBackClick={action('back button clicked')}
+        title={text('title', 'Page Title')} />
+);
+
+dev.parameters = { docs: { disable: true } };

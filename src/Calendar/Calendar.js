@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import 'fundamental-styles/dist/calendar.css';
 
 /** A **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
-It is rarely used on its own as a standalone component. */
+It is rarely used on its own as a standalone component. Internally it uses and accepts [Moment.js](https://momentjs.com/) date objects*/
 
 class Calendar extends Component {
 
@@ -396,7 +396,7 @@ class Calendar extends Component {
         this.setState({ currentFocusYear: year });
     }
 
-    dateClick = (day, isRangeEnabled, forceStayOpen) => {
+    dateClick = (day, isRangeEnabled, forceStayOpen = false) => {
         let selectedDates = [];
         if (typeof isRangeEnabled !== 'undefined' && isRangeEnabled) {
             selectedDates = this.state.arrSelectedDates;
@@ -785,7 +785,7 @@ Calendar.propTypes = {
     openToDate: PropTypes.instanceOf(moment),
     /** Set to **true** if the Today button should be displayed */
     showToday: PropTypes.bool,
-    /** Object with special dates and special date types in shape of `{\'YYYYMMDD\': type}`. Type must be a number between 1-20 */
+    /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
     /** Additional props to be spread to the `<tbody>` element */
     tableBodyProps: PropTypes.object,
@@ -797,7 +797,16 @@ Calendar.propTypes = {
     weekdayStart: CustomPropTypes.range(0, 6),
     /** Additional props to be spread to the year\'s `<table>` element */
     yearListProps: PropTypes.object,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function when the date selection changes.
+     *
+     *  * If `enableRangeSelection` is **false** the function is called when any date is selected, with a Moment.js date object
+     *  * If `enableRangeSelection` is **true** the function is called when any date is selected, with an array of Moment.js date objects. The max size of this array is 2 i.e. the start and end date.
+     *
+     * @param {(Moment | Moment[])} date single Moment.js date object if range selection is disabled, else an array containing 2 Moment.js date objects.
+     * @param {Boolean} todayPressed - is true only if the change was caused by the today button.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 

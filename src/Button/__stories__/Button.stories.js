@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Button from '../Button';
 import React from 'react';
 import {
@@ -169,6 +170,7 @@ export const dev = () => (
         disabled={boolean('disabled', false)}
         disabledMessage={'This button is disabled'}
         enabledMessage={'This button is now enabled'}
+        onClick={action('clicked')}
         option={select('option', {
             'emphasized': 'emphasized',
             'transparent': 'transparent'

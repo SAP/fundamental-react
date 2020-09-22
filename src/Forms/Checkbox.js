@@ -175,7 +175,13 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     }),
     /** Sets the `value` for the checkbox input */
     value: PropTypes.string,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the change event fires on the HTML checkbox `<input>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Boolean} checkedState - represents the final checked state of the HTML checkbox input.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 

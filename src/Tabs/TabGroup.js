@@ -119,7 +119,13 @@ TabGroup.propTypes = {
     'xxl' */
     size: PropTypes.oneOf(TAB_SIZES),
     tabGroupProps: PropTypes.object,
-    /** Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index` */
+    /**
+     * Callback function; triggered when the user selects a tab by clicking on pressing `enter`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {number} index - selected tab index.
+     * @returns {void}
+     * */
     onTabClick: PropTypes.func
 };
 
