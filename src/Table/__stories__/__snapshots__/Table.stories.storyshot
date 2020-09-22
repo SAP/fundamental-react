@@ -465,7 +465,6 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <div
             defaultValue="2017-03-26"
             onChange={[Function]}
-            onFocus={[Function]}
           >
             <div
               className="fd-popover"
@@ -689,7 +688,6 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <div
             defaultValue="2017-04-17"
             onChange={[Function]}
-            onFocus={[Function]}
           >
             <div
               className="fd-popover"
@@ -913,7 +911,6 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <div
             defaultValue="2017-01-07"
             onChange={[Function]}
-            onFocus={[Function]}
           >
             <div
               className="fd-popover"
@@ -1137,7 +1134,6 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <div
             defaultValue="2017-04-09"
             onChange={[Function]}
-            onFocus={[Function]}
           >
             <div
               className="fd-popover"
