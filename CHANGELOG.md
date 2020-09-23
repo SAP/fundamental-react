@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.13.0...v0.13.1-rc.0) (2020-09-23)
+
+
+### Features
+
+* SearchInput as a functional comp with forwarded ref ([#1218](https://github.com/SAP/fundamental-react/issues/1218)) ([03659ff](https://github.com/SAP/fundamental-react/commit/03659ff0a48503a85cb36b87652880c442abee6e))
+
 ## [0.13.0](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.22...v0.13.0) (2020-09-21)
 
 ## [0.13.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.21...v0.13.0-rc.22) (2020-09-21)
