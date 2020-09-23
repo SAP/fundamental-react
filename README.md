@@ -1,5 +1,6 @@
 # Fundamental React
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/fundamental-react)](https://api.reuse.software/info/github.com/SAP/fundamental-react)
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
 [![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)	
 [![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
