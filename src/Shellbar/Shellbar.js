@@ -105,7 +105,7 @@ class Shellbar extends Component {
             subtitle,
             copilot,
             searchInput,
-            sizeOption,
+            size,
             actions,
             notifications,
             productSwitch,
@@ -120,7 +120,7 @@ class Shellbar extends Component {
             'fd-shellbar',
             className,
             {
-                [`fd-shellbar--${sizeOption}`]: sizeOption
+                [`fd-shellbar--${size}`]: size
             },
         );
 
@@ -518,9 +518,8 @@ Shellbar.propTypes = {
     profileMenu: PropTypes.array,
     /** Holds `searchInput` [properties](?id=component-api-searchinput--compact&viewMode=docs#properties) */
     searchInput: PropTypes.object,
-    /** Provides a size modifier for product actions only visible on small `--mobile` shellbar `s`, or or product actions only visible on desktop `--desktop
-` screens `m`/`l`/`xl`. */
-    sizeOption: PropTypes.string,
+    /** Provides a size modifier for product actions only visible on small shellbar `s`, or product actions only visible on desktop screens `m`/`l`/`xl`. */
+    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
     /** Displays an application context. Should be used rarely */
     subtitle: PropTypes.string
 };
