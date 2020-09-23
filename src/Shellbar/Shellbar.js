@@ -125,7 +125,7 @@ class Shellbar extends Component {
         );
 
         return (
-            <div className={shellbarClasses}>
+            <div className={shellbarClasses} >
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
                     {backAction && <Button
                         aria-label={localizedText.backButtonLabel}
@@ -348,7 +348,8 @@ class Shellbar extends Component {
                                 control={
                                     <div className='fd-shellbar-collapse--control' role='button'>
                                         <Button className='fd-shellbar__button'
-                                            glyph='overflow'>
+                                            glyph='overflow'
+                                            iconBeforeText>
                                             <Counter
                                                 aria-label={localizedText.counterLabel}
                                                 notification> {this.state.totalNotifications > 0 && this.state.totalNotifications} </Counter>
@@ -529,7 +530,8 @@ Shellbar.defaultProps = {
         backButtonLabel: 'Back button',
         counterLabel: 'Unread count',
         notificationsButton: 'Notifications'
-    }
+    },
+    size: 'l'
 };
 
 export default Shellbar;

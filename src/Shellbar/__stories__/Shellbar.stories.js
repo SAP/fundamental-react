@@ -334,6 +334,6 @@ export const dev = () => (
             label: 'Search',
             placeholder: 'Search'
         }}
-        size={select('size', { 's': 's', 'm': 'm', 'l': 'l', 'xl': 'xl' })}
+        size={select('size', { 's': 's', 'm': 'm', 'l': 'l', 'xl': 'xl' }, 's')}
         subtitle='Subtitle' />
 );
