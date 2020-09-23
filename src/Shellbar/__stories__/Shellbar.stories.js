@@ -35,8 +35,7 @@ export const basic = () => (
         logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
         productTitle='Corporate Portal'
         profile={profile}
-        profileMenu={profileMenu}
-        sizeOption='m' />
+        profileMenu={profileMenu} />
 );
 
 /** This example includes the product menu for navigating to applications within the product and shows a search box. */
