@@ -337,3 +337,4 @@ export const dev = () => (
         size={select('size', { 's': 's', 'm': 'm', 'l': 'l', 'xl': 'xl' }, 's')}
         subtitle='Subtitle' />
 );
+dev.parameters = { docs: { disable: true } };
