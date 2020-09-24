@@ -1,9 +1,15 @@
 /* eslint-disable react/no-multi-comp */
 import Avatar from '../../Avatar/Avatar';
+import { boolean } from '@storybook/addon-knobs';
 import Button from '../../Button/Button';
 import Checkbox from '../../Forms/Checkbox';
+import DatePicker from '../../DatePicker/DatePicker';
+import FormInput from '../../Forms/FormInput';
+import Link from '../../Link/Link';
 import Menu from '../../Menu/Menu';
+import ObjectStatus from '../../ObjectStatus/ObjectStatus';
 import Popover from '../../Popover/Popover';
+import Select from '../../Select/Select';
 import Table from '../Table';
 import React, { useState } from 'react';
 
@@ -12,23 +18,42 @@ export default {
     component: Table
 };
 
+const defaultHeaders = [
+    'Column Header 1',
+    'Column Header 2',
+    'Column Header 3',
+    'Column Header 4'
+];
+const defaultData = [
+    {
+        rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
+    },
+    {
+        rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
+    }
+];
+
 export const primary = () => {
-    const defaultHeaders = [
-        'Column Header 1',
-        'Column Header 2',
-        'Column Header 3',
-        'Column Header 4'
-    ];
-    const defaultData = [
-        {
-            rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
-        },
-        {
-            rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
-        }
-    ];
     return (
         <Table
+            headers={defaultHeaders}
+            tableData={defaultData} />
+    );
+};
+
+export const compact = () => {
+    return (
+        <Table
+            compact
+            headers={defaultHeaders}
+            tableData={defaultData} />
+    );
+};
+
+export const condensed = () => {
+    return (
+        <Table
+            condensed
             headers={defaultHeaders}
             tableData={defaultData} />
     );
@@ -114,6 +139,106 @@ export const richTable = () => {
                                 }
                                 control={<Button glyph='vertical-grip' option='transparent' />}
                                 placement='bottom-end' />
+                        ]
+                    });
+                })
+            } />
+    );
+};
+
+export const gridTable = () => {
+    const tableRowData = [
+        {
+            'productId': 'HT-1000',
+            'supplierName': 'Very Best Screens',
+            'productName': 'Notebook Basic 15',
+            'deliveryDate': '2017-03-26',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg',
+            'status': 'Available',
+            'quantity': 10
+        },
+        {
+            'productId': 'HT-1001',
+            'supplierName': 'Fasttech',
+            'productName': 'Notebook Basic 17',
+            'deliveryDate': '2017-04-17',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg',
+            'status': 'Unavailable',
+            'quantity': 0
+        },
+        {
+            'productId': 'HT-1002',
+            'supplierName': 'Printers for All',
+            'productName': 'Notebook Basic 18',
+            'deliveryDate': '2017-01-07',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1002.jpg',
+            'status': 'Available',
+            'quantity': 13
+        },
+        {
+            'productId': 'HT-1003',
+            'supplierName': 'Technocom',
+            'productName': 'Notebook Basic 19',
+            'deliveryDate': '2017-04-09',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg',
+            'status': 'Available',
+            'quantity': 15
+        }
+    ];
+
+    const [checkedItems, setCheckedItems] = useState({});
+
+    const handleChange = (event) => {
+        setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked });
+    };
+
+    const handleHeaderChange = (event) => {
+        const newCheckedItems = {};
+        tableRowData.forEach(row => newCheckedItems[row.productName] = event.target.checked);
+        setCheckedItems(newCheckedItems);
+    };
+
+    const suppliers = [
+        { key: '1', text: 'Very Best Screens' },
+        { key: '2', text: 'Fasttech' },
+        { key: '3', text: 'Printers for All' },
+        { key: '4', text: 'Technocom' }
+    ];
+
+    const allItemsChecked = Object.keys(checkedItems).length > 0 && !Object.keys(checkedItems).some(key => !checkedItems[key]);
+
+    return (
+        <Table
+            compact={boolean('compact', false)}
+            condensed={boolean('condensed', false)}
+            headers={[
+                <Checkbox
+                    ariaLabel='Select all rows'
+                    checked={allItemsChecked}
+                    onChange={handleHeaderChange} />, 'Product Name', 'Product ID', 'Quantity', 'Status', 'Supplier', 'Image', 'Heavy Weight', 'Categories', 'Delivery Date']}
+            keyboardNavigation='cell'
+            richTable
+            tableData={
+                tableRowData.map(item => {
+                    return ({
+                        rowData: [
+                            <Checkbox
+                                ariaLabel='Select row'
+                                checked={checkedItems[item.productName] || false}
+                                name={item.productName}
+                                onChange={handleChange} />,
+                            <span>{item.productName}</span>,
+                            <FormInput aria-label='Product ID' defaultValue={item.productId}
+                                name={item.productName} />,
+                            <span>{item.quantity}</span>,
+                            <ObjectStatus status={item.status === 'Available' ? 'positive' : 'negative'}>{item.status}</ObjectStatus>,
+                            <Select options={suppliers} placeholder='Select a supplier'
+                                selectedKey={suppliers[suppliers.findIndex((supplier) => supplier.text === item.supplierName)].key}
+                                validationOverlayProps={{ 'aria-label': 'Supplier' }} />,
+                            <Link aria-label={`Show image: ${item.productName}`} href={item.imageUrl}>Show image</Link>,
+                            <Checkbox ariaLabel='Heavy Weight' />,
+                            <FormInput aria-label='Categories' />,
+                            <DatePicker defaultValue={item.deliveryDate} inputProps={{ 'aria-label': 'Delivery Date' }} />
                         ]
                     });
                 })
