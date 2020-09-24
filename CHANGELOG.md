@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.2...v0.13.1-rc.3) (2020-09-24)
+
+
+### Features
+
+* cell-level keyboard navigation for Table ([#1211](https://github.com/SAP/fundamental-react/issues/1211)) ([2f82eef](https://github.com/SAP/fundamental-react/commit/2f82eef9e14f0313c6b403eb4958ee56e1afe190))
+
 ### [0.13.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.1...v0.13.1-rc.2) (2020-09-24)
 
 ### [0.13.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.0...v0.13.1-rc.1) (2020-09-24)

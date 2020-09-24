@@ -8,7 +8,7 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
-import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
+import { GridSelector, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 // eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/popover.css';
@@ -73,10 +73,10 @@ class Popover extends Component {
         this.handleOutsideClick();
 
         if (this.controlRef) {
-            if (tabbable.isTabbable(this.controlRef)) {
+            if (tabbable.isFocusable(this.controlRef)) {
                 this.controlRef.focus();
             } else {
-                const firstTabbableNode = tabbable(this.controlRef)[0];
+                const firstTabbableNode = this.controlRef.querySelectorAll(GridSelector.FOCUSABLE)[0];
                 firstTabbableNode && firstTabbableNode.focus();
             }
         }

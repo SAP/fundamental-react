@@ -1,12 +1,1211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Table Compact 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    aria-describedby="mocked-short-id"
+    className="fd-table fd-table--compact"
+    role="grid"
+  >
+    <caption
+      aria-live="polite"
+      className="fd-table__caption"
+      id="mocked-short-id"
+    >
+      
+    </caption>
+    <thead
+      className="fd-table__header"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 1
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 2
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 3
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 4
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="fd-table__body"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell"
+        >
+          Data 1
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 2
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 3
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 4
+        </td>
+      </tr>
+      <tr
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell"
+        >
+          Data 5
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 6
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 7
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 8
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots Component API/Table Condensed 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    aria-describedby="mocked-short-id"
+    className="fd-table fd-table--condensed"
+    role="grid"
+  >
+    <caption
+      aria-live="polite"
+      className="fd-table__caption"
+      id="mocked-short-id"
+    >
+      
+    </caption>
+    <thead
+      className="fd-table__header"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 1
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 2
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 3
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Column Header 4
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="fd-table__body"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell"
+        >
+          Data 1
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 2
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 3
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 4
+        </td>
+      </tr>
+      <tr
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell"
+        >
+          Data 5
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 6
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 7
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          Data 8
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots Component API/Table Grid Table 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    aria-describedby="mocked-short-id"
+    className="fd-table"
+    role="grid"
+  >
+    <caption
+      aria-live="polite"
+      className="fd-table__caption"
+      id="mocked-short-id"
+    >
+      
+    </caption>
+    <thead
+      className="fd-table__header"
+    >
+      <tr
+        className="fd-table__row"
+      >
+        <th
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select all rows"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Product Name
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Product ID
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Quantity
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Status
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Supplier
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Image
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Heavy Weight
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Categories
+        </th>
+        <th
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          Delivery Date
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="fd-table__body"
+    >
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 15"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            Notebook Basic 15
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1000"
+            name="Notebook Basic 15"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            10
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span
+            className="fd-object-status fd-object-status--positive"
+          >
+            Available
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        aria-controls="fd-mocked-short-id"
+                        aria-expanded={false}
+                        aria-haspopup="listbox"
+                        aria-label="Supplier"
+                        className="fd-select"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="combobox"
+                        tabIndex={0}
+                      >
+                        <div
+                          className="fd-select__control"
+                        >
+                          <span
+                            aria-label={null}
+                            className="fd-select__text-content"
+                          >
+                            Very Best Screens
+                          </span>
+                          <span
+                            className="fd-button fd-button--transparent fd-select__button"
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--slim-arrow-down"
+                              role="img"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 15"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Heavy Weight"
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Categories"
+            className="fd-input"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            defaultValue="2017-03-26"
+            onChange={[Function]}
+          >
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control fd-input-group"
+                  >
+                    <input
+                      aria-label="Delivery Date"
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <i
+                          aria-hidden={true}
+                          className="sap-icon--appointment-2"
+                          role="img"
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 17"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            Notebook Basic 17
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1001"
+            name="Notebook Basic 17"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            0
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span
+            className="fd-object-status fd-object-status--negative"
+          >
+            Unavailable
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        aria-controls="fd-mocked-short-id"
+                        aria-expanded={false}
+                        aria-haspopup="listbox"
+                        aria-label="Supplier"
+                        className="fd-select"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="combobox"
+                        tabIndex={0}
+                      >
+                        <div
+                          className="fd-select__control"
+                        >
+                          <span
+                            aria-label={null}
+                            className="fd-select__text-content"
+                          >
+                            Fasttech
+                          </span>
+                          <span
+                            className="fd-button fd-button--transparent fd-select__button"
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--slim-arrow-down"
+                              role="img"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 17"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Heavy Weight"
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Categories"
+            className="fd-input"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            defaultValue="2017-04-17"
+            onChange={[Function]}
+          >
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control fd-input-group"
+                  >
+                    <input
+                      aria-label="Delivery Date"
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <i
+                          aria-hidden={true}
+                          className="sap-icon--appointment-2"
+                          role="img"
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 18"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            Notebook Basic 18
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1002"
+            name="Notebook Basic 18"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            13
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span
+            className="fd-object-status fd-object-status--positive"
+          >
+            Available
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        aria-controls="fd-mocked-short-id"
+                        aria-expanded={false}
+                        aria-haspopup="listbox"
+                        aria-label="Supplier"
+                        className="fd-select"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="combobox"
+                        tabIndex={0}
+                      >
+                        <div
+                          className="fd-select__control"
+                        >
+                          <span
+                            aria-label={null}
+                            className="fd-select__text-content"
+                          >
+                            Printers for All
+                          </span>
+                          <span
+                            className="fd-button fd-button--transparent fd-select__button"
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--slim-arrow-down"
+                              role="img"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 18"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1002.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Heavy Weight"
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Categories"
+            className="fd-input"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            defaultValue="2017-01-07"
+            onChange={[Function]}
+          >
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control fd-input-group"
+                  >
+                    <input
+                      aria-label="Delivery Date"
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <i
+                          aria-hidden={true}
+                          className="sap-icon--appointment-2"
+                          role="img"
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row"
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 19"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            Notebook Basic 19
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1003"
+            name="Notebook Basic 19"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span>
+            15
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <span
+            className="fd-object-status fd-object-status--positive"
+          >
+            Available
+          </span>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  className="fd-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        aria-controls="fd-mocked-short-id"
+                        aria-expanded={false}
+                        aria-haspopup="listbox"
+                        aria-label="Supplier"
+                        className="fd-select"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="combobox"
+                        tabIndex={0}
+                      >
+                        <div
+                          className="fd-select__control"
+                        >
+                          <span
+                            aria-label={null}
+                            className="fd-select__text-content"
+                          >
+                            Technocom
+                          </span>
+                          <span
+                            className="fd-button fd-button--transparent fd-select__button"
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--slim-arrow-down"
+                              role="img"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 19"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Heavy Weight"
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <input
+            aria-label="Categories"
+            className="fd-input"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--focusable"
+        >
+          <div
+            defaultValue="2017-04-09"
+            onChange={[Function]}
+          >
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="true"
+                    className="fd-input-group--control fd-input-group"
+                  >
+                    <input
+                      aria-label="Delivery Date"
+                      className="fd-input fd-input-group__input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="MM/DD/YYYY"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      className="fd-input-group__addon fd-input-group__addon--button"
+                    >
+                      <button
+                        aria-label="Choose date"
+                        className="fd-button fd-button--transparent fd-input-group__button"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <i
+                          aria-hidden={true}
+                          className="sap-icon--appointment-2"
+                          role="img"
+                        />
+                      </button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Storyshots Component API/Table Primary 1`] = `
 <div
   dir="ltr"
 >
   <table
+    aria-describedby="mocked-short-id"
     className="fd-table"
+    role="grid"
   >
+    <caption
+      aria-live="polite"
+      className="fd-table__caption"
+      id="mocked-short-id"
+    >
+      
+    </caption>
     <thead
       className="fd-table__header"
     >
@@ -96,8 +1295,17 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
   dir="ltr"
 >
   <table
+    aria-describedby="mocked-short-id"
     className="fd-table"
+    role="grid"
   >
+    <caption
+      aria-live="polite"
+      className="fd-table__caption"
+      id="mocked-short-id"
+    >
+      
+    </caption>
     <thead
       className="fd-table__header"
     >
