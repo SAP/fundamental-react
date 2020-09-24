@@ -1,5 +1,6 @@
 # Fundamental React
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/fundamental-react)](https://api.reuse.software/info/github.com/SAP/fundamental-react)
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
 [![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)	
 [![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
@@ -101,11 +102,6 @@ If you encounter an issue or want to request a feature, you can [create an issue
 ## Contributing
 
 If you want to contribute, please check the [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/master/.github/CONTRIBUTING.md). Also see our [Developer Guide to Getting Started](https://github.com/SAP/fundamental-react/wiki/Developer-Guide).
-
-## License
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This library is licensed under the Apache Software License, v. 2 except as noted otherwise in the [License File](https://github.com/SAP/fundamental-react/blob/master/LICENSE.txt).
 
 ## Similar Projects
 

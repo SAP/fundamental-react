@@ -57,6 +57,21 @@ export const readOnly = () => (
         searchList={searchData} />
 );
 
+
+
+export const substringSearch = () => (
+    <SearchInput
+        placeholder='search substring'
+        searchList={[
+            { text: 'who is a supplier user?' },
+            { text: 'who is a buyer user?' },
+            { text: 'who is a worker user?' },
+            { text: 'how to change the pin?' },
+            { text: 'how to set the pin?' }
+        ]}
+        subStringSearch />
+);
+
 export const validationStates = () => (
     <>
         <SearchInput
