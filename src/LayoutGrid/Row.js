@@ -1,9 +1,12 @@
 /* eslint-disable no-console */
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { calculateSpan, getNodeSpan, hasSpan, mapSize } from './_layoutGridUtils';
-import 'fundamental-styles/dist/layout-grid.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/layout-grid.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const Row = React.forwardRef(({ children, className, ...props }, ref) => {
 

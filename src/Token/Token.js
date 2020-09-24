@@ -1,8 +1,15 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/token.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import tokenStyles from 'fundamental-styles/dist/token.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...tokenStyles
+});
 
 /** A **Token** is used to represent contextual information. It can be useful to show
 applied filters, selected values for a form field or object metadata. */
@@ -32,10 +39,10 @@ const Token = React.forwardRef(({
             ref={ref}
             role='button'
             tabIndex='0'>
-            <span className='fd-token__text'>{children}</span>
+            <span className={classnames('fd-token__text')}>{children}</span>
             <button
                 aria-label={buttonLabel}
-                className='fd-token__close'
+                className={classnames('fd-token__close')}
                 onClick={onClick}
                 tabIndex='-1' />
         </span>

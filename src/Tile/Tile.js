@@ -1,10 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TileContent from './_TileContent';
 import TileFooter from './_TileFooter';
 import TileHeader from './_TileHeader';
-import 'fundamental-styles/dist/tile.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/tile.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Tile** can be used to represent an app similar to the SAP Fiori launchpad home page.
  * They can display different types of content, which are based on the data supplied by the app.

@@ -1,12 +1,14 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import requiredIf from 'react-required-if';
 import Title from '../Title/Title';
-import 'fundamental-styles/dist/action-bar.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/action-bar.css';
 
+const classnames = classnamesBind.bind(styles);
 /**
  * The **Action Bar** is located at the top of the page and is used for page title
  * and main actions for the page.
@@ -71,7 +73,7 @@ const ActionBar = React.forwardRef(({
                         onClick={onBackClick}
                         option='transparent' />
                 </div>)}
-                <div className='fd-action-bar__title'>
+                <div className={classnames('fd-action-bar__title')}>
                     <Title
                         {...titleProps}
                         level={headingLevel}

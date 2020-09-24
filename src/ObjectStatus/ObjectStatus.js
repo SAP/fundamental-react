@@ -1,10 +1,17 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { OBJECT_STATUS_SIZES, OBJECT_STATUS_TYPES } from '../utils/constants';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/object-status.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import objectStatus from 'fundamental-styles/dist/object-status.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...objectStatus
+});
 
 /** *Object Status* is a short text that represents the semantic status of an object. It has a semantic color and an optional icon.
  * Typically, the object status is used in the dynamic page header and as a status attribute of a line item in a table. */

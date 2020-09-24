@@ -1,10 +1,17 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/info-label.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import infoLabelStyles from 'fundamental-styles/dist/info-label.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...infoLabelStyles
+});
 
 /** An **InfoLabel** is a small non-interactive numeric or text-based control.
  * Its primary use is to add user-defined characteristic to an object. */

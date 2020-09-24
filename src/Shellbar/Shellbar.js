@@ -1,6 +1,6 @@
 import Avatar from '../Avatar/Avatar';
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import Counter from '../Counter/Counter';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
@@ -9,9 +9,15 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/shellbar.css';
-import 'fundamental-styles/dist/product-switch.css';
+// eslint-disable-next-line sort-imports
+import shellbarStyles from 'fundamental-styles/dist/shellbar.css';
+// eslint-disable-next-line sort-imports
+import productSwitchStyles from 'fundamental-styles/dist/product-switch.css';
 
+const classnames = classnamesBind.bind({
+    ...shellbarStyles,
+    ...productSwitchStyles
+});
 /** The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes
 support for branding, product navigation, search, notifications, user settings, and CoPilot. This is
 a composite component comprised of mandatory and optional elements. Before getting started, here are
@@ -172,7 +178,7 @@ class Shellbar extends Component {
                                 <Button
                                     className='fd-shellbar__button--menu fd-button--menu'
                                     glyph='megamenu'
-                                    iconProps={{ className: 'fd-shellbar__button--icon' }}
+                                    iconProps={{ className: classnames('fd-shellbar__button--icon') }}
                                     option='transparent'
                                     textClassName='fd-shellbar__title'>
                                     {productTitle}

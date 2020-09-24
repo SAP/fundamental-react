@@ -1,7 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/table.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/table.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
 const Table = React.forwardRef(({ headers, tableData, className, tableBodyClassName,

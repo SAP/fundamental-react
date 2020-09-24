@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import Checkbox from '../Forms/Checkbox';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
@@ -13,7 +13,24 @@ import requiredIf from 'react-required-if';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/tokenizer.css';
+// eslint-disable-next-line sort-imports
+import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
+// eslint-disable-next-line sort-imports
+import checkboxStyles from 'fundamental-styles/dist/checkbox.css';
+// eslint-disable-next-line sort-imports
+import listStyles from 'fundamental-styles/dist/list.css';
+// eslint-disable-next-line sort-imports
+import tokenizerStyles from 'fundamental-styles/dist/tokenizer.css';
+// eslint-disable-next-line sort-imports
+import tokenStyles from 'fundamental-styles/dist/token.css';
+
+const classnames = classnamesBind.bind({
+    ...inputGroupStyles,
+    ...checkboxStyles,
+    ...listStyles,
+    ...tokenizerStyles,
+    ...tokenStyles
+});
 
 /** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
  * and a dropdown menu with a list of the available options.
@@ -37,13 +54,13 @@ class MultiInput extends Component {
             <List.Item key={index}>
                 <Checkbox
                     checked={this.isChecked(item)}
-                    className='fd-list__input'
+                    className={classnames('fd-list__input')}
                     compact={this.props.compact}
                     id={index + `_${this.multiInputId}`}
-                    labelClassName='fd-list__label'
+                    labelclassName={classnames('fd-list__label')}
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
-                    <List.Text className='fd-checkbox__text'>{item}</List.Text>
+                    <List.Text className={classnames('fd-checkbox__text')}>{item}</List.Text>
                 </Checkbox>
             </List.Item>
         ));
@@ -69,7 +86,7 @@ class MultiInput extends Component {
                 );
             } else if (index >= this.state.tags.length - 1) {
                 return (
-                    <span className='fd-tokenizer__indicator'>{this.state.tags.length - 3} more</span>
+                    <span className={classnames('fd-tokenizer__indicator')}>{this.state.tags.length - 3} more</span>
                 );
             } else {
                 return null;
@@ -202,11 +219,11 @@ class MultiInput extends Component {
                 validationOverlayProps={validationOverlayProps}
                 validationState={this.state.bShowList ? null : validationState}>
                 <div {...tagProps} className={tokenizerClassName}>
-                    <div className='fd-tokenizer__inner'>
+                    <div className={classnames('fd-tokenizer__inner')}>
                         {this.state.tags.length > 0 && this.createTags()}
                         <FormInput
                             {...inputProps}
-                            className='fd-input-group__input fd-tokenizer__input'
+                            className={classnames('fd-input-group__input', 'fd-tokenizer__input')}
                             compact={compact}
                             disabled={disabled}
                             placeholder={placeholder} />

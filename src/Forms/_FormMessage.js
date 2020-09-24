@@ -1,8 +1,16 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/form-message.css';
+// eslint-disable-next-line sort-imports
+import listStyles from 'fundamental-styles/dist/list.css';
+// eslint-disable-next-line sort-imports
+import formMessageStyles from 'fundamental-styles/dist/form-message.css';
+
+const classnames = classnamesBind.bind({
+    ...listStyles,
+    ...formMessageStyles
+});
 
 const FormMessage = React.forwardRef(({ children, className, forPopoverList, type, ...props }, ref) => {
 

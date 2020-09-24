@@ -1,7 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/form-item.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/form-item.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className, ...props }, ref) => {
 

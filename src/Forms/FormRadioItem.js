@@ -1,11 +1,14 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
-import 'fundamental-styles/dist/radio.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/radio.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const FormRadioItem = React.forwardRef(({
     checked,
@@ -51,7 +54,7 @@ const FormRadioItem = React.forwardRef(({
                 value={value} />
             <FormLabel
                 {...labelProps}
-                className='fd-radio__label'
+                className={classnames('fd-radio__label')}
                 disabled={disabled}
                 htmlFor={radioId}>
                 {children}

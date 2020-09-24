@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from '../Forms/_FormMessage';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
@@ -8,10 +8,21 @@ import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/button.css';
-import 'fundamental-styles/dist/select.css';
+// eslint-disable-next-line sort-imports
+import listStyles from 'fundamental-styles/dist/list.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import buttonStyles from 'fundamental-styles/dist/button.css';
+// eslint-disable-next-line sort-imports
+import selectStyles from 'fundamental-styles/dist/select.css';
 
+const classnames = classnamesBind.bind({
+    ...listStyles,
+    ...iconStyles,
+    ...buttonStyles,
+    ...selectStyles
+});
 
 /** A **Select** component lets the user select one of the different options.
 It is more flexible than the normal Select. Use with the **List** component. */

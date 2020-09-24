@@ -1,10 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/input-group.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/input-group.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** An **InputGroup** includes form inputs with add-ons that allow the user to
 better understand the information being entered. */

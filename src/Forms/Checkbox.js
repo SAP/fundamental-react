@@ -1,5 +1,5 @@
 /* eslint-disable valid-jsdoc */
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
@@ -7,7 +7,10 @@ import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useEffect, useRef, useState } from 'react';
-import 'fundamental-styles/dist/checkbox.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/checkbox.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** With a **Checkbox**, all options are visible and the user can make one or more selections.
 This component can also be disabled and displayed in a row */

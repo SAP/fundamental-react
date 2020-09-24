@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
@@ -12,8 +12,18 @@ import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
 import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/dialog.css';
-import 'fundamental-styles/dist/bar.css';
+// eslint-disable-next-line sort-imports
+import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
+// eslint-disable-next-line sort-imports
+import dialogStyles from 'fundamental-styles/dist/dialog.css';
+// eslint-disable-next-line sort-imports
+import barStyles from 'fundamental-styles/dist/bar.css';
+
+const classnames = classnamesBind.bind({
+    ...inputGroupStyles,
+    ...dialogStyles,
+    ...barStyles
+});
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
@@ -480,10 +490,10 @@ class DatePicker extends Component {
                                 weekdayStart={weekdayStart} />
                             { this.showTodayFooter() &&
                                 <div className={datepickerFooterClassName}>
-                                    <div className='fd-bar__right'>
-                                        <div className='fd-bar__element'>
+                                    <div className={classnames('fd-bar__right')}>
+                                        <div className={classnames('fd-bar__element')}>
                                             <Button
-                                                className='fd-dialog__decisive-button'
+                                                className={classnames('fd-dialog__decisive-button')}
                                                 compact={compact}
                                                 onClick={this.setTodayDate}>
                                                 {todayAction.label}

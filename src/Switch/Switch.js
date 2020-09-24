@@ -1,12 +1,19 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormLabel from '../Forms/FormLabel';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
 import React, { useCallback, useEffect, useState } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/switch.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import switchStyles from 'fundamental-styles/dist/switch.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...switchStyles
+});
 
 /** A **Switch** component is used to activate or deactivate an element. It uses a visual metaphor that is known
 to the user with visible differences between on and off state. It is recommended to always display the
@@ -62,7 +69,7 @@ const Switch = React.forwardRef(({
     let internalLabelDisplay;
     if (internalLabels && showInternalLabels) {
         const internalLabelText = isChecked ? internalLabels.checked.text : internalLabels.unchecked.text;
-        internalLabelDisplay = <span aria-live='polite' className='fd-switch__text'>{internalLabelText}</span>;
+        internalLabelDisplay = <span aria-live='polite' className={classnames('fd-switch__text')}>{internalLabelText}</span>;
     }
 
     return (
@@ -74,7 +81,7 @@ const Switch = React.forwardRef(({
                 onKeyDown={onKeyDownSwitch}>
                 {children}
             </FormLabel>
-            <label className='fd-switch__label'>
+            <label className={classnames('fd-switch__label')}>
                 {internalLabelDisplay}
                 <span className={spanClasses}>
                     <input
@@ -82,27 +89,27 @@ const Switch = React.forwardRef(({
                         aria-checked={isChecked}
                         aria-label={localizedText.switchLabel}
                         checked={isChecked}
-                        className='fd-switch__input'
+                        className={classnames('fd-switch__input')}
                         disabled={disabled}
                         id={id}
                         onChange={handleChange}
                         ref={ref}
                         type='checkbox' />
-                    <div className='fd-switch__wrapper'>
-                        <div className='fd-switch__track'>
+                    <div className={classnames('fd-switch__wrapper')}>
+                        <div className={classnames('fd-switch__track')}>
                             {internalLabels ? (
                                 <>
                                     <SwitchItem
                                         glyph={internalLabels.checked.glyph}
                                         text={internalLabels.checked.text}
                                         type='on' />
-                                    <span className='fd-switch__handle' role='presentation' />
+                                    <span className={classnames('fd-switch__handle')} role='presentation' />
                                     <SwitchItem
                                         glyph={internalLabels.unchecked.glyph}
                                         text={internalLabels.unchecked.text}
                                         type='off' />
                                 </>
-                            ) : (<span className='fd-switch__handle' role='presentation' />)
+                            ) : (<span className={classnames('fd-switch__handle')} role='presentation' />)
                             }
                         </div>
                     </div>

@@ -1,10 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
-import 'fundamental-styles/dist/button.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/button.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Button** allows users to perform an action. The priority of buttons within a page should be considered.
 For instance, only use the main button once within a page or dialog. Color is also important. For
@@ -75,7 +78,7 @@ const Button = React.forwardRef(({
             content = (
                 <p
                     aria-live='assertive'
-                    className={'fd-button__instructions'}
+                    className={classnames('fd-button__instructions')}
                     id={ariaLiveId}>
                     {liveMessageForScreenReaders}
                 </p>)

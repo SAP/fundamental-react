@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
@@ -7,7 +7,10 @@ import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
-import 'fundamental-styles/dist/step-input.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/step-input.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** The **StepInput** allows the user to change the input values in predefined increments (steps).
 
@@ -105,7 +108,7 @@ const StepInput = React.forwardRef(({
             {...rest}>
             <Button
                 aria-label={localizedText.stepDownLabel}
-                className='fd-step-input__button'
+                className={classnames('fd-step-input__button')}
                 compact={compact}
                 disabled={disabled}
                 glyph='less'
@@ -113,14 +116,14 @@ const StepInput = React.forwardRef(({
                 option='transparent'
                 tabIndex='-1' />
             <FormInput
-                className='fd-input--no-number-spinner fd-step-input__input'
+                className={classnames('fd-input--no-number-spinner', 'fd-step-input__input')}
                 disabled={disabled}
                 onChange={onChangeInputValue}
                 placeholder={placeholder}
                 value={inputValue} />
             <Button
                 aria-label={localizedText.stepUpLabel}
-                className='fd-step-input__button'
+                className={classnames('fd-step-input__button')}
                 compact={compact}
                 disabled={disabled}
                 glyph='add'

@@ -1,7 +1,11 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/time.css';
+
+const classnames = classnamesBind.bind(styles);
 
 class TimeItem extends Component {
     constructor(props) {
@@ -167,11 +171,11 @@ class TimeItem extends Component {
             return this.CLOCK.map((amPmValue, index) => (
                 <li
                     {...inputProps}
-                    className='fd-time__item'
+                    className={classnames('fd-time__item')}
                     key={index}
                     onClick={() => this.onClick(index)}>
-                    {index === 0 && <div className='fd-time__current-indicator' />}
-                    <span className='fd-time__unit'>{amPmValue}</span>
+                    {index === 0 && <div className={classnames('fd-time__current-indicator')} />}
+                    <span className={classnames('fd-time__unit')}>{amPmValue}</span>
                 </li>
             ));
         }
@@ -231,11 +235,11 @@ class TimeItem extends Component {
         return values.map((timeValue, i) => (
             <li
                 {...inputProps}
-                className='fd-time__item'
+                className={classnames('fd-time__item')}
                 key={i}
                 onClick={disabled ? null : () => this.onClick(timeValue)}>
-                {i === 0 && <div className='fd-time__current-indicator' />}
-                <span className='fd-time__unit'>{this.getDisplayValue(timeValue)}</span>
+                {i === 0 && <div className={classnames('fd-time__current-indicator')} />}
+                <span className={classnames('fd-time__unit')}>{this.getDisplayValue(timeValue)}</span>
             </li>
         ));
     }
@@ -265,10 +269,10 @@ class TimeItem extends Component {
                 <div className={wrapperClasses}>
                     {!isActive ? (
                         <span
-                            className='fd-time__item fd-time__item--collapsed'
+                            className={classnames('fd-time__item', 'fd-time__item--collapsed')}
                             onClick={name === 'meridiem' ? this.props.onCollapsedClick : null}>{this.getDisplayValue(value)}</span>
                     ) : (
-                        <ul className='fd-time__list'>
+                        <ul className={classnames('fd-time__list')}>
                             {this.generateValues()}
                         </ul>
                     )}

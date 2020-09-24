@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import FocusManager from '../utils/focusManager/focusManager';
 import FormInput from '../Forms/FormInput';
 import FormItem from '../Forms/FormItem';
@@ -14,6 +14,10 @@ import requiredIf from 'react-required-if';
 import tabbable from 'tabbable';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
+// eslint-disable-next-line sort-imports
+import inputGroupstyles from 'fundamental-styles/dist/input-group.css';
+
+const classnames = classnamesBind.bind(inputGroupstyles);
 
 /** A **ComboboxInput** allows users to select an item from a predefined list.
 It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.
@@ -498,7 +502,7 @@ const ComboboxInput = React.forwardRef(({
                         }
                         <List
                             {...labelProps}
-                            className='fd-list--dropdown'
+                            className={classnames('fd-list--dropdown')}
                             compact={compact}
                             id={`${id}-listbox`}
                             noBorder
@@ -538,7 +542,7 @@ const ComboboxInput = React.forwardRef(({
                 disabled={disabled}
                 noArrow
                 onClickOutside={handlePopoverOutsideClick}
-                popperClassName='fd-popover__body--dropdown'
+                popperClassName={classnames('fd-popover__body--dropdown')}
                 ref={popoverRef}
                 show={showPopover}
                 useArrowKeyNavigation

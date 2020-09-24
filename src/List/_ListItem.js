@@ -1,7 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import ListSelection from './_ListSelection';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const ListItem = ({
     action,
@@ -37,7 +41,7 @@ const ListItem = ({
 
     if (hasByline) {
         content = (
-            <div className='fd-list__content'>
+            <div className={classnames('fd-list__content')}>
                 {children}
             </div>
         );
@@ -61,7 +65,7 @@ const ListItem = ({
     } else if (action) {
         content = (
             <button {...buttonProps}
-                className='fd-list__title'
+                className={classnames('fd-list__title')}
                 onClick={handleClick}>
                 {children}
             </button>

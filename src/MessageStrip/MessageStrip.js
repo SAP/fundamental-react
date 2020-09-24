@@ -1,14 +1,20 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Link from '../Link/Link';
 import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/message-strip.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import messageStripStyles from 'fundamental-styles/dist/message-strip.css';
 
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...messageStripStyles
+});
 
 /** A **MessageStrip** provides a message within the application that is
  * color-coded to emphasize the level of urgency. */
@@ -64,13 +70,13 @@ const MessageStrip = (props) => {
                             {...buttonProps}
                             aria-controls={alertId}
                             aria-label={localizedText.close}
-                            className='fd-message-strip__close'
+                            className={classnames('fd-message-strip__close')}
                             compact
                             glyph='decline'
                             onClick={closeMessageStripHandler}
                             option='transparent' />
                     )}
-                    <p className='fd-message-strip__text'>
+                    <p className={classnames('fd-message-strip__text')}>
                         {children}
                         {link && (
                             <Link

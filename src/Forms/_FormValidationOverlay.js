@@ -1,9 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from './_FormMessage';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/popover.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const FormValidationOverlay = React.forwardRef((
     {

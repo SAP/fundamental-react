@@ -1,8 +1,12 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Title from '../Title/Title';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/layout-panel.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const LayoutPanelHead = props => {
     const { title, description, className, headingLevel, headingStyle, ...rest } = props;

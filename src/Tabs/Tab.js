@@ -1,7 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/tabs.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/tabs.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
     tabContentProps, linkProps, index, className, ...props }, ref) => {
@@ -33,7 +36,7 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
                 href={`#${id}`}
                 onClick={(event) => onClick(event, index)}
                 role='tab'>
-                <span className='fd-tabs__tag'>{title}</span>
+                <span className={classnames('fd-tabs__tag')}>{title}</span>
             </a>
         </li>
     );

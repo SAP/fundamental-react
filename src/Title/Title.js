@@ -1,8 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/title.css';
+// eslint-disable-next-line sort-imports
+import styles from 'fundamental-styles/dist/title.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** Use an **Title** component to display a title or heading. Note that only one H1 should appear on a page, and headings should only appear in ascending order without skipping a level; i.e. even if there are only 3 levels on a page, the order must be H1-H2-H3, and no other levels used. */
 const Title = React.forwardRef(({ className, children, level, levelStyle, wrap, ...props }, ref) => {
