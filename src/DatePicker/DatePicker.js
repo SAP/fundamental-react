@@ -14,6 +14,7 @@ import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/con
 import React, { Component } from 'react';
 import 'fundamental-styles/dist/dialog.css';
 import 'fundamental-styles/dist/bar.css';
+import 'fundamental-styles/dist/list.css';
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
