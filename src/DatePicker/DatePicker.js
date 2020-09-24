@@ -13,6 +13,8 @@ import { validDateLookup } from './_validDateLookup';
 import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 // eslint-disable-next-line sort-imports
+import listStyles from 'fundamental-styles/dist/list.css';
+// eslint-disable-next-line sort-imports
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
 // eslint-disable-next-line sort-imports
 import dialogStyles from 'fundamental-styles/dist/dialog.css';
@@ -20,6 +22,7 @@ import dialogStyles from 'fundamental-styles/dist/dialog.css';
 import barStyles from 'fundamental-styles/dist/bar.css';
 
 const classnames = classnamesBind.bind({
+    ...listStyles,
     ...inputGroupStyles,
     ...dialogStyles,
     ...barStyles
