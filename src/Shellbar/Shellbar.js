@@ -105,6 +105,7 @@ class Shellbar extends Component {
             subtitle,
             copilot,
             searchInput,
+            size,
             actions,
             notifications,
             productSwitch,
@@ -117,11 +118,14 @@ class Shellbar extends Component {
 
         const shellbarClasses = classnames(
             'fd-shellbar',
-            className
+            className,
+            {
+                [`fd-shellbar--${size}`]: size
+            },
         );
 
         return (
-            <div className={shellbarClasses}>
+            <div className={shellbarClasses} >
                 <div className='fd-shellbar__group fd-shellbar__group--product'>
                     {backAction && <Button
                         aria-label={localizedText.backButtonLabel}
@@ -344,7 +348,8 @@ class Shellbar extends Component {
                                 control={
                                     <div className='fd-shellbar-collapse--control' role='button'>
                                         <Button className='fd-shellbar__button'
-                                            glyph='overflow'>
+                                            glyph='overflow'
+                                            iconBeforeText>
                                             <Counter
                                                 aria-label={localizedText.counterLabel}
                                                 notification> {this.state.totalNotifications > 0 && this.state.totalNotifications} </Counter>
@@ -514,6 +519,8 @@ Shellbar.propTypes = {
     profileMenu: PropTypes.array,
     /** Holds `searchInput` [properties](?id=component-api-searchinput--compact&viewMode=docs#properties) */
     searchInput: PropTypes.object,
+    /** Provides a size modifier for product actions only visible on small shellbar `s`, or product actions only visible on desktop screens `m`/`l`/`xl`. */
+    size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
     /** Displays an application context. Should be used rarely */
     subtitle: PropTypes.string
 };
@@ -523,7 +530,8 @@ Shellbar.defaultProps = {
         backButtonLabel: 'Back button',
         counterLabel: 'Unread count',
         notificationsButton: 'Notifications'
-    }
+    },
+    size: 'l'
 };
 
 export default Shellbar;
