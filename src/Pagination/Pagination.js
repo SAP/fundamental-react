@@ -4,14 +4,9 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 // eslint-disable-next-line sort-imports
-import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
-import paginationStyles from 'fundamental-styles/dist/pagination.css';
+import styles from 'fundamental-styles/dist/pagination.css';
 
-const classnames = classnamesBind.bind({
-    ...iconStyles,
-    ...paginationStyles
-});
+const classnames = classnamesBind.bind(styles);
 
 /** **Pagination** is commonly used for tables and tiles. It allows
 users to see how many pages of content exist, to navigate and

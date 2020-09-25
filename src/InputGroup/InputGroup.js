@@ -38,7 +38,8 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': !child.props.className?.includes('fd-tokenizer')
+                'fd-input-group__input': !child.props.className?.includes('fd-tokenizer'),
+                'fd-textarea': child.type?.displayName === 'FormTextarea'
             },
             child.props.className
         );

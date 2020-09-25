@@ -10,14 +10,24 @@ import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
 // eslint-disable-next-line sort-imports
+import buttonStyles from 'fundamental-styles/dist/button.css';
+// eslint-disable-next-line sort-imports
+import menuStyles from 'fundamental-styles/dist/menu.css';
+// eslint-disable-next-line sort-imports
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
 import shellbarStyles from 'fundamental-styles/dist/shellbar.css';
 // eslint-disable-next-line sort-imports
 import productSwitchStyles from 'fundamental-styles/dist/product-switch.css';
 
 const classnames = classnamesBind.bind({
-    ...shellbarStyles,
-    ...productSwitchStyles
+    ...menuStyles,
+    ...iconStyles,
+    ...productSwitchStyles,
+    ...shellbarStyles
 });
+
+const buttonClassnames = classnamesBind.bind(buttonStyles);
 /** The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes
 support for branding, product navigation, search, notifications, user settings, and CoPilot. This is
 a composite component comprised of mandatory and optional elements. Before getting started, here are
@@ -132,21 +142,21 @@ class Shellbar extends Component {
 
         return (
             <div className={shellbarClasses} >
-                <div className='fd-shellbar__group fd-shellbar__group--product'>
+                <div className={classnames('fd-shellbar__group', 'fd-shellbar__group--product')}>
                     {backAction && <Button
                         aria-label={localizedText.backButtonLabel}
-                        className='fd-shellbar__button'
+                        className={classnames('fd-shellbar__button', 'fd-button')}
                         glyph='nav-back'
                         onClick={backAction}
                         option='transparent' />
                     }
-                    {logo && <span className='fd-shellbar__logo'>{logo}</span>}
+                    {logo && <span className={classnames('fd-shellbar__logo')}>{logo}</span>}
                     {logoSAP && (
-                        <span className='fd-shellbar__logo'>
+                        <span className={classnames('fd-shellbar__logo')}>
                             <img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />
                         </span>
                     )}
-                    {productTitle && !productMenu && <span className='fd-shellbar__title'>{productTitle}</span>}
+                    {productTitle && !productMenu && <span className={classnames('fd-shellbar__title')}>{productTitle}</span>}
                     {productMenu && (
                         <Popover
                             body={
@@ -176,21 +186,21 @@ class Shellbar extends Component {
                             }
                             control={
                                 <Button
-                                    className='fd-shellbar__button--menu fd-button--menu'
+                                    className={classnames('fd-shellbar__button--menu', 'fd-button--menu', 'fd-button')}
                                     glyph='megamenu'
                                     iconProps={{ className: classnames('fd-shellbar__button--icon') }}
                                     option='transparent'
-                                    textClassName='fd-shellbar__title'>
+                                    textClassName={classnames('fd-shellbar__title')}>
                                     {productTitle}
                                 </Button>
                             }
                             noArrow
                             popperProps={{ id: 'fd-shellbar-product-popover' }} />
                     )}
-                    {subtitle && <div className='fd-shellbar__subtitle'>{subtitle}</div>}
+                    {subtitle && <div className={classnames('fd-shellbar__subtitle')}>{subtitle}</div>}
                 </div>
                 {copilot ? (
-                    <div className='fd-shellbar__group fd-shellbar__group--copilot'>
+                    <div className={classnames('fd-shellbar__group', 'fd-shellbar__group--copilot')}>
                         <img
                             alt='CoPilot'
                             height='30'
@@ -198,15 +208,15 @@ class Shellbar extends Component {
                             width='30' />
                     </div>
                 ) : null}
-                <div className='fd-shellbar__group fd-shellbar__group--actions'>
+                <div className={classnames('fd-shellbar__group', 'fd-shellbar__group--actions')}>
                     {searchInput && (
-                        <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                        <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
                             <SearchInput
-                                className='fd-shellbar__input-group'
+                                className={classnames('fd-shellbar__input-group')}
                                 inShellbar
-                                inputGroupAddonProps={{ className: 'fd-shellbar__input-group__addon' }}
-                                inputGroupProps={{ className: 'fd-shellbar__input-group' }}
-                                inputProps={{ className: 'fd-shellbar__input-group__input' }}
+                                inputGroupAddonProps={{ className: classnames('fd-shellbar__input-group__addon') }}
+                                inputGroupProps={{ className: classnames('fd-shellbar__input-group') }}
+                                inputProps={{ className: classnames('fd-shellbar__input-group__input') }}
                                 onEnter={searchInput.onSearch}
                                 placeholder={searchInput.placeholder}
                                 popoverProps={{
@@ -214,27 +224,27 @@ class Shellbar extends Component {
                                     disableEdgeDetection: searchInput?.popoverProps?.disableEdgeDetection || true,
                                     ...searchInput.popoverProps
                                 }}
-                                searchBtnProps={{ className: 'fd-shellbar__button' }}
+                                searchBtnProps={{ className: classnames('fd-button', 'fd-shellbar__button') }}
                                 searchList={searchInput.searchList} />
                         </div>
                     )}
                     {actions &&
                             actions.map((action, index) => {
                                 return (
-                                    <div className='fd-shellbar__action fd-shellbar__action--desktop' key={index}>
+                                    <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')} key={index}>
                                         {action.menu ? (
                                             <Popover
                                                 body={action.menu}
                                                 control={
                                                     <Button
                                                         aria-label={action.label}
-                                                        className='fd-shellbar__button'
+                                                        className={classnames('fd-button', 'fd-shellbar__button')}
                                                         glyph={action.glyph}
                                                         iconBeforeText>
                                                         {action.notificationCount > 0 && (
                                                             <Counter
                                                                 aria-label={localizedText.counterLabel}
-                                                                className='fd-shellbar__counter--notification'
+                                                                className={classnames('fd-shellbar__counter--notification')}
                                                                 notification>
                                                                 {action.notificationCount}
                                                             </Counter>
@@ -246,7 +256,7 @@ class Shellbar extends Component {
                                         ) : (
                                             <Button
                                                 aria-label={action.label}
-                                                className='fd-shellbar__button'
+                                                className={classnames('fd-button', 'fd-shellbar__button')}
                                                 glyph={action.glyph}
                                                 iconBeforeText
                                                 key={index}
@@ -271,10 +281,10 @@ class Shellbar extends Component {
                                         ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
                                 }
                                 control={
-                                    <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                                    <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
                                         <Button
                                             aria-label={localizedText.notificationsButton}
-                                            className='fd-shellbar__button'
+                                            className={classnames('fd-button', 'fd-shellbar__button')}
                                             glyph='bell'
                                             iconBeforeText>
                                             {notifications.notificationCount > 0 && (
@@ -290,10 +300,10 @@ class Shellbar extends Component {
                                 placement='bottom-end'
                                 popperProps={{ id: 'fd-shellbar-notifications-popover' }} />
                         ) : (
-                            <div className='fd-shellbar__action fd-shellbar__action--desktop'>
+                            <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
                                 <Button
                                     aria-label={localizedText.notificationsButton}
-                                    className='fd-shellbar__button'
+                                    className={classnames('fd-button', 'fd-shellbar__button')}
                                     glyph='bell'
                                     iconBeforeText
                                     onClick={notifications.callback}>
@@ -309,7 +319,7 @@ class Shellbar extends Component {
                         )
                     )}
                     {
-                        (actions || searchInput || notifications) && <div className='fd-shellbar__action fd-shellbar__action--mobile'>
+                        (actions || searchInput || notifications) && <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--mobile')}>
                             <Popover
                                 body={
                                     <Menu>
@@ -333,7 +343,7 @@ class Shellbar extends Component {
                                             <Menu.List>
                                                 <Menu.Item>
                                                     <span
-                                                        className='fd-menu sap-icon--nav-back'
+                                                        className={classnames('fd-menu', 'sap-icon--nav-back')}
                                                         onClick={this.backBtnHandler} />
                                                 </Menu.Item>
                                                 {productSwitchList.map((item, index) => {
@@ -352,8 +362,8 @@ class Shellbar extends Component {
                                     </Menu>
                                 }
                                 control={
-                                    <div className='fd-shellbar-collapse--control' role='button'>
-                                        <Button className='fd-shellbar__button'
+                                    <div className={classnames('fd-shellbar-collapse--control')} role='button'>
+                                        <Button className={classnames('fd-button', 'fd-shellbar__button')}
                                             glyph='overflow'
                                             iconBeforeText>
                                             <Counter
@@ -367,8 +377,8 @@ class Shellbar extends Component {
                         </div>
                     }
                     {profile && (
-                        <div className='fd-shellbar__action fd-shellbar__action--show-always'>
-                            <div className='fd-user-menu'>
+                        <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--show-always')}>
+                            <div className={classnames('fd-user-menu')}>
                                 <Popover
                                     body={
                                         profileMenu && (
@@ -399,17 +409,17 @@ class Shellbar extends Component {
                                         )
                                     }
                                     control={
-                                        <button className='fd-button fd-shellbar__button fd-shellbar__button--user-menu'>
+                                        <button className={classnames('fd-button', 'fd-shellbar__button', 'fd-shellbar__button--user-menu', buttonClassnames('fd-button'))}>
                                             {profile.image ? (
                                                 <Avatar
                                                     backgroundImageUrl={profile.image}
                                                     circle
-                                                    className='fd-shellbar__avatar--circle'
+                                                    className={classnames('fd-shellbar__avatar--circle')}
                                                     size='xs' />
                                             ) : (
                                                 <Avatar
                                                     circle
-                                                    className='fd-shellbar__avatar--circle'
+                                                    className={classnames('fd-shellbar__avatar--circle')}
                                                     color={profile.colorAccent}
                                                     size='xs'>
                                                     {profile.initials}
@@ -424,25 +434,25 @@ class Shellbar extends Component {
                         </div>
                     )}
                     {productSwitch && (
-                        <div className='fd-shellbar__action fd-shellbar__action--desktop'>
-                            <div className='fd-product-switch'>
+                        <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
+                            <div className={classnames('fd-product-switch')}>
                                 <Popover
                                     body={
-                                        <div className='fd-product-switch__body'>
-                                            <ul className='fd-product-switch__list'>
+                                        <div className={classnames('fd-product-switch__body')}>
+                                            <ul className={classnames('fd-product-switch__list')}>
                                                 {productSwitchList.map((item, index) => {
                                                     return (
                                                         <li
-                                                            className={`fd-product-switch__item ${item.selected ? 'selected' : ''}`}
+                                                            className={classnames('fd-product-switch__item', { selected: item.selected })}
                                                             key={index}
                                                             onClick={item.callback}>
-                                                            <div className={`fd-product-switch__icon sap-icon--${item.glyph}`} />
-                                                            <div className='fd-product-switch__text'>
-                                                                <div className='fd-product-switch__title'>
+                                                            <div className={classnames('fd-product-switch__icon', `sap-icon--${item.glyph}`)} />
+                                                            <div className={classnames('fd-product-switch__text')}>
+                                                                <div className={classnames('fd-product-switch__title')}>
                                                                     {item.title}
                                                                 </div>
                                                                 {item.subtitle &&
-                                                                    <div className='fd-product-switch__subtitle'>
+                                                                    <div className={classnames('fd-product-switch__subtitle')}>
                                                                         {item.subtitle}
                                                                     </div>
                                                                 }
@@ -455,7 +465,7 @@ class Shellbar extends Component {
                                     }
                                     control={<Button
                                         aria-label={productSwitch.label}
-                                        className='fd-product-switch__control fd-shellbar__button'
+                                        className={classnames('fd-button', 'fd-product-switch__control', 'fd-shellbar__button')}
                                         glyph='grid' />}
                                     disableEdgeDetection
                                     placement='bottom-end'

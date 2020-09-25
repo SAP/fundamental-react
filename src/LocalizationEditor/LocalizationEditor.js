@@ -8,11 +8,14 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 // eslint-disable-next-line sort-imports
+import menuStyles from 'fundamental-styles/dist/menu.css';
+// eslint-disable-next-line sort-imports
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
 // eslint-disable-next-line sort-imports
 import localizationEditorStyles from 'fundamental-styles/dist/localization-editor.css';
 
 const classnames = classnamesBind.bind({
+    ...menuStyles,
     ...inputGroupStyles,
     ...localizationEditorStyles
 });
@@ -27,6 +30,9 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
 
     const localizationInputClasses = classnames(
         'fd-input-group__input',
+        {
+            'fd-textarea': textarea
+        },
         inputClassName
     );
 

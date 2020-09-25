@@ -5,9 +5,14 @@ import React from 'react';
 import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
 // eslint-disable-next-line sort-imports
-import styles from 'fundamental-styles/dist/side-nav.css';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+// eslint-disable-next-line sort-imports
+import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
 
-const classnames = classnamesBind.bind(styles);
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...sideNavStyles
+});
 
 class SideNavListItem extends React.Component {
     constructor(props) {
@@ -59,7 +64,7 @@ class SideNavListItem extends React.Component {
                     {glyph ? (
                         <span
                             aria-hidden
-                            className={`fd-nested-list__icon sap-icon--${glyph}`} />
+                            className={classnames('fd-nested-list__icon', `sap-icon--${glyph}`)} />
                     ) : null}
                     <span className={classnames('fd-nested-list__title')}>
                         {name}
@@ -89,7 +94,7 @@ class SideNavListItem extends React.Component {
                             aria-expanded={this.state.expanded}
                             aria-haspopup='true'
                             aria-label={expandSubmenuLabel}
-                            className={classnames('fd-nested-list__button')}
+                            className={classnames('fd-button', 'fd-nested-list__button')}
                             onClick={() => {
                                 this.handleExpand();
                             }} />
@@ -112,7 +117,7 @@ class SideNavListItem extends React.Component {
                                 {glyph ? (
                                     <span
                                         aria-hidden
-                                        className={`fd-nested-list__icon sap-icon--${glyph}`} />
+                                        className={classnames('fd-nested-list__icon', `sap-icon--${glyph}`)} />
                                 ) : null}
                                 <span className={classnames('fd-nested-list__title')}>{child.props.children}</span>
                             </React.Fragment>),

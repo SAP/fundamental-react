@@ -12,10 +12,8 @@ import dialogStyles from 'fundamental-styles/dist/dialog.css';
 // eslint-disable-next-line sort-imports
 import barStyles from 'fundamental-styles/dist/bar.css';
 
-const classnames = classnamesBind.bind({
-    ...dialogStyles,
-    ...barStyles
-});
+const classnames = classnamesBind.bind(dialogStyles);
+const barClassnames = classnamesBind.bind(barStyles);
 
 /** A **Dialog** is a container generally displayed in response to an action. It is used for short forms,
  * confirmation messages or to display contextual information that does not require a page.\n\nTo
@@ -89,10 +87,13 @@ class Dialog extends Component {
         const headerClasses = classnames(
             'fd-dialog__header',
             'fd-bar',
-            {
-                'fd-bar--header-with-subheader': subheader
-            },
-            className
+            barClassnames(
+                'fd-bar',
+                {
+                    'fd-bar--header-with-subheader': subheader
+                }
+            ),
+            className,
         );
 
         if (!show) {
@@ -113,10 +114,10 @@ class Dialog extends Component {
                         className={contentClasses}
                         role='document'>
                         <div {...headerProps} className={headerClasses}>
-                            {header && (<div className={classnames('fd-bar__element')}>
+                            {header && (<div className={barClassnames('fd-bar__element')}>
                                 {header}
                             </div>)}
-                            <div className={classnames('fd-bar__element')}>
+                            <div className={barClassnames('fd-bar__element')}>
                                 <Title
                                     {...titleProps}
                                     level={headingLevel}
@@ -125,9 +126,9 @@ class Dialog extends Component {
                                 </Title>
                             </div>
                             {subheader && (
-                                <div className={classnames('fd-dialog__subheader', 'fd-bar', 'fd-bar--subheader')}>
-                                    <div className={classnames('fd-bar__left')}>
-                                        <div className={classnames('fd-bar__element')}>
+                                <div className={classnames('fd-dialog__subheader', 'fd-bar', barClassnames('fd-bar', 'fd-bar--subheader'))}>
+                                    <div className={barClassnames('fd-bar__left')}>
+                                        <div className={barClassnames('fd-bar__element')}>
                                             {subheader}
                                         </div>
                                     </div>
@@ -139,10 +140,10 @@ class Dialog extends Component {
                         </div>
                         <footer
                             {...footerProps}
-                            className={classnames('fd-dialog__footer', 'fd-bar', 'fd-bar--footer')}>
-                            <div className={classnames('fd-bar__right')}>
+                            className={classnames('fd-dialog__footer', 'fd-bar', barClassnames('fd-bar', 'fd-bar--footer'))}>
+                            <div className={barClassnames('fd-bar__right')}>
                                 {React.Children.toArray(actions).map((child, index) => (
-                                    <div className={classnames('fd-bar__element')} key={index}>
+                                    <div className={barClassnames('fd-bar__element')} key={index}>
                                         {React.cloneElement(child, { className: classnames('fd-dialog__decisive-button'), onClick: chain(this.handleCloseClick, child.props?.onClick) })}
                                     </div>
                                 ))}

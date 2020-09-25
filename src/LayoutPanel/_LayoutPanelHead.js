@@ -19,7 +19,7 @@ const LayoutPanelHead = props => {
     return (
         <div {...rest} className={panelHeadClasses}>
             {title ?
-                <div className='fd-layout-panel__title'>
+                <div className={classnames('fd-layout-panel__title')}>
                     <Title
                         level={headingLevel}
                         levelStyle={headingStyle}
@@ -27,7 +27,7 @@ const LayoutPanelHead = props => {
                         {title}
                     </Title>
                 </div> : null}
-            {description ? <p className='fd-layout-panel__description'>{description}</p> : null}
+            {description ? <p className={classnames('fd-layout-panel__description')}>{description}</p> : null}
         </div>
     );
 };

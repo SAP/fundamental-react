@@ -15,9 +15,17 @@ import tabbable from 'tabbable';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
 // eslint-disable-next-line sort-imports
-import inputGroupstyles from 'fundamental-styles/dist/input-group.css';
+import listStyles from 'fundamental-styles/dist/list.css';
+// eslint-disable-next-line sort-imports
+import popoverStyles from 'fundamental-styles/dist/popover.css';
+// eslint-disable-next-line sort-imports
+import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
 
-const classnames = classnamesBind.bind(inputGroupstyles);
+const classnames = classnamesBind.bind({
+    ...listStyles,
+    ...popoverStyles,
+    ...inputGroupStyles
+});
 
 /** A **ComboboxInput** allows users to select an item from a predefined list.
 It provides an editable input field for filtering the list, and a dropdown menu with a list of the available options.

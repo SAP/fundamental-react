@@ -11,15 +11,12 @@ import React, { useRef, useState } from 'react';
 // eslint-disable-next-line sort-imports
 import listStyles from 'fundamental-styles/dist/list.css';
 // eslint-disable-next-line sort-imports
-import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import buttonStyles from 'fundamental-styles/dist/button.css';
 // eslint-disable-next-line sort-imports
 import selectStyles from 'fundamental-styles/dist/select.css';
 
 const classnames = classnamesBind.bind({
     ...listStyles,
-    ...iconStyles,
     ...buttonStyles,
     ...selectStyles
 });

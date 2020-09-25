@@ -535,7 +535,7 @@ class Calendar extends Component {
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
-                <th className={classnames('fd-calendar__item fd-calendar__item--side-helper')} key={index}>
+                <th className={classnames('fd-calendar__item', 'fd-calendar__item--side-helper')} key={index}>
                     <span className={classnames('fd-calendar__text')}>
                         {shiftedDaysName[index]}
                     </span>

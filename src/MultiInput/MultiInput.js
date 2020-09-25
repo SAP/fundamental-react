@@ -16,20 +16,14 @@ import React, { Component } from 'react';
 // eslint-disable-next-line sort-imports
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
 // eslint-disable-next-line sort-imports
-import checkboxStyles from 'fundamental-styles/dist/checkbox.css';
-// eslint-disable-next-line sort-imports
 import listStyles from 'fundamental-styles/dist/list.css';
 // eslint-disable-next-line sort-imports
 import tokenizerStyles from 'fundamental-styles/dist/tokenizer.css';
-// eslint-disable-next-line sort-imports
-import tokenStyles from 'fundamental-styles/dist/token.css';
 
 const classnames = classnamesBind.bind({
     ...inputGroupStyles,
-    ...checkboxStyles,
     ...listStyles,
-    ...tokenizerStyles,
-    ...tokenStyles
+    ...tokenizerStyles
 });
 
 /** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
@@ -57,7 +51,7 @@ class MultiInput extends Component {
                     className={classnames('fd-list__input')}
                     compact={this.props.compact}
                     id={index + `_${this.multiInputId}`}
-                    labelclassName={classnames('fd-list__label')}
+                    labelClassName={classnames('fd-list__label')}
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
                     <List.Text className={classnames('fd-checkbox__text')}>{item}</List.Text>
@@ -78,6 +72,7 @@ class MultiInput extends Component {
             if (index < 3) {
                 return (
                     <Token
+                        className={classnames('fd-token')}
                         key={index}
                         onClick={() => this.removeTag(tag)}
                         onKeyDown={(event) => this.handleTagKeyDown(event, tag)}>
@@ -223,7 +218,7 @@ class MultiInput extends Component {
                         {this.state.tags.length > 0 && this.createTags()}
                         <FormInput
                             {...inputProps}
-                            className={classnames('fd-input-group__input', 'fd-tokenizer__input')}
+                            className={classnames('fd-input-group__input', 'fd-tokenizer__input', 'fd-input')}
                             compact={compact}
                             disabled={disabled}
                             placeholder={placeholder} />

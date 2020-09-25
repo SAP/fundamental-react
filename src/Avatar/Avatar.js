@@ -51,7 +51,7 @@ const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, col
             ref={ref}
             role={ariaRole}
             style={backgroundImageUrl && styles}>
-            {zoom && <span className={classnames('fd-avatar__zoom-icon sap-icon--edit')} role='presentation' />}
+            {zoom && <span className={classnames('fd-avatar__zoom-icon', 'sap-icon--edit')} role='presentation' />}
             {children}
         </span>
     );

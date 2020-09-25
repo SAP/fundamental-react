@@ -6,14 +6,9 @@ import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
 import React, { useCallback, useEffect, useState } from 'react';
 // eslint-disable-next-line sort-imports
-import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
-import switchStyles from 'fundamental-styles/dist/switch.css';
+import styles from 'fundamental-styles/dist/switch.css';
 
-const classnames = classnamesBind.bind({
-    ...iconStyles,
-    ...switchStyles
-});
+const classnames = classnamesBind.bind(styles);
 
 /** A **Switch** component is used to activate or deactivate an element. It uses a visual metaphor that is known
 to the user with visible differences between on and off state. It is recommended to always display the

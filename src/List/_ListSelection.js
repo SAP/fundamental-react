@@ -3,9 +3,14 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 // eslint-disable-next-line sort-imports
-import styles from 'fundamental-styles/dist/list.css';
+import formItemStyles from 'fundamental-styles/dist/form-item.css';
+// eslint-disable-next-line sort-imports
+import listStyles from 'fundamental-styles/dist/list.css';
 
-const classnames = classnamesBind.bind(styles);
+const classnames = classnamesBind.bind({
+    ...formItemStyles,
+    ...listStyles
+});
 
 const ListSelection = ({
     checkBoxAriaLabel,
