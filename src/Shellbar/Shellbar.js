@@ -413,10 +413,10 @@ class Shellbar extends Component {
                                     }
                                     control={
                                         <button className={classnames(
+                                            'fd-button',
                                             'fd-shellbar__button',
                                             'fd-shellbar__button--user-menu',
                                             {
-                                                ['fd-button']: isUsingCssModules,
                                                 [buttonClassnames('fd-button')]: isUsingCssModules
                                             })
                                         }>
