@@ -7,10 +7,8 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Title from '../Title/Title';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
-import dialogStyles from 'fundamental-styles/dist/dialog.css';
-// eslint-disable-next-line sort-imports
 import barStyles from 'fundamental-styles/dist/bar.css';
+import dialogStyles from 'fundamental-styles/dist/dialog.css';
 
 const classnames = classnamesBind.bind(dialogStyles);
 const barClassnames = classnamesBind.bind(barStyles);

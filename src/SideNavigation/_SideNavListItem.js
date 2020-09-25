@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
-// eslint-disable-next-line sort-imports
 import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
 
 const classnames = classnamesBind.bind({

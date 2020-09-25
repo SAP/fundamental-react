@@ -3,7 +3,6 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/pagination.css';
 
 const classnames = classnamesBind.bind(styles);

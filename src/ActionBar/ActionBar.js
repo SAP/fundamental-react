@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import requiredIf from 'react-required-if';
 import Title from '../Title/Title';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/action-bar.css';
 
 const classnames = classnamesBind.bind(styles);

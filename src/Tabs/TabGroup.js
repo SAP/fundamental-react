@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { TAB_SIZES } from '../utils/constants';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/tabs.css';
 
 const classnames = classnamesBind.bind(styles);

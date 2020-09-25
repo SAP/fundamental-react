@@ -3,10 +3,8 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
-import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import avatarStyles from 'fundamental-styles/dist/avatar.css';
+import iconStyles from 'fundamental-styles/dist/icon.css';
 
 const classnames = classnamesBind.bind({
     ...iconStyles,

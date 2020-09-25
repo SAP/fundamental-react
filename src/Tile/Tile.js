@@ -4,7 +4,6 @@ import React from 'react';
 import TileContent from './_TileContent';
 import TileFooter from './_TileFooter';
 import TileHeader from './_TileHeader';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/tile.css';
 
 const classnames = classnamesBind.bind(styles);

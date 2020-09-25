@@ -13,11 +13,8 @@ import requiredIf from 'react-required-if';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
-// eslint-disable-next-line sort-imports
 import listStyles from 'fundamental-styles/dist/list.css';
-// eslint-disable-next-line sort-imports
 import tokenizerStyles from 'fundamental-styles/dist/tokenizer.css';
 
 const classnames = classnamesBind.bind({

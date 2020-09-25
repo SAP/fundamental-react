@@ -7,7 +7,6 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/calendar.css';
 
 const classnames = classnamesBind.bind(styles);

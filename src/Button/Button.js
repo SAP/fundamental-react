@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/button.css';
 
 const classnames = classnamesBind.bind(styles);

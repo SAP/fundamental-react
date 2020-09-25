@@ -4,7 +4,6 @@ import FormInput from '../Forms/FormInput';
 import InputGroup from '../InputGroup/InputGroup';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/input-group.css';
 
 const classnames = classnamesBind.bind(styles);

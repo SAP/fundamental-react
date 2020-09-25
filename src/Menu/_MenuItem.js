@@ -1,9 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import menuItemStyles from 'fundamental-styles/dist/menu.css';
 
 const classnames = classnamesBind.bind({

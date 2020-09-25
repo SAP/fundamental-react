@@ -2,7 +2,6 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/form-group.css';
 
 const classnames = classnamesBind.bind(styles);

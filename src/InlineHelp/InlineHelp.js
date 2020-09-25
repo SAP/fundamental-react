@@ -3,7 +3,6 @@ import Popover from '../Popover/Popover';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/inline-help.css';
 
 const classnames = classnamesBind.bind(styles);

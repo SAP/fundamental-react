@@ -2,7 +2,6 @@ import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/form-select.css';
 
 const classnames = classnamesBind.bind(styles);

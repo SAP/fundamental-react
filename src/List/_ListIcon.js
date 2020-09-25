@@ -2,9 +2,7 @@ import classnamesBind from 'classnames/bind';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import listStyles from 'fundamental-styles/dist/list.css';
 
 const classnames = classnamesBind.bind({

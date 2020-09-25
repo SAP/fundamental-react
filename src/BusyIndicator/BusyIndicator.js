@@ -3,7 +3,6 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/busy-indicator.css';
 
 const classnames = classnamesBind.bind(styles);

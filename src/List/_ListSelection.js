@@ -2,9 +2,7 @@ import Checkbox from '../Forms/Checkbox';
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-// eslint-disable-next-line sort-imports
 import formItemStyles from 'fundamental-styles/dist/form-item.css';
-// eslint-disable-next-line sort-imports
 import listStyles from 'fundamental-styles/dist/list.css';
 
 const classnames = classnamesBind.bind({

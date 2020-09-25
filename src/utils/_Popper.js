@@ -9,7 +9,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Manager, Popper as ReactPopper, Reference } from 'react-popper-2';
 import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from './constants';
-// eslint-disable-next-line sort-imports
 import popoverStyles from 'fundamental-styles/dist/popover.css';
 
 const classnames = classnamesBind.bind(popoverStyles);

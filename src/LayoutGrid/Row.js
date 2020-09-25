@@ -3,7 +3,6 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { calculateSpan, getNodeSpan, hasSpan, mapSize } from './_layoutGridUtils';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/layout-grid.css';
 
 const classnames = classnamesBind.bind(styles);

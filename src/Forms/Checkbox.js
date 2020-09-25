@@ -7,7 +7,6 @@ import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useEffect, useRef, useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/checkbox.css';
 
 const classnames = classnamesBind.bind(styles);

@@ -3,7 +3,6 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { mapSize, mapSizeClasses, resolveSpan, validSpan } from './_layoutGridUtils';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/layout-grid.css';
 
 const classnames = classnamesBind.bind(styles);

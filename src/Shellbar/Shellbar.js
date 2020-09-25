@@ -9,16 +9,11 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import SearchInput from '../SearchInput/SearchInput';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import buttonStyles from 'fundamental-styles/dist/button.css';
-// eslint-disable-next-line sort-imports
-import menuStyles from 'fundamental-styles/dist/menu.css';
-// eslint-disable-next-line sort-imports
 import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
-import shellbarStyles from 'fundamental-styles/dist/shellbar.css';
-// eslint-disable-next-line sort-imports
+import menuStyles from 'fundamental-styles/dist/menu.css';
 import productSwitchStyles from 'fundamental-styles/dist/product-switch.css';
+import shellbarStyles from 'fundamental-styles/dist/shellbar.css';
 
 const classnames = classnamesBind.bind({
     ...menuStyles,

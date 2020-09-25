@@ -8,11 +8,8 @@ import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
-// eslint-disable-next-line sort-imports
-import listStyles from 'fundamental-styles/dist/list.css';
-// eslint-disable-next-line sort-imports
 import buttonStyles from 'fundamental-styles/dist/button.css';
-// eslint-disable-next-line sort-imports
+import listStyles from 'fundamental-styles/dist/list.css';
 import selectStyles from 'fundamental-styles/dist/select.css';
 
 const classnames = classnamesBind.bind({

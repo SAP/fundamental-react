@@ -3,9 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { OBJECT_STATUS_SIZES, OBJECT_STATUS_TYPES } from '../utils/constants';
-// eslint-disable-next-line sort-imports
 import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import objectStatus from 'fundamental-styles/dist/object-status.css';
 
 const classnames = classnamesBind.bind({

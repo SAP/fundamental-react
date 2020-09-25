@@ -3,7 +3,6 @@ import MenuItem from './_MenuItem';
 import MenuList from './_MenuList';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/menu.css';
 
 const classnames = classnamesBind.bind(styles);

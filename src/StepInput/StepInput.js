@@ -7,7 +7,6 @@ import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import React, { useCallback, useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/step-input.css';
 
 const classnames = classnamesBind.bind(styles);

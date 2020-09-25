@@ -5,7 +5,6 @@ import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
 import React, { useCallback, useEffect, useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/switch.css';
 
 const classnames = classnamesBind.bind(styles);

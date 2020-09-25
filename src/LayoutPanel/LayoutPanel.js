@@ -7,9 +7,7 @@ import LayoutPanelHead from './_LayoutPanelHead';
 import LayoutPanelHeader from './_LayoutPanelHeader';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import layoutGridStyles from 'fundamental-styles/dist/layout-grid.css';
-// eslint-disable-next-line sort-imports
 import layoutPanelStyles from 'fundamental-styles/dist/layout-panel.css';
 
 const classnames = classnamesBind.bind({

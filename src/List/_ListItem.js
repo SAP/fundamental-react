@@ -2,7 +2,6 @@ import classnamesBind from 'classnames/bind';
 import ListSelection from './_ListSelection';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/list.css';
 
 const classnames = classnamesBind.bind(styles);

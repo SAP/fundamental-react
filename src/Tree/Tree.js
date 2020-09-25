@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import TreeNode from './TreeNode';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/tree.css';
 
 const classnames = classnamesBind.bind(styles);

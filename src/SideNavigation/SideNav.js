@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import buttonStyles from 'fundamental-styles/dist/button.css';
-// eslint-disable-next-line sort-imports
 import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
 
 const classnames = classnamesBind.bind({

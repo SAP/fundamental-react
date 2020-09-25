@@ -3,7 +3,6 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/time.css';
 
 const classnames = classnamesBind.bind(styles);

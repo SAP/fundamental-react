@@ -2,7 +2,6 @@ import classnamesBind from 'classnames/bind';
 import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/icon.css';
 
 const classnames = classnamesBind.bind(styles);

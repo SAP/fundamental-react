@@ -6,9 +6,7 @@ import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
-// eslint-disable-next-line sort-imports
 import iconStyles from 'fundamental-styles/dist/icon.css';
-// eslint-disable-next-line sort-imports
 import messageStripStyles from 'fundamental-styles/dist/message-strip.css';
 
 const classnames = classnamesBind.bind({

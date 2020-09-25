@@ -14,12 +14,9 @@ import requiredIf from 'react-required-if';
 import tabbable from 'tabbable';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
-// eslint-disable-next-line sort-imports
-import listStyles from 'fundamental-styles/dist/list.css';
-// eslint-disable-next-line sort-imports
-import popoverStyles from 'fundamental-styles/dist/popover.css';
-// eslint-disable-next-line sort-imports
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
+import listStyles from 'fundamental-styles/dist/list.css';
+import popoverStyles from 'fundamental-styles/dist/popover.css';
 
 const classnames = classnamesBind.bind({
     ...listStyles,

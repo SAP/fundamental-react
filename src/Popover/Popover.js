@@ -10,7 +10,6 @@ import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
 import { GridSelector, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/popover.css';
 
 const classnames = classnamesBind.bind(styles);

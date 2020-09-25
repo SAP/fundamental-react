@@ -1,7 +1,6 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/form-label.css';
 
 const classnames = classnamesBind.bind(styles);

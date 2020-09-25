@@ -5,7 +5,6 @@ import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import React, { useCallback, useRef, useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/table.css';
 
 const classnames = classnamesBind.bind(styles);

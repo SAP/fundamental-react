@@ -11,7 +11,6 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line sort-imports
 import styles from 'fundamental-styles/dist/input-group.css';
 
 const classnames = classnamesBind.bind(styles);
