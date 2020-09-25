@@ -218,7 +218,7 @@ class MultiInput extends Component {
                         {this.state.tags.length > 0 && this.createTags()}
                         <FormInput
                             {...inputProps}
-                            className={classnames('fd-input-group__input', 'fd-tokenizer__input', 'fd-input')}
+                            className={classnames('fd-input-group__input', 'fd-tokenizer__input', { ['fd-input']: isUsingCssModules })}
                             compact={compact}
                             disabled={disabled}
                             placeholder={placeholder} />

@@ -208,7 +208,7 @@ describe('<MultiInput />', () => {
 
     test('remove tag from taglist by clicking on tag', () => {
         wrapper = mount(multiInput);
-        wrapper.find('.fd-input').at(0).simulate('click');
+        wrapper.find('.fd-input').simulate('click');
 
         // check that no tags exist
         expect(wrapper.state(['tags'])).toHaveLength(0);
