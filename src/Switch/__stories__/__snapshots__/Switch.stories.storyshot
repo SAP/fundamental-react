@@ -115,7 +115,7 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
         >
           <span
             aria-label="on"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            className="fd-switch__icon fd-switch__icon--on sap-icon--accept"
           />
           <span
             className="fd-switch__handle"
@@ -123,7 +123,7 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
           />
           <span
             aria-label="off"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            className="fd-switch__icon fd-switch__icon--off sap-icon--decline"
           />
         </div>
       </div>
@@ -212,7 +212,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         >
           <span
             aria-label="on"
-            className="fd-fd-switch__text"
+            className=""
           />
           <span
             className="fd-switch__handle"
@@ -220,7 +220,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
           />
           <span
             aria-label="off"
-            className="fd-fd-switch__text"
+            className=""
           />
         </div>
       </div>
@@ -260,7 +260,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         >
           <span
             aria-label="on"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            className="fd-switch__icon fd-switch__icon--on sap-icon--accept"
           />
           <span
             className="fd-switch__handle"
@@ -268,7 +268,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
           />
           <span
             aria-label="off"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            className="fd-switch__icon fd-switch__icon--off sap-icon--decline"
           />
         </div>
       </div>
@@ -391,7 +391,7 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
         >
           <span
             aria-label="on"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            className="fd-switch__icon fd-switch__icon--on sap-icon--accept"
           />
           <span
             className="fd-switch__handle"
@@ -399,7 +399,7 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
           />
           <span
             aria-label="off"
-            className="fd-fd-switch__text fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            className="fd-switch__icon fd-switch__icon--off sap-icon--decline"
           />
         </div>
       </div>

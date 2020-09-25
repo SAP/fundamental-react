@@ -1,5 +1,4 @@
 /* eslint-disable react/no-multi-comp */
-import { addDecorator } from '@storybook/react';
 import InlineHelp from '../InlineHelp';
 import React from 'react';
 
@@ -7,9 +6,6 @@ export default {
     title: 'Component API/InlineHelp',
     component: InlineHelp
 };
-
-addDecorator((story) => <div style={{ marginLeft: '50%', marginTop: '80px' }}>{story()}</div>);
-
 
 export const primary = () => (<InlineHelp text='default' />);
 

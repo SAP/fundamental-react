@@ -35,7 +35,7 @@ exports[`Storyshots Component API/MultiInput Compact 1`] = `
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-input--compact fd-input-group__input fd-tokenizer__input"
+                className="fd-input fd-input--compact fd-input-group__input fd-tokenizer__input fd-input"
                 id="multiInputCompactExample"
                 placeholder="Placeholder"
                 type="text"
@@ -100,7 +100,7 @@ exports[`Storyshots Component API/MultiInput Dev 1`] = `
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-input-group__input fd-tokenizer__input"
+                className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                 disabled={false}
                 id="multiInputDevExample"
                 placeholder="Select a Fruit"
@@ -166,7 +166,7 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-input-group__input fd-tokenizer__input"
+                className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                 disabled={true}
                 id="multiInputDisabledExample"
                 placeholder="Placeholder"
@@ -232,7 +232,7 @@ exports[`Storyshots Component API/MultiInput Primary 1`] = `
               className="fd-tokenizer__inner"
             >
               <input
-                className="fd-input fd-input-group__input fd-tokenizer__input"
+                className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                 id="multiInputPrimaryExample"
                 placeholder="Placeholder"
                 type="text"
@@ -317,7 +317,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           className="fd-tokenizer__inner"
                         >
                           <input
-                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                             id="multiInputErrorExample"
                             placeholder="Error"
                             type="text"
@@ -397,7 +397,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           className="fd-tokenizer__inner"
                         >
                           <input
-                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                             id="multiInputWarningExample"
                             placeholder="Warning"
                             type="text"
@@ -477,7 +477,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           className="fd-tokenizer__inner"
                         >
                           <input
-                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                             id="multiInputSuccessExample"
                             placeholder="Success"
                             type="text"
@@ -557,7 +557,7 @@ exports[`Storyshots Component API/MultiInput Validation States 1`] = `
                           className="fd-tokenizer__inner"
                         >
                           <input
-                            className="fd-input fd-input-group__input fd-tokenizer__input"
+                            className="fd-input fd-input-group__input fd-tokenizer__input fd-input"
                             id="multiInputInfoExample"
                             placeholder="Information"
                             type="text"

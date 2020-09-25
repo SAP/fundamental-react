@@ -136,7 +136,7 @@ exports[`Storyshots Component API/LocalizationEditor Text Area 1`] = `
             onClick={[Function]}
           >
             <textarea
-              className="fd-textarea fd-input-group__input"
+              className="fd-textarea fd-input-group__input fd-textarea"
               onChange={[Function]}
             />
             <span
