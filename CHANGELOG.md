@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.3...v0.13.1-rc.4) (2020-09-24)
+
+
+### Bug Fixes
+
+* datepicker add list styles ([#1221](https://github.com/SAP/fundamental-react/issues/1221)) ([2e4b4e5](https://github.com/SAP/fundamental-react/commit/2e4b4e54788eb331c1b3108515471b02ab094da7))
+
 ### [0.13.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.2...v0.13.1-rc.3) (2020-09-24)
 
 
