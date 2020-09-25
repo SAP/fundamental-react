@@ -637,7 +637,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               aria-expanded={false}
               aria-haspopup="true"
               aria-label="Expand submenu"
-              className="fd-button fd-button fd-nested-list__button"
+              className="fd-button fd-nested-list__button fd-button"
               onClick={[Function]}
               type="button"
             />
@@ -763,7 +763,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               aria-expanded={false}
               aria-haspopup="true"
               aria-label="Expand submenu"
-              className="fd-button fd-button fd-nested-list__button"
+              className="fd-button fd-nested-list__button fd-button"
               onClick={[Function]}
               type="button"
             />

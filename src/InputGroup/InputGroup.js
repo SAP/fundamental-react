@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/input-group.css';
 
 const classnames = classnamesBind.bind(styles);
+const isUsingCssModules = Object.keys(styles).length > 0;
 
 /** An **InputGroup** includes form inputs with add-ons that allow the user to
 better understand the information being entered. */
@@ -38,7 +39,7 @@ class InputGroup extends Component {
         const getClassName = (child) => classnames(
             {
                 'fd-input-group__input': !child.props.className?.includes('fd-tokenizer'),
-                'fd-textarea': child.type?.displayName === 'FormTextarea'
+                'fd-textarea': child.type?.displayName === 'FormTextarea' && isUsingCssModules
             },
             child.props.className
         );

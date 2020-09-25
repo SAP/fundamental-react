@@ -10,7 +10,7 @@ import React, { useCallback, useState } from 'react';
 import styles from 'fundamental-styles/dist/step-input.css';
 
 const classnames = classnamesBind.bind(styles);
-
+const isUsingCssModules = Object.keys(styles).length > 0;
 /** The **StepInput** allows the user to change the input values in predefined increments (steps).
 
 Use the step input if:
@@ -107,7 +107,7 @@ const StepInput = React.forwardRef(({
             {...rest}>
             <Button
                 aria-label={localizedText.stepDownLabel}
-                className={classnames('fd-button', 'fd-step-input__button')}
+                className={classnames('fd-step-input__button', { ['fd-button']: isUsingCssModules })}
                 compact={compact}
                 disabled={disabled}
                 glyph='less'
@@ -115,14 +115,14 @@ const StepInput = React.forwardRef(({
                 option='transparent'
                 tabIndex='-1' />
             <FormInput
-                className={classnames('fd-input', 'fd-input--no-number-spinner', 'fd-step-input__input')}
+                className={classnames('fd-input--no-number-spinner', 'fd-step-input__input', { ['fd-input']: isUsingCssModules })}
                 disabled={disabled}
                 onChange={onChangeInputValue}
                 placeholder={placeholder}
                 value={inputValue} />
             <Button
                 aria-label={localizedText.stepUpLabel}
-                className={classnames('fd-button', 'fd-step-input__button')}
+                className={classnames('fd-step-input__button', { ['fd-button']: isUsingCssModules })}
                 compact={compact}
                 disabled={disabled}
                 glyph='add'

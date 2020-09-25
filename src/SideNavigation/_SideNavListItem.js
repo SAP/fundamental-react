@@ -11,6 +11,7 @@ const classnames = classnamesBind.bind({
     ...iconStyles,
     ...sideNavStyles
 });
+const isUsingCssModules = Object.keys(sideNavStyles).length > 0;
 
 class SideNavListItem extends React.Component {
     constructor(props) {
@@ -92,7 +93,7 @@ class SideNavListItem extends React.Component {
                             aria-expanded={this.state.expanded}
                             aria-haspopup='true'
                             aria-label={expandSubmenuLabel}
-                            className={classnames('fd-button', 'fd-nested-list__button')}
+                            className={classnames('fd-nested-list__button', { ['fd-button']: isUsingCssModules })}
                             onClick={() => {
                                 this.handleExpand();
                             }} />

@@ -13,15 +13,18 @@ import requiredIf from 'react-required-if';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
 import React, { Component } from 'react';
+import checkboxStyles from 'fundamental-styles/dist/checkbox.css';
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
 import listStyles from 'fundamental-styles/dist/list.css';
 import tokenizerStyles from 'fundamental-styles/dist/tokenizer.css';
 
 const classnames = classnamesBind.bind({
+    ...checkboxStyles,
     ...inputGroupStyles,
     ...listStyles,
     ...tokenizerStyles
 });
+const isUsingCssModules = Object.keys(tokenizerStyles).length > 0;
 
 /** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
  * and a dropdown menu with a list of the available options.
@@ -69,7 +72,7 @@ class MultiInput extends Component {
             if (index < 3) {
                 return (
                     <Token
-                        className={classnames('fd-token')}
+                        className={isUsingCssModules && classnames('fd-token')}
                         key={index}
                         onClick={() => this.removeTag(tag)}
                         onKeyDown={(event) => this.handleTagKeyDown(event, tag)}>

@@ -21,6 +21,7 @@ const classnames = classnamesBind.bind({
     ...productSwitchStyles,
     ...shellbarStyles
 });
+const isUsingCssModules = Object.keys(shellbarStyles).length > 0;
 
 const buttonClassnames = classnamesBind.bind(buttonStyles);
 /** The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes
@@ -140,7 +141,7 @@ class Shellbar extends Component {
                 <div className={classnames('fd-shellbar__group', 'fd-shellbar__group--product')}>
                     {backAction && <Button
                         aria-label={localizedText.backButtonLabel}
-                        className={classnames('fd-shellbar__button', 'fd-button')}
+                        className={classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                         glyph='nav-back'
                         onClick={backAction}
                         option='transparent' />
@@ -181,7 +182,14 @@ class Shellbar extends Component {
                             }
                             control={
                                 <Button
-                                    className={classnames('fd-shellbar__button--menu', 'fd-button--menu', 'fd-button')}
+                                    className={classnames(
+                                        'fd-shellbar__button--menu',
+                                        'fd-button--menu',
+                                        {
+                                            ['fd-button']: isUsingCssModules,
+                                            [buttonClassnames('fd-button--menu')]: isUsingCssModules
+                                        }
+                                    )}
                                     glyph='megamenu'
                                     iconProps={{ className: classnames('fd-shellbar__button--icon') }}
                                     option='transparent'
@@ -219,7 +227,7 @@ class Shellbar extends Component {
                                     disableEdgeDetection: searchInput?.popoverProps?.disableEdgeDetection || true,
                                     ...searchInput.popoverProps
                                 }}
-                                searchBtnProps={{ className: classnames('fd-button', 'fd-shellbar__button') }}
+                                searchBtnProps={{ className: classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules }) }}
                                 searchList={searchInput.searchList} />
                         </div>
                     )}
@@ -233,7 +241,7 @@ class Shellbar extends Component {
                                                 control={
                                                     <Button
                                                         aria-label={action.label}
-                                                        className={classnames('fd-button', 'fd-shellbar__button')}
+                                                        className={classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                                         glyph={action.glyph}
                                                         iconBeforeText>
                                                         {action.notificationCount > 0 && (
@@ -251,7 +259,7 @@ class Shellbar extends Component {
                                         ) : (
                                             <Button
                                                 aria-label={action.label}
-                                                className={classnames('fd-button', 'fd-shellbar__button')}
+                                                className={classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                                 glyph={action.glyph}
                                                 iconBeforeText
                                                 key={index}
@@ -279,7 +287,7 @@ class Shellbar extends Component {
                                     <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
                                         <Button
                                             aria-label={localizedText.notificationsButton}
-                                            className={classnames('fd-button', 'fd-shellbar__button')}
+                                            className={classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                             glyph='bell'
                                             iconBeforeText>
                                             {notifications.notificationCount > 0 && (
@@ -298,7 +306,7 @@ class Shellbar extends Component {
                             <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
                                 <Button
                                     aria-label={localizedText.notificationsButton}
-                                    className={classnames('fd-button', 'fd-shellbar__button')}
+                                    className={classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                     glyph='bell'
                                     iconBeforeText
                                     onClick={notifications.callback}>
@@ -358,7 +366,7 @@ class Shellbar extends Component {
                                 }
                                 control={
                                     <div className={classnames('fd-shellbar-collapse--control')} role='button'>
-                                        <Button className={classnames('fd-button', 'fd-shellbar__button')}
+                                        <Button className={classnames('fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                             glyph='overflow'
                                             iconBeforeText>
                                             <Counter
@@ -404,7 +412,14 @@ class Shellbar extends Component {
                                         )
                                     }
                                     control={
-                                        <button className={classnames('fd-button', 'fd-shellbar__button', 'fd-shellbar__button--user-menu', buttonClassnames('fd-button'))}>
+                                        <button className={classnames(
+                                            'fd-shellbar__button',
+                                            'fd-shellbar__button--user-menu',
+                                            {
+                                                ['fd-button']: isUsingCssModules,
+                                                [buttonClassnames('fd-button')]: isUsingCssModules
+                                            })
+                                        }>
                                             {profile.image ? (
                                                 <Avatar
                                                     backgroundImageUrl={profile.image}
@@ -460,7 +475,7 @@ class Shellbar extends Component {
                                     }
                                     control={<Button
                                         aria-label={productSwitch.label}
-                                        className={classnames('fd-button', 'fd-product-switch__control', 'fd-shellbar__button')}
+                                        className={classnames('fd-product-switch__control', 'fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                         glyph='grid' />}
                                     disableEdgeDetection
                                     placement='bottom-end'
