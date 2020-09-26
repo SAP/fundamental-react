@@ -542,7 +542,11 @@ DatePicker.propTypes = {
     /** Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc.
      * This overrides the date format derived from any set locale. */
     dateFormat: PropTypes.string,
-    /** Default value to be shown in the Datepicker */
+    /**
+     * Default value to be shown in the Datepicker
+     * for example, `defaultValue='12/04/1993'`
+     * or when range selection is enabled `defaultValue='12/04/1993 - 12/30/1992'` (will auto sort chronologically)
+     * */
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
