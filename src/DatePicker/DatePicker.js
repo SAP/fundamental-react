@@ -25,20 +25,20 @@ const dateRangeSeparator = ' - ';
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-        const formattedDate = props.defaultValue.length > 0 ? this.getFormattedDateStr(props.defaultValue) : '';
-        const isoFormattedDate = props.defaultValue.length > 0
-            ? moment(props.defaultValue, props.dateFormat).format(ISO_DATE_FORMAT)
-            : '';
+
         this.state = {
-            isExpanded: false,
-            selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
-            startAndEndDates: [],
-            formattedDate,
-            isoFormattedDate
+            formattedDate: this.props?.defaultValue || '',
+            isExpanded: false
         };
 
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
+    }
+
+
+    toISOFormat = (dateStr) => {
+        if (!dateStr || !dateStr?.trim().length) return '';
+        return moment(dateStr, this.resolveFormat()).format(ISO_DATE_FORMAT);
     }
 
     /**
@@ -122,6 +122,10 @@ class DatePicker extends Component {
         this.setState({ formattedDate: e.target.value });
     }
 
+    componentDidMount() {
+        this.validateDates();
+    }
+
     componentDidUpdate(prevProps) {
         if (prevProps.defaultValue !== this.props.defaultValue) {
             this.handleNewDefault();
@@ -129,15 +133,9 @@ class DatePicker extends Component {
     }
 
     handleNewDefault = () => {
-        const { dateFormat, defaultValue } = this.props;
-        const formattedNewDefault = defaultValue && defaultValue.length > 0 ? this.getFormattedDateStr(defaultValue) : '';
+        const { defaultValue } = this.props;
         this.setState({
-            selectedDate: formattedNewDefault.length === 0 ? null : this.getMomentDateObj(formattedNewDefault),
-            isoFormattedDate: defaultValue && defaultValue.length > 0
-                ? moment(defaultValue, dateFormat).format(ISO_DATE_FORMAT)
-                : '',
-            formattedDate: formattedNewDefault,
-            startAndEndDates: []
+            formattedDate: defaultValue
         }, () => {
             this.validateDates();
         });
@@ -147,9 +145,7 @@ class DatePicker extends Component {
         e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
-            isoFormattedDate: e.target.value
-                ? moment(e.target.value, this.props.dateFormat).format(ISO_DATE_FORMAT)
-                : ''
+            isoFormattedDate: this.toISOFormat(e.target?.value)
         }, () => {
             this.props.onChange(this.getCallbackData(), 'inputChange');
         });
@@ -183,7 +179,9 @@ class DatePicker extends Component {
     validateDates = (postValidationCallback) => {
         const { formattedDate } = this.state;
 
-        if (this.props.enableRangeSelection) {
+        if (!formattedDate || !formattedDate?.trim().length) {
+            this.resetState(postValidationCallback);
+        } else if (this.props.enableRangeSelection) {
             const dateRange = formattedDate.split(dateRangeSeparator);
             const firstDate = this.getMomentDateObj(dateRange[0]);
             const secondDate = this.getMomentDateObj(dateRange[1]);
@@ -195,9 +193,10 @@ class DatePicker extends Component {
                     : (arrSelected = [firstDate, secondDate]);
                 const newFormattedDateRangeStr = this.getFormattedDateRangeStr(arrSelected);
                 this.setState({
+                    formattedDate: newFormattedDateRangeStr,
+                    isoFormatDate: arrSelected[0].format(ISO_DATE_FORMAT) + dateRangeSeparator + arrSelected[1].format(ISO_DATE_FORMAT),
                     selectedDate: null,
-                    startAndEndDates: arrSelected,
-                    formattedDate: newFormattedDateRangeStr
+                    startAndEndDates: arrSelected
                 }, () => {
                     if (formattedDate !== newFormattedDateRangeStr) {
                         this.executeCallback(this.props.onChange, 'autoFormatDateRange');
@@ -214,9 +213,7 @@ class DatePicker extends Component {
                 this.setState({
                     selectedDate: newDate,
                     formattedDate: newFormattedDateStr,
-                    isoFormattedDate: formattedDate
-                        ? moment(formattedDate, this.props.dateFormat).format(ISO_DATE_FORMAT)
-                        : '',
+                    isoFormattedDate: newDate.format(ISO_DATE_FORMAT),
                     startAndEndDates: []
                 }, () => {
                     if (formattedDate !== newFormattedDateStr) {
@@ -267,16 +264,17 @@ class DatePicker extends Component {
         const { formattedDate } = this.state;
 
         if (this.props.enableRangeSelection) {
-            let isoFormatDate = date[0].format(ISO_DATE_FORMAT);
+            let isoFormatDateRange = date[0].format(ISO_DATE_FORMAT);
             if (!!date[1]) {
-                isoFormatDate += dateRangeSeparator + date[1].format(ISO_DATE_FORMAT);
+                isoFormatDateRange += dateRangeSeparator + date[1].format(ISO_DATE_FORMAT);
                 closeCalendar = true;
             }
             const newFormattedDateRangeStr = this.getFormattedDateRangeStr(date);
             this.setState({
-                startAndEndDates: date,
                 formattedDate: newFormattedDateRangeStr,
-                isoFormattedDate: isoFormatDate
+                isoFormattedDate: isoFormatDateRange,
+                selectedDate: null,
+                startAndEndDates: date
             }, () => {
                 if (formattedDate !== newFormattedDateRangeStr) {
                     this.props.onChange(this.getCallbackData(), reason);
@@ -286,9 +284,9 @@ class DatePicker extends Component {
             closeCalendar = true;
             const newFormattedDate = this.getFormattedDateStr(date);
             this.setState({
-                selectedDate: date,
                 formattedDate: newFormattedDate,
-                isoFormattedDate: date.format(ISO_DATE_FORMAT),
+                isoFormattedDate: this.toISOFormat(newFormattedDate),
+                selectedDate: date,
                 startAndEndDates: []
             }, () => {
                 if (formattedDate !== newFormattedDate) {
@@ -341,6 +339,7 @@ class DatePicker extends Component {
 
     render() {
         const {
+            addonProps,
             blockedDates,
             buttonLabel,
             buttonProps,
@@ -356,6 +355,8 @@ class DatePicker extends Component {
             disableWeekday,
             disableWeekends,
             enableRangeSelection,
+            footerButtonProps,
+            footerClasses,
             inputProps,
             inputGroupProps,
             locale,
@@ -380,7 +381,8 @@ class DatePicker extends Component {
             'fd-input-group--control',
             {
                 [`is-${validationState?.state}`]: validationState?.state
-            }
+            },
+            inputGroupProps?.className
         );
 
         const datepickerFooterClassName = classnames(
@@ -390,7 +392,13 @@ class DatePicker extends Component {
             {
                 'fd-bar--cozy': !compact,
                 'fd-bar--compact': compact
-            }
+            },
+            footerClasses
+        );
+
+        const footerButtonClassnames = classnames(
+            'fd-dialog__decisive-button',
+            footerButtonProps?.className
         );
 
         const disableButton = disabled || readOnly;
@@ -414,7 +422,9 @@ class DatePicker extends Component {
                     placeholder={this.getPlaceHolder(dateFormat)}
                     readOnly={readOnly}
                     value={this.state.formattedDate} />
-                <InputGroup.Addon isButton>
+                <InputGroup.Addon
+                    {...addonProps}
+                    isButton>
                     <Button {...buttonProps}
                         aria-label={buttonLabel}
                         disabled={disableButton}
@@ -471,8 +481,8 @@ class DatePicker extends Component {
                                     ...localizedText,
                                     todayLabel: todayAction.label
                                 }}
-                                onChange={ (e, todayNavigated) => {
-                                    this.updateDate(e, todayNavigated, todayNavigated ? 'todayNavigated' : 'calendarDateClicked');
+                                onChange={ (date, todayNavigated) => {
+                                    this.updateDate(date, todayNavigated, todayNavigated ? 'todayNavigated' : 'calendarDateClicked');
                                 }}
                                 openToDate={openToDate}
                                 ref={this.calendarRef}
@@ -484,7 +494,8 @@ class DatePicker extends Component {
                                     <div className='fd-bar__right'>
                                         <div className='fd-bar__element'>
                                             <Button
-                                                className='fd-dialog__decisive-button'
+                                                {...footerButtonProps}
+                                                className={footerButtonClassnames}
                                                 compact={compact}
                                                 onClick={this.setTodayDate}>
                                                 {todayAction.label}
@@ -513,6 +524,8 @@ DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
     ...Calendar.PropTypes,
+    /** Additional props to be spread to the input group addon button container i.e. `<InputGroup.Addon {...addonProps} >` */
+    addonProps: PropTypes.object,
     /** aria-label for datepicker button */
     buttonLabel: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */
@@ -529,12 +542,20 @@ DatePicker.propTypes = {
     /** Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc.
      * This overrides the date format derived from any set locale. */
     dateFormat: PropTypes.string,
-    /** Default value to be shown in the Datepicker */
+    /**
+     * Default value to be shown in the Datepicker
+     * for example, `defaultValue='12/04/1993'`
+     * or when range selection is enabled `defaultValue='12/04/1993 - 12/30/1992'` (will auto sort chronologically)
+     * */
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     /** Set to **true** to enable the selection of a date range (begin and end) */
     enableRangeSelection: PropTypes.bool,
+    /** Additional props to to apply to calendar footer button*/
+    footerButtonProps: PropTypes.string,
+    /** Classnames to apply to calendar footer that will contain the 'Today' action */
+    footerClasses: PropTypes.string,
     /** Additional props to be spread to the `InputGroup` component */
     inputGroupProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */

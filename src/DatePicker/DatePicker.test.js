@@ -249,9 +249,31 @@ describe('<DatePicker />', () => {
                 defaultValue='3.16.20'
                 locale='hi' />
         );
-        wrapper = mount(compToTest);
+
+        act(() => {
+            wrapper = mount(compToTest);
+        });
+
         expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२०');
     });
+
+    describe('Date range', () => {
+        test('default value with dateFormat and locale set', ()=>{
+            const compToTest = (
+                <DatePicker
+                    dateFormat='MM/DD/YYYY'
+                    defaultValue='3.20.20 - 3.16.20'
+                    enableRangeSelection
+                    locale='hi' />
+            );
+            act(()=>{
+                wrapper = mount(compToTest);
+            });
+
+            expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२० - ०३/२०/२०२०');
+        });
+    });
+
 
     test('set defaultDate, unset dateFormat, set locale', ()=>{
         const compToTest = (
