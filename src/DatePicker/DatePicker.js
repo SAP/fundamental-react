@@ -553,7 +553,7 @@ DatePicker.propTypes = {
     /** Set to **true** to enable the selection of a date range (begin and end) */
     enableRangeSelection: PropTypes.bool,
     /** Additional props to to apply to calendar footer button*/
-    footerButtonProps: PropTypes.string,
+    footerButtonProps: PropTypes.object,
     /** Classnames to apply to calendar footer that will contain the 'Today' action */
     footerClasses: PropTypes.string,
     /** Additional props to be spread to the `InputGroup` component */
