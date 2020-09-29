@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.5...v0.13.1-rc.6) (2020-09-29)
+
+
+### Features
+
+* make shellbar popovers customizable ([#1222](https://github.com/SAP/fundamental-react/issues/1222)) ([4136a37](https://github.com/SAP/fundamental-react/commit/4136a37337fe146d019d30f24f3a7d7f285ad887))
+
+
+### Bug Fixes
+
+* DatePicker footerButtonProps type ([#1225](https://github.com/SAP/fundamental-react/issues/1225)) ([1e4afc4](https://github.com/SAP/fundamental-react/commit/1e4afc4a5ffbec88d0c50deec8356e3da2253e3d))
+
 ### [0.13.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.4...v0.13.1-rc.5) (2020-09-28)
 
 
