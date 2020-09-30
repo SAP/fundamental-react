@@ -15,7 +15,7 @@ export default class FocusManager {
     }
 
     isFocusContained = (e) => {
-        return (e.target === window && this.container && this.container.contains(document.activeElement));
+        return (e.target === window && this.container && !this.container.contains(document.activeElement));
     }
 
     keyHandler = (e) => {
