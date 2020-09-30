@@ -15,7 +15,7 @@ export default class FocusManager {
     }
 
     isFocusContained = (e) => {
-        return (e.target === window && this.container && !this.container.contains(document.activeElement));
+        return (e.target === window && this.container && this.container.contains(document.activeElement));
     }
 
     keyHandler = (e) => {
@@ -38,7 +38,19 @@ export default class FocusManager {
             }
 
             this.tabbableNodes = tabbable(this.container);
-            const currentIndex = this.tabbableNodes.indexOf(e.target);
+            let currentIndex = this.tabbableNodes.indexOf(e.target);
+            if (currentIndex === -1 ) {
+                // if the event target is not within the tabbable nodes, then
+                // chances are it is a nested descendent of one of the tabbable node.
+                // For example, it could be button within a grid cell, where that grid cell is tabbable
+                // Hence we should check if any of the tabbable nodes contain our target.
+                this.tabbableNodes.forEach((eachNode, index) => {
+                    if (eachNode?.contains(e.target)) {
+                        // if a tabbable node contains our target, that was the node with the current index.
+                        currentIndex = index;
+                    }
+                });
+            }
             const lastNode = this.tabbableNodes[this.tabbableNodes.length - 1];
             const firstNode = this.tabbableNodes[0];
 
