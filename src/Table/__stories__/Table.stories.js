@@ -1,6 +1,5 @@
 /* eslint-disable react/no-multi-comp */
 import Avatar from '../../Avatar/Avatar';
-import { boolean } from '@storybook/addon-knobs';
 import Button from '../../Button/Button';
 import Checkbox from '../../Forms/Checkbox';
 import DatePicker from '../../DatePicker/DatePicker';
@@ -11,7 +10,8 @@ import ObjectStatus from '../../ObjectStatus/ObjectStatus';
 import Popover from '../../Popover/Popover';
 import Select from '../../Select/Select';
 import Table from '../Table';
-import React, { useState } from 'react';
+import { boolean, select } from '@storybook/addon-knobs';
+import React, { useRef, useState } from 'react';
 
 export default {
     title: 'Component API/Table',
@@ -108,7 +108,9 @@ export const richTable = () => {
                     ariaLabel='Select all rows'
                     checked={allItemsChecked}
                     onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
-            richTable
+            selection={{
+                isSelected: (row, index) => !!checkedItems[tableRowData[index].name]
+            }}
             tableData={
                 tableRowData.map(item => {
                     return ({
@@ -187,15 +189,21 @@ export const gridTable = () => {
     ];
 
     const [checkedItems, setCheckedItems] = useState({});
+    const allItemsCheckedRef = useRef();
+    allItemsCheckedRef.current = Object.keys(checkedItems).length === tableRowData.length && !Object.keys(checkedItems).some(key => !checkedItems[key]);
+
+    const toggleAllItems = (checked) => {
+        const newCheckedItems = {};
+        tableRowData.forEach(row => newCheckedItems[row.productName] = checked);
+        setCheckedItems(newCheckedItems);
+    };
 
     const handleChange = (event) => {
-        setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked });
+        setCheckedItems(prevItems => ({ ...prevItems, [event.target.name]: event.target.checked }));
     };
 
     const handleHeaderChange = (event) => {
-        const newCheckedItems = {};
-        tableRowData.forEach(row => newCheckedItems[row.productName] = event.target.checked);
-        setCheckedItems(newCheckedItems);
+        toggleAllItems(event.target.checked);
     };
 
     const suppliers = [
@@ -205,8 +213,6 @@ export const gridTable = () => {
         { key: '4', text: 'Technocom' }
     ];
 
-    const allItemsChecked = Object.keys(checkedItems).length > 0 && !Object.keys(checkedItems).some(key => !checkedItems[key]);
-
     return (
         <Table
             compact={boolean('compact', false)}
@@ -214,17 +220,34 @@ export const gridTable = () => {
             headers={[
                 <Checkbox
                     ariaLabel='Select all rows'
-                    checked={allItemsChecked}
+                    checked={allItemsCheckedRef.current}
                     onChange={handleHeaderChange} />, 'Product Name', 'Product ID', 'Quantity', 'Status', 'Supplier', 'Image', 'Heavy Weight', 'Categories', 'Delivery Date']}
-            keyboardNavigation='cell'
-            richTable
+            keyboardNavigation={select('keyboardNavigation', {
+                'none': 'none',
+                'cell': 'cell',
+                'row': 'row'
+            })}
+            rowKey='productName'
+            selection={{
+                isSelected: (row, index) => !!checkedItems[tableRowData[index].productName],
+                onSelectRow: (row, index) => {
+                    if (index > -1) {
+                        const rowKey = tableRowData[index]?.productName;
+                        setCheckedItems(prevItems => {
+                            return { ...prevItems, [rowKey]: !prevItems[rowKey] };
+                        });
+                    } else {
+                        toggleAllItems(!allItemsCheckedRef.current);
+                    }
+                }
+            }}
             tableData={
                 tableRowData.map(item => {
                     return ({
                         rowData: [
                             <Checkbox
                                 ariaLabel='Select row'
-                                checked={checkedItems[item.productName] || false}
+                                checked={!!checkedItems[item.productName]}
                                 name={item.productName}
                                 onChange={handleChange} />,
                             <span>{item.productName}</span>,

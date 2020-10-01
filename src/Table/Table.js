@@ -1,16 +1,17 @@
 import classnames from 'classnames';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
+import { GridSelector } from '../utils/constants';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import 'fundamental-styles/dist/table.css';
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
-const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, tableBodyClassName,
+const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, selection, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
-    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
+    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, ...props }, ref) => {
 
     const tableClasses = classnames(
         'fd-table',
@@ -61,22 +62,45 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
         tableCheckboxClassName
     );
 
-    const useHookWithRefCallback = () => {
-        const newRef = useRef(null);
-        const setRef = useCallback(node => {
-            if (node && keyboardNavigation !== 'none') {
-                gridManager.current.attachTo({ gridNode: node, onFocusCell, onToggleEditMode });
-            }
-            newRef.current = node;
-        }, []);
+    const tableRefCallback = useCallback(node => {
+        if (node && keyboardNavigation !== 'none') {
+            attachGridManager(node);
+        }
+        tableRef.current = node;
+    }, []);
 
-        return setRef;
+    const attachGridManager = (node) => {
+        gridManager.current.attachTo({
+            gridNode: node,
+            onFocusCell,
+            onKeyDownCell,
+            onToggleEditMode,
+            rowNavigation: keyboardNavigation === 'row'
+        });
     };
+
+    useEffect(() => {
+        if (keyboardNavigation === 'none') {
+            gridManager.current.clearEvents();
+        } else {
+            attachGridManager(tableRef.current);
+        }
+    }, [keyboardNavigation]);
 
     const captionId = shortid.generate();
     const gridManager = useRef(new GridManager());
-    const tableRef = ref || useHookWithRefCallback();
+    const tableRef = ref || useRef(null);
     const [instructionsText, setInstructionsText] = useState('');
+
+    const onKeyDownCell = (cell, event) => {
+        if (keyboardNavigation === 'row' && event.target.matches(GridSelector.ROW)) {
+            const key = event.which || event.keyCode;
+
+            if (key === keycode.codes.space) {
+                selection.onSelectRow(tableData[cell.row - 1]?.rowData, cell.row - 1);
+            }
+        }
+    };
 
     const onToggleEditMode = (enable) => {
         setInstructionsText(enable ? localizedText.editModeDisable : '');
@@ -108,7 +132,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     let checkboxHeader;
     let displayHeaders = [...headers];
 
-    if (richTable) {
+    if (selection) {
         checkboxHeader = <th className={tableCheckboxClasses}>{headers[0]}</th>;
         displayHeaders = displayHeaders.splice(1, headers.length);
     }
@@ -116,7 +140,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     return (
         <table {...props} aria-describedby={captionId}
             className={tableClasses}
-            ref={tableRef}
+            ref={tableRefCallback}
             role={keyboardNavigation ? 'grid' : 'table'}>
             <caption aria-live='polite' className='fd-table__caption'
                 id={captionId}>
@@ -124,7 +148,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             </caption>
             <thead className={tableHeaderClasses} {...tableHeaderProps}>
                 <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
-                    {richTable && checkboxHeader}
+                    {selection && checkboxHeader}
                     {displayHeaders.map((header, index) => {
                         return <th className={tableCellClasses} key={index}>{header}</th>;
                     })}
@@ -141,7 +165,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                             : tableBodyRowProps);
                     }
 
-                    if (richTable) {
+                    if (selection) {
                         checkboxCell = (
                             <td
                                 className={tableCheckboxClasses}>
@@ -155,9 +179,9 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
-                            aria-selected={row?.rowData[0]?.props?.checked}
+                            aria-selected={selection?.isSelected(row, index)}
                             key={index}>
-                            {richTable && checkboxCell}
+                            {selection && checkboxCell}
                             {displayCells.map((cellData, cellIndex) => {
                                 if (cellData.type?.propTypes?.compact) {
                                     cellData = React.cloneElement(cellData, { compact: compact || condensed });
@@ -204,8 +228,21 @@ Table.propTypes = {
         /** Localized string for 'column' */
         column: PropTypes.string
     }),
-    /** Set to **true** if Table contains checkboxes */
-    richTable: PropTypes.bool,
+    /** Props related to row selection */
+    selection: PropTypes.shape({
+        /** Determines whether a row should be selected
+         * @param {object} row - The data for the row being selected. This will be undefined for the header row.
+         * @param {number} index - Index of the row being selected, or -1 for the header row.
+         * @returns {boolean}
+         */
+        isSelected: PropTypes.func.isRequired,
+        /** Callback function; triggered when a row is selected
+         * @param {object} row - The data for the row being selected. This will be undefined for the header row.
+         * @param {number} index - Index of the row being selected, or -1 for the header row.
+         * @returns {void}
+         */
+        onSelectRow: PropTypes.func.isRequired
+    }),
     /** Additional classes to be added to the `<tbody>` element */
     tableBodyClassName: PropTypes.string,
     /** Additional props to be spread to the `<tbody>` element */
