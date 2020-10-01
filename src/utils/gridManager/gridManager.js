@@ -21,14 +21,16 @@ export default class GridManager {
         firstFocusedElement = null, // first DOM element to be focused, if it exists in the grid. Takes priority over firstFocusedCoordinates
         firstFocusedCoordinates = { row: 0, col: 0 }, // first coordinates in the grid to attempt to focus
         firstCellSearchDirection = { directionX: 0, directionY: 0 }, // direction to search for an initial cell if provided coordinates are invalid
-        rowNavigation = true,
+        rowNavigation = true, // allows the user to navigate by row instead of by cell
         enableHeaderCells = true,
+        skipFirstColumnTabbing = true, // skip the first column when tabbing in row navigation, which is often used for checkboxes
         focusOnInit = false,
         wrapRows = false,
         wrapCols = false,
         onFocusCell = () => {},
         onKeyDownCell = () => {},
         onPassBoundary = () => {},
+        onClickRow = () => {},
         onToggleEditMode = () => {},
         disabledCells = []
     }) {
@@ -36,12 +38,14 @@ export default class GridManager {
             this.gridNode = gridNode;
             this.rowNavigation = rowNavigation;
             this.enableHeaderCells = enableHeaderCells;
+            this.skipFirstColumnTabbing = skipFirstColumnTabbing;
             this.cellSelector = `${GridSelector.CELL}, ${this.enableHeaderCells && GridSelector.HEADER}`;
             this.wrapRows = wrapRows;
             this.wrapCols = wrapCols;
             this.onFocusCell = onFocusCell;
             this.onKeyDownCell = onKeyDownCell;
             this.onPassBoundary = onPassBoundary;
+            this.onClickRow = onClickRow;
             this.onToggleEditMode = onToggleEditMode;
             this.disabledCells = disabledCells;
             this.focusedRow = 0;
@@ -253,7 +257,10 @@ export default class GridManager {
         let focusableElements = [];
         const cells = this.gridNode.querySelectorAll(this.cellSelector);
         cells.forEach(cell => {
-            focusableElements = [...focusableElements, ...cell.querySelectorAll(GridSelector.FOCUSABLE)];
+            const { col } = this.getCellCoordinates(cell);
+            if (!(this.rowNavigation && this.skipFirstColumnTabbing && col === 0 && enable)) {
+                focusableElements = [...focusableElements, ...cell.querySelectorAll(GridSelector.FOCUSABLE)];
+            }
         });
 
         if (focusableElements.length) {
@@ -325,7 +332,9 @@ export default class GridManager {
                         nextCell = this.getParentCell(event.target);
                     }
                 } else {
-                    // row click
+                    if (event.target.matches(GridSelector.ROW)) {
+                        this.onClickRow(currentCell, event);
+                    }
                 }
                 break;
             case keycode.codes.esc:

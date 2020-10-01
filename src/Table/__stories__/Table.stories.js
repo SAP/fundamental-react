@@ -109,7 +109,7 @@ export const richTable = () => {
                     checked={allItemsChecked}
                     onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
             selection={{
-                isSelected: (row, index) => !!checkedItems[tableRowData[index].name]
+                isSelected: (index) => !!checkedItems[tableRowData[index].name]
             }}
             tableData={
                 tableRowData.map(item => {
@@ -227,10 +227,12 @@ export const gridTable = () => {
                 'cell': 'cell',
                 'row': 'row'
             })}
-            rowKey='productName'
             selection={{
-                isSelected: (row, index) => !!checkedItems[tableRowData[index].productName],
-                onSelectRow: (row, index) => {
+                isSelected: (index) => !!checkedItems[tableRowData[index].productName],
+                onClickRow: (index) => {
+                    window.alert('You clicked row ' + index);
+                },
+                onSelectRow: (index) => {
                     if (index > -1) {
                         const rowKey = tableRowData[index]?.productName;
                         setCheckedItems(prevItems => {

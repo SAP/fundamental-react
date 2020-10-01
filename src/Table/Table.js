@@ -43,7 +43,8 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const tableRowClasses = classnames(
         'fd-table__row',
         {
-            'fd-table__cell--focusable': keyboardNavigation === 'row'
+            'fd-table__row--activable': typeof selection?.onClickRow !== 'undefined',
+            'fd-table__row--focusable': keyboardNavigation === 'row'
         },
         tableRowClassName
     );
@@ -72,6 +73,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const attachGridManager = (node) => {
         gridManager.current.attachTo({
             gridNode: node,
+            onClickRow: onClickRowHandler,
             onFocusCell,
             onKeyDownCell,
             onToggleEditMode,
@@ -97,9 +99,13 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             const key = event.which || event.keyCode;
 
             if (key === keycode.codes.space) {
-                selection.onSelectRow(tableData[cell.row - 1]?.rowData, cell.row - 1);
+                selection.onSelectRow(cell.row - 1);
             }
         }
+    };
+
+    const onClickRowHandler = (cell) => {
+        selection.onClickRow(cell.row - 1);
     };
 
     const onToggleEditMode = (enable) => {
@@ -179,8 +185,13 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
-                            aria-selected={selection?.isSelected(row, index)}
-                            key={index}>
+                            aria-selected={selection?.isSelected(index)}
+                            key={index}
+                            onClick={(event) => {
+                                if (event.target.matches(GridSelector.ROW)) {
+                                    selection.onClickRow(index);
+                                }
+                            }}>
                             {selection && checkboxCell}
                             {displayCells.map((cellData, cellIndex) => {
                                 if (cellData.type?.propTypes?.compact) {
@@ -230,14 +241,17 @@ Table.propTypes = {
     }),
     /** Props related to row selection */
     selection: PropTypes.shape({
+        /** Callback function; triggered when a row is clicked or the Enter key is pressed during row navigation
+         * @param {number} index - Index of the row being selected, or -1 for the header row.
+         * @returns {void}
+         */
+        onClickRow: PropTypes.func,
         /** Determines whether a row should be selected
-         * @param {object} row - The data for the row being selected. This will be undefined for the header row.
          * @param {number} index - Index of the row being selected, or -1 for the header row.
          * @returns {boolean}
          */
         isSelected: PropTypes.func.isRequired,
         /** Callback function; triggered when a row is selected
-         * @param {object} row - The data for the row being selected. This will be undefined for the header row.
          * @param {number} index - Index of the row being selected, or -1 for the header row.
          * @returns {void}
          */
