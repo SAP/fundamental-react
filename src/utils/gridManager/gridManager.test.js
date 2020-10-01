@@ -32,6 +32,7 @@ describe('GridManager', () => {
                 cell.id = `cell-${i}-${j}`;
                 row.appendChild(cell);
             }
+            row.id = `row-${i}`;
         }
 
         const a1 = document.createElement('a');
@@ -75,12 +76,14 @@ describe('GridManager', () => {
             }
             return element;
         };
-
-        gridNode = createNode();
     });
 
     afterAll(() => {
         global.document.createElement = ce;
+    });
+
+    beforeEach(() => {
+        gridNode = createNode();
     });
 
     describe('Default Behavior', () => {
@@ -107,7 +110,7 @@ describe('GridManager', () => {
         });
     });
 
-    describe('Event Behavior', () => {
+    describe('Cell Navigation', () => {
         it('should handle going up 1 cell', () => {
             const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 2, col: 2 } });
 
@@ -253,87 +256,137 @@ describe('GridManager', () => {
         });
     });
 
-    describe('Edit Mode', () => {
-        it('should not focus on an inner text input if disabled', () => {
-            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 2, col: 3 } });
+    describe('Row Navigation', () => {
+        it('should handle going up a row', () => {
+            const manager = new GridManager({ gridNode, focusOnInit: true, rowNavigation: true, firstFocusedCoordinates: { row: 2, col: 0 } });
 
             const event = {
                 preventDefault: () => {},
-                target: gridNode.querySelector('#cell-2-3'),
+                target: gridNode.querySelector('#row-2'),
+                keyCode: keycode.codes.up
+            };
+
+            manager.handleKeyDown(event);
+
+            expect(document.activeElement).toEqual(gridNode.querySelector('#row-1'));
+        });
+
+        it('should handle going down a row', () => {
+            const manager = new GridManager({ gridNode, focusOnInit: true, rowNavigation: true, firstFocusedCoordinates: { row: 2, col: 0 } });
+
+            const event = {
+                preventDefault: () => {},
+                target: gridNode.querySelector('#row-2'),
                 keyCode: keycode.codes.down
             };
-            manager.handleKeyDown(event);
-
-            expect(document.activeElement).not.toEqual(gridNode.querySelector('#textinput-3-3'));
-        });
-
-        it('should toggle focus between a cell and its inner text input by pressing enter', () => {
-            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
-
-            const event = {
-                preventDefault: () => {},
-                target: gridNode.querySelector('#cell-3-3'),
-                keyCode: keycode.codes.enter
-            };
 
             manager.handleKeyDown(event);
-            expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
-            manager.handleKeyDown(event);
-            expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-3'));
+
+            expect(document.activeElement).toEqual(gridNode.querySelector('#row-3'));
+        });
+    });
+
+    describe('Edit Mode', () => {
+        describe('with cell navigation', () => {
+            it('should not focus on an inner text input if disabled', () => {
+                const manager = new GridManager({ gridNode, focusOnInit: true, firstFocusedCoordinates: { row: 2, col: 3 } });
+
+                const event = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-2-3'),
+                    keyCode: keycode.codes.down
+                };
+
+                manager.handleKeyDown(event);
+
+                expect(document.activeElement).not.toEqual(gridNode.querySelector('#textinput-3-3'));
+            });
+
+            it('should toggle focus between a cell and its inner text input by pressing enter', () => {
+                const manager = new GridManager({ gridNode, focusOnInit: true, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+                const event = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-3-3'),
+                    keyCode: keycode.codes.enter
+                };
+
+                manager.handleKeyDown(event);
+                expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
+                manager.handleKeyDown(event);
+                expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-3'));
+            });
+
+            it('should return focus from inner input to containing cell by pressing escape', () => {
+                const manager = new GridManager({ gridNode, focusOnInit: true, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+                const enterEvent = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-3-3'),
+                    keyCode: keycode.codes.enter
+                };
+
+                const escapeEvent = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-3-3'),
+                    keyCode: keycode.codes.esc
+                };
+
+                manager.handleKeyDown(enterEvent);
+                expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
+                manager.handleKeyDown(escapeEvent);
+                expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-3'));
+            });
+
+            it('should disable navigating to other cells if enabled', () => {
+                const manager = new GridManager({ gridNode, focusOnInit: true, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+                const enableEvent = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-3-3'),
+                    keyCode: keycode.codes.enter
+                };
+
+                const keyEvent = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-3-3'),
+                    keyCode: keycode.codes.left
+                };
+
+                manager.handleKeyDown(enableEvent);
+                manager.handleKeyDown(keyEvent);
+                expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
+            });
+
+            it('should allow navigating to other cells if disabled', () => {
+                const manager = new GridManager({ gridNode, focusOnInit: true, firstFocusedCoordinates: { row: 3, col: 3 } });
+
+                const keyEvent = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#cell-3-3'),
+                    keyCode: keycode.codes.left
+                };
+
+                manager.handleKeyDown(keyEvent);
+                expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-2'));
+            });
         });
 
-        it('should return focus from inner input to containing cell by pressing escape', () => {
-            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
+        describe('with row navigation', () => {
+            it('should enter edit mode with the tab key', () => {
+                const manager = new GridManager({ gridNode, focusOnInit: true, rowNavigation: true, firstFocusedCoordinates: { row: 3, col: 0 } });
 
-            const enterEvent = {
-                preventDefault: () => {},
-                target: gridNode.querySelector('#cell-3-3'),
-                keyCode: keycode.codes.enter
-            };
+                const event = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#row-3'),
+                    keyCode: keycode.codes.tab
+                };
 
-            const escapeEvent = {
-                preventDefault: () => {},
-                target: gridNode.querySelector('#cell-3-3'),
-                keyCode: keycode.codes.esc
-            };
+                manager.handleKeyDown(event);
 
-            manager.handleKeyDown(enterEvent);
-            expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
-            manager.handleKeyDown(escapeEvent);
-            expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-3'));
-        });
-
-        it('should disable navigating to other cells if enabled', () => {
-            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
-
-            const enableEvent = {
-                preventDefault: () => {},
-                target: gridNode.querySelector('#cell-3-3'),
-                keyCode: keycode.codes.enter
-            };
-
-            const keyEvent = {
-                preventDefault: () => {},
-                target: gridNode.querySelector('#cell-3-3'),
-                keyCode: keycode.codes.left
-            };
-
-            manager.handleKeyDown(enableEvent);
-            manager.handleKeyDown(keyEvent);
-            expect(document.activeElement).toEqual(gridNode.querySelector('#textinput-3-3'));
-        });
-
-        it('should allow navigating to other cells if disabled', () => {
-            const manager = new GridManager({ gridNode, firstFocusedCoordinates: { row: 3, col: 3 } });
-
-            const keyEvent = {
-                preventDefault: () => {},
-                target: gridNode.querySelector('#cell-3-3'),
-                keyCode: keycode.codes.left
-            };
-
-            manager.handleKeyDown(keyEvent);
-            expect(document.activeElement).toEqual(gridNode.querySelector('#cell-3-2'));
+                expect(gridNode.querySelector('#row-3').getAttribute('tabindex')).toEqual('-1');
+                expect(gridNode.querySelector('#textinput-3-3').getAttribute('tabindex')).toEqual('0');
+            });
         });
     });
 });

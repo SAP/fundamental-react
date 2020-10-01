@@ -21,7 +21,7 @@ export default class GridManager {
         firstFocusedElement = null, // first DOM element to be focused, if it exists in the grid. Takes priority over firstFocusedCoordinates
         firstFocusedCoordinates = { row: 0, col: 0 }, // first coordinates in the grid to attempt to focus
         firstCellSearchDirection = { directionX: 0, directionY: 0 }, // direction to search for an initial cell if provided coordinates are invalid
-        rowNavigation = true, // allows the user to navigate by row instead of by cell
+        rowNavigation = false, // allows the user to navigate by row instead of by cell
         enableHeaderCells = true,
         skipFirstColumnTabbing = true, // skip the first column when tabbing in row navigation, which is often used for checkboxes
         focusOnInit = false,
