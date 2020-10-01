@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.6...v0.13.1-rc.7) (2020-10-01)
+
+
+### Bug Fixes
+
+* focus manager use with grid manager ([#1228](https://github.com/SAP/fundamental-react/issues/1228)) ([4946020](https://github.com/SAP/fundamental-react/commit/4946020b1de7296bc53e1115859977753eeed80e))
+
 ### [0.13.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.5...v0.13.1-rc.6) (2020-09-29)
 
 
