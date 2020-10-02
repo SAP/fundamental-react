@@ -219,8 +219,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                             aria-selected={selection?.isSelected(index)}
                             key={index}
                             onClick={(event) => {
-                                if (event.target.matches(GridSelector.CELL)
-                                    || event.target.matches(GridSelector.ROW)) {
+                                if (event.target.matches(`${GridSelector.CELL}, ${GridSelector.ROW}, .fd-table__icon--navigation`)) {
                                     selection?.onClickRow && selection.onClickRow(index);
                                 }
                             }}>
