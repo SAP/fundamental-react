@@ -88,6 +88,7 @@ export default class GridManager {
         this.gridNode && Array.prototype.forEach.call(
             this.gridNode.querySelectorAll(GridSelector.ROW), (row) => {
                 const rowCells = [];
+                row.setAttribute('tabindex', -1);
 
                 Array.prototype.forEach.call(
                     row.querySelectorAll(this.cellSelector), (cell) => {
@@ -171,8 +172,10 @@ export default class GridManager {
             const currentElement = !this.rowNavigation ? this.grid[this.focusedRow][this.focusedCol] : this.grid[this.focusedRow][this.focusedCol].parentNode;
             const nextElement = !this.rowNavigation ? this.grid[row][col] : this.grid[row][col].parentNode;
 
-            currentElement.setAttribute('tabindex', -1);
-            nextElement.setAttribute('tabindex', 0);
+            if (!this.editMode) {
+                currentElement.setAttribute('tabindex', -1);
+                nextElement.setAttribute('tabindex', 0);
+            }
 
             this.focusedRow = row;
             this.focusedCol = col;
