@@ -222,7 +222,11 @@ export default class GridManager {
                 focusableElements[0]?.focus();
             }
         } else {
-            element.focus();
+            if (!this.rowNavigation) {
+                element.focus();
+            } else {
+                element.parentNode.focus();
+            }
         }
 
         window.scrollTo(posX, posY);
@@ -239,8 +243,6 @@ export default class GridManager {
                 ) {
                     focusableElements[0].focus();
                 }
-            } else {
-                event.target.parentNode.focus();
             }
         }
     }
