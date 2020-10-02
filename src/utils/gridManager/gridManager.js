@@ -88,7 +88,9 @@ export default class GridManager {
         this.gridNode && Array.prototype.forEach.call(
             this.gridNode.querySelectorAll(GridSelector.ROW), (row) => {
                 const rowCells = [];
-                row.setAttribute('tabindex', -1);
+                if (this.rowNavigation) {
+                    row.setAttribute('tabindex', -1);
+                }
 
                 Array.prototype.forEach.call(
                     row.querySelectorAll(this.cellSelector), (cell) => {
@@ -105,7 +107,7 @@ export default class GridManager {
                 }
             }
         );
-        this.toggleTabbableElements(false);
+        this.toggleTabbableElements(false, this.getAllFocusableElements(false));
     };
 
     createFilledArray = (length, value) => {
@@ -169,8 +171,8 @@ export default class GridManager {
 
     setFocusPointer = (row, col) => {
         if (this.isValidCell({ row, col })) {
-            const currentElement = !this.rowNavigation ? this.grid[this.focusedRow][this.focusedCol] : this.grid[this.focusedRow][this.focusedCol].parentNode;
-            const nextElement = !this.rowNavigation ? this.grid[row][col] : this.grid[row][col].parentNode;
+            const currentElement = this.grid[this.focusedRow][this.focusedCol];
+            const nextElement = this.grid[row][col];
 
             if (!this.editMode) {
                 currentElement.setAttribute('tabindex', -1);
@@ -210,8 +212,8 @@ export default class GridManager {
         return (focusableElements?.length > 1 || editableElement);
     }
 
-    focusCell = (currentCell, event) => {
-        const { row, col, element, focusableElements } = currentCell;
+    focusCell = (nextCell, event) => {
+        const { row, col, element, focusableElements } = nextCell;
         this.setFocusPointer(row, col);
         const posX = window.pageXOffset;
         const posY = window.pageYOffset;
@@ -222,52 +224,51 @@ export default class GridManager {
                 focusableElements[0]?.focus();
             }
         } else {
-            if (!this.rowNavigation) {
-                element.focus();
-            } else {
-                element.parentNode.focus();
-            }
+            element.focus();
         }
 
         window.scrollTo(posX, posY);
-        this.onFocusCell(currentCell, event);
     };
 
     handleFocusCell = (event) => {
         if (event.target.matches && event.target.matches(this.cellSelector)) {
-            const { focusableElements } = this.getCellProperties(event.target);
-            if (!this.rowNavigation) {
-                if (
-                    focusableElements?.length === 1 &&
-                    !focusableElements[0].matches(GridSelector.EDITABLE)
-                ) {
-                    focusableElements[0].focus();
-                }
+            const cell = this.getCellProperties(event.target);
+            if (!this.rowNavigation &&
+                cell.focusableElements?.length === 1 &&
+                !cell.focusableElements[0].matches(GridSelector.EDITABLE)
+            ) {
+                cell.focusableElements[0].focus();
+            } else if (this.rowNavigation) {
+                event.target.parentNode.focus();
             }
+            this.onFocusCell(cell, event);
         }
     }
 
     toggleEditMode = (currentCell, enable) => {
         this.editMode = !!enable;
-        if (!this.rowNavigation) {
-            currentCell.element.setAttribute('tabindex', enable ? -1 : 0);
-        } else {
-            currentCell.element.parentNode.setAttribute('tabindex', enable ? -1 : 0);
+        currentCell.element.setAttribute('tabindex', enable ? -1 : 0);
+        const focusableElements = this.getAllFocusableElements(this.skipFirstColumnTabbing);
+        this.toggleTabbableElements(enable, focusableElements);
+        if (focusableElements.length > 0) {
+            this.onToggleEditMode(enable);
         }
-        this.toggleTabbableElements(enable);
-        this.onToggleEditMode(enable);
     }
 
-    toggleTabbableElements = (enable) => {
+    getAllFocusableElements = (skipFirstColumn) => {
         let focusableElements = [];
         const cells = this.gridNode.querySelectorAll(this.cellSelector);
         cells.forEach(cell => {
             const { col } = this.getCellCoordinates(cell);
-            if (!(this.rowNavigation && this.skipFirstColumnTabbing && col === 0 && enable)) {
+            if (!(this.rowNavigation && skipFirstColumn && col === 0)) {
                 focusableElements = [...focusableElements, ...cell.querySelectorAll(GridSelector.FOCUSABLE)];
             }
         });
 
+        return focusableElements;
+    }
+
+    toggleTabbableElements = (enable, focusableElements) => {
         if (focusableElements.length) {
             focusableElements.forEach(element => {
                 element.setAttribute('tabindex', enable ? 0 : -1);
@@ -352,18 +353,18 @@ export default class GridManager {
                         const nextElement = this.getNextOutsideTabbableElement(event.shiftKey);
                         nextElement?.focus();
                         event.preventDefault();
-                    } else {
+                    } else if (currentCell.row > 0 && !event.shiftKey) { // don't activate edit mode if shift-tabbing away from table
                         this.toggleEditMode(currentCell, true);
                     }
                 }
                 return;
             default:
-                this.onKeyDownCell(currentCell, event);
-                return;
+                break;
         }
 
         if (nextCell) {
             this.focusCell(nextCell, event);
+            this.onKeyDownCell(nextCell, event);
         }
 
         if (!this.editMode && pressedArrowKey) {

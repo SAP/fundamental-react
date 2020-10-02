@@ -68,6 +68,9 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const tableCheckboxClasses = classnames(
         'fd-table__cell',
         'fd-table__cell--checkbox',
+        {
+            'fd-table__cell--focusable': keyboardNavigation === 'cell'
+        },
         tableCheckboxClassName
     );
 
@@ -103,14 +106,15 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const [instructionsText, setInstructionsText] = useState('');
 
     const onKeyDownCell = (cell, event) => {
-        if (keyboardNavigation === 'row' && event.target.matches(GridSelector.ROW)) {
-            const key = event.which || event.keyCode;
+        const key = event.which || event.keyCode;
 
-            if (key === keycode.codes.space) {
-                selection.onSelectRow(cell.row - 1);
-                event.preventDefault();
-            }
+        if (keyboardNavigation === 'row' && event.target.matches(GridSelector.ROW) && key === keycode.codes.space) {
+            selection.onSelectRow(cell.row - 1);
+            event.preventDefault();
+            return;
         }
+
+        setInstructionsText(generateInstructionsText(cell, event));
     };
 
     const onClickRowHandler = (cell) => {
@@ -122,28 +126,55 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     };
 
     const onFocusCell = (cell, event) => {
-        const { row, col } = cell;
-        const key = event.which || event.keyCode;
-        const navigatedHorizontally = (key === keycode.codes.left || key === keycode.codes.right) && col > 0;
-        const navigatedVertically = (key === keycode.codes.up || key === keycode.codes.down) && row > 0;
-        if (gridManager.current?.editMode) {
-            setInstructionsText(localizedText.editModeDisable);
-        } else {
-            let newInstructionsText = '';
-            if (navigatedVertically) {
-                newInstructionsText += `${localizedText.row} ${row} `;
-            } else if (navigatedHorizontally) {
-                newInstructionsText += `${localizedText.column} ${col} ${headers[col]} `;
-            } else if (keyboardNavigation !== 'row') {
-                newInstructionsText += `${localizedText.arrowKeys} `;
-            } else {
-                newInstructionsText += `${localizedText.rowArrowKeys} ${localizedText.rowSelection} ${localizedText.rowClick}`;
-            }
-            if (gridManager.current?.isEditableCell(cell) && keyboardNavigation === 'cell') {
-                newInstructionsText += localizedText.editModeEnable;
-            }
-            setInstructionsText(newInstructionsText);
+        setInstructionsText(generateInstructionsText(cell, event));
+    };
+
+    const onBlurTable = (event) => {
+        if (event.target === tableRef.current) {
+            setInstructionsText('');
         }
+    };
+
+    const generateInstructionsText = (cell, event) => {
+        if (gridManager.current?.editMode) {
+            return localizedText.editModeDisable;
+        }
+
+        let newInstructionsText = '';
+
+        switch (event.type) {
+            case 'focus':
+                if (instructionsText.length === 0) {
+                    if (keyboardNavigation !== 'row') {
+                        newInstructionsText += `${localizedText.arrowKeys} `;
+                    } else {
+                        newInstructionsText += `${localizedText.rowArrowKeys} ${localizedText.rowSelection} ${localizedText.rowClick}`;
+                    }
+                }
+                break;
+
+            case 'keydown':
+                const { row, col } = cell;
+                const key = event.which || event.keyCode;
+
+                const navigatedHorizontally = (key === keycode.codes.left || key === keycode.codes.right) && col > 0;
+                const navigatedVertically = (key === keycode.codes.up || key === keycode.codes.down) && row > 0;
+
+                if (navigatedVertically) {
+                    newInstructionsText += `${localizedText.row} ${row} `;
+                } else if (navigatedHorizontally) {
+                    newInstructionsText += `${localizedText.column} ${col} ${headers[col]} `;
+                }
+                break;
+            default:
+                break;
+        }
+
+        if (gridManager.current?.isEditableCell(cell) && keyboardNavigation === 'cell') {
+            newInstructionsText += localizedText.editModeEnable;
+        }
+
+        return newInstructionsText;
     };
 
     let checkboxHeader;
@@ -161,6 +192,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     return (
         <table {...props} aria-describedby={captionId}
             className={tableClasses}
+            onBlur={onBlurTable}
             ref={tableRefCallback}
             role={keyboardNavigation ? 'grid' : 'table'}>
             <caption aria-live='polite' className='fd-table__caption'
