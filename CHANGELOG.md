@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.7...v0.13.1-rc.8) (2020-10-02)
+
+
+### Bug Fixes
+
+* add title to index.js ([#1230](https://github.com/SAP/fundamental-react/issues/1230)) ([7d64355](https://github.com/SAP/fundamental-react/commit/7d64355c2863a0528d3ad30aef1f38b0f7de2e2f))
+
 ### [0.13.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.6...v0.13.1-rc.7) (2020-10-01)
 
 
