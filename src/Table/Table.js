@@ -237,6 +237,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                                         'fd-table__cell----no-padding'
                                     )}>
                                     <Icon
+                                        ariaHidden
                                         className={tableNavigationIconClasses}
                                         glyph='navigation-right-arrow' />
                                 </td>
@@ -301,11 +302,11 @@ Table.propTypes = {
         /** Localized string for 'row' */
         row: PropTypes.string,
         /** Localized string informing screen reader users how to navigate between rows */
-        rowArrowKeys: PropTypes.stirng,
+        rowArrowKeys: PropTypes.string,
         /** Localized string informing screen reader users how to click rows */
-        rowClick: PropTypes.stirng,
+        rowClick: PropTypes.string,
         /** Localized string informing screen reader users how to select rows */
-        rowSelection: PropTypes.stirng,
+        rowSelection: PropTypes.string,
         /** Localized string for 'column' */
         column: PropTypes.string
     }),
@@ -320,12 +321,12 @@ Table.propTypes = {
          * @param {number} index - Index of the row being selected, or -1 for the header row.
          * @returns {boolean}
          */
-        isSelected: PropTypes.func.isRequired,
+        isSelected: PropTypes.func,
         /** Callback function; triggered when a row is selected
          * @param {number} index - Index of the row being selected, or -1 for the header row.
          * @returns {void}
          */
-        onSelectRow: PropTypes.func.isRequired
+        onSelectRow: PropTypes.func
     }),
     /** Additional classes to be added to the `<tbody>` element */
     tableBodyClassName: PropTypes.string,

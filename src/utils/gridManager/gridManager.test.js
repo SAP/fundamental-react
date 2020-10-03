@@ -387,6 +387,48 @@ describe('GridManager', () => {
                 expect(gridNode.querySelector('#row-3').getAttribute('tabindex')).toEqual('-1');
                 expect(gridNode.querySelector('#textinput-3-3').getAttribute('tabindex')).toEqual('0');
             });
+
+            it('should call onClickRow when pressing the Enter key', () => {
+                const spyFunc = jest.fn();
+                const manager = new GridManager({
+                    gridNode,
+                    focusOnInit: true,
+                    onClickRow: spyFunc,
+                    rowNavigation: true,
+                    firstFocusedCoordinates: { row: 3, col: 0 }
+                });
+
+                const event = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#row-3'),
+                    keyCode: keycode.codes.enter
+                };
+
+                manager.handleKeyDown(event);
+
+                expect(spyFunc).toBeCalledTimes(1);
+            });
+
+            it('should call onKeyDownCell when pressing an unspecified key', () => {
+                const spyFunc = jest.fn();
+                const manager = new GridManager({
+                    gridNode,
+                    focusOnInit: true,
+                    onKeyDownCell: spyFunc,
+                    rowNavigation: true,
+                    firstFocusedCoordinates: { row: 3, col: 0 }
+                });
+
+                const event = {
+                    preventDefault: () => {},
+                    target: gridNode.querySelector('#row-3'),
+                    keyCode: keycode.codes.space
+                };
+
+                manager.handleKeyDown(event);
+
+                expect(spyFunc).toBeCalledTimes(1);
+            });
         });
     });
 });
