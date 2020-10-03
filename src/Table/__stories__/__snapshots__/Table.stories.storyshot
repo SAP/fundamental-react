@@ -1941,6 +1941,7 @@ exports[`Storyshots Component API/Table With Row Navigation 1`] = `
           className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
         >
           <i
+            aria-hidden={true}
             className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
             role="img"
           />
@@ -2022,6 +2023,7 @@ exports[`Storyshots Component API/Table With Row Navigation 1`] = `
           className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
         >
           <i
+            aria-hidden={true}
             className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
             role="img"
           />
@@ -2103,6 +2105,7 @@ exports[`Storyshots Component API/Table With Row Navigation 1`] = `
           className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
         >
           <i
+            aria-hidden={true}
             className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
             role="img"
           />
@@ -2184,6 +2187,7 @@ exports[`Storyshots Component API/Table With Row Navigation 1`] = `
           className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
         >
           <i
+            aria-hidden={true}
             className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
             role="img"
           />
