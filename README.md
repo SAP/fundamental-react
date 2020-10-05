@@ -91,6 +91,27 @@ The following circumstances will NOT be considered a **BREAKING** change:
 * Non-visual HTML attribute changes/additions (such as `role`, `aria-*`, `data-*`)
 * An existing unit test is altered to account for non-visual HTML attribute changes/additions (such as `role`, `aria-*`, `data-*`)
 
+## CSS Modules
+
+This library supports [css-modules](https://github.com/css-modules/css-modules). The motivation for this support is to be able to include multiple versions or instances of fundamental styles on the same page without collisions in styles.  This can be useful if you have a page using fundamental-ngx alongside fundamental-react, for example.
+
+One way to use fundamental-react with hashed class names is to pass the library code through css-loader in your webpack config
+```js
+{
+    loader: 'css-loader',
+    include: [
+        path.resolve(__dirname, 'node_modules/fundamental-react')
+    ],
+    options: {
+        modules: {
+            localIdentName: '[local]-[sha1:hash:hex:6]'
+        }
+    }
+}
+```
+
+It's important to include `[local]` in the localIdentName which keeps the class name in the hash. This is because some of the style rules in fundamental-styles reference the name of the class, like `[class*=level]`.
+
 ## Known Issues
 
 Please see [Issues](https://github.com/SAP/fundamental-react/issues).
