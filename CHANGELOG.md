@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.7...v0.13.1-rc.8) (2020-10-02)
+
+
+### Bug Fixes
+
+* add title to index.js ([#1230](https://github.com/SAP/fundamental-react/issues/1230)) ([7d64355](https://github.com/SAP/fundamental-react/commit/7d64355c2863a0528d3ad30aef1f38b0f7de2e2f))
+
+### [0.13.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.6...v0.13.1-rc.7) (2020-10-01)
+
+
+### Bug Fixes
+
+* focus manager use with grid manager ([#1228](https://github.com/SAP/fundamental-react/issues/1228)) ([4946020](https://github.com/SAP/fundamental-react/commit/4946020b1de7296bc53e1115859977753eeed80e))
+
+### [0.13.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.5...v0.13.1-rc.6) (2020-09-29)
+
+
+### Features
+
+* make shellbar popovers customizable ([#1222](https://github.com/SAP/fundamental-react/issues/1222)) ([4136a37](https://github.com/SAP/fundamental-react/commit/4136a37337fe146d019d30f24f3a7d7f285ad887))
+
+
+### Bug Fixes
+
+* DatePicker footerButtonProps type ([#1225](https://github.com/SAP/fundamental-react/issues/1225)) ([1e4afc4](https://github.com/SAP/fundamental-react/commit/1e4afc4a5ffbec88d0c50deec8356e3da2253e3d))
+
+### [0.13.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.4...v0.13.1-rc.5) (2020-09-28)
+
+
+### Features
+
+* datepicker improvements ([#1224](https://github.com/SAP/fundamental-react/issues/1224)) ([5d71ff0](https://github.com/SAP/fundamental-react/commit/5d71ff0e30e1678ae062377e7312f556c5b9800c))
+
 ### [0.13.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.3...v0.13.1-rc.4) (2020-09-24)
 
 

@@ -246,6 +246,26 @@ export const dev = () => (
                 </Menu>
             )
         }}
+        popoverPropsFor={{
+            actionMenu: {
+                placement: 'bottom'
+            },
+            collapsedMobileMenu: {
+                placement: 'bottom'
+            },
+            notifications: {
+                placement: 'bottom'
+            },
+            productSwitch: {
+                placement: 'bottom-start'
+            },
+            productMenu: {
+                placement: 'bottom'
+            },
+            profileMenu: {
+                placement: 'bottom'
+            }
+        }}
         productMenu={productMenu}
         productSwitch={{
             label: 'Product Switch'

@@ -124,6 +124,7 @@ class Shellbar extends Component {
             productSwitchList,
             profile,
             profileMenu,
+            popoverPropsFor,
             className,
             backAction
         } = this.props;
@@ -155,6 +156,7 @@ class Shellbar extends Component {
                     {productTitle && !productMenu && <span className={classnames('fd-shellbar__title')}>{productTitle}</span>}
                     {productMenu && (
                         <Popover
+                            {...popoverPropsFor?.productMenu}
                             body={
                                 productMenu && (
                                     <Menu>
@@ -237,6 +239,8 @@ class Shellbar extends Component {
                                     <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')} key={index}>
                                         {action.menu ? (
                                             <Popover
+                                                placement='bottom-end'
+                                                {...popoverPropsFor?.actionMenu}
                                                 body={action.menu}
                                                 control={
                                                     <Button
@@ -254,7 +258,6 @@ class Shellbar extends Component {
                                                         )}
                                                     </Button>
                                                 }
-                                                placement='bottom-end'
                                                 popperProps={{ id: `fd-shellbar-actions-popover-${index}` }} />
                                         ) : (
                                             <Button
@@ -279,6 +282,8 @@ class Shellbar extends Component {
                     {notifications && (
                         (notifications.notificationsBody || notifications.noNotificationsBody) ? (
                             <Popover
+                                placement='bottom-end'
+                                {...popoverPropsFor?.notifications}
                                 body={
                                     ((notifications.notificationCount > 0) && notifications.notificationsBody) ||
                                         ((notifications.notificationCount <= 0) && notifications.noNotificationsBody)
@@ -300,7 +305,6 @@ class Shellbar extends Component {
                                         </Button>
                                     </div>
                                 }
-                                placement='bottom-end'
                                 popperProps={{ id: 'fd-shellbar-notifications-popover' }} />
                         ) : (
                             <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
@@ -324,6 +328,8 @@ class Shellbar extends Component {
                     {
                         (actions || searchInput || notifications) && <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--mobile')}>
                             <Popover
+                                placement='bottom-end'
+                                {...popoverPropsFor?.collapsedMobileMenu}
                                 body={
                                     <Menu>
                                         {!this.state.showCollapsedProductSwitchMenu ? (
@@ -375,7 +381,6 @@ class Shellbar extends Component {
                                         </Button>
                                     </div>
                                 }
-                                placement='bottom-end'
                                 popperProps={{ id: 'fd-shellbar-mobile-action-popover' }} />
                         </div>
                     }
@@ -383,6 +388,8 @@ class Shellbar extends Component {
                         <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--show-always')}>
                             <div className={classnames('fd-user-menu')}>
                                 <Popover
+                                    placement='bottom-end'
+                                    {...popoverPropsFor?.profileMenu}
                                     body={
                                         profileMenu && (
                                             <Menu>
@@ -438,7 +445,6 @@ class Shellbar extends Component {
                                         </button>
                                     }
                                     noArrow
-                                    placement='bottom-end'
                                     popperProps={{ id: 'fd-shellbar-profile-popover' }} />
                             </div>
                         </div>
@@ -447,6 +453,8 @@ class Shellbar extends Component {
                         <div className={classnames('fd-shellbar__action', 'fd-shellbar__action--desktop')}>
                             <div className={classnames('fd-product-switch')}>
                                 <Popover
+                                    placement='bottom-end'
+                                    {...popoverPropsFor?.productSwitch}
                                     body={
                                         <div className={classnames('fd-product-switch__body')}>
                                             <ul className={classnames('fd-product-switch__list')}>
@@ -478,7 +486,6 @@ class Shellbar extends Component {
                                         className={classnames('fd-product-switch__control', 'fd-shellbar__button', { ['fd-button']: isUsingCssModules })}
                                         glyph='grid' />}
                                     disableEdgeDetection
-                                    placement='bottom-end'
                                     popperProps={{ id: 'fd-shellbar-product-switch-popover' }} />
                             </div>
                         </div>
@@ -516,6 +523,18 @@ Shellbar.propTypes = {
     logoSAP: PropTypes.bool,
     /** Information about pending notifications */
     notifications: PropTypes.object,
+    /**
+     * Additional props to be spread to the popovers of the action menu, collapsed mobile menu, notifications menu, product menu,
+     * product switch popover and the profile menu.
+     * */
+    popoverPropsFor: {
+        actionMenu: PropTypes.object,
+        collapsedMobileMenu: PropTypes.object,
+        notifications: PropTypes.object,
+        productMenu: PropTypes.object,
+        productSwitch: PropTypes.object,
+        profileMenu: PropTypes.object
+    },
     /** Holds product titles and navigation */
     productMenu: PropTypes.array,
     /** For navigating between products. An object that contains an accessible and localized label for product switch button. */

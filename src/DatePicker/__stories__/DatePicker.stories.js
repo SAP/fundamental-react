@@ -110,7 +110,37 @@ export const localized = () => (
 localized.storyName = 'Localized DatePicker';
 
 export const rangeSelection = () => (
-    <DatePicker enableRangeSelection />
+    <Container>
+        <Row>
+            <Column>
+                <div>
+                    <FormLabel
+                        htmlFor='rangeSelection'>
+                        Select a date range
+                    </FormLabel>
+                    <DatePicker
+                        enableRangeSelection
+                        inputProps={{
+                            id: 'rangeSelection'
+                        }} />
+                </div>
+            </Column>
+            <Column>
+                <div>
+                    <FormLabel
+                        htmlFor='rangeSelectionDefaultValue'>
+                        Select a date range (default set)
+                    </FormLabel>
+                    <DatePicker
+                        defaultValue='12/04/1993 - 12/30/1992'
+                        enableRangeSelection
+                        inputProps={{
+                            id: 'rangeSelectionDefaultValue'
+                        }} />
+                </div>
+            </Column>
+        </Row>
+    </Container>
 );
 
 rangeSelection.storyName = 'Enabled Range Selection';
@@ -411,7 +441,7 @@ export const dev = () => (
         dateFormat={
             select(dateFormatOptionsLabel, dateFormatOptions, 'DD/MM/YYYY')
         }
-        defaultValue={text('Default Value', '20/06/2020')}
+        defaultValue={text('Default Value', '20/06/2020 - 18/06/2020')}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
@@ -420,8 +450,8 @@ export const dev = () => (
         disableWeekends={boolean('disable weekends', false)}
         disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
             dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
-        enableRangeSelection={boolean('enableRangeSelection', false)}
-        locale={text('locale', 'en')}
+        enableRangeSelection={boolean('enableRangeSelection', true)}
+        locale={text('locale', 'hi')}
         onChange={action('on-change')}
         onDatePickerClose={action('on-date-picker-close')}
         onInputBlur={action('on-input-blur')}
