@@ -82,7 +82,7 @@ export const disabled = () => (
 disabled.storyName = 'Disabled';
 
 export const readOnly = () => (
-    <DatePicker readOnly />
+    <DatePicker defaultValue='12/12/2012' readOnly />
 );
 
 

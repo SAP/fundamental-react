@@ -401,8 +401,6 @@ class DatePicker extends Component {
             footerButtonProps?.className
         );
 
-        const disableButton = disabled || readOnly;
-
         const inputGroup = (
             <InputGroup
                 {...inputGroupProps}
@@ -422,16 +420,18 @@ class DatePicker extends Component {
                     placeholder={this.getPlaceHolder(dateFormat)}
                     readOnly={readOnly}
                     value={this.state.formattedDate} />
-                <InputGroup.Addon
-                    {...addonProps}
-                    isButton>
-                    <Button {...buttonProps}
-                        aria-label={buttonLabel}
-                        disabled={disableButton}
-                        glyph='appointment-2'
-                        onClick={this.handleClickButton}
-                        option='transparent' />
-                </InputGroup.Addon>
+                {!readOnly && (
+                    <InputGroup.Addon
+                        {...addonProps}
+                        isButton>
+                        <Button {...buttonProps}
+                            aria-label={buttonLabel}
+                            disabled={disabled}
+                            glyph='appointment-2'
+                            onClick={this.handleClickButton}
+                            option='transparent' />
+                    </InputGroup.Addon>
+                )}
             </InputGroup>
         );
 
@@ -509,7 +509,7 @@ class DatePicker extends Component {
                     control={inputGroup}
                     disableKeyPressHandler
                     disableTriggerOnClick
-                    disabled={disableButton}
+                    disabled={disabled || readOnly}
                     modalManager={modalManager}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}

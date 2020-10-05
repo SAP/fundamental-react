@@ -1259,7 +1259,7 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
   dir="ltr"
 >
   <div
-    defaultValue=""
+    defaultValue="12/12/2012"
     onChange={[Function]}
   >
     <div
@@ -1287,25 +1287,8 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
               placeholder="MM/DD/YYYY"
               readOnly={true}
               type="text"
-              value=""
+              value="12/12/2012"
             />
-            <span
-              className="fd-input-group__addon fd-input-group__addon--button"
-            >
-              <button
-                aria-label="Choose date"
-                className="fd-button fd-button--transparent is-disabled fd-input-group__button"
-                disabled={true}
-                onClick={[Function]}
-                type="button"
-              >
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--appointment-2"
-                  role="img"
-                />
-              </button>
-            </span>
           </div>
         </div>
       </div>
