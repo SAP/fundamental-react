@@ -1,7 +1,14 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import listStyles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...listStyles
+});
 
 const ListIcon = ({ className, glyph, ...props }) => {
     const listIconClasses = classnames(

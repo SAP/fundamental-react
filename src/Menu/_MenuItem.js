@@ -1,6 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import menuItemStyles from 'fundamental-styles/dist/menu.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...menuItemStyles
+});
 
 const MenuItem = ({
     addonAfter,
@@ -50,7 +57,7 @@ const MenuItem = ({
                 onClick={onClick}
                 role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
-                <span className='fd-menu__title'>{children}</span>
+                <span className={classnames('fd-menu__title')}>{children}</span>
                 {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
             </a>);
         } else if (children && React.isValidElement(children)) {
@@ -63,7 +70,7 @@ const MenuItem = ({
                 <>
                     {addonBefore && <span {...addonProps} {...urlProps}
                         className={addonBeforeClassnames} />}
-                    <span className='fd-menu__title'>
+                    <span className={classnames('fd-menu__title')}>
                         {React.Children.map(children, child => {
                             return React.cloneElement(child, {
                                 className: childrenClassnames,
@@ -81,7 +88,7 @@ const MenuItem = ({
                 onClick={onClick}
                 role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
-                <span className='fd-menu__title'>{children}</span>
+                <span className={classnames('fd-menu__title')}>{children}</span>
                 {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
             </a>);
         }
@@ -100,7 +107,7 @@ const MenuItem = ({
                 role='presentation'>
                 {renderLink()}
             </li>
-            {separator && <span className='fd-menu__separator' />}
+            {separator && <span className={classnames('fd-menu__separator')} />}
         </>
     );
 };

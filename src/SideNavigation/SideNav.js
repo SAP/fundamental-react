@@ -1,11 +1,15 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/button.css';
-import 'fundamental-styles/dist/side-nav.css';
+import buttonStyles from 'fundamental-styles/dist/button.css';
+import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
+
+const classnames = classnamesBind.bind({
+    ...buttonStyles,
+    ...sideNavStyles
+});
 
 /** The left navigation can always display or expand/collapse using the menu icon within the global
 navigation. */
@@ -45,7 +49,7 @@ class SideNav extends Component {
 
         return (
             <div {...rest} className={sideNavClasses}>
-                <a className='fd-side-nav__skip-link' href={skipLink.href}>{skipLink.label}</a>
+                <a className={classnames('fd-side-nav__skip-link')} href={skipLink.href}>{skipLink.label}</a>
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         onItemSelect: this.handleSelect,

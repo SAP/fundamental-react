@@ -1,7 +1,9 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/form-label.css';
+import styles from 'fundamental-styles/dist/form-label.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **FormLabel** is used to identify form components such as
  * **FormInput**, **Checkbox** and **TextArea**. Best practice is to use this component as a child of **FormGroup**. */

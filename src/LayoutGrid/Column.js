@@ -1,9 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { mapSize, mapSizeClasses, resolveSpan, validSpan } from './_layoutGridUtils';
-import 'fundamental-styles/dist/layout-grid.css';
+import styles from 'fundamental-styles/dist/layout-grid.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const Column = React.forwardRef(({ children, className, offset, offsetPosition, span, ...props }, ref) => {
 

@@ -1,11 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import React, { useCallback, useRef, useState } from 'react';
-import 'fundamental-styles/dist/table.css';
+import styles from 'fundamental-styles/dist/table.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
 const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, tableBodyClassName,

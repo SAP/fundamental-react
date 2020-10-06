@@ -6,6 +6,6 @@ module.exports = {
     setupFiles: ['../config/jest/setup.js'],
     moduleFileExtensions: ['js', 'json', 'jsx', 'css', 'node'],
     moduleNameMapper: {
-        '^.+\\.(css)$': 'babel-jest'
+        '^.+\\.(css)$': '<rootDir>/../config/jest/CSSStub.js'
     }
 };

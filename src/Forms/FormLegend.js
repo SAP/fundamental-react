@@ -1,7 +1,9 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/fieldset.css';
+import styles from 'fundamental-styles/dist/fieldset.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** See the **FormFieldset** component for detailed usage information. */
 const FormLegend = React.forwardRef(({ children, className, ...props }, ref) => {

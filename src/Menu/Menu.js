@@ -1,9 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import MenuItem from './_MenuItem';
 import MenuList from './_MenuList';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/menu.css';
+import styles from 'fundamental-styles/dist/menu.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Menu** is the listing structure with optional headers to create menus. Commonly used as the
 contents when composing “dropdowns”, “contextual menus”,  etc, when paired with the **Popover**

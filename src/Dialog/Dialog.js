@@ -1,5 +1,5 @@
 import chain from 'chain-function';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { DIALOG_SIZES } from '../utils/constants';
 import FocusLock from 'react-focus-lock';
@@ -7,9 +7,15 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Title from '../Title/Title';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/bar.css';
-import 'fundamental-styles/dist/dialog.css';
+import barStyles from 'fundamental-styles/dist/bar.css';
+import dialogStyles from 'fundamental-styles/dist/dialog.css';
 
+const classnames = classnamesBind.bind({
+    ...barStyles,
+    ...dialogStyles
+});
+const barClassnames = classnamesBind.bind(barStyles);
+const isUsingCssModules = Object.keys(dialogStyles).length > 0;
 /** A **Dialog** is a container generally displayed in response to an action. It is used for short forms,
  * confirmation messages or to display contextual information that does not require a page.\n\nTo
  * display the **Dialog** dialog, pass a boolean value to the \`show\` property of the component. It is
@@ -83,9 +89,10 @@ class Dialog extends Component {
             'fd-dialog__header',
             'fd-bar',
             {
-                'fd-bar--header-with-subheader': subheader
+                'fd-bar--header-with-subheader': subheader,
+                [barClassnames('fd-bar')]: isUsingCssModules
             },
-            className
+            className,
         );
 
         if (!show) {
@@ -106,10 +113,10 @@ class Dialog extends Component {
                         className={contentClasses}
                         role='document'>
                         <div {...headerProps} className={headerClasses}>
-                            {header && (<div className='fd-bar__element'>
+                            {header && (<div className={classnames('fd-bar__element')}>
                                 {header}
                             </div>)}
-                            <div className='fd-bar__element'>
+                            <div className={classnames('fd-bar__element')}>
                                 <Title
                                     {...titleProps}
                                     level={headingLevel}
@@ -118,25 +125,25 @@ class Dialog extends Component {
                                 </Title>
                             </div>
                             {subheader && (
-                                <div className='fd-dialog__subheader fd-bar fd-bar--subheader'>
-                                    <div className='fd-bar__left'>
-                                        <div className='fd-bar__element'>
+                                <div className={classnames('fd-dialog__subheader', 'fd-bar', 'fd-bar--subheader', { [barClassnames('fd-bar')]: isUsingCssModules })}>
+                                    <div className={classnames('fd-bar__left')}>
+                                        <div className={classnames('fd-bar__element')}>
                                             {subheader}
                                         </div>
                                     </div>
                                 </div>
                             )}
                         </div>
-                        <div {...bodyProps} className='fd-dialog__body'>
+                        <div {...bodyProps} className={classnames('fd-dialog__body')}>
                             {children}
                         </div>
                         <footer
                             {...footerProps}
-                            className='fd-dialog__footer fd-bar fd-bar--footer'>
-                            <div className='fd-bar__right'>
+                            className={classnames('fd-dialog__footer', 'fd-bar', 'fd-bar--footer', { [barClassnames('fd-bar')]: isUsingCssModules })}>
+                            <div className={classnames('fd-bar__right')}>
                                 {React.Children.toArray(actions).map((child, index) => (
-                                    <div className='fd-bar__element' key={index}>
-                                        {React.cloneElement(child, { className: 'fd-dialog__decisive-button', onClick: chain(this.handleCloseClick, child.props?.onClick) })}
+                                    <div className={classnames('fd-bar__element')} key={index}>
+                                        {React.cloneElement(child, { className: classnames('fd-dialog__decisive-button'), onClick: chain(this.handleCloseClick, child.props?.onClick) })}
                                     </div>
                                 ))}
                             </div>

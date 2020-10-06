@@ -1,11 +1,14 @@
 import Checkbox from '../Forms/Checkbox';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import FormRadioItem from '../Forms/FormRadioItem';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import { TREE_NODE_HIGHLIGHTS } from '../utils/constants';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
+import styles from 'fundamental-styles/dist/tree.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const TreeNode = ({
     actions,
@@ -109,7 +112,7 @@ const TreeNode = ({
         });
 
     const nodeContent = (
-        <span className='fd-tree__text'>
+        <span className={classnames('fd-tree__text')}>
             {nodeContentPayload}
         </span>
     );
@@ -158,7 +161,7 @@ const TreeNode = ({
 
 
     const renderIcons = (icons) => {
-        return icons && icons?.length && icons?.map((icon, index) => (<Icon className='fd-tree__icon' glyph={icon}
+        return icons && icons?.length && icons?.map((icon, index) => (<Icon className={classnames('fd-tree__icon')} glyph={icon}
             key={index} />)) || '';
     };
 

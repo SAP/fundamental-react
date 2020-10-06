@@ -1,9 +1,17 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...sideNavStyles
+});
+const isUsingCssModules = Object.keys(sideNavStyles).length > 0;
 
 class SideNavListItem extends React.Component {
     constructor(props) {
@@ -55,9 +63,9 @@ class SideNavListItem extends React.Component {
                     {glyph ? (
                         <span
                             aria-hidden
-                            className={`fd-nested-list__icon sap-icon--${glyph}`} />
+                            className={classnames('fd-nested-list__icon', `sap-icon--${glyph}`)} />
                     ) : null}
-                    <span className='fd-nested-list__title'>
+                    <span className={classnames('fd-nested-list__title')}>
                         {name}
                     </span>
                 </a>
@@ -85,7 +93,7 @@ class SideNavListItem extends React.Component {
                             aria-expanded={this.state.expanded}
                             aria-haspopup='true'
                             aria-label={expandSubmenuLabel}
-                            className='fd-nested-list__button'
+                            className={classnames('fd-nested-list__button', { ['fd-button']: isUsingCssModules })}
                             onClick={() => {
                                 this.handleExpand();
                             }} />
@@ -98,7 +106,7 @@ class SideNavListItem extends React.Component {
 
         return (
             <li {...props}
-                className='fd-nested-list__item'
+                className={classnames('fd-nested-list__item')}
                 key={id}>
                 {url && renderLink()}
                 {React.Children.toArray(children).map(child => {
@@ -108,9 +116,9 @@ class SideNavListItem extends React.Component {
                                 {glyph ? (
                                     <span
                                         aria-hidden
-                                        className={`fd-nested-list__icon sap-icon--${glyph}`} />
+                                        className={classnames('fd-nested-list__icon', `sap-icon--${glyph}`)} />
                                 ) : null}
-                                <span className='fd-nested-list__title'>{child.props.children}</span>
+                                <span className={classnames('fd-nested-list__title')}>{child.props.children}</span>
                             </React.Fragment>),
                             className: getClasses(),
                             onClick: (e) => {

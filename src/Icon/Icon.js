@@ -1,8 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/icon.css';
+import styles from 'fundamental-styles/dist/icon.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** Icons are used throughout the UI to save space, allow for visual clarity
 and focus, and for fun. Icons can be used adaptively if desired, but at

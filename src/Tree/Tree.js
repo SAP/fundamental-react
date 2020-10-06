@@ -1,9 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import TreeNode from './TreeNode';
 import useUniqueId from '../utils/useUniqueId';
 import React, { useState } from 'react';
-import 'fundamental-styles/dist/tree.css';
+import styles from 'fundamental-styles/dist/tree.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /**
  *
@@ -163,11 +165,11 @@ const Tree = React.forwardRef(({
             {!emptyTree ?
                 levelOneNodes
                 : (
-                    <li aria-level='1' className='fd-tree__item'
+                    <li aria-level='1' className={classnames('fd-tree__item')}
                         role='treeitem'>
-                        <div className='fd-tree__item-container'>
-                            <div className='fd-tree__content'>
-                                <span className='fd-tree__text'>{emptyText}</span>
+                        <div className={classnames('fd-tree__item-container')}>
+                            <div className={classnames('fd-tree__content')}>
+                                <span className={classnames('fd-tree__text')}>{emptyText}</span>
                             </div>
                         </div>
                     </li>)}

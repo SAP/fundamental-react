@@ -1,16 +1,19 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from 'fundamental-styles/dist/breadcrumb.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const BreadcrumbItem = ({ url, name, className, children, ...props }) => {
     const renderLink = () => {
         if (!children && url) {
             return (
-                <a className='fd-breadcrumb__link' href={url}>{name}</a>
+                <a className={classnames('fd-breadcrumb__link')} href={url}>{name}</a>
             );
         } else if (children) {
             return React.cloneElement(children, {
-                'className': 'fd-breadcrumb__link'
+                'className': classnames('fd-breadcrumb__link')
             });
         }
     };

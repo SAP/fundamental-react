@@ -1,9 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import Popover from '../Popover/Popover';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/inline-help.css';
+import styles from 'fundamental-styles/dist/inline-help.css';
+
+const classnames = classnamesBind.bind(styles);
 
 
 /** **InlineHelp** is used to display help text in a **Popover**, often inline with headers,

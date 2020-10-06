@@ -1,9 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { TAB_SIZES } from '../utils/constants';
 import { TabContent } from './_TabContent';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/tabs.css';
+import styles from 'fundamental-styles/dist/tabs.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **TabGroup** is a collection of **Tab** components.  Each **Tab** is based on a folder
 metaphor and is used to separate content into different sections.

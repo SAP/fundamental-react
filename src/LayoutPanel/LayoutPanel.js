@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import LayoutPanelActions from './_LayoutPanelActions';
 import LayoutPanelBody from './_LayoutPanelBody';
 import LayoutPanelFilters from './_LayoutPanelFilters';
@@ -7,8 +7,13 @@ import LayoutPanelHead from './_LayoutPanelHead';
 import LayoutPanelHeader from './_LayoutPanelHeader';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/layout-grid.css';
-import 'fundamental-styles/dist/layout-panel.css';
+import layoutGridStyles from 'fundamental-styles/dist/layout-grid.css';
+import layoutPanelStyles from 'fundamental-styles/dist/layout-panel.css';
+
+const classnames = classnamesBind.bind({
+    ...layoutGridStyles,
+    ...layoutPanelStyles
+});
 
 /** A **LayoutPanel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
 Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand

@@ -32,6 +32,20 @@ module.exports = {
             include: path.resolve(__dirname, '../'),
           });
 
+        config.module.rules
+            .find(rule => rule.test.toString() === /\.css$/.toString())
+            .use = [
+                'style-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                        modules: {
+                            localIdentName: '[local]-[sha1:hash:hex:6]'
+                        }
+                    }
+                }
+            ];
+
         return merge(config, {
             optimization: {
                 splitChunks: {

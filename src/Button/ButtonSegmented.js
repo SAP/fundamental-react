@@ -1,6 +1,9 @@
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/segmented-button.css';
+import styles from 'fundamental-styles/dist/segmented-button.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** Group a series of buttons together on a single line with the segmented button.
  * Only one of the options can be active at a time, the others remain or become inactive.
@@ -10,7 +13,7 @@ const ButtonSegmented = React.forwardRef(({ children, ...props }, ref) => (
     <div
         {...props}
         aria-label='Group label'
-        className='fd-segmented-button'
+        className={classnames('fd-segmented-button')}
         ref={ref}
         role='group'>
         {children}

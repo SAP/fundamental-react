@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
@@ -7,7 +7,9 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/calendar.css';
+import styles from 'fundamental-styles/dist/calendar.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Calendar** is commonly used as the contents of a **Popover** when composing a **DatePicker**.
 It is rarely used on its own as a standalone component. Internally it uses and accepts [Moment.js](https://momentjs.com/) date objects*/
@@ -69,9 +71,9 @@ class Calendar extends Component {
         const { gridBoundaryContext, refocusGrid } = this.state;
         const tableElement = this.tableRef.current;
         const focusedDateElement = tableElement.querySelector('[data-is-focused=true]');
-        const selectedDateElement = tableElement.querySelector('.is-selected');
-        const todayDateElement = tableElement.querySelector('.fd-calendar__item--current');
-        const disabledDateElements = tableElement.querySelectorAll('.fd-calendar__item--other-month');
+        const selectedDateElement = tableElement.querySelector(classnames('.is-selected'));
+        const todayDateElement = tableElement.querySelector(classnames('.fd-calendar__item--current'));
+        const disabledDateElements = tableElement.querySelectorAll(classnames('.fd-calendar__item--other-month'));
         const focusOnInit = newView || gridBoundaryContext || refocusGrid;
 
         let firstFocusedElement;
@@ -266,7 +268,7 @@ class Calendar extends Component {
                         key={month} name={month}
                         onClick={() => this.changeMonth(month)}
                         onFocus={this.handleMonthFocus(month)}>
-                        <span className='fd-calendar__text'
+                        <span className={classnames('fd-calendar__text')}
                             onKeyDown={(e) => this.onKeyDownDay(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
                         </span>
@@ -275,20 +277,20 @@ class Calendar extends Component {
             });
 
             return (
-                <tr className='fd-calendar__row' key={`month-row-${index}`}>
+                <tr className={classnames('fd-calendar__row')} key={`month-row-${index}`}>
                     {monthCells}
                 </tr>
             );
         });
 
         return (
-            <div className='fd-calendar__months'>
+            <div className={classnames('fd-calendar__months')}>
                 <table
                     {...monthProps}
-                    className='fd-calendar__table'
+                    className={classnames('fd-calendar__table')}
                     ref={this.tableRef}
                     role='grid'>
-                    <tbody className='fd-calendar__group'>
+                    <tbody className={classnames('fd-calendar__group')}>
                         {listOfMonths}
                     </tbody>
                 </table>
@@ -325,7 +327,7 @@ class Calendar extends Component {
                         name={element}
                         onClick={() => this.changeYear(element)}
                         onFocus={this.handleYearFocus(element)}>
-                        <span className='fd-calendar__text'
+                        <span className={classnames('fd-calendar__text')}
                             onKeyDown={(e) => this.onKeyDownDay(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
                         </span>
@@ -334,19 +336,19 @@ class Calendar extends Component {
             });
 
             return (
-                <tr className='fd-calendar__row' key={`year-row-${index}`}>
+                <tr className={classnames('fd-calendar__row')} key={`year-row-${index}`}>
                     {yearCells}
                 </tr>
             );
         });
         return (
-            <div className='fd-calendar__years'>
+            <div className={classnames('fd-calendar__years')}>
                 <table
                     {...yearListProps}
-                    className='fd-calendar__table'
+                    className={classnames('fd-calendar__table')}
                     ref={this.tableRef}
                     role='grid'>
-                    <tbody className='fd-calendar__group'>
+                    <tbody className={classnames('fd-calendar__group')}>
                         {listOfYears}
                     </tbody>
                 </table>
@@ -464,9 +466,9 @@ class Calendar extends Component {
         const showToday = this.props.showToday && !this.state.showMonths && !this.state.showYears;
 
         return (
-            <div className='fd-calendar__header'>
-                <div className='fd-calendar__navigation'>
-                    <div className='fd-calendar__action'>
+            <div className={classnames('fd-calendar__header')}>
+                <div className={classnames('fd-calendar__navigation')}>
+                    <div className={classnames('fd-calendar__action')}>
                         <Button
                             aria-label={previousButtonLabel}
                             compact={this.props.compact}
@@ -474,7 +476,7 @@ class Calendar extends Component {
                             onClick={this.handlePrevious}
                             option='transparent' />
                     </div>
-                    <div className='fd-calendar__action'>
+                    <div className={classnames('fd-calendar__action')}>
                         <Button
                             compact={this.props.compact}
                             onClick={this.showMonths}
@@ -482,7 +484,7 @@ class Calendar extends Component {
                             {months[this.state.currentDateDisplayed.month()]}
                         </Button>
                     </div>
-                    <div className='fd-calendar__action'>
+                    <div className={classnames('fd-calendar__action')}>
                         <Button
                             compact={this.props.compact}
                             onClick={this.showYears}
@@ -491,7 +493,7 @@ class Calendar extends Component {
                         </Button>
                     </div>
 
-                    <div className='fd-calendar__action'>
+                    <div className={classnames('fd-calendar__action')}>
                         <Button
                             aria-label={nextButtonLabel}
                             compact={this.props.compact}
@@ -500,7 +502,7 @@ class Calendar extends Component {
                             option='transparent' />
                     </div>
                     {showToday &&
-                        <div className='fd-calendar__action'>
+                        <div className={classnames('fd-calendar__action')}>
                             <Button
                                 compact={this.props.compact}
                                 onClick={this.handleToday}
@@ -532,13 +534,13 @@ class Calendar extends Component {
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
-                <th className='fd-calendar__item fd-calendar__item--side-helper' key={index}>
-                    <span className='fd-calendar__text'>
+                <th className={classnames('fd-calendar__item', 'fd-calendar__item--side-helper')} key={index}>
+                    <span className={classnames('fd-calendar__text')}>
                         {shiftedDaysName[index]}
                     </span>
                 </th>);
         }
-        return <tr className='fd-calendar__row'>{weekDays}</tr>;
+        return <tr className={classnames('fd-calendar__row')}>{weekDays}</tr>;
 
     }
 
@@ -608,7 +610,7 @@ class Calendar extends Component {
                         role='gridcell'>
                         <span
                             aria-label={ariaLabel}
-                            className='fd-calendar__text'
+                            className={classnames('fd-calendar__text')}
                             onKeyDown={isEnabledDate(day, this.props) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
@@ -618,14 +620,14 @@ class Calendar extends Component {
             }
 
             rows.push(
-                <tr className='fd-calendar__row' key={day} >
+                <tr className={classnames('fd-calendar__row')} key={day} >
                     {days}
                 </tr>
             );
 
             days = [];
         }
-        return <tbody {...tableBodyProps} className='fd-calendar__group'>{rows}</tbody>;
+        return <tbody {...tableBodyProps} className={classnames('fd-calendar__group')}>{rows}</tbody>;
 
     }
 
@@ -639,13 +641,13 @@ class Calendar extends Component {
         }
 
         return (
-            <div className='fd-calendar__dates'>
+            <div className={classnames('fd-calendar__dates')}>
                 <table
                     {...tableProps}
-                    className='fd-calendar__table'
+                    className={classnames('fd-calendar__table')}
                     ref={this.tableRef}
                     role='grid'>
-                    <thead {...tableHeaderProps} className='fd-calendar__group'>
+                    <thead {...tableHeaderProps} className={classnames('fd-calendar__group')}>
                         {this.generateWeekdays()}
                     </thead>
                     {this.generateDays(tableBodyProps)}
@@ -697,7 +699,7 @@ class Calendar extends Component {
                     className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
-                    <div className='fd-calendar__content'
+                    <div className={classnames('fd-calendar__content')}
                         onBlur={(e) => {
                             if (!e.currentTarget.contains(e.relatedTarget)) {
                                 this.setState({ screenReaderText: '' });
@@ -716,7 +718,7 @@ class Calendar extends Component {
                     </div>
                 </div>
                 <div aria-live='polite'
-                    className='fd-calendar__content fd-calendar__content--screen-reader-only'>
+                    className={classnames('fd-calendar__content', 'fd-calendar__content--screen-reader-only')}>
                     {this.state.screenReaderText}
                 </div>
             </>
