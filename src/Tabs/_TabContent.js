@@ -1,6 +1,9 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from 'fundamental-styles/dist/tabs.css';
+
+const classnames = classnamesBind.bind(styles);
 
 export const TabContent = (props) => {
     const { children, selected, className, ...rest } = props;

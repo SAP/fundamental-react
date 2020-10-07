@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import FormInput from '../Forms/FormInput';
 import FormLabel from '../Forms/FormLabel';
 import FormTextArea from '../Forms/FormTextarea';
@@ -7,8 +7,16 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/input-group.css';
-import 'fundamental-styles/dist/localization-editor.css';
+import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
+import localizationEditorStyles from 'fundamental-styles/dist/localization-editor.css';
+import menuStyles from 'fundamental-styles/dist/menu.css';
+
+const classnames = classnamesBind.bind({
+    ...menuStyles,
+    ...inputGroupStyles,
+    ...localizationEditorStyles
+});
+const isUsingCssModules = Object.keys(localizationEditorStyles).length > 0;
 
 const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
     ...props }, ref) => {
@@ -20,6 +28,9 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
 
     const localizationInputClasses = classnames(
         'fd-input-group__input',
+        {
+            'fd-textarea': textarea && isUsingCssModules
+        },
         inputClassName
     );
 
@@ -46,9 +57,9 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
 
                                 return (
                                     <li {...itemProps}
-                                        className='fd-menu__item'
+                                        className={classnames('fd-menu__item')}
                                         key={index}>
-                                        <div className='fd-input-group fd-input-group--after'>
+                                        <div className={classnames('fd-input-group', 'fd-input-group--after')}>
                                             {textarea ? (
                                                 <FormTextArea
                                                     {...inputProps}
@@ -61,9 +72,9 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                                     placeholder={placeholder} />
                                             )}
                                             <span
-                                                className='fd-input-group__addon fd-input-group__addon--button'>
+                                                className={classnames('fd-input-group__addon', 'fd-input-group__addon--button')}>
                                                 <Button
-                                                    className='fd-input-group__button'
+                                                    className={classnames('fd-input-group__button')}
                                                     compact={compact}
                                                     option='transparent'>
                                                     {language}
@@ -78,7 +89,7 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                     </Menu>
                 }
                 control={
-                    <div className='fd-input-group fd-input-group--after'>
+                    <div className={classnames('fd-input-group', 'fd-input-group--after')}>
                         {textarea ? (
                             <FormTextArea
                                 {...control.inputProps}
@@ -92,10 +103,10 @@ const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, texta
                                 placeholder={control.placeholder} />
                         )}
                         <span
-                            className='fd-input-group__addon fd-input-group__addon--button'>
+                            className={classnames('fd-input-group__addon', 'fd-input-group__addon--button')}>
                             <Button
                                 {...control.buttonProps}
-                                className='fd-input-group__button'
+                                className={classnames('fd-input-group__button')}
                                 compact={compact}
                                 option='transparent'>
                                 {control.language}

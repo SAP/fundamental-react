@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import ListByline from './_ListByline';
 import ListFooter from './_ListFooter';
@@ -10,7 +10,9 @@ import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
-import 'fundamental-styles/dist/list.css';
+import styles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** **List** and **Table** are similar as both usually contain a vertical list of data,
 but lists generally contain basic data and tables tend to hold more complex data.

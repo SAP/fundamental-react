@@ -1,7 +1,9 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/link.css';
+import styles from 'fundamental-styles/dist/link.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** Use an **Link** component to display a link. */
 const Link = React.forwardRef(({ className, children, disabled, subtle, ...props }, ref) => {

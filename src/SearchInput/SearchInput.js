@@ -1,5 +1,5 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
@@ -11,6 +11,9 @@ import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import styles from 'fundamental-styles/dist/input-group.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const SearchInput = React.forwardRef( ({
     className,

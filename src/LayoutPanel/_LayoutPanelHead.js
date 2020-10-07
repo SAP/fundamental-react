@@ -1,8 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Title from '../Title/Title';
+import styles from 'fundamental-styles/dist/layout-panel.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const LayoutPanelHead = props => {
     const { title, description, className, headingLevel, headingStyle, ...rest } = props;
@@ -15,7 +18,7 @@ const LayoutPanelHead = props => {
     return (
         <div {...rest} className={panelHeadClasses}>
             {title ?
-                <div className='fd-layout-panel__title'>
+                <div className={classnames('fd-layout-panel__title')}>
                     <Title
                         level={headingLevel}
                         levelStyle={headingStyle}
@@ -23,7 +26,7 @@ const LayoutPanelHead = props => {
                         {title}
                     </Title>
                 </div> : null}
-            {description ? <p className='fd-layout-panel__description'>{description}</p> : null}
+            {description ? <p className={classnames('fd-layout-panel__description')}>{description}</p> : null}
         </div>
     );
 };

@@ -1,11 +1,15 @@
 import Button from '../Button/Button';
+import classnamesBind from 'classnames/bind';
 import FormInput from '../Forms/FormInput';
 import InputGroup from '../InputGroup/InputGroup';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import styles from 'fundamental-styles/dist/input-group.css';
 
-const INVALID = 'is-invalid';
-const VALID = 'fd-input-group__input';
+const classnames = classnamesBind.bind(styles);
+
+const INVALID = classnames('is-invalid');
+const VALID = classnames('fd-input-group__input');
 
 class TimePickerItem extends Component {
     constructor(props) {

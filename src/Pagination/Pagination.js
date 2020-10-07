@@ -1,10 +1,11 @@
 
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/pagination.css';
+import styles from 'fundamental-styles/dist/pagination.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** **Pagination** is commonly used for tables and tiles. It allows
 users to see how many pages of content exist, to navigate and
@@ -142,7 +143,7 @@ class Pagination extends Component {
     * Returns the ... snippet (ellipsis) which denotes more pagination links are present,    *
     * @returns {object} returns JSX snippet for ellipsis.
     */
-    getPaginationMoreIndicator = () => (<span className='fd-pagination__link--more' />);
+    getPaginationMoreIndicator = () => (<span className={classnames('fd-pagination__link--more')} />);
     render() {
         const {
             itemsTotal,
@@ -179,19 +180,19 @@ class Pagination extends Component {
                 {displayTotal ? (
                     <span
                         {...displayTotalProps}
-                        className='fd-pagination__total'>
+                        className={classnames('fd-pagination__total')}>
                         {itemsTotal} {totalText}
                     </span>
                 ) : (
                     ''
                 )}
 
-                <nav className='fd-pagination__nav'>
+                <nav className={classnames('fd-pagination__nav')}>
                     <a
                         {...prevProps}
                         aria-disabled={this.state.selectedPage === 1}
                         aria-label={localizedText.previous}
-                        className='fd-pagination__link fd-pagination__link--previous'
+                        className={classnames('fd-pagination__link', 'fd-pagination__link--previous')}
                         href='#'
                         onClick={this.navigateBack} />
                     {this.createPaginationLinks(this.numberOfPages)}
@@ -201,7 +202,7 @@ class Pagination extends Component {
                             this.state.selectedPage === this.numberOfPages
                         }
                         aria-label={localizedText.next}
-                        className='fd-pagination__link fd-pagination__link--next'
+                        className={classnames('fd-pagination__link', 'fd-pagination__link--next')}
                         href='#'
                         onClick={this.navigateForward} />
                 </nav>

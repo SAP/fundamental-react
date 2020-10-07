@@ -1,5 +1,5 @@
 import chain from 'chain-function';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { findDOMNode } from 'react-dom';
 import FocusManager from '../utils/focusManager/focusManager';
@@ -10,8 +10,9 @@ import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
 import { GridSelector, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/popover.css';
+import styles from 'fundamental-styles/dist/popover.css';
 
+const classnames = classnamesBind.bind(styles);
 
 /** A **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
 anything that you want to trigger the interaction from. The body will be the contents of what you reveal

@@ -1,7 +1,14 @@
 import Checkbox from '../Forms/Checkbox';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import formItemStyles from 'fundamental-styles/dist/form-item.css';
+import listStyles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind({
+    ...formItemStyles,
+    ...listStyles
+});
 
 const ListSelection = ({
     checkBoxAriaLabel,

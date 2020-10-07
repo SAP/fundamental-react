@@ -1,10 +1,12 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import 'fundamental-styles/dist/textarea.css';
+import styles from 'fundamental-styles/dist/textarea.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **FormTextarea** is used to gather potentially lengthy input from a user.
  * Best practice is to use this component as a child of FormGroup. */

@@ -1,7 +1,9 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/layout-grid.css';
+import styles from 'fundamental-styles/dist/layout-grid.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** **Container** can be used to arrange wrap the **Row** and **Column** components to create a responsive grid layout with appropriate padding.*/
 const Container = React.forwardRef(({ noGap, children, className, ...props }, ref) => {

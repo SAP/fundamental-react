@@ -1,10 +1,15 @@
 import { AVATAR_SIZES } from '../utils/constants';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/avatar.css';
+import avatarStyles from 'fundamental-styles/dist/avatar.css';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...avatarStyles
+});
 
 /** An **Avatar** is a visual presentation option around using an icon or user initials. */
 
@@ -44,7 +49,7 @@ const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, col
             ref={ref}
             role={ariaRole}
             style={backgroundImageUrl && styles}>
-            {zoom && <span className='fd-avatar__zoom-icon sap-icon--edit' role='presentation' />}
+            {zoom && <span className={classnames('fd-avatar__zoom-icon', 'sap-icon--edit')} role='presentation' />}
             {children}
         </span>
     );

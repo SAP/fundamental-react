@@ -1,10 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/input.css';
+import styles from 'fundamental-styles/dist/input.css';
 
+const classnames = classnamesBind.bind(styles);
 /** A **FormInput** is used to collect data from the user. When a field is required,
 the \`required\` property will include an asterisk (*). */
 const FormInput = React.forwardRef(({

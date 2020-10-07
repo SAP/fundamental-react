@@ -1,8 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
-import 'fundamental-styles/dist/form-group.css';
+import styles from 'fundamental-styles/dist/form-group.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **FormRadioGroup** is a type of FormGroup that groups a collection of radio buttons or checkboxes into a single input value.
  * **FormRadioItem** is a specialized form control that emits an `<input>` with a type of radio.

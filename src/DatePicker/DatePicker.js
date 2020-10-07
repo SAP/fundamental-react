@@ -1,6 +1,6 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
@@ -12,9 +12,17 @@ import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
 import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/dialog.css';
-import 'fundamental-styles/dist/bar.css';
-import 'fundamental-styles/dist/list.css';
+import barStyles from 'fundamental-styles/dist/bar.css';
+import dialogStyles from 'fundamental-styles/dist/dialog.css';
+import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
+import listStyles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind({
+    ...listStyles,
+    ...inputGroupStyles,
+    ...dialogStyles,
+    ...barStyles
+});
 
 const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
@@ -491,8 +499,8 @@ class DatePicker extends Component {
                                 weekdayStart={weekdayStart} />
                             { this.showTodayFooter() &&
                                 <div className={datepickerFooterClassName}>
-                                    <div className='fd-bar__right'>
-                                        <div className='fd-bar__element'>
+                                    <div className={classnames('fd-bar__right')}>
+                                        <div className={classnames('fd-bar__element')}>
                                             <Button
                                                 {...footerButtonProps}
                                                 className={footerButtonClassnames}
@@ -553,7 +561,7 @@ DatePicker.propTypes = {
     /** Set to **true** to enable the selection of a date range (begin and end) */
     enableRangeSelection: PropTypes.bool,
     /** Additional props to to apply to calendar footer button*/
-    footerButtonProps: PropTypes.string,
+    footerButtonProps: PropTypes.object,
     /** Classnames to apply to calendar footer that will contain the 'Today' action */
     footerClasses: PropTypes.string,
     /** Additional props to be spread to the `InputGroup` component */

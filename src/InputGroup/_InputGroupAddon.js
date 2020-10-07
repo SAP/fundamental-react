@@ -1,6 +1,9 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from 'fundamental-styles/dist/input-group.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const InputGroupAddon = ({
     children,

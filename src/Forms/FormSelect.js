@@ -1,8 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/form-select.css';
+import styles from 'fundamental-styles/dist/form-select.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **FormSelect** is similar to a **Dropdown** but is more commonly used within a form. It can also be
 set to a disabled state. */

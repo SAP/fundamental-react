@@ -1,8 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/counter.css';
+import styles from 'fundamental-styles/dist/counter.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** Status Indicators are used to easily highlight the state of an object. */
 const Counter = React.forwardRef(({ localizedText, notification, children, className, ...props }, ref) => {
