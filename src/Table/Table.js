@@ -148,24 +148,11 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                     if (keyboardNavigation !== 'row') {
                         newInstructionsText += `${localizedText.arrowKeys} `;
                     } else {
-                        newInstructionsText += `${localizedText.rowArrowKeys} ${localizedText.rowSelection} ${localizedText.rowClick}`;
+                        newInstructionsText += `${localizedText.rowInstructions}`;
                     }
                 }
                 break;
 
-            case 'keydown':
-                const { row, col } = cell;
-                const key = event.which || event.keyCode;
-
-                const navigatedHorizontally = (key === keycode.codes.left || key === keycode.codes.right) && col > 0;
-                const navigatedVertically = (key === keycode.codes.up || key === keycode.codes.down) && row > 0;
-
-                if (navigatedVertically) {
-                    newInstructionsText += `${localizedText.row} ${row} `;
-                } else if (navigatedHorizontally) {
-                    newInstructionsText += `${localizedText.column} ${col} ${headers[col]} `;
-                }
-                break;
             default:
                 break;
         }
@@ -299,16 +286,8 @@ Table.propTypes = {
         editModeEnable: PropTypes.string,
         /** Localized string informing screen reader users how to return to cell navigation */
         editModeDisable: PropTypes.string,
-        /** Localized string for 'row' */
-        row: PropTypes.string,
-        /** Localized string informing screen reader users how to navigate between rows */
-        rowArrowKeys: PropTypes.string,
-        /** Localized string informing screen reader users how to click rows */
-        rowClick: PropTypes.string,
-        /** Localized string informing screen reader users how to select rows */
-        rowSelection: PropTypes.string,
-        /** Localized string for 'column' */
-        column: PropTypes.string
+        /** Localized string informing screen reader users how to interact with rows. Please ensure the instructions are consistent with the provided default. */
+        rowInstructions: PropTypes.string
     }),
     /** Props related to row selection */
     selection: PropTypes.shape({
@@ -362,11 +341,7 @@ Table.defaultProps = {
         arrowKeys: 'Use arrow keys to navigate between cells',
         editModeEnable: 'Press Enter to edit this cell',
         editModeDisable: 'Press Escape to return to cell navigation',
-        row: 'row',
-        rowArrowKeys: 'Use up and down keys to navigate between rows',
-        rowClick: 'Press Enter to click row',
-        rowSelection: 'Press Space to select row',
-        column: 'column'
+        rowInstructions: 'Use up and down keys to navigate between rows, press Enter to click a row, and press Space to select a row'
     }
 };
 
