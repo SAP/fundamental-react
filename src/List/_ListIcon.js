@@ -1,4 +1,5 @@
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,14 +14,12 @@ const classnames = classnamesBind.bind({
 const ListIcon = ({ className, glyph, ...props }) => {
     const listIconClasses = classnames(
         'fd-list__icon',
-        {
-            [`sap-icon--${glyph}`]: glyph
-        },
         className
     );
 
     return (
-        <span {...props} className={listIconClasses} />
+        <Icon {...props} ariaHidden
+            className={listIconClasses} glyph={glyph} />
     );
 };
 

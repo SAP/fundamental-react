@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
@@ -61,9 +62,10 @@ class SideNavListItem extends React.Component {
                         onItemSelect(e, id, hasChild);
                     } : null}>
                     {glyph ? (
-                        <span
-                            aria-hidden
-                            className={classnames('fd-nested-list__icon', `sap-icon--${glyph}`)} />
+                        <Icon
+                            ariaHidden
+                            className={classnames('fd-nested-list__icon')}
+                            glyph={glyph} />
                     ) : null}
                     <span className={classnames('fd-nested-list__title')}>
                         {name}

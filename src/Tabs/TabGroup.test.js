@@ -21,7 +21,8 @@ describe('<Tabs />', () => {
                 title='Tab 3'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </Tab>
-            <Tab glyph='cart' id='4'>
+            <Tab glyph='cart' id='4'
+                title='Tab 4'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A quibusdam ipsa cumque soluta debitis accusantium iste alias quas vel perferendis voluptatibus quod asperiores praesentium quaerat, iusto repellendus nulla, maiores eius.
             </Tab>
         </TabGroup>

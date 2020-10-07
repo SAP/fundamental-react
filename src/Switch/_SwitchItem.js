@@ -1,4 +1,5 @@
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -12,18 +13,18 @@ const classnames = classnamesBind.bind({
 
 const SwitchItem = ({ glyph, text, type }) => {
 
-    const spanClasses = classnames(
+    const iconClasses = classnames(
         {
-            ['fd-switch__icon']: !!glyph,
             [`fd-switch__icon--${type}`]: !!glyph,
+            ['fd-switch__icon']: !!glyph,
             [`sap-icon--${glyph}`]: !!glyph
         }
     );
 
     return (
-        <span
-            aria-label={text}
-            className={spanClasses} />
+        <Icon
+            ariaLabel={text}
+            className={iconClasses} />
     );
 
 };

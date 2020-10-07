@@ -1,4 +1,5 @@
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import iconStyles from 'fundamental-styles/dist/icon.css';
@@ -18,12 +19,7 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
     );
 
     // css classes used for tabs
-    const linkClasses = classnames(
-        'fd-tabs__link',
-        {
-            [`sap-icon--${glyph}`]: !!glyph
-        }
-    );
+    const linkClasses = classnames('fd-tabs__link');
 
     return (
         <li
@@ -39,7 +35,13 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
                 href={`#${id}`}
                 onClick={(event) => onClick(event, index)}
                 role='tab'>
-                <span className={classnames('fd-tabs__tag')}>{title}</span>
+                {glyph ?
+                    <span className={classnames('fd-tabs__icon')}>
+                        <Icon ariaLabel={title} glyph={glyph} />
+                    </span>
+                    :
+                    <span className={classnames('fd-tabs__tag')}>{title}</span>
+                }
             </a>
         </li>
     );
@@ -52,6 +54,8 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
+    /** Localized text for the heading */
+    title: PropTypes.string.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** The icon to include. See the icon page for the list of icons */
@@ -66,8 +70,6 @@ Tab.propTypes = {
     selected: PropTypes.bool,
     /** Additional props to be spread to the tab content\'s `<div>` element */
     tabContentProps: PropTypes.object,
-    /** Localized text for the heading */
-    title: PropTypes.string,
     /** Internal use only */
     onClick: PropTypes.func
 };
