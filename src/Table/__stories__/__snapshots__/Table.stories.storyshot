@@ -350,7 +350,11 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <span
             className="fd-object-status fd-object-status--positive"
           >
-            Available
+            <span
+              className="fd-object-status__text"
+            >
+              Available
+            </span>
           </span>
         </td>
         <td
@@ -573,7 +577,11 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <span
             className="fd-object-status fd-object-status--negative"
           >
-            Unavailable
+            <span
+              className="fd-object-status__text"
+            >
+              Unavailable
+            </span>
           </span>
         </td>
         <td
@@ -796,7 +804,11 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <span
             className="fd-object-status fd-object-status--positive"
           >
-            Available
+            <span
+              className="fd-object-status__text"
+            >
+              Available
+            </span>
           </span>
         </td>
         <td
@@ -1019,7 +1031,11 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <span
             className="fd-object-status fd-object-status--positive"
           >
-            Available
+            <span
+              className="fd-object-status__text"
+            >
+              Available
+            </span>
           </span>
         </td>
         <td

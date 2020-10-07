@@ -85,8 +85,14 @@ exports[`Storyshots Component API/Menu With Addons 1`] = `
           role="menuitem"
         >
           <span
-            className="fd-menu__addon-before sap-icon--grid"
-          />
+            className="fd-menu__addon-before"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--grid"
+              role="img"
+            />
+          </span>
           <span
             className="fd-menu__title"
           >
@@ -104,8 +110,14 @@ exports[`Storyshots Component API/Menu With Addons 1`] = `
           role="menuitem"
         >
           <span
-            className="fd-menu__addon-before sap-icon--wrench"
-          />
+            className="fd-menu__addon-before"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--wrench"
+              role="img"
+            />
+          </span>
           <span
             className="fd-menu__title"
           >
@@ -123,16 +135,28 @@ exports[`Storyshots Component API/Menu With Addons 1`] = `
           role="menuitem"
         >
           <span
-            className="fd-menu__addon-before sap-icon--history"
-          />
+            className="fd-menu__addon-before"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--history"
+              role="img"
+            />
+          </span>
           <span
             className="fd-menu__title"
           >
             Option 3
           </span>
           <span
-            className="fd-menu__addon-after sap-icon--accept"
-          />
+            className="fd-menu__addon-after"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--accept"
+              role="img"
+            />
+          </span>
         </a>
       </li>
       <li
@@ -145,8 +169,14 @@ exports[`Storyshots Component API/Menu With Addons 1`] = `
           role="menuitem"
         >
           <span
-            className="fd-menu__addon-before sap-icon--lightbulb"
-          />
+            className="fd-menu__addon-before"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--lightbulb"
+              role="img"
+            />
+          </span>
           <span
             className="fd-menu__title"
           >

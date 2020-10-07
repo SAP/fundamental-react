@@ -8,106 +8,213 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--negative fd-object-status--link"
+      className="fd-object-status fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--critical fd-object-status--link"
+      className="fd-object-status fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-positive fd-object-status--positive fd-object-status--link"
+      className="fd-object-status fd-object-status--positive fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Positive
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-positive fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <a
-      className="fd-object-status sap-icon--hint fd-object-status--informative fd-object-status--link"
+      className="fd-object-status fd-object-status--informative fd-object-status--link"
       href="#"
     >
-      Info
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </a>
     <span
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--link"
+      className="fd-object-status fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Neutral
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
   </div>
   <div
     className="fddocs-container"
   >
     <a
-      className="fd-object-status sap-icon--status-negative fd-object-status--inverted fd-object-status--negative fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--negative fd-object-status--link"
       href="#"
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </a>
     <a
-      className="fd-object-status sap-icon--status-critical fd-object-status--inverted fd-object-status--critical fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--critical fd-object-status--link"
       href="#"
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </a>
     <a
       className="fd-object-status fd-object-status--indication-1 fd-object-status--inverted fd-object-status--link"
       href="#"
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </a>
     <a
       className="fd-object-status fd-object-status--indication-2 fd-object-status--inverted fd-object-status--link"
       href="#"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </a>
     <a
       aria-label="informative"
-      className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--informative fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
     <a
       aria-label="neutral"
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
   </div>
   <div
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-1 fd-object-status--large fd-object-status--link"
@@ -116,24 +223,50 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
       role="button"
       tabIndex={0}
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </span>
     <a
       className="fd-object-status fd-object-status--indication-2 fd-object-status--large fd-object-status--link"
       href="#"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </a>
     <a
       aria-label="info"
-      className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--informative fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
     <a
       aria-label="info"
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
   </div>
 </div>
 `;
@@ -146,106 +279,213 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--negative fd-object-status--link"
+      className="fd-object-status fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--critical fd-object-status--link"
+      className="fd-object-status fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-positive fd-object-status--positive fd-object-status--link"
+      className="fd-object-status fd-object-status--positive fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Positive
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-positive fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <a
-      className="fd-object-status sap-icon--hint fd-object-status--informative fd-object-status--link"
+      className="fd-object-status fd-object-status--informative fd-object-status--link"
       href="#"
     >
-      Info
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </a>
     <span
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--link"
+      className="fd-object-status fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Neutral
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
   </div>
   <div
     className="fddocs-container"
   >
     <a
-      className="fd-object-status sap-icon--status-negative fd-object-status--inverted fd-object-status--negative fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--negative fd-object-status--link"
       href="#"
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </a>
     <a
-      className="fd-object-status sap-icon--status-critical fd-object-status--inverted fd-object-status--critical fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--critical fd-object-status--link"
       href="#"
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </a>
     <a
       className="fd-object-status fd-object-status--indication-1 fd-object-status--inverted fd-object-status--link"
       href="#"
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </a>
     <a
       className="fd-object-status fd-object-status--indication-2 fd-object-status--inverted fd-object-status--link"
       href="#"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </a>
     <a
       aria-label="informative"
-      className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--informative fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
     <a
       aria-label="neutral"
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted fd-object-status--link"
+      className="fd-object-status fd-object-status--inverted fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
   </div>
   <div
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--negative fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--critical fd-object-status--link"
       onClick={[Function]}
       onKeyPress={[Function]}
       role="button"
       tabIndex={0}
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-1 fd-object-status--large fd-object-status--link"
@@ -254,24 +494,50 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
       role="button"
       tabIndex={0}
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </span>
     <a
       className="fd-object-status fd-object-status--indication-2 fd-object-status--large fd-object-status--link"
       href="#"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </a>
     <a
       aria-label="info"
-      className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--informative fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
     <a
       aria-label="info"
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large fd-object-status--link"
+      className="fd-object-status fd-object-status--large fd-object-status--link"
       href="#"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </a>
   </div>
 </div>
 `;
@@ -286,42 +552,74 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Generic
     <span
       className="fd-object-status fd-object-status--indication-1"
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-2"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-3"
     >
-      Yellow
+      <span
+        className="fd-object-status__text"
+      >
+        Yellow
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-4"
     >
-      Green
+      <span
+        className="fd-object-status__text"
+      >
+        Green
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-5"
     >
-      Blue
+      <span
+        className="fd-object-status__text"
+      >
+        Blue
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-6"
     >
-      Teal
+      <span
+        className="fd-object-status__text"
+      >
+        Teal
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-7"
     >
-      Purple
+      <span
+        className="fd-object-status__text"
+      >
+        Purple
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-8"
     >
-      Pink
+      <span
+        className="fd-object-status__text"
+      >
+        Pink
+      </span>
     </span>
   </div>
 </div>
@@ -336,24 +634,69 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon On
   >
     <span
       aria-label="negative"
-      className="fd-object-status sap-icon--status-negative fd-object-status--negative"
-    />
+      className="fd-object-status fd-object-status--negative"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
     <span
       aria-label="critical"
-      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
-    />
+      className="fd-object-status fd-object-status--critical"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
     <span
       aria-label="positive"
-      className="fd-object-status sap-icon--status-positive fd-object-status--positive"
-    />
+      className="fd-object-status fd-object-status--positive"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-positive fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
     <span
       aria-label="info"
-      className="fd-object-status sap-icon--hint fd-object-status--informative"
-    />
+      className="fd-object-status fd-object-status--informative"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
     <span
       aria-label="neutral"
-      className="fd-object-status sap-icon--to-be-reviewed"
-    />
+      className="fd-object-status"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
   </div>
 </div>
 `;
@@ -366,29 +709,74 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon an
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--negative"
+      className="fd-object-status fd-object-status--negative"
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+      className="fd-object-status fd-object-status--critical"
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-positive fd-object-status--positive"
+      className="fd-object-status fd-object-status--positive"
     >
-      Positive
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-positive fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--hint fd-object-status--informative"
+      className="fd-object-status fd-object-status--informative"
     >
-      Info
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--to-be-reviewed"
+      className="fd-object-status"
     >
-      Neutral
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
   </div>
 </div>
@@ -404,70 +792,142 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverte
     <span
       className="fd-object-status fd-object-status--inverted fd-object-status--negative"
     >
-      Negative
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--inverted fd-object-status--critical"
     >
-      Critical
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--inverted fd-object-status--positive"
     >
-      Positive
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--inverted fd-object-status--informative"
     >
-      Info
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--inverted"
     >
-      Neutral
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--inverted fd-object-status--negative"
     >
-      7
+      <span
+        className="fd-object-status__text"
+      >
+        7
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--inverted fd-object-status--positive"
     >
-      3.8
+      <span
+        className="fd-object-status__text"
+      >
+        3.8
+      </span>
     </span>
   </div>
   <div
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--inverted fd-object-status--negative"
+      className="fd-object-status fd-object-status--inverted fd-object-status--negative"
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--inverted fd-object-status--critical"
+      className="fd-object-status fd-object-status--inverted fd-object-status--critical"
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-1 fd-object-status--inverted"
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-2 fd-object-status--inverted"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </span>
     <span
       aria-label="informative"
-      className="fd-object-status sap-icon--hint fd-object-status--inverted fd-object-status--informative"
-    />
+      className="fd-object-status fd-object-status--inverted fd-object-status--informative"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
     <span
       aria-label="neutral"
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--inverted"
-    />
+      className="fd-object-status fd-object-status--inverted"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
   </div>
 </div>
 `;
@@ -482,70 +942,142 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
     <span
       className="fd-object-status fd-object-status--large fd-object-status--negative"
     >
-      Negative
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--large fd-object-status--critical"
     >
-      Critical
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--large fd-object-status--positive"
     >
-      Positive
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--large fd-object-status--informative"
     >
-      Info
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--large"
     >
-      Neutral
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--large fd-object-status--negative"
     >
-      7
+      <span
+        className="fd-object-status__text"
+      >
+        7
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--large fd-object-status--positive"
     >
-      3.8
+      <span
+        className="fd-object-status__text"
+      >
+        3.8
+      </span>
     </span>
   </div>
   <div
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--large fd-object-status--negative"
+      className="fd-object-status fd-object-status--large fd-object-status--negative"
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--large fd-object-status--critical"
+      className="fd-object-status fd-object-status--large fd-object-status--critical"
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-1 fd-object-status--large"
     >
-      Dark Red
+      <span
+        className="fd-object-status__text"
+      >
+        Dark Red
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--indication-2 fd-object-status--large"
     >
-      Red
+      <span
+        className="fd-object-status__text"
+      >
+        Red
+      </span>
     </span>
     <span
       aria-label="informative"
-      className="fd-object-status sap-icon--hint fd-object-status--large fd-object-status--informative"
-    />
+      className="fd-object-status fd-object-status--large fd-object-status--informative"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
     <span
       aria-label="neutral"
-      className="fd-object-status sap-icon--to-be-reviewed fd-object-status--large"
-    />
+      className="fd-object-status fd-object-status--large"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      />
+    </span>
   </div>
 </div>
 `;
@@ -558,29 +1090,74 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Primary
     className="fddocs-container"
   >
     <span
-      className="fd-object-status sap-icon--status-negative fd-object-status--negative"
+      className="fd-object-status fd-object-status--negative"
     >
-      Negative
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-critical fd-object-status--critical"
+      className="fd-object-status fd-object-status--critical"
     >
-      Critical
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--status-positive fd-object-status--positive"
+      className="fd-object-status fd-object-status--positive"
     >
-      Positive
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-positive fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--hint fd-object-status--informative"
+      className="fd-object-status fd-object-status--informative"
     >
-      Info
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </span>
     <span
-      className="fd-object-status sap-icon--to-be-reviewed"
+      className="fd-object-status"
     >
-      Neutral
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed fd-object-status__icon"
+        role="img"
+      />
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
   </div>
 </div>
@@ -596,27 +1173,47 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Text On
     <span
       className="fd-object-status fd-object-status--negative"
     >
-      Negative
+      <span
+        className="fd-object-status__text"
+      >
+        Negative
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--critical"
     >
-      Critical
+      <span
+        className="fd-object-status__text"
+      >
+        Critical
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--positive"
     >
-      Positive
+      <span
+        className="fd-object-status__text"
+      >
+        Positive
+      </span>
     </span>
     <span
       className="fd-object-status fd-object-status--informative"
     >
-      Info
+      <span
+        className="fd-object-status__text"
+      >
+        Info
+      </span>
     </span>
     <span
       className="fd-object-status"
     >
-      Neutral
+      <span
+        className="fd-object-status__text"
+      >
+        Neutral
+      </span>
     </span>
   </div>
 </div>

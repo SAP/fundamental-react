@@ -329,8 +329,10 @@ exports[`Storyshots Component API/List Dev 1`] = `
       onClick={[Function]}
       tabIndex="0"
     >
-      <span
-        className="fd-list__icon sap-icon--accept"
+      <i
+        aria-hidden={true}
+        className="sap-icon--accept fd-list__icon"
+        role="img"
       />
       <span
         className="fd-list__title"
@@ -488,8 +490,10 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       onClick={[Function]}
       tabIndex="0"
     >
-      <span
-        className="fd-list__icon sap-icon--cart"
+      <i
+        aria-hidden={true}
+        className="sap-icon--cart fd-list__icon"
+        role="img"
       />
       <span
         className="fd-list__title"
@@ -502,8 +506,10 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       onClick={[Function]}
       tabIndex="0"
     >
-      <span
-        className="fd-list__icon sap-icon--wrench"
+      <i
+        aria-hidden={true}
+        className="sap-icon--wrench fd-list__icon"
+        role="img"
       />
       <span
         className="fd-list__title"
@@ -516,8 +522,10 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       onClick={[Function]}
       tabIndex="0"
     >
-      <span
-        className="fd-list__icon sap-icon--lightbulb"
+      <i
+        aria-hidden={true}
+        className="sap-icon--lightbulb fd-list__icon"
+        role="img"
       />
       <span
         className="fd-list__title"
@@ -530,8 +538,10 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
       onClick={[Function]}
       tabIndex="0"
     >
-      <span
-        className="fd-list__icon sap-icon--history"
+      <i
+        aria-hidden={true}
+        className="sap-icon--history fd-list__icon"
+        role="img"
       />
       <span
         className="fd-list__title"
@@ -569,8 +579,10 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       >
         Checkout Cart
       </span>
-      <span
-        className="fd-list__icon sap-icon--navigation-right-arrow"
+      <i
+        aria-hidden={true}
+        className="sap-icon--navigation-right-arrow fd-list__icon"
+        role="img"
       />
     </li>
     <li
@@ -583,8 +595,10 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       >
         Profile Settings
       </span>
-      <span
-        className="fd-list__icon sap-icon--navigation-right-arrow"
+      <i
+        aria-hidden={true}
+        className="sap-icon--navigation-right-arrow fd-list__icon"
+        role="img"
       />
     </li>
     <li
@@ -597,8 +611,10 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       >
         Information
       </span>
-      <span
-        className="fd-list__icon sap-icon--navigation-right-arrow"
+      <i
+        aria-hidden={true}
+        className="sap-icon--navigation-right-arrow fd-list__icon"
+        role="img"
       />
     </li>
     <li
@@ -611,8 +627,10 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
       >
         Order History
       </span>
-      <span
-        className="fd-list__icon sap-icon--navigation-right-arrow"
+      <i
+        aria-hidden={true}
+        className="sap-icon--navigation-right-arrow fd-list__icon"
+        role="img"
       />
     </li>
   </ul>

@@ -26,7 +26,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <a
           className="fd-tree__content"
@@ -63,7 +69,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -99,7 +111,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <a
                   className="fd-tree__content"
@@ -136,7 +154,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -172,7 +196,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                           className="fd-tree__expander"
                           id="fd-mocked-short-id-expansion-toggle-button"
                           onClick={[Function]}
-                        />
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--navigation-right-arrow fd-tree__icon"
+                            role="img"
+                          />
+                        </button>
                         
                         <a
                           className="fd-tree__content"
@@ -209,7 +239,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                               className="fd-tree__expander"
                               id="fd-mocked-short-id-expansion-toggle-button"
                               onClick={[Function]}
-                            />
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                                role="img"
+                              />
+                            </button>
                             
                             <div
                               className="fd-tree__content"
@@ -245,7 +281,13 @@ exports[`Storyshots Component API/Tree Active Tree 1`] = `
                                   className="fd-tree__expander"
                                   id="fd-mocked-short-id-expansion-toggle-button"
                                   onClick={[Function]}
-                                />
+                                >
+                                  <i
+                                    aria-hidden={true}
+                                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                                    role="img"
+                                  />
+                                </button>
                                 
                                 <a
                                   className="fd-tree__content"
@@ -544,7 +586,13 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -580,7 +628,13 @@ exports[`Storyshots Component API/Tree Compact 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -771,7 +825,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
           className="fd-tree__expander"
           id="myCustomLevel1-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -807,7 +867,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -858,7 +924,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -894,7 +966,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -930,7 +1008,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                           className="fd-tree__expander"
                           id="fd-mocked-short-id-expansion-toggle-button"
                           onClick={[Function]}
-                        />
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--navigation-right-arrow fd-tree__icon"
+                            role="img"
+                          />
+                        </button>
                         
                         <div
                           className="fd-tree__content"
@@ -966,7 +1050,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                               className="fd-tree__expander"
                               id="fd-mocked-short-id-expansion-toggle-button"
                               onClick={[Function]}
-                            />
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                                role="img"
+                              />
+                            </button>
                             
                             <div
                               className="fd-tree__content"
@@ -1037,7 +1127,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -1073,7 +1169,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -1109,7 +1211,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -1145,7 +1253,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -1181,7 +1295,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                           className="fd-tree__expander"
                           id="fd-mocked-short-id-expansion-toggle-button"
                           onClick={[Function]}
-                        />
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--navigation-right-arrow fd-tree__icon"
+                            role="img"
+                          />
+                        </button>
                         
                         <div
                           className="fd-tree__content"
@@ -1217,7 +1337,13 @@ exports[`Storyshots Component API/Tree Dev 1`] = `
                               className="fd-tree__expander"
                               id="fd-mocked-short-id-expansion-toggle-button"
                               onClick={[Function]}
-                            />
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                                role="img"
+                              />
+                            </button>
                             
                             <div
                               className="fd-tree__content"
@@ -1333,7 +1459,13 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -1369,7 +1501,13 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -1405,7 +1543,13 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -1441,7 +1585,13 @@ exports[`Storyshots Component API/Tree Highlight Indicators 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -1637,7 +1787,13 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         <i
           className="sap-icon--e-care fd-tree__icon"
           role="img"
@@ -1702,7 +1858,13 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             <i
               className="sap-icon--account fd-tree__icon"
               role="img"
@@ -1763,7 +1925,13 @@ exports[`Storyshots Component API/Tree Icons, Node Actions, and No Borders on Le
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 <i
                   className="sap-icon--product fd-tree__icon"
                   role="img"
@@ -2087,7 +2255,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-form-item"
@@ -2140,7 +2314,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-form-item"
@@ -2193,7 +2373,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-form-item"
@@ -2246,7 +2432,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-form-item"
@@ -2347,7 +2539,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-form-item"
@@ -2400,7 +2598,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-form-item"
@@ -2453,7 +2657,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-form-item"
@@ -2506,7 +2716,13 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-form-item"
@@ -2620,7 +2836,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -2673,7 +2895,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -2726,7 +2954,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -2779,7 +3013,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -2880,7 +3120,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -2933,7 +3179,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -2986,7 +3238,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -3039,7 +3297,13 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -3152,7 +3416,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <a
           className="fd-tree__content has-navigation-indicator"
@@ -3189,7 +3459,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -3225,7 +3501,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <a
                   className="fd-tree__content has-navigation-indicator"
@@ -3262,7 +3544,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -3298,7 +3586,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                           className="fd-tree__expander"
                           id="fd-mocked-short-id-expansion-toggle-button"
                           onClick={[Function]}
-                        />
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--navigation-right-arrow fd-tree__icon"
+                            role="img"
+                          />
+                        </button>
                         
                         <a
                           className="fd-tree__content has-navigation-indicator"
@@ -3335,7 +3629,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                               className="fd-tree__expander"
                               id="fd-mocked-short-id-expansion-toggle-button"
                               onClick={[Function]}
-                            />
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                                role="img"
+                              />
+                            </button>
                             
                             <div
                               className="fd-tree__content"
@@ -3371,7 +3671,13 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
                                   className="fd-tree__expander"
                                   id="fd-mocked-short-id-expansion-toggle-button"
                                   onClick={[Function]}
-                                />
+                                >
+                                  <i
+                                    aria-hidden={true}
+                                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                                    role="img"
+                                  />
+                                </button>
                                 
                                 <a
                                   className="fd-tree__content has-navigation-indicator"
@@ -3671,7 +3977,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-form-item"
@@ -3726,7 +4038,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-form-item"
@@ -3781,7 +4099,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-form-item"
@@ -3836,7 +4160,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-form-item"
@@ -3941,7 +4271,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-form-item"
@@ -3996,7 +4332,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-form-item"
@@ -4051,7 +4393,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-form-item"
@@ -4106,7 +4454,13 @@ exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-form-item"
@@ -4224,7 +4578,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -4279,7 +4639,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -4334,7 +4700,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -4389,7 +4761,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -4494,7 +4872,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -4549,7 +4933,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"
@@ -4604,7 +4994,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                   className="fd-tree__expander"
                   id="fd-mocked-short-id-expansion-toggle-button"
                   onClick={[Function]}
-                />
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--navigation-right-arrow fd-tree__icon"
+                    role="img"
+                  />
+                </button>
                 
                 <div
                   className="fd-tree__content"
@@ -4659,7 +5055,13 @@ exports[`Storyshots Component API/Tree Single Selection Right 1`] = `
                       className="fd-tree__expander"
                       id="fd-mocked-short-id-expansion-toggle-button"
                       onClick={[Function]}
-                    />
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--navigation-right-arrow fd-tree__icon"
+                        role="img"
+                      />
+                    </button>
                     
                     <div
                       className="fd-tree__content"
@@ -4776,7 +5178,13 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
           className="fd-tree__expander"
           id="fd-mocked-short-id-expansion-toggle-button"
           onClick={[Function]}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
         
         <div
           className="fd-tree__content"
@@ -4812,7 +5220,13 @@ exports[`Storyshots Component API/Tree Wrapping And Non Wrapping Contents 1`] = 
               className="fd-tree__expander"
               id="fd-mocked-short-id-expansion-toggle-button"
               onClick={[Function]}
-            />
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
             
             <div
               className="fd-tree__content"

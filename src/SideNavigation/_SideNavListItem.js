@@ -98,7 +98,9 @@ class SideNavListItem extends React.Component {
                             className={classnames('fd-nested-list__button', { ['fd-button']: isUsingCssModules })}
                             onClick={() => {
                                 this.handleExpand();
-                            }} />
+                            }}>
+                            <Icon ariaHidden glyph={this.state.expanded ? 'navigation-down-arrow' : 'navigation-right-arrow'} />
+                        </Button>
                     </div>
                 );
             } else {

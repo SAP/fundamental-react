@@ -192,12 +192,18 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
           aria-controls="fd-mocked-short-id"
           aria-expanded={false}
           aria-haspopup={true}
-          className="fd-avatar fd-avatar--m sap-icon--money-bills fd-avatar--accent-color-6"
+          className="fd-avatar fd-avatar--m fd-avatar--accent-color-6"
           onClick={[Function]}
           onKeyPress={[Function]}
           role="button"
           tabIndex={0}
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--money-bills fd-avatar__icon"
+            role="img"
+          />
+        </span>
       </div>
     </div>
   </div>
