@@ -16,15 +16,15 @@ const SwitchItem = ({ glyph, text, type }) => {
     const iconClasses = classnames(
         {
             [`fd-switch__icon--${type}`]: !!glyph,
-            ['fd-switch__icon']: !!glyph,
-            [`sap-icon--${glyph}`]: !!glyph
+            ['fd-switch__icon']: !!glyph
         }
     );
 
     return (
         <Icon
             ariaLabel={text}
-            className={iconClasses} />
+            className={iconClasses}
+            glyph={glyph} />
     );
 
 };

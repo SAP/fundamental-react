@@ -194,9 +194,6 @@ exports[`Storyshots Component API/InfoLabel Glyph 1`] = `
         className="sap-icon--upload-to-cloud fd-info-label__icon"
         role="img"
       />
-      <span
-        className="fd-info-label__text"
-      />
     </span>
   </div>
 </div>

@@ -55,7 +55,11 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, 
             ref={ref}>
             {glyph && <Icon ariaHidden className={classnames('fd-object-status__icon')}
                 glyph={glyph} />}
-            <span className={classnames('fd-object-status__text')}>{children}</span>
+            {children &&
+                <span className={classnames('fd-object-status__text')}>
+                    {children}
+                </span>
+            }
         </StatusTag>
     );
 });

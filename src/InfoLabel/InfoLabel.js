@@ -40,9 +40,11 @@ const InfoLabel = React.forwardRef(({
             ref={ref}>
             {glyph && <Icon ariaHidden className={classnames('fd-info-label__icon')}
                 glyph={glyph} />}
-            <span className={classnames('fd-info-label__text')}>
-                {children}
-            </span>
+            {children &&
+                <span className={classnames('fd-info-label__text')}>
+                    {children}
+                </span>
+            }
         </span>
     );
 });

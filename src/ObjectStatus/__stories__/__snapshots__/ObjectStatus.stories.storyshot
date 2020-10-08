@@ -158,9 +158,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </a>
     <a
       aria-label="neutral"
@@ -171,9 +168,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </a>
   </div>
@@ -249,9 +243,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </a>
     <a
       aria-label="info"
@@ -262,9 +253,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </a>
   </div>
@@ -429,9 +417,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </a>
     <a
       aria-label="neutral"
@@ -442,9 +427,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </a>
   </div>
@@ -520,9 +502,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </a>
     <a
       aria-label="info"
@@ -533,9 +512,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </a>
   </div>
@@ -641,9 +617,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon On
         className="sap-icon--status-negative fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </span>
     <span
       aria-label="critical"
@@ -653,9 +626,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon On
         aria-hidden={true}
         className="sap-icon--status-critical fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </span>
     <span
@@ -667,9 +637,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon On
         className="sap-icon--status-positive fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </span>
     <span
       aria-label="info"
@@ -680,9 +647,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon On
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </span>
     <span
       aria-label="neutral"
@@ -692,9 +656,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon On
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </span>
   </div>
@@ -911,9 +872,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverte
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </span>
     <span
       aria-label="neutral"
@@ -923,9 +881,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverte
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </span>
   </div>
@@ -1061,9 +1016,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
         className="sap-icon--hint fd-object-status__icon"
         role="img"
       />
-      <span
-        className="fd-object-status__text"
-      />
     </span>
     <span
       aria-label="neutral"
@@ -1073,9 +1025,6 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
         aria-hidden={true}
         className="sap-icon--to-be-reviewed fd-object-status__icon"
         role="img"
-      />
-      <span
-        className="fd-object-status__text"
       />
     </span>
   </div>

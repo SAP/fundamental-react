@@ -115,7 +115,7 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
         >
           <i
             aria-label="on"
-            className="fd-switch__icon--on fd-switch__icon sap-icon--accept"
+            className="sap-icon--accept fd-switch__icon--on fd-switch__icon"
             role="img"
           />
           <span
@@ -124,7 +124,7 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
           />
           <i
             aria-label="off"
-            className="fd-switch__icon--off fd-switch__icon sap-icon--decline"
+            className="sap-icon--decline fd-switch__icon--off fd-switch__icon"
             role="img"
           />
         </div>
@@ -264,7 +264,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         >
           <i
             aria-label="on"
-            className="fd-switch__icon--on fd-switch__icon sap-icon--accept"
+            className="sap-icon--accept fd-switch__icon--on fd-switch__icon"
             role="img"
           />
           <span
@@ -273,7 +273,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
           />
           <i
             aria-label="off"
-            className="fd-switch__icon--off fd-switch__icon sap-icon--decline"
+            className="sap-icon--decline fd-switch__icon--off fd-switch__icon"
             role="img"
           />
         </div>
@@ -397,7 +397,7 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
         >
           <i
             aria-label="on"
-            className="fd-switch__icon--on fd-switch__icon sap-icon--accept"
+            className="sap-icon--accept fd-switch__icon--on fd-switch__icon"
             role="img"
           />
           <span
@@ -406,7 +406,7 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
           />
           <i
             aria-label="off"
-            className="fd-switch__icon--off fd-switch__icon sap-icon--decline"
+            className="sap-icon--decline fd-switch__icon--off fd-switch__icon"
             role="img"
           />
         </div>
