@@ -24,7 +24,7 @@ const classnames = classnamesBind.bind({
     ...listStyles,
     ...tokenizerStyles
 });
-const isUsingCssModules = Object.keys(tokenizerStyles).length > 0;
+const isUsingCssModules = tokenizerStyles && Object.keys(tokenizerStyles).length > 0;
 
 /** A **MultiInput** allows users to enter multiple values which are displayed as a tokens. It provides an editable input field for filtering the list,
  * and a dropdown menu with a list of the available options.

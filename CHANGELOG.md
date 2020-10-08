@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.10...v0.13.1-rc.11) (2020-10-08)
+
+
+### Features
+
+* row navigation in Table ([#1231](https://github.com/SAP/fundamental-react/issues/1231)) ([de8af5b](https://github.com/SAP/fundamental-react/commit/de8af5b8c479e5f14f4a277e4fcb1b2a65ceecd3))
+
+
+### Bug Fixes
+
+* Fix isCssModulesEnabled check and improve README for css-modules ([#1237](https://github.com/SAP/fundamental-react/issues/1237)) ([7b90a32](https://github.com/SAP/fundamental-react/commit/7b90a325a8be720d4078ffa335a8125f3735eb66))
+
 ### [0.13.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.9...v0.13.1-rc.10) (2020-10-06)
 
 

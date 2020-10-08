@@ -1,24 +1,27 @@
 import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
+import { GridSelector } from '../utils/constants';
+import Icon from '../Icon/Icon';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
-import React, { useCallback, useRef, useState } from 'react';
+import useUniqueId from '../utils/useUniqueId';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styles from 'fundamental-styles/dist/table.css';
 
 const classnames = classnamesBind.bind(styles);
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
-const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, tableBodyClassName,
+const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, selection, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
-    tableHeaderRowClassName, tableHeaderRowProps, tableRowClassName, richTable, ...props }, ref) => {
+    tableHeaderRowClassName, tableHeaderRowProps, tableNavigationIconClassName, tableRowClassName, ...props }, ref) => {
 
     const tableClasses = classnames(
         'fd-table',
         {
             'fd-table--compact': compact,
-            'fd-table--condensed': condensed
+            'fd-table--condensed': condensed,
+            'fd-table--no-horizontal-borders': selection?.onClickRow
         },
         className
     );
@@ -36,6 +39,12 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
         tableHeaderRowClassName
     );
 
+    const tableNavigationIconClasses = classnames(
+        'fd-table__icon',
+        'fd-table__icon--navigation',
+        tableNavigationIconClassName
+    );
+
     const tableBodyClasses = classnames(
         'fd-table__body',
         tableBodyClassName
@@ -44,7 +53,8 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const tableRowClasses = classnames(
         'fd-table__row',
         {
-            'fd-table__cell--focusable': keyboardNavigation === 'row'
+            'fd-table__row--activable': typeof selection?.onClickRow !== 'undefined',
+            'fd-table__row--focusable': keyboardNavigation === 'row'
         },
         tableRowClassName
     );
@@ -60,65 +70,119 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
     const tableCheckboxClasses = classnames(
         'fd-table__cell',
         'fd-table__cell--checkbox',
+        {
+            'fd-table__cell--focusable': keyboardNavigation === 'cell'
+        },
         tableCheckboxClassName
     );
 
-    const useHookWithRefCallback = () => {
-        const newRef = useRef(null);
-        const setRef = useCallback(node => {
-            if (node && keyboardNavigation !== 'none') {
-                gridManager.current.attachTo({ gridNode: node, onFocusCell, onToggleEditMode });
-            }
-            newRef.current = node;
-        }, []);
+    const tableRefCallback = useCallback(node => {
+        if (node && keyboardNavigation !== 'none') {
+            attachGridManager(node);
+        }
+        tableRef.current = node;
+    }, []);
 
-        return setRef;
+    const attachGridManager = (node) => {
+        gridManager.current.attachTo({
+            gridNode: node,
+            onClickRow: onClickRowHandler,
+            onFocusCell,
+            onKeyDownCell,
+            onToggleEditMode,
+            rowNavigation: keyboardNavigation === 'row'
+        });
     };
 
-    const captionId = shortid.generate();
+    useEffect(() => {
+        if (keyboardNavigation === 'none') {
+            gridManager.current.clearEvents();
+        } else {
+            attachGridManager(tableRef.current);
+        }
+    }, [keyboardNavigation]);
+
+    const captionId = useUniqueId();
     const gridManager = useRef(new GridManager());
-    const tableRef = ref || useHookWithRefCallback();
+    const tableRef = ref || useRef(null);
     const [instructionsText, setInstructionsText] = useState('');
+
+    const onKeyDownCell = (cell, event) => {
+        const key = event.which || event.keyCode;
+
+        if (keyboardNavigation === 'row' && event.target.matches(GridSelector.ROW) && key === keycode.codes.space) {
+            selection.onSelectRow(cell.row - 1);
+            event.preventDefault();
+            return;
+        }
+
+        setInstructionsText(generateInstructionsText(cell, event));
+    };
+
+    const onClickRowHandler = (cell) => {
+        selection?.onClickRow && selection.onClickRow(cell.row - 1);
+    };
 
     const onToggleEditMode = (enable) => {
         setInstructionsText(enable ? localizedText.editModeDisable : '');
     };
 
     const onFocusCell = (cell, event) => {
-        const { row, col } = cell;
-        const key = event.which || event.keyCode;
-        const navigatedHorizontally = (key === keycode.codes.left || key === keycode.codes.right) && col > 0;
-        const navigatedVertically = (key === keycode.codes.up || key === keycode.codes.down) && row > 0;
-        if (gridManager.current?.editMode) {
-            setInstructionsText(localizedText.editModeDisable);
-        } else {
-            let newInstructionsText = '';
-            if (navigatedVertically) {
-                newInstructionsText += `${localizedText.row} ${row} `;
-            } else if (navigatedHorizontally) {
-                newInstructionsText += `${localizedText.column} ${col} ${headers[col]} `;
-            } else {
-                newInstructionsText += `${localizedText.arrowKeys} `;
-            }
-            if (gridManager.current?.isEditableCell(cell)) {
-                newInstructionsText += localizedText.editModeEnable;
-            }
-            setInstructionsText(newInstructionsText);
+        setInstructionsText(generateInstructionsText(cell, event));
+    };
+
+    const onBlurTable = (event) => {
+        if (event.target === tableRef.current) {
+            setInstructionsText('');
         }
+    };
+
+    const generateInstructionsText = (cell, event) => {
+        if (gridManager.current?.editMode) {
+            return localizedText.editModeDisable;
+        }
+
+        let newInstructionsText = '';
+
+        switch (event.type) {
+            case 'focus':
+                if (instructionsText.length === 0) {
+                    if (keyboardNavigation !== 'row') {
+                        newInstructionsText += `${localizedText.arrowKeys} `;
+                    } else {
+                        newInstructionsText += `${localizedText.rowInstructions}`;
+                    }
+                }
+                break;
+
+            default:
+                break;
+        }
+
+        if (gridManager.current?.isEditableCell(cell) && keyboardNavigation === 'cell') {
+            newInstructionsText += localizedText.editModeEnable;
+        }
+
+        return newInstructionsText;
     };
 
     let checkboxHeader;
     let displayHeaders = [...headers];
+    let navigationHeader;
 
-    if (richTable) {
+    if (selection) {
         checkboxHeader = <th className={tableCheckboxClasses}>{headers[0]}</th>;
         displayHeaders = displayHeaders.splice(1, headers.length);
+        if (selection.onClickRow) {
+            navigationHeader = <th className={tableCellClasses} />;
+        }
     }
 
     return (
         <table {...props} aria-describedby={captionId}
             className={tableClasses}
-            ref={tableRef}
+            onBlur={onBlurTable}
+            ref={tableRefCallback}
             role={keyboardNavigation ? 'grid' : 'table'}>
             <caption aria-live='polite' className='fd-table__caption'
                 id={captionId}>
@@ -126,15 +190,16 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             </caption>
             <thead className={tableHeaderClasses} {...tableHeaderProps}>
                 <tr className={tableHeaderRowClasses} {...tableHeaderRowProps}>
-                    {richTable && checkboxHeader}
+                    {selection && checkboxHeader}
                     {displayHeaders.map((header, index) => {
                         return <th className={tableCellClasses} key={index}>{header}</th>;
                     })}
+                    {selection?.onClickRow && navigationHeader}
                 </tr>
             </thead>
             <tbody className={tableBodyClasses} {...tableBodyProps}>
                 {tableData.map((row, index) => {
-                    let rowProps, checkboxCell;
+                    let rowProps, checkboxCell, navigationCell;
                     let displayCells = [...row.rowData];
 
                     if (tableBodyRowProps) {
@@ -143,7 +208,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                             : tableBodyRowProps);
                     }
 
-                    if (richTable) {
+                    if (selection) {
                         checkboxCell = (
                             <td
                                 className={tableCheckboxClasses}>
@@ -151,21 +216,43 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                             </td>
                         );
                         displayCells = displayCells.splice(1, row.rowData.length);
+
+                        if (selection.onClickRow) {
+                            navigationCell = (
+                                <td
+                                    className={classnames(
+                                        tableCellClasses,
+                                        'fd-table__cell--fit-content',
+                                        'fd-table__cell----no-padding'
+                                    )}>
+                                    <Icon
+                                        ariaHidden
+                                        className={tableNavigationIconClasses}
+                                        glyph='navigation-right-arrow' />
+                                </td>
+                            );
+                        }
                     }
 
                     return (
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
-                            aria-selected={row?.rowData[0]?.props?.checked}
-                            key={index}>
-                            {richTable && checkboxCell}
+                            aria-selected={selection?.isSelected(index)}
+                            key={index}
+                            onClick={(event) => {
+                                if (event.target.matches(`${GridSelector.CELL}, ${GridSelector.ROW}, .fd-table__icon--navigation`)) {
+                                    selection?.onClickRow && selection.onClickRow(index);
+                                }
+                            }}>
+                            {selection && checkboxCell}
                             {displayCells.map((cellData, cellIndex) => {
                                 if (cellData.type?.propTypes?.compact) {
                                     cellData = React.cloneElement(cellData, { compact: compact || condensed });
                                 }
                                 return <td className={tableCellClasses} key={cellIndex}>{cellData}</td>;
                             })}
+                            {selection?.onClickRow && navigationCell}
                         </tr>
                     );
                 })}
@@ -201,13 +288,27 @@ Table.propTypes = {
         editModeEnable: PropTypes.string,
         /** Localized string informing screen reader users how to return to cell navigation */
         editModeDisable: PropTypes.string,
-        /** Localized string for 'row' */
-        row: PropTypes.string,
-        /** Localized string for 'column' */
-        column: PropTypes.string
+        /** Localized string informing screen reader users how to interact with rows. Please ensure the instructions are consistent with the provided default. */
+        rowInstructions: PropTypes.string
     }),
-    /** Set to **true** if Table contains checkboxes */
-    richTable: PropTypes.bool,
+    /** Props related to row selection */
+    selection: PropTypes.shape({
+        /** Callback function; triggered when a row is clicked or the Enter key is pressed during row navigation
+         * @param {number} index - Index of the row being selected, or -1 for the header row.
+         * @returns {void}
+         */
+        onClickRow: PropTypes.func,
+        /** Determines whether a row should be selected
+         * @param {number} index - Index of the row being selected, or -1 for the header row.
+         * @returns {boolean}
+         */
+        isSelected: PropTypes.func,
+        /** Callback function; triggered when a row is selected
+         * @param {number} index - Index of the row being selected, or -1 for the header row.
+         * @returns {void}
+         */
+        onSelectRow: PropTypes.func
+    }),
     /** Additional classes to be added to the `<tbody>` element */
     tableBodyClassName: PropTypes.string,
     /** Additional props to be spread to the `<tbody>` element */
@@ -230,6 +331,8 @@ Table.propTypes = {
     tableHeaderRowClassName: PropTypes.string,
     /** Additional props to be spread to the `<tr>` element within `<thead>` */
     tableHeaderRowProps: PropTypes.object,
+    /** Additional classes to be added to the navigation icon in navigable rows */
+    tableNavigationIconClassName: PropTypes.object,
     /** Additional classes to be added to the `<tr>` elements */
     tableRowClassName: PropTypes.string
 };
@@ -240,8 +343,7 @@ Table.defaultProps = {
         arrowKeys: 'Use arrow keys to navigate between cells',
         editModeEnable: 'Press Enter to edit this cell',
         editModeDisable: 'Press Escape to return to cell navigation',
-        row: 'row',
-        column: 'column'
+        rowInstructions: 'Use up and down keys to navigate between rows, press Enter to click a row, and press Space to select a row'
     }
 };
 

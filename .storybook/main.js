@@ -34,8 +34,17 @@ module.exports = {
 
         config.module.rules
             .find(rule => rule.test.toString() === /\.css$/.toString())
-            .use = [
-                'style-loader',
+            .exclude = [/node_modules\/fundamental-styles/];
+
+        config.module.rules.push({
+            test: /.css$/,
+            include: [
+                /node_modules\/fundamental-styles/
+            ],
+            use: [
+                {
+                    loader: 'style-loader'
+                },
                 {
                     loader: 'css-loader',
                     options: {
@@ -44,7 +53,8 @@ module.exports = {
                         }
                     }
                 }
-            ];
+            ]
+        });
 
         return merge(config, {
             optimization: {

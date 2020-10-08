@@ -5,14 +5,15 @@ exports[`Storyshots Component API/Table Compact 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedby="mocked-short-id"
+    aria-describedby="fd-mocked-short-id"
     className="fd-table fd-table--compact"
+    onBlur={[Function]}
     role="grid"
   >
     <caption
       aria-live="polite"
       className="fd-table__caption"
-      id="mocked-short-id"
+      id="fd-mocked-short-id"
     >
       
     </caption>
@@ -49,6 +50,7 @@ exports[`Storyshots Component API/Table Compact 1`] = `
     >
       <tr
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell"
@@ -73,6 +75,7 @@ exports[`Storyshots Component API/Table Compact 1`] = `
       </tr>
       <tr
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell"
@@ -105,14 +108,15 @@ exports[`Storyshots Component API/Table Condensed 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedby="mocked-short-id"
+    aria-describedby="fd-mocked-short-id"
     className="fd-table fd-table--condensed"
+    onBlur={[Function]}
     role="grid"
   >
     <caption
       aria-live="polite"
       className="fd-table__caption"
-      id="mocked-short-id"
+      id="fd-mocked-short-id"
     >
       
     </caption>
@@ -149,6 +153,7 @@ exports[`Storyshots Component API/Table Condensed 1`] = `
     >
       <tr
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell"
@@ -173,6 +178,7 @@ exports[`Storyshots Component API/Table Condensed 1`] = `
       </tr>
       <tr
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell"
@@ -205,14 +211,15 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedby="mocked-short-id"
+    aria-describedby="fd-mocked-short-id"
     className="fd-table"
+    onBlur={[Function]}
     role="grid"
   >
     <caption
       aria-live="polite"
       className="fd-table__caption"
-      id="mocked-short-id"
+      id="fd-mocked-short-id"
     >
       
     </caption>
@@ -223,7 +230,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
         className="fd-table__row"
       >
         <th
-          className="fd-table__cell fd-table__cell--checkbox"
+          className="fd-table__cell fd-table__cell--checkbox fd-table__cell--focusable"
         >
           <div
             className="fd-form-item"
@@ -296,9 +303,10 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
-          className="fd-table__cell fd-table__cell--checkbox"
+          className="fd-table__cell fd-table__cell--checkbox fd-table__cell--focusable"
         >
           <div
             className="fd-form-item"
@@ -523,9 +531,10 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
-          className="fd-table__cell fd-table__cell--checkbox"
+          className="fd-table__cell fd-table__cell--checkbox fd-table__cell--focusable"
         >
           <div
             className="fd-form-item"
@@ -750,9 +759,10 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
-          className="fd-table__cell fd-table__cell--checkbox"
+          className="fd-table__cell fd-table__cell--checkbox fd-table__cell--focusable"
         >
           <div
             className="fd-form-item"
@@ -977,9 +987,10 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
-          className="fd-table__cell fd-table__cell--checkbox"
+          className="fd-table__cell fd-table__cell--checkbox fd-table__cell--focusable"
         >
           <div
             className="fd-form-item"
@@ -1211,14 +1222,15 @@ exports[`Storyshots Component API/Table Primary 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedby="mocked-short-id"
+    aria-describedby="fd-mocked-short-id"
     className="fd-table"
+    onBlur={[Function]}
     role="grid"
   >
     <caption
       aria-live="polite"
       className="fd-table__caption"
-      id="mocked-short-id"
+      id="fd-mocked-short-id"
     >
       
     </caption>
@@ -1255,6 +1267,7 @@ exports[`Storyshots Component API/Table Primary 1`] = `
     >
       <tr
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell"
@@ -1279,6 +1292,7 @@ exports[`Storyshots Component API/Table Primary 1`] = `
       </tr>
       <tr
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell"
@@ -1311,14 +1325,15 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
   dir="ltr"
 >
   <table
-    aria-describedby="mocked-short-id"
+    aria-describedby="fd-mocked-short-id"
     className="fd-table"
+    onBlur={[Function]}
     role="grid"
   >
     <caption
       aria-live="polite"
       className="fd-table__caption"
-      id="mocked-short-id"
+      id="fd-mocked-short-id"
     >
       
     </caption>
@@ -1387,6 +1402,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
@@ -1486,6 +1502,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
@@ -1585,6 +1602,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
@@ -1684,6 +1702,7 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
       <tr
         aria-selected={false}
         className="fd-table__row"
+        onClick={[Function]}
       >
         <td
           className="fd-table__cell fd-table__cell--checkbox"
@@ -1778,6 +1797,416 @@ exports[`Storyshots Component API/Table Rich Table 1`] = `
               </div>
             </div>
           </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots Component API/Table With Row Navigation 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    aria-describedby="fd-mocked-short-id"
+    className="fd-table fd-table--no-horizontal-borders"
+    onBlur={[Function]}
+    role="grid"
+  >
+    <caption
+      aria-live="polite"
+      className="fd-table__caption"
+      id="fd-mocked-short-id"
+    >
+      
+    </caption>
+    <thead
+      className="fd-table__header"
+    >
+      <tr
+        className="fd-table__row fd-table__row--focusable"
+      >
+        <th
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select all rows"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Product Name
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Product ID
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Quantity
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Status
+        </th>
+        <th
+          className="fd-table__cell"
+        >
+          Image
+        </th>
+        <th
+          className="fd-table__cell"
+        />
+      </tr>
+    </thead>
+    <tbody
+      className="fd-table__body"
+    >
+      <tr
+        aria-selected={false}
+        className="fd-table__row fd-table__row--activable fd-table__row--focusable"
+        onClick={[Function]}
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 15"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            Notebook Basic 15
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1000"
+            name="Notebook Basic 15"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            10
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-object-status fd-object-status--positive"
+          >
+            Available
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 15"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
+            role="img"
+          />
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row fd-table__row--activable fd-table__row--focusable"
+        onClick={[Function]}
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 17"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            Notebook Basic 17
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1001"
+            name="Notebook Basic 17"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            0
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-object-status fd-object-status--negative"
+          >
+            Unavailable
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 17"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
+            role="img"
+          />
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row fd-table__row--activable fd-table__row--focusable"
+        onClick={[Function]}
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 18"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            Notebook Basic 18
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1002"
+            name="Notebook Basic 18"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            13
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-object-status fd-object-status--positive"
+          >
+            Available
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 18"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1002.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
+            role="img"
+          />
+        </td>
+      </tr>
+      <tr
+        aria-selected={false}
+        className="fd-table__row fd-table__row--activable fd-table__row--focusable"
+        onClick={[Function]}
+      >
+        <td
+          className="fd-table__cell fd-table__cell--checkbox"
+        >
+          <div
+            className="fd-form-item"
+          >
+            <input
+              aria-checked={false}
+              aria-label="Select row"
+              checked={false}
+              className="fd-checkbox"
+              id="fd-mocked-short-id"
+              name="Notebook Basic 19"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="fd-form-label fd-checkbox__label"
+              htmlFor="fd-mocked-short-id"
+            />
+          </div>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            Notebook Basic 19
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <input
+            aria-label="Product ID"
+            className="fd-input"
+            defaultValue="HT-1003"
+            name="Notebook Basic 19"
+            type="text"
+          />
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span>
+            15
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <span
+            className="fd-object-status fd-object-status--positive"
+          >
+            Available
+          </span>
+        </td>
+        <td
+          className="fd-table__cell"
+        >
+          <a
+            aria-label="Show image: Notebook Basic 19"
+            className="fd-link"
+            href="https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg"
+          >
+            Show image
+          </a>
+        </td>
+        <td
+          className="fd-table__cell fd-table__cell--fit-content fd-table__cell----no-padding"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-table__icon fd-table__icon--navigation"
+            role="img"
+          />
         </td>
       </tr>
     </tbody>

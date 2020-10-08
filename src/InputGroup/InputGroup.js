@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/input-group.css';
 
 const classnames = classnamesBind.bind(styles);
-const isUsingCssModules = Object.keys(styles).length > 0;
+const isUsingCssModules = styles && Object.keys(styles).length > 0;
 
 /** An **InputGroup** includes form inputs with add-ons that allow the user to
 better understand the information being entered. */
