@@ -16,7 +16,7 @@ const classnames = classnamesBind.bind({
     ...inputGroupStyles,
     ...localizationEditorStyles
 });
-const isUsingCssModules = Object.keys(localizationEditorStyles).length > 0;
+const isUsingCssModules = localizationEditorStyles && Object.keys(localizationEditorStyles).length > 0;
 
 const LocalizationEditor = React.forwardRef(({ control, menu, id, compact, textarea, className, inputClassName, listProps, popoverProps,
     ...props }, ref) => {

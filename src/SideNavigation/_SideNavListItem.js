@@ -11,7 +11,7 @@ const classnames = classnamesBind.bind({
     ...iconStyles,
     ...sideNavStyles
 });
-const isUsingCssModules = Object.keys(sideNavStyles).length > 0;
+const isUsingCssModules = sideNavStyles && Object.keys(sideNavStyles).length > 0;
 
 class SideNavListItem extends React.Component {
     constructor(props) {
