@@ -3,6 +3,8 @@ import React from 'react';
 import Table from './Table';
 
 describe('<Table />', () => {
+    const setup = (props) => mount(<Table {...props} />);
+
     const defaultHeaders = [
         'Column Header 1',
         'Column Header 2',
@@ -18,14 +20,17 @@ describe('<Table />', () => {
         }
     ];
 
+    const basicProps = {
+        headers: defaultHeaders,
+        tableData: defaultData
+    };
+
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Table component', () => {
-            const element = mount(
-                <Table
-                    data-sample='Sample'
-                    headers={defaultHeaders}
-                    tableData={defaultData} />
-            );
+            const element = setup({
+                ...basicProps,
+                'data-sample': 'Sample'
+            });
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -33,14 +38,12 @@ describe('<Table />', () => {
         });
 
         test('should allow props to be spread to the Table component\'s thead element', () => {
-            const element = mount(
-                <Table
-                    headers={defaultHeaders}
-                    tableData={defaultData}
-                    tableHeaderProps={{
-                        'data-sample': 'Sample'
-                    }} />
-            );
+            const element = setup({
+                ...basicProps,
+                tableHeaderProps: {
+                    'data-sample': 'Sample'
+                }
+            });
 
             expect(
                 element.find('thead').getDOMNode().attributes['data-sample'].value
@@ -48,14 +51,12 @@ describe('<Table />', () => {
         });
 
         test('should allow props to be spread to the Table component\'s thead > tr element', () => {
-            const element = mount(
-                <Table
-                    headers={defaultHeaders}
-                    tableData={defaultData}
-                    tableHeaderRowProps={{
-                        'data-sample': 'Sample'
-                    }} />
-            );
+            const element = setup({
+                ...basicProps,
+                tableHeaderRowProps: {
+                    'data-sample': 'Sample'
+                }
+            });
 
             expect(
                 element.find('thead > tr').getDOMNode().attributes['data-sample'].value
@@ -63,14 +64,12 @@ describe('<Table />', () => {
         });
 
         test('should allow props to be spread to the Table component\'s tbody element', () => {
-            const element = mount(
-                <Table
-                    headers={defaultHeaders}
-                    tableBodyProps={{
-                        'data-sample': 'Sample'
-                    }}
-                    tableData={defaultData} />
-            );
+            const element = setup({
+                ...basicProps,
+                tableBodyProps: {
+                    'data-sample': 'Sample'
+                }
+            });
 
             expect(
                 element.find('tbody').getDOMNode().attributes['data-sample'].value
@@ -78,22 +77,12 @@ describe('<Table />', () => {
         });
 
         test('should allow props to be spread to the Table component\'s tbody > tr elements via object', () => {
-            const data = [
-                {
-                    rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
-                },
-                {
-                    rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
+            const element = setup({
+                ...basicProps,
+                tableBodyRowProps: {
+                    'data-sample': 'Sample'
                 }
-            ];
-            const element = mount(
-                <Table
-                    headers={defaultHeaders}
-                    tableBodyRowProps={{
-                        'data-sample': 'Sample'
-                    }}
-                    tableData={data} />
-            );
+            });
 
             const rows = element.find('tbody > tr');
 
@@ -107,24 +96,14 @@ describe('<Table />', () => {
         });
 
         test('should allow props to be spread to the Table component\'s tbody > tr elements via function', () => {
-            const data = [
-                {
-                    rowData: ['Data 1', 'Data 2', 'Data 3', 'Data 4']
-                },
-                {
-                    rowData: ['Data 5', 'Data 6', 'Data 7', 'Data 8']
+            const element = setup({
+                ...basicProps,
+                tableBodyRowProps: (row, index) => {
+                    return {
+                        'data-sample': `Sample ${index}`
+                    };
                 }
-            ];
-            const element = mount(
-                <Table
-                    headers={defaultHeaders}
-                    tableBodyRowProps={(row, index) => {
-                        return {
-                            'data-sample': `Sample ${index}`
-                        };
-                    }}
-                    tableData={data} />
-            );
+            });
 
             const rows = element.find('tbody > tr');
 
@@ -135,6 +114,23 @@ describe('<Table />', () => {
             expect(
                 rows.at(1).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample 1');
+        });
+    });
+
+    describe('selection', () => {
+        it('shows checkbox in first column', () => {
+            const element = setup({
+                ...basicProps,
+                selection: {
+                    isSelected: () => {},
+                    onSelectRow: () => {}
+                }
+            });
+
+            const bodyRows = element.getDOMNode().querySelectorAll('tbody tr');
+            for (let i = 0; i < bodyRows.length; i++) {
+                expect(bodyRows[i].querySelector('td').querySelector('.fd-checkbox')).toBeDefined();
+            }
         });
     });
 

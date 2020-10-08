@@ -11,7 +11,7 @@ import ObjectStatus from '../../ObjectStatus/ObjectStatus';
 import Popover from '../../Popover/Popover';
 import Select from '../../Select/Select';
 import Table from '../Table';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 export default {
     title: 'Component API/Table',
@@ -108,7 +108,9 @@ export const richTable = () => {
                     ariaLabel='Select all rows'
                     checked={allItemsChecked}
                     onChange={handleHeaderChange} />, 'Avatar', 'email', 'First Name', 'Last Name', 'Date', ' ']}
-            richTable
+            selection={{
+                isSelected: (index) => !!checkedItems[tableRowData[index].name]
+            }}
             tableData={
                 tableRowData.map(item => {
                     return ({
@@ -187,15 +189,22 @@ export const gridTable = () => {
     ];
 
     const [checkedItems, setCheckedItems] = useState({});
+    const allItemsCheckedRef = useRef();
+    allItemsCheckedRef.current = Object.keys(checkedItems).length === tableRowData.length && !Object.keys(checkedItems).some(key => !checkedItems[key]);
+
+    const toggleAllItems = (checked) => {
+        const newCheckedItems = {};
+        tableRowData.forEach(row => newCheckedItems[row.productName] = checked);
+        setCheckedItems(newCheckedItems);
+    };
 
     const handleChange = (event) => {
-        setCheckedItems({ ...checkedItems, [event.target.name]: event.target.checked });
+        const { target } = event;
+        setCheckedItems(prevItems => ({ ...prevItems, [target.name]: target.checked }));
     };
 
     const handleHeaderChange = (event) => {
-        const newCheckedItems = {};
-        tableRowData.forEach(row => newCheckedItems[row.productName] = event.target.checked);
-        setCheckedItems(newCheckedItems);
+        toggleAllItems(event.target.checked);
     };
 
     const suppliers = [
@@ -205,8 +214,6 @@ export const gridTable = () => {
         { key: '4', text: 'Technocom' }
     ];
 
-    const allItemsChecked = Object.keys(checkedItems).length > 0 && !Object.keys(checkedItems).some(key => !checkedItems[key]);
-
     return (
         <Table
             compact={boolean('compact', false)}
@@ -214,17 +221,29 @@ export const gridTable = () => {
             headers={[
                 <Checkbox
                     ariaLabel='Select all rows'
-                    checked={allItemsChecked}
+                    checked={allItemsCheckedRef.current}
                     onChange={handleHeaderChange} />, 'Product Name', 'Product ID', 'Quantity', 'Status', 'Supplier', 'Image', 'Heavy Weight', 'Categories', 'Delivery Date']}
             keyboardNavigation='cell'
-            richTable
+            selection={{
+                isSelected: (index) => !!checkedItems[tableRowData[index].productName],
+                onSelectRow: (index) => {
+                    if (index > -1) {
+                        const rowKey = tableRowData[index]?.productName;
+                        setCheckedItems(prevItems => {
+                            return { ...prevItems, [rowKey]: !prevItems[rowKey] };
+                        });
+                    } else {
+                        toggleAllItems(!allItemsCheckedRef.current);
+                    }
+                }
+            }}
             tableData={
                 tableRowData.map(item => {
                     return ({
                         rowData: [
                             <Checkbox
                                 ariaLabel='Select row'
-                                checked={checkedItems[item.productName] || false}
+                                checked={!!checkedItems[item.productName]}
                                 name={item.productName}
                                 onChange={handleChange} />,
                             <span>{item.productName}</span>,
@@ -239,6 +258,113 @@ export const gridTable = () => {
                             <Checkbox ariaLabel='Heavy Weight' />,
                             <FormInput aria-label='Categories' />,
                             <DatePicker defaultValue={item.deliveryDate} inputProps={{ 'aria-label': 'Delivery Date' }} />
+                        ]
+                    });
+                })
+            } />
+    );
+};
+
+export const withRowNavigation = () => {
+    const tableRowData = [
+        {
+            'productId': 'HT-1000',
+            'supplierName': 'Very Best Screens',
+            'productName': 'Notebook Basic 15',
+            'deliveryDate': '2017-03-26',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1000.jpg',
+            'status': 'Available',
+            'quantity': 10
+        },
+        {
+            'productId': 'HT-1001',
+            'supplierName': 'Fasttech',
+            'productName': 'Notebook Basic 17',
+            'deliveryDate': '2017-04-17',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1001.jpg',
+            'status': 'Unavailable',
+            'quantity': 0
+        },
+        {
+            'productId': 'HT-1002',
+            'supplierName': 'Printers for All',
+            'productName': 'Notebook Basic 18',
+            'deliveryDate': '2017-01-07',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1002.jpg',
+            'status': 'Available',
+            'quantity': 13
+        },
+        {
+            'productId': 'HT-1003',
+            'supplierName': 'Technocom',
+            'productName': 'Notebook Basic 19',
+            'deliveryDate': '2017-04-09',
+            'imageUrl': 'https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/images/HT-1003.jpg',
+            'status': 'Available',
+            'quantity': 15
+        }
+    ];
+
+    const [checkedItems, setCheckedItems] = useState({});
+    const allItemsCheckedRef = useRef();
+    allItemsCheckedRef.current = Object.keys(checkedItems).length === tableRowData.length && !Object.keys(checkedItems).some(key => !checkedItems[key]);
+
+    const toggleAllItems = (checked) => {
+        const newCheckedItems = {};
+        tableRowData.forEach(row => newCheckedItems[row.productName] = checked);
+        setCheckedItems(newCheckedItems);
+    };
+
+    const handleChange = (event) => {
+        const { target } = event;
+        setCheckedItems(prevItems => ({ ...prevItems, [target.name]: target.checked }));
+    };
+
+    const handleHeaderChange = (event) => {
+        toggleAllItems(event.target.checked);
+    };
+
+    return (
+        <Table
+            compact={boolean('compact', false)}
+            condensed={boolean('condensed', false)}
+            headers={[
+                <Checkbox
+                    ariaLabel='Select all rows'
+                    checked={allItemsCheckedRef.current}
+                    onChange={handleHeaderChange} />, 'Product Name', 'Product ID', 'Quantity', 'Status', 'Image']}
+            keyboardNavigation='row'
+            selection={{
+                isSelected: (index) => !!checkedItems[tableRowData[index].productName],
+                onClickRow: (index) => {
+                    window.alert('You clicked row ' + index);
+                },
+                onSelectRow: (index) => {
+                    if (index > -1) {
+                        const rowKey = tableRowData[index]?.productName;
+                        setCheckedItems(prevItems => {
+                            return { ...prevItems, [rowKey]: !prevItems[rowKey] };
+                        });
+                    } else {
+                        toggleAllItems(!allItemsCheckedRef.current);
+                    }
+                }
+            }}
+            tableData={
+                tableRowData.map(item => {
+                    return ({
+                        rowData: [
+                            <Checkbox
+                                ariaLabel='Select row'
+                                checked={!!checkedItems[item.productName]}
+                                name={item.productName}
+                                onChange={handleChange} />,
+                            <span>{item.productName}</span>,
+                            <FormInput aria-label='Product ID' defaultValue={item.productId}
+                                name={item.productName} />,
+                            <span>{item.quantity}</span>,
+                            <ObjectStatus status={item.status === 'Available' ? 'positive' : 'negative'}>{item.status}</ObjectStatus>,
+                            <Link aria-label={`Show image: ${item.productName}`} href={item.imageUrl}>Show image</Link>
                         ]
                     });
                 })
