@@ -21,7 +21,7 @@ const classnames = classnamesBind.bind({
     ...productSwitchStyles,
     ...shellbarStyles
 });
-const isUsingCssModules = Object.keys(shellbarStyles).length > 0;
+const isUsingCssModules = shellbarStyles && Object.keys(shellbarStyles).length > 0;
 
 const buttonClassnames = classnamesBind.bind(buttonStyles);
 /** The **Shellbar** offers consistent, responsive navigation across all products and applications. Includes

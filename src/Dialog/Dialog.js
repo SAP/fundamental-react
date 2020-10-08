@@ -15,7 +15,7 @@ const classnames = classnamesBind.bind({
     ...dialogStyles
 });
 const barClassnames = classnamesBind.bind(barStyles);
-const isUsingCssModules = Object.keys(dialogStyles).length > 0;
+const isUsingCssModules = dialogStyles && Object.keys(dialogStyles).length > 0;
 /** A **Dialog** is a container generally displayed in response to an action. It is used for short forms,
  * confirmation messages or to display contextual information that does not require a page.\n\nTo
  * display the **Dialog** dialog, pass a boolean value to the \`show\` property of the component. It is

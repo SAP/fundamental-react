@@ -10,7 +10,7 @@ import React, { useCallback, useState } from 'react';
 import styles from 'fundamental-styles/dist/step-input.css';
 
 const classnames = classnamesBind.bind(styles);
-const isUsingCssModules = Object.keys(styles).length > 0;
+const isUsingCssModules = styles && Object.keys(styles).length > 0;
 /** The **StepInput** allows the user to change the input values in predefined increments (steps).
 
 Use the step input if:
