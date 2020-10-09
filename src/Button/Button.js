@@ -3,6 +3,7 @@ import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import { BUTTON_OPTIONS, BUTTON_TYPES } from '../utils/constants';
 import styles from 'fundamental-styles/dist/button.css';
 
@@ -29,16 +30,17 @@ const Button = React.forwardRef(({
     onClick,
     children,
     className,
+    cssNamespace,
     textClassName,
     ...props
 }, ref) => {
 
     const buttonClasses = classnames(
-        'fd-button',
+        `${cssNamespace}-button`,
         {
-            [`fd-button--${option}`]: !!option,
-            [`fd-button--${type}`]: !!type,
-            'fd-button--compact': compact,
+            [`${cssNamespace}-button--${option}`]: !!option,
+            [`${cssNamespace}-button--${type}`]: !!type,
+            [`${cssNamespace}-button--compact`]: compact,
             'is-selected': selected,
             'is-disabled': disabled
         },
@@ -46,7 +48,7 @@ const Button = React.forwardRef(({
     );
 
     const buttonTextClasses = classnames(
-        'fd-button__text',
+        `${cssNamespace}-button__text`,
         textClassName
     );
 
@@ -77,7 +79,7 @@ const Button = React.forwardRef(({
             content = (
                 <p
                     aria-live='assertive'
-                    className={classnames('fd-button__instructions')}
+                    className={classnames(`${cssNamespace}-button__instructions`)}
                     id={ariaLiveId}>
                     {liveMessageForScreenReaders}
                 </p>)
@@ -187,4 +189,4 @@ Button.defaultProps = {
     typeAttr: 'button'
 };
 
-export default Button;
+export default withStyles(Button);

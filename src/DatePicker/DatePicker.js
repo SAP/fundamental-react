@@ -10,6 +10,7 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
+import withStyles from '../utils/withStyles';
 import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 import barStyles from 'fundamental-styles/dist/bar.css';
@@ -353,6 +354,7 @@ class DatePicker extends Component {
             buttonProps,
             calendarProps,
             compact,
+            cssNamespace,
             dateFormat,
             disabled,
             disableAfterDate,
@@ -386,7 +388,7 @@ class DatePicker extends Component {
         } = this.props;
 
         const inputGroupClass = classnames(
-            'fd-input-group--control',
+            `${cssNamespace}-input-group--control`,
             {
                 [`is-${validationState?.state}`]: validationState?.state
             },
@@ -394,18 +396,18 @@ class DatePicker extends Component {
         );
 
         const datepickerFooterClassName = classnames(
-            'fd-dialog__footer',
-            'fd-bar',
-            'fd-bar--footer',
+            `${cssNamespace}-dialog__footer`,
+            `${cssNamespace}-bar`,
+            `${cssNamespace}-bar--footer`,
             {
-                'fd-bar--cozy': !compact,
-                'fd-bar--compact': compact
+                [`${cssNamespace}-bar--cozy`]: !compact,
+                [`${cssNamespace}-bar--compact`]: compact
             },
             footerClasses
         );
 
         const footerButtonClassnames = classnames(
-            'fd-dialog__decisive-button',
+            `${cssNamespace}-dialog__decisive-button`,
             footerButtonProps?.className
         );
 
@@ -445,7 +447,7 @@ class DatePicker extends Component {
 
         const calendarClasses = classnames(
             {
-                'fd-list--has-message': validationState?.state
+                [`${cssNamespace}-list--has-message`]: validationState?.state
             },
             calendarProps?.className
         );
@@ -499,8 +501,8 @@ class DatePicker extends Component {
                                 weekdayStart={weekdayStart} />
                             { this.showTodayFooter() &&
                                 <div className={datepickerFooterClassName}>
-                                    <div className={classnames('fd-bar__right')}>
-                                        <div className={classnames('fd-bar__element')}>
+                                    <div className={classnames(`${cssNamespace}-bar__right`)}>
+                                        <div className={classnames(`${cssNamespace}-bar__element`)}>
                                             <Button
                                                 {...footerButtonProps}
                                                 className={footerButtonClassnames}
@@ -677,4 +679,4 @@ DatePicker.defaultProps = {
     onInputFocus: () => {}
 };
 
-export default DatePicker;
+export default withStyles(DatePicker);

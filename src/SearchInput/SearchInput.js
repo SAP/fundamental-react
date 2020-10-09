@@ -10,6 +10,7 @@ import keycode from 'keycode';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useEffect, useState } from 'react';
 import styles from 'fundamental-styles/dist/input-group.css';
 
@@ -18,6 +19,7 @@ const classnames = classnamesBind.bind(styles);
 const SearchInput = React.forwardRef( ({
     className,
     compact,
+    cssNamespace,
     disabled,
     inputProps,
     inputGroupAddonProps,
@@ -108,7 +110,7 @@ const SearchInput = React.forwardRef( ({
 
     inputGroupClasses = !inShellbar ? classnames(
         inputGroupClasses,
-        'fd-input-group--control',
+        `${cssNamespace}-input-group--control`,
         {
             [`is-${validationState?.state}`]: validationState?.state
         }
@@ -305,4 +307,4 @@ SearchInput.defaultProps = {
     onSelect: () => { }
 };
 
-export default SearchInput;
+export default withStyles(SearchInput);

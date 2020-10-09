@@ -2,12 +2,13 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import { mapSize, mapSizeClasses, resolveSpan, validSpan } from './_layoutGridUtils';
 import styles from 'fundamental-styles/dist/layout-grid.css';
 
 const classnames = classnamesBind.bind(styles);
 
-const Column = React.forwardRef(({ children, className, offset, offsetPosition, span, ...props }, ref) => {
+const Column = React.forwardRef(({ children, className, cssNamespace, offset, offsetPosition, span, ...props }, ref) => {
 
     const offsets = mapSize((size) => resolveSpan(offset, size, false));
 
@@ -20,13 +21,13 @@ const Column = React.forwardRef(({ children, className, offset, offsetPosition, 
     });
 
     const colClasses = classnames(
-        'fd-col',
+        `${cssNamespace}-col`,
         responsiveColClasses,
         {
-            [`fd-col--offset${offsetPositionModifier}-${offsets.smallScreen}`]: offsets.smallScreen,
-            [`fd-col-md--offset${offsetPositionModifier}-${offsets.mediumScreen}`]: offsets.mediumScreen,
-            [`fd-col-lg--offset${offsetPositionModifier}-${offsets.largeScreen}`]: offsets.largeScreen,
-            [`fd-col-xl--offset${offsetPositionModifier}-${offsets.xLargeScreen}`]: offsets.xLargeScreen
+            [`${cssNamespace}-col--offset${offsetPositionModifier}-${offsets.smallScreen}`]: offsets.smallScreen,
+            [`${cssNamespace}-col-md--offset${offsetPositionModifier}-${offsets.mediumScreen}`]: offsets.mediumScreen,
+            [`${cssNamespace}-col-lg--offset${offsetPositionModifier}-${offsets.largeScreen}`]: offsets.largeScreen,
+            [`${cssNamespace}-col-xl--offset${offsetPositionModifier}-${offsets.xLargeScreen}`]: offsets.xLargeScreen
         },
         className
     );
@@ -77,4 +78,4 @@ Column.defaultProps = {
 };
 
 
-export default Column;
+export default withStyles(Column);

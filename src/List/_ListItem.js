@@ -1,6 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import ListSelection from './_ListSelection';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import styles from 'fundamental-styles/dist/list.css';
 
@@ -11,6 +12,7 @@ const ListItem = ({
     buttonProps,
     className,
     children,
+    cssNamespace,
     hasByline,
     onClick,
     navigation,
@@ -28,10 +30,10 @@ const ListItem = ({
     const isLink = navigation || (partialNavigation && url);
 
     const ListItemClasses = classnames(
-        'fd-list__item',
+        `${cssNamespace}-list__item`,
         {
-            'fd-list__item--link': isLink,
-            'fd-list__item--action': action
+            [`${cssNamespace}-list__item--link`]: isLink,
+            [`${cssNamespace}-list__item--action`]: action
         },
         className
     );
@@ -40,15 +42,15 @@ const ListItem = ({
 
     if (hasByline) {
         content = (
-            <div className={classnames('fd-list__content')}>
+            <div className={classnames(`${cssNamespace}-list__content`)}>
                 {children}
             </div>
         );
     } else if (isLink) {
         const linkClassNames = classnames(
-            'fd-list__link',
+            `${cssNamespace}-list__link`,
             {
-                'fd-list__link--navigation-indicator': partialNavigation,
+                [`${cssNamespace}-list__link--navigation-indicator`]: partialNavigation,
                 'is-selected': selected
             }
         );
@@ -64,7 +66,7 @@ const ListItem = ({
     } else if (action) {
         content = (
             <button {...buttonProps}
-                className={classnames('fd-list__title')}
+                className={classnames(`${cssNamespace}-list__title`)}
                 onClick={handleClick}>
                 {children}
             </button>
@@ -140,4 +142,4 @@ ListItem.defaultProps = {
     selected: false
 };
 
-export default ListItem;
+export default withStyles(ListItem);

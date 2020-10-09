@@ -3,22 +3,23 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Title from '../Title/Title';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/layout-panel.css';
 
 const classnames = classnamesBind.bind(styles);
 
 const LayoutPanelHead = props => {
-    const { title, description, className, headingLevel, headingStyle, ...rest } = props;
+    const { title, description, className, cssNamespace, headingLevel, headingStyle, ...rest } = props;
 
     const panelHeadClasses = classnames(
-        'fd-layout-panel__head',
+        `${cssNamespace}-layout-panel__head`,
         className
     );
 
     return (
         <div {...rest} className={panelHeadClasses}>
             {title ?
-                <div className={classnames('fd-layout-panel__title')}>
+                <div className={classnames(`${cssNamespace}-layout-panel__title`)}>
                     <Title
                         level={headingLevel}
                         levelStyle={headingStyle}
@@ -26,7 +27,7 @@ const LayoutPanelHead = props => {
                         {title}
                     </Title>
                 </div> : null}
-            {description ? <p className={classnames('fd-layout-panel__description')}>{description}</p> : null}
+            {description ? <p className={classnames(`${cssNamespace}-layout-panel__description`)}>{description}</p> : null}
         </div>
     );
 };
@@ -51,4 +52,4 @@ LayoutPanelHead.defaultProps = {
     headingStyle: 5
 };
 
-export default LayoutPanelHead;
+export default withStyles(LayoutPanelHead);

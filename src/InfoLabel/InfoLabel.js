@@ -3,6 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import infoLabelStyles from 'fundamental-styles/dist/info-label.css';
 
@@ -17,17 +18,18 @@ const InfoLabel = React.forwardRef(({
     children,
     className,
     color,
+    cssNamespace,
     glyph,
     numeric,
     ...props
 }, ref) => {
 
     const labelClasses = classnames(
-        'fd-info-label',
+        `${cssNamespace}-info-label`,
         {
-            'fd-info-label--numeric': numeric,
-            [`fd-info-label--accent-color-${color}`]: color,
-            'fd-info-label--icon': glyph,
+            [`${cssNamespace}-info-label--numeric`]: numeric,
+            [`${cssNamespace}-info-label--accent-color-${color}`]: color,
+            [`${cssNamespace}-info-label--icon`]: glyph,
             [`sap-icon--${glyph}`]: glyph
         },
         className
@@ -53,4 +55,4 @@ InfoLabel.propTypes = {
     numeric: PropTypes.bool
 };
 
-export default InfoLabel;
+export default withStyles(InfoLabel);

@@ -1,6 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/form-label.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -11,6 +12,7 @@ const FormLabel = React.forwardRef(({
     required,
     children,
     className,
+    cssNamespace,
     disabled,
     isInlineHelp,
     includeColon,
@@ -18,12 +20,12 @@ const FormLabel = React.forwardRef(({
 }, ref) => {
 
     const formLabelClasses = classnames(
-        'fd-form-label',
+        `${cssNamespace}-form-label`,
         {
             'is-disabled': disabled,
-            'fd-form-label--inline-help': isInlineHelp,
-            'fd-form-label--required': required,
-            'fd-form-label--colon': includeColon
+            [`${cssNamespace}-form-label--inline-help`]: isInlineHelp,
+            [`${cssNamespace}-form-label--required`]: required,
+            [`${cssNamespace}-form-label--colon`]: includeColon
         },
         className
     );
@@ -56,4 +58,4 @@ FormLabel.propTypes = {
     required: PropTypes.bool
 };
 
-export default FormLabel;
+export default withStyles(FormLabel);

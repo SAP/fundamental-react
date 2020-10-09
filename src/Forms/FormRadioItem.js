@@ -5,6 +5,7 @@ import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/radio.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -13,6 +14,7 @@ const FormRadioItem = React.forwardRef(({
     checked,
     children,
     compact,
+    cssNamespace,
     data,
     defaultChecked,
     disabled,
@@ -26,9 +28,9 @@ const FormRadioItem = React.forwardRef(({
     ...props }, ref) => {
 
     const inputClassName = classnames(
-        'fd-radio',
+        `${cssNamespace}-radio`,
         {
-            'fd-radio--compact': compact,
+            [`${cssNamespace}-radio--compact`]: compact,
             [`is-${state}`]: state
         }
     );
@@ -53,7 +55,7 @@ const FormRadioItem = React.forwardRef(({
                 value={value} />
             <FormLabel
                 {...labelProps}
-                className={classnames('fd-radio__label')}
+                className={classnames(`${cssNamespace}-radio__label`)}
                 disabled={disabled}
                 htmlFor={radioId}>
                 {children}
@@ -95,4 +97,4 @@ FormRadioItem.propTypes = {
     value: PropTypes.string
 };
 
-export default FormRadioItem;
+export default withStyles(FormRadioItem);

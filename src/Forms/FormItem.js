@@ -1,17 +1,18 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/form-item.css';
 
 const classnames = classnamesBind.bind(styles);
 
-const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className, ...props }, ref) => {
+const FormItem = React.forwardRef(({ isHorizontal, isInline, children, className, cssNamespace, ...props }, ref) => {
 
     const formItemClasses = classnames(
-        'fd-form-item',
+        `${cssNamespace}-form-item`,
         {
-            'fd-form-item--inline': isInline,
-            'fd-form-item--horizontal': isHorizontal
+            [`${cssNamespace}-form-item--inline`]: isInline,
+            [`${cssNamespace}-form-item--horizontal`]: isHorizontal
         },
         className
     );
@@ -38,4 +39,4 @@ FormItem.propTypes = {
     isInline: PropTypes.bool
 };
 
-export default FormItem;
+export default withStyles(FormItem);

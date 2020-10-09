@@ -1,17 +1,18 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/layout-grid.css';
 
 const classnames = classnamesBind.bind(styles);
 
 /** **Container** can be used to arrange wrap the **Row** and **Column** components to create a responsive grid layout with appropriate padding.*/
-const Container = React.forwardRef(({ noGap, children, className, ...props }, ref) => {
+const Container = React.forwardRef(({ noGap, children, className, cssNamespace, ...props }, ref) => {
 
     const containerClasses = classnames(
-        'fd-container',
+        `${cssNamespace}-container`,
         {
-            'fd-container--no-gap': noGap
+            [`${cssNamespace}-container--no-gap`]: noGap
         },
         className
     );
@@ -37,4 +38,4 @@ Container.propTypes = {
     noGap: PropTypes.bool
 };
 
-export default Container;
+export default withStyles(Container);

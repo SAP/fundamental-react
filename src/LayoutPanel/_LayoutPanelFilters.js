@@ -1,15 +1,16 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/layout-panel.css';
 
 const classnames = classnamesBind.bind(styles);
 
 const LayoutPanelFilters = props => {
-    const { children, className, ...rest } = props;
+    const { children, className, cssNamespace, ...rest } = props;
 
     const panelFiltersClasses = classnames(
-        'fd-layout-panel__filters',
+        `${cssNamespace}-layout-panel__filters`,
         className
     );
 
@@ -29,4 +30,4 @@ LayoutPanelFilters.propTypes = {
     className: PropTypes.string
 };
 
-export default LayoutPanelFilters;
+export default withStyles(LayoutPanelFilters);
