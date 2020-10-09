@@ -359,7 +359,8 @@ export default class GridManager {
                 }
                 return;
             default:
-                break;
+                this.onKeyDownCell(nextCell, event);
+                return;
         }
 
         if (nextCell) {

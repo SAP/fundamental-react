@@ -184,7 +184,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             onBlur={onBlurTable}
             ref={tableRefCallback}
             role={keyboardNavigation ? 'grid' : 'table'}>
-            <caption aria-live='polite' className='fd-table__caption'
+            <caption aria-live='polite' className={classnames('fd-table__caption')}
                 id={captionId}>
                 {instructionsText}
             </caption>
