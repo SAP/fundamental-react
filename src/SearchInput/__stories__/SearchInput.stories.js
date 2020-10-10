@@ -127,3 +127,14 @@ export const dev = () => (
         })} />
 );
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <SearchInput
+        cssNamespace='xxx'
+        inputProps={{
+            'aria-label': 'Compact search input'
+        }}
+        placeholder='Placeholder'
+        searchList={searchData} />
+);
+noStyles.parameters = { docs: { disable: true } };

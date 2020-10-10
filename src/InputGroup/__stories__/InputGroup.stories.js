@@ -172,3 +172,15 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <InputGroup cssNamespace='xxx'>
+        <InputGroup.Addon isButton>
+            <Button
+                glyph='navigation-down-arrow'
+                option='transparent' />
+        </InputGroup.Addon>
+        <FormInput />
+    </InputGroup>
+);
+noStyles.parameters = { docs: { disable: true } };

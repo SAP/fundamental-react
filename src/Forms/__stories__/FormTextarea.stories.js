@@ -68,3 +68,6 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (<FormTextarea cssNamespace='xxx' defaultValue='Placeholder' />);
+noStyles.parameters = { docs: { disable: true } };

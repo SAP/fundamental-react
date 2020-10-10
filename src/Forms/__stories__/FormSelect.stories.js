@@ -86,3 +86,12 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <FormSelect cssNamespace='xxx'>
+        <option>Duis malesuada odio volutpat elementum</option>
+        <option>Suspendisse ante ligula</option>
+        <option>Sed bibendum sapien at posuere interdum</option>
+    </FormSelect>
+);
+noStyles.parameters = { docs: { disable: true } };

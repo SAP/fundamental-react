@@ -402,3 +402,12 @@ export const dev = () => {
 dev.parameters = {
     docs: { disable: true }
 };
+
+export const noStyles = () => (
+    <Popover
+        body={bodyContent}
+        control={<Icon glyph='cart' size='xl' />}
+        cssNamespace='xxx'
+        placement='bottom' />
+);
+noStyles.parameters = { docs: { disable: true } };

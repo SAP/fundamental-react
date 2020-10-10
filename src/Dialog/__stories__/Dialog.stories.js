@@ -284,3 +284,28 @@ dev.parameters = {
     docs: { disable: true },
     storyshots: { disable: true }
 };
+
+export const noStyles = () => {
+    let [showDialog, setShowDialog] = useState(false);
+    return (
+        <>
+            <Button cssNamespace='xxx' onClick={() => setShowDialog(true)}>
+                Show Dialog
+            </Button>
+            <Dialog
+                actions={[
+                    (<Button option='transparent'>No</Button>),
+                    (<Button>Yes</Button>)
+                ]}
+                cssNamespace='xxx'
+                onClose={() => setShowDialog(false)}
+                show={showDialog}
+                title='Product Added'>
+                <p><b>The new product have been added to your catalog.</b></p>
+                <p>Automatic Product ID: <b>PD-3465334</b></p>
+                <p>Expiration date: <b>13/03/2018</b></p>
+            </Dialog>
+        </>
+    );
+};
+noStyles.parameters = { docs: { disable: true } };

@@ -56,3 +56,7 @@ export const notification = () => (
 
 notification.storyName = 'Default Counter';
 
+export const noStyles = () => (
+    <Counter cssNamespace='xxx'>5</Counter>
+);
+noStyles.parameters = { docs: { disable: true } };

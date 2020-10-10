@@ -350,3 +350,21 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <List cssNamespace='xxx'>
+        <List.Item>
+            <List.Text>Apple</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>Banana</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>Durian</List.Text>
+        </List.Item>
+        <List.Item>
+            <List.Text>Grape</List.Text>
+        </List.Item>
+    </List>
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -28,3 +28,11 @@ export const url = () => (
 
 url.storyName = 'With url property';
 
+export const noStyles = () => (
+    <Breadcrumb cssNamespace='xxx'>
+        <Breadcrumb.Item name='Link Text' url='#' />
+        <Breadcrumb.Item name='Link Text' url='#' />
+        <Breadcrumb.Item name='Link Text' url='#' />
+    </Breadcrumb>
+);
+noStyles.parameters = { docs: { disable: true } };

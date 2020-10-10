@@ -301,3 +301,34 @@ export const withIcons = () => (
         </SideNav.List>
     </SideNav>
 );
+
+export const noStyles = () => (
+    <SideNav
+        cssNamespace='xxx'
+        selectedId='item-2'
+        skipLink={skipLink}>
+        <SideNav.List>
+            <SideNav.ListItem
+                id='item-1'
+                name='Link Item'
+                url='#' />
+            <SideNav.ListItem
+                id='item-2'
+                name='Link Item'
+                url='#' />
+            <SideNav.ListItem
+                id='item-3'
+                name='Link Item'
+                url='#' />
+            <SideNav.ListItem
+                id='item-4'
+                name='Link Item'
+                url='#' />
+            <SideNav.ListItem
+                id='item-5'
+                name='Link Item'
+                url='#' />
+        </SideNav.List>
+    </SideNav>
+);
+noStyles.parameters = { docs: { disable: true } };

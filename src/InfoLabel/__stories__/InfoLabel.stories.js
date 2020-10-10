@@ -63,3 +63,6 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (<InfoLabel cssNamespace='xxx'>Default</InfoLabel>);
+noStyles.parameters = { docs: { disable: true } };

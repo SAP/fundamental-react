@@ -66,3 +66,11 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <FormItem cssNamespace='xxx'>
+        <FormLabel htmlFor='primaryLabelExample' >Default Label</FormLabel>
+        <FormInput id='primaryLabelExample' />
+    </FormItem>
+);
+noStyles.parameters = { docs: { disable: true } };

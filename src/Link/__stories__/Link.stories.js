@@ -16,3 +16,6 @@ export const disabled = () => (
 export const subtle = () => (
     <Link href='#' subtle>Subtle</Link>
 );
+
+export const noStyles = () => (<Link cssNamespace='xxx' href='#'>Default</Link>);
+noStyles.parameters = { docs: { disable: true } };

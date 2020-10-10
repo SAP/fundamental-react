@@ -327,3 +327,36 @@ To remove gutters between columns set the \`noGap\` property on the  \`Container
 `
     }
 };
+
+export const noStyles = () => (
+    <Container
+        className='docs-layout-grid'
+        cssNamespace='xxx'
+        noGap >
+        <Row>
+            <Column span={8}>
+                <div className='col-content'> {'<Column span={8}>'} </div>
+            </Column>
+            <Column span={4}>
+                <div className='col-content'> {'<Column span={4}>'} </div>
+            </Column>
+        </Row>
+        <Row>
+            <Column span={6}>
+                <div className='col-content'> {'<Column span={6}>'} </div>
+            </Column>
+            <Column span={6}>
+                <div className='col-content'> {'<Column span={6}>'} </div>
+            </Column>
+        </Row>
+        <Row>
+            <Column span={4}>
+                <div className='col-content'> {'<Column span={4}>'} </div>
+            </Column>
+            <Column span={8}>
+                <div className='col-content'> {'<Column span={8}>'} </div>
+            </Column>
+        </Row>
+    </Container>
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -339,3 +339,22 @@ export const inAResponsiveLayoutGrid = () => (
         </Row>
     </Container>
 );
+
+export const noStyles = () => (
+    <LayoutPanel cssNamespace='xxx'>
+        <LayoutPanel.Header>
+            <LayoutPanel.Head description='LayoutPanel Description' title={'LayoutPanel Header with Actions'} />
+            <LayoutPanel.Actions>
+                <div>LayoutPanel actions</div>
+            </LayoutPanel.Actions>
+        </LayoutPanel.Header>
+        <LayoutPanel.Filters>
+            <div>LayoutPanel Filters</div>
+        </LayoutPanel.Filters>
+        <LayoutPanel.Body>
+            <div>LayoutPanel Body</div>
+        </LayoutPanel.Body>
+        <LayoutPanel.Footer>LayoutPanel Footer</LayoutPanel.Footer>
+    </LayoutPanel>
+);
+noStyles.parameters = { docs: { disable: true } };
