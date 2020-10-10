@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import TreeNode from './TreeNode';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import styles from 'fundamental-styles/dist/tree.css';
 
@@ -42,6 +43,7 @@ const Tree = React.forwardRef(({
     children,
     className,
     compact,
+    cssNamespace,
     id,
     noBorders,
     emptyText,
@@ -144,13 +146,13 @@ const Tree = React.forwardRef(({
 
 
     const treeClasses = classnames(
-        'fd-tree',
+        `${cssNamespace}-tree`,
         {
             [`expanded-level-${expansionDepth}`]: typeof expansionDepth === 'number' && expansionDepth > 0,
-            'fd-tree--active': active,
-            'fd-tree--compact': compact,
-            'fd-tree--no-border': noBorders,
-            'fd-tree--no-data': emptyTree
+            [`${cssNamespace}-tree--active`]: active,
+            [`${cssNamespace}-tree--compact`]: compact,
+            [`${cssNamespace}-tree--no-border`]: noBorders,
+            [`${cssNamespace}-tree--no-data`]: emptyTree
         },
         className
     );
@@ -165,11 +167,11 @@ const Tree = React.forwardRef(({
             {!emptyTree ?
                 levelOneNodes
                 : (
-                    <li aria-level='1' className={classnames('fd-tree__item')}
+                    <li aria-level='1' className={classnames(`${cssNamespace}-tree__item`)}
                         role='treeitem'>
-                        <div className={classnames('fd-tree__item-container')}>
-                            <div className={classnames('fd-tree__content')}>
-                                <span className={classnames('fd-tree__text')}>{emptyText}</span>
+                        <div className={classnames(`${cssNamespace}-tree__item-container`)}>
+                            <div className={classnames(`${cssNamespace}-tree__content`)}>
+                                <span className={classnames(`${cssNamespace}-tree__text`)}>{emptyText}</span>
                             </div>
                         </div>
                     </li>)}
@@ -218,4 +220,4 @@ Tree.defaultProps = {
 
 Tree.Node = TreeNode;
 
-export default Tree;
+export default withStyles(Tree);

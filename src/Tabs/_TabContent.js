@@ -1,16 +1,17 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/tabs.css';
 
 const classnames = classnamesBind.bind(styles);
 
 export const TabContent = (props) => {
-    const { children, selected, className, ...rest } = props;
+    const { children, selected, className, cssNamespace, ...rest } = props;
 
     // css classes for tab panels
     const tabPanelClasses = classnames(
-        'fd-tabs__panel',
+        `${cssNamespace}-tabs__panel`,
         className
     );
 
@@ -35,4 +36,4 @@ TabContent.propTypes = {
     selected: PropTypes.bool
 };
 
-export default TabContent;
+export default withStyles(TabContent);

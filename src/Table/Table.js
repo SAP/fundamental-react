@@ -6,72 +6,73 @@ import Icon from '../Icon/Icon';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styles from 'fundamental-styles/dist/table.css';
 
 const classnames = classnamesBind.bind(styles);
 
 /** A **Table** is a set of tabular data. Line items can support `data`, `images` and `actions`. */
-const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, keyboardNavigation, localizedText, selection, tableBodyClassName,
+const Table = React.forwardRef(({ headers, tableData, className, compact, condensed, cssNamespace, keyboardNavigation, localizedText, selection, tableBodyClassName,
     tableBodyProps, tableBodyRowProps, tableCellClassName, tableCheckboxClassName, tableHeaderClassName, tableHeaderProps,
     tableHeaderRowClassName, tableHeaderRowProps, tableNavigationIconClassName, tableRowClassName, ...props }, ref) => {
 
     const tableClasses = classnames(
-        'fd-table',
+        `${cssNamespace}-table`,
         {
-            'fd-table--compact': compact,
-            'fd-table--condensed': condensed,
-            'fd-table--no-horizontal-borders': selection?.onClickRow
+            [`${cssNamespace}-table--compact`]: compact,
+            [`${cssNamespace}-table--condensed`]: condensed,
+            [`${cssNamespace}-table--no-horizontal-borders`]: selection?.onClickRow
         },
         className
     );
 
     const tableHeaderClasses = classnames(
-        'fd-table__header',
+        `${cssNamespace}-table__header`,
         tableHeaderClassName
     );
 
     const tableHeaderRowClasses = classnames(
-        'fd-table__row',
+        `${cssNamespace}-table__row`,
         {
-            'fd-table__row--focusable': keyboardNavigation === 'row'
+            [`${cssNamespace}-table__row--focusable`]: keyboardNavigation === 'row'
         },
         tableHeaderRowClassName
     );
 
     const tableNavigationIconClasses = classnames(
-        'fd-table__icon',
-        'fd-table__icon--navigation',
+        `${cssNamespace}-table__icon`,
+        `${cssNamespace}-table__icon--navigation`,
         tableNavigationIconClassName
     );
 
     const tableBodyClasses = classnames(
-        'fd-table__body',
+        `${cssNamespace}-table__body`,
         tableBodyClassName
     );
 
     const tableRowClasses = classnames(
-        'fd-table__row',
+        `${cssNamespace}-table__row`,
         {
-            'fd-table__row--activable': typeof selection?.onClickRow !== 'undefined',
-            'fd-table__row--focusable': keyboardNavigation === 'row'
+            [`${cssNamespace}-table__row--activable`]: typeof selection?.onClickRow !== 'undefined',
+            [`${cssNamespace}-table__row--focusable`]: keyboardNavigation === 'row'
         },
         tableRowClassName
     );
 
     const tableCellClasses = classnames(
-        'fd-table__cell',
+        `${cssNamespace}-table__cell`,
         {
-            'fd-table__cell--focusable': keyboardNavigation === 'cell'
+            [`${cssNamespace}-table__cell--focusable`]: keyboardNavigation === 'cell'
         },
         tableCellClassName
     );
 
     const tableCheckboxClasses = classnames(
-        'fd-table__cell',
-        'fd-table__cell--checkbox',
+        `${cssNamespace}-table__cell`,
+        `${cssNamespace}-table__cell--checkbox`,
         {
-            'fd-table__cell--focusable': keyboardNavigation === 'cell'
+            [`${cssNamespace}-table__cell--focusable`]: keyboardNavigation === 'cell'
         },
         tableCheckboxClassName
     );
@@ -184,7 +185,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
             onBlur={onBlurTable}
             ref={tableRefCallback}
             role={keyboardNavigation ? 'grid' : 'table'}>
-            <caption aria-live='polite' className='fd-table__caption'
+            <caption aria-live='polite' className={classnames(`${cssNamespace}-table__caption`)}
                 id={captionId}>
                 {instructionsText}
             </caption>
@@ -222,8 +223,8 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                                 <td
                                     className={classnames(
                                         tableCellClasses,
-                                        'fd-table__cell--fit-content',
-                                        'fd-table__cell----no-padding'
+                                        `${cssNamespace}-table__cell--fit-content`,
+                                        `${cssNamespace}-table__cell----no-padding`
                                     )}>
                                     <Icon
                                         ariaHidden
@@ -241,7 +242,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                             aria-selected={selection?.isSelected(index)}
                             key={index}
                             onClick={(event) => {
-                                if (event.target.matches(`${GridSelector.CELL}, ${GridSelector.ROW}, .fd-table__icon--navigation`)) {
+                                if (event.target.matches(`${GridSelector.CELL}, ${GridSelector.ROW}, .${cssNamespace}-table__icon--navigation`)) {
                                     selection?.onClickRow && selection.onClickRow(index);
                                 }
                             }}>
@@ -347,4 +348,4 @@ Table.defaultProps = {
     }
 };
 
-export default Table;
+export default withStyles(Table);
