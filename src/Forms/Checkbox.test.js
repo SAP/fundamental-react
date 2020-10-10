@@ -96,7 +96,7 @@ describe('<Checkbox />', () => {
             });
 
             expect(
-                wrapper.find('FormItem').getDOMNode().classList
+                wrapper.find('FormItem').at(1).getDOMNode().classList
             ).toContain('wonderful-styles');
         });
 
@@ -106,7 +106,7 @@ describe('<Checkbox />', () => {
             });
 
             expect(
-                wrapper.find('FormLabel').getDOMNode().classList
+                wrapper.find('FormLabel').at(1).getDOMNode().classList
             ).toContain('wonderful-styles');
         });
 

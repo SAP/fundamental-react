@@ -83,7 +83,7 @@ describe('<FormValidationOverlay />', () => {
             });
 
             expect(
-                element.find('FormMessage').getDOMNode().attributes['data-sample'].value
+                element.find('FormMessage').at(1).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

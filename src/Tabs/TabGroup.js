@@ -1,7 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { TAB_SIZES } from '../utils/constants';
-import { TabContent } from './_TabContent';
+import TabContent from './_TabContent';
 import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/tabs.css';
