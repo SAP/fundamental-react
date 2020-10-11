@@ -476,6 +476,95 @@ exports[`Storyshots Layout/Layout Grid No Gap 1`] = `
 </div>
 `;
 
+exports[`Storyshots Layout/Layout Grid No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-container xxx-container--no-gap docs-layout-grid"
+  >
+    <div
+      className="xxx-row"
+    >
+      <div
+        className="xxx-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={8}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="xxx-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={4}&gt;
+           
+        </div>
+      </div>
+    </div>
+    <div
+      className="xxx-row"
+    >
+      <div
+        className="xxx-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={6}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="xxx-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={6}&gt;
+           
+        </div>
+      </div>
+    </div>
+    <div
+      className="xxx-row"
+    >
+      <div
+        className="xxx-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={4}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="xxx-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={8}&gt;
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Layout/Layout Grid Offsetting 1`] = `
 <div
   dir="ltr"

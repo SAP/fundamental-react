@@ -217,6 +217,76 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/SearchInput No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div>
+    <div
+      className="xxx-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="xxx-popover__control"
+        >
+          <div
+            className="xxx-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="xxx-popover__control"
+              >
+                <div
+                  className="xxx-input-group--control xxx-input-group"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-label="Compact search input"
+                    className="xxx-input xxx-input-group__input"
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    placeholder="Placeholder"
+                    type="text"
+                    value=""
+                  />
+                  <span
+                    className="xxx-input-group__addon xxx-input-group__addon--button"
+                  >
+                    <button
+                      aria-label="Search"
+                      className="xxx-button xxx-button--transparent xxx-input-group__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--search"
+                        role="img"
+                      />
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/SearchInput Read Only 1`] = `
 <div
   dir="ltr"

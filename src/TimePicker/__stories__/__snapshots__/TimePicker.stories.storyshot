@@ -11,6 +11,7 @@ exports[`Storyshots Component API/TimePicker Dev 1`] = `
     Time
   </label>
   <div
+    cssNamespace="fd"
     id="timepickerInitExample"
     onChange={[Function]}
   >
@@ -77,6 +78,7 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
     Time
   </label>
   <div
+    cssNamespace="fd"
     id="timepickerDisabledExample"
     onChange={[Function]}
   >
@@ -145,6 +147,7 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
     Time
   </label>
   <div
+    cssNamespace="fd"
     id="timepicker12HrExample"
     onChange={[Function]}
   >
@@ -211,6 +214,7 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
     Time
   </label>
   <div
+    cssNamespace="fd"
     id="timepickerHideSecondExample"
     onChange={[Function]}
   >
@@ -277,6 +281,7 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
     Time
   </label>
   <div
+    cssNamespace="fd"
     id="timepickerInitExample"
     onChange={[Function]}
   >
@@ -332,6 +337,73 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/TimePicker No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="xxx-form-label"
+    htmlFor="timepickerPrimaryExample-input"
+  >
+    Time
+  </label>
+  <div
+    cssNamespace="xxx"
+    id="timepickerPrimaryExample"
+    onChange={[Function]}
+  >
+    <div
+      className="xxx-popover"
+      id="timepickerPrimaryExample-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="xxx-popover__control"
+        >
+          <div
+            className="xxx-input-group"
+            onClick={[Function]}
+          >
+            <input
+              className="xxx-input xxx-input-group__input"
+              id="timepickerPrimaryExample-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="hh:mm:ss"
+              type="text"
+              value=""
+            />
+            <span
+              className="xxx-input-group__addon xxx-input-group__addon--button"
+            >
+              <button
+                aria-controls="rthHR811"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Show/hide time picker"
+                className="xxx-button xxx-button--transparent xxx-input-group__button"
+                id="timepickerPrimaryExample-button"
+                type="button"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--time-entry-request"
+                  role="img"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/TimePicker Primary 1`] = `
 <div
   dir="ltr"
@@ -343,6 +415,7 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
     Time
   </label>
   <div
+    cssNamespace="fd"
     id="timepickerPrimaryExample"
     onChange={[Function]}
   >

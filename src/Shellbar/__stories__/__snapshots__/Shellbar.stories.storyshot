@@ -807,6 +807,195 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Shellbar No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-shellbar xxx-shellbar--l"
+  >
+    <div
+      className="xxx-shellbar__group xxx-shellbar__group--product"
+    >
+      <span
+        className="xxx-shellbar__logo"
+      >
+        <img
+          alt="SAP"
+          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+        />
+      </span>
+      <span
+        className="xxx-shellbar__title"
+      >
+        Corporate Portal
+      </span>
+    </div>
+    <div
+      className="xxx-shellbar__group xxx-shellbar__group--actions"
+    >
+      <div
+        className="xxx-shellbar__action xxx-shellbar__action--desktop"
+      >
+        <div
+          className="xxx-shellbar__input-group"
+        >
+          <div
+            className="xxx-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="xxx-popover__control"
+              >
+                <div
+                  className="xxx-popover"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="xxx-popover__control"
+                    >
+                      <div
+                        className="xxx-shellbar__input-group xxx-input-group"
+                        onClick={[Function]}
+                      >
+                        <input
+                          className="xxx-input xxx-input-group__input xxx-shellbar__input-group__input"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          placeholder="Search"
+                          type="text"
+                          value=""
+                        />
+                        <span
+                          className="xxx-shellbar__input-group__addon xxx-input-group__addon xxx-input-group__addon--button"
+                        >
+                          <button
+                            aria-label="Search"
+                            className="xxx-button xxx-button--transparent xxx-shellbar__button xxx-input-group__button"
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            <i
+                              aria-hidden={true}
+                              className="sap-icon--search"
+                              role="img"
+                            />
+                          </button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="xxx-shellbar__action xxx-shellbar__action--mobile"
+      >
+        <div
+          className="xxx-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="xxx-popover__control"
+            >
+              <div
+                aria-controls="xxx-shellbar-mobile-action-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="xxx-shellbar-collapse--control"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <button
+                  className="xxx-button xxx-shellbar__button"
+                  type="button"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--overflow"
+                    role="img"
+                  />
+                  <span
+                    className="xxx-button__text"
+                  >
+                    <span
+                      aria-label="Unread count"
+                      className="xxx-counter xxx-counter--notification"
+                    >
+                       
+                       
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="xxx-shellbar__action xxx-shellbar__action--show-always"
+      >
+        <div
+          className="xxx-user-menu"
+        >
+          <div
+            className="xxx-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="xxx-popover__control"
+              >
+                <button
+                  aria-controls="xxx-shellbar-profile-popover"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="xxx-button xxx-shellbar__button xxx-shellbar__button--user-menu"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <span
+                    className="xxx-avatar xxx-avatar--xs xxx-avatar--accent-color-8 xxx-avatar--circle xxx-shellbar__avatar--circle"
+                    role=""
+                  >
+                    JS
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
 <div
   dir="ltr"

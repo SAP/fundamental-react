@@ -550,6 +550,42 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
 </div>
 `;
 
+exports[`Storyshots Component API/Object Display Components/ObjectStatus No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="xxx-object-status sap-icon--status-negative xxx-object-status--negative"
+    >
+      Negative
+    </span>
+    <span
+      className="xxx-object-status sap-icon--status-critical xxx-object-status--critical"
+    >
+      Critical
+    </span>
+    <span
+      className="xxx-object-status sap-icon--status-positive xxx-object-status--positive"
+    >
+      Positive
+    </span>
+    <span
+      className="xxx-object-status sap-icon--hint xxx-object-status--informative"
+    >
+      Info
+    </span>
+    <span
+      className="xxx-object-status sap-icon--to-be-reviewed"
+    >
+      Neutral
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Primary 1`] = `
 <div
   dir="ltr"

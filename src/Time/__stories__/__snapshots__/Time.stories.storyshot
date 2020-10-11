@@ -1426,6 +1426,221 @@ exports[`Storyshots Component API/Time Meridiem Time 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Time No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-time"
+  >
+    <div
+      className="xxx-time__col"
+      onClick={[Function]}
+    >
+      <label
+        className="xxx-time__slider-label"
+      >
+        Hours
+      </label>
+      <button
+        aria-label="Increase hours"
+        className="xxx-button xxx-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="xxx-time__wrapper xxx-time__wrapper--active"
+      >
+        <ul
+          className="xxx-time__list"
+        >
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <div
+              className="xxx-time__current-indicator"
+            />
+            <span
+              className="xxx-time__unit"
+            >
+              09
+            </span>
+          </li>
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-time__unit"
+            >
+              10
+            </span>
+          </li>
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-time__unit"
+            >
+              11
+            </span>
+          </li>
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-time__unit"
+            >
+              12
+            </span>
+          </li>
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-time__unit"
+            >
+              13
+            </span>
+          </li>
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-time__unit"
+            >
+              14
+            </span>
+          </li>
+          <li
+            className="xxx-time__item"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-time__unit"
+            >
+              15
+            </span>
+          </li>
+        </ul>
+      </div>
+      <button
+        aria-label="Decrease hours"
+        className="xxx-button xxx-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="xxx-time__col"
+      onClick={[Function]}
+    >
+      <label
+        className="xxx-time__slider-label"
+      >
+        Minutes
+      </label>
+      <button
+        aria-label="Increase minutes"
+        className="xxx-button xxx-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="xxx-time__wrapper"
+      >
+        <span
+          className="xxx-time__item xxx-time__item--collapsed"
+          onClick={null}
+        >
+          00
+        </span>
+      </div>
+      <button
+        aria-label="Decrease hours"
+        className="xxx-button xxx-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="xxx-time__col"
+      onClick={[Function]}
+    >
+      <label
+        className="xxx-time__slider-label"
+      >
+        Seconds
+      </label>
+      <button
+        aria-label="Increase seconds"
+        className="xxx-button xxx-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-up-arrow"
+          role="img"
+        />
+      </button>
+      <div
+        className="xxx-time__wrapper"
+      >
+        <span
+          className="xxx-time__item xxx-time__item--collapsed"
+          onClick={null}
+        >
+          00
+        </span>
+      </div>
+      <button
+        aria-label="Decrease seconds"
+        className="xxx-button xxx-button--transparent"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </div>
+    
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Time Primary 1`] = `
 <div
   dir="ltr"

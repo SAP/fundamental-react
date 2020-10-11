@@ -1138,6 +1138,64 @@ exports[`Storyshots Component API/DatePicker Localized Today Header Button 1`] =
 </div>
 `;
 
+exports[`Storyshots Component API/DatePicker No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    defaultValue=""
+    onChange={[Function]}
+  >
+    <div
+      className="xxx-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="xxx-popover__control"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup="true"
+            className="xxx-input-group--control xxx-input-group"
+          >
+            <input
+              className="xxx-input xxx-input-group__input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyPress={[Function]}
+              placeholder="MM/DD/YYYY"
+              type="text"
+              value=""
+            />
+            <span
+              className="xxx-input-group__addon xxx-input-group__addon--button"
+            >
+              <button
+                aria-label="Choose date"
+                className="xxx-button xxx-button--transparent xxx-input-group__button"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--appointment-2"
+                  role="img"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
 <div
   dir="ltr"

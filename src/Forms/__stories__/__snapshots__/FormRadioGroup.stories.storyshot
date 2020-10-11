@@ -251,6 +251,68 @@ exports[`Storyshots Component API/Forms/FormRadioGroup Inline 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/FormRadioGroup No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-form-group"
+  >
+    <div
+      className="xxx-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="xxx-radio"
+        id="fd-mocked-short-id"
+        name="fd-mocked-short-id"
+        type="radio"
+      />
+      <label
+        className="xxx-form-label xxx-radio__label"
+        htmlFor="fd-mocked-short-id"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="xxx-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="xxx-radio"
+        id="fd-mocked-short-id"
+        name="fd-mocked-short-id"
+        type="radio"
+      />
+      <label
+        className="xxx-form-label xxx-radio__label"
+        htmlFor="fd-mocked-short-id"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="xxx-form-item"
+      onChange={[Function]}
+    >
+      <input
+        className="xxx-radio"
+        id="fd-mocked-short-id"
+        name="fd-mocked-short-id"
+        type="radio"
+      />
+      <label
+        className="xxx-form-label xxx-radio__label"
+        htmlFor="fd-mocked-short-id"
+      >
+        Option 3
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormRadioGroup Primary 1`] = `
 <div
   dir="ltr"

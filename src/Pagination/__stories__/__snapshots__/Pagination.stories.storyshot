@@ -439,6 +439,73 @@ exports[`Storyshots Component API/Pagination Items Per Page Zero Pagination 1`] 
 </div>
 `;
 
+exports[`Storyshots Component API/Pagination No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-pagination"
+  >
+    <span
+      className="xxx-pagination__total"
+    >
+      101
+       
+      items
+    </span>
+    <nav
+      className="xxx-pagination__nav"
+    >
+      <a
+        aria-disabled={true}
+        aria-label="Previous"
+        className="xxx-pagination__link xxx-pagination__link--previous"
+        href="#"
+        onClick={[Function]}
+      />
+      <a
+        className="xxx-pagination__link is-selected"
+        href="#"
+        onClick={[Function]}
+      >
+        1
+      </a>
+      <a
+        className="xxx-pagination__link"
+        href="#"
+        onClick={[Function]}
+      >
+        2
+      </a>
+      <a
+        className="xxx-pagination__link"
+        href="#"
+        onClick={[Function]}
+      >
+        3
+      </a>
+      <span
+        className="xxx-pagination__link--more"
+      />
+      <a
+        className="xxx-pagination__link"
+        href="#"
+        onClick={[Function]}
+      >
+        11
+      </a>
+      <a
+        aria-disabled={false}
+        aria-label="Next"
+        className="xxx-pagination__link xxx-pagination__link--next"
+        href="#"
+        onClick={[Function]}
+      />
+    </nav>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Pagination Primary 1`] = `
 <div
   dir="ltr"
