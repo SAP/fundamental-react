@@ -358,3 +358,17 @@ export const dev = () => (
         subtitle='Subtitle' />
 );
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <Shellbar
+        cssNamespace='xxx'
+        logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
+        productTitle='Corporate Portal'
+        profile={profile}
+        profileMenu={profileMenu}
+        searchInput={{
+            label: 'Search',
+            placeholder: 'Search'
+        }} />
+);
+noStyles.parameters = { docs: { disable: true } };

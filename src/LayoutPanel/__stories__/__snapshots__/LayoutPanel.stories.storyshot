@@ -671,6 +671,65 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
 </div>
 `;
 
+exports[`Storyshots Component API/LayoutPanel No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-layout-panel"
+  >
+    <div
+      className="xxx-layout-panel__header"
+    >
+      <div
+        className="xxx-layout-panel__head"
+      >
+        <div
+          className="xxx-layout-panel__title"
+        >
+          <h3
+            className="xxx-title xxx-title--h5 xxx-title--wrap"
+          >
+            LayoutPanel Header with Actions
+          </h3>
+        </div>
+        <p
+          className="xxx-layout-panel__description"
+        >
+          LayoutPanel Description
+        </p>
+      </div>
+      <div
+        className="xxx-layout-panel__actions"
+      >
+        <div>
+          LayoutPanel actions
+        </div>
+      </div>
+    </div>
+    <div
+      className="xxx-layout-panel__filters"
+    >
+      <div>
+        LayoutPanel Filters
+      </div>
+    </div>
+    <div
+      className="xxx-layout-panel__body"
+    >
+      <div>
+        LayoutPanel Body
+      </div>
+    </div>
+    <div
+      className="xxx-layout-panel__footer"
+    >
+      LayoutPanel Footer
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/LayoutPanel Primary 1`] = `
 <div
   dir="ltr"

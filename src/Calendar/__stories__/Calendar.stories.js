@@ -132,3 +132,6 @@ export const dev = () => (
 dev.parameters = {
     docs: { disable: true }
 };
+
+export const noStyles = () => (<Calendar cssNamespace='xxx' />);
+noStyles.parameters = { docs: { disable: true } };

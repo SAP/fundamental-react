@@ -241,3 +241,28 @@ export const dev = () => (
         </div>
     </>
 );
+
+export const noStyles = () => (
+    <div className='fddocs-container'>
+        <ObjectStatus
+            cssNamespace='xxx'
+            glyph='status-negative'
+            status='negative'>Negative</ObjectStatus>
+        <ObjectStatus
+            cssNamespace='xxx'
+            glyph='status-critical'
+            status='critical'>Critical</ObjectStatus>
+        <ObjectStatus
+            cssNamespace='xxx'
+            glyph='status-positive'
+            status='positive'>Positive</ObjectStatus>
+        <ObjectStatus
+            cssNamespace='xxx'
+            glyph='hint'
+            status='informative' >Info</ObjectStatus>
+        <ObjectStatus
+            cssNamespace='xxx'
+            glyph='to-be-reviewed'>Neutral</ObjectStatus>
+    </div>
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -12,6 +12,7 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
 import tabbable from 'tabbable';
+import withStyles from '../utils/withStyles';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
@@ -33,6 +34,7 @@ const ComboboxInput = React.forwardRef(({
     buttonProps,
     compact,
     className,
+    cssNamespace,
     disabled,
     formItemProps,
     filterable,
@@ -75,7 +77,7 @@ const ComboboxInput = React.forwardRef(({
     }, [selectedKey, textInputRef]);
 
     const inputGroupClass = classnames(
-        'fd-input-group--control',
+        `${cssNamespace}-input-group--control`,
         {
             'is-disabled': disabled,
             [`is-${validationState?.state}`]: validationState?.state
@@ -507,7 +509,7 @@ const ComboboxInput = React.forwardRef(({
                         }
                         <List
                             {...labelProps}
-                            className={classnames('fd-list--dropdown')}
+                            className={classnames(`${cssNamespace}-list--dropdown`)}
                             compact={compact}
                             id={`${id}-listbox`}
                             noBorder
@@ -547,7 +549,7 @@ const ComboboxInput = React.forwardRef(({
                 disabled={disabled}
                 noArrow
                 onClickOutside={handlePopoverOutsideClick}
-                popperClassName={classnames('fd-popover__body--dropdown')}
+                popperClassName={classnames(`${cssNamespace}-popover__body--dropdown`)}
                 ref={popoverRef}
                 show={showPopover}
                 useArrowKeyNavigation
@@ -673,4 +675,4 @@ ComboboxInput.defaultProps = {
     selectionType: 'manual'
 };
 
-export default ComboboxInput;
+export default withStyles(ComboboxInput);

@@ -117,3 +117,20 @@ export const columns = () => (
         </Tile>
     </div>
 );
+
+export const noStyles = () => (
+    <div className='fddocs-container'>
+        <Tile cssNamespace='xxx' onClick={() => {}}>
+            <Tile.Header subtitle='Tile Subtitle'>
+                Tile Title
+            </Tile.Header>
+            <Tile.Content title='Tile Title'>
+                <p>Tile Description</p>
+            </Tile.Content>
+            <Tile.Footer>
+                Tile Footer
+            </Tile.Footer>
+        </Tile>
+    </div>
+);
+noStyles.parameters = { docs: { disable: true } };

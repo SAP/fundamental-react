@@ -233,6 +233,42 @@ exports[`Storyshots Component API/Popover No Arrow 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Popover No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="xxx-popover__control"
+      >
+        <i
+          aria-controls="fd-mocked-short-id"
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="sap-icon--cart"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="img"
+          style={
+            Object {
+              "fontSize": "1.5rem",
+            }
+          }
+          tabIndex={0}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Popover Out Of Boundaries 1`] = `
 <div
   dir="ltr"

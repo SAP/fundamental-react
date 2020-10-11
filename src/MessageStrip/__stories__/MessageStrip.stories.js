@@ -109,3 +109,8 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <MessageStrip cssNamespace='xxx'>Default MessageStrip</MessageStrip>
+);
+noStyles.parameters = { docs: { disable: true } };

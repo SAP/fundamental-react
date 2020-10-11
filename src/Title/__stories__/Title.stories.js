@@ -50,3 +50,15 @@ export const wrapped = () => (
         <Title level={6} wrap>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Title>
     </div>
 );
+
+export const noStyles = () => (
+    <>
+        <Title cssNamespace='xxx' level={1}>Heading level 1</Title>
+        <Title cssNamespace='xxx' level={2}>Heading level 2</Title>
+        <Title cssNamespace='xxx' level={3}>Heading level 3</Title>
+        <Title cssNamespace='xxx' level={4}>Heading level 4</Title>
+        <Title cssNamespace='xxx' level={5}>Heading level 5</Title>
+        <Title cssNamespace='xxx' level={6}>Heading level 6</Title>
+    </>
+);
+noStyles.parameters = { docs: { disable: true } };

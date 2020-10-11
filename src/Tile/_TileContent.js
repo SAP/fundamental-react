@@ -1,17 +1,18 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/tile.css';
 
 const classnames = classnamesBind.bind(styles);
 
 const TileContent = props => {
-    const { children, className, twoColumns, ...rest } = props;
+    const { children, className, cssNamespace, twoColumns, ...rest } = props;
 
     const tileContentClasses = classnames(
-        'fd-tile__content',
+        `${cssNamespace}-tile__content`,
         {
-            'fd-tile__content--2-col': twoColumns
+            [`${cssNamespace}-tile__content--2-col`]: twoColumns
         },
         className
     );
@@ -20,7 +21,7 @@ const TileContent = props => {
         <div {...rest} className={tileContentClasses}>
             {twoColumns ? React.Children.toArray(children).map(child => {
                 return React.cloneElement(child, {
-                    className: classnames(child.className, 'fd-tile__section')
+                    className: classnames(child.className, `${cssNamespace}-tile__section`)
                 });
             }) : children }
         </div>
@@ -40,4 +41,4 @@ TileContent.propTypes = {
     twoColumns: PropTypes.bool
 };
 
-export default TileContent;
+export default withStyles(TileContent);

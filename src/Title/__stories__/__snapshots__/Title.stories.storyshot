@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Title No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <h1
+    className="xxx-title xxx-title--h1"
+  >
+    Heading level 1
+  </h1>
+  <h2
+    className="xxx-title xxx-title--h2"
+  >
+    Heading level 2
+  </h2>
+  <h3
+    className="xxx-title xxx-title--h3"
+  >
+    Heading level 3
+  </h3>
+  <h4
+    className="xxx-title xxx-title--h4"
+  >
+    Heading level 4
+  </h4>
+  <h5
+    className="xxx-title xxx-title--h5"
+  >
+    Heading level 5
+  </h5>
+  <h6
+    className="xxx-title xxx-title--h6"
+  >
+    Heading level 6
+  </h6>
+</div>
+`;
+
 exports[`Storyshots Component API/Title Semantic Levels 1`] = `
 <div
   dir="ltr"

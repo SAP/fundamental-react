@@ -97,3 +97,20 @@ export const addOns = () => (
 );
 
 addOns.storyName = 'With Addons';
+
+export const noStyles = () => (
+    <Menu cssNamespace='xxx'>
+        <Menu.List>
+            <Menu.Item url='#'>
+                Option 1
+            </Menu.Item>
+            <Menu.Item url='#'>
+                Option 2
+            </Menu.Item>
+            <Menu.Item url='#'>
+                Option 3
+            </Menu.Item>
+        </Menu.List>
+    </Menu>
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -3,6 +3,7 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/input.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -10,6 +11,7 @@ const classnames = classnamesBind.bind(styles);
 the \`required\` property will include an asterisk (*). */
 const FormInput = React.forwardRef(({
     className,
+    cssNamespace,
     compact,
     disabled,
     name,
@@ -23,9 +25,9 @@ const FormInput = React.forwardRef(({
 }, ref) => {
 
     const formInputClasses = classnames(
-        'fd-input',
+        `${cssNamespace}-input`,
         {
-            'fd-input--compact': !!compact,
+            [`${cssNamespace}-input--compact`]: !!compact,
             [`is-${validationState?.state}`]: validationState?.state
         },
         className
@@ -97,4 +99,4 @@ FormInput.defaultProps = {
     type: 'text'
 };
 
-export default FormInput;
+export default withStyles(FormInput);

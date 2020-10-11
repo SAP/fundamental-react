@@ -144,3 +144,18 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <FormRadioGroup cssNamespace='xxx'>
+        <FormRadioItem data='option1'>
+            Option 1
+        </FormRadioItem>
+        <FormRadioItem data='option2'>
+            Option 2
+        </FormRadioItem>
+        <FormRadioItem data='option3'>
+            Option 3
+        </FormRadioItem>
+    </FormRadioGroup>
+);
+noStyles.parameters = { docs: { disable: true } };

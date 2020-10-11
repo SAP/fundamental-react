@@ -371,3 +371,13 @@ export const withRowNavigation = () => {
             } />
     );
 };
+
+export const noStyles = () => {
+    return (
+        <Table
+            cssNamespace='xxx'
+            headers={defaultHeaders}
+            tableData={defaultData} />
+    );
+};
+noStyles.parameters = { docs: { disable: true } };

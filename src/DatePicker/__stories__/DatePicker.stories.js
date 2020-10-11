@@ -600,3 +600,8 @@ export const localizedTodayHeaderButtonVisualStoryShotOnly = () => (
         <hr />
     </>
 );
+
+export const noStyles = () => (
+    <DatePicker cssNamespace='xxx' />
+);
+noStyles.parameters = { docs: { disable: true } };

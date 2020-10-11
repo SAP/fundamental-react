@@ -6,6 +6,7 @@ import FormInput from '../Forms/FormInput';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useCallback, useState } from 'react';
 import styles from 'fundamental-styles/dist/step-input.css';
 
@@ -28,6 +29,7 @@ const StepInput = React.forwardRef(({
     children,
     className,
     compact,
+    cssNamespace,
     disabled,
     placeholder,
     readOnly,
@@ -42,9 +44,9 @@ const StepInput = React.forwardRef(({
 
     const stepInputClasses = classnames(
         className,
-        'fd-step-input',
+        `${cssNamespace}-step-input`,
         {
-            'fd-step-input--compact': compact,
+            [`${cssNamespace}-step-input--compact`]: compact,
             'is-disabled': disabled,
             'is-readonly': readOnly,
             [`is-${validationState?.state}`]: validationState?.state
@@ -107,7 +109,7 @@ const StepInput = React.forwardRef(({
             {...rest}>
             <Button
                 aria-label={localizedText.stepDownLabel}
-                className={classnames('fd-step-input__button', { ['fd-button']: isUsingCssModules })}
+                className={classnames(`${cssNamespace}-step-input__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                 compact={compact}
                 disabled={disabled}
                 glyph='less'
@@ -115,14 +117,14 @@ const StepInput = React.forwardRef(({
                 option='transparent'
                 tabIndex='-1' />
             <FormInput
-                className={classnames('fd-input--no-number-spinner', 'fd-step-input__input', { ['fd-input']: isUsingCssModules })}
+                className={classnames(`${cssNamespace}-input--no-number-spinner`, `${cssNamespace}-step-input__input`, { [`${cssNamespace}-input`]: isUsingCssModules })}
                 disabled={disabled}
                 onChange={onChangeInputValue}
                 placeholder={placeholder}
                 value={inputValue} />
             <Button
                 aria-label={localizedText.stepUpLabel}
-                className={classnames('fd-step-input__button', { ['fd-button']: isUsingCssModules })}
+                className={classnames(`${cssNamespace}-step-input__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                 compact={compact}
                 disabled={disabled}
                 glyph='add'
@@ -200,4 +202,4 @@ StepInput.defaultProps = {
     onChange: () => { }
 };
 
-export default StepInput;
+export default withStyles(StepInput);

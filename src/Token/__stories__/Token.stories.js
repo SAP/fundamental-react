@@ -28,3 +28,8 @@ export const dev = () => (
         readOnly={boolean('readOnly', false)}>Dev</Token>
 );
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <Token buttonLabel='Clear' cssNamespace='xxx'>Default</Token>
+);
+noStyles.parameters = { docs: { disable: true } };

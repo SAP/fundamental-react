@@ -185,6 +185,66 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/StepInput No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="xxx-popover__control"
+      >
+        <div
+          className="xxx-step-input"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="xxx-button xxx-button--transparent xxx-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
+          <input
+            className="xxx-input xxx-input--no-number-spinner xxx-step-input__input"
+            onChange={[Function]}
+            type="text"
+            value={0}
+          />
+          <button
+            aria-label="Step Up"
+            className="xxx-button xxx-button--transparent xxx-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/StepInput Primary 1`] = `
 <div
   dir="ltr"

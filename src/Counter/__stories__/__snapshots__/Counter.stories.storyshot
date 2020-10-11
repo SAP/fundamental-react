@@ -146,6 +146,19 @@ exports[`Storyshots Component API/Counter Default Counter 2`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Counter No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    aria-label="Unread count"
+    className="xxx-counter"
+  >
+    5
+  </span>
+</div>
+`;
+
 exports[`Storyshots Component API/Counter Primary 1`] = `
 <div
   dir="ltr"

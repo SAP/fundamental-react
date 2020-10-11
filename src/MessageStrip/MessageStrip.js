@@ -5,6 +5,7 @@ import Link from '../Link/Link';
 import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import messageStripStyles from 'fundamental-styles/dist/message-strip.css';
@@ -33,6 +34,7 @@ const MessageStrip = (props) => {
         dismissible,
         children,
         className,
+        cssNamespace,
         ...otherProps
     } = props;
 
@@ -43,11 +45,11 @@ const MessageStrip = (props) => {
 
 
     const MessageStripClasses = classnames(
-        'fd-message-strip',
+        `${cssNamespace}-message-strip`,
         {
-            'fd-message-strip--dismissible': dismissible,
-            'fd-message-strip--no-icon': noGlyph,
-            [`fd-message-strip--${type}`]: !!type
+            [`${cssNamespace}-message-strip--dismissible`]: dismissible,
+            [`${cssNamespace}-message-strip--no-icon`]: noGlyph,
+            [`${cssNamespace}-message-strip--${type}`]: !!type
         },
         className
     );
@@ -68,13 +70,13 @@ const MessageStrip = (props) => {
                             {...buttonProps}
                             aria-controls={alertId}
                             aria-label={localizedText.close}
-                            className={classnames('fd-message-strip__close')}
+                            className={classnames(`${cssNamespace}-message-strip__close`)}
                             compact
                             glyph='decline'
                             onClick={closeMessageStripHandler}
                             option='transparent' />
                     )}
-                    <p className={classnames('fd-message-strip__text')}>
+                    <p className={classnames(`${cssNamespace}-message-strip__text`)}>
                         {children}
                         {link && (
                             <Link
@@ -136,4 +138,4 @@ MessageStrip.defaultProps = {
     onCloseClicked: () => { }
 };
 
-export default MessageStrip;
+export default withStyles(MessageStrip);

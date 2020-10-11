@@ -2,7 +2,7 @@
 import Button from '../../Button/Button';
 import React from 'react';
 import Tree from '../Tree';
-import TreeNode from '../TreeNode';
+import TreeNode from '../_TreeNode';
 import {
     boolean, select, text
 } from '@storybook/addon-knobs';
@@ -640,3 +640,41 @@ export const dev = () => (
     </Tree>
 );
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <Tree cssNamespace='xxx'>
+        <Tree.Node>
+            Level 1
+            <Tree.Node>
+                Level 2
+                <Tree.Node>
+                    Level 3
+                </Tree.Node>
+            </Tree.Node>
+            <Tree.Node>
+                Level 2
+            </Tree.Node>
+            <Tree.Node>
+                Level 2
+            </Tree.Node>
+        </Tree.Node>
+        <Tree.Node>
+            Level 1
+        </Tree.Node>
+        <Tree.Node>
+            Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+            illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </Tree.Node>
+        <Tree.Node wrapContent>
+            Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+            illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+            consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </Tree.Node>
+    </Tree>
+);
+noStyles.parameters = { docs: { disable: true } };

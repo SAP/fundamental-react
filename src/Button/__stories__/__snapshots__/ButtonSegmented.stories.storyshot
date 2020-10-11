@@ -44,6 +44,50 @@ exports[`Storyshots Component API/Button/ButtonSegmented Compact 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Button/ButtonSegmented No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-label="Group label"
+    className="xxx-segmented-button"
+    role="group"
+  >
+    <button
+      className="xxx-button"
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--survey"
+        role="img"
+      />
+    </button>
+    <button
+      className="xxx-button is-selected"
+      selected={true}
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--pie-chart"
+        role="img"
+      />
+    </button>
+    <button
+      className="xxx-button"
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--pool"
+        role="img"
+      />
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Button/ButtonSegmented Primary 1`] = `
 <div
   dir="ltr"

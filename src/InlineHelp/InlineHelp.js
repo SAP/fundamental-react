@@ -3,6 +3,7 @@ import Popover from '../Popover/Popover';
 import { POPPER_PLACEMENTS } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/inline-help.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -10,16 +11,16 @@ const classnames = classnamesBind.bind(styles);
 
 /** **InlineHelp** is used to display help text in a **Popover**, often inline with headers,
 body text and form labels. */
-const InlineHelp = React.forwardRef(({ text, placement, className, contentClassName, buttonLabel, ...props }, ref) => {
+const InlineHelp = React.forwardRef(({ text, placement, className, cssNamespace, contentClassName, buttonLabel, ...props }, ref) => {
 
     const inlineHelpClasses = classnames(
-        'fd-inline-help',
+        `${cssNamespace}-inline-help`,
         className
     );
 
     const inlineHelpContentClasses = classnames(
-        'fd-inline-help__content',
-        'fd-no-border',
+        `${cssNamespace}-inline-help__content`,
+        `${cssNamespace}-no-border`,
         contentClassName
     );
 
@@ -79,4 +80,4 @@ InlineHelp.defaultProps = {
     placement: 'bottom'
 };
 
-export default InlineHelp;
+export default withStyles(InlineHelp);

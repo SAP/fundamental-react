@@ -3,6 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Title from '../Title/Title';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/list.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -10,12 +11,13 @@ const classnames = classnamesBind.bind(styles);
 const ListHeader = ({
     className,
     children,
+    cssNamespace,
     headingStyle,
     level,
     ...props
 }) => {
     const ListItemClasses = classnames(
-        'fd-list__group-header',
+        `${cssNamespace}-list__group-header`,
         className
     );
 
@@ -43,4 +45,4 @@ ListHeader.propTypes = {
     level: CustomPropTypes.range(2, 6)
 };
 
-export default ListHeader;
+export default withStyles(ListHeader);

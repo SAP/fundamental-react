@@ -154,3 +154,11 @@ export const accentColors = () => (
             size='m' />
     </div>
 );
+
+export const noStyles = () => (
+    <Avatar
+        cssNamespace='xxx'
+        glyph='cart'
+        size='m' />
+);
+noStyles.parameters = { docs: { disable: true } };

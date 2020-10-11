@@ -74,6 +74,28 @@ exports[`Storyshots Component API/Forms/FormLabel Include Colon 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/FormLabel No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      htmlFor="primaryLabelExample"
+    >
+      Default Label
+    </label>
+    <input
+      className="xxx-input"
+      id="primaryLabelExample"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormLabel Primary 1`] = `
 <div
   dir="ltr"

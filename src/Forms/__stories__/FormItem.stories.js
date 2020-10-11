@@ -19,3 +19,11 @@ export const inline = () => (<FormItem isHorizontal>
     <FormLabel htmlFor='input-1'>Default Input</FormLabel>
     <FormInput id='input-1' placeholder='Field placeholder text' />
 </FormItem>);
+
+export const noStyles = () => (
+    <FormItem cssNamespace='xxx'>
+        <FormLabel htmlFor='input-1'>Default Input</FormLabel>
+        <FormInput id='input-1' placeholder='Field placeholder text' />
+    </FormItem>
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -14,6 +14,19 @@ exports[`Storyshots Component API/Link Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Link No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <a
+    className="xxx-link"
+    href="#"
+  >
+    Default
+  </a>
+</div>
+`;
+
 exports[`Storyshots Component API/Link Primary 1`] = `
 <div
   dir="ltr"

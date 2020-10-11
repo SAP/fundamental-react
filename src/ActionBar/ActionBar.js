@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import requiredIf from 'react-required-if';
 import Title from '../Title/Title';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/action-bar.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -18,6 +19,7 @@ const ActionBar = React.forwardRef(({
     actionClassName,
     actionProps,
     className,
+    cssNamespace,
     backButtonLabel,
     buttonContainerClassName,
     buttonProps,
@@ -32,29 +34,29 @@ const ActionBar = React.forwardRef(({
 }, ref) => {
 
     const actionBarClasses = classnames(
-        'fd-action-bar',
+        `${cssNamespace}-action-bar`,
         className
     );
 
     const actionBarHeaderClasses = classnames(
-        'fd-action-bar__header',
+        `${cssNamespace}-action-bar__header`,
         className
     );
 
     const actionBarBackClasses = classnames(
-        'fd-action-bar__back',
+        `${cssNamespace}-action-bar__back`,
         buttonContainerClassName
     );
 
     const actionBarDescriptionClasses = classnames(
-        'fd-action-bar__description',
+        `${cssNamespace}-action-bar__description`,
         {
-            'fd-action-bar__description--back': onBackClick
+            [`${cssNamespace}-action-bar__description--back`]: onBackClick
         }
     );
 
     const actionBarActionsClasses = classnames(
-        'fd-action-bar__actions',
+        `${cssNamespace}-action-bar__actions`,
         actionClassName
     );
 
@@ -72,7 +74,7 @@ const ActionBar = React.forwardRef(({
                         onClick={onBackClick}
                         option='transparent' />
                 </div>)}
-                <div className={classnames('fd-action-bar__title')}>
+                <div className={classnames(`${cssNamespace}-action-bar__title`)}>
                     <Title
                         {...titleProps}
                         level={headingLevel}
@@ -138,4 +140,4 @@ ActionBar.defaultProps = {
     headingLevel: 3
 };
 
-export default ActionBar;
+export default withStyles(ActionBar);

@@ -277,6 +277,47 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Switch No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="xxx-form-label"
+    onKeyDown={[Function]}
+  >
+    Switch label
+  </label>
+  <label
+    className="xxx-switch__label"
+  >
+    <span
+      className="xxx-switch"
+    >
+      <input
+        aria-checked={false}
+        aria-label="Switch"
+        checked={false}
+        className="xxx-switch__input"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="xxx-switch__wrapper"
+      >
+        <div
+          className="xxx-switch__track"
+        >
+          <span
+            className="xxx-switch__handle"
+            role="presentation"
+          />
+        </div>
+      </div>
+    </span>
+  </label>
+</div>
+`;
+
 exports[`Storyshots Component API/Switch Primary 1`] = `
 <div
   dir="ltr"

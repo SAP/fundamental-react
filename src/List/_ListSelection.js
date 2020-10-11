@@ -1,6 +1,7 @@
 import Checkbox from '../Forms/Checkbox';
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import formItemStyles from 'fundamental-styles/dist/form-item.css';
 import listStyles from 'fundamental-styles/dist/list.css';
@@ -14,6 +15,7 @@ const ListSelection = ({
     checkBoxAriaLabel,
     className,
     children,
+    cssNamespace,
     onChange,
     selected,
     ...props
@@ -21,8 +23,8 @@ const ListSelection = ({
     const [selectedState, setSelectedState] = useState(selected || false);
 
     const ListSelectionClasses = classnames(
-        'fd-form-item',
-        'fd-list__form-item',
+        `${cssNamespace}-form-item`,
+        `${cssNamespace}-list__form-item`,
         className
     );
 
@@ -65,4 +67,4 @@ ListSelection.propTypes = {
     onChange: PropTypes.func
 };
 
-export default ListSelection;
+export default withStyles(ListSelection);

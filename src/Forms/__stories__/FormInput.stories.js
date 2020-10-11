@@ -72,3 +72,8 @@ export const dev = () => (
         })} />
 );
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <FormInput cssNamespace='xxx' placeholder='Default' />
+);
+noStyles.parameters = { docs: { disable: true } };

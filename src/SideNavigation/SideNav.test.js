@@ -83,25 +83,25 @@ describe('<SideNav />', () => {
         const Item2 = wrapper.find({ 'id': 'item_2' });
         const Item4 = wrapper.find({ 'id': 'item_4' });
 
-        expect(Item2.state('expanded')).toBeFalsy();
-        expect(Item4.state('expanded')).toBeFalsy();
-        expect(wrapper.state('selectedId')).toBeFalsy();
+        expect(Item2.at(1).state('expanded')).toBeFalsy();
+        expect(Item4.at(1).state('expanded')).toBeFalsy();
+        expect(wrapper.children().state('selectedId')).toBeFalsy();
 
         wrapper
             .find('button')
             .at(0)
             .simulate('click');
 
-        expect(Item2.state('expanded')).toBeTruthy();
-        expect(Item4.state('expanded')).toBeFalsy();
+        expect(Item2.at(1).state('expanded')).toBeTruthy();
+        expect(Item4.at(1).state('expanded')).toBeFalsy();
 
         wrapper
             .find('button')
             .at(1)
             .simulate('click');
 
-        expect(Item2.state('expanded')).toBeTruthy();
-        expect(Item4.state('expanded')).toBeTruthy();
+        expect(Item2.at(1).state('expanded')).toBeTruthy();
+        expect(Item4.at(1).state('expanded')).toBeTruthy();
     });
 
     test('handle side nav sub link click', () => {
@@ -111,14 +111,14 @@ describe('<SideNav />', () => {
             .at(2)
             .simulate('click');
 
-        expect(wrapper.state('selectedId')).toEqual('subitem_21');
+        expect(wrapper.children().state('selectedId')).toEqual('subitem_21');
 
         wrapper
             .find('.fd-nested-list__link')
             .at(6)
             .simulate('click');
 
-        expect(wrapper.state('selectedId')).toEqual('subitem_25');
+        expect(wrapper.children().state('selectedId')).toEqual('subitem_25');
     });
 
     describe('Prop spreading', () => {

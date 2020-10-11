@@ -1,6 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import menuItemStyles from 'fundamental-styles/dist/menu.css';
 
@@ -17,6 +18,7 @@ const MenuItem = ({
     children,
     onClick,
     className,
+    cssNamespace,
     addonProps,
     urlProps,
     separator,
@@ -27,21 +29,21 @@ const MenuItem = ({
 }) => {
 
     const addonBeforeClassnames = classnames(
-        'fd-menu__addon-before',
+        `${cssNamespace}-menu__addon-before`,
         {
             [`sap-icon--${addonBefore}`]: !!addonBefore
         }
     );
 
     const addonAfterClassnames = classnames(
-        'fd-menu__addon-after',
+        `${cssNamespace}-menu__addon-after`,
         {
             [`sap-icon--${addonAfter}`]: !!addonAfter
         }
     );
 
     const linkClassNames = classnames(
-        'fd-menu__link',
+        `${cssNamespace}-menu__link`,
         {
             'is-active': active,
             'is-selected': selected,
@@ -57,7 +59,7 @@ const MenuItem = ({
                 onClick={onClick}
                 role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
-                <span className={classnames('fd-menu__title')}>{children}</span>
+                <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
                 {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
             </a>);
         } else if (children && React.isValidElement(children)) {
@@ -70,7 +72,7 @@ const MenuItem = ({
                 <>
                     {addonBefore && <span {...addonProps} {...urlProps}
                         className={addonBeforeClassnames} />}
-                    <span className={classnames('fd-menu__title')}>
+                    <span className={classnames(`${cssNamespace}-menu__title`)}>
                         {React.Children.map(children, child => {
                             return React.cloneElement(child, {
                                 className: childrenClassnames,
@@ -88,14 +90,14 @@ const MenuItem = ({
                 onClick={onClick}
                 role='menuitem'>
                 {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
-                <span className={classnames('fd-menu__title')}>{children}</span>
+                <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
                 {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
             </a>);
         }
     };
 
     const listClassNames = classnames(
-        'fd-menu__item',
+        `${cssNamespace}-menu__item`,
         className
     );
 
@@ -107,7 +109,7 @@ const MenuItem = ({
                 role='presentation'>
                 {renderLink()}
             </li>
-            {separator && <span className={classnames('fd-menu__separator')} />}
+            {separator && <span className={classnames(`${cssNamespace}-menu__separator`)} />}
         </>
     );
 };
@@ -149,4 +151,4 @@ MenuItem.propTypes = {
     onClick: PropTypes.func
 };
 
-export default MenuItem;
+export default withStyles(MenuItem);

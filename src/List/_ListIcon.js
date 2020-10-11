@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import listStyles from 'fundamental-styles/dist/list.css';
 
@@ -10,9 +11,9 @@ const classnames = classnamesBind.bind({
     ...listStyles
 });
 
-const ListIcon = ({ className, glyph, ...props }) => {
+const ListIcon = ({ className, cssNamespace, glyph, ...props }) => {
     const listIconClasses = classnames(
-        'fd-list__icon',
+        `${cssNamespace}-list__icon`,
         {
             [`sap-icon--${glyph}`]: glyph
         },
@@ -32,4 +33,4 @@ ListIcon.propTypes = {
     className: PropTypes.string
 };
 
-export default ListIcon;
+export default withStyles(ListIcon);

@@ -5,6 +5,7 @@ import GridManager from '../utils/gridManager/gridManager';
 import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/calendar.css';
@@ -68,12 +69,16 @@ class Calendar extends Component {
     }
 
     getGridOptions = (newView) => {
+        const {
+            cssNamespace
+        } = this.props;
+
         const { gridBoundaryContext, refocusGrid } = this.state;
         const tableElement = this.tableRef.current;
         const focusedDateElement = tableElement.querySelector('[data-is-focused=true]');
         const selectedDateElement = tableElement.querySelector(classnames('.is-selected'));
-        const todayDateElement = tableElement.querySelector(classnames('.fd-calendar__item--current'));
-        const disabledDateElements = tableElement.querySelectorAll(classnames('.fd-calendar__item--other-month'));
+        const todayDateElement = tableElement.querySelector(classnames(`.${cssNamespace}-calendar__item--current`));
+        const disabledDateElements = tableElement.querySelectorAll(classnames(`.${cssNamespace}-calendar__item--other-month`));
         const focusOnInit = newView || gridBoundaryContext || refocusGrid;
 
         let firstFocusedElement;
@@ -198,9 +203,13 @@ class Calendar extends Component {
     }
 
     onKeyDownCalendar = (event) => {
+        const {
+            cssNamespace
+        } = this.props;
+
         let newDate;
 
-        const focusedDateElement = this.tableRef.current && this.tableRef.current.querySelector('.fd-calendar__text:focus');
+        const focusedDateElement = this.tableRef.current && this.tableRef.current.querySelector(`.${cssNamespace}-calendar__text:focus`);
         const focusedDate = parseInt(focusedDateElement && focusedDateElement.textContent, 10);
 
         switch (keycode(event)) {
@@ -239,6 +248,10 @@ class Calendar extends Component {
     }
 
     generateMonths = (monthProps) => {
+        const {
+            cssNamespace
+        } = this.props;
+
         const months = moment.localeData(this.props.locale).months();
 
         const gridArray = [];
@@ -255,11 +268,11 @@ class Calendar extends Component {
                 const isSelected = months[this.state.currentDateDisplayed.month()] === month;
                 const isFocused = this.state.currentFocusMonth === month;
                 const calendarItemClasses = classnames(
-                    'fd-calendar__item',
+                    `${cssNamespace}-calendar__item`,
                     {
                         'is-focus': isFocused,
                         'is-selected': isSelected,
-                        'fd-calendar__item--current': months[this.state.todayDate.month()] === month
+                        [`${cssNamespace}-calendar__item--current`]: months[this.state.todayDate.month()] === month
                     }
                 );
 
@@ -268,7 +281,7 @@ class Calendar extends Component {
                         key={month} name={month}
                         onClick={() => this.changeMonth(month)}
                         onFocus={this.handleMonthFocus(month)}>
-                        <span className={classnames('fd-calendar__text')}
+                        <span className={classnames(`${cssNamespace}-calendar__text`)}
                             onKeyDown={(e) => this.onKeyDownDay(e, this.changeMonth.bind(this, month))} role='button'>
                             {shortenedNameMonth}
                         </span>
@@ -277,20 +290,20 @@ class Calendar extends Component {
             });
 
             return (
-                <tr className={classnames('fd-calendar__row')} key={`month-row-${index}`}>
+                <tr className={classnames(`${cssNamespace}-calendar__row`)} key={`month-row-${index}`}>
                     {monthCells}
                 </tr>
             );
         });
 
         return (
-            <div className={classnames('fd-calendar__months')}>
+            <div className={classnames(`${cssNamespace}-calendar__months`)}>
                 <table
                     {...monthProps}
-                    className={classnames('fd-calendar__table')}
+                    className={classnames(`${cssNamespace}-calendar__table`)}
                     ref={this.tableRef}
                     role='grid'>
-                    <tbody className={classnames('fd-calendar__group')}>
+                    <tbody className={classnames(`${cssNamespace}-calendar__group`)}>
                         {listOfMonths}
                     </tbody>
                 </table>
@@ -299,6 +312,10 @@ class Calendar extends Component {
     }
 
     generateYears = (yearListProps) => {
+        const {
+            cssNamespace
+        } = this.props;
+
         let year = this.state.currentDateDisplayed.year();
         const years = [];
         for (let row = 0; row < 3; row++) {
@@ -313,11 +330,11 @@ class Calendar extends Component {
                 const isSelected = this.state.currentDateDisplayed.year() === element;
                 const isFocused = this.state.currentFocusYear === element;
                 const yearClasses = classnames(
-                    'fd-calendar__item',
+                    `${cssNamespace}-calendar__item`,
                     {
                         'is-focus': isFocused,
                         'is-selected': isSelected,
-                        'fd-calendar__item--current': this.state.todayDate.year() === element
+                        [`${cssNamespace}-calendar__item--current`]: this.state.todayDate.year() === element
                     }
                 );
 
@@ -327,7 +344,7 @@ class Calendar extends Component {
                         name={element}
                         onClick={() => this.changeYear(element)}
                         onFocus={this.handleYearFocus(element)}>
-                        <span className={classnames('fd-calendar__text')}
+                        <span className={classnames(`${cssNamespace}-calendar__text`)}
                             onKeyDown={(e) => this.onKeyDownDay(e, this.changeYear.bind(this, element))} role='button'>
                             {element}
                         </span>
@@ -336,19 +353,19 @@ class Calendar extends Component {
             });
 
             return (
-                <tr className={classnames('fd-calendar__row')} key={`year-row-${index}`}>
+                <tr className={classnames(`${cssNamespace}-calendar__row`)} key={`year-row-${index}`}>
                     {yearCells}
                 </tr>
             );
         });
         return (
-            <div className={classnames('fd-calendar__years')}>
+            <div className={classnames(`${cssNamespace}-calendar__years`)}>
                 <table
                     {...yearListProps}
-                    className={classnames('fd-calendar__table')}
+                    className={classnames(`${cssNamespace}-calendar__table`)}
                     ref={this.tableRef}
                     role='grid'>
-                    <tbody className={classnames('fd-calendar__group')}>
+                    <tbody className={classnames(`${cssNamespace}-calendar__group`)}>
                         {listOfYears}
                     </tbody>
                 </table>
@@ -458,6 +475,10 @@ class Calendar extends Component {
     }
 
     generateNavigation = () => {
+        const {
+            cssNamespace
+        } = this.props;
+
         const months = moment.localeData(this.props.locale).months();
         const previousButtonLabel = this.state.showYears ?
             this.props.localizedText.show12PreviousYears : this.props.localizedText.previousMonth;
@@ -466,9 +487,9 @@ class Calendar extends Component {
         const showToday = this.props.showToday && !this.state.showMonths && !this.state.showYears;
 
         return (
-            <div className={classnames('fd-calendar__header')}>
-                <div className={classnames('fd-calendar__navigation')}>
-                    <div className={classnames('fd-calendar__action')}>
+            <div className={classnames(`${cssNamespace}-calendar__header`)}>
+                <div className={classnames(`${cssNamespace}-calendar__navigation`)}>
+                    <div className={classnames(`${cssNamespace}-calendar__action`)}>
                         <Button
                             aria-label={previousButtonLabel}
                             compact={this.props.compact}
@@ -476,7 +497,7 @@ class Calendar extends Component {
                             onClick={this.handlePrevious}
                             option='transparent' />
                     </div>
-                    <div className={classnames('fd-calendar__action')}>
+                    <div className={classnames(`${cssNamespace}-calendar__action`)}>
                         <Button
                             compact={this.props.compact}
                             onClick={this.showMonths}
@@ -484,7 +505,7 @@ class Calendar extends Component {
                             {months[this.state.currentDateDisplayed.month()]}
                         </Button>
                     </div>
-                    <div className={classnames('fd-calendar__action')}>
+                    <div className={classnames(`${cssNamespace}-calendar__action`)}>
                         <Button
                             compact={this.props.compact}
                             onClick={this.showYears}
@@ -493,7 +514,7 @@ class Calendar extends Component {
                         </Button>
                     </div>
 
-                    <div className={classnames('fd-calendar__action')}>
+                    <div className={classnames(`${cssNamespace}-calendar__action`)}>
                         <Button
                             aria-label={nextButtonLabel}
                             compact={this.props.compact}
@@ -502,7 +523,7 @@ class Calendar extends Component {
                             option='transparent' />
                     </div>
                     {showToday &&
-                        <div className={classnames('fd-calendar__action')}>
+                        <div className={classnames(`${cssNamespace}-calendar__action`)}>
                             <Button
                                 compact={this.props.compact}
                                 onClick={this.handleToday}
@@ -528,19 +549,23 @@ class Calendar extends Component {
     }
 
     generateWeekdays = () => {
+        const {
+            cssNamespace
+        } = this.props;
+
         const weekDays = [];
         const daysName = moment.localeData(this.props.locale).weekdaysMin();
         const shiftedDaysName = this.shiftDays(this.normalizedWeekdayStart(), daysName);
 
         for (let index = 0; index < 7; index++) {
             weekDays.push(
-                <th className={classnames('fd-calendar__item', 'fd-calendar__item--side-helper')} key={index}>
-                    <span className={classnames('fd-calendar__text')}>
+                <th className={classnames(`${cssNamespace}-calendar__item`, `${cssNamespace}-calendar__item--side-helper`)} key={index}>
+                    <span className={classnames(`${cssNamespace}-calendar__text`)}>
                         {shiftedDaysName[index]}
                     </span>
                 </th>);
         }
-        return <tr className={classnames('fd-calendar__row')}>{weekDays}</tr>;
+        return <tr className={classnames(`${cssNamespace}-calendar__row`)}>{weekDays}</tr>;
 
     }
 
@@ -553,6 +578,10 @@ class Calendar extends Component {
     }
 
     generateDays = (tableBodyProps) => {
+        const {
+            cssNamespace
+        } = this.props;
+
         const {
             currentDateDisplayed,
             todayDate
@@ -584,13 +613,13 @@ class Calendar extends Component {
                 }
 
                 const dayClasses = classnames(
-                    'fd-calendar__item',
+                    `${cssNamespace}-calendar__item`,
                     {
-                        'fd-calendar__item--other-month': !day.isSame(currentDateDisplayed, 'month'),
-                        'fd-calendar__item--current': todayDate.isSame(copyDate),
-                        'fd-calendar__item--weekend': this.isWeekend(day),
-                        'fd-calendar__item--range': this.isInSelectedRange(day),
-                        [`fd-calendar__special-day--${specialDayType}`]: !!specialDayType,
+                        [`${cssNamespace}-calendar__item--other-month`]: !day.isSame(currentDateDisplayed, 'month'),
+                        [`${cssNamespace}-calendar__item--current`]: todayDate.isSame(copyDate),
+                        [`${cssNamespace}-calendar__item--weekend`]: this.isWeekend(day),
+                        [`${cssNamespace}-calendar__item--range`]: this.isInSelectedRange(day),
+                        [`${cssNamespace}-calendar__special-day--${specialDayType}`]: !!specialDayType,
                         'is-active': this.isSelected(day) || this.isSelectedRangeFirst(day) || this.isSelectedRangeLast(day),
                         'is-disabled': isDisabled,
                         'is-blocked': isBlocked,
@@ -610,7 +639,7 @@ class Calendar extends Component {
                         role='gridcell'>
                         <span
                             aria-label={ariaLabel}
-                            className={classnames('fd-calendar__text')}
+                            className={classnames(`${cssNamespace}-calendar__text`)}
                             onKeyDown={isEnabledDate(day, this.props) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
@@ -620,18 +649,22 @@ class Calendar extends Component {
             }
 
             rows.push(
-                <tr className={classnames('fd-calendar__row')} key={day} >
+                <tr className={classnames(`${cssNamespace}-calendar__row`)} key={day} >
                     {days}
                 </tr>
             );
 
             days = [];
         }
-        return <tbody {...tableBodyProps} className={classnames('fd-calendar__group')}>{rows}</tbody>;
+        return <tbody {...tableBodyProps} className={classnames(`${cssNamespace}-calendar__group`)}>{rows}</tbody>;
 
     }
 
     _renderContent = (monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps) => {
+        const {
+            cssNamespace
+        } = this.props;
+
         if (this.state.showMonths) {
             return this.generateMonths(monthListProps);
         }
@@ -641,13 +674,13 @@ class Calendar extends Component {
         }
 
         return (
-            <div className={classnames('fd-calendar__dates')}>
+            <div className={classnames(`${cssNamespace}-calendar__dates`)}>
                 <table
                     {...tableProps}
-                    className={classnames('fd-calendar__table')}
+                    className={classnames(`${cssNamespace}-calendar__table`)}
                     ref={this.tableRef}
                     role='grid'>
-                    <thead {...tableHeaderProps} className={classnames('fd-calendar__group')}>
+                    <thead {...tableHeaderProps} className={classnames(`${cssNamespace}-calendar__group`)}>
                         {this.generateWeekdays()}
                     </thead>
                     {this.generateDays(tableBodyProps)}
@@ -659,6 +692,7 @@ class Calendar extends Component {
     render() {
         const {
             compact,
+            cssNamespace,
             enableRangeSelection,
             disableWeekends,
             disableBeforeDate,
@@ -685,9 +719,9 @@ class Calendar extends Component {
         } = this.props;
 
         const calendarClasses = classnames(
-            'fd-calendar',
+            `${cssNamespace}-calendar`,
             {
-                'fd-calendar--compact': compact
+                [`${cssNamespace}-calendar--compact`]: compact
             },
             className
         );
@@ -699,7 +733,7 @@ class Calendar extends Component {
                     className={calendarClasses}
                     onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                     {this.generateNavigation()}
-                    <div className={classnames('fd-calendar__content')}
+                    <div className={classnames(`${cssNamespace}-calendar__content`)}
                         onBlur={(e) => {
                             if (!e.currentTarget.contains(e.relatedTarget)) {
                                 this.setState({ screenReaderText: '' });
@@ -718,7 +752,10 @@ class Calendar extends Component {
                     </div>
                 </div>
                 <div aria-live='polite'
-                    className={classnames('fd-calendar__content', 'fd-calendar__content--screen-reader-only')}>
+                    className={classnames(
+                        `${cssNamespace}-calendar__content`,
+                        `${cssNamespace}-calendar__content--screen-reader-only`
+                    )}>
                     {this.state.screenReaderText}
                 </div>
             </>
@@ -831,4 +868,4 @@ Calendar.defaultProps = {
     weekdayStart: 0
 };
 
-export default Calendar;
+export default withStyles(Calendar);

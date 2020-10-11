@@ -32,3 +32,6 @@ export const iconList = () => (
         })}
     </div>
 );
+
+export const noStyles = () => (<Icon cssNamespace='xxx' glyph='cart' />);
+noStyles.parameters = { docs: { disable: true } };
