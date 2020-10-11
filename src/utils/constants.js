@@ -135,10 +135,10 @@ export const DATEPICKER_TODAY_ACTIONS_TYPES = ['none', 'select', 'navigate'];
 
 
 export const SCREEN_SIZE_MAP = {
-    'smallScreen': 'fd-col--',
-    'mediumScreen': 'fd-col-md--',
-    'largeScreen': 'fd-col-lg--',
-    'xLargeScreen': 'fd-col-xl--'
+    'smallScreen': 'col--',
+    'mediumScreen': 'col-md--',
+    'largeScreen': 'col-lg--',
+    'xLargeScreen': 'col-xl--'
 };
 
 export const TREE_NODE_HIGHLIGHTS = [

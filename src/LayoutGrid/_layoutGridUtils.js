@@ -46,10 +46,10 @@ export const mapSize = (action) => {
     return newObj;
 };
 
-export const mapSizeClasses = (action) => {
+export const mapSizeClasses = (action, namespace) => {
     const newObj = {};
     Object.keys(SCREEN_SIZE_MAP).forEach(size => {
-        newObj[`${SCREEN_SIZE_MAP[size]}${action(size)}`] = action(size);
+        newObj[`${namespace}-${SCREEN_SIZE_MAP[size]}${action(size)}`] = action(size);
     });
     return newObj;
 };

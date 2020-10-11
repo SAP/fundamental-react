@@ -18,7 +18,7 @@ const Column = React.forwardRef(({ children, className, cssNamespace, offset, of
         if (validSpan(span)) return span;
         if (span && validSpan(span[size])) return span[size];
         return false;
-    });
+    }, cssNamespace);
 
     const colClasses = classnames(
         `${cssNamespace}-col`,

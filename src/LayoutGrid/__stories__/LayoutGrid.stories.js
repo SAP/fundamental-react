@@ -18,95 +18,95 @@ export default {
 export const differentSizeColumns = () => (
     <Container className='docs-layout-grid'>
         <Row>
-            <Column>
+            <Column className='docs-col--12'>
                 <div className='col-content'> 12 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={11}>
+            <Column className='docs-col--11' span={11}>
                 <div className='col-content'>11 Column Element</div>
             </Column>
-            <Column span={1}>
+            <Column className='docs-col--1' span={1}>
                 <div className='col-content'>1 Column Element</div>
             </Column>
         </Row>
         <Row>
-            <Column span={10}>
+            <Column className='docs-col--10' span={10}>
                 <div className='col-content'>10 Column Element</div>
             </Column>
-            <Column span={2}>
+            <Column className='docs-col--2' span={2}>
                 <div className='col-content'> 2 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={9}>
+            <Column className='docs-col--9' span={9}>
                 <div className='col-content'> 9 Column Element </div>
             </Column>
-            <Column span={3}>
+            <Column className='docs-col--3' span={3}>
                 <div className='col-content'> 3 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={8}>
+            <Column className='docs-col--8' span={8}>
                 <div className='col-content'> 8 Column Element </div>
             </Column>
-            <Column span={4}>
+            <Column className='docs-col--4' span={4}>
                 <div className='col-content'> 4 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={7}>
+            <Column className='docs-col--7' span={7}>
                 <div className='col-content'> 7 Column Element </div>
             </Column>
-            <Column span={5}>
+            <Column className='docs-col--5' span={5}>
                 <div className='col-content'> 5 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={6}>
+            <Column className='docs-col--6' span={6}>
                 <div className='col-content'> 6 Column Element </div>
             </Column>
-            <Column span={6}>
+            <Column className='docs-col--6' span={6}>
                 <div className='col-content'> 6 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={5}>
+            <Column className='docs-col--5' span={5}>
                 <div className='col-content'> 5 Column Element </div>
             </Column>
-            <Column span={7}>
+            <Column className='docs-col--7' span={7}>
                 <div className='col-content'> 7 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={4}>
+            <Column className='docs-col--4' span={4}>
                 <div className='col-content'> 4 Column Element </div>
             </Column>
-            <Column span={8}>
+            <Column className='docs-col--8' span={8}>
                 <div className='col-content'> 8 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={3}>
+            <Column className='docs-col--3' span={3}>
                 <div className='col-content'> 3 Column Element </div>
             </Column>
-            <Column span={9}>
+            <Column className='docs-col--9' span={9}>
                 <div className='col-content'>9 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={2}>
+            <Column className='docs-col--2' span={2}>
                 <div className='col-content'> 2 Column Element </div>
             </Column>
-            <Column span={10}>
+            <Column className='docs-col--10' span={10}>
                 <div className='col-content'> 10 Column Element </div>
             </Column>
         </Row>
         <Row>
-            <Column span={1}>
+            <Column className='docs-col--1' span={1}>
                 <div className='col-content'>1 Column Element </div>
             </Column>
-            <Column span={11}>
+            <Column className='docs-col--11' span={11}>
                 <div className='col-content'>11 Column Element </div>
             </Column>
         </Row>
@@ -191,9 +191,9 @@ export const autoSpanAvailableCells = () => (
 
                 <div className='col-content'>We have defined col spans for this Column</div>
             </Column>
-            <Column className='docs-layout-grid-second' >
+            <Column className='docs-layout-grid-second'>
                 <div className='col-content'>This Column will share available cells</div> </Column>
-            <Column className='docs-layout-grid-third' >
+            <Column className='docs-layout-grid-third'>
                 <div className='col-content'>This Column will share available cells</div> </Column>
         </Row>
     </Container>
@@ -213,24 +213,24 @@ export const nesting = () => (
         <Row>
             <Column span={6}>
                 <Row>
-                    <Column span={6}>
+                    <Column className='docs-col--6' span={6}>
                         <div className='col-content'>Nested Column Element</div>
                     </Column>
-                    <Column >
+                    <Column className='docs-col--3'>
                         <div className='col-content'>Nested Column Element</div>
                     </Column>
-                    <Column >
+                    <Column className='docs-col--3'>
                         <div className='col-content'>Nested Column Element</div>
                     </Column>
                 </Row>
             </Column>
-            <Column>
+            <Column className='docs-col--2'>
                 <div className='col-content'>Column Element</div>
             </Column>
-            <Column>
+            <Column className='docs-col--2'>
                 <div className='col-content'>Column Element</div>
             </Column>
-            <Column>
+            <Column className='docs-col--2'>
                 <div className='col-content'>Column Element</div>
             </Column>
         </Row>
@@ -241,6 +241,7 @@ export const offsetting = () => (
     <Container className='docs-layout-grid'>
         <Row>
             <Column
+                className='docs-col--6'
                 offset={{
                     mediumScreen: 2,
                     xLargeScreen: 3
@@ -250,12 +251,15 @@ export const offsetting = () => (
             </Column>
         </Row>
         <Row>
-            <Column offset={6} span={6} >
+            <Column
+                className='docs-col--6'
+                offset={6} span={6} >
                 <div className='col-content'>Offset Column Element</div>
             </Column>
         </Row>
         <Row>
             <Column
+                className='docs-col--3'
                 offset={{
                     smallScreen: 1,
                     mediumScreen: 2,
@@ -267,6 +271,7 @@ export const offsetting = () => (
                 <div className='col-content'>Offset Column Element</div>
             </Column>
             <Column
+                className='docs-col--4'
                 offset={{
                     smallScreen: 1
                 }}
@@ -275,6 +280,7 @@ export const offsetting = () => (
                 <div className='col-content'>Offset Column Element</div>
             </Column>
             <Column
+                className='docs-col--2'
                 span={2}>
                 <div className='col-content'>Offset Column Element</div>
             </Column>
@@ -294,26 +300,26 @@ The offset will be applied \`before\` or \`after\` the Column depending on the \
 export const noGap = () => (
     <Container className='docs-layout-grid' noGap >
         <Row>
-            <Column span={8}>
+            <Column className='docs-col--8' span={8}>
                 <div className='col-content'> {'<Column span={8}>'} </div>
             </Column>
-            <Column span={4}>
+            <Column className='docs-col--4' span={4}>
                 <div className='col-content'> {'<Column span={4}>'} </div>
             </Column>
         </Row>
         <Row>
-            <Column span={6}>
+            <Column className='docs-col--6' span={6}>
                 <div className='col-content'> {'<Column span={6}>'} </div>
             </Column>
-            <Column span={6}>
+            <Column className='docs-col--6' span={6}>
                 <div className='col-content'> {'<Column span={6}>'} </div>
             </Column>
         </Row>
         <Row>
-            <Column span={4}>
+            <Column className='docs-col--4' span={4}>
                 <div className='col-content'> {'<Column span={4}>'} </div>
             </Column>
-            <Column span={8}>
+            <Column className='docs-col--8' span={8}>
                 <div className='col-content'> {'<Column span={8}>'} </div>
             </Column>
         </Row>
