@@ -2,7 +2,7 @@
 import Button from '../../Button/Button';
 import React from 'react';
 import Tree from '../Tree';
-import TreeNode from '../TreeNode';
+import TreeNode from '../_TreeNode';
 import {
     boolean, select, text
 } from '@storybook/addon-knobs';

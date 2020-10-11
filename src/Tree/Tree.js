@@ -1,6 +1,6 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
-import TreeNode from './TreeNode';
+import TreeNode from './_TreeNode';
 import useUniqueId from '../utils/useUniqueId';
 import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
