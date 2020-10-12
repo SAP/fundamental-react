@@ -200,7 +200,7 @@ class Calendar extends Component {
     onKeyDownCalendar = (event) => {
         let newDate;
 
-        const focusedDateElement = this.tableRef.current && this.tableRef.current.querySelector('.fd-calendar__text:focus');
+        const focusedDateElement = this.tableRef.current && this.tableRef.current.querySelector(`.${classnames('fd-calendar__text')}:focus`);
         const focusedDate = parseInt(focusedDateElement && focusedDateElement.textContent, 10);
 
         switch (keycode(event)) {

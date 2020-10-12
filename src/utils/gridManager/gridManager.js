@@ -98,7 +98,7 @@ export default class GridManager {
                         cell.setAttribute('tabindex', -1);
                         cell.addEventListener('focus', this.handleFocusCell);
                         const cellObj = {
-                            row: rowIndex,
+                            row: rowIndex - (this.enableHeaderCells ? 0 : 1),
                             col: cellIndex,
                             element: cell,
                             focusableElements: cell.querySelectorAll(GridSelector.FOCUSABLE),
@@ -278,37 +278,39 @@ export default class GridManager {
         const currentCell = this.grid[this.focusedRow][this.focusedCol];
 
         let nextCell = currentCell;
-        let pressedArrowKey = false;
+        let pressedNavigationalKey = false;
 
         switch (key) {
             case keycode.codes.up:
                 nextCell = this.getNextCell(currentCell, 0, -1);
-                pressedArrowKey = true;
+                pressedNavigationalKey = true;
                 break;
             case keycode.codes.down:
                 nextCell = this.getNextCell(currentCell, 0, 1);
-                pressedArrowKey = true;
+                pressedNavigationalKey = true;
                 break;
             case keycode.codes.left:
                 if (!this.rowNavigation) {
                     nextCell = this.getNextCell(currentCell, -1, 0);
-                    pressedArrowKey = true;
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.right:
                 if (!this.rowNavigation) {
                     nextCell = this.getNextCell(currentCell, 1, 0);
-                    pressedArrowKey = true;
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.home:
                 if (!this.rowNavigation) {
                     nextCell = this.getNextCell({ row: this.focusedRow, col: -1 }, 1, 0);
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.end:
                 if (!this.rowNavigation) {
                     nextCell = this.getNextCell({ row: this.focusedRow, col: this.grid[this.focusedRow].length }, -1, 0);
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.enter:
@@ -353,7 +355,7 @@ export default class GridManager {
             this.onKeyDownCell(nextCell, event);
         }
 
-        if (!this.editMode && pressedArrowKey) {
+        if (!this.editMode && pressedNavigationalKey) {
             event.preventDefault();
         }
     };
