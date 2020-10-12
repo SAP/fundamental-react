@@ -650,6 +650,29 @@ describe('<DatePicker />', () => {
             expect(wrapper.find('.fd-list__message').length).toBe(1);
         });
     });
+    describe('readOnly', () => {
+        test('should not render an inputGroup.Addon button if it is readOnly', () => {
+            wrapper = mount(<DatePicker readOnly />);
+            expect(wrapper.find('button').length).toBe(0);
+        });
+
+        test('should disabled the popover when readOnly is true', () => {
+            wrapper = mount(<DatePicker readOnly />);
+            expect(wrapper.find('Popover').props().disabled).toBe(true);
+
+            expect(wrapper.find('button').length).toBe(0);
+        });
+
+        test('should render an inputGroup.Addon button if it is not readOnly', () => {
+            wrapper = mount(<DatePicker />);
+            expect(wrapper.find('button').length).toBe(1);
+        });
+
+        test('should keep the popover when readOnly is true', () => {
+            wrapper = mount(<DatePicker />);
+            expect(wrapper.find('Popover').props().disabled).not.toBeDefined();
+        });
+    });
 });
 function simulateBlur() {
     let event = new MouseEvent('mousedown', { target: document.querySelector('body') });
