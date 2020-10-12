@@ -54,8 +54,9 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, cssName
             className={objectStatusClasses}
             {...semanticProps}
             ref={ref}>
-            {glyph && <Icon ariaHidden className={classnames(`${cssNamespace}-object-status__icon`)}
-                glyph={glyph} />}
+            {glyph &&
+                <Icon ariaHidden className={classnames(`${cssNamespace}-object-status__icon`)}
+                    glyph={glyph} />}
             {children &&
                 <span className={classnames(`${cssNamespace}-object-status__text`)}>
                     {children}
