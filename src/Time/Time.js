@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/time.css';
 
@@ -75,6 +76,7 @@ class Time extends Component {
 
     render() {
         const {
+            cssNamespace,
             localizedText,
             showHour,
             showMinute,
@@ -109,12 +111,12 @@ class Time extends Component {
         return (
             <div
                 {...props}
-                className={classnames('fd-time')}
+                className={classnames(`${cssNamespace}-time`)}
                 id={id}>
                 {/* Hours */}
                 {showHour ? (
-                    <div className={classnames('fd-time__col')} onClick={() => this.updateActiveColumn('hour')}>
-                        <label className={classnames('fd-time__slider-label')} >{localizedText.hoursLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)} onClick={() => this.updateActiveColumn('hour')}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)} >{localizedText.hoursLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -135,8 +137,8 @@ class Time extends Component {
                 )}
                 {/* Minutes */}
                 {showMinute ? (
-                    <div className={classnames('fd-time__col')} onClick={() => this.updateActiveColumn('minute')}>
-                        <label className={classnames('fd-time__slider-label')}>{localizedText.minutesLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)} onClick={() => this.updateActiveColumn('minute')}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)}>{localizedText.minutesLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -157,8 +159,8 @@ class Time extends Component {
                 )}
                 {/* Seconds */}
                 {showSecond ? (
-                    <div className={classnames('fd-time__col')} onClick={() => this.updateActiveColumn('second')}>
-                        <label className={classnames('fd-time__slider-label')}>{localizedText.secondsLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)} onClick={() => this.updateActiveColumn('second')}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)}>{localizedText.secondsLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -179,8 +181,8 @@ class Time extends Component {
                 )}
                 {/* Meridiem */}
                 {format12Hours ? (
-                    <div className={classnames('fd-time__col')}>
-                        <label className={classnames('fd-time__slider-label')}>{localizedText.meridiemLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)}>{localizedText.meridiemLabel}</label>
                         <TimeItem
                             active={active}
                             disabled={disabled}
@@ -307,4 +309,4 @@ Time.defaultProps = {
 };
 
 
-export default Time;
+export default withStyles(Time);

@@ -104,3 +104,19 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <ActionBar
+        actions={(
+            <>
+                <Button>Button</Button>
+                <Button option='emphasized'>Button</Button>
+            </>
+        )}
+        backButtonLabel='Back to home'
+        cssNamespace='xxx'
+        description={'Action Bar Description'}
+        onBackClick={() => {}}
+        title={'Page Title'} />
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -33,3 +33,6 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (<BusyIndicator cssNamespace='xxx' show />);
+noStyles.parameters = { docs: { disable: true } };

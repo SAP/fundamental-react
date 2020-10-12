@@ -32,7 +32,7 @@ describe('<Tabs />', () => {
         const wrapper = mount(defaultTabsWithClass);
 
         // check selected tab
-        expect(wrapper.state(['selectedIndex'])).toEqual(1);
+        expect(wrapper.children().state(['selectedIndex'])).toEqual(1);
 
         wrapper
             .find('ul.fd-tabs li.fd-tabs__item a.fd-tabs__link')
@@ -45,7 +45,7 @@ describe('<Tabs />', () => {
             .simulate('click');
 
         // check selected tab changed
-        expect(wrapper.state(['selectedIndex'])).toEqual(3);
+        expect(wrapper.children().state(['selectedIndex'])).toEqual(3);
     });
 
     describe('Prop spreading', () => {

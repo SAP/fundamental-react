@@ -3,6 +3,7 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormMessage from './_FormMessage';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import styles from 'fundamental-styles/dist/popover.css';
 
@@ -11,6 +12,7 @@ const classnames = classnamesBind.bind(styles);
 const FormValidationOverlay = React.forwardRef((
     {
         className,
+        cssNamespace,
         control,
         formMessageProps,
         popperClassName,
@@ -34,9 +36,9 @@ const FormValidationOverlay = React.forwardRef((
         }
     };
 
-    const popoverClasses = classnames('fd-popover', className);
+    const popoverClasses = classnames(`${cssNamespace}-popover`, className);
 
-    const referenceClasses = classnames('fd-popover__control', referenceClassName);
+    const referenceClasses = classnames(`${cssNamespace}-popover__control`, referenceClassName);
 
     const bodyContent = (<FormMessage {...formMessageProps} type={validationState?.state}>{validationState?.text}</FormMessage>);
 
@@ -51,7 +53,7 @@ const FormValidationOverlay = React.forwardRef((
             onFocus={_handleFocus}
             ref={ref}>
             <Popper
-                cssBlock='fd-popover'
+                cssBlock={`${cssNamespace}-popover`}
                 noArrow
                 popperClassName={popperClassName}
                 popperPlacement={'bottom-start'}
@@ -96,4 +98,4 @@ FormValidationOverlay.defaultProps = {
     popperProps: {}
 };
 
-export default FormValidationOverlay;
+export default withStyles(FormValidationOverlay);

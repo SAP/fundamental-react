@@ -10,6 +10,7 @@ import ListText from './_ListText';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/list.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -20,6 +21,7 @@ If the list is a complex hierarchy, it is best to use a **Tree**. */
 const List = React.forwardRef(({
     children,
     className,
+    cssNamespace,
     compact,
     footer,
     footerClassName,
@@ -37,14 +39,14 @@ const List = React.forwardRef(({
 }, ref) => {
 
     const listClasses = classnames(
-        'fd-list',
+        `${cssNamespace}-list`,
         {
-            'fd-list--selection': selectable,
-            'fd-list--compact': compact,
-            'fd-list--no-border': noBorder,
-            'fd-list--byline': hasByline,
-            'fd-list--navigation': navigation || partialNavigation,
-            'fd-list--navigation-indication': navigation || partialNavigation
+            [`${cssNamespace}-list--selection`]: selectable,
+            [`${cssNamespace}-list--compact`]: compact,
+            [`${cssNamespace}-list--no-border`]: noBorder,
+            [`${cssNamespace}-list--byline`]: hasByline,
+            [`${cssNamespace}-list--navigation`]: navigation || partialNavigation,
+            [`${cssNamespace}-list--navigation-indication`]: navigation || partialNavigation
         },
         className
     );
@@ -129,4 +131,4 @@ List.Text = ListText;
 List.Byline = ListByline;
 List.Selection = ListSelection;
 
-export default List;
+export default withStyles(List);

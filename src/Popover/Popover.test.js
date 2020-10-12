@@ -67,7 +67,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOver);
+        const wrapper = mount(popOver).children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -81,7 +81,7 @@ describe('<Popover />', () => {
     });
 
     test('handle esc key to close popover', () => {
-        const wrapper = mount(popOver);
+        const wrapper = mount(popOver).children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -94,7 +94,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOver);
+        const wrapper = mount(popOver).children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -107,7 +107,7 @@ describe('<Popover />', () => {
     });
 
     test('handle document click to close popover', () => {
-        const wrapper = mount(popOverDisabled);
+        const wrapper = mount(popOverDisabled).children();
 
         // click on popover to show
         wrapper.find('div.fd-popover__control .sap-icon--cart').simulate('click');
@@ -151,7 +151,7 @@ describe('<Popover />', () => {
         });
 
         test('adds appropriate aria-expanded to the control, and updates it on state change', () => {
-            const wrapper = mount(popOver);
+            const wrapper = mount(popOver).children();
             let button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-expanded']).toEqual(false);
             wrapper.setState({ isExpanded: true }, () => {
@@ -165,14 +165,14 @@ describe('<Popover />', () => {
         });
 
         test('adds appropriate aria-controls to the control', () => {
-            let wrapper = mount(popOver);
+            let wrapper = mount(popOver).children();
             let button = wrapper.find('Icon').at(0);
             expect(button.props()['aria-controls']).toEqual('fd-default-popover');
 
             //check undefined popperProps
             // eslint-disable-next-line no-undefined
             const propLessPopover = React.cloneElement(popOver, { popperProps: undefined } );
-            wrapper = mount(propLessPopover);
+            wrapper = mount(propLessPopover).children();
             wrapper.setState({ isExpanded: true }, () => {
                 const popoverContentId = document.querySelector('div.fd-popover__popper').id;
                 button = wrapper.find('Icon').at(0);
@@ -192,7 +192,7 @@ describe('<Popover />', () => {
                 keyCode: 32,
                 preventDefault: () => {}
             };
-            const wrapper = mount(popOver);
+            const wrapper = mount(popOver).children();
             const button = wrapper.find('Icon').at(0);
             button.prop('onKeyPress')(syntheticEvent, 'Icon', wrapper.triggerBody);
 
@@ -204,7 +204,7 @@ describe('<Popover />', () => {
                 keyCode: 13,
                 preventDefault: () => {}
             };
-            const wrapper = mount(popOver);
+            const wrapper = mount(popOver).children();
             const button = wrapper.find('Icon').at(0);
             button.prop('onKeyPress')(syntheticEvent, 'Icon', wrapper.triggerBody);
 

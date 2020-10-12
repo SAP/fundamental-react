@@ -2,20 +2,21 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/title.css';
 
 const classnames = classnamesBind.bind(styles);
 
 /** Use an **Title** component to display a title or heading. Note that only one H1 should appear on a page, and headings should only appear in ascending order without skipping a level; i.e. even if there are only 3 levels on a page, the order must be H1-H2-H3, and no other levels used. */
-const Title = React.forwardRef(({ className, children, level, levelStyle, wrap, ...props }, ref) => {
+const Title = React.forwardRef(({ className, children, cssNamespace, level, levelStyle, wrap, ...props }, ref) => {
 
     const levelClass = levelStyle ? `h${levelStyle}` : `h${level}`;
 
     const headingClasses = classnames(
-        'fd-title',
-        `fd-title--${levelClass}`,
+        `${cssNamespace}-title`,
+        `${cssNamespace}-title--${levelClass}`,
         {
-            'fd-title--wrap': !!wrap
+            [`${cssNamespace}-title--wrap`]: !!wrap
         },
         className
     );
@@ -47,4 +48,4 @@ Title.propTypes = {
     wrap: PropTypes.bool
 };
 
-export default Title;
+export default withStyles(Title);

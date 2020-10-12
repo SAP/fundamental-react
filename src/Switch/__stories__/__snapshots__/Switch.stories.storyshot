@@ -115,7 +115,7 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
         >
           <i
             aria-label="on"
-            className="sap-icon--accept fd-switch__icon--on fd-switch__icon"
+            className="sap-icon--accept fd-switch__icon fd-switch__icon--on"
             role="img"
           />
           <span
@@ -124,7 +124,7 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
           />
           <i
             aria-label="off"
-            className="sap-icon--decline fd-switch__icon--off fd-switch__icon"
+            className="sap-icon--decline fd-switch__icon fd-switch__icon--off"
             role="img"
           />
         </div>
@@ -264,7 +264,7 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         >
           <i
             aria-label="on"
-            className="sap-icon--accept fd-switch__icon--on fd-switch__icon"
+            className="sap-icon--accept fd-switch__icon fd-switch__icon--on"
             role="img"
           />
           <span
@@ -273,8 +273,49 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
           />
           <i
             aria-label="off"
-            className="sap-icon--decline fd-switch__icon--off fd-switch__icon"
+            className="sap-icon--decline fd-switch__icon fd-switch__icon--off"
             role="img"
+          />
+        </div>
+      </div>
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Component API/Switch No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="xxx-form-label"
+    onKeyDown={[Function]}
+  >
+    Switch label
+  </label>
+  <label
+    className="xxx-switch__label"
+  >
+    <span
+      className="xxx-switch"
+    >
+      <input
+        aria-checked={false}
+        aria-label="Switch"
+        checked={false}
+        className="xxx-switch__input"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <div
+        className="xxx-switch__wrapper"
+      >
+        <div
+          className="xxx-switch__track"
+        >
+          <span
+            className="xxx-switch__handle"
+            role="presentation"
           />
         </div>
       </div>
@@ -397,7 +438,7 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
         >
           <i
             aria-label="on"
-            className="sap-icon--accept fd-switch__icon--on fd-switch__icon"
+            className="sap-icon--accept fd-switch__icon fd-switch__icon--on"
             role="img"
           />
           <span
@@ -406,7 +447,7 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
           />
           <i
             aria-label="off"
-            className="sap-icon--decline fd-switch__icon--off fd-switch__icon"
+            className="sap-icon--decline fd-switch__icon fd-switch__icon--off"
             role="img"
           />
         </div>

@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import Tab from './Tab';
-import { TabContent } from './_TabContent';
+import TabContent from './_TabContent';
 import TabGroup from './TabGroup';
 
 describe('<Tabs />', () => {

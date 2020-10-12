@@ -364,6 +364,121 @@ exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    className="xxx-tabs xxx-tabs--l"
+    role="tablist"
+  >
+    <li
+      className="xxx-tabs__item"
+    >
+      <a
+        aria-controls="1"
+        aria-selected={true}
+        className="xxx-tabs__link"
+        href="#1"
+        onClick={[Function]}
+        role="tab"
+      >
+        <span
+          className="xxx-tabs__tag"
+        >
+          Tab 1
+        </span>
+      </a>
+    </li>
+    <li
+      className="xxx-tabs__item"
+    >
+      <a
+        aria-controls="2"
+        aria-selected={false}
+        className="xxx-tabs__link"
+        href="#2"
+        onClick={[Function]}
+        role="tab"
+      >
+        <span
+          className="xxx-tabs__tag"
+        >
+          Tab 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="xxx-tabs__item"
+    >
+      <a
+        aria-controls="3"
+        aria-selected={false}
+        className="xxx-tabs__link"
+        href="#3"
+        onClick={[Function]}
+        role="tab"
+      >
+        <span
+          className="xxx-tabs__tag"
+        >
+          Tab 3
+        </span>
+      </a>
+    </li>
+    <li
+      className="xxx-tabs__item"
+    >
+      <a
+        aria-controls="4"
+        aria-selected={false}
+        className="xxx-tabs__link"
+        href="#4"
+        onClick={[Function]}
+        role="tab"
+      >
+        <span
+          className="fd-tabs__icon"
+        >
+          <i
+            className="sap-icon--cart"
+            role="img"
+          />
+        </span>
+      </a>
+    </li>
+  </ul>
+  <div
+    aria-expanded={true}
+    className="xxx-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>
+  <div
+    aria-expanded={false}
+    className="xxx-tabs__panel"
+    role="tabpanel"
+  >
+    Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
+  </div>
+  <div
+    aria-expanded={false}
+    className="xxx-tabs__panel"
+    role="tabpanel"
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </div>
+  <div
+    aria-expanded={false}
+    className="xxx-tabs__panel"
+    role="tabpanel"
+  >
+    Please review your shopping chart.
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
 <div
   dir="ltr"

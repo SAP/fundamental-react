@@ -325,6 +325,23 @@ exports[`Storyshots Component API/Avatar Initials 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Avatar No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="xxx-avatar xxx-avatar--m"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--cart xxx-avatar__icon"
+      role="img"
+    />
+  </span>
+</div>
+`;
+
 exports[`Storyshots Component API/Avatar Placeholder 1`] = `
 <div
   dir="ltr"

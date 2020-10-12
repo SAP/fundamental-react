@@ -4,6 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import avatarStyles from 'fundamental-styles/dist/avatar.css';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 
@@ -13,23 +14,22 @@ const classnames = classnamesBind.bind({
 });
 
 /** An **Avatar** is a visual presentation option around using an icon or user initials. */
-
-const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, color, label, backgroundImageUrl, children, className, role, placeholder, tile, zoom, zoomLabel, ...props }, ref) => {
+const Avatar = React.forwardRef(({ glyph, size, circle, cssNamespace, transparent, border, color, label, backgroundImageUrl, children, className, role, placeholder, tile, zoom, zoomLabel, ...props }, ref) => {
 
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
     };
     const avatarClasses = classnames(
-        'fd-avatar',
+        `${cssNamespace}-avatar`,
         {
-            [`fd-avatar--${size}`]: !!size,
-            [`fd-avatar--accent-color-${color}`]: !!color,
-            'fd-avatar--thumbnail': backgroundImageUrl,
-            'fd-avatar--placeholder': placeholder,
-            'fd-avatar--tile': tile,
-            'fd-avatar--circle': circle,
-            'fd-avatar--transparent': transparent,
-            'fd-avatar--border': border
+            [`${cssNamespace}-avatar--${size}`]: !!size,
+            [`${cssNamespace}-avatar--accent-color-${color}`]: !!color,
+            [`${cssNamespace}-avatar--thumbnail`]: backgroundImageUrl,
+            [`${cssNamespace}-avatar--placeholder`]: placeholder,
+            [`${cssNamespace}-avatar--tile`]: tile,
+            [`${cssNamespace}-avatar--circle`]: circle,
+            [`${cssNamespace}-avatar--transparent`]: transparent,
+            [`${cssNamespace}-avatar--border`]: border
         },
         className
     );
@@ -49,9 +49,9 @@ const Avatar = React.forwardRef(({ glyph, size, circle, transparent, border, col
             ref={ref}
             role={ariaRole}
             style={backgroundImageUrl && styles}>
-            {glyph && <Icon ariaHidden className={classnames('fd-avatar__icon')}
+            {glyph && <Icon ariaHidden className={classnames(`${cssNamespace}-avatar__icon`)}
                 glyph={glyph} />}
-            {zoom && <Icon ariaLabel={zoomLabel} className={classnames('fd-avatar__zoom-icon')}
+            {zoom && <Icon ariaLabel={zoomLabel} className={classnames(`${cssNamespace}-avatar__zoom-icon`)}
                 glyph={'edit'} />}
             {children}
         </span>
@@ -98,4 +98,4 @@ Avatar.propTypes = {
     zoomLabel: PropTypes.string
 };
 
-export default Avatar;
+export default withStyles(Avatar);

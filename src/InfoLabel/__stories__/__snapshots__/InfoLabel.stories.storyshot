@@ -199,6 +199,22 @@ exports[`Storyshots Component API/InfoLabel Glyph 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/InfoLabel No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="xxx-info-label"
+  >
+    <span
+      className="fd-info-label__text"
+    >
+      Default
+    </span>
+  </span>
+</div>
+`;
+
 exports[`Storyshots Component API/InfoLabel Numeric 1`] = `
 <div
   dir="ltr"

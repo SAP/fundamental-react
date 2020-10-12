@@ -3,6 +3,7 @@ import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import listStyles from 'fundamental-styles/dist/list.css';
 
@@ -11,9 +12,9 @@ const classnames = classnamesBind.bind({
     ...listStyles
 });
 
-const ListIcon = ({ className, glyph, ...props }) => {
+const ListIcon = ({ className, cssNamespace, glyph, ...props }) => {
     const listIconClasses = classnames(
-        'fd-list__icon',
+        `${cssNamespace}-list__icon`,
         className
     );
 
@@ -31,4 +32,4 @@ ListIcon.propTypes = {
     className: PropTypes.string
 };
 
-export default ListIcon;
+export default withStyles(ListIcon);

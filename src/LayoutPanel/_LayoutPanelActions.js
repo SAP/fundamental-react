@@ -1,15 +1,16 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/layout-panel.css';
 
 const classnames = classnamesBind.bind(styles);
 
 const LayoutPanelActions = props => {
-    const { children, className, ...rest } = props;
+    const { children, className, cssNamespace, ...rest } = props;
 
     const panelActionsClasses = classnames(
-        'fd-layout-panel__actions',
+        `${cssNamespace}-layout-panel__actions`,
         className
     );
 
@@ -25,4 +26,4 @@ LayoutPanelActions.propTypes = {
     className: PropTypes.string
 };
 
-export default LayoutPanelActions;
+export default withStyles(LayoutPanelActions);

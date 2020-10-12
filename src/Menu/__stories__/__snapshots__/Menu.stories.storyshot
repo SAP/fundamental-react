@@ -1,5 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Menu No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <nav
+    className="xxx-menu"
+  >
+    <ul
+      className="xxx-menu__list"
+      role="menu"
+    >
+      <li
+        className="xxx-menu__item"
+        role="presentation"
+      >
+        <a
+          className="xxx-menu__link"
+          href="#"
+          role="menuitem"
+        >
+          <span
+            className="xxx-menu__title"
+          >
+            Option 1
+          </span>
+        </a>
+      </li>
+      <li
+        className="xxx-menu__item"
+        role="presentation"
+      >
+        <a
+          className="xxx-menu__link"
+          href="#"
+          role="menuitem"
+        >
+          <span
+            className="xxx-menu__title"
+          >
+            Option 2
+          </span>
+        </a>
+      </li>
+      <li
+        className="xxx-menu__item"
+        role="presentation"
+      >
+        <a
+          className="xxx-menu__link"
+          href="#"
+          role="menuitem"
+        >
+          <span
+            className="xxx-menu__title"
+          >
+            Option 3
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
 exports[`Storyshots Component API/Menu Primary 1`] = `
 <div
   dir="ltr"

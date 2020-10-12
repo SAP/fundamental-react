@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import { ICON_SIZES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/icon.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -10,7 +11,7 @@ const classnames = classnamesBind.bind(styles);
 and focus, and for fun. Icons can be used adaptively if desired, but at
 this point they are used more as visual elements within other
 components. */
-const Icon = React.forwardRef(({ ariaHidden, ariaLabel, glyph, size, className, ...props }, ref) => {
+const Icon = React.forwardRef(({ ariaHidden, ariaLabel, glyph, size, className, cssNamespace, ...props }, ref) => {
 
     const iconClasses = classnames(
         {
@@ -59,4 +60,4 @@ Icon.propTypes = {
     size: PropTypes.oneOf(Object.keys(ICON_SIZES))
 };
 
-export default Icon;
+export default withStyles(Icon);

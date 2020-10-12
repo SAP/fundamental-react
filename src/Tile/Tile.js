@@ -4,6 +4,7 @@ import React from 'react';
 import TileContent from './_TileContent';
 import TileFooter from './_TileFooter';
 import TileHeader from './_TileHeader';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/tile.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -17,6 +18,7 @@ const Tile = React.forwardRef(({
     backgroundImage,
     children,
     className,
+    cssNamespace,
     isDouble,
     onClick,
     size,
@@ -24,10 +26,10 @@ const Tile = React.forwardRef(({
 }, ref) => {
 
     const tileClasses = classnames(
-        'fd-tile',
+        `${cssNamespace}-tile`,
         {
-            [`fd-tile--${size}`]: size === 's',
-            'fd-tile--double': isDouble,
+            [`${cssNamespace}-tile--${size}`]: size === 's',
+            [`${cssNamespace}-tile--double`]: isDouble,
             'is-disabled': disabled
         },
         className
@@ -69,4 +71,4 @@ Tile.Content = TileContent;
 Tile.Header = TileHeader;
 Tile.Footer = TileFooter;
 
-export default Tile;
+export default withStyles(Tile);

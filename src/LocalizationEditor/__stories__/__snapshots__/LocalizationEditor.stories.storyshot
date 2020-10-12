@@ -54,6 +54,60 @@ exports[`Storyshots Component API/LocalizationEditor Compact 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/LocalizationEditor No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-localization-editor"
+  >
+    <label
+      className="xxx-form-label"
+    >
+      Localization Editor Label
+    </label>
+    <div
+      className="xxx-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="xxx-popover__control"
+        >
+          <div
+            className="xxx-input-group xxx-input-group--after"
+            onClick={[Function]}
+          >
+            <input
+              className="xxx-input xxx-input-group__input"
+              placeholder="Enter Label"
+              type="text"
+            />
+            <span
+              className="xxx-input-group__addon xxx-input-group__addon--button"
+            >
+              <button
+                className="xxx-button xxx-button--transparent xxx-input-group__button"
+                type="button"
+              >
+                <span
+                  className="xxx-button__text"
+                >
+                  EN*
+                </span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/LocalizationEditor Primary 1`] = `
 <div
   dir="ltr"

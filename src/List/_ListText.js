@@ -1,6 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/list.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -8,6 +9,7 @@ const classnames = classnamesBind.bind(styles);
 const ListText = ({
     children,
     className,
+    cssNamespace,
     left,
     noWrap,
     right,
@@ -23,10 +25,10 @@ const ListText = ({
 
     const listTextClasses = classnames(
         {
-            [`fd-list__${type}`]: !left && !right,
-            [`fd-list__${type}--no-wrap`]: noWrap,
-            'fd-list__byline-left': left,
-            'fd-list__byline-right': right
+            [`${cssNamespace}-list__${type}`]: !left && !right,
+            [`${cssNamespace}-list__${type}--no-wrap`]: noWrap,
+            [`${cssNamespace}-list__byline-left`]: left,
+            [`${cssNamespace}-list__byline-right`]: right
         },
         className
     );
@@ -56,4 +58,4 @@ ListText.propTypes = {
     secondary: PropTypes.bool
 };
 
-export default ListText;
+export default withStyles(ListText);

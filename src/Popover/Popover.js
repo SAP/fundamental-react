@@ -8,6 +8,7 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
+import withStyles from '../utils/withStyles';
 import { GridSelector, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/popover.css';
@@ -108,6 +109,7 @@ class Popover extends Component {
             control,
             body,
             className,
+            cssNamespace,
             placement,
             popperClassName,
             popperProps,
@@ -162,18 +164,18 @@ class Popover extends Component {
             };
         }
 
-        const referenceClassName = classnames('fd-popover__control', {
+        const referenceClassName = classnames(`${cssNamespace}-popover__control`, {
             'is-expanded': this.state.isExpanded
         });
 
         const referenceComponent = React.cloneElement(control, newControlProps);
 
-        const popoverClasses = classnames('fd-popover', className);
+        const popoverClasses = classnames(`${cssNamespace}-popover`, className);
 
         return (
             <div {...rest} className={popoverClasses}>
                 <Popper
-                    cssBlock='fd-popover'
+                    cssBlock={`${cssNamespace}-popover`}
                     disableEdgeDetection={disableEdgeDetection}
                     flipContainer={flipContainer}
                     innerRef={innerRef}
@@ -282,4 +284,4 @@ Popover.defaultProps = {
     onEscapeKey: () => { }
 };
 
-export default Popover;
+export default withStyles(Popover);

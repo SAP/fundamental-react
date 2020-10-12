@@ -82,3 +82,15 @@ export const dev = () => (
     </>
 );
 
+export const noStyles = () => (
+    <>
+        <FormLabel cssNamespace='xxx' htmlFor='timepickerPrimaryExample-input' >Time</FormLabel>
+        <TimePicker
+            buttonProps={{
+                'aria-label': 'Show/hide time picker'
+            }}
+            cssNamespace='xxx'
+            id='timepickerPrimaryExample' />
+    </>
+);
+noStyles.parameters = { docs: { disable: true } };

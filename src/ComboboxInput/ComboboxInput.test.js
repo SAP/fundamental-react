@@ -104,7 +104,7 @@ describe('<ComboboxInput />', () => {
             );
 
             expect(
-                element.find('InputGroup').prop('validationOverlayProps')
+                element.find('InputGroup').at(1).prop('validationOverlayProps')
             ).toMatchObject({
                 className: 'foo'
             });

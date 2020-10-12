@@ -25,3 +25,11 @@ export const compact = () => (
 
 compact.storyName = 'Compact';
 
+export const noStyles = () => (
+    <ButtonSegmented cssNamespace='xxx'>
+        <Button glyph='survey' />
+        <Button glyph='pie-chart' selected />
+        <Button glyph='pool' />
+    </ButtonSegmented>
+);
+noStyles.parameters = { docs: { disable: true } };

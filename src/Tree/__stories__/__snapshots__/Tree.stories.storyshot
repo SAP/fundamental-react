@@ -3950,6 +3950,245 @@ exports[`Storyshots Component API/Tree Navigation Links 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Tree No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    className="xxx-tree"
+    id="fd-mocked-short-id"
+    role="tree"
+  >
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="xxx-tree__item"
+      id="fd-mocked-short-id"
+      role="treeitem"
+    >
+      <div
+        className="xxx-tree__item-container"
+      >
+        <button
+          aria-controls="fd-mocked-short-id"
+          aria-label="expand"
+          aria-pressed={false}
+          className="xxx-tree__expander"
+          id="fd-mocked-short-id-expansion-toggle-button"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-right-arrow fd-tree__icon"
+            role="img"
+          />
+        </button>
+        
+        <div
+          className="xxx-tree__content"
+        >
+          <span
+            className="xxx-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+      <ul
+        aria-hidden={true}
+        className="xxx-tree"
+        id="fd-mocked-short-id-subtree-root"
+        role="group"
+      >
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="xxx-tree__item"
+          id="fd-mocked-short-id"
+          role="treeitem"
+        >
+          <div
+            className="xxx-tree__item-container"
+          >
+            <button
+              aria-controls="fd-mocked-short-id"
+              aria-label="expand"
+              aria-pressed={false}
+              className="xxx-tree__expander"
+              id="fd-mocked-short-id-expansion-toggle-button"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-right-arrow fd-tree__icon"
+                role="img"
+              />
+            </button>
+            
+            <div
+              className="xxx-tree__content"
+            >
+              <span
+                className="xxx-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
+          <ul
+            aria-hidden={true}
+            className="xxx-tree is-hidden"
+            id="fd-mocked-short-id-subtree-root"
+            role="group"
+          >
+            <li
+              aria-expanded={false}
+              aria-level={3}
+              className="xxx-tree__item"
+              id="fd-mocked-short-id"
+              role="treeitem"
+            >
+              <div
+                className="xxx-tree__item-container"
+              >
+                
+                <div
+                  className="xxx-tree__content"
+                >
+                  <span
+                    className="xxx-tree__text"
+                  >
+                    Level 3
+                  </span>
+                </div>
+                
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="xxx-tree__item"
+          id="fd-mocked-short-id"
+          role="treeitem"
+        >
+          <div
+            className="xxx-tree__item-container"
+          >
+            
+            <div
+              className="xxx-tree__content"
+            >
+              <span
+                className="xxx-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
+        </li>
+        <li
+          aria-expanded={false}
+          aria-level={2}
+          className="xxx-tree__item"
+          id="fd-mocked-short-id"
+          role="treeitem"
+        >
+          <div
+            className="xxx-tree__item-container"
+          >
+            
+            <div
+              className="xxx-tree__content"
+            >
+              <span
+                className="xxx-tree__text"
+              >
+                Level 2
+              </span>
+            </div>
+            
+          </div>
+        </li>
+      </ul>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="xxx-tree__item"
+      id="fd-mocked-short-id"
+      role="treeitem"
+    >
+      <div
+        className="xxx-tree__item-container"
+      >
+        
+        <div
+          className="xxx-tree__content"
+        >
+          <span
+            className="xxx-tree__text"
+          >
+            Level 1
+          </span>
+        </div>
+        
+      </div>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="xxx-tree__item"
+      id="fd-mocked-short-id"
+      role="treeitem"
+    >
+      <div
+        className="xxx-tree__item-container"
+      >
+        
+        <div
+          className="xxx-tree__content"
+        >
+          <span
+            className="xxx-tree__text"
+          >
+            Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </span>
+        </div>
+        
+      </div>
+    </li>
+    <li
+      aria-expanded={false}
+      aria-level={1}
+      className="xxx-tree__item"
+      id="fd-mocked-short-id"
+      role="treeitem"
+    >
+      <div
+        className="xxx-tree__item-container"
+      >
+        
+        <div
+          className="xxx-tree__content xxx-tree__content--wrap"
+        >
+          <span
+            className="xxx-tree__text"
+          >
+            Level 1 with very long text that does not wrap. Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </span>
+        </div>
+        
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Storyshots Component API/Tree Single Selection Left 1`] = `
 <div
   dir="ltr"

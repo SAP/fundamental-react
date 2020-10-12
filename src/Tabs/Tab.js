@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import tabStyles from 'fundamental-styles/dist/tabs.css';
 
@@ -11,15 +12,12 @@ const classnames = classnamesBind.bind({
 });
 
 const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
-    tabContentProps, linkProps, index, className, ...props }, ref) => {
+    tabContentProps, linkProps, index, className, cssNamespace, ...props }, ref) => {
 
     const tabClasses = classnames(
         className,
-        'fd-tabs__item'
+        `${cssNamespace}-tabs__item`
     );
-
-    // css classes used for tabs
-    const linkClasses = classnames('fd-tabs__link');
 
     return (
         <li
@@ -31,7 +29,7 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
                 {...linkProps}
                 aria-controls={id}
                 aria-selected={selected}
-                className={linkClasses}
+                className={classnames(`${cssNamespace}-tabs__link`)}
                 href={`#${id}`}
                 onClick={(event) => onClick(event, index)}
                 role='tab'>
@@ -40,7 +38,7 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
                         <Icon ariaLabel={title} glyph={glyph} />
                     </span>
                     :
-                    <span className={classnames('fd-tabs__tag')}>{title}</span>
+                    <span className={classnames(`${cssNamespace}-tabs__tag`)}>{title}</span>
                 }
             </a>
         </li>
@@ -74,4 +72,4 @@ Tab.propTypes = {
     onClick: PropTypes.func
 };
 
-export default Tab;
+export default withStyles(Tab);

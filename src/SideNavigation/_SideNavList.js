@@ -1,6 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/side-nav.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -99,4 +100,4 @@ SideNavList.defaultProps = {
 
 SideNavList.displayName = 'SideNav.List';
 
-export default SideNavList;
+export default withStyles(SideNavList);

@@ -3,6 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import { OBJECT_STATUS_SIZES, OBJECT_STATUS_TYPES } from '../utils/constants';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import objectStatus from 'fundamental-styles/dist/object-status.css';
@@ -15,15 +16,15 @@ const classnames = classnamesBind.bind({
 /** *Object Status* is a short text that represents the semantic status of an object. It has a semantic color and an optional icon.
  * Typically, the object status is used in the dynamic page header and as a status attribute of a line item in a table. */
 
-const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, indication, inverted, link, onClick, size, status, ...props }, ref) => {
+const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, cssNamespace, glyph, indication, inverted, link, onClick, size, status, ...props }, ref) => {
     const objectStatusClasses = classnames(
-        'fd-object-status',
+        `${cssNamespace}-object-status`,
         {
-            [`fd-object-status--indication-${indication}`]: !!indication,
-            'fd-object-status--inverted': inverted,
-            'fd-object-status--large': size === 'l',
-            [`fd-object-status--${status}`]: !!status,
-            ['fd-object-status--link']: !!link || !!onClick
+            [`${cssNamespace}-object-status--indication-${indication}`]: !!indication,
+            [`${cssNamespace}-object-status--inverted`]: inverted,
+            [`${cssNamespace}-object-status--large`]: size === 'l',
+            [`${cssNamespace}-object-status--${status}`]: !!status,
+            [`${cssNamespace}-object-status--link`]: !!link || !!onClick
         },
         className
     );
@@ -53,10 +54,10 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, glyph, 
             className={objectStatusClasses}
             {...semanticProps}
             ref={ref}>
-            {glyph && <Icon ariaHidden className={classnames('fd-object-status__icon')}
+            {glyph && <Icon ariaHidden className={classnames(`${cssNamespace}-object-status__icon`)}
                 glyph={glyph} />}
             {children &&
-                <span className={classnames('fd-object-status__text')}>
+                <span className={classnames(`${cssNamespace}-object-status__text`)}>
                     {children}
                 </span>
             }
@@ -108,5 +109,4 @@ ObjectStatus.propTypes = {
     onClick: PropTypes.func
 };
 
-export default ObjectStatus;
-
+export default withStyles(ObjectStatus);

@@ -3,6 +3,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import styles from 'fundamental-styles/dist/textarea.css';
 
@@ -14,6 +15,7 @@ const FormTextarea = React.forwardRef(({
     className,
     compact,
     counterProps,
+    cssNamespace,
     defaultValue,
     disabled,
     localizedText,
@@ -56,16 +58,16 @@ const FormTextarea = React.forwardRef(({
     };
 
     const formTextAreaClasses = classnames(
-        'fd-textarea',
+        `${cssNamespace}-textarea`,
         {
-            'fd-textarea--compact': compact,
+            [`${cssNamespace}-textarea--compact`]: compact,
             [`is-${validationState?.state}`]: validationState?.state
         },
         className
     );
 
     const counterClasses = classnames(
-        'fd-textarea-counter',
+        `${cssNamespace}-textarea-counter`,
         counterProps?.className
     );
 
@@ -163,4 +165,4 @@ FormTextarea.defaultProps = {
     }
 };
 
-export default FormTextarea;
+export default withStyles(FormTextarea);

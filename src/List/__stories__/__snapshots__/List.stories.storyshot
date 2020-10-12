@@ -730,6 +730,64 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/List No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    aria-labelledby={null}
+    className="xxx-list"
+    id="fd-mocked-short-id-list"
+    role="list"
+  >
+    <li
+      className="xxx-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="xxx-list__title"
+      >
+        Apple
+      </span>
+    </li>
+    <li
+      className="xxx-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="xxx-list__title"
+      >
+        Banana
+      </span>
+    </li>
+    <li
+      className="xxx-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="xxx-list__title"
+      >
+        Durian
+      </span>
+    </li>
+    <li
+      className="xxx-list__item"
+      onClick={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className="xxx-list__title"
+      >
+        Grape
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Storyshots Component API/List Partial Navigation 1`] = `
 <div
   dir="ltr"

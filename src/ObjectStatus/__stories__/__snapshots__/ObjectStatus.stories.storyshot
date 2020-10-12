@@ -1031,6 +1031,87 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
 </div>
 `;
 
+exports[`Storyshots Component API/Object Display Components/ObjectStatus No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <span
+      className="xxx-object-status xxx-object-status--negative"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-negative xxx-object-status__icon"
+        role="img"
+      />
+      <span
+        className="xxx-object-status__text"
+      >
+        Negative
+      </span>
+    </span>
+    <span
+      className="xxx-object-status xxx-object-status--critical"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-critical xxx-object-status__icon"
+        role="img"
+      />
+      <span
+        className="xxx-object-status__text"
+      >
+        Critical
+      </span>
+    </span>
+    <span
+      className="xxx-object-status xxx-object-status--positive"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--status-positive xxx-object-status__icon"
+        role="img"
+      />
+      <span
+        className="xxx-object-status__text"
+      >
+        Positive
+      </span>
+    </span>
+    <span
+      className="xxx-object-status xxx-object-status--informative"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--hint xxx-object-status__icon"
+        role="img"
+      />
+      <span
+        className="xxx-object-status__text"
+      >
+        Info
+      </span>
+    </span>
+    <span
+      className="xxx-object-status"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--to-be-reviewed xxx-object-status__icon"
+        role="img"
+      />
+      <span
+        className="xxx-object-status__text"
+      >
+        Neutral
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Primary 1`] = `
 <div
   dir="ltr"

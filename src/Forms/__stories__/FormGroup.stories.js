@@ -95,3 +95,20 @@ export const withFormTextarea = () => (
         </FormGroup>
     </>
 );
+
+export const noStyles = () => (
+    <FormGroup cssNamespace='xxx'>
+        <FormLabel>InputGroup inside FormGroup</FormLabel>
+        <FormItem>
+            <InputGroup>
+                <InputGroup.Addon isButton>
+                    <Button
+                        glyph='accept'
+                        option='transparent' />
+                </InputGroup.Addon>
+                <FormInput />
+            </InputGroup>
+        </FormItem>
+    </FormGroup>
+);
+noStyles.parameters = { docs: { disable: true } };

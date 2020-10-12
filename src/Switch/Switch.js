@@ -4,6 +4,7 @@ import FormLabel from '../Forms/FormLabel';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
 import SwitchItem from './_SwitchItem';
+import withStyles from '../utils/withStyles';
 import React, { useCallback, useEffect, useState } from 'react';
 import styles from 'fundamental-styles/dist/switch.css';
 
@@ -18,6 +19,7 @@ const Switch = React.forwardRef(({
     checked,
     children,
     compact,
+    cssNamespace,
     disabled,
     className,
     id,
@@ -53,17 +55,17 @@ const Switch = React.forwardRef(({
     });
 
     const spanClasses = classnames(
-        'fd-switch',
+        `${cssNamespace}-switch`,
         {
-            'fd-switch--compact': compact,
-            'fd-switch--semantic': semantic
+            [`${cssNamespace}-switch--compact`]: compact,
+            [`${cssNamespace}-switch--semantic`]: semantic
         }
     );
 
     let internalLabelDisplay;
     if (internalLabels && showInternalLabels) {
         const internalLabelText = isChecked ? internalLabels.checked.text : internalLabels.unchecked.text;
-        internalLabelDisplay = <span aria-live='polite' className={classnames('fd-switch__text')}>{internalLabelText}</span>;
+        internalLabelDisplay = <span aria-live='polite' className={classnames(`${cssNamespace}-switch__text`)}>{internalLabelText}</span>;
     }
 
     return (
@@ -75,7 +77,7 @@ const Switch = React.forwardRef(({
                 onKeyDown={onKeyDownSwitch}>
                 {children}
             </FormLabel>
-            <label className={classnames('fd-switch__label')}>
+            <label className={classnames(`${cssNamespace}-switch__label`)}>
                 {internalLabelDisplay}
                 <span className={spanClasses}>
                     <input
@@ -83,27 +85,27 @@ const Switch = React.forwardRef(({
                         aria-checked={isChecked}
                         aria-label={localizedText.switchLabel}
                         checked={isChecked}
-                        className={classnames('fd-switch__input')}
+                        className={classnames(`${cssNamespace}-switch__input`)}
                         disabled={disabled}
                         id={id}
                         onChange={handleChange}
                         ref={ref}
                         type='checkbox' />
-                    <div className={classnames('fd-switch__wrapper')}>
-                        <div className={classnames('fd-switch__track')}>
+                    <div className={classnames(`${cssNamespace}-switch__wrapper`)}>
+                        <div className={classnames(`${cssNamespace}-switch__track`)}>
                             {internalLabels ? (
                                 <>
                                     <SwitchItem
                                         glyph={internalLabels.checked.glyph}
                                         text={internalLabels.checked.text}
                                         type='on' />
-                                    <span className={classnames('fd-switch__handle')} role='presentation' />
+                                    <span className={classnames(`${cssNamespace}-switch__handle`)} role='presentation' />
                                     <SwitchItem
                                         glyph={internalLabels.unchecked.glyph}
                                         text={internalLabels.unchecked.text}
                                         type='off' />
                                 </>
-                            ) : (<span className={classnames('fd-switch__handle')} role='presentation' />)
+                            ) : (<span className={classnames(`${cssNamespace}-switch__handle`)} role='presentation' />)
                             }
                         </div>
                     </div>
@@ -164,4 +166,4 @@ Switch.defaultProps = {
     onChange: () => { }
 };
 
-export default Switch;
+export default withStyles(Switch);

@@ -3,6 +3,7 @@ import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import switchStyles from 'fundamental-styles/dist/switch.css';
 
@@ -11,12 +12,12 @@ const classnames = classnamesBind.bind({
     ...switchStyles
 });
 
-const SwitchItem = ({ glyph, text, type }) => {
+const SwitchItem = ({ glyph, text, type, cssNamespace }) => {
 
     const iconClasses = classnames(
         {
-            [`fd-switch__icon--${type}`]: !!glyph,
-            ['fd-switch__icon']: !!glyph
+            [`${cssNamespace}-switch__icon`]: !!glyph,
+            [`${cssNamespace}-switch__icon--${type}`]: !!glyph
         }
     );
 
@@ -40,4 +41,4 @@ SwitchItem.propTypes = {
     type: PropTypes.oneOf(['on', 'off'])
 };
 
-export default SwitchItem;
+export default withStyles(SwitchItem);

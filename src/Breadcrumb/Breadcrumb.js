@@ -2,6 +2,7 @@ import BreadcrumbItem from './_BreadcrumbItem';
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/breadcrumb.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -10,9 +11,9 @@ const classnames = classnamesBind.bind(styles);
  * Users can navigate to previous levels in the path. When clicking on the current page,
  * a dropdown allows users to access other pages at that same level. */
 
-const Breadcrumb = React.forwardRef(({ children, ...props }, ref) => (
+const Breadcrumb = React.forwardRef(({ children, cssNamespace, ...props }, ref) => (
     <ul {...props}
-        className={classnames('fd-breadcrumb')}
+        className={classnames(`${cssNamespace}-breadcrumb`)}
         ref={ref}>{children}</ul>)
 );
 
@@ -25,4 +26,4 @@ Breadcrumb.propTypes = {
 
 Breadcrumb.Item = BreadcrumbItem;
 
-export default Breadcrumb;
+export default withStyles(Breadcrumb);

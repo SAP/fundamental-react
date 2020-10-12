@@ -74,3 +74,11 @@ export const dev = () => (
         onClick={action('on-click')}
         visiblePageTotal={20} />
 );
+
+export const noStyles = () => (
+    <Pagination
+        cssNamespace='xxx'
+        itemsTotal={101}
+        onClick={handleClick} />
+);
+noStyles.parameters = { docs: { disable: true } };

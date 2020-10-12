@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Forms/FormGroup No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-form-group"
+  >
+    <label
+      className="xxx-form-label"
+    >
+      InputGroup inside FormGroup
+    </label>
+    <div
+      className="xxx-form-item"
+    >
+      <div
+        className="xxx-input-group"
+      >
+        <span
+          className="xxx-input-group__addon xxx-input-group__addon--button"
+        >
+          <button
+            className="xxx-button xxx-button--transparent xxx-input-group__button"
+            type="button"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--accept"
+              role="img"
+            />
+          </button>
+        </span>
+        <input
+          className="xxx-input xxx-input-group__input"
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormGroup Primary 1`] = `
 <div
   dir="ltr"

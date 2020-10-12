@@ -40,3 +40,6 @@ export const topEnd = () => (
 export const top = () => (
     <InlineHelp placement='top' text='Lorem ipsum dolor sit amet, consectetur adipiscing.' />
 );
+
+export const noStyles = () => (<InlineHelp cssNamespace='xxx' text='default' />);
+noStyles.parameters = { docs: { disable: true } };

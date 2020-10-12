@@ -94,3 +94,8 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <Switch cssNamespace='xxx'>Switch label</Switch>
+);
+noStyles.parameters = { docs: { disable: true } };

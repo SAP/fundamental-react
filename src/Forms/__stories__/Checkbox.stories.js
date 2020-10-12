@@ -58,3 +58,6 @@ export const dev = () => (
 
 controlledChecked.parameters = { docs: { disable: true } };
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (<Checkbox cssNamespace='xxx'>Default Checkbox</Checkbox>);
+noStyles.parameters = { docs: { disable: true } };

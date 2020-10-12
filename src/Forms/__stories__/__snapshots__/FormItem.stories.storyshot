@@ -23,6 +23,29 @@ exports[`Storyshots Component API/Forms/FormItem Inline 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/FormItem No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      htmlFor="input-1"
+    >
+      Default Input
+    </label>
+    <input
+      className="xxx-input"
+      id="input-1"
+      placeholder="Field placeholder text"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormItem Primary 1`] = `
 <div
   dir="ltr"

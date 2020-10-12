@@ -2,18 +2,20 @@ import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/form-select.css';
 
 const classnames = classnamesBind.bind(styles);
 
 /** A **FormSelect** is similar to a **Dropdown** but is more commonly used within a form. It can also be
 set to a disabled state. */
-const FormSelect = React.forwardRef(({ disabled, children, className, compact, state, ...props }, ref) => {
+const FormSelect = React.forwardRef(({ disabled, children, className, compact, cssNamespace, state, ...props }, ref) => {
 
     const formSelectClasses = classnames(
-        'fd-form-select',
-        { [`is-${state}`]: state,
-            'fd-form-select--compact': compact },
+        `${cssNamespace}-form-select`,
+        {
+            [`is-${state}`]: state,
+            [`${cssNamespace}-form-select--compact`]: compact },
         className
     );
 
@@ -43,4 +45,4 @@ FormSelect.propTypes = {
     state: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
-export default FormSelect;
+export default withStyles(FormSelect);

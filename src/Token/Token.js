@@ -1,6 +1,7 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/token.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -12,16 +13,17 @@ const Token = React.forwardRef(({
     children,
     className,
     compact,
+    cssNamespace,
     onClick,
     readOnly,
     ...props
 }, ref) => {
 
     const tokenClasses = classnames(
-        'fd-token',
+        `${cssNamespace}-token`,
         {
-            'fd-token--readonly': readOnly,
-            'fd-token--compact': compact
+            [`${cssNamespace}-token--readonly`]: readOnly,
+            [`${cssNamespace}-token--compact`]: compact
         },
         className
     );
@@ -33,10 +35,10 @@ const Token = React.forwardRef(({
             ref={ref}
             role='button'
             tabIndex='0'>
-            <span className={classnames('fd-token__text')}>{children}</span>
+            <span className={classnames(`${cssNamespace}-token__text`)}>{children}</span>
             <button
                 aria-label={buttonLabel}
-                className={classnames('fd-token__close')}
+                className={classnames(`${cssNamespace}-token__close`)}
                 onClick={onClick}
                 tabIndex='-1' />
         </span>
@@ -69,5 +71,4 @@ Token.defaultProps = {
     onClick: () => {}
 };
 
-export default Token;
-
+export default withStyles(Token);

@@ -268,6 +268,74 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Select No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-popover"
+    onBlur={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="xxx-popover__control"
+      >
+        <div
+          className="xxx-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="xxx-popover__control"
+            >
+              <div
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                className="xxx-select"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="combobox"
+                tabIndex={0}
+              >
+                <div
+                  className="xxx-select__control"
+                >
+                  <span
+                    aria-label={null}
+                    className="xxx-select__text-content"
+                  >
+                    Select
+                  </span>
+                  <span
+                    className="xxx-button xxx-button--transparent xxx-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Select Primary 1`] = `
 <div
   dir="ltr"

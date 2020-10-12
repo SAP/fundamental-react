@@ -1217,6 +1217,109 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Table No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <table
+    aria-describedby="fd-mocked-short-id"
+    className="xxx-table"
+    onBlur={[Function]}
+    role="grid"
+  >
+    <caption
+      aria-live="polite"
+      className="xxx-table__caption"
+      id="fd-mocked-short-id"
+    >
+      
+    </caption>
+    <thead
+      className="xxx-table__header"
+    >
+      <tr
+        className="xxx-table__row"
+      >
+        <th
+          className="xxx-table__cell"
+        >
+          Column Header 1
+        </th>
+        <th
+          className="xxx-table__cell"
+        >
+          Column Header 2
+        </th>
+        <th
+          className="xxx-table__cell"
+        >
+          Column Header 3
+        </th>
+        <th
+          className="xxx-table__cell"
+        >
+          Column Header 4
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="xxx-table__body"
+    >
+      <tr
+        className="xxx-table__row"
+        onClick={[Function]}
+      >
+        <td
+          className="xxx-table__cell"
+        >
+          Data 1
+        </td>
+        <td
+          className="xxx-table__cell"
+        >
+          Data 2
+        </td>
+        <td
+          className="xxx-table__cell"
+        >
+          Data 3
+        </td>
+        <td
+          className="xxx-table__cell"
+        >
+          Data 4
+        </td>
+      </tr>
+      <tr
+        className="xxx-table__row"
+        onClick={[Function]}
+      >
+        <td
+          className="xxx-table__cell"
+        >
+          Data 5
+        </td>
+        <td
+          className="xxx-table__cell"
+        >
+          Data 6
+        </td>
+        <td
+          className="xxx-table__cell"
+        >
+          Data 7
+        </td>
+        <td
+          className="xxx-table__cell"
+        >
+          Data 8
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Storyshots Component API/Table Primary 1`] = `
 <div
   dir="ltr"

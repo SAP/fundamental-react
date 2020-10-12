@@ -5,6 +5,7 @@ import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import { TREE_NODE_HIGHLIGHTS } from '../utils/constants';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
 import styles from 'fundamental-styles/dist/tree.css';
 
@@ -15,6 +16,7 @@ const TreeNode = ({
     active,
     children,
     className,
+    cssNamespace,
     glyphsAfter,
     glyphsBefore,
     highlight,
@@ -80,39 +82,39 @@ const TreeNode = ({
     const hasNavigation = !!link?.trim();
 
     const nodeClasses = classnames(
-        'fd-tree__item',
+        `${cssNamespace}-tree__item`,
         className
     );
 
     const containerClasses = classnames(
-        'fd-tree__item-container',
+        `${cssNamespace}-tree__item-container`,
         {
             [`has-highlight-indicator${highlightModifier()}`]: validHighlight(),
-            ['fd-tree__item-container--active']: hasNavigation || active,
+            [`${cssNamespace}-tree__item-container--active`]: hasNavigation || active,
             'is-navigated': isNavigated,
             'is-selected': rest?.selection === 'multi' && isSelected
         }
     );
 
     const buttonClasses = classnames(
-        'fd-tree__expander',
+        `${cssNamespace}-tree__expander`,
         { 'is-expanded': !!isExpanded }
     );
 
     const contentClasses = classnames(
-        'fd-tree__content',
-        { 'fd-tree__content--wrap': wrapContent },
+        `${cssNamespace}-tree__content`,
+        { [`${cssNamespace}-tree__content--wrap`]: wrapContent },
         { 'has-navigation-indicator': hasNavigation && !rest?.treeActive }
     );
 
     const branchClasses = classnames(
-        'fd-tree',
+        `${cssNamespace}-tree`,
         {
             'is-hidden': level > 1 && !isExpanded
         });
 
     const nodeContent = (
-        <span className={classnames('fd-tree__text')}>
+        <span className={classnames(`${cssNamespace}-tree__text`)}>
             {nodeContentPayload}
         </span>
     );
@@ -161,7 +163,7 @@ const TreeNode = ({
 
 
     const renderIcons = (icons) => {
-        return icons && icons?.length && icons?.map((icon, index) => (<Icon className={classnames('fd-tree__icon')} glyph={icon}
+        return icons && icons?.length && icons?.map((icon, index) => (<Icon className={classnames(`${cssNamespace}-tree__icon`)} glyph={icon}
             key={index} />)) || '';
     };
 
@@ -295,4 +297,4 @@ TreeNode.propTypes = {
 };
 
 
-export default TreeNode;
+export default withStyles(TreeNode);

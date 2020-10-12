@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import menuItemStyles from 'fundamental-styles/dist/menu.css';
 
@@ -18,6 +19,7 @@ const MenuItem = ({
     children,
     onClick,
     className,
+    cssNamespace,
     addonProps,
     urlProps,
     separator,
@@ -28,7 +30,7 @@ const MenuItem = ({
 }) => {
 
     const linkClassNames = classnames(
-        'fd-menu__link',
+        `${cssNamespace}-menu__link`,
         {
             'is-active': active,
             'is-selected': selected,
@@ -36,8 +38,8 @@ const MenuItem = ({
         }
     );
 
-    const addonBeforeClassname = classnames('fd-menu__addon-before');
-    const addonAfterClassname = classnames('fd-menu__addon-after');
+    const addonBeforeClassname = classnames(`${cssNamespace}-menu__addon-before`);
+    const addonAfterClassname = classnames(`${cssNamespace}-menu__addon-after`);
 
     const renderLink = () => {
         if (url) {
@@ -52,7 +54,7 @@ const MenuItem = ({
                             glyph={addonBefore} />
                     </span>
                 }
-                <span className={classnames('fd-menu__title')}>{children}</span>
+                <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
                 {addonAfter &&
                     <span className={addonAfterClassname}>
                         <Icon {...addonProps} ariaHidden
@@ -74,7 +76,7 @@ const MenuItem = ({
                                 glyph={addonBefore} />
                         </span>
                     }
-                    <span className={classnames('fd-menu__title')}>
+                    <span className={classnames(`${cssNamespace}-menu__title`)}>
                         {React.Children.map(children, child => {
                             return React.cloneElement(child, {
                                 className: childrenClassnames,
@@ -101,7 +103,7 @@ const MenuItem = ({
                             glyph={addonBefore} />
                     </span>
                 }
-                <span className={classnames('fd-menu__title')}>{children}</span>
+                <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
                 {addonAfter &&
                     <span className={addonAfterClassname}>
                         <Icon {...addonProps} ariaHidden
@@ -113,7 +115,7 @@ const MenuItem = ({
     };
 
     const listClassNames = classnames(
-        'fd-menu__item',
+        `${cssNamespace}-menu__item`,
         className
     );
 
@@ -125,7 +127,7 @@ const MenuItem = ({
                 role='presentation'>
                 {renderLink()}
             </li>
-            {separator && <span className={classnames('fd-menu__separator')} />}
+            {separator && <span className={classnames(`${cssNamespace}-menu__separator`)} />}
         </>
     );
 };
@@ -167,4 +169,4 @@ MenuItem.propTypes = {
     onClick: PropTypes.func
 };
 
-export default MenuItem;
+export default withStyles(MenuItem);
