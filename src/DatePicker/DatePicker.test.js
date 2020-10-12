@@ -658,7 +658,7 @@ describe('<DatePicker />', () => {
 
         test('should disabled the popover when readOnly is true', () => {
             wrapper = mount(<DatePicker readOnly />);
-            expect(wrapper.find('Popover').props().disabled).toBe(true);
+            expect(wrapper.find('Popover').at(0).props().disabled).toBe(true);
 
             expect(wrapper.find('button').length).toBe(0);
         });
@@ -670,7 +670,7 @@ describe('<DatePicker />', () => {
 
         test('should keep the popover when readOnly is true', () => {
             wrapper = mount(<DatePicker />);
-            expect(wrapper.find('Popover').props().disabled).not.toBeDefined();
+            expect(wrapper.find('Popover').at(0).props().disabled).not.toBeDefined();
         });
     });
 });
