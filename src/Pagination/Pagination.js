@@ -2,6 +2,7 @@
 import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/pagination.css';
 
@@ -125,7 +126,7 @@ class Pagination extends Component {
     getPaginationLink = (index, pageNumberOffset) => {
         const isSelected = this.state.selectedPage === index + pageNumberOffset;
         const paginationLinkClasses = classnames(
-            'fd-pagination__link',
+            `${this.props.cssNamespace}-pagination__link`,
             {
                 'is-selected': isSelected
             }
@@ -143,7 +144,8 @@ class Pagination extends Component {
     * Returns the ... snippet (ellipsis) which denotes more pagination links are present,    *
     * @returns {object} returns JSX snippet for ellipsis.
     */
-    getPaginationMoreIndicator = () => (<span className={classnames('fd-pagination__link--more')} />);
+    getPaginationMoreIndicator = () => (<span className={classnames(`${this.props.cssNamespace}-pagination__link--more`)} />);
+
     render() {
         const {
             itemsTotal,
@@ -151,6 +153,7 @@ class Pagination extends Component {
             displayTotal,
             totalText,
             className,
+            cssNamespace,
             linkProps,
             localizedText,
             displayTotalProps,
@@ -169,7 +172,7 @@ class Pagination extends Component {
         );
 
         const paginationClasses = classnames(
-            'fd-pagination',
+            `${cssNamespace}-pagination`,
             className
         );
 
@@ -180,19 +183,19 @@ class Pagination extends Component {
                 {displayTotal ? (
                     <span
                         {...displayTotalProps}
-                        className={classnames('fd-pagination__total')}>
+                        className={classnames(`${cssNamespace}-pagination__total`)}>
                         {itemsTotal} {totalText}
                     </span>
                 ) : (
                     ''
                 )}
 
-                <nav className={classnames('fd-pagination__nav')}>
+                <nav className={classnames(`${cssNamespace}-pagination__nav`)}>
                     <a
                         {...prevProps}
                         aria-disabled={this.state.selectedPage === 1}
                         aria-label={localizedText.previous}
-                        className={classnames('fd-pagination__link', 'fd-pagination__link--previous')}
+                        className={classnames(`${cssNamespace}-pagination__link`, `${cssNamespace}-pagination__link--previous`)}
                         href='#'
                         onClick={this.navigateBack} />
                     {this.createPaginationLinks(this.numberOfPages)}
@@ -202,7 +205,7 @@ class Pagination extends Component {
                             this.state.selectedPage === this.numberOfPages
                         }
                         aria-label={localizedText.next}
-                        className={classnames('fd-pagination__link', 'fd-pagination__link--next')}
+                        className={classnames(`${cssNamespace}-pagination__link`, `${cssNamespace}-pagination__link--next`)}
                         href='#'
                         onClick={this.navigateForward} />
                 </nav>
@@ -265,4 +268,4 @@ Pagination.defaultProps = {
     visiblePageTotal: 3
 };
 
-export default Pagination;
+export default withStyles(Pagination);

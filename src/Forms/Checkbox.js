@@ -6,6 +6,7 @@ import FormLabel from './FormLabel';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from 'fundamental-styles/dist/checkbox.css';
 
@@ -18,6 +19,7 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
+    cssNamespace,
     textClassName,
     compact,
     defaultChecked,
@@ -45,21 +47,21 @@ const Checkbox = React.forwardRef(({
 
 
     const inputClassNames = classnames(
-        'fd-checkbox',
+        `${cssNamespace}-checkbox`,
         {
             [`is-${validationState?.state}`]: validationState?.state,
-            'fd-checkbox--compact': compact
+            [`${cssNamespace}-checkbox--compact`]: compact
         },
         inputClassName
     );
 
     const labelClasses = classnames(
-        'fd-checkbox__label',
+        `${cssNamespace}-checkbox__label`,
         labelClassName
     );
 
     const childrenClasses = classnames(
-        'fd-checkbox__text',
+        `${cssNamespace}-checkbox__text`,
         textClassName
     );
 
@@ -191,4 +193,4 @@ Checkbox.defaultProps = {
     onChange: () => {}
 };
 
-export default Checkbox;
+export default withStyles(Checkbox);

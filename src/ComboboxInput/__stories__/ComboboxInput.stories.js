@@ -356,3 +356,14 @@ export const autoInlineButtonClickVisualStoryShotOnly = () => {
         </Container>
     );
 };
+
+export const noStyles = () => (
+    <ComboboxInput
+        cssNamespace='xxx'
+        id='primaryComboboxExample'
+        label='Default'
+        maxHeight='250px'
+        options={countriesData}
+        placeholder='Enter country' />
+);
+noStyles.parameters = { docs: { disable: true } };

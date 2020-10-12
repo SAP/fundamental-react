@@ -155,3 +155,18 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <>
+        <FormLabel cssNamespace='xxx' htmlFor='multiInputPrimaryExample' >Primary</FormLabel>
+        <MultiInput
+            buttonLabel='Show options'
+            cssNamespace='xxx'
+            data={data}
+            inputProps={{
+                id: 'multiInputPrimaryExample'
+            }}
+            placeholder='Placeholder' />
+    </>
+);
+noStyles.parameters = { docs: { disable: true } };

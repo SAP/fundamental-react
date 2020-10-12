@@ -191,6 +191,35 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/InputGroup No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-input-group"
+  >
+    <span
+      className="xxx-input-group__addon xxx-input-group__addon--button"
+    >
+      <button
+        className="xxx-button xxx-button--transparent xxx-input-group__button"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--navigation-down-arrow"
+          role="img"
+        />
+      </button>
+    </span>
+    <input
+      className="xxx-input xxx-input-group__input"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/InputGroup Primary 1`] = `
 <div
   dir="ltr"

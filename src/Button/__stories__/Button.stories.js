@@ -185,3 +185,6 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (<Button cssNamespace='xxx'>Button</Button>);
+noStyles.parameters = { docs: { disable: true } };

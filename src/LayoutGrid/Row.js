@@ -2,15 +2,16 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import { calculateSpan, getNodeSpan, hasSpan, mapSize } from './_layoutGridUtils';
 import styles from 'fundamental-styles/dist/layout-grid.css';
 
 const classnames = classnamesBind.bind(styles);
 
-const Row = React.forwardRef(({ children, className, ...props }, ref) => {
+const Row = React.forwardRef(({ children, className, cssNamespace, ...props }, ref) => {
 
     const rowClasses = classnames(
-        'fd-row',
+        `${cssNamespace}-row`,
         className
     );
     let occupiedSpans = mapSize(() => 0);
@@ -51,4 +52,4 @@ Row.propTypes = {
     className: PropTypes.string
 };
 
-export default Row;
+export default withStyles(Row);

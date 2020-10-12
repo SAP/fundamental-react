@@ -211,6 +211,17 @@ exports[`Storyshots Component API/Avatar Initials 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Avatar No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="xxx-avatar xxx-avatar--m sap-icon--cart"
+    role="presentation"
+  />
+</div>
+`;
+
 exports[`Storyshots Component API/Avatar Placeholder 1`] = `
 <div
   dir="ltr"

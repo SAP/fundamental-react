@@ -214,6 +214,23 @@ exports[`Storyshots Component API/Button/Button Icons 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Button/Button No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <button
+    className="xxx-button"
+    type="button"
+  >
+    <span
+      className="xxx-button__text"
+    >
+      Button
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Storyshots Component API/Button/Button Options 1`] = `
 <div
   dir="ltr"

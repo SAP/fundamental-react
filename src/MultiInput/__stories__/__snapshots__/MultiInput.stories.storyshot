@@ -198,6 +198,69 @@ exports[`Storyshots Component API/MultiInput Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/MultiInput No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="xxx-form-label"
+    htmlFor="multiInputPrimaryExample"
+  >
+    Primary
+  </label>
+  <div
+    className="xxx-popover"
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="xxx-popover__control"
+      >
+        <div
+          aria-expanded={false}
+          aria-haspopup="true"
+          className="xxx-input-group--control xxx-input-group"
+          onClick={[Function]}
+        >
+          <div
+            className="xxx-tokenizer"
+          >
+            <div
+              className="xxx-tokenizer__inner"
+            >
+              <input
+                className="xxx-input xxx-input-group__input xxx-tokenizer__input"
+                id="multiInputPrimaryExample"
+                placeholder="Placeholder"
+                type="text"
+              />
+            </div>
+          </div>
+          <span
+            className="xxx-input-group__addon xxx-input-group__addon--button"
+          >
+            <button
+              aria-label="Show options"
+              className="xxx-button xxx-button--transparent xxx-input-group__button"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--value-help"
+                role="img"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/MultiInput Primary 1`] = `
 <div
   dir="ltr"

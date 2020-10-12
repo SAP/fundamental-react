@@ -3,6 +3,7 @@ import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import Time from '../Time/Time';
 import TimePickerItem from './_TimePickerItem';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 
 /** A **TimePicker** allows the user to easily set a time using the **Time** component. */
@@ -215,4 +216,4 @@ TimePicker.defaultProps = {
     onChange: () => {}
 };
 
-export default TimePicker;
+export default withStyles(TimePicker);

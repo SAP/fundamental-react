@@ -38,3 +38,8 @@ export const dev = () => (
         onChange={action('on-change')}
         time={{ hour: 12, minute: 55, second: 6, meridiem: 0 }} />
 );
+
+export const noStyles = () => (
+    <Time cssNamespace='xxx' />
+);
+noStyles.parameters = { docs: { disable: true } };

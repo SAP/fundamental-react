@@ -68,6 +68,24 @@ exports[`Storyshots Component API/MessageStrip No Glyph 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/MessageStrip No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-message-strip"
+    id="fd-mocked-short-id"
+    role="alert"
+  >
+    <p
+      className="xxx-message-strip__text"
+    >
+      Default MessageStrip
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/MessageStrip Primary 1`] = `
 <div
   dir="ltr"

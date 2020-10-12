@@ -39,6 +39,18 @@ exports[`Storyshots Component API/Forms/FormInput Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/FormInput No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <input
+    className="xxx-input"
+    placeholder="Default"
+    type="text"
+  />
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormInput Primary 1`] = `
 <div
   dir="ltr"

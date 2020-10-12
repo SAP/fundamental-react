@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Breadcrumb No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    className="xxx-breadcrumb"
+  >
+    <li
+      className="xxx-breadcrumb__item"
+    >
+      <a
+        className="xxx-breadcrumb__link"
+        href="#"
+      >
+        Link Text
+      </a>
+    </li>
+    <li
+      className="xxx-breadcrumb__item"
+    >
+      <a
+        className="xxx-breadcrumb__link"
+        href="#"
+      >
+        Link Text
+      </a>
+    </li>
+    <li
+      className="xxx-breadcrumb__item"
+    >
+      <a
+        className="xxx-breadcrumb__link"
+        href="#"
+      >
+        Link Text
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Storyshots Component API/Breadcrumb Primary 1`] = `
 <div
   dir="ltr"

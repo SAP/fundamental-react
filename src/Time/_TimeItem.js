@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/time.css';
 
@@ -164,17 +165,17 @@ class TimeItem extends Component {
     }
 
     generateValues = () => {
-        const { name, max, format12Hours, placeholder, value, disabled, inputProps } = this.props;
+        const { name, max, format12Hours, placeholder, value, disabled, inputProps, cssNamespace } = this.props;
 
         if (name === 'meridiem') {
             return this.CLOCK.map((amPmValue, index) => (
                 <li
                     {...inputProps}
-                    className={classnames('fd-time__item')}
+                    className={classnames(`${cssNamespace}-time__item`)}
                     key={index}
                     onClick={() => this.onClick(index)}>
-                    {index === 0 && <div className={classnames('fd-time__current-indicator')} />}
-                    <span className={classnames('fd-time__unit')}>{amPmValue}</span>
+                    {index === 0 && <div className={classnames(`${cssNamespace}-time__current-indicator`)} />}
+                    <span className={classnames(`${cssNamespace}-time__unit`)}>{amPmValue}</span>
                 </li>
             ));
         }
@@ -234,25 +235,25 @@ class TimeItem extends Component {
         return values.map((timeValue, i) => (
             <li
                 {...inputProps}
-                className={classnames('fd-time__item')}
+                className={classnames(`${cssNamespace}-time__item`)}
                 key={i}
                 onClick={disabled ? null : () => this.onClick(timeValue)}>
-                {i === 0 && <div className={classnames('fd-time__current-indicator')} />}
-                <span className={classnames('fd-time__unit')}>{this.getDisplayValue(timeValue)}</span>
+                {i === 0 && <div className={classnames(`${cssNamespace}-time__current-indicator`)} />}
+                <span className={classnames(`${cssNamespace}-time__unit`)}>{this.getDisplayValue(timeValue)}</span>
             </li>
         ));
     }
 
     render() {
-        const { disabled, upButtonProps, downButtonProps, value, active, localizedText, name } = this.props;
+        const { disabled, upButtonProps, downButtonProps, value, active, localizedText, name, cssNamespace } = this.props;
 
         const isActive = active === name;
 
         const wrapperClasses = classnames(
-            'fd-time__wrapper',
+            `${cssNamespace}-time__wrapper`,
             {
-                'fd-time__wrapper--active': isActive,
-                'fd-time__wrapper--meridian': this.props.name === 'meridiem'
+                [`${cssNamespace}-time__wrapper--active`]: isActive,
+                [`${cssNamespace}-time__wrapper--meridian`]: this.props.name === 'meridiem'
             }
         );
 
@@ -268,10 +269,10 @@ class TimeItem extends Component {
                 <div className={wrapperClasses}>
                     {!isActive ? (
                         <span
-                            className={classnames('fd-time__item', 'fd-time__item--collapsed')}
+                            className={classnames(`${cssNamespace}-time__item`, `${cssNamespace}-time__item--collapsed`)}
                             onClick={name === 'meridiem' ? this.props.onCollapsedClick : null}>{this.getDisplayValue(value)}</span>
                     ) : (
-                        <ul className={classnames('fd-time__list')}>
+                        <ul className={classnames(`${cssNamespace}-time__list`)}>
                             {this.generateValues()}
                         </ul>
                     )}
@@ -319,4 +320,4 @@ TimeItem.defaultProps = {
     updateTime: () => { }
 };
 
-export default TimeItem;
+export default withStyles(TimeItem);

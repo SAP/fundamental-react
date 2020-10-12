@@ -10568,6 +10568,17 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Icon No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <i
+    className="sap-icon--cart"
+    role="img"
+  />
+</div>
+`;
+
 exports[`Storyshots Component API/Icon Primary 1`] = `
 <div
   dir="ltr"

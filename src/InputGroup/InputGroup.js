@@ -3,6 +3,7 @@ import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/input-group.css';
 
@@ -21,6 +22,7 @@ class InputGroup extends Component {
             children,
             className,
             compact,
+            cssNamespace,
             disabled,
             validationOverlayProps,
             validationState,
@@ -29,7 +31,7 @@ class InputGroup extends Component {
 
         const inputGroupClasses = classnames(
             className,
-            'fd-input-group',
+            `${cssNamespace}-input-group`,
             {
                 'is-disabled': disabled,
                 [`is-${validationState?.state}`]: validationState?.state
@@ -38,8 +40,8 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': !child.props.className?.includes('fd-tokenizer'),
-                'fd-textarea': child.type?.displayName === 'FormTextarea' && isUsingCssModules
+                [`${cssNamespace}-input-group__input`]: !child.props.className?.includes(`${cssNamespace}-tokenizer`),
+                [`${cssNamespace}-textarea`]: child.type?.displayName === 'FormTextarea' && isUsingCssModules
             },
             child.props.className
         );
@@ -109,4 +111,4 @@ InputGroup.propTypes = {
     })
 };
 
-export default InputGroup;
+export default withStyles(InputGroup);

@@ -92,3 +92,11 @@ export const dev = () => (
         })} />
 );
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <Select
+        cssNamespace='xxx'
+        options={options}
+        placeholder='Select' />
+);
+noStyles.parameters = { docs: { disable: true } };

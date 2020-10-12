@@ -1,18 +1,19 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/link.css';
 
 const classnames = classnamesBind.bind(styles);
 
 /** Use an **Link** component to display a link. */
-const Link = React.forwardRef(({ className, children, disabled, subtle, ...props }, ref) => {
+const Link = React.forwardRef(({ className, cssNamespace, children, disabled, subtle, ...props }, ref) => {
 
     const imageClasses = classnames(
-        'fd-link',
+        `${cssNamespace}-link`,
         {
             'is-disabled': !!disabled,
-            'fd-link--subtle': subtle
+            [`${cssNamespace}-link--subtle`]: subtle
         },
         className
     );
@@ -40,4 +41,4 @@ Link.propTypes = {
     subtle: PropTypes.bool
 };
 
-export default Link;
+export default withStyles(Link);

@@ -62,6 +62,26 @@ exports[`Storyshots Component API/Forms/FormSelect Disabled 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Forms/FormSelect No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <select
+    className="xxx-form-select"
+  >
+    <option>
+      Duis malesuada odio volutpat elementum
+    </option>
+    <option>
+      Suspendisse ante ligula
+    </option>
+    <option>
+      Sed bibendum sapien at posuere interdum
+    </option>
+  </select>
+</div>
+`;
+
 exports[`Storyshots Component API/Forms/FormSelect Primary 1`] = `
 <div
   dir="ltr"

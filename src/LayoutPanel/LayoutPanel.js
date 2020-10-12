@@ -7,6 +7,7 @@ import LayoutPanelHead from './_LayoutPanelHead';
 import LayoutPanelHeader from './_LayoutPanelHeader';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import layoutGridStyles from 'fundamental-styles/dist/layout-grid.css';
 import layoutPanelStyles from 'fundamental-styles/dist/layout-panel.css';
 
@@ -18,10 +19,10 @@ const classnames = classnamesBind.bind({
 /** A **LayoutPanel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
 Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand
 with the information displayed inside the panel. */
-const LayoutPanel = React.forwardRef(({ children, className, ...props }, ref) => {
+const LayoutPanel = React.forwardRef(({ children, className, cssNamespace, ...props }, ref) => {
 
     const panelClasses = classnames(
-        'fd-layout-panel',
+        `${cssNamespace}-layout-panel`,
         className
     );
 
@@ -47,4 +48,4 @@ LayoutPanel.Footer = LayoutPanelFooter;
 LayoutPanel.Head = LayoutPanelHead;
 LayoutPanel.Header = LayoutPanelHeader;
 
-export default LayoutPanel;
+export default withStyles(LayoutPanel);

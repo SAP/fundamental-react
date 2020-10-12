@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.12...v0.13.1-rc.13) (2020-10-12)
+
+
+### Features
+
+* Hide the DatePicker button when readOnly is true ([#1234](https://github.com/SAP/fundamental-react/issues/1234)) ([80bb5d6](https://github.com/SAP/fundamental-react/commit/80bb5d69bfd943a48c15824a467da1deaedeb130))
+
+
+### Bug Fixes
+
+* Fix breaking datepicker test with merge ([#1240](https://github.com/SAP/fundamental-react/issues/1240)) ([5cdaaae](https://github.com/SAP/fundamental-react/commit/5cdaaaed249f24f80bcc550b3cd0aac9bfa8ac4f))
+
+### [0.13.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.11...v0.13.1-rc.12) (2020-10-11)
+
+
+### Features
+
+* Custom CSS namespace ([#1239](https://github.com/SAP/fundamental-react/issues/1239)) ([a99b2f9](https://github.com/SAP/fundamental-react/commit/a99b2f90e37958d141428e43c680542c792218d3))
+
 ### [0.13.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.10...v0.13.1-rc.11) (2020-10-08)
 
 

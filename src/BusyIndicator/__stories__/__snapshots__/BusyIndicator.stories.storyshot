@@ -22,6 +22,28 @@ exports[`Storyshots Component API/BusyIndicator Dev 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/BusyIndicator No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-hidden="false"
+    aria-label="Loading"
+    className="xxx-busy-indicator--m"
+  >
+    <div
+      className="xxx-busy-indicator--circle-0"
+    />
+    <div
+      className="xxx-busy-indicator--circle-1"
+    />
+    <div
+      className="xxx-busy-indicator--circle-2"
+    />
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/BusyIndicator Primary 1`] = `
 <div
   dir="ltr"

@@ -82,7 +82,7 @@ export const disabled = () => (
 disabled.storyName = 'Disabled';
 
 export const readOnly = () => (
-    <DatePicker readOnly />
+    <DatePicker defaultValue='12/12/2012' readOnly />
 );
 
 
@@ -600,3 +600,8 @@ export const localizedTodayHeaderButtonVisualStoryShotOnly = () => (
         <hr />
     </>
 );
+
+export const noStyles = () => (
+    <DatePicker cssNamespace='xxx' />
+);
+noStyles.parameters = { docs: { disable: true } };

@@ -1,15 +1,16 @@
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/layout-panel.css';
 
 const classnames = classnamesBind.bind(styles);
 
 const LayoutPanelBody = props => {
-    const { children, className, ...rest } = props;
+    const { children, className, cssNamespace, ...rest } = props;
 
     const panelBodyClasses = classnames(
-        'fd-layout-panel__body',
+        `${cssNamespace}-layout-panel__body`,
         className
     );
 
@@ -25,4 +26,4 @@ LayoutPanelBody.propTypes = {
     className: PropTypes.string
 };
 
-export default LayoutPanelBody;
+export default withStyles(LayoutPanelBody);

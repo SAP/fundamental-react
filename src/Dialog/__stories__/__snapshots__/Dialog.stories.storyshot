@@ -18,6 +18,24 @@ exports[`Storyshots Component API/Dialog Header 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Dialog No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <button
+    className="xxx-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="xxx-button__text"
+    >
+      Show Dialog
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Storyshots Component API/Dialog Primary 1`] = `
 <div
   dir="ltr"

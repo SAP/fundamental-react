@@ -48,6 +48,30 @@ exports[`Storyshots Component API/Token Dev 1`] = `
 </div>
 `;
 
+exports[`Storyshots Component API/Token No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <span
+    className="xxx-token"
+    role="button"
+    tabIndex="0"
+  >
+    <span
+      className="xxx-token__text"
+    >
+      Default
+    </span>
+    <button
+      aria-label="Clear"
+      className="xxx-token__close"
+      onClick={[Function]}
+      tabIndex="-1"
+    />
+  </span>
+</div>
+`;
+
 exports[`Storyshots Component API/Token Primary 1`] = `
 <div
   dir="ltr"

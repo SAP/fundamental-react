@@ -7,6 +7,7 @@ import keycode from 'keycode';
 import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useRef, useState } from 'react';
 import buttonStyles from 'fundamental-styles/dist/button.css';
 import listStyles from 'fundamental-styles/dist/list.css';
@@ -24,6 +25,7 @@ const Select = React.forwardRef(({
     className,
     controlClassName,
     compact,
+    cssNamespace,
     disabled,
     emptyAriaLabel,
     id,
@@ -91,15 +93,15 @@ const Select = React.forwardRef(({
     };
 
     const selectClasses = classnames(
-        'fd-select',
+        `${cssNamespace}-select`,
         {
-            'fd-select--compact': compact
+            [`${cssNamespace}-select--compact`]: compact
         },
         className
     );
 
     const selectControlClasses = classnames(
-        'fd-select__control',
+        `${cssNamespace}-select__control`,
         {
             'is-disabled': disabled,
             'is-readonly': readOnly,
@@ -109,13 +111,13 @@ const Select = React.forwardRef(({
     );
 
     const triggerClassNames = classnames(
-        'fd-button',
-        'fd-button--transparent',
-        'fd-select__button',
+        `${cssNamespace}-button`,
+        `${cssNamespace}-button--transparent`,
+        `${cssNamespace}-select__button`,
         triggerClassName
     );
 
-    const textContentClassNames = classnames('fd-select__text-content', textContentClassName);
+    const textContentClassNames = classnames(`${cssNamespace}-select__text-content`, textContentClassName);
 
     const displayOptions = includeEmptyOption ? [{ text: '', key: 'emptyOption', ariaLabel: emptyAriaLabel }, ...options] : options;
 
@@ -165,9 +167,9 @@ const Select = React.forwardRef(({
     );
 
     const listBoxClassName = classnames(
-        'fd-list--dropdown',
+        `${cssNamespace}-list--dropdown`,
         {
-            'fd-list--has-message': validationState?.state
+            [`${cssNamespace}-list--has-message`]: validationState?.state
         },
         listClassName
     );
@@ -314,4 +316,4 @@ Select.defaultProps = {
     onSelect: () => {}
 };
 
-export default Select;
+export default withStyles(Select);

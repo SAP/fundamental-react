@@ -32,7 +32,7 @@ describe('<DatePicker />', () => {
     });
 
     test('start date and end date range', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -51,7 +51,7 @@ describe('<DatePicker />', () => {
     });
 
     test('check start date greater than end date for range', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -76,7 +76,7 @@ describe('<DatePicker />', () => {
     });
 
     test('entering start date and disabled end range dates', () => {
-        wrapper = mount(disabledFutureRangePicker);
+        wrapper = mount(disabledFutureRangePicker).children();
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -98,7 +98,7 @@ describe('<DatePicker />', () => {
     test('updateDate method', () => {
         // choose one day in default picker
         const ISO_FORMAT = 'YYYY-MM-DD';
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
         const date = moment();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
@@ -108,7 +108,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 1 day in range picker
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         let startRangeDate = moment();
 
         let arrDates = [startRangeDate];
@@ -121,7 +121,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 2 days in range picker
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         startRangeDate = moment();
         let endRangeDate = moment();
         endRangeDate.add(3, 'day');
@@ -138,7 +138,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pressing enter key on date input', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: '3.16.20 - 3.19.20' } });
@@ -150,7 +150,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
 
         // set start date greater than end date
         wrapper.find('input[type="text"]')
@@ -165,7 +165,7 @@ describe('<DatePicker />', () => {
 
     test('enter a valid date string', () => {
         // enter a valid date input
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
         let date = moment().startOf('day');
         let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
@@ -179,7 +179,7 @@ describe('<DatePicker />', () => {
 
     test('enter a disabled date string', () => {
         // enter a valid date input
-        wrapper = mount(disabledFuturePicker);
+        wrapper = mount(disabledFuturePicker).children();
         let date = moment().add(1, 'days');
         let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
@@ -192,7 +192,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date', () => {
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018' } });
@@ -203,7 +203,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date on date range component', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018 - May 15th, 2018' } });
@@ -214,7 +214,7 @@ describe('<DatePicker />', () => {
     });
 
     test('modify date on change', () => {
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
         wrapper
             .find('input[type="text"]')
             .simulate('change', { target: { value: '05/04/2018' } });
@@ -222,7 +222,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pre-populated value for date', () => {
-        wrapper = mount(prePopulatedDatepicker);
+        wrapper = mount(prePopulatedDatepicker).children();
         expect(wrapper.state('formattedDate')).toEqual('03/13/2020');
         wrapper
             .find('input[type="text"]')
@@ -231,7 +231,7 @@ describe('<DatePicker />', () => {
     });
 
     test('auto format to specified dateFormat', () => {
-        wrapper = mount(defaultDatePicker); // dateFormat='MM/DD/YYYY'
+        wrapper = mount(defaultDatePicker).children(); // dateFormat='MM/DD/YYYY'
 
         const input = wrapper.find('input[type="text"]');
         //set date input value
@@ -251,7 +251,7 @@ describe('<DatePicker />', () => {
         );
 
         act(() => {
-            wrapper = mount(compToTest);
+            wrapper = mount(compToTest).children();
         });
 
         expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२०');
@@ -267,7 +267,7 @@ describe('<DatePicker />', () => {
                     locale='hi' />
             );
             act(()=>{
-                wrapper = mount(compToTest);
+                wrapper = mount(compToTest).children();
             });
 
             expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२० - ०३/२०/२०२०');
@@ -281,7 +281,7 @@ describe('<DatePicker />', () => {
                 defaultValue='17.3.20'
                 locale='fr' /> //locale date format DD/MM/YYYY
         );
-        wrapper = mount(compToTest);
+        wrapper = mount(compToTest).children();
 
         //trigger onBlur by clicking outside
         simulateBlur();
@@ -291,7 +291,7 @@ describe('<DatePicker />', () => {
     });
 
     test('date range selection with custom dateFormat set', () => {
-        wrapper = mount(rangeDatePicker); // dateFormat='MM/DD/YYYY'
+        wrapper = mount(rangeDatePicker).children(); // dateFormat='MM/DD/YYYY'
 
         const input = wrapper.find('input[type="text"]');
         //set date input value
@@ -303,7 +303,7 @@ describe('<DatePicker />', () => {
     });
 
     test('provide ISO-8601 format date', () => {
-        wrapper = mount(prePopulatedDatepicker);
+        wrapper = mount(prePopulatedDatepicker).children();
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-03-13');
         wrapper
             .find('input[type="text"]')
@@ -312,7 +312,7 @@ describe('<DatePicker />', () => {
     });
 
     test('provide ISO-8601 format date with custom dateFormat in props', () => {
-        wrapper = mount(<DatePicker dateFormat='DD-MM-YYYY' defaultValue='01-06-2020' />);
+        wrapper = mount(<DatePicker dateFormat='DD-MM-YYYY' defaultValue='01-06-2020' />).children();
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-06-01');
         wrapper
             .find('input[type="text"]')
@@ -325,7 +325,7 @@ describe('<DatePicker />', () => {
         wrapper = wrapper.setProps({
             defaultValue: '12-21-2016'
         });
-        expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
+        expect(wrapper.children().state('formattedDate')).toEqual('12/21/2016');
     });
 
     describe('With today footer button', () => {
@@ -367,7 +367,7 @@ describe('<DatePicker />', () => {
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
             todayButtonWrapper.simulate('click');
-            expect(moment().isSame(wrapper.state('selectedDate'), 'day')).toBe(true);
+            expect(moment().isSame(wrapper.children().state('selectedDate'), 'day')).toBe(true);
         });
 
         test('calls onChange date when today button is pressed', () => {
@@ -535,7 +535,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker inputGroupProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('InputGroup').getDOMNode().attributes['data-sample'].value
+                element.find('InputGroup').at(1).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -630,7 +630,7 @@ describe('<DatePicker />', () => {
             );
 
             expect(
-                element.find('InputGroup').prop('validationOverlayProps')
+                element.find('InputGroup').at(1).prop('validationOverlayProps')
             ).toMatchObject({
                 className: 'foo'
             });
@@ -648,6 +648,29 @@ describe('<DatePicker />', () => {
                 datepickerInput.simulate('focus');
             });
             expect(wrapper.find('.fd-list__message').length).toBe(1);
+        });
+    });
+    describe('readOnly', () => {
+        test('should not render an inputGroup.Addon button if it is readOnly', () => {
+            wrapper = mount(<DatePicker readOnly />);
+            expect(wrapper.find('button').length).toBe(0);
+        });
+
+        test('should disabled the popover when readOnly is true', () => {
+            wrapper = mount(<DatePicker readOnly />);
+            expect(wrapper.find('Popover').at(0).props().disabled).toBe(true);
+
+            expect(wrapper.find('button').length).toBe(0);
+        });
+
+        test('should render an inputGroup.Addon button if it is not readOnly', () => {
+            wrapper = mount(<DatePicker />);
+            expect(wrapper.find('button').length).toBe(1);
+        });
+
+        test('should keep the popover when readOnly is true', () => {
+            wrapper = mount(<DatePicker />);
+            expect(wrapper.find('Popover').at(0).props().disabled).not.toBeDefined();
         });
     });
 });

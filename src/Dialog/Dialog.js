@@ -6,6 +6,7 @@ import FocusLock from 'react-focus-lock';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Title from '../Title/Title';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import barStyles from 'fundamental-styles/dist/bar.css';
 import dialogStyles from 'fundamental-styles/dist/dialog.css';
@@ -55,6 +56,7 @@ class Dialog extends Component {
             bodyProps,
             children,
             className,
+            cssNamespace,
             contentProps,
             headerProps,
             headingLevel,
@@ -71,26 +73,26 @@ class Dialog extends Component {
         } = this.props;
 
         const dialogClasses = classnames(
-            'fd-dialog',
+            `${cssNamespace}-dialog`,
             {
-                'fd-dialog--active': show
+                [`${cssNamespace}-dialog--active`]: show
             },
             className
         );
 
         const contentClasses = classnames(
-            'fd-dialog__content',
+            `${cssNamespace}-dialog__content`,
             {
-                [`fd-dialog__content--${size}`]: size
+                [`${cssNamespace}-dialog__content--${size}`]: size
             }
         );
 
         const headerClasses = classnames(
-            'fd-dialog__header',
-            'fd-bar',
+            `${cssNamespace}-dialog__header`,
+            `${cssNamespace}-bar`,
             {
-                'fd-bar--header-with-subheader': subheader,
-                [barClassnames('fd-bar')]: isUsingCssModules
+                [`${cssNamespace}-bar--header-with-subheader`]: subheader,
+                [barClassnames(`${cssNamespace}-bar`)]: isUsingCssModules
             },
             className,
         );
@@ -113,10 +115,10 @@ class Dialog extends Component {
                         className={contentClasses}
                         role='document'>
                         <div {...headerProps} className={headerClasses}>
-                            {header && (<div className={classnames('fd-bar__element')}>
+                            {header && (<div className={classnames(`${cssNamespace}-bar__element`)}>
                                 {header}
                             </div>)}
-                            <div className={classnames('fd-bar__element')}>
+                            <div className={classnames(`${cssNamespace}-bar__element`)}>
                                 <Title
                                     {...titleProps}
                                     level={headingLevel}
@@ -125,25 +127,25 @@ class Dialog extends Component {
                                 </Title>
                             </div>
                             {subheader && (
-                                <div className={classnames('fd-dialog__subheader', 'fd-bar', 'fd-bar--subheader', { [barClassnames('fd-bar')]: isUsingCssModules })}>
-                                    <div className={classnames('fd-bar__left')}>
-                                        <div className={classnames('fd-bar__element')}>
+                                <div className={classnames(`${cssNamespace}-dialog__subheader`, `${cssNamespace}-bar`, `${cssNamespace}-bar--subheader`, { [barClassnames(`${cssNamespace}-bar`)]: isUsingCssModules })}>
+                                    <div className={classnames(`${cssNamespace}-bar__left`)}>
+                                        <div className={classnames(`${cssNamespace}-bar__element`)}>
                                             {subheader}
                                         </div>
                                     </div>
                                 </div>
                             )}
                         </div>
-                        <div {...bodyProps} className={classnames('fd-dialog__body')}>
+                        <div {...bodyProps} className={classnames(`${cssNamespace}-dialog__body`)}>
                             {children}
                         </div>
                         <footer
                             {...footerProps}
-                            className={classnames('fd-dialog__footer', 'fd-bar', 'fd-bar--footer', { [barClassnames('fd-bar')]: isUsingCssModules })}>
-                            <div className={classnames('fd-bar__right')}>
+                            className={classnames(`${cssNamespace}-dialog__footer`, `${cssNamespace}-bar`, `${cssNamespace}-bar--footer`, { [barClassnames(`${cssNamespace}-bar`)]: isUsingCssModules })}>
+                            <div className={classnames(`${cssNamespace}-bar__right`)}>
                                 {React.Children.toArray(actions).map((child, index) => (
-                                    <div className={classnames('fd-bar__element')} key={index}>
-                                        {React.cloneElement(child, { className: classnames('fd-dialog__decisive-button'), onClick: chain(this.handleCloseClick, child.props?.onClick) })}
+                                    <div className={classnames(`${cssNamespace}-bar__element`)} key={index}>
+                                        {React.cloneElement(child, { className: classnames(`${cssNamespace}-dialog__decisive-button`), onClick: chain(this.handleCloseClick, child.props?.onClick) })}
                                     </div>
                                 ))}
                             </div>
@@ -207,4 +209,4 @@ Dialog.defaultProps = {
     onClose: () => { }
 };
 
-export default Dialog;
+export default withStyles(Dialog);

@@ -1,6 +1,6 @@
+import { mount } from 'enzyme';
 import Pagination from './Pagination';
 import React from 'react';
-import { mount, shallow } from 'enzyme';
 
 describe('<Pagination />', () => {
     const handleClick = jest.fn();
@@ -44,7 +44,7 @@ describe('<Pagination />', () => {
             visiblePageTotal={20} />
     );
     test('navigate to previous page', () => {
-        const wrapper = shallow(initialSetPagination);
+        const wrapper = mount(initialSetPagination).children();
         wrapper.setState({ selectedPage: 5 });
         expect(wrapper.state(['selectedPage'])).toEqual(5);
         wrapper.find('nav>a[aria-label="Previous"]').simulate('click');
@@ -52,21 +52,21 @@ describe('<Pagination />', () => {
     });
 
     test('navigate to previous page when on first page', () => {
-        const wrapper = shallow(initialSetPagination);
+        const wrapper = mount(initialSetPagination).children();
         expect(wrapper.state(['selectedPage'])).toEqual(1);
         wrapper.find('nav>a[aria-label="Previous"]').simulate('click');
         expect(wrapper.state(['selectedPage'])).toEqual(1);
     });
 
     test('navigate to next page', () => {
-        const wrapper = shallow(defaultPagination);
+        const wrapper = mount(defaultPagination).children();
         expect(wrapper.state(['selectedPage'])).toEqual(1);
         wrapper.find('nav>a[aria-label="Next"]').simulate('click');
         expect(wrapper.state(['selectedPage'])).toEqual(2);
     });
 
     test('navigate to next page when on last page', () => {
-        const wrapper = shallow(defaultPagination);
+        const wrapper = mount(defaultPagination).children();
         wrapper.setState({ selectedPage: 11 });
         expect(wrapper.state(['selectedPage'])).toEqual(11);
         wrapper.find('nav>a[aria-label="Next"]').simulate('click');
@@ -74,7 +74,7 @@ describe('<Pagination />', () => {
     });
 
     test('navigate to page clicked', () => {
-        const wrapper = shallow(defaultPagination);
+        const wrapper = mount(defaultPagination).children();
         expect(wrapper.state(['selectedPage'])).toEqual(1);
         wrapper
             .find('a.fd-pagination__link')
@@ -84,12 +84,12 @@ describe('<Pagination />', () => {
     });
 
     test('create Pagination component with total pages = 20', () => {
-        const wrapper = shallow(visibleTotalPagesPagination);
+        const wrapper = mount(visibleTotalPagesPagination);
         expect(wrapper.find('a.fd-pagination__link').length).toEqual(23);
     });
 
     test('create Pagination component with total pages = 20 and itemTotal = 10', () => {
-        const wrapper = shallow(visibleTotalPagesWithItemTotalPagination);
+        const wrapper = mount(visibleTotalPagesWithItemTotalPagination);
         expect(wrapper.find('a.fd-pagination__link').length).toEqual(12);
     });
 

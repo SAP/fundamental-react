@@ -2,6 +2,7 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/form-group.css';
 
 const classnames = classnamesBind.bind(styles);
@@ -14,6 +15,7 @@ between 2-3 options. This component can also be disabled and displayed in a row.
 const FormRadioGroup = ({
     children,
     className,
+    cssNamespace,
     compact,
     disabled,
     inline,
@@ -23,9 +25,9 @@ const FormRadioGroup = ({
     const groupId = useUniqueId();
 
     const formGroupClasses = classnames(
-        'fd-form-group',
+        `${cssNamespace}-form-group`,
         {
-            'fd-form-group--inline': inline
+            [`${cssNamespace}-form-group--inline`]: inline
         },
         className
     );
@@ -74,4 +76,4 @@ FormRadioGroup.defaultProps = {
     onChange: () => {}
 };
 
-export default FormRadioGroup;
+export default withStyles(FormRadioGroup);

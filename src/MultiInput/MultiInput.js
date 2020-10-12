@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
 import shortid from '../utils/shortId';
 import Token from '../Token/Token';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
 import checkboxStyles from 'fundamental-styles/dist/checkbox.css';
 import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
@@ -44,17 +45,21 @@ class MultiInput extends Component {
 
     // create tags to display in dropdown list
     createTagList = data => {
+        const {
+            cssNamespace
+        } = this.props;
+
         return data.map((item, index) => (
             <List.Item key={index}>
                 <Checkbox
                     checked={this.isChecked(item)}
-                    className={classnames('fd-list__input')}
+                    className={classnames(`${cssNamespace}-list__input`)}
                     compact={this.props.compact}
                     id={index + `_${this.multiInputId}`}
-                    labelClassName={classnames('fd-list__label')}
+                    labelClassName={classnames(`${cssNamespace}-list__label`)}
                     onChange={() => this.updateSelectedTags(item)}
                     value={item}>
-                    <List.Text className={classnames('fd-checkbox__text')}>{item}</List.Text>
+                    <List.Text className={classnames(`${cssNamespace}-checkbox__text`)}>{item}</List.Text>
                 </Checkbox>
             </List.Item>
         ));
@@ -68,11 +73,15 @@ class MultiInput extends Component {
 
     // create tag elements to display below input box
     createTags = () => {
+        const {
+            cssNamespace
+        } = this.props;
+
         return this.state.tags.map((tag, index) => {
             if (index < 3) {
                 return (
                     <Token
-                        className={isUsingCssModules && classnames('fd-token')}
+                        className={isUsingCssModules && classnames(`${cssNamespace}-token`)}
                         key={index}
                         onClick={() => this.removeTag(tag)}
                         onKeyDown={(event) => this.handleTagKeyDown(event, tag)}>
@@ -81,7 +90,7 @@ class MultiInput extends Component {
                 );
             } else if (index >= this.state.tags.length - 1) {
                 return (
-                    <span className={classnames('fd-tokenizer__indicator')}>{this.state.tags.length - 3} more</span>
+                    <span className={classnames(`${cssNamespace}-tokenizer__indicator`)}>{this.state.tags.length - 3} more</span>
                 );
             } else {
                 return null;
@@ -157,6 +166,7 @@ class MultiInput extends Component {
             buttonProps,
             compact,
             className,
+            cssNamespace,
             disabled,
             data,
             listProps,
@@ -171,22 +181,22 @@ class MultiInput extends Component {
 
 
         const tokenizerClassName = classnames(
-            'fd-tokenizer',
+            `${cssNamespace}-tokenizer`,
             {
-                'fd-tokenizer--compact': compact
+                [`${cssNamespace}-tokenizer--compact`]: compact
             }
         );
 
         const listClassName = classnames(
-            'fd-list--dropdown',
-            'fd-list--multi-input',
+            `${cssNamespace}-list--dropdown`,
+            `${cssNamespace}-list--multi-input`,
             {
-                'fd-list--has-message': validationState?.state
+                [`${cssNamespace}-list--has-message`]: validationState?.state
             }
         );
 
         const inputGroupClasses = classnames(
-            'fd-input-group--control',
+            `${cssNamespace}-input-group--control`,
             {
                 'is-disabled': disabled,
                 [`is-${validationState?.state}`]: validationState?.state
@@ -214,11 +224,11 @@ class MultiInput extends Component {
                 validationOverlayProps={validationOverlayProps}
                 validationState={this.state.bShowList ? null : validationState}>
                 <div {...tagProps} className={tokenizerClassName}>
-                    <div className={classnames('fd-tokenizer__inner')}>
+                    <div className={classnames(`${cssNamespace}-tokenizer__inner`)}>
                         {this.state.tags.length > 0 && this.createTags()}
                         <FormInput
                             {...inputProps}
-                            className={classnames('fd-input-group__input', 'fd-tokenizer__input', { ['fd-input']: isUsingCssModules })}
+                            className={classnames(`${cssNamespace}-input-group__input`, `${cssNamespace}-tokenizer__input`, { [`${cssNamespace}-input`]: isUsingCssModules })}
                             compact={compact}
                             disabled={disabled}
                             placeholder={placeholder} />
@@ -319,4 +329,4 @@ MultiInput.defaultProps = {
     onTagsUpdate: () => {}
 };
 
-export default MultiInput;
+export default withStyles(MultiInput);
