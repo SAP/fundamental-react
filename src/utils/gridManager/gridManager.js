@@ -84,6 +84,7 @@ export default class GridManager {
 
     setupFocusGrid = () => {
         this.grid = [];
+        let skippedRows = 0;
 
         this.gridNode && Array.prototype.forEach.call(
             this.gridNode.querySelectorAll(GridSelector.ROW), (row, rowIndex) => {
@@ -98,7 +99,7 @@ export default class GridManager {
                         cell.setAttribute('tabindex', -1);
                         cell.addEventListener('focus', this.handleFocusCell);
                         const cellObj = {
-                            row: rowIndex - (this.enableHeaderCells ? 0 : 1),
+                            row: rowIndex - skippedRows,
                             col: cellIndex,
                             element: cell,
                             focusableElements: cell.querySelectorAll(GridSelector.FOCUSABLE),
@@ -111,6 +112,8 @@ export default class GridManager {
 
                 if (rowCells.length) {
                     this.grid.push(rowCells);
+                } else {
+                    skippedRows++;
                 }
             }
         );
