@@ -1,4 +1,5 @@
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -18,14 +19,6 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
         `${cssNamespace}-tabs__item`
     );
 
-    // css classes used for tabs
-    const linkClasses = classnames(
-        `${cssNamespace}-tabs__link`,
-        {
-            [`sap-icon--${glyph}`]: !!glyph
-        }
-    );
-
     return (
         <li
             {...props}
@@ -36,11 +29,17 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
                 {...linkProps}
                 aria-controls={id}
                 aria-selected={selected}
-                className={linkClasses}
+                className={classnames(`${cssNamespace}-tabs__link`)}
                 href={`#${id}`}
                 onClick={(event) => onClick(event, index)}
                 role='tab'>
-                <span className={classnames(`${cssNamespace}-tabs__tag`)}>{title}</span>
+                {glyph ?
+                    <span className={classnames('fd-tabs__icon')}>
+                        <Icon ariaLabel={title} glyph={glyph} />
+                    </span>
+                    :
+                    <span className={classnames(`${cssNamespace}-tabs__tag`)}>{title}</span>
+                }
             </a>
         </li>
     );
@@ -53,6 +52,8 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
+    /** Localized text for the heading */
+    title: PropTypes.string.isRequired,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** The icon to include. See the icon page for the list of icons */
@@ -67,8 +68,6 @@ Tab.propTypes = {
     selected: PropTypes.bool,
     /** Additional props to be spread to the tab content\'s `<div>` element */
     tabContentProps: PropTypes.object,
-    /** Localized text for the heading */
-    title: PropTypes.string,
     /** Internal use only */
     onClick: PropTypes.func
 };

@@ -1,4 +1,5 @@
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -28,20 +29,6 @@ const MenuItem = ({
     ...props
 }) => {
 
-    const addonBeforeClassnames = classnames(
-        `${cssNamespace}-menu__addon-before`,
-        {
-            [`sap-icon--${addonBefore}`]: !!addonBefore
-        }
-    );
-
-    const addonAfterClassnames = classnames(
-        `${cssNamespace}-menu__addon-after`,
-        {
-            [`sap-icon--${addonAfter}`]: !!addonAfter
-        }
-    );
-
     const linkClassNames = classnames(
         `${cssNamespace}-menu__link`,
         {
@@ -51,6 +38,9 @@ const MenuItem = ({
         }
     );
 
+    const addonBeforeClassname = classnames(`${cssNamespace}-menu__addon-before`);
+    const addonAfterClassname = classnames(`${cssNamespace}-menu__addon-after`);
+
     const renderLink = () => {
         if (url) {
             return (<a {...urlProps}
@@ -58,9 +48,19 @@ const MenuItem = ({
                 href={url}
                 onClick={onClick}
                 role='menuitem'>
-                {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
+                {addonBefore &&
+                    <span className={addonBeforeClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonBefore} />
+                    </span>
+                }
                 <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
-                {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
+                {addonAfter &&
+                    <span className={addonAfterClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonAfter} />
+                    </span>
+                }
             </a>);
         } else if (children && React.isValidElement(children)) {
             const childrenClassnames = classnames(
@@ -70,8 +70,12 @@ const MenuItem = ({
 
             return (
                 <>
-                    {addonBefore && <span {...addonProps} {...urlProps}
-                        className={addonBeforeClassnames} />}
+                    {addonBefore &&
+                        <span {...urlProps} className={addonBeforeClassname}>
+                            <Icon {...addonProps} ariaHidden
+                                glyph={addonBefore} />
+                        </span>
+                    }
                     <span className={classnames(`${cssNamespace}-menu__title`)}>
                         {React.Children.map(children, child => {
                             return React.cloneElement(child, {
@@ -80,8 +84,12 @@ const MenuItem = ({
                             });
                         })}
                     </span>
-                    {addonAfter && <span {...addonProps} {...urlProps}
-                        className={addonAfterClassnames} />}
+                    {addonAfter &&
+                        <span {...urlProps} className={addonAfterClassname}>
+                            <Icon {...addonProps} ariaHidden
+                                glyph={addonAfter} />
+                        </span>
+                    }
                 </>
             );
         } else if (children) {
@@ -89,9 +97,19 @@ const MenuItem = ({
                 className={linkClassNames}
                 onClick={onClick}
                 role='menuitem'>
-                {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
+                {addonBefore &&
+                    <span className={addonBeforeClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonBefore} />
+                    </span>
+                }
                 <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
-                {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
+                {addonAfter &&
+                    <span className={addonAfterClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonAfter} />
+                    </span>
+                }
             </a>);
         }
     };

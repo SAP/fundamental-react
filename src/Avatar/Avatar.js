@@ -1,6 +1,7 @@
 import { AVATAR_SIZES } from '../utils/constants';
 import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -13,8 +14,7 @@ const classnames = classnamesBind.bind({
 });
 
 /** An **Avatar** is a visual presentation option around using an icon or user initials. */
-
-const Avatar = React.forwardRef(({ glyph, size, circle, cssNamespace, transparent, border, color, label, backgroundImageUrl, children, className, role, placeholder, tile, zoom, ...props }, ref) => {
+const Avatar = React.forwardRef(({ glyph, size, circle, cssNamespace, transparent, border, color, label, backgroundImageUrl, children, className, role, placeholder, tile, zoom, zoomLabel, ...props }, ref) => {
 
     const styles = {
         backgroundImage: `url(${backgroundImageUrl})`
@@ -23,7 +23,6 @@ const Avatar = React.forwardRef(({ glyph, size, circle, cssNamespace, transparen
         `${cssNamespace}-avatar`,
         {
             [`${cssNamespace}-avatar--${size}`]: !!size,
-            [`sap-icon--${glyph}`]: !!glyph,
             [`${cssNamespace}-avatar--accent-color-${color}`]: !!color,
             [`${cssNamespace}-avatar--thumbnail`]: backgroundImageUrl,
             [`${cssNamespace}-avatar--placeholder`]: placeholder,
@@ -50,7 +49,10 @@ const Avatar = React.forwardRef(({ glyph, size, circle, cssNamespace, transparen
             ref={ref}
             role={ariaRole}
             style={backgroundImageUrl && styles}>
-            {zoom && <span className={classnames(`${cssNamespace}-avatar__zoom-icon`, 'sap-icon--edit')} role='presentation' />}
+            {glyph && <Icon ariaHidden className={classnames(`${cssNamespace}-avatar__icon`)}
+                glyph={glyph} />}
+            {zoom && <Icon ariaLabel={zoomLabel} className={classnames(`${cssNamespace}-avatar__zoom-icon`)}
+                glyph={'edit'} />}
             {children}
         </span>
     );
@@ -91,7 +93,9 @@ Avatar.propTypes = {
     /** Set to **true** to use transparent background */
     transparent: PropTypes.bool,
     /** Set to **true** to include a zoom icon */
-    zoom: PropTypes.bool
+    zoom: PropTypes.bool,
+    /** Localized text for zoom icon label */
+    zoomLabel: PropTypes.string
 };
 
 export default withStyles(Avatar);

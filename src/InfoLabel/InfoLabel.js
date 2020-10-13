@@ -1,5 +1,6 @@
 import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -29,16 +30,25 @@ const InfoLabel = React.forwardRef(({
         {
             [`${cssNamespace}-info-label--numeric`]: numeric,
             [`${cssNamespace}-info-label--accent-color-${color}`]: color,
-            [`${cssNamespace}-info-label--icon`]: glyph,
-            [`sap-icon--${glyph}`]: glyph
+            [`${cssNamespace}-info-label--icon`]: glyph
         },
         className
     );
 
-    return (<span
-        {...props}
-        className={labelClasses}
-        ref={ref}>{children}</span>);
+    return (
+        <span
+            {...props}
+            className={labelClasses}
+            ref={ref}>
+            {glyph && <Icon ariaHidden className={classnames('fd-info-label__icon')}
+                glyph={glyph} />}
+            {children &&
+                <span className={classnames('fd-info-label__text')}>
+                    {children}
+                </span>
+            }
+        </span>
+    );
 });
 InfoLabel.displayName = 'InfoLabel';
 
