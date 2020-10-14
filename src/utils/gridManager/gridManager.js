@@ -58,7 +58,7 @@ export default class GridManager {
                     row: firstFocusedCoordinates.row,
                     col: firstFocusedCoordinates.col,
                     element: this.grid[firstFocusedCoordinates.row] ?
-                        this.grid[firstFocusedCoordinates.row][firstFocusedCoordinates.col] : null
+                        this.grid[firstFocusedCoordinates.row][firstFocusedCoordinates.col]?.element : null
                 };
 
                 if (!this.isValidCell(firstFocusedCell) || this.isDisabledCell(firstFocusedCell.element)) {
@@ -84,26 +84,37 @@ export default class GridManager {
 
     setupFocusGrid = () => {
         this.grid = [];
+        let skippedRows = 0;
 
         this.gridNode && Array.prototype.forEach.call(
-            this.gridNode.querySelectorAll(GridSelector.ROW), (row) => {
+            this.gridNode.querySelectorAll(GridSelector.ROW), (row, rowIndex) => {
                 const rowCells = [];
                 if (this.rowNavigation) {
                     row.setAttribute('tabindex', -1);
                 }
 
                 Array.prototype.forEach.call(
-                    row.querySelectorAll(this.cellSelector), (cell) => {
+                    row.querySelectorAll(this.cellSelector), (cell, cellIndex) => {
                         let colSpan = cell.colSpan;
                         cell.setAttribute('tabindex', -1);
                         cell.addEventListener('focus', this.handleFocusCell);
+                        const cellObj = {
+                            row: rowIndex - skippedRows,
+                            col: cellIndex,
+                            element: cell,
+                            rowElement: row,
+                            focusableElements: cell.querySelectorAll(GridSelector.FOCUSABLE),
+                            editableElement: cell.querySelector(GridSelector.EDITABLE)
+                        };
 
-                        colSpan > 0 ? rowCells.push(...this.createFilledArray(colSpan, cell)) : rowCells.push(cell);
+                        colSpan > 0 ? rowCells.push(...this.createFilledArray(colSpan, cellObj)) : rowCells.push(cellObj);
                     }
                 );
 
                 if (rowCells.length) {
                     this.grid.push(rowCells);
+                } else {
+                    skippedRows++;
                 }
             }
         );
@@ -133,15 +144,7 @@ export default class GridManager {
         const cellCoordinates = knownCoordinates ? knownCoordinates : this.getCellCoordinates(element);
         let cell;
         if (cellCoordinates) {
-            cell = {
-                row: cellCoordinates.row,
-                col: cellCoordinates.col,
-                element: element
-            };
-            if (element) {
-                cell.focusableElements = cell.element.querySelectorAll(GridSelector.FOCUSABLE);
-                cell.editableElement = cell.element.querySelector(GridSelector.EDITABLE);
-            }
+            cell = this.grid[cellCoordinates.row][cellCoordinates.col];
         }
 
         return cell;
@@ -151,9 +154,9 @@ export default class GridManager {
         for (let row = 0; row < this.grid.length; row++) {
             for (let col = 0; col < this.grid[row].length; col++) {
                 if (element && (
-                    this.grid[row][col] === element ||
-                    this.grid[row][col].contains(element) ||
-                    element.contains(this.grid[row][col])
+                    this.grid[row][col].element === element ||
+                    this.grid[row][col].element.contains(element) ||
+                    element.contains(this.grid[row][col].element)
                 )) {
                     return { row, col };
                 }
@@ -163,20 +166,18 @@ export default class GridManager {
     }
 
     getCurrentCellProperties = () => {
-        return this.getCellProperties(
-            this.grid[this.focusedRow][this.focusedCol],
-            { row: this.focusedRow, col: this.focusedCol }
-        );
+        return this.grid[this.focusedRow][this.focusedCol];
     }
 
     setFocusPointer = (row, col) => {
         if (this.isValidCell({ row, col })) {
-            const currentElement = this.grid[this.focusedRow][this.focusedCol];
-            const nextElement = this.grid[row][col];
+            const currentCell = this.grid[this.focusedRow][this.focusedCol];
+            const nextCell = this.grid[row][col];
+            const elementProp = !this.rowNavigation ? 'element' : 'rowElement';
 
             if (!this.editMode) {
-                currentElement.setAttribute('tabindex', -1);
-                nextElement.setAttribute('tabindex', 0);
+                currentCell[elementProp].setAttribute('tabindex', -1);
+                nextCell[elementProp].setAttribute('tabindex', 0);
             }
 
             this.focusedRow = row;
@@ -239,7 +240,7 @@ export default class GridManager {
             ) {
                 cell.focusableElements[0].focus();
             } else if (this.rowNavigation) {
-                event.target.parentNode.focus();
+                cell.rowElement?.focus();
             }
             this.onFocusCell(cell, event);
         }
@@ -247,7 +248,8 @@ export default class GridManager {
 
     toggleEditMode = (currentCell, enable) => {
         this.editMode = !!enable;
-        currentCell.element.setAttribute('tabindex', enable ? -1 : 0);
+        const elementProp = !this.rowNavigation ? 'element' : 'rowElement';
+        currentCell[elementProp].setAttribute('tabindex', enable ? -1 : 0);
         const focusableElements = this.getAllFocusableElements(this.skipFirstColumnTabbing);
         this.toggleTabbableElements(enable, focusableElements);
         if (focusableElements.length > 0) {
@@ -257,12 +259,13 @@ export default class GridManager {
 
     getAllFocusableElements = (skipFirstColumn) => {
         let focusableElements = [];
-        const cells = this.gridNode.querySelectorAll(this.cellSelector);
-        cells.forEach(cell => {
-            const { col } = this.getCellCoordinates(cell);
-            if (!(this.rowNavigation && skipFirstColumn && col === 0)) {
-                focusableElements = [...focusableElements, ...cell.querySelectorAll(GridSelector.FOCUSABLE)];
-            }
+
+        this.grid.forEach((row) => {
+            row.forEach((cell) => {
+                if (!(this.rowNavigation && skipFirstColumn && cell?.col === 0)) {
+                    focusableElements = [...focusableElements, ...cell?.focusableElements];
+                }
+            });
         });
 
         return focusableElements;
@@ -277,53 +280,43 @@ export default class GridManager {
     }
 
     handleKeyDown = (event) => {
-        this.syncFocusPointerToActiveElement(event.target);
-
         const key = event.which || event.keyCode;
-        const currentCell = this.getCurrentCellProperties();
+        const currentCell = this.grid[this.focusedRow][this.focusedCol];
 
         let nextCell = currentCell;
-        let pressedArrowKey = false;
+        let pressedNavigationalKey = false;
 
         switch (key) {
             case keycode.codes.up:
                 nextCell = this.getNextCell(currentCell, 0, -1);
-                pressedArrowKey = true;
+                pressedNavigationalKey = true;
                 break;
             case keycode.codes.down:
                 nextCell = this.getNextCell(currentCell, 0, 1);
-                pressedArrowKey = true;
+                pressedNavigationalKey = true;
                 break;
             case keycode.codes.left:
                 if (!this.rowNavigation) {
                     nextCell = this.getNextCell(currentCell, -1, 0);
-                    pressedArrowKey = true;
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.right:
                 if (!this.rowNavigation) {
                     nextCell = this.getNextCell(currentCell, 1, 0);
-                    pressedArrowKey = true;
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.home:
                 if (!this.rowNavigation) {
-                    nextCell = this.getNextCell(
-                        this.getCellProperties(
-                            this.grid[this.focusedRow][this.grid[this.focusedRow].length],
-                            { row: this.focusedRow, col: -1 }
-                        ), 1, 0
-                    );
+                    nextCell = this.getNextCell({ row: this.focusedRow, col: -1 }, 1, 0);
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.end:
                 if (!this.rowNavigation) {
-                    nextCell = this.getNextCell(
-                        this.getCellProperties(
-                            this.grid[this.focusedRow][this.grid[this.focusedRow].length],
-                            { row: this.focusedRow, col: this.grid[this.focusedRow].length }
-                        ), -1, 0
-                    );
+                    nextCell = this.getNextCell({ row: this.focusedRow, col: this.grid[this.focusedRow].length }, -1, 0);
+                    pressedNavigationalKey = true;
                 }
                 break;
             case keycode.codes.enter:
@@ -359,7 +352,8 @@ export default class GridManager {
                 }
                 return;
             default:
-                break;
+                this.onKeyDownCell(nextCell, event);
+                return;
         }
 
         if (nextCell) {
@@ -367,27 +361,14 @@ export default class GridManager {
             this.onKeyDownCell(nextCell, event);
         }
 
-        if (!this.editMode && pressedArrowKey) {
+        if (!this.editMode && pressedNavigationalKey) {
             event.preventDefault();
         }
     };
 
-    syncFocusPointerToActiveElement = (focusedTarget) => {
-        const focusedCell = this.getCellProperties(
-            this.grid[this.focusedRow][this.focusedCol],
-            { row: this.focusedRow, col: this.focusedCol }
-        ).element;
-
-        if (focusedCell === focusedTarget || focusedCell.contains(focusedTarget)) {
-            return;
-        }
-
-        this.setFocusPointer(focusedCell.row, focusedCell.col);
-    };
-
     handleClickCell = (event) => {
         // reset current edit state
-        const currentCell = this.getCurrentCellProperties();
+        const currentCell = this.grid[this.focusedRow][this.focusedCol];
 
         if (this.isEditableCell(currentCell) && this.editMode) {
             this.toggleEditMode(currentCell, false);
@@ -400,13 +381,7 @@ export default class GridManager {
         }
 
         if (clickedGridCell) {
-            this.focusCell({
-                row: clickedGridCell.row,
-                col: clickedGridCell.col,
-                element: clickedGridCell.element,
-                focusableElements: clickedGridCell.focusableElements,
-                editableElement: clickedGridCell.editableElement
-            }, event);
+            this.focusCell(clickedGridCell, event);
         }
     };
 
@@ -443,7 +418,7 @@ export default class GridManager {
             return null;
         }
 
-        let nextCellElement = currentCell;
+        let nextCell = currentCell;
 
         if (directionX !== 0) { // horizontal
             let candidateRow = currentCell.row;
@@ -474,14 +449,11 @@ export default class GridManager {
                 }
             } while (
                 !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
-                this.isDisabledCell(this.grid[candidateRow][candidateCol]) ||
-                this.grid[candidateRow][candidateCol] === currentCell.element
+                this.isDisabledCell(this.grid[candidateRow][candidateCol].element) ||
+                this.grid[candidateRow][candidateCol].element === currentCell.element
             );
 
-            nextCellElement = this.getCellProperties(
-                this.grid[candidateRow][candidateCol],
-                { row: candidateRow, col: candidateCol }
-            );
+            nextCell = this.grid[candidateRow][candidateCol];
         } else if (directionY !== 0) { // vertical
             let candidateRow = currentCell.row;
             let candidateCol = currentCell.col;
@@ -507,23 +479,14 @@ export default class GridManager {
                 }
             } while (
                 !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
-                this.isDisabledCell(this.grid[candidateRow][candidateCol]) ||
-                this.grid[candidateRow][candidateCol] === currentCell.element
+                this.isDisabledCell(this.grid[candidateRow][candidateCol].element) ||
+                this.grid[candidateRow][candidateCol].element === currentCell.element
             );
 
-            nextCellElement = this.getCellProperties(
-                this.grid[candidateRow][candidateCol],
-                { row: candidateRow, col: candidateCol }
-            );
+            nextCell = this.grid[candidateRow][candidateCol];
         }
 
-        return {
-            row: nextCellElement.row,
-            col: nextCellElement.col,
-            element: nextCellElement.element,
-            focusableElements: nextCellElement.focusableElements,
-            editableElement: nextCellElement.editableElement
-        };
+        return nextCell;
     };
 
     getNextOutsideTabbableElement = (shiftKey) => {

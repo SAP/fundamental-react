@@ -76,9 +76,9 @@ class Calendar extends Component {
         const { gridBoundaryContext, refocusGrid } = this.state;
         const tableElement = this.tableRef.current;
         const focusedDateElement = tableElement.querySelector('[data-is-focused=true]');
-        const selectedDateElement = tableElement.querySelector(classnames('.is-selected'));
-        const todayDateElement = tableElement.querySelector(classnames(`.${cssNamespace}-calendar__item--current`));
-        const disabledDateElements = tableElement.querySelectorAll(classnames(`.${cssNamespace}-calendar__item--other-month`));
+        const selectedDateElement = tableElement.querySelector(`.${classnames('is-selected')}`);
+        const todayDateElement = tableElement.querySelector(`.${classnames(`${cssNamespace}-calendar__item--current`)}`);
+        const disabledDateElements = tableElement.querySelectorAll(`.${classnames(`${cssNamespace}-calendar__item--other-month`)}`);
         const focusOnInit = newView || gridBoundaryContext || refocusGrid;
 
         let firstFocusedElement;
