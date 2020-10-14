@@ -8,7 +8,7 @@ import styles from 'fundamental-styles/dist/layout-grid.css';
 
 const classnames = classnamesBind.bind(styles);
 
-const Column = React.forwardRef(({ children, className, cssNamespace, offset, offsetPosition, span, ...props }, ref) => {
+const Column = React.forwardRef(({ children, className, cssNamespace, full, offset, offsetPosition, span, ...props }, ref) => {
 
     const offsets = mapSize((size) => resolveSpan(offset, size, false));
 
@@ -24,6 +24,7 @@ const Column = React.forwardRef(({ children, className, cssNamespace, offset, of
         `${cssNamespace}-col`,
         responsiveColClasses,
         {
+            [`${cssNamespace}-col--full`]: full,
             [`${cssNamespace}-col--offset${offsetPositionModifier}-${offsets.smallScreen}`]: offsets.smallScreen,
             [`${cssNamespace}-col-md--offset${offsetPositionModifier}-${offsets.mediumScreen}`]: offsets.mediumScreen,
             [`${cssNamespace}-col-lg--offset${offsetPositionModifier}-${offsets.largeScreen}`]: offsets.largeScreen,
@@ -49,6 +50,8 @@ Column.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to `true` to have the column automatically occupy the remaining space in the row. */
+    full: PropTypes.bool,
     /** How many cells out of 12 should the column be offset by on each screen size. Defaults to none.
      *
      * Example usage:
