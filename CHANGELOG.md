@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.14...v0.13.1-rc.15) (2020-10-14)
+
+
+### Bug Fixes
+
+* gridManager cleanup, fixes ([#1241](https://github.com/SAP/fundamental-react/issues/1241)) ([dd266f6](https://github.com/SAP/fundamental-react/commit/dd266f6036c7fc2746431e53cbcadc91d82edb52))
+
 ### [0.13.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.13...v0.13.1-rc.14) (2020-10-13)
 
 
