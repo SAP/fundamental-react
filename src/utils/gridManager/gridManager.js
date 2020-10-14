@@ -102,6 +102,7 @@ export default class GridManager {
                             row: rowIndex - skippedRows,
                             col: cellIndex,
                             element: cell,
+                            rowElement: row,
                             focusableElements: cell.querySelectorAll(GridSelector.FOCUSABLE),
                             editableElement: cell.querySelector(GridSelector.EDITABLE)
                         };
@@ -170,12 +171,13 @@ export default class GridManager {
 
     setFocusPointer = (row, col) => {
         if (this.isValidCell({ row, col })) {
-            const currentElement = this.grid[this.focusedRow][this.focusedCol].element;
-            const nextElement = this.grid[row][col].element;
+            const currentCell = this.grid[this.focusedRow][this.focusedCol];
+            const nextCell = this.grid[row][col];
+            const elementProp = !this.rowNavigation ? 'element' : 'rowElement';
 
             if (!this.editMode) {
-                currentElement.setAttribute('tabindex', -1);
-                nextElement.setAttribute('tabindex', 0);
+                currentCell[elementProp].setAttribute('tabindex', -1);
+                nextCell[elementProp].setAttribute('tabindex', 0);
             }
 
             this.focusedRow = row;
@@ -238,7 +240,7 @@ export default class GridManager {
             ) {
                 cell.focusableElements[0].focus();
             } else if (this.rowNavigation) {
-                event.target.parentNode.focus();
+                cell.rowElement?.focus();
             }
             this.onFocusCell(cell, event);
         }
@@ -246,7 +248,8 @@ export default class GridManager {
 
     toggleEditMode = (currentCell, enable) => {
         this.editMode = !!enable;
-        currentCell.element.setAttribute('tabindex', enable ? -1 : 0);
+        const elementProp = !this.rowNavigation ? 'element' : 'rowElement';
+        currentCell[elementProp].setAttribute('tabindex', enable ? -1 : 0);
         const focusableElements = this.getAllFocusableElements(this.skipFirstColumnTabbing);
         this.toggleTabbableElements(enable, focusableElements);
         if (focusableElements.length > 0) {
