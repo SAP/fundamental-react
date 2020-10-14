@@ -113,17 +113,19 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
         <div
           className="fd-switch__track"
         >
-          <span
+          <i
             aria-label="on"
-            className="fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            className="sap-icon--accept fd-switch__icon fd-switch__icon--on"
+            role="img"
           />
           <span
             className="fd-switch__handle"
             role="presentation"
           />
-          <span
+          <i
             aria-label="off"
-            className="fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            className="sap-icon--decline fd-switch__icon fd-switch__icon--off"
+            role="img"
           />
         </div>
       </div>
@@ -210,17 +212,19 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         <div
           className="fd-switch__track"
         >
-          <span
+          <i
             aria-label="on"
             className=""
+            role="img"
           />
           <span
             className="fd-switch__handle"
             role="presentation"
           />
-          <span
+          <i
             aria-label="off"
             className=""
+            role="img"
           />
         </div>
       </div>
@@ -258,17 +262,19 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         <div
           className="fd-switch__track"
         >
-          <span
+          <i
             aria-label="on"
-            className="fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            className="sap-icon--accept fd-switch__icon fd-switch__icon--on"
+            role="img"
           />
           <span
             className="fd-switch__handle"
             role="presentation"
           />
-          <span
+          <i
             aria-label="off"
-            className="fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            className="sap-icon--decline fd-switch__icon fd-switch__icon--off"
+            role="img"
           />
         </div>
       </div>
@@ -430,17 +436,19 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
         <div
           className="fd-switch__track"
         >
-          <span
+          <i
             aria-label="on"
-            className="fd-switch__icon fd-switch__icon--on sap-icon--accept"
+            className="sap-icon--accept fd-switch__icon fd-switch__icon--on"
+            role="img"
           />
           <span
             className="fd-switch__handle"
             role="presentation"
           />
-          <span
+          <i
             aria-label="off"
-            className="fd-switch__icon fd-switch__icon--off sap-icon--decline"
+            className="sap-icon--decline fd-switch__icon fd-switch__icon--off"
+            role="img"
           />
         </div>
       </div>

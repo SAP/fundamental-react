@@ -186,7 +186,10 @@ const TreeNode = ({
                         aria-pressed={isExpanded}
                         className={buttonClasses}
                         id={buttonId}
-                        onClick={handleButtonClick} />
+                        onClick={handleButtonClick}>
+                        <Icon ariaHidden className={classnames('fd-tree__icon')}
+                            glyph={isExpanded ? 'navigation-down-arrow' : 'navigation-right-arrow'} />
+                    </button>
                 }
                 {
                     renderIcons(glyphsBefore)

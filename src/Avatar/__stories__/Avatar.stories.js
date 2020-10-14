@@ -101,15 +101,20 @@ export const placeholder = () => (
 export const zoom = () => (
     <div className='fddocs-container'>
         <Avatar circle glyph='washing-machine'
-            size='xs' zoom />
+            size='xs' zoom
+            zoomLabel='Edit' />
         <Avatar circle glyph='washing-machine'
-            size='s' zoom />
+            size='s' zoom
+            zoomLabel='Edit' />
         <Avatar circle glyph='washing-machine'
-            size='m' zoom />
+            size='m' zoom
+            zoomLabel='Edit' />
         <Avatar circle glyph='washing-machine'
-            size='l' zoom />
+            size='l' zoom
+            zoomLabel='Edit' />
         <Avatar circle glyph='washing-machine'
-            size='xl' zoom />
+            size='xl' zoom
+            zoomLabel='Edit' />
     </div>
 );
 

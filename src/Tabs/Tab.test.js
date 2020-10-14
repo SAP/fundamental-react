@@ -21,7 +21,10 @@ describe('<Tabs />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tab component', () => {
-            const element = mount(<Tab data-sample='Sample' id='testId' />);
+            const element = mount(
+                <Tab data-sample='Sample' id='testId'
+                    title='Tab 1' />
+            );
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -29,7 +32,10 @@ describe('<Tabs />', () => {
         });
 
         test('should allow props to be spread to the Tab component\'s li elements', () => {
-            const element = mount(<Tab id='testId' {...{ 'data-sample': 'Sample' }} />);
+            const element = mount(
+                <Tab id='testId' title='Tab 1'
+                    {...{ 'data-sample': 'Sample' }} />
+            );
 
             expect(
                 element.find('li').at(0).getDOMNode().attributes['data-sample'].value
@@ -37,7 +43,10 @@ describe('<Tabs />', () => {
         });
 
         test('should allow props to be spread to the Tab component\'s a elements', () => {
-            const element = mount(<Tab id='1' linkProps={{ 'data-sample': 'Sample' }} />);
+            const element = mount(
+                <Tab id='1' linkProps={{ 'data-sample': 'Sample' }}
+                    title='Tab 1' />
+            );
 
             expect(
                 element.find('li a').at(0).getDOMNode().attributes['data-sample'].value
@@ -51,7 +60,7 @@ describe('<Tabs />', () => {
                     super(props);
                     ref = React.createRef();
                 }
-                render = () => <Tab ref={ref} />;
+                render = () => <Tab ref={ref} title='Tab 1' />;
             }
             mount(<Test />);
             expect(ref.current.tagName).toEqual('LI');

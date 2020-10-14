@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
@@ -62,9 +63,10 @@ class SideNavListItem extends React.Component {
                         onItemSelect(e, id, hasChild);
                     } : null}>
                     {glyph ? (
-                        <span
-                            aria-hidden
-                            className={classnames(`${cssNamespace}-nested-list__icon`, `sap-icon--${glyph}`)} />
+                        <Icon
+                            ariaHidden
+                            className={classnames(`${cssNamespace}-nested-list__icon`)}
+                            glyph={glyph} />
                     ) : null}
                     <span className={classnames(`${cssNamespace}-nested-list__title`)}>
                         {name}
@@ -97,7 +99,9 @@ class SideNavListItem extends React.Component {
                             className={classnames(`${cssNamespace}-nested-list__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                             onClick={() => {
                                 this.handleExpand();
-                            }} />
+                            }}>
+                            <Icon ariaHidden glyph={this.state.expanded ? 'navigation-down-arrow' : 'navigation-right-arrow'} />
+                        </Button>
                     </div>
                 );
             } else {

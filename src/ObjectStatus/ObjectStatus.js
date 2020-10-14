@@ -1,5 +1,6 @@
 import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -19,7 +20,6 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, cssName
     const objectStatusClasses = classnames(
         `${cssNamespace}-object-status`,
         {
-            [`sap-icon--${glyph}`]: !!glyph,
             [`${cssNamespace}-object-status--indication-${indication}`]: !!indication,
             [`${cssNamespace}-object-status--inverted`]: inverted,
             [`${cssNamespace}-object-status--large`]: size === 'l',
@@ -54,7 +54,14 @@ const ObjectStatus = React.forwardRef(({ ariaLabel, children, className, cssName
             className={objectStatusClasses}
             {...semanticProps}
             ref={ref}>
-            {children}
+            {glyph &&
+                <Icon ariaHidden className={classnames(`${cssNamespace}-object-status__icon`)}
+                    glyph={glyph} />}
+            {children &&
+                <span className={classnames(`${cssNamespace}-object-status__text`)}>
+                    {children}
+                </span>
+            }
         </StatusTag>
     );
 });
