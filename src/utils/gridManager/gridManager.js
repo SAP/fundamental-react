@@ -89,25 +89,30 @@ export default class GridManager {
         this.gridNode && Array.prototype.forEach.call(
             this.gridNode.querySelectorAll(GridSelector.ROW), (row, rowIndex) => {
                 const rowCells = [];
+                let cellIndex = 0;
+
                 if (this.rowNavigation) {
                     row.setAttribute('tabindex', -1);
                 }
 
                 Array.prototype.forEach.call(
-                    row.querySelectorAll(this.cellSelector), (cell, cellIndex) => {
+                    row.querySelectorAll(this.cellSelector), (cell) => {
                         let colSpan = cell.colSpan;
                         cell.setAttribute('tabindex', -1);
                         cell.addEventListener('focus', this.handleFocusCell);
-                        const cellObj = {
-                            row: rowIndex - skippedRows,
-                            col: cellIndex,
-                            element: cell,
-                            rowElement: row,
-                            focusableElements: cell.querySelectorAll(GridSelector.FOCUSABLE),
-                            editableElement: cell.querySelector(GridSelector.EDITABLE)
-                        };
 
-                        colSpan > 0 ? rowCells.push(...this.createFilledArray(colSpan, cellObj)) : rowCells.push(cellObj);
+                        for (let i = 1; i <= colSpan; i++) {
+                            rowCells.push({
+                                row: rowIndex - skippedRows,
+                                col: cellIndex,
+                                element: cell,
+                                rowElement: row,
+                                focusableElements: cell.querySelectorAll(GridSelector.FOCUSABLE),
+                                editableElement: cell.querySelector(GridSelector.EDITABLE)
+                            });
+
+                            cellIndex++;
+                        }
                     }
                 );
 
@@ -120,14 +125,6 @@ export default class GridManager {
         );
         this.toggleTabbableElements(false, this.getAllFocusableElements(false));
     };
-
-    createFilledArray = (length, value) => {
-        const array = [];
-        while (length--) {
-            array.push(value);
-        }
-        return array;
-    }
 
     clearEvents = () => {
         this.gridNode?.removeEventListener('keydown', this.handleKeyDown);
