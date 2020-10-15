@@ -54,12 +54,7 @@ export default class GridManager {
             this.setupFocusGrid();
 
             if (this.grid.length) {
-                let firstFocusedCell = firstFocusedElement ? this.getCellProperties(firstFocusedElement) : {
-                    row: firstFocusedCoordinates.row,
-                    col: firstFocusedCoordinates.col,
-                    element: this.grid[firstFocusedCoordinates.row] ?
-                        this.grid[firstFocusedCoordinates.row][firstFocusedCoordinates.col]?.element : null
-                };
+                let firstFocusedCell = this.getCellProperties(firstFocusedElement);
 
                 if (!this.isValidCell(firstFocusedCell) || this.isDisabledCell(firstFocusedCell.element)) {
                     firstFocusedCell = this.getNextCell(
@@ -69,15 +64,22 @@ export default class GridManager {
                     );
                 }
 
-                if (firstFocusedCell) {
-                    this.setFocusPointer(firstFocusedCell.row, firstFocusedCell.col);
-
-                    if (focusOnInit) {
-                        this.focusCell(firstFocusedCell);
-                    }
-
-                    this.registerEvents();
+                if (!firstFocusedCell) {
+                    firstFocusedCell = {
+                        row: firstFocusedCoordinates.row,
+                        col: firstFocusedCoordinates.col,
+                        element: this.grid[firstFocusedCoordinates.row] ?
+                            this.grid[firstFocusedCoordinates.row][firstFocusedCoordinates.col]?.element : null
+                    };
                 }
+
+                this.setFocusPointer(firstFocusedCell.row, firstFocusedCell.col);
+
+                if (focusOnInit) {
+                    this.focusCell(firstFocusedCell);
+                }
+
+                this.registerEvents();
             }
         }
     }
@@ -182,17 +184,23 @@ export default class GridManager {
         }
     };
 
-    isValidCell = ({ row, col }) => {
-        return (
-            !isNaN(row) &&
-            !isNaN(col) &&
-            row >= 0 &&
-            col >= 0 &&
-            this.grid &&
-            this.grid.length &&
-            row < this.grid.length &&
-            col < this.grid[row].length
-        );
+    isValidCell = (cell) => {
+        if (cell) {
+            const { row, col } = cell;
+
+            return (
+                !isNaN(row) &&
+                !isNaN(col) &&
+                row >= 0 &&
+                col >= 0 &&
+                this.grid &&
+                this.grid.length &&
+                row < this.grid.length &&
+                col < this.grid[row].length
+            );
+        } else {
+            return false;
+        }
     };
 
     isDisabledCell(element) {
