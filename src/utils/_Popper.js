@@ -213,7 +213,7 @@ class Popper extends React.Component {
                             x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
                             // This is needed for fundamental-styles even though popper-2 uses data-placement as well
                             x-placement={placement}>
-                            <div ref={innerRef}>
+                            <div className={classnames(`${cssBlock}__innerRef`, popperProps?.innerRefClassName)} ref={innerRef}>
                                 {children}
                             </div>
                             <span
