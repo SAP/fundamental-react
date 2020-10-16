@@ -29,7 +29,6 @@ export { default as InputGroup } from './InputGroup/InputGroup';
 export { default as LayoutPanel } from './LayoutPanel/LayoutPanel';
 export { default as Link } from './Link/Link';
 export { default as List } from './List/List';
-export { default as LocalizationEditor } from './LocalizationEditor/LocalizationEditor';
 export { default as Menu } from './Menu/Menu';
 export { default as MessageStrip } from './MessageStrip/MessageStrip';
 export { default as MultiInput } from './MultiInput/MultiInput';

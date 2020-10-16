@@ -50,7 +50,7 @@ Column.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Set to `true` to have the column automatically occupy the remaining space in the row. */
+    /** Set to `true` to have the column automatically occupy the remaining space in the row */
     full: PropTypes.bool,
     /** How many cells out of 12 should the column be offset by on each screen size. Defaults to none.
      *
