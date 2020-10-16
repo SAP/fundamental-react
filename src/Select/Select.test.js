@@ -72,6 +72,16 @@ describe('<Select />', () => {
                 element.find('.fd-popover').at(1).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        test('should allow spreading className to ValidationOverlay innerRef div', async() => {
+            setup({
+                validationOverlayProps: { innerRefClassName: 'Sample', show: true }
+            });
+
+            expect(
+                document.body.querySelector('.fd-popover__innerRef').className
+            ).toContain('Sample');
+        });
     });
 
     describe('Prop spreading', () => {

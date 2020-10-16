@@ -112,6 +112,18 @@ describe('<StepInput />', () => {
                     document.body.querySelector('.fd-popover__popper').classList
                 ).toContain('wonderful-styles');
             });
+            test('should allow spreading className to ValidationOverlay innerRef div', async() => {
+                await act(async() => {
+                    setup({
+                        validationState: { state: 'error', text: 'Test validation state' },
+                        validationOverlayProps: { innerRefClassName: 'Sample', show: true }
+                    });
+                });
+
+                expect(
+                    document.body.querySelector('.fd-popover__innerRef').className
+                ).toContain('Sample');
+            });
         });
     });
     describe('onChange handler', () => {

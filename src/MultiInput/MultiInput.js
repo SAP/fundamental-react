@@ -302,6 +302,8 @@ MultiInput.propTypes = {
         className: PropTypes.string,
         /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
         formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
+        innerRefClassName: PropTypes.string,
         /** Additional classes to apply to validation popover's popper `<div>` element  */
         popperClassName: PropTypes.string,
         /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
