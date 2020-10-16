@@ -73,7 +73,7 @@ describe('<Select />', () => {
             ).toBe('Sample');
         });
 
-        test('should add classname to innerRef div', async() => {
+        test('should allow spreading className to ValidationOverlay innerRef div', async() => {
             setup({
                 validationOverlayProps: { innerRefClassName: 'Sample', show: true }
             });

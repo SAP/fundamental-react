@@ -299,7 +299,7 @@ describe('<SearchInput />', () => {
             ).toContain('wonderful-styles');
         });
 
-        test('should allow spreading className to ValidationOverlay `fd-popper__innerRef` div`', () => {
+        test('should allow spreading className to ValidationOverlay innerRef div', () => {
             const internalWrapper = setup({
                 validationState: { state: 'error', text: 'Test validation state' },
                 validationOverlayProps: { innerRefClassName: 'wonderful-styles', show: true }

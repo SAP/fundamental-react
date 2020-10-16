@@ -112,7 +112,7 @@ describe('<StepInput />', () => {
                     document.body.querySelector('.fd-popover__popper').classList
                 ).toContain('wonderful-styles');
             });
-            test('should add classname to innerRef div', async() => {
+            test('should allow spreading className to ValidationOverlay innerRef div', async() => {
                 await act(async() => {
                     setup({
                         validationState: { state: 'error', text: 'Test validation state' },
