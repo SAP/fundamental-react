@@ -56,14 +56,6 @@ export default class GridManager {
             if (this.grid.length) {
                 let firstFocusedCell = this.getCellProperties(firstFocusedElement);
 
-                if (!this.isValidCell(firstFocusedCell) || this.isDisabledCell(firstFocusedCell.element)) {
-                    firstFocusedCell = this.getNextCell(
-                        firstFocusedCell,
-                        firstCellSearchDirection.directionX,
-                        firstCellSearchDirection.directionY
-                    );
-                }
-
                 if (!firstFocusedCell) {
                     firstFocusedCell = {
                         row: firstFocusedCoordinates.row,
@@ -71,6 +63,14 @@ export default class GridManager {
                         element: this.grid[firstFocusedCoordinates.row] ?
                             this.grid[firstFocusedCoordinates.row][firstFocusedCoordinates.col]?.element : null
                     };
+                }
+
+                if (!this.isValidCell(firstFocusedCell) || this.isDisabledCell(firstFocusedCell.element)) {
+                    firstFocusedCell = this.getNextCell(
+                        firstFocusedCell,
+                        firstCellSearchDirection.directionX,
+                        firstCellSearchDirection.directionY
+                    );
                 }
 
                 this.setFocusPointer(firstFocusedCell.row, firstFocusedCell.col);
@@ -425,70 +425,72 @@ export default class GridManager {
 
         let nextCell = currentCell;
 
-        if (directionX !== 0) { // horizontal
-            let candidateRow = currentCell.row;
-            let candidateCol = currentCell.col;
-            do {
-                candidateCol += directionX;
+        if (currentCell) {
+            if (directionX !== 0) { // horizontal
+                let candidateRow = currentCell.row;
+                let candidateCol = currentCell.col;
+                do {
+                    candidateCol += directionX;
 
-                if (candidateRow > this.grid.length - 1) {
-                    candidateRow = this.grid.length - 1;
-                }
-
-                let rowLength = this.grid[candidateRow].length;
-
-                if (this.wrapRows) {
-                    if (directionX === 1 && candidateCol >= rowLength) {
-                        candidateRow++;
-                        candidateCol = 0;
-                    } else if (directionX === -1 && candidateCol < 0) {
-                        candidateRow--;
-                        candidateCol = rowLength - 1;
-                    }
-                }
-
-                if (this.didPassBoundary(rowLength, candidateRow, candidateCol, directionX, directionY)) {
-                    this.onPassBoundary({ currentCell, directionX, directionY });
-
-                    return null;
-                }
-            } while (
-                !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
-                this.isDisabledCell(this.grid[candidateRow][candidateCol].element) ||
-                this.grid[candidateRow][candidateCol].element === currentCell.element
-            );
-
-            nextCell = this.grid[candidateRow][candidateCol];
-        } else if (directionY !== 0) { // vertical
-            let candidateRow = currentCell.row;
-            let candidateCol = currentCell.col;
-            do {
-                candidateRow += directionY;
-
-                let rowLength = this.grid[currentCell.row] ? this.grid[currentCell.row].length : 0;
-
-                if (this.wrapCols) {
-                    if (directionY === 1 && candidateRow >= this.grid.length) {
-                        candidateCol++;
-                        candidateRow = 0;
-                    } else if (directionY === -1 && candidateRow < 0) {
-                        candidateCol--;
+                    if (candidateRow > this.grid.length - 1) {
                         candidateRow = this.grid.length - 1;
                     }
-                }
 
-                if (this.didPassBoundary(rowLength, candidateRow, candidateCol, directionX, directionY)) {
-                    this.onPassBoundary({ currentCell, directionX, directionY });
+                    let rowLength = this.grid[candidateRow].length;
 
-                    return null;
-                }
-            } while (
-                !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
-                this.isDisabledCell(this.grid[candidateRow][candidateCol].element) ||
-                this.grid[candidateRow][candidateCol].element === currentCell.element
-            );
+                    if (this.wrapRows) {
+                        if (directionX === 1 && candidateCol >= rowLength) {
+                            candidateRow++;
+                            candidateCol = 0;
+                        } else if (directionX === -1 && candidateCol < 0) {
+                            candidateRow--;
+                            candidateCol = rowLength - 1;
+                        }
+                    }
 
-            nextCell = this.grid[candidateRow][candidateCol];
+                    if (this.didPassBoundary(rowLength, candidateRow, candidateCol, directionX, directionY)) {
+                        this.onPassBoundary({ currentCell, directionX, directionY });
+
+                        return null;
+                    }
+                } while (
+                    !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
+                    this.isDisabledCell(this.grid[candidateRow][candidateCol].element) ||
+                    this.grid[candidateRow][candidateCol].element === currentCell.element
+                );
+
+                nextCell = this.grid[candidateRow][candidateCol];
+            } else if (directionY !== 0) { // vertical
+                let candidateRow = currentCell.row;
+                let candidateCol = currentCell.col;
+                do {
+                    candidateRow += directionY;
+
+                    let rowLength = this.grid[currentCell.row] ? this.grid[currentCell.row].length : 0;
+
+                    if (this.wrapCols) {
+                        if (directionY === 1 && candidateRow >= this.grid.length) {
+                            candidateCol++;
+                            candidateRow = 0;
+                        } else if (directionY === -1 && candidateRow < 0) {
+                            candidateCol--;
+                            candidateRow = this.grid.length - 1;
+                        }
+                    }
+
+                    if (this.didPassBoundary(rowLength, candidateRow, candidateCol, directionX, directionY)) {
+                        this.onPassBoundary({ currentCell, directionX, directionY });
+
+                        return null;
+                    }
+                } while (
+                    !this.isValidCell({ row: candidateRow, col: candidateCol }) ||
+                    this.isDisabledCell(this.grid[candidateRow][candidateCol].element) ||
+                    this.grid[candidateRow][candidateCol].element === currentCell.element
+                );
+
+                nextCell = this.grid[candidateRow][candidateCol];
+            }
         }
 
         return nextCell;
