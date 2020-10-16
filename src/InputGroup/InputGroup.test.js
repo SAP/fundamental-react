@@ -76,6 +76,17 @@ describe('<InputGroup />', () => {
                 ).toContain('wonderful-styles');
             });
 
+            test('should allow spreading innerRefClassName to ValidationOverlay popover innerRef div', () => {
+                const wrapper = setup({
+                    validationState: { state: 'error', text: 'Test validation state' },
+                    validationOverlayProps: { innerRefClassName: 'wonderful-styles', show: true }
+                });
+
+                expect(
+                    wrapper.find('.fd-popover__innerRef').getDOMNode().classList
+                ).toContain('wonderful-styles');
+            });
+
             test('should allow spreading className to ValidationOverlay reference div', () => {
                 const wrapper = setup({
                     validationState: { state: 'error', text: 'Test validation state' },

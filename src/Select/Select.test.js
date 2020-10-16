@@ -75,7 +75,7 @@ describe('<Select />', () => {
 
         test('should add classname to innerRef div', async() => {
             setup({
-                validationOverlayProps: { popperProps: { innerRefClassName: 'Sample' }, show: true }
+                validationOverlayProps: { innerRefClassName: 'Sample', show: true }
             });
 
             expect(
