@@ -4,14 +4,14 @@ import classnamesBind from 'classnames/bind';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
-import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
 import withStyles from '../utils/withStyles';
-import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
+import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES, ISO_DATE_FORMAT } from '../utils/constants';
+import { isDateEnabled, resolveFormat } from '../utils/dateUtils';
 import React, { Component } from 'react';
 import barStyles from 'fundamental-styles/dist/bar.css';
 import dialogStyles from 'fundamental-styles/dist/dialog.css';
@@ -25,7 +25,6 @@ const classnames = classnamesBind.bind({
     ...barStyles
 });
 
-const ISO_DATE_FORMAT = 'YYYY-MM-DD';
 const dateRangeSeparator = ' - ';
 
 /** A **DatePicker** is an opinionated composition of the **Input Group**, **Popover**
@@ -47,7 +46,8 @@ class DatePicker extends Component {
 
     toISOFormat = (dateStr) => {
         if (!dateStr || !dateStr?.trim().length) return '';
-        return moment(dateStr, this.resolveFormat()).format(ISO_DATE_FORMAT);
+        const { dateFormat, locale } = this.props;
+        return moment(dateStr, resolveFormat({ dateFormat, locale })).format(ISO_DATE_FORMAT);
     }
 
     /**
@@ -65,23 +65,13 @@ class DatePicker extends Component {
         if (date) {
             const momentDateObj = this.getMomentDateObj(date);
             if (momentDateObj && momentDateObj.isValid()) {
-                return momentDateObj.format(this.resolveFormat());
+                const { dateFormat, locale } = this.props;
+                return momentDateObj.format(resolveFormat({ dateFormat, locale }));
             } else {
                 return '';
             }
         }
         return date;
-    }
-
-    resolveFormat = () => {
-        const { dateFormat, locale } = this.props;
-        if (dateFormat) {
-            return dateFormat;
-        } else if (locale) {
-            const localeData = moment.localeData(locale);
-            return localeData.longDateFormat('L');
-        }
-        return ISO_DATE_FORMAT;
     }
 
     /**
@@ -114,13 +104,15 @@ class DatePicker extends Component {
      *
      * @returns {Array} collection of date formats allowed for input.
      */
-    getValidFormats = () =>{
-        const format = this.resolveFormat();
+    getValidFormats = () => {
+        const { dateFormat, locale } = this.props;
+        const format = resolveFormat({ dateFormat, locale });
         return validDateLookup[format] ? validDateLookup[format] : format;
     }
 
-    getPlaceHolder() {
-        let placeholderDateFormat = this.resolveFormat();
+    getPlaceHolder = () => {
+        const { dateFormat, locale } = this.props;
+        let placeholderDateFormat = resolveFormat({ dateFormat, locale });
         if (this.props.enableRangeSelection) {
             return placeholderDateFormat + dateRangeSeparator + placeholderDateFormat;
         }
@@ -167,7 +159,7 @@ class DatePicker extends Component {
     }
 
     isDateValid = (date) => {
-        return date.isValid() && isEnabledDate(date, this.props);
+        return date.isValid() && isDateEnabled(date, this.props);
     }
 
     getCallbackData = () => {
@@ -336,7 +328,7 @@ class DatePicker extends Component {
         const { enableRangeSelection, todayAction: { label: todayLabel, type: todayType } } = this.props;
         return todayType === 'select'
                 && !enableRangeSelection
-                && isEnabledDate(moment(), this.props)
+                && isDateEnabled(moment(), this.props)
                 && todayLabel
                 && typeof todayLabel === 'string'
                 && todayLabel.trim().length > 0;
@@ -349,7 +341,6 @@ class DatePicker extends Component {
     render() {
         const {
             addonProps,
-            blockedDates,
             buttonLabel,
             buttonProps,
             calendarProps,
@@ -359,6 +350,7 @@ class DatePicker extends Component {
             disabled,
             disableAfterDate,
             disableBeforeDate,
+            disabledDateRanges,
             disabledDates,
             disableFutureDates,
             disablePastDates,
@@ -414,8 +406,8 @@ class DatePicker extends Component {
         const inputGroup = (
             <InputGroup
                 {...inputGroupProps}
-                aria-expanded={this.state.isExpanded}
-                aria-haspopup='true'
+                aria-expanded={disabled || readOnly ? null : this.state.isExpanded}
+                aria-haspopup={disabled || readOnly ? null : 'true'}
                 className={inputGroupClass}
                 compact={compact}
                 disabled={disabled}
@@ -469,7 +461,6 @@ class DatePicker extends Component {
                             }
                             <Calendar
                                 {...calendarProps}
-                                blockedDates={blockedDates}
                                 className={calendarClasses}
                                 compact={compact}
                                 customDate={
@@ -477,12 +468,14 @@ class DatePicker extends Component {
                                         ? this.state.startAndEndDates
                                         : this.state.selectedDate
                                 }
+                                dateFormat={dateFormat}
                                 disableAfterDate={disableAfterDate}
                                 disableBeforeDate={disableBeforeDate}
                                 disableFutureDates={disableFutureDates}
                                 disablePastDates={disablePastDates}
                                 disableWeekday={disableWeekday}
                                 disableWeekends={disableWeekends}
+                                disabledDateRanges={disabledDateRanges}
                                 disabledDates={disabledDates}
                                 enableRangeSelection={enableRangeSelection}
                                 focusOnInit
@@ -549,9 +542,6 @@ DatePicker.propTypes = {
     }),
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc.
-     * This overrides the date format derived from any set locale. */
-    dateFormat: PropTypes.string,
     /**
      * Default value to be shown in the Datepicker
      * for example, `defaultValue='12/04/1993'`
@@ -570,8 +560,6 @@ DatePicker.propTypes = {
     inputGroupProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
-    /** Language code to set the locale */
-    locale: PropTypes.string,
     /** If DatePicker is to be rendered in a modal, the parent modal manager can be passed as a prop */
     modalManager: PropTypes.object,
     /** Additional props to be spread to the Popover component */
@@ -665,16 +653,13 @@ DatePicker.propTypes = {
 };
 
 DatePicker.defaultProps = {
+    ...Calendar.defaultProps,
     buttonLabel: 'Choose date',
     defaultValue: '',
-    dateFormat: null,
-    locale: 'en',
-    localizedText: Calendar.defaultProps.localizedText,
     todayAction: {
         type: 'none'
     },
     onInputBlur: () => {},
-    onChange: () => {},
     onDatePickerClose: () => {},
     onInputFocus: () => {}
 };

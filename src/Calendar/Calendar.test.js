@@ -14,21 +14,9 @@ describe('<Calendar />', () => {
     const disabledAfterDay = (
         <Calendar disableAfterDate={moment(new Date(2018, 7, 3, 0, 0, 0, 0))} />
     );
-    const blockedDays = (
-        <Calendar
-            blockedDates={[
-                moment(new Date(2018, 1, 1, 0, 0, 0, 0)),
-                moment(new Date(2018, 3, 3, 0, 0, 0, 0))
-            ]} />
-    );
-    const disabledDates = (
-        <Calendar
-            disabledDates={[
-                moment(new Date(2018, 1, 1, 0, 0, 0, 0)),
-                moment(new Date(2018, 3, 3, 0, 0, 0, 0))
-            ]} />
-    );
     const disabledWeekDay = <Calendar disableWeekday={['Monday', 'Tuesday']} />;
+    const disabledDates = <Calendar disabledDates={['10/10/2020', '10/12/2020']} openToDate='10/01/2020' />;
+    const disabledDateRanges = <Calendar disabledDateRanges={[['10/10/2020', '10/12/2020'], ['10/15/2020', '10/18/2020']]} openToDate='10/01/2020' />;
     const disabledWeekDayFakeDays = <Calendar disableWeekday={['Humpday', 'Funday']} />;
     const rangeSelect = <Calendar enableRangeSelection onChange={mockOnChange} />;
     const disablePast = <Calendar disablePastDates />;
@@ -42,8 +30,8 @@ describe('<Calendar />', () => {
         mount(disabledWeekEnds);
         mount(disabledBeforeDay);
         mount(disabledAfterDay);
-        mount(blockedDays);
         mount(disabledDates);
+        mount(disabledDateRanges);
         mount(disablePast);
         mount(disableFuture);
         mount(disabledWeekDay);
@@ -180,7 +168,7 @@ describe('<Calendar />', () => {
         );
     });
 
-    test('click disabled day', () => {
+    test('click disabled weekend', () => {
         const wrapper = mount(disabledWeekEnds);
         // select day of month
         wrapper
@@ -202,6 +190,79 @@ describe('<Calendar />', () => {
 
         // previously selected date should not change
         expect(wrapper.children().state('selectedDate').date()).toEqual(currentDateDisplayed.date());
+    });
+
+    test('should not allow clicks of disabled days in disabled dates, but should allow days between disabled dates', () => {
+        const onChange = jest.fn();
+        const wrapper = mount(<Calendar
+            disabledDates={['10/10/2020', '10/12/2020']}
+            onChange={onChange}
+            openToDate='10/01/2020' />
+        );
+        wrapper
+            .find('[data-test="2020-10-09"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toHaveBeenCalledWith(expect.any(moment), false);
+        wrapper
+            .find('[data-test="2020-10-10"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toBeCalledTimes(1); // from the previous click
+        wrapper
+            .find('[data-test="2020-10-11"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toHaveBeenLastCalledWith(expect.any(moment), false);
+        wrapper
+            .find('[data-test="2020-10-12"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toBeCalledTimes(2);
+    });
+
+    test('should not allow clicks of disabled days which are between(inclusive) disabled date ranges', () => {
+        const onChange = jest.fn();
+        const wrapper = mount(<Calendar
+            disabledDateRanges={[['10/10/2020', '10/12/2020'], ['10/15/2020', '10/18/2020']]}
+            onChange={onChange}
+            openToDate='10/01/2020' />
+        );
+        wrapper
+            .find('[data-test="2020-10-09"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toHaveBeenCalledWith(expect.any(moment), false);
+        wrapper
+            .find('[data-test="2020-10-10"]') // disabled
+            .at(0)
+            .simulate('click');
+        expect(onChange).toBeCalledTimes(1); // from the previous click
+        wrapper
+            .find('[data-test="2020-10-11"]') // disabled
+            .at(0)
+            .simulate('click');
+        expect(onChange).toBeCalledTimes(1);
+        wrapper
+            .find('[data-test="2020-10-12"]') // disabled
+            .at(0)
+            .simulate('click');
+        expect(onChange).toBeCalledTimes(1);
+        wrapper
+            .find('[data-test="2020-10-13"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toHaveBeenCalledWith(expect.any(moment), false);
+        wrapper
+            .find('[data-test="2020-10-14"]')
+            .at(0)
+            .simulate('click');
+        expect(onChange).toHaveBeenCalledWith(expect.any(moment), false);
+        wrapper
+            .find('[data-test="2020-10-15"]') // disabled
+            .at(0)
+            .simulate('click');
+        expect(onChange).toBeCalledTimes(3);
     });
 
     test('click year from list from range selector', () => {
