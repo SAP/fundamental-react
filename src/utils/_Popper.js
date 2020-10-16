@@ -152,6 +152,7 @@ class Popper extends React.Component {
             disableEdgeDetection,
             flipContainer,
             innerRef,
+            innerRefClassName,
             noArrow,
             onClickOutside,
             popperClassName,
@@ -213,7 +214,7 @@ class Popper extends React.Component {
                             x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
                             // This is needed for fundamental-styles even though popper-2 uses data-placement as well
                             x-placement={placement}>
-                            <div ref={innerRef}>
+                            <div className={classnames(`${cssBlock}__innerRef`, innerRefClassName)} ref={innerRef}>
                                 {children}
                             </div>
                             <span
@@ -265,6 +266,7 @@ Popper.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     flipContainer: CustomPropTypes.elementOrArrayOfElements(),
     innerRef: PropTypes.func,
+    innerRefClassName: PropTypes.string,
     modalManager: PropTypes.object,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
