@@ -1,5 +1,5 @@
 language: node_js
-node_js: 12.18.4
+node_js: 10.21.0
 cache: npm
 dist: trusty
 git:
