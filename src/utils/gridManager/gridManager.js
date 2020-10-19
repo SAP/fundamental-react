@@ -214,7 +214,7 @@ export default class GridManager {
         return isDisabled;
     }
 
-    isEditableCell = ({ focusableElements, editableElement }) => {
+    isEditableCell = ({ focusableElements, editableElement } = {}) => {
         return (focusableElements?.length > 1 || editableElement);
     }
 

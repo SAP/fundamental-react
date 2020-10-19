@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.13.1...v0.14.0-rc.0) (2020-10-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* The DatePicker and Calendar prop disabledDates is no longer considered as a range, instead it is an array of single disabled dates.  The disableDateRanges prop can be used for existing functionality to disable multiple ranges.
+
+### Features
+
+* Make Calendar disabledDates an array of single dates, use disabledDateRanges for existing functionality ([#1244](https://github.com/SAP/fundamental-react/issues/1244)) ([84b8927](https://github.com/SAP/fundamental-react/commit/84b8927ed8eae8d2b5b91cd0f72b7cbefa9a1316))
+
 ### [0.13.1](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.17...v0.13.1) (2020-10-19)
 
 ### [0.13.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.16...v0.13.1-rc.17) (2020-10-16)

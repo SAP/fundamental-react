@@ -5,6 +5,22 @@ const ANONYMOUS = '<<anonymous>>';
 
 /* eslint-disable no-console */
 
+const arrayOfTupleTypes = (propType) => (props, propName, componentName) => {
+    if (!Array.isArray(props[propName])) {
+        return new Error(`Invalid property ${propName} supplied to ${componentName} needs to be an array.`);
+    }
+
+    for (let innerProp of props[propName]) {
+        if (!Array.isArray(innerProp) || innerProp.length !== 2) {
+            return new Error(`Invalid property ${propName} supplied to ${componentName} needs to be an array of arrays with length 2.`);
+        }
+        PropTypes.checkPropTypes({ [`${propName}[0]`]: propType }, { [`${propName}[0]`]: innerProp[0] }, `${propName}[0]`, componentName);
+        PropTypes.checkPropTypes({ [`${propName}[1]`]: propType }, { [`${propName}[1]`]: innerProp[1] }, `${propName}[1]`, componentName);
+    }
+
+    return null;
+};
+
 const elementOrArrayOfElements = () => {
     // Element is not defined unless the Browser API is defined
     if (typeof Element === 'undefined') {
@@ -152,4 +168,4 @@ const i18n = (obj) => {
     return wrapValidator(createChainableTypeChecker(validate), 'i18n', obj);
 };
 
-export default { elementOrArrayOfElements, range, i18n, validColumnProp };
+export default { arrayOfTupleTypes, elementOrArrayOfElements, range, i18n, validColumnProp };

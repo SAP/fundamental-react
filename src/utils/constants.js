@@ -147,3 +147,5 @@ export const TREE_NODE_HIGHLIGHTS = [
     'success',
     'warning'
 ];
+
+export const ISO_DATE_FORMAT = 'YYYY-MM-DD';

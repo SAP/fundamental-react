@@ -4,6 +4,7 @@ import Calendar from '../Calendar';
 import moment from 'moment';
 import React from 'react';
 import {
+    array,
     boolean,
     date,
     number,
@@ -27,11 +28,10 @@ function dateKnobToDate(name, defaultValue) {
 const afterDateDefault = new Date(new Date().getFullYear() + 1, 0, 1);
 const beforeDateDefault = new Date(new Date().getFullYear() - 1, 0, 1);
 
-const blockedDateFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1);
-const blockedDateSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 10);
-
-const disabledDateFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 15);
-const disabledDateSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 25);
+const disabledDateRangeFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 18);
+const disabledDateRangeSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 22);
+const disabledDateRangeThirdDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 24);
+const disabledDateRangeFourthDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 26);
 
 const weekdayOptions = {
     Sunday: 'Sunday',
@@ -59,16 +59,6 @@ export const disableWeekends = () => (
 );
 
 disableWeekends.storyName = 'Disabled Weekends and Disabled Before Date';
-
-/**
- * Block(disable) next 10 days and all Mondays and Tuesdays.
- */
-
-export const blockedDatesAndDisableWeekday = () => (
-    <Calendar
-        blockedDates={[moment(), moment().add(10, 'days')]}
-        disableWeekday={['Monday', 'Tuesday']} />
-);
 
 /**
  * Focus on 1st January 2000 after rendering the Calendar.
@@ -110,17 +100,25 @@ export const todayButton = () => {
 
 export const dev = () => (
     <Calendar
-        blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
-            dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
-        compact={boolean('compact', false)}
+        compact={boolean('compact', true)}
+        dateFormat='YYYY.MM.DD'
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
         disablePastDates={boolean('disable past dates', false)}
         disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
         disableWeekends={boolean('disable weekends', false)}
-        disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
-            dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        disabledDateRanges={[
+            [
+                dateKnobToDate('disabled date range 1-1', disabledDateRangeFirstDefault),
+                dateKnobToDate('disabled date range 1-2', disabledDateRangeSecondDefault)
+            ],
+            [
+                dateKnobToDate('disabled date range 2-1', disabledDateRangeThirdDefault),
+                dateKnobToDate('disabled date range 2-2', disabledDateRangeFourthDefault)
+            ]
+        ]}
+        disabledDates={array('disabled dates', ['2020.10.12'])}
         enableRangeSelection={boolean('enableRangeSelection', false)}
         locale={text('locale', 'en')}
         onChange={action('on-change')}

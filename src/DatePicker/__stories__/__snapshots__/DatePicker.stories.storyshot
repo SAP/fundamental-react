@@ -470,7 +470,7 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
   dir="ltr"
 >
   <div
-    defaultValue="20/06/2020 - 18/06/2020"
+    defaultValue="14/06/2020 - 18/06/2020"
     onChange={[Function]}
   >
     <div
@@ -490,21 +490,21 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
             className="fd-input-group--control fd-input-group"
           >
             <input
-              className="fd-input fd-input-group__input"
+              className="fd-input fd-input--compact fd-input-group__input"
               onBlur={[Function]}
               onChange={[Function]}
               onFocus={[Function]}
               onKeyPress={[Function]}
               placeholder="DD/MM/YYYY - DD/MM/YYYY"
               type="text"
-              value="१८/०६/२०२० - २०/०६/२०२०"
+              value="14/06/2020 - 18/06/2020"
             />
             <span
-              className="fd-input-group__addon fd-input-group__addon--button"
+              className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
             >
               <button
                 aria-label="Choose date"
-                className="fd-button fd-button--transparent fd-input-group__button"
+                className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
                 onClick={[Function]}
                 type="button"
               >
@@ -543,8 +543,8 @@ exports[`Storyshots Component API/DatePicker Disabled 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-expanded={false}
-            aria-haspopup="true"
+            aria-expanded={null}
+            aria-haspopup={null}
             className="fd-input-group--control fd-input-group is-disabled"
           >
             <input
@@ -1332,8 +1332,8 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
           className="fd-popover__control"
         >
           <div
-            aria-expanded={false}
-            aria-haspopup="true"
+            aria-expanded={null}
+            aria-haspopup={null}
             className="fd-input-group--control fd-input-group"
           >
             <input
