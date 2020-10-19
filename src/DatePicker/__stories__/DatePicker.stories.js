@@ -25,18 +25,18 @@ export default {
 };
 
 function dateKnobToDate(name, defaultValue) {
-    const stringTimestamp = date(name, defaultValue);
+    const stringTimestamp = date(name, new Date(defaultValue));
     return moment(stringTimestamp);
 }
 
 const afterDateDefault = new Date(new Date().getFullYear() + 1, 0, 1);
 const beforeDateDefault = new Date(new Date().getFullYear() - 1, 0, 1);
 
-const blockedDateFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1);
-const blockedDateSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 10);
-
-const disabledDateFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 15);
-const disabledDateSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 25);
+const disabledDateDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 15);
+const disabledDateRangeFirstDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 18);
+const disabledDateRangeSecondDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 22);
+const disabledDateRangeThirdDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 24);
+const disabledDateRangeFourthDefault = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 26);
 
 const weekdayOptions = {
     Sunday: 'Sunday',
@@ -433,25 +433,33 @@ export const withCustomFlipContainer = () => {
     );
 };
 
+
 export const dev = () => (
     <DatePicker
-        blockedDates={[dateKnobToDate('block between dates (1)', blockedDateFirstDefault),
-            dateKnobToDate('block between dates (2)', blockedDateSecondDefault)]}
-        compact={boolean('compact', false)}
+        compact={boolean('compact', true)}
         dateFormat={
             select(dateFormatOptionsLabel, dateFormatOptions, 'DD/MM/YYYY')
         }
-        defaultValue={text('Default Value', '20/06/2020 - 18/06/2020')}
+        defaultValue={text('Default Value', '14/06/2020 - 18/06/2020')}
         disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
         disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
         disableFutureDates={boolean('disable future dates', false)}
         disablePastDates={boolean('disable past dates', false)}
         disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
         disableWeekends={boolean('disable weekends', false)}
-        disabledDates={[dateKnobToDate('disable between dates (1)', disabledDateFirstDefault),
-            dateKnobToDate('disable between dates (2)', disabledDateSecondDefault)]}
+        disabledDateRanges={[
+            [
+                dateKnobToDate('disable date range 1-1', disabledDateRangeFirstDefault),
+                dateKnobToDate('disable date range 1-2', disabledDateRangeSecondDefault)
+            ],
+            [
+                dateKnobToDate('disable date range 2-1', disabledDateRangeThirdDefault),
+                dateKnobToDate('disable date range 2-2', disabledDateRangeFourthDefault)
+            ]
+        ]}
+        disabledDates={[dateKnobToDate('disable date', disabledDateDefault)]}
         enableRangeSelection={boolean('enableRangeSelection', true)}
-        locale={text('locale', 'hi')}
+        locale={text('locale', 'en')}
         onChange={action('on-change')}
         onDatePickerClose={action('on-date-picker-close')}
         onInputBlur={action('on-input-blur')}

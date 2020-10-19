@@ -1,46 +1,62 @@
+import { ISO_DATE_FORMAT } from './constants';
 import moment from 'moment';
 
-export const isDateBetween = (date, blockedDates, isRangeEnabled) => {
-    if (typeof blockedDates === 'undefined' || typeof blockedDates[0] === 'undefined' || typeof blockedDates[1] === 'undefined') {
+
+export const isDateBetween = ({ date, dateTuple, format, isRangeEnabled }) => {
+    const [start, end] = dateTuple || [];
+    if (typeof start === 'undefined' || typeof end === 'undefined') {
         return false;
     }
-    if (typeof isRangeEnabled !== 'undefined' || isRangeEnabled) {
-        if (blockedDates[0].isAfter(blockedDates[1])) {
-            return blockedDates[1].isBefore(date) && blockedDates[0].isAfter(date);
-        }
+    const startMoment = moment(start, format);
+    const endMoment = moment(end, format);
+    // It's possible to switch tuple so the first value is after the second value
+    if (isRangeEnabled && startMoment.isAfter(endMoment)) {
+        return endMoment.isSameOrBefore(date) && startMoment.isSameOrAfter(date);
     }
-    return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
+    return startMoment.isSameOrBefore(date, 'day') && endMoment.isSameOrAfter(date, 'day');
 };
 
-export const isDisabledWeekday = (date, weekDays) => {
-    if (!weekDays) {
+const isWeekdayDisabled = (date, disableWeekday) => {
+    if (!disableWeekday) {
         return false;
     }
 
     const daysName = moment.weekdays();
 
-    return weekDays.indexOf(daysName[date.day()]) > -1;
+    return disableWeekday.indexOf(daysName[date.day()]) > -1;
 };
 
-export const isEnabledDate = (day, dateProps) => {
-    const {
-        disableWeekends,
-        disableAfterDate,
-        disableBeforeDate,
-        blockedDates,
-        disableWeekday,
-        disablePastDates,
-        disableFutureDates,
-        disabledDates
-    } = dateProps;
+export const isDateEnabled = (day, {
+    dateFormat,
+    disableWeekends,
+    disableAfterDate,
+    disableBeforeDate,
+    disableWeekday,
+    disablePastDates,
+    disableFutureDates,
+    disabledDates,
+    disabledDateRanges,
+    locale
+}) => {
+    const format = resolveFormat({ dateFormat, locale });
     return (
-        !isDisabledWeekday(day, disableWeekday) &&
+        !isWeekdayDisabled(day, disableWeekday) &&
         !(disableWeekends && (day.day() === 0 || day.day() === 6)) &&
-        !(disableBeforeDate && day.isBefore(moment(disableBeforeDate), 'day')) &&
-        !(disableAfterDate && day.isAfter(moment(disableAfterDate), 'day')) &&
+        !(disableBeforeDate && day.isBefore(moment(disableBeforeDate, format), 'day')) &&
+        !(disableAfterDate && day.isAfter(moment(disableAfterDate, format), 'day')) &&
         !(disablePastDates && day.isBefore(moment(), 'day')) &&
         !(disableFutureDates && day.isAfter(moment(), 'day')) &&
-        !isDateBetween(day, blockedDates && blockedDates.map(date => moment(date))) &&
-        !isDateBetween(day, disabledDates && disabledDates.map(date => moment(date)))
+        !disabledDates.some(date => moment(date, format).diff(day, 'days') === 0) &&
+        !disabledDateRanges.some(dateTuple => isDateBetween({ date: day, dateTuple, format }))
     );
+};
+
+export const resolveFormat = ({ dateFormat, locale }) => {
+    if (dateFormat) {
+        return dateFormat;
+    } else if (locale) {
+        const localeData = moment.localeData(locale);
+        return localeData.longDateFormat('L');
+    }
+    return ISO_DATE_FORMAT;
 };

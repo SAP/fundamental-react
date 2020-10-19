@@ -2,11 +2,12 @@ import Button from '../Button/Button';
 import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import GridManager from '../utils/gridManager/gridManager';
+import { ISO_DATE_FORMAT } from '../utils/constants';
 import keycode from 'keycode';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/withStyles';
-import { isDateBetween, isEnabledDate } from '../utils/dateUtils';
+import { isDateBetween, isDateEnabled, resolveFormat } from '../utils/dateUtils';
 import React, { Component } from 'react';
 import styles from 'fundamental-styles/dist/calendar.css';
 
@@ -19,19 +20,16 @@ class Calendar extends Component {
 
     constructor(props) {
         super(props);
+        const { customDate, dateFormat, enableRangeSelection, locale, openToDate } = this.props;
+        const format = resolveFormat({ dateFormat, locale });
+        let currentDateDisplayed = openToDate ? moment(openToDate, format) : moment().startOf('day');
+        let selectedDateOrDates = !enableRangeSelection ? moment({ year: 0 }) : [];
 
-        let currentDateDisplayed = props.openToDate || moment().startOf('day');
-        let selectedDateOrDates = !props.enableRangeSelection ? moment({ year: 0 }) : [];
-
-        const customDateEmpty = (!props.customDate || (props.customDate && props.customDate.length === 0));
+        const customDateEmpty = (!customDate || (customDate && customDate.length === 0));
 
         if (!customDateEmpty) {
-            selectedDateOrDates = props.customDate;
-            currentDateDisplayed = props.customDate;
-
-            if (props.customDate.length) {
-                currentDateDisplayed = props.customDate[0];
-            }
+            selectedDateOrDates = customDate;
+            currentDateDisplayed = Array.isArray(customDate) ? moment(customDate[0], format) : moment(customDate, format);
         }
 
         this.state = {
@@ -144,12 +142,19 @@ class Calendar extends Component {
                     (typeof arrSelectedDates[0] !== 'undefined' ? arrSelectedDates[0].isSame(day, 'day') : false) ||
                     (typeof arrSelectedDates[1] !== 'undefined' ? arrSelectedDates[1].isSame(day, 'day') : false)
                 ))
-            ) && isEnabledDate(day, this.props)
+            ) && isDateEnabled(day, this.props)
         );
     }
 
     isInSelectedRange = (day) => {
-        return this.props.enableRangeSelection && isDateBetween(day, this.state.arrSelectedDates, this.props.enableRangeSelection);
+        const { dateFormat, enableRangeSelection, locale } = this.props;
+        const format = resolveFormat({ dateFormat, locale });
+        return enableRangeSelection && isDateBetween({
+            date: day,
+            dateTuple: this.state.arrSelectedDates,
+            format,
+            isRangeEnabled: enableRangeSelection
+        });
     }
 
     isSelectedRangeFirst = (day) => {
@@ -442,18 +447,6 @@ class Calendar extends Component {
         });
     };
 
-    isDateBetween = (date, blockedDates, isRangeEnabled) => {
-        if (typeof blockedDates === 'undefined' || typeof blockedDates[0] === 'undefined' || typeof blockedDates[1] === 'undefined') {
-            return false;
-        }
-        if (typeof isRangeEnabled !== 'undefined' || isRangeEnabled) {
-            if (blockedDates[0].isAfter(blockedDates[1])) {
-                return blockedDates[1].isBefore(date) && blockedDates[0].isAfter(date);
-            }
-        }
-        return blockedDates[0].isBefore(date, 'day') && blockedDates[1].isAfter(date, 'day');
-    }
-
     isWeekend = (date) => {
         return [0, 6].includes(date.day());
     }
@@ -579,16 +572,14 @@ class Calendar extends Component {
 
     generateDays = (tableBodyProps) => {
         const {
-            cssNamespace
+            cssNamespace,
+            enableRangeSelection
         } = this.props;
 
         const {
             currentDateDisplayed,
             todayDate
         } = this.state;
-
-        const blockedDates = this.props.blockedDates && this.props.blockedDates.map(date => moment(date));
-        const enableRangeSelection = this.props.enableRangeSelection;
 
         const firstDayMonth = moment(currentDateDisplayed).startOf('month');
         const firstDayWeekMonth = moment(firstDayMonth).day(0).day(this.normalizedWeekdayStart());
@@ -604,11 +595,10 @@ class Calendar extends Component {
             for (let iterations = 0; iterations < 7; iterations++) {
                 dateFormatted = day.date();
                 const copyDate = moment(day);
-                const isDisabled = !isEnabledDate(day, this.props);
-                const isBlocked = isDateBetween(day, blockedDates);
-                const ariaLabel = copyDate.format(moment.localeData(this.props.locale).longDateFormat('LL'));
+                const isDisabled = !isDateEnabled(day, this.props);
+                let ariaLabel = copyDate.format(moment.localeData(this.props.locale).longDateFormat('LL'));
                 const specialDayType = this.specialDayType(day);
-                if (isDisabled || isBlocked) {
+                if (isDisabled) {
                     ariaLabel += ' ' + moment.localeData(this.props.locale).invalidDate();
                 }
 
@@ -622,7 +612,6 @@ class Calendar extends Component {
                         [`${cssNamespace}-calendar__special-day--${specialDayType}`]: !!specialDayType,
                         'is-active': this.isSelected(day) || this.isSelectedRangeFirst(day) || this.isSelectedRangeLast(day),
                         'is-disabled': isDisabled,
-                        'is-blocked': isBlocked,
                         'is-focus': this.isFocusedDay(day)
                     }
                 );
@@ -633,14 +622,15 @@ class Calendar extends Component {
                         aria-selected={this.isSelected(day)}
                         className={dayClasses}
                         data-is-focused={day.isSame(currentDateDisplayed)}
+                        data-test={day.format(ISO_DATE_FORMAT)}
                         key={copyDate}
-                        onClick={isEnabledDate(day, this.props) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
+                        onClick={isDateEnabled(day, this.props) ? () => this.dateClick(copyDate, enableRangeSelection) : null}
                         onFocus={this.handleDayFocus(day)}
                         role='gridcell'>
                         <span
                             aria-label={ariaLabel}
                             className={classnames(`${cssNamespace}-calendar__text`)}
-                            onKeyDown={isEnabledDate(day, this.props) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
+                            onKeyDown={isDateEnabled(day, this.props) ? (e) => this.onKeyDownDay(e, this.dateClick.bind(this, copyDate, enableRangeSelection)) : null}
                             role='button'>{dateFormatted.toString()}</span>
                     </td >
                 );
@@ -693,6 +683,7 @@ class Calendar extends Component {
         const {
             compact,
             cssNamespace,
+            dateFormat,
             enableRangeSelection,
             disableWeekends,
             disableBeforeDate,
@@ -700,11 +691,12 @@ class Calendar extends Component {
             disableWeekday,
             disablePastDates,
             disableFutureDates,
-            blockedDates,
+            disabledDateRanges,
             disabledDates,
             customDate,
             className,
             focusOnInit,
+            locale,
             localizedText,
             monthListProps,
             openToDate,
@@ -766,23 +758,35 @@ class Calendar extends Component {
 
 Calendar.displayName = 'Calendar';
 
+// Don't move this to customPropTypes because instanceOf(moment) might leak the moment package into a bundle
+// when tree-shaking could have safely removed it
+export const datePropType = PropTypes.oneOfType([
+    PropTypes.instanceOf(moment),
+    PropTypes.instanceOf(Date),
+    PropTypes.string,
+    PropTypes.number
+]);
+
 Calendar.propTypes = {
-    /** Blocks dates that are in between the blocked dates */
-    blockedDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
     customDate: PropTypes.oneOfType([
-        PropTypes.object,
-        PropTypes.array
+        datePropType,
+        PropTypes.arrayOf(datePropType)
     ]),
+    /** Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc.
+     * This overrides the date format derived from any set locale. */
+    dateFormat: PropTypes.string,
     /** Disables dates of a calendar that come after the specified date */
-    disableAfterDate: PropTypes.instanceOf(moment),
+    disableAfterDate: datePropType,
     /** Disables dates of a calendar that come before the specified date */
-    disableBeforeDate: PropTypes.instanceOf(moment),
-    /** Disables dates that are in between the disabled dates */
-    disabledDates: PropTypes.arrayOf(PropTypes.instanceOf(moment)),
+    disableBeforeDate: datePropType,
+    /** Disables dates that are in between (inclusive) the disabled date tuples */
+    disabledDateRanges: CustomPropTypes.arrayOfTupleTypes(datePropType),
+    /** Array of Date objects that cannot be selected */
+    disabledDates: PropTypes.arrayOf(datePropType),
     /** Set to **true** to disable dates after today\'s date */
     disableFutureDates: PropTypes.bool,
     /** Set to **true** to disable dates before today\'s date */
@@ -821,7 +825,7 @@ Calendar.propTypes = {
     /** Additional props to be spread to the month\'s `<table>` element */
     monthListProps: PropTypes.object,
     /** Date to focus when the calendar is loaded and no date is selected */
-    openToDate: PropTypes.instanceOf(moment),
+    openToDate: datePropType,
     /** Set to **true** if the Today button should be displayed */
     showToday: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
@@ -850,6 +854,8 @@ Calendar.propTypes = {
 };
 
 Calendar.defaultProps = {
+    disabledDates: [],
+    disabledDateRanges: [],
     compact: false,
     locale: 'en',
     localizedText: {
