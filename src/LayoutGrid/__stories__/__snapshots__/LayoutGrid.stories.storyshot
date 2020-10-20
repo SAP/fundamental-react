@@ -1,5 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Layout/Layout Grid Auto Adjusting 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-container docs-layout-grid"
+  >
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={8}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 fd-col--full docs-col--full"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column full&gt;
+           
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={3}&gt;
+           
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col--full docs-col--full"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column full&gt;
+           
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={3}&gt;
+           
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 fd-col--full docs-col--full"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column full&gt;
+           
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+      >
+        <div
+          className="col-content"
+        >
+           
+          &lt;Column span={4}&gt;
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Layout/Layout Grid Auto Span Available Cells 1`] = `
 <div
   dir="ltr"

@@ -334,6 +334,46 @@ To remove gutters between columns set the \`noGap\` property on the  \`Container
     }
 };
 
+export const autoAdjusting = () => (
+    <Container className='docs-layout-grid'>
+        <Row>
+            <Column className='docs-col--8' span={8}>
+                <div className='col-content'> {'<Column span={8}>'} </div>
+            </Column>
+            <Column className='docs-col--full' full>
+                <div className='col-content'> {'<Column full>'} </div>
+            </Column>
+        </Row>
+        <Row>
+            <Column className='docs-col--3' span={3}>
+                <div className='col-content'> {'<Column span={3}>'} </div>
+            </Column>
+            <Column className='docs-col--full' full>
+                <div className='col-content'> {'<Column full>'} </div>
+            </Column>
+            <Column className='docs-col--3' span={3}>
+                <div className='col-content'> {'<Column span={3}>'} </div>
+            </Column>
+        </Row>
+        <Row>
+            <Column className='docs-col--full' full>
+                <div className='col-content'> {'<Column full>'} </div>
+            </Column>
+            <Column className='docs-col--4' span={4}>
+                <div className='col-content'> {'<Column span={4}>'} </div>
+            </Column>
+        </Row>
+    </Container>
+);
+
+autoAdjusting.parameters = {
+    docs: {
+        storyDescription: `
+To make the column auto-adjust and occupy the remaining space of the row, set the \`full\` property on the  \`Column\`.
+`
+    }
+};
+
 export const noStyles = () => (
     <Container
         className='docs-layout-grid'

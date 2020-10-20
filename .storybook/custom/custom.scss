@@ -319,6 +319,13 @@ blockquote {
         align-items: center;
     }
 
+    .docs-col--full {
+        .col-content {
+            background-color: #30c5d2;
+            color: black;
+        }
+    }
+
     .docs-col--10 {
         .col-content {
             background-color: #3694b5;
