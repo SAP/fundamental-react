@@ -75,7 +75,7 @@ For an existing react application, follow the steps below:
 
 Additionally, edit your webpack configuration to load font and icon fonts - see [file-loader](https://webpack.js.org/loaders/file-loader/).
 
-1. All styles are based on `rem` units. Include the following in your css to ensure components are sized correctly:
+All styles are based on `rem` units. Include the following in your CSS to ensure components are sized correctly:
 
 ```css
     html {
