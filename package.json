@@ -79,7 +79,7 @@
     "@storybook/addon-actions": "6.0.16",
     "@storybook/addon-cssresources": "6.0.16",
     "@storybook/addon-docs": "6.0.16",
-    "@storybook/addon-knobs": "6.0.16",
+    "@storybook/addon-knobs": "6.0.28",
     "@storybook/addon-storyshots": "6.0.16",
     "@storybook/addon-storyshots-puppeteer": "6.0.16",
     "@storybook/addon-storysource": "6.0.16",
