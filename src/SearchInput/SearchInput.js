@@ -4,7 +4,6 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
-import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
 import keycode from 'keycode';
 import Menu from '../Menu/Menu';
@@ -153,7 +152,7 @@ const SearchInput = React.forwardRef( ({
             compact={compact}
             disabled={disabled}
             readOnly={readOnly}
-            validationState={validationState}>
+            validationState={{ state: validationState?.state, text: '' }}>
             <FormInput
                 {...inputProps}
                 disabled={disabled}
@@ -177,13 +176,6 @@ const SearchInput = React.forwardRef( ({
         </InputGroup>
     );
 
-    const wrappedInputGroup = (
-        <FormValidationOverlay
-            {...validationOverlayProps}
-            control={inputGroup}
-            validationState={validationState} />
-    );
-
     return (
         <div
             {...rest}
@@ -202,7 +194,7 @@ const SearchInput = React.forwardRef( ({
                         }
                         {popoverBody}
                     </>)}
-                control={wrappedInputGroup}
+                control={inputGroup}
                 disableKeyPressHandler
                 disabled={readOnly}
                 noArrow
