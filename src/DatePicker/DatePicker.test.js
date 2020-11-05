@@ -330,27 +330,27 @@ describe('<DatePicker />', () => {
 
     describe('With today footer button', () => {
 
-        test('renders today button when todayAction.type=\'select\' AND valid todayAction.label is specified', () => {
+        test('renders today button when todayActionType=\'select\' AND valid localizedText.todayLabel is specified', () => {
             wrapper = mount(
                 <DatePicker
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
             expect(todayButtonWrapper.text()).toBe('Today');
         });
 
-        test('doesn\'t render today button when todayAction.type=\'select\' AND valid todayAction.label is specified but date range selection is enabled', () => {
+        test('doesn\'t render today button when todayActionType=\'select\' AND valid localizedText.todayLabel is specified but date range selection is enabled', () => {
             wrapper = mount(
                 <DatePicker
                     enableRangeSelection
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(false);
@@ -359,10 +359,10 @@ describe('<DatePicker />', () => {
         test('sets todays date when today button is pressed', () => {
             wrapper = mount(
                 <DatePicker
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
@@ -375,11 +375,11 @@ describe('<DatePicker />', () => {
             wrapper = mount(
                 <DatePicker
                     dateFormat='YYYY/MM/DD'
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
                     onChange={change}
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             todayButtonWrapper.simulate('click');
