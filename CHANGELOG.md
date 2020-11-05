@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.2...v0.14.0-rc.3) (2020-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* `form-select` component has been removed
+
+* feat: update fd-styles to 0.13.0-rc.34
+
+* chore: update storybook tests
+
+* chore: remove FormSelect from index
+
+### Features
+
+* update fd-styles to 0.13.0-rc.34 ([#1257](https://github.com/SAP/fundamental-react/issues/1257)) ([0136683](https://github.com/SAP/fundamental-react/commit/01366833fe8a3e918efd92c72a8e4e1dbee5fa74))
+
 ## [0.14.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.1...v0.14.0-rc.2) (2020-11-05)
 
 ## [0.14.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.0...v0.14.0-rc.1) (2020-10-20)
