@@ -578,7 +578,7 @@ DatePicker.propTypes = {
         show12NextYears: PropTypes.string,
         /** aria-label for previous button when years are displayed */
         show12PreviousYears: PropTypes.string,
-        /** Label for Today button if showToday is true */
+        /** Label for Today button which is shown if todayActionType is 'select' or 'navigate' */
         todayLabel: PropTypes.string
     }),
     /** If DatePicker is to be rendered in a modal, the parent modal manager can be passed as a prop */
