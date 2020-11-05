@@ -152,6 +152,7 @@ const SearchInput = React.forwardRef( ({
             compact={compact}
             disabled={disabled}
             readOnly={readOnly}
+            validationOverlayProps={validationOverlayProps}
             validationState={{ state: validationState?.state, text: '' }}>
             <FormInput
                 {...inputProps}
