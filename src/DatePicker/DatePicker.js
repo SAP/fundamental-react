@@ -243,11 +243,15 @@ class DatePicker extends Component {
         });
     }
 
-    handleClickButton = () => {
+    handleClickButton = (e) => {
+        const { buttonProps } = this.props;
         this.setState({ isExpanded: !this.state.isExpanded });
 
         const popover = this.popoverRef && this.popoverRef.current;
         popover && popover.triggerBody();
+        if (typeof buttonProps?.onClick === 'function') {
+            buttonProps.onClick(e);
+        }
     };
 
     handleOutsideClickAndEscape = () => {
