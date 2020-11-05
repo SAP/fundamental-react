@@ -1,6 +1,7 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnamesBind from 'classnames/bind';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
@@ -559,6 +560,27 @@ DatePicker.propTypes = {
     inputGroupProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in day view */
+        dayInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in month view */
+        monthInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in year view */
+        yearInstructions: PropTypes.string,
+        /** Localized string informing screen reader users to select a second date when in range selection */
+        rangeInstructions: PropTypes.string,
+        /** aria-label for next button */
+        nextMonth: PropTypes.string,
+        /** aria-label for previous button */
+        previousMonth: PropTypes.string,
+        /** aria-label for next button when years are displayed */
+        show12NextYears: PropTypes.string,
+        /** aria-label for previous button when years are displayed */
+        show12PreviousYears: PropTypes.string,
+        /** Label for Today button if showToday is true */
+        todayLabel: PropTypes.string
+    }),
     /** If DatePicker is to be rendered in a modal, the parent modal manager can be passed as a prop */
     modalManager: PropTypes.object,
     /** Additional props to be spread to the Popover component */
@@ -567,9 +589,7 @@ DatePicker.propTypes = {
     readOnly: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
-    /** Config object for DatePicker's today action button.
-     *  For example, ```todayActionType='select'```
-     *
+    /**
      * **todayActionType** is a string indicating the type of today button
      *
      * - `'none'` today button won't be shown
