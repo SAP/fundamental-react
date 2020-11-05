@@ -75,6 +75,14 @@ For an existing react application, follow the steps below:
 
 Additionally, edit your webpack configuration to load font and icon fonts - see [file-loader](https://webpack.js.org/loaders/file-loader/).
 
+All styles are based on `rem` units. Include the following in your CSS to ensure components are sized correctly:
+
+```css
+    html {
+        font-size: 16px;
+    }
+```
+
 ## Versioning
 
 The `fundamental-react` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the `[MAJOR].[MINOR].[PATCH]` numbering system (also known as `[BREAKING].[FEATURE].[FIX]`).
