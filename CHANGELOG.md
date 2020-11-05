@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.3...v0.14.0-rc.4) (2020-11-05)
+
+
+### Bug Fixes
+
+* Call DatePicker buttonProps.onClick when button is clicked ([#1258](https://github.com/SAP/fundamental-react/issues/1258)) ([a6a5d95](https://github.com/SAP/fundamental-react/commit/a6a5d955a972b579c6819b917cb1031c0c55035c))
+
 ## [0.14.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.2...v0.14.0-rc.3) (2020-11-05)
 
 
