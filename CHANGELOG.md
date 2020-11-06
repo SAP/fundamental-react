@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.4...v0.14.0-rc.5) (2020-11-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removed `todayAction` property from Datepicker. Add `todayActionType` property to Datepicker to configure the type of today action. Update Datepicker to use a label for the Today action button from `localizedText.todayLabel`.
+
+### Bug Fixes
+
+* Datepicker today actions props interface ([#1259](https://github.com/SAP/fundamental-react/issues/1259)) ([74ba734](https://github.com/SAP/fundamental-react/commit/74ba7345b6961e678724802db413e960d8738a4e))
+
 ## [0.14.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.3...v0.14.0-rc.4) (2020-11-05)
 
 
