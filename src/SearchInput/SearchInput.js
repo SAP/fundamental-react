@@ -20,6 +20,7 @@ const SearchInput = React.forwardRef( ({
     compact,
     cssNamespace,
     disabled,
+    formMessageProps,
     inputProps,
     inputGroupAddonProps,
     inputGroupProps,
@@ -36,7 +37,6 @@ const SearchInput = React.forwardRef( ({
     searchList,
     subStringSearch,
     searchBtnProps,
-    validationOverlayProps,
     validationState,
     ...rest
 }, ref) => {
@@ -152,7 +152,6 @@ const SearchInput = React.forwardRef( ({
             compact={compact}
             disabled={disabled}
             readOnly={readOnly}
-            validationOverlayProps={validationOverlayProps}
             // need to get the styling into the input group, but without creating a duplicate popover
             validationState={{ state: validationState?.state, text: '' }}>
             <FormInput
@@ -189,7 +188,7 @@ const SearchInput = React.forwardRef( ({
                     (<>
                         {validationState &&
                             <FormMessage
-                                {...validationOverlayProps?.formMessageProps}
+                                {...formMessageProps}
                                 type={validationState.state}>
                                 {validationState.text}
                             </FormMessage>
@@ -215,6 +214,8 @@ SearchInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Additional props to be spread to the FormMessage component */
+    formMessageProps: PropTypes.object,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */
@@ -247,21 +248,6 @@ SearchInput.propTypes = {
     ),
     /** enable substring search */
     subStringSearch: PropTypes.bool,
-    /** Additional props to be spread to the ValidationOverlay */
-    validationOverlayProps: PropTypes.shape({
-        /** Additional classes to apply to validation popover's outermost `<div>` element  */
-        className: PropTypes.string,
-        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
-        formMessageProps: PropTypes.object,
-        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
-        innerRefClassName: PropTypes.string,
-        /** Additional classes to apply to validation popover's popper `<div>` element  */
-        popperClassName: PropTypes.string,
-        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
-        referenceClassName: PropTypes.string,
-        /** Additional props to be spread to the popover's outermost `<div>` element */
-        wrapperProps: PropTypes.object
-    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
