@@ -819,7 +819,7 @@ Calendar.propTypes = {
         show12NextYears: PropTypes.string,
         /** aria-label for previous button when years are displayed */
         show12PreviousYears: PropTypes.string,
-        /** aria-label for Today button if included */
+        /** Label for Today button if showToday is true */
         todayLabel: PropTypes.string
     }),
     /** Additional props to be spread to the month\'s `<table>` element */

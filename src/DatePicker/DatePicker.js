@@ -1,16 +1,16 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
 import classnamesBind from 'classnames/bind';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
 import withStyles from '../utils/withStyles';
-import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES, ISO_DATE_FORMAT } from '../utils/constants';
+import { FORM_MESSAGE_TYPES, ISO_DATE_FORMAT } from '../utils/constants';
 import { isDateEnabled, resolveFormat } from '../utils/dateUtils';
 import React, { Component } from 'react';
 import barStyles from 'fundamental-styles/dist/bar.css';
@@ -243,11 +243,15 @@ class DatePicker extends Component {
         });
     }
 
-    handleClickButton = () => {
+    handleClickButton = (e) => {
+        const { buttonProps } = this.props;
         this.setState({ isExpanded: !this.state.isExpanded });
 
         const popover = this.popoverRef && this.popoverRef.current;
         popover && popover.triggerBody();
+        if (typeof buttonProps?.onClick === 'function') {
+            buttonProps.onClick(e);
+        }
     };
 
     handleOutsideClickAndEscape = () => {
@@ -317,21 +321,17 @@ class DatePicker extends Component {
     };
 
     showTodayHeader = () => {
-        const { todayAction: { label: todayLabel, type: todayType } } = this.props;
-        return todayType === 'navigate'
-                && todayLabel
-                && typeof todayLabel === 'string'
-                && todayLabel.trim().length > 0;
+        const { todayActionType, localizedText: { todayLabel } } = this.props;
+        return todayActionType === 'navigate'
+                && todayLabel?.trim().length > 0;
     }
 
     showTodayFooter = () => {
-        const { enableRangeSelection, todayAction: { label: todayLabel, type: todayType } } = this.props;
-        return todayType === 'select'
+        const { enableRangeSelection, todayActionType, localizedText: { todayLabel } } = this.props;
+        return todayActionType === 'select'
                 && !enableRangeSelection
                 && isDateEnabled(moment(), this.props)
-                && todayLabel
-                && typeof todayLabel === 'string'
-                && todayLabel.trim().length > 0;
+                && todayLabel?.trim().length > 0;
     };
 
     setTodayDate = () => {
@@ -371,7 +371,7 @@ class DatePicker extends Component {
             readOnly,
             showToday,
             specialDays,
-            todayAction,
+            todayActionType,
             validationOverlayProps,
             validationState,
             weekdayStart,
@@ -481,8 +481,8 @@ class DatePicker extends Component {
                                 focusOnInit
                                 locale={locale}
                                 localizedText={{
-                                    ...localizedText,
-                                    todayLabel: todayAction.label
+                                    ...Calendar.defaultProps.localizedText,
+                                    ...localizedText
                                 }}
                                 onChange={ (date, todayNavigated) => {
                                     this.updateDate(date, todayNavigated, todayNavigated ? 'todayNavigated' : 'calendarDateClicked');
@@ -501,7 +501,7 @@ class DatePicker extends Component {
                                                 className={footerButtonClassnames}
                                                 compact={compact}
                                                 onClick={this.setTodayDate}>
-                                                {todayAction.label}
+                                                {localizedText.todayLabel}
                                             </Button>
                                         </div>
                                     </div>
@@ -560,6 +560,27 @@ DatePicker.propTypes = {
     inputGroupProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in day view */
+        dayInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in month view */
+        monthInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in year view */
+        yearInstructions: PropTypes.string,
+        /** Localized string informing screen reader users to select a second date when in range selection */
+        rangeInstructions: PropTypes.string,
+        /** aria-label for next button */
+        nextMonth: PropTypes.string,
+        /** aria-label for previous button */
+        previousMonth: PropTypes.string,
+        /** aria-label for next button when years are displayed */
+        show12NextYears: PropTypes.string,
+        /** aria-label for previous button when years are displayed */
+        show12PreviousYears: PropTypes.string,
+        /** Label for Today button which is shown if todayActionType is 'select' or 'navigate' */
+        todayLabel: PropTypes.string
+    }),
     /** If DatePicker is to be rendered in a modal, the parent modal manager can be passed as a prop */
     modalManager: PropTypes.object,
     /** Additional props to be spread to the Popover component */
@@ -568,29 +589,21 @@ DatePicker.propTypes = {
     readOnly: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
-    /** Config object for DatePicker's today action button.
-     *  For example, ```todayAction={type: 'select', label: 'Today'}```
-     *
-     * **todayAction.type** is a string indicating the type of today button
+    /**
+     * **todayActionType** is a string indicating the type of today button
      *
      * - `'none'` today button won't be shown
      * - `'select'` today button as footer action that selects today's date and closes datepicker
      * - `'navigate'` today button as header action that navigates (i.e. sets focus) to today's date
      *
-     * **todayAction.label** is a localized string label for the today action button.
+     * **localizedText.todayLabel** should be a localized string label for the today action button.
      *
      * The button will only be rendered if:
      *
-     * - `todayAction.type` is `'select'` or `'navigate'`
-     * - AND `todayAction.label` is a valid non-empty string
+     * - `todayActionType` is `'select'` or `'navigate'`
+     * - AND `localizedText.todayLabel` is a valid non-empty string
     */
-    todayAction: PropTypes.shape({
-        type: PropTypes.oneOf(DATEPICKER_TODAY_ACTIONS_TYPES),
-        label: requiredIf(PropTypes.string, todayAction => {
-            const todayActionType = todayAction?.type?.trim();
-            return todayActionType === 'select' || todayActionType === 'navigate';
-        })
-    }),
+    todayActionType: PropTypes.oneOf(['none', 'select', 'navigate']),
     /** Additional props to be spread to the ValidationOverlay */
     validationOverlayProps: PropTypes.shape({
         /** Additional classes to apply to validation popover's outermost `<div>` element  */
@@ -658,9 +671,7 @@ DatePicker.defaultProps = {
     ...Calendar.defaultProps,
     buttonLabel: 'Choose date',
     defaultValue: '',
-    todayAction: {
-        type: 'none'
-    },
+    todayActionType: 'none',
     onInputBlur: () => {},
     onDatePickerClose: () => {},
     onInputFocus: () => {}
