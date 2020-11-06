@@ -308,7 +308,7 @@ describe('<TimePicker />', () => {
             const element = mount(<TimePicker id='testId' popoverProps={{ 'data-sample': 'Sample' }} />);
             element.find('button').simulate('click');
             expect(
-                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popover').first().getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

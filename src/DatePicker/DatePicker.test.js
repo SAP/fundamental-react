@@ -535,7 +535,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker inputGroupProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('InputGroup').at(1).getDOMNode().attributes['data-sample'].value
+                element.find('.fd-input-group').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

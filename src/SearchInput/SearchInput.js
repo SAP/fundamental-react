@@ -153,6 +153,7 @@ const SearchInput = React.forwardRef( ({
             disabled={disabled}
             readOnly={readOnly}
             validationOverlayProps={validationOverlayProps}
+            // need to get the styling into the input group, but without creating a duplicate popover
             validationState={{ state: validationState?.state, text: '' }}>
             <FormInput
                 {...inputProps}
