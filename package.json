@@ -35,7 +35,7 @@
     "std-version": "standard-version --releaseCommitMessageFormat \"chore(release): version {{currentTag}} build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "npm run build:storybook && start-storybook -p 12123 -s .storybook/static/,node_modules/@sap-theming",
     "storybook:ci": "npm run storybook -- --ci --quiet",
-    "storybook:static": "rm -rf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs",
+    "storybook:static": "rimraf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
@@ -43,7 +43,7 @@
     "test": "npm run test:dev -- --watch",
     "test:storybook:setup": "npm run build:storybook && cross-env BABEL_ENV=test jest --no-cache --config=./storybook-testing/jest.config.js",
     "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
-    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rm -rf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'"
+    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rimraf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.10.2",
