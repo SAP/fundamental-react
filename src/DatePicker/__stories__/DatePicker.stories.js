@@ -297,8 +297,8 @@ weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
 /**
  * Setting
  *
- * - `todayAction.type` to `'select'`
- * - And localized non-empty string value for `todayAction.label`
+ * - `todayActionType` to `'select'`
+ * - And localized non-empty string value for `localizedText.todayLabel`
  *
  * will show a footer action in the DatePicker popover.
  * Clicking this button selects today's date and closes the popover.
@@ -324,10 +324,10 @@ export const localizedTodayFooterButton = () => (
                             inputProps={{
                                 id: 'englishTodayButtonDP'
                             }}
-                            todayAction={{
-                                type: 'select',
-                                label: 'Today'
-                            }} />
+                            localizedText={{
+                                todayLabel: 'Today'
+                            }}
+                            todayActionType='select' />
                     </div>
                 </Column>
                 <Column>
@@ -342,10 +342,10 @@ export const localizedTodayFooterButton = () => (
                                 id: 'hindiTodayButtonDP'
                             }}
                             locale='hi'
-                            todayAction={{
-                                type: 'select',
-                                label: 'आज'
-                            }} />
+                            localizedText={{
+                                todayLabel: 'आज'
+                            }}
+                            todayActionType='select' />
                     </div>
                 </Column>
             </Row>
@@ -357,8 +357,8 @@ export const localizedTodayFooterButton = () => (
 /**
  * Setting
  *
- * - `todayAction.type` to `'navigate'`
- * - And localized non-empty string value for `todayAction.label`
+ * - `todayActionType` to `'navigate'`
+ * - And localized non-empty string value for `localizedText.todayLabel`
  *
  * will show a header action in the DatePicker popover.
  *
@@ -380,10 +380,10 @@ export const localizedTodayHeaderButton = () => (
                         inputProps={{
                             id: 'englishTodayButtonDP'
                         }}
-                        todayAction={{
-                            type: 'navigate',
-                            label: 'Today'
-                        }} />
+                        localizedText={{
+                            todayLabel: 'Today'
+                        }}
+                        todayActionType='navigate' />
                 </div>
             </Column>
             <Column>
@@ -398,10 +398,10 @@ export const localizedTodayHeaderButton = () => (
                             id: 'hindiTodayButtonDP'
                         }}
                         locale='hi'
-                        todayAction={{
-                            type: 'navigate',
-                            label: 'आज'
-                        }} />
+                        localizedText={{
+                            todayLabel: 'आज'
+                        }}
+                        todayActionType='navigate' />
                 </div>
             </Column>
         </Row>
@@ -460,21 +460,21 @@ export const dev = () => (
         disabledDates={[dateKnobToDate('disable date', disabledDateDefault)]}
         enableRangeSelection={boolean('enableRangeSelection', true)}
         locale={text('locale', 'en')}
+        localizedText={{
+            todayLabel: text('localizedText.todayLabel', 'Today')
+        }}
         onChange={action('on-change')}
         onDatePickerClose={action('on-date-picker-close')}
         onInputBlur={action('on-input-blur')}
         onInputFocus={action('on-input-focus')}
         openToDate={dateKnobToDate('open to date', new Date())}
-        todayAction={{
-            type: select('Today Action Type',
-                {
-                    'none': 'none',
-                    'select': 'select',
-                    'navigate': 'navigate'
-                }
-            ),
-            label: text('Today Action Label', 'Today')
-        }}
+        todayActionType={select('Today Action Type',
+            {
+                'none': 'none',
+                'select': 'select',
+                'navigate': 'navigate'
+            }
+        )}
         validationState={select('Validation State',
             {
                 'none': '',
@@ -518,13 +518,13 @@ export const localizedTodayFooterButtonVisualStoryShotOnly = () => (
                             inputProps={{
                                 id: 'englishTodayButtonDP'
                             }}
+                            localizedText={{
+                                todayLabel: 'Today'
+                            }}
                             popoverProps={{
                                 show: true
                             }}
-                            todayAction={{
-                                type: 'select',
-                                label: 'Today'
-                            }} />
+                            todayActionType='select' />
                     </div>
                 </Column>
                 <Column>
@@ -539,13 +539,13 @@ export const localizedTodayFooterButtonVisualStoryShotOnly = () => (
                                 id: 'hindiTodayButtonDP'
                             }}
                             locale='hi'
+                            localizedText={{
+                                todayLabel: 'आज'
+                            }}
                             popoverProps={{
                                 show: true
                             }}
-                            todayAction={{
-                                type: 'select',
-                                label: 'आज'
-                            }} />
+                            todayActionType='select' />
                     </div>
                 </Column>
             </Row>
@@ -572,13 +572,13 @@ export const localizedTodayHeaderButtonVisualStoryShotOnly = () => (
                             inputProps={{
                                 id: 'englishTodayButtonDP'
                             }}
+                            localizedText={{
+                                todayLabel: 'Today'
+                            }}
                             popoverProps={{
                                 show: true
                             }}
-                            todayAction={{
-                                type: 'navigate',
-                                label: 'Today'
-                            }} />
+                            todayActionType='navigate' />
                     </div>
                 </Column>
                 <div>
@@ -592,13 +592,13 @@ export const localizedTodayHeaderButtonVisualStoryShotOnly = () => (
                             id: 'hindiTodayButtonDP'
                         }}
                         locale='hi'
+                        localizedText={{
+                            todayLabel: 'आज'
+                        }}
                         popoverProps={{
                             show: true
                         }}
-                        todayAction={{
-                            type: 'navigate',
-                            label: 'आज'
-                        }} />
+                        todayActionType='navigate' />
                 </div>
                 <Column />
             </Row>
