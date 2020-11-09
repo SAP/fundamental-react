@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.5...v0.14.0-rc.6) (2020-11-09)
+
+
+### Bug Fixes
+
+* InputGroup validation changes ([#1260](https://github.com/SAP/fundamental-react/issues/1260)) ([83f3c7c](https://github.com/SAP/fundamental-react/commit/83f3c7c3db82a2e046e33dafcfabeec2f44982d9))
+
 ## [0.14.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.4...v0.14.0-rc.5) (2020-11-06)
 
 
