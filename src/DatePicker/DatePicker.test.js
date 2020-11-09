@@ -1,5 +1,5 @@
 /* eslint-disable compat/compat */
-import { act } from 'react-test-renderer';
+import { act } from 'react-dom/test-utils';
 import DatePicker from '../DatePicker/DatePicker';
 import moment from 'moment';
 import { mount } from 'enzyme';
@@ -330,27 +330,27 @@ describe('<DatePicker />', () => {
 
     describe('With today footer button', () => {
 
-        test('renders today button when todayAction.type=\'select\' AND valid todayAction.label is specified', () => {
+        test('renders today button when todayActionType=\'select\' AND valid localizedText.todayLabel is specified', () => {
             wrapper = mount(
                 <DatePicker
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
             expect(todayButtonWrapper.text()).toBe('Today');
         });
 
-        test('doesn\'t render today button when todayAction.type=\'select\' AND valid todayAction.label is specified but date range selection is enabled', () => {
+        test('doesn\'t render today button when todayActionType=\'select\' AND valid localizedText.todayLabel is specified but date range selection is enabled', () => {
             wrapper = mount(
                 <DatePicker
                     enableRangeSelection
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(false);
@@ -359,10 +359,10 @@ describe('<DatePicker />', () => {
         test('sets todays date when today button is pressed', () => {
             wrapper = mount(
                 <DatePicker
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
@@ -375,11 +375,11 @@ describe('<DatePicker />', () => {
             wrapper = mount(
                 <DatePicker
                     dateFormat='YYYY/MM/DD'
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
                     onChange={change}
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
+                    todayActionType='select' />);
             wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             todayButtonWrapper.simulate('click');
@@ -547,6 +547,30 @@ describe('<DatePicker />', () => {
             ).toBe('Sample');
         });
 
+        test('should allow the onClick prop to be passed to the DatePicker component\'s button element', async() => {
+            const onClick = jest.fn();
+            const element = mount(<DatePicker buttonProps={{ 'data-test': 'my-button', onClick }} />);
+
+            await act(async() => {
+                element.find('button[data-test="my-button"]').simulate('click');
+            });
+            expect(onClick).toHaveBeenCalledTimes(1);
+            expect(onClick).toHaveBeenCalledWith(expect.anything());
+        });
+
+        test('should allow onClick when no buttonProps.onClick is provided', async() => {
+            const element = mount(<DatePicker buttonProps={{ 'data-test': 'my-button' }} />);
+
+            expect(
+                async() => {
+                    await act(async() => {
+                        element.find('button[data-test="my-button"]').simulate('click');
+                    });
+                }
+            ).not.toThrow(expect.anything());
+        });
+
+
         test('should allow props to be spread to the DatePicker component\'s Calendar component\'s month list ul element', () => {
             const calendarProps = {
                 monthListProps: {
@@ -636,17 +660,18 @@ describe('<DatePicker />', () => {
             });
         });
 
-        test('should not show multiple validation overlays', () => {
+        test('should not show multiple validation overlays', async() => {
             wrapper = mount(
                 <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
             );
 
             const datepickerButton = wrapper.find('button.fd-button--transparent');
             const datepickerInput = wrapper.find('input[type="text"]');
-            act(() => {
+            await act(async() => {
                 datepickerButton.simulate('click');
                 datepickerInput.simulate('focus');
             });
+            wrapper.update();
             expect(wrapper.find('.fd-list__message').length).toBe(1);
         });
     });
