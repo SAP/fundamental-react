@@ -8,48 +8,80 @@ exports[`Storyshots Component API/InputGroup Button add-on 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-input-group"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
-      <span
-        className="fd-input-group__addon fd-input-group__addon--button"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        <button
-          className="fd-button fd-button--transparent fd-input-group__button"
-          type="button"
+        <div
+          className="fd-popover__control"
         >
-          <i
-            aria-hidden={true}
-            className="sap-icon--navigation-down-arrow"
-            role="img"
-          />
-        </button>
-      </span>
+          <div
+            className="fd-input-group"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                className="fd-button fd-button--transparent fd-input-group__button"
+                type="button"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--navigation-down-arrow"
+                  role="img"
+                />
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      className="fd-input-group"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <span
-        className="fd-input-group__addon fd-input-group__addon--button"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        <button
-          className="fd-button fd-button--transparent fd-input-group__button"
-          type="button"
+        <div
+          className="fd-popover__control"
         >
-          <i
-            aria-hidden={true}
-            className="sap-icon--navigation-down-arrow"
-            role="img"
-          />
-        </button>
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        type="text"
-      />
+          <div
+            className="fd-input-group"
+          >
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
+            >
+              <button
+                className="fd-button fd-button--transparent fd-input-group__button"
+                type="button"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--navigation-down-arrow"
+                  role="img"
+                />
+              </button>
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -60,26 +92,42 @@ exports[`Storyshots Component API/InputGroup Compact 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-input-group"
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    <span
-      className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
-        type="button"
+      <div
+        className="fd-popover__control"
       >
-        <i
-          aria-hidden={true}
-          className="sap-icon--navigation-down-arrow"
-          role="img"
-        />
-      </button>
-    </span>
-    <input
-      className="fd-input fd-input--compact fd-input-group__input"
-      type="text"
-    />
+        <div
+          className="fd-input-group"
+        >
+          <span
+            className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+          >
+            <button
+              className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-down-arrow"
+                role="img"
+              />
+            </button>
+          </span>
+          <input
+            className="fd-input fd-input--compact fd-input-group__input"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -89,28 +137,44 @@ exports[`Storyshots Component API/InputGroup Dev 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-input-group"
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    <input
-      className="fd-input fd-input-group__input"
-      disabled={false}
-      type="text"
-    />
-    <span
-      className="fd-input-group__addon fd-input-group__addon--button"
-      disabled={false}
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--transparent fd-input-group__button"
-        type="button"
+      <div
+        className="fd-popover__control"
       >
-        <i
-          aria-hidden={true}
-          className="sap-icon--navigation-down-arrow"
-          role="img"
-        />
-      </button>
-    </span>
+        <div
+          className="fd-input-group"
+        >
+          <input
+            className="fd-input fd-input-group__input"
+            disabled={false}
+            type="text"
+          />
+          <span
+            className="fd-input-group__addon fd-input-group__addon--button"
+            disabled={false}
+          >
+            <button
+              className="fd-button fd-button--transparent fd-input-group__button"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-down-arrow"
+                role="img"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -120,28 +184,44 @@ exports[`Storyshots Component API/InputGroup Disabled 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-input-group is-disabled"
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    <span
-      className="fd-input-group__addon fd-input-group__addon--button"
-      disabled={true}
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--transparent fd-input-group__button"
-        type="button"
+      <div
+        className="fd-popover__control"
       >
-        <i
-          aria-hidden={true}
-          className="sap-icon--navigation-down-arrow"
-          role="img"
-        />
-      </button>
-    </span>
-    <input
-      className="fd-input fd-input-group__input"
-      disabled={true}
-      type="text"
-    />
+        <div
+          className="fd-input-group is-disabled"
+        >
+          <span
+            className="fd-input-group__addon fd-input-group__addon--button"
+            disabled={true}
+          >
+            <button
+              className="fd-button fd-button--transparent fd-input-group__button"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-down-arrow"
+                role="img"
+              />
+            </button>
+          </span>
+          <input
+            className="fd-input fd-input-group__input"
+            disabled={true}
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -154,38 +234,70 @@ exports[`Storyshots Component API/InputGroup Icon add-on 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-input-group"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        <i
-          className="sap-icon--globe"
-          role="img"
-        />
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+          >
+            <span
+              className="fd-input-group__addon"
+            >
+              <i
+                className="sap-icon--globe"
+                role="img"
+              />
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      className="fd-input-group"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        <i
-          className="sap-icon--hide"
-          role="img"
-        />
-      </span>
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+            <span
+              className="fd-input-group__addon"
+            >
+              <i
+                className="sap-icon--hide"
+                role="img"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -196,26 +308,42 @@ exports[`Storyshots Component API/InputGroup No Styles 1`] = `
   dir="ltr"
 >
   <div
-    className="xxx-input-group"
+    className="xxx-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    <span
-      className="xxx-input-group__addon xxx-input-group__addon--button"
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="xxx-button xxx-button--transparent xxx-input-group__button"
-        type="button"
+      <div
+        className="xxx-popover__control"
       >
-        <i
-          aria-hidden={true}
-          className="sap-icon--navigation-down-arrow"
-          role="img"
-        />
-      </button>
-    </span>
-    <input
-      className="xxx-input xxx-input-group__input"
-      type="text"
-    />
+        <div
+          className="xxx-input-group"
+        >
+          <span
+            className="xxx-input-group__addon xxx-input-group__addon--button"
+          >
+            <button
+              className="xxx-button xxx-button--transparent xxx-input-group__button"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-down-arrow"
+                role="img"
+              />
+            </button>
+          </span>
+          <input
+            className="xxx-input xxx-input-group__input"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -225,26 +353,42 @@ exports[`Storyshots Component API/InputGroup Primary 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-input-group"
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    <span
-      className="fd-input-group__addon fd-input-group__addon--button"
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <button
-        className="fd-button fd-button--transparent fd-input-group__button"
-        type="button"
+      <div
+        className="fd-popover__control"
       >
-        <i
-          aria-hidden={true}
-          className="sap-icon--navigation-down-arrow"
-          role="img"
-        />
-      </button>
-    </span>
-    <input
-      className="fd-input fd-input-group__input"
-      type="text"
-    />
+        <div
+          className="fd-input-group"
+        >
+          <span
+            className="fd-input-group__addon fd-input-group__addon--button"
+          >
+            <button
+              className="fd-button fd-button--transparent fd-input-group__button"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--navigation-down-arrow"
+                role="img"
+              />
+            </button>
+          </span>
+          <input
+            className="fd-input fd-input-group__input"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -254,21 +398,37 @@ exports[`Storyshots Component API/InputGroup Text Area 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-input-group"
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
-    <textarea
-      className="fd-textarea fd-input-group__input"
-      defaultValue="Default"
-      onChange={[Function]}
-    />
-    <span
-      className="fd-input-group__addon"
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
-      <i
-        className="sap-icon--hide"
-        role="img"
-      />
-    </span>
+      <div
+        className="fd-popover__control"
+      >
+        <div
+          className="fd-input-group"
+        >
+          <textarea
+            className="fd-textarea fd-input-group__input"
+            defaultValue="Default"
+            onChange={[Function]}
+          />
+          <span
+            className="fd-input-group__addon"
+          >
+            <i
+              className="sap-icon--hide"
+              role="img"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -281,32 +441,64 @@ exports[`Storyshots Component API/InputGroup Text add-on 1`] = `
     className="fddocs-container"
   >
     <div
-      className="fd-input-group"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        €
-      </span>
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+          >
+            <span
+              className="fd-input-group__addon"
+            >
+              €
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div
-      className="fd-input-group"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
-      <input
-        className="fd-input fd-input-group__input"
-        placeholder="Type text here"
-        type="text"
-      />
-      <span
-        className="fd-input-group__addon"
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
-        €
-      </span>
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-input-group"
+          >
+            <input
+              className="fd-input fd-input-group__input"
+              placeholder="Type text here"
+              type="text"
+            />
+            <span
+              className="fd-input-group__addon"
+            >
+              €
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

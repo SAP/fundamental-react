@@ -30,7 +30,7 @@ describe('<InputGroup />', () => {
 
         it('should have a default class of "fd-input-group"', () => {
             expect(
-                element.getDOMNode().className
+                element.find('.fd-popover__control').childAt(0).getDOMNode().className
             ).toContain('fd-input-group');
         });
     });
@@ -42,7 +42,7 @@ describe('<InputGroup />', () => {
             });
 
             expect(
-                element.getDOMNode().attributes['data-sample'].value
+                element.find('.fd-popover__control').childAt(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

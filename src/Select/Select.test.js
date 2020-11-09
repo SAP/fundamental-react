@@ -75,6 +75,7 @@ describe('<Select />', () => {
 
         test('should allow spreading className to ValidationOverlay innerRef div', async() => {
             setup({
+                validationState: { state: 'error', text: 'Test validation state' },
                 validationOverlayProps: { innerRefClassName: 'Sample', show: true }
             });
 
