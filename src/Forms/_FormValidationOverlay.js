@@ -32,9 +32,7 @@ const FormValidationOverlay = React.forwardRef((
     };
 
     const _handleFocus = () => {
-        if (validationState?.text?.length > 0) {
-            setShowValidationMessage(true);
-        }
+        setShowValidationMessage(true);
     };
 
     const popoverClasses = classnames(`${cssNamespace}-popover`, className);
@@ -62,7 +60,7 @@ const FormValidationOverlay = React.forwardRef((
                 popperProps={popperProps}
                 referenceClassName={referenceClasses}
                 referenceComponent={referenceComponent}
-                show={showValidationMessage}
+                show={showValidationMessage && validationState?.text?.length > 0}
                 usePortal>
                 {bodyContent}
             </Popper>

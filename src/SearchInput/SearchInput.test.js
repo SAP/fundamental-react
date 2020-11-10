@@ -279,7 +279,7 @@ describe('<SearchInput />', () => {
         });
     });
 
-    describe('validationOverlayProps', () => {
+    describe('Internal component prop spreading', () => {
         let setup = (props) => mount(<SearchInput searchList={searchData} {...props} />);
         afterEach(() => {
             document.body.innerHTML = '';
@@ -287,52 +287,36 @@ describe('<SearchInput />', () => {
 
         const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
 
-
-        test('should allow spreading className to ValidationOverlay popover', () => {
+        test('should spread popoverProps to Popover', () => {
             const internalWrapper = setup({
-                validationState: { state: 'error', text: 'Test validation state' },
-                validationOverlayProps: { className: 'wonderful-styles' }
+                popoverProps: { 'data-sample': 'Sample', className: 'wonderful-styles' }
             });
 
+            const popover = internalWrapper.find('.fd-popover').first().getDOMNode();
+
             expect(
-                internalWrapper.find('.fd-popover').at(1).getDOMNode().classList
+                popover.attributes['data-sample'].value
+            ).toBe('Sample');
+
+            expect(
+                popover.classList
             ).toContain('wonderful-styles');
         });
 
-        test('should allow spreading className to ValidationOverlay innerRef div', () => {
-            const internalWrapper = setup({
-                validationState: { state: 'error', text: 'Test validation state' },
-                validationOverlayProps: { innerRefClassName: 'wonderful-styles', show: true }
-            });
-
-            expect(
-                internalWrapper.find('.fd-popover__innerRef').getDOMNode().classList
-            ).toContain('wonderful-styles');
-        });
-
-        test('should allow spreading className to ValidationOverlay reference div', () => {
-            const internalWrapper = setup({
-                validationState: { state: 'error', text: 'Test validation state' },
-                validationOverlayProps: { referenceClassName: 'wonderful-styles' }
-            });
-
-            expect(
-                internalWrapper.find('.fd-popover__control').at(1).getDOMNode().classList
-            ).toContain('wonderful-styles');
-        });
-
-        test('should spread formMessageProps to ValidationOverlay\'s FormMessage', async() => {
+        test('should spread formMessageProps to FormMessage', async() => {
+            let internalWrapper;
             await act(async() => {
-                setup({
+                internalWrapper = setup({
+                    formMessageProps: { 'data-sample': 'Sample', className: 'wonderful-styles' },
                     validationState: {
                         state: 'error',
                         text: 'Test validation state'
-                    },
-                    validationOverlayProps: {
-                        formMessageProps: { 'data-sample': 'Sample', className: 'wonderful-styles' },
-                        show: true
                     }
                 });
+            });
+
+            await act(() => {
+                internalWrapper.find(searchInput).simulate('click');
             });
 
             const messageNode = getFormMessage();
@@ -343,30 +327,6 @@ describe('<SearchInput />', () => {
 
             expect(
                 messageNode.classList
-            ).toContain('wonderful-styles');
-        });
-
-        test('should spread props to Validation overlay wrapper div', async() => {
-            const internalWrapper = setup({
-                validationState: { state: 'error', text: 'Test validation state' },
-                validationOverlayProps: { wrapperProps: { 'data-sample': 'Sample' }, show: true }
-            });
-
-            expect(
-                internalWrapper.find('.fd-popover').at(1).getDOMNode().attributes['data-sample'].value
-            ).toBe('Sample');
-        });
-
-        test('should set class on the Validation Overlay Popper', async() => {
-            await act(async() => {
-                setup({
-                    validationState: { state: 'error', text: 'Test validation state' },
-                    validationOverlayProps: { popperClassName: 'wonderful-styles', show: true }
-                });
-            });
-
-            expect(
-                document.body.querySelector('.fd-popover__popper').classList
             ).toContain('wonderful-styles');
         });
     });

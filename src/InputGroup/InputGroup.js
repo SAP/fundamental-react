@@ -67,12 +67,12 @@ class InputGroup extends Component {
             </div>
         );
 
-        return validationState?.state ? (
+        return (
             <FormValidationOverlay
                 {...validationOverlayProps}
                 control={inputGroup}
                 validationState={validationState} />
-        ) : inputGroup;
+        );
     }
 }
 

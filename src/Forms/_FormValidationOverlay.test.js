@@ -63,7 +63,8 @@ describe('<FormValidationOverlay />', () => {
             await act(async() => {
                 setup({
                     popperClassName: 'wonderful-styles',
-                    show: true
+                    show: true,
+                    validationState: { state: 'error', text: 'test message' }
                 });
             });
             const popoverNode = getPopover();
@@ -77,8 +78,8 @@ describe('<FormValidationOverlay />', () => {
             await act(async() => {
                 element = setup({
                     formMessageProps: { 'data-sample': 'Sample' },
-                    validationState: { state: 'error', message: 'test message' },
-                    show: true
+                    show: true,
+                    validationState: { state: 'error', text: 'test message' }
                 });
             });
 
@@ -92,7 +93,7 @@ describe('<FormValidationOverlay />', () => {
         test('Should show popover when trigger receives focus & hide popover when trigger loses focus (i.e. blurs)', async() => {
             let element = setup({
                 formMessageProps: { 'data-sample': 'Sample' },
-                validationState: { state: 'error', message: 'test message' }
+                validationState: { state: 'error', text: 'test message' }
             });
             await act(async() => {
                 element.find('input').simulate('focus');
