@@ -11,6 +11,40 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--Chart-Tree-Map"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        Chart-Tree-Map
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--Netweaver-business-client"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        Netweaver-business-client
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--accelerated"
         role="img"
         style={
@@ -334,6 +368,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--add-employee"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        add-employee
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--add-equipment"
         role="img"
         style={
@@ -379,6 +430,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         add-filter
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--add-folder"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        add-folder
       </div>
     </div>
     <div
@@ -515,6 +583,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         alphabetical-order
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--appear-offline"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        appear-offline
       </div>
     </div>
     <div
@@ -827,6 +912,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--away"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        away
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--back-to-top"
         role="img"
         style={
@@ -1065,6 +1167,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--blur"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        blur
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--bo-strategy-management"
         role="img"
         style={
@@ -1144,6 +1263,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         broken-link
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--browse-folder"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        browse-folder
       </div>
     </div>
     <div
@@ -1331,6 +1467,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         business-one
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--busy"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        busy
       </div>
     </div>
     <div
@@ -1711,23 +1864,6 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
-        className="sap-icon--Chart-Tree-Map"
-        role="img"
-        style={
-          Object {
-            "fontSize": "1.5rem",
-          }
-        }
-      />
-      <div>
-        sap-icon--
-        Chart-Tree-Map
-      </div>
-    </div>
-    <div
-      className="fddocs-container--icon"
-    >
-      <i
         className="sap-icon--check-availability"
         role="img"
         style={
@@ -2051,6 +2187,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--collapse-all"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        collapse-all
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--collapse-group"
         role="img"
         style={
@@ -2147,6 +2300,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         column-chart-dual-axis
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--combine"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        combine
       </div>
     </div>
     <div
@@ -2810,6 +2980,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         delete
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--desktop-mobile"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        desktop-mobile
       </div>
     </div>
     <div
@@ -3649,6 +3836,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--expand-all"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        expand-all
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--expand-group"
         role="img"
         style={
@@ -3830,6 +4034,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         feed
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--feedback"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        feedback
       </div>
     </div>
     <div
@@ -4153,6 +4374,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         future
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--fx"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        fx
       </div>
     </div>
     <div
@@ -4601,6 +4839,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--horizontal-combination-chart"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        horizontal-combination-chart
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--horizontal-grip"
         role="img"
         style={
@@ -4782,6 +5037,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         indent
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--information"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        information
       </div>
     </div>
     <div
@@ -5190,6 +5462,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         key-user-settings
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--keyboard-and-mouse"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        keyboard-and-mouse
       </div>
     </div>
     <div
@@ -5893,6 +6182,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--megamenu"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        megamenu
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--menu"
         role="img"
         style={
@@ -6420,23 +6726,6 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
-        className="sap-icon--Netweaver-business-client"
-        role="img"
-        style={
-          Object {
-            "fontSize": "1.5rem",
-          }
-        }
-      />
-      <div>
-        sap-icon--
-        Netweaver-business-client
-      </div>
-    </div>
-    <div
-      className="fddocs-container--icon"
-    >
-      <i
         className="sap-icon--newspaper"
         role="img"
         style={
@@ -6465,6 +6754,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         notes
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--notification"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        notification
       </div>
     </div>
     <div
@@ -7202,6 +7508,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--pixelate"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        pixelate
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--play"
         role="img"
         style={
@@ -7315,6 +7638,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         present
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--primary-key"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        primary-key
       </div>
     </div>
     <div
@@ -7814,6 +8154,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--responsive"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        responsive
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--restart"
         role="img"
         style={
@@ -8307,6 +8664,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--show-edit"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        show-edit
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--signature"
         role="img"
         style={
@@ -8596,6 +8970,40 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--split"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        split
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--status-completed"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        status-completed
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--status-critical"
         role="img"
         style={
@@ -8607,6 +9015,40 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         status-critical
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--status-error"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        status-error
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--status-in-progress"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        status-in-progress
       </div>
     </div>
     <div
@@ -8709,6 +9151,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         stop
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--strikethrough"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        strikethrough
       </div>
     </div>
     <div
@@ -9225,6 +9684,40 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--table-column"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        table-column
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--table-row"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        table-row
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--table-view"
         role="img"
         style={
@@ -9378,6 +9871,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--text"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        text
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--text-align-center"
         role="img"
         style={
@@ -9440,6 +9950,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         text-align-right
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--text-color"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        text-color
       </div>
     </div>
     <div
@@ -9684,6 +10211,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       className="fddocs-container--icon"
     >
       <i
+        className="sap-icon--touch"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        touch
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
         className="sap-icon--travel-expense"
         role="img"
         style={
@@ -9814,6 +10358,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         trip-report
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--two-keys"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        two-keys
       </div>
     </div>
     <div
@@ -10052,6 +10613,23 @@ exports[`Storyshots Component API/Icon Icon List 1`] = `
       <div>
         sap-icon--
         user-settings
+      </div>
+    </div>
+    <div
+      className="fddocs-container--icon"
+    >
+      <i
+        className="sap-icon--validate"
+        role="img"
+        style={
+          Object {
+            "fontSize": "1.5rem",
+          }
+        }
+      />
+      <div>
+        sap-icon--
+        validate
       </div>
     </div>
     <div
