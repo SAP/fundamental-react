@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.6...v0.14.0-rc.7) (2020-11-16)
+
+
+### Features
+
+* update icon list with new icons ([#1248](https://github.com/SAP/fundamental-react/issues/1248)) ([1bdbb1c](https://github.com/SAP/fundamental-react/commit/1bdbb1c1d46cde2678b956bcccab1a32062fc696))
+
 ## [0.14.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.5...v0.14.0-rc.6) (2020-11-09)
 
 
