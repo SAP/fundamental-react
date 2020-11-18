@@ -1,5 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Button/Button Badges 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fddocs-container"
+  >
+    <button
+      className="fd-button"
+      type="button"
+    >
+      <span
+        className="fd-button__text"
+      >
+        Default
+      </span>
+      <span
+        className="fd-button__badge"
+      >
+        1234
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--emphasized"
+      type="button"
+    >
+      <span
+        className="fd-button__text"
+      >
+        Emphasized
+      </span>
+      <span
+        className="fd-button__badge"
+      >
+        123
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--transparent"
+      type="button"
+    >
+      <span
+        className="fd-button__text"
+      >
+        Transparent
+      </span>
+      <span
+        className="fd-button__badge"
+      >
+        12
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--compact"
+      type="button"
+    >
+      <span
+        className="fd-button__text"
+      >
+        Default compact
+      </span>
+      <span
+        className="fd-button__badge"
+      >
+        1234
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--emphasized fd-button--compact"
+      type="button"
+    >
+      <span
+        className="fd-button__text"
+      >
+        Emphasized compact
+      </span>
+      <span
+        className="fd-button__badge"
+      >
+        123
+      </span>
+    </button>
+    <button
+      className="fd-button fd-button--transparent fd-button--compact"
+      type="button"
+    >
+      <span
+        className="fd-button__text"
+      >
+        Transparent compact
+      </span>
+      <span
+        className="fd-button__badge"
+      >
+        12
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Component API/Button/Button Dev 1`] = `
 <div
   dir="ltr"
@@ -339,7 +440,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -394,7 +494,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button fd-button--emphasized is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -449,7 +548,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button fd-button--transparent is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -504,7 +602,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button fd-button--positive is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -559,7 +656,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button fd-button--negative is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -614,7 +710,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button fd-button--ghost is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -669,7 +764,6 @@ exports[`Storyshots Component API/Button/Button States 1`] = `
     </button>
     <button
       className="fd-button fd-button--attention is-selected"
-      selected={true}
       type="button"
     >
       <span

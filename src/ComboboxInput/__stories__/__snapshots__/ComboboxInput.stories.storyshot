@@ -21,7 +21,7 @@ exports[`Storyshots Component API/ComboboxInput Compact 1`] = `
           <div
             aria-expanded={false}
             aria-haspopup="listbox"
-            aria-owns="compactComboboxExample-listbox"
+            aria-owns="compactComboboxExample-listbox-list"
             id="compactComboboxExample-combobox"
             role="combobox"
           >
@@ -44,7 +44,7 @@ exports[`Storyshots Component API/ComboboxInput Compact 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="compactComboboxExample-listbox"
+                      aria-controls="compactComboboxExample-listbox-list"
                       aria-label="Compact"
                       autoComplete="off"
                       className="fd-input fd-input--compact fd-input-group__input"
@@ -164,7 +164,7 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
                       <div
                         aria-expanded={false}
                         aria-haspopup="listbox"
-                        aria-owns="comboboxDevExample-listbox"
+                        aria-owns="comboboxDevExample-listbox-list"
                         id="comboboxDevExample-combobox"
                         role="combobox"
                       >
@@ -187,7 +187,7 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
                               >
                                 <input
                                   aria-autocomplete="list"
-                                  aria-controls="comboboxDevExample-listbox"
+                                  aria-controls="comboboxDevExample-listbox-list"
                                   autoComplete="off"
                                   className="fd-input fd-input-group__input"
                                   disabled={false}
@@ -273,7 +273,7 @@ exports[`Storyshots Component API/ComboboxInput Disabled 1`] = `
           <div
             aria-expanded={false}
             aria-haspopup="listbox"
-            aria-owns="disabledComboboxExample-listbox"
+            aria-owns="disabledComboboxExample-listbox-list"
             id="disabledComboboxExample-combobox"
             role="combobox"
           >
@@ -296,7 +296,7 @@ exports[`Storyshots Component API/ComboboxInput Disabled 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="disabledComboboxExample-listbox"
+                      aria-controls="disabledComboboxExample-listbox-list"
                       aria-label="Disabled"
                       autoComplete="off"
                       className="fd-input fd-input-group__input"
@@ -347,7 +347,7 @@ exports[`Storyshots Component API/ComboboxInput No Styles 1`] = `
           <div
             aria-expanded={false}
             aria-haspopup="listbox"
-            aria-owns="primaryComboboxExample-listbox"
+            aria-owns="primaryComboboxExample-listbox-list"
             id="primaryComboboxExample-combobox"
             role="combobox"
           >
@@ -370,7 +370,7 @@ exports[`Storyshots Component API/ComboboxInput No Styles 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="primaryComboboxExample-listbox"
+                      aria-controls="primaryComboboxExample-listbox-list"
                       aria-labelledby="primaryComboboxExample-label"
                       autoComplete="off"
                       className="xxx-input xxx-input-group__input"
@@ -429,7 +429,7 @@ exports[`Storyshots Component API/ComboboxInput Pre Selected Key 1`] = `
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-owns="preSelectedKeyComboboxExample-listbox"
+                  aria-owns="preSelectedKeyComboboxExample-listbox-list"
                   id="preSelectedKeyComboboxExample-combobox"
                   role="combobox"
                 >
@@ -452,7 +452,7 @@ exports[`Storyshots Component API/ComboboxInput Pre Selected Key 1`] = `
                         >
                           <input
                             aria-autocomplete="both"
-                            aria-controls="preSelectedKeyComboboxExample-listbox"
+                            aria-controls="preSelectedKeyComboboxExample-listbox-list"
                             aria-labelledby="preSelectedKeyComboboxExample-label"
                             autoComplete="nope"
                             className="fd-input fd-input-group__input"
@@ -532,7 +532,7 @@ exports[`Storyshots Component API/ComboboxInput Primary 1`] = `
           <div
             aria-expanded={false}
             aria-haspopup="listbox"
-            aria-owns="primaryComboboxExample-listbox"
+            aria-owns="primaryComboboxExample-listbox-list"
             id="primaryComboboxExample-combobox"
             role="combobox"
           >
@@ -555,7 +555,7 @@ exports[`Storyshots Component API/ComboboxInput Primary 1`] = `
                   >
                     <input
                       aria-autocomplete="list"
-                      aria-controls="primaryComboboxExample-listbox"
+                      aria-controls="primaryComboboxExample-listbox-list"
                       aria-labelledby="primaryComboboxExample-label"
                       autoComplete="off"
                       className="fd-input fd-input-group__input"
@@ -618,7 +618,7 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                   <div
                     aria-expanded={false}
                     aria-haspopup="listbox"
-                    aria-owns="comboboxManualSelectExample-listbox"
+                    aria-owns="comboboxManualSelectExample-listbox-list"
                     id="comboboxManualSelectExample-combobox"
                     role="combobox"
                   >
@@ -641,7 +641,7 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="comboboxManualSelectExample-listbox"
+                              aria-controls="comboboxManualSelectExample-listbox-list"
                               aria-labelledby="comboboxManualSelectExample-label"
                               autoComplete="nope"
                               className="fd-input fd-input-group__input"
@@ -693,7 +693,7 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                   <div
                     aria-expanded={false}
                     aria-haspopup="listbox"
-                    aria-owns="comboboxAutoSelectExample-listbox"
+                    aria-owns="comboboxAutoSelectExample-listbox-list"
                     id="comboboxAutoSelectExample-combobox"
                     role="combobox"
                   >
@@ -716,7 +716,7 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-controls="comboboxAutoSelectExample-listbox"
+                              aria-controls="comboboxAutoSelectExample-listbox-list"
                               aria-labelledby="comboboxAutoSelectExample-label"
                               autoComplete="nope"
                               className="fd-input fd-input-group__input"
@@ -768,7 +768,7 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                   <div
                     aria-expanded={false}
                     aria-haspopup="listbox"
-                    aria-owns="comboboxAutoInlineSelectExample-listbox"
+                    aria-owns="comboboxAutoInlineSelectExample-listbox-list"
                     id="comboboxAutoInlineSelectExample-combobox"
                     role="combobox"
                   >
@@ -791,7 +791,7 @@ exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
                           >
                             <input
                               aria-autocomplete="both"
-                              aria-controls="comboboxAutoInlineSelectExample-listbox"
+                              aria-controls="comboboxAutoInlineSelectExample-listbox-list"
                               aria-labelledby="comboboxAutoInlineSelectExample-label"
                               autoComplete="nope"
                               className="fd-input fd-input-group__input"
@@ -873,7 +873,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-owns="errorComboboxExample-listbox"
+                  aria-owns="errorComboboxExample-listbox-list"
                   id="errorComboboxExample-combobox"
                   role="combobox"
                 >
@@ -896,7 +896,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="errorComboboxExample-listbox"
+                            aria-controls="errorComboboxExample-listbox-list"
                             aria-labelledby="errorComboboxExample-label"
                             autoComplete="off"
                             className="fd-input fd-input-group__input"
@@ -944,7 +944,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-owns="warningComboboxExample-listbox"
+                  aria-owns="warningComboboxExample-listbox-list"
                   id="warningComboboxExample-combobox"
                   role="combobox"
                 >
@@ -967,7 +967,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="warningComboboxExample-listbox"
+                            aria-controls="warningComboboxExample-listbox-list"
                             aria-labelledby="warningComboboxExample-label"
                             autoComplete="off"
                             className="fd-input fd-input-group__input"
@@ -1014,7 +1014,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-owns="infoComboboxExample-listbox"
+                  aria-owns="infoComboboxExample-listbox-list"
                   id="infoComboboxExample-combobox"
                   role="combobox"
                 >
@@ -1037,7 +1037,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="infoComboboxExample-listbox"
+                            aria-controls="infoComboboxExample-listbox-list"
                             aria-labelledby="infoComboboxExample-label"
                             autoComplete="off"
                             className="fd-input fd-input-group__input"
@@ -1084,7 +1084,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-owns="successComboboxExample-listbox"
+                  aria-owns="successComboboxExample-listbox-list"
                   id="successComboboxExample-combobox"
                   role="combobox"
                 >
@@ -1107,7 +1107,7 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-controls="successComboboxExample-listbox"
+                            aria-controls="successComboboxExample-listbox-list"
                             aria-labelledby="successComboboxExample-label"
                             autoComplete="off"
                             className="fd-input fd-input-group__input"

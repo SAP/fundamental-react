@@ -31,6 +31,7 @@ const StepInput = React.forwardRef(({
     compact,
     cssNamespace,
     disabled,
+    inputId,
     placeholder,
     readOnly,
     localizedText,
@@ -119,6 +120,7 @@ const StepInput = React.forwardRef(({
             <FormInput
                 className={classnames(`${cssNamespace}-input--no-number-spinner`, `${cssNamespace}-step-input__input`, { [`${cssNamespace}-input`]: isUsingCssModules })}
                 disabled={disabled}
+                id={inputId}
                 onChange={onChangeInputValue}
                 placeholder={placeholder}
                 value={inputValue} />
@@ -153,6 +155,8 @@ StepInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** ID to be passed to the input element */
+    inputId: PropTypes.string,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         stepUpLabel: PropTypes.string,

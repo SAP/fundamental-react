@@ -719,29 +719,27 @@ class Calendar extends Component {
         );
 
         return (
-            <>
-                <div
-                    {...props}
-                    className={calendarClasses}
-                    onKeyDown={(e) => this.onKeyDownCalendar(e)}>
-                    {this.generateNavigation()}
-                    <div className={classnames(`${cssNamespace}-calendar__content`)}
-                        onBlur={(e) => {
-                            if (!e.currentTarget.contains(e.relatedTarget)) {
-                                this.setState({ screenReaderText: '' });
-                            }
-                        }}
-                        onFocus={() => {
-                            let instructions = localizedText.dayInstructions;
-                            if (this.state.showYears) {
-                                instructions = localizedText.yearInstructions;
-                            } else if (this.state.showMonths) {
-                                instructions = localizedText.monthInstructions;
-                            }
-                            this.setState({ screenReaderText: instructions });
-                        }}>
-                        {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
-                    </div>
+            <section
+                {...props}
+                className={calendarClasses}
+                onKeyDown={(e) => this.onKeyDownCalendar(e)}>
+                {this.generateNavigation()}
+                <div className={classnames(`${cssNamespace}-calendar__content`)}
+                    onBlur={(e) => {
+                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                            this.setState({ screenReaderText: '' });
+                        }
+                    }}
+                    onFocus={() => {
+                        let instructions = localizedText.dayInstructions;
+                        if (this.state.showYears) {
+                            instructions = localizedText.yearInstructions;
+                        } else if (this.state.showMonths) {
+                            instructions = localizedText.monthInstructions;
+                        }
+                        this.setState({ screenReaderText: instructions });
+                    }}>
+                    {this._renderContent(monthListProps, yearListProps, tableProps, tableHeaderProps, tableBodyProps)}
                 </div>
                 <div aria-live='polite'
                     className={classnames(
@@ -750,7 +748,7 @@ class Calendar extends Component {
                     )}>
                     {this.state.screenReaderText}
                 </div>
-            </>
+            </section>
         );
     }
 

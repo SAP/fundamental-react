@@ -65,24 +65,46 @@ const dateFormatGroupId = 'GROUP-DATE-FORMAT';
 
 
 export const primary = () => (
-    <DatePicker />
+    <>
+        <FormLabel htmlFor='primary-datepicker'>Date</FormLabel>
+        <DatePicker inputProps={{
+            id: 'primary-datepicker'
+        }} />
+    </>
 );
 
 export const compact = () => (
-    <DatePicker compact />
+    <>
+        <FormLabel htmlFor='compact-datepicker'>Date</FormLabel>
+        <DatePicker compact inputProps={{
+            id: 'compact-datepicker'
+        }} />
+    </>
 );
 
 
 compact.storyName = 'Compact';
 
 export const disabled = () => (
-    <DatePicker disabled />
+    <>
+        <FormLabel htmlFor='disabled-datepicker'>Date</FormLabel>
+        <DatePicker disabled inputProps={{
+            id: 'disabled-datepicker'
+        }} />
+    </>
 );
 
 disabled.storyName = 'Disabled';
 
 export const readOnly = () => (
-    <DatePicker defaultValue='12/12/2012' readOnly />
+    <>
+        <FormLabel htmlFor='readOnly-datepicker'>Date</FormLabel>
+        <DatePicker defaultValue='12/12/2012'
+            inputProps={{
+                id: 'readOnly-datepicker'
+            }}
+            readOnly />
+    </>
 );
 
 
@@ -90,17 +112,36 @@ readOnly.storyName = 'ReadOnly';
 
 export const openToDate = () => {
     const _openToDate = moment().year('2000').month(0).date(1);
-    return <DatePicker openToDate={_openToDate} />;
+    return (
+        <>
+            <FormLabel htmlFor='openTo-datepicker'>Date</FormLabel>
+            <DatePicker
+                inputProps={{
+                    id: 'openTo-datepicker'
+                }}
+                openToDate={_openToDate} />
+        </>
+    );
 };
 
 export const localized = () => (
     <Container>
         <Row>
             <Column>
-                <DatePicker locale='es' />
+                <FormLabel htmlFor='es-datepicker'>La fecha</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'es-datepicker'
+                    }}
+                    locale='es' />
             </Column>
             <Column>
-                <DatePicker locale='fr' />
+                <FormLabel htmlFor='fr-datepicker'>La date</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'fr-datepicker'
+                    }}
+                    locale='fr' />
             </Column>
         </Row>
     </Container>
@@ -255,16 +296,36 @@ export const validationStates = () => (
     <Container>
         <Row>
             <Column>
-                <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
+                <FormLabel htmlFor='error-state'>Date</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'error-state'
+                    }}
+                    validationState={{ state: 'error', text: 'Test validation state' }} />
             </Column>
             <Column>
-                <DatePicker validationState={{ state: 'warning', text: 'Test validation state' }} />
+                <FormLabel htmlFor='warning-state'>Date</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'warning-state'
+                    }}
+                    validationState={{ state: 'warning', text: 'Test validation state' }} />
             </Column>
             <Column>
-                <DatePicker validationState={{ state: 'success', text: 'Test validation state' }} />
+                <FormLabel htmlFor='success-state'>Date</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'success-state'
+                    }}
+                    validationState={{ state: 'success', text: 'Test validation state' }} />
             </Column>
             <Column>
-                <DatePicker validationState={{ state: 'information', text: 'Test validation state' }} />
+                <FormLabel htmlFor='info-state'>Date</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'info-state'
+                    }}
+                    validationState={{ state: 'information', text: 'Test validation state' }} />
             </Column>
         </Row>
     </Container>
@@ -285,12 +346,28 @@ const specialDays = {
 };
 
 export const specialDaysEx = () => (
-    <DatePicker specialDays={specialDays} />
+    <>
+        <FormLabel htmlFor='special-days'>Date</FormLabel>
+        <DatePicker
+            inputProps={{
+                id: 'special-days'
+            }}
+            specialDays={specialDays} />
+    </>
 );
 
 specialDaysEx.storyName = 'Special Days';
 
-export const weekdayStartEx = () => (<DatePicker weekdayStart={number('weekdayStart', 1)} />);
+export const weekdayStartEx = () => (
+    <>
+        <FormLabel htmlFor='weekday-start'>Date</FormLabel>
+        <DatePicker
+            inputProps={{
+                id: 'weekday-start'
+            }}
+            weekdayStart={number('weekdayStart', 1)} />
+    </>
+);
 
 weekdayStartEx.storyName = 'Weekday Start (Monday Start)';
 
@@ -422,7 +499,12 @@ export const withCustomFlipContainer = () => {
                 border: '1px solid black',
                 padding: '420px 40px 450px 240px'
             }}>
-                <DatePicker popoverProps={{ flipContainer }} />
+                <FormLabel htmlFor='flip-container'>Date</FormLabel>
+                <DatePicker
+                    inputProps={{
+                        id: 'flip-container'
+                    }}
+                    popoverProps={{ flipContainer }} />
             </div>
             <div style={{
                 backgroundColor: '#444',
@@ -435,56 +517,62 @@ export const withCustomFlipContainer = () => {
 
 
 export const dev = () => (
-    <DatePicker
-        compact={boolean('compact', true)}
-        dateFormat={
-            select(dateFormatOptionsLabel, dateFormatOptions, 'DD/MM/YYYY')
-        }
-        defaultValue={text('Default Value', '14/06/2020 - 18/06/2020')}
-        disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
-        disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
-        disableFutureDates={boolean('disable future dates', false)}
-        disablePastDates={boolean('disable past dates', false)}
-        disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
-        disableWeekends={boolean('disable weekends', false)}
-        disabledDateRanges={[
-            [
-                dateKnobToDate('disable date range 1-1', disabledDateRangeFirstDefault),
-                dateKnobToDate('disable date range 1-2', disabledDateRangeSecondDefault)
-            ],
-            [
-                dateKnobToDate('disable date range 2-1', disabledDateRangeThirdDefault),
-                dateKnobToDate('disable date range 2-2', disabledDateRangeFourthDefault)
-            ]
-        ]}
-        disabledDates={[dateKnobToDate('disable date', disabledDateDefault)]}
-        enableRangeSelection={boolean('enableRangeSelection', true)}
-        locale={text('locale', 'en')}
-        localizedText={{
-            todayLabel: text('localizedText.todayLabel', 'Today')
-        }}
-        onChange={action('on-change')}
-        onDatePickerClose={action('on-date-picker-close')}
-        onInputBlur={action('on-input-blur')}
-        onInputFocus={action('on-input-focus')}
-        openToDate={dateKnobToDate('open to date', new Date())}
-        todayActionType={select('Today Action Type',
-            {
-                'none': 'none',
-                'select': 'select',
-                'navigate': 'navigate'
+    <>
+        <FormLabel htmlFor='dev-datepicker'>Date</FormLabel>
+        <DatePicker
+            compact={boolean('compact', true)}
+            dateFormat={
+                select(dateFormatOptionsLabel, dateFormatOptions, 'DD/MM/YYYY')
             }
-        )}
-        validationState={select('Validation State',
-            {
-                'none': '',
-                'success': { state: 'success', text: 'placeholder text' },
-                'error': { state: 'error', text: 'placeholder text' },
-                'information': { state: 'information', text: 'placeholder text' },
-                'warning': { state: 'warning', text: 'placeholder text' }
-            }
-        )}
-        weekdayStart={number('weekdayStart', 0)} />
+            defaultValue={text('Default Value', '14/06/2020 - 18/06/2020')}
+            disableAfterDate={dateKnobToDate('disable after date', afterDateDefault)}
+            disableBeforeDate={dateKnobToDate('disable before date', beforeDateDefault)}
+            disableFutureDates={boolean('disable future dates', false)}
+            disablePastDates={boolean('disable past dates', false)}
+            disableWeekday={optionsKnob('disable weekdays', weekdayOptions, null, { display: 'check' })}
+            disableWeekends={boolean('disable weekends', false)}
+            disabledDateRanges={[
+                [
+                    dateKnobToDate('disable date range 1-1', disabledDateRangeFirstDefault),
+                    dateKnobToDate('disable date range 1-2', disabledDateRangeSecondDefault)
+                ],
+                [
+                    dateKnobToDate('disable date range 2-1', disabledDateRangeThirdDefault),
+                    dateKnobToDate('disable date range 2-2', disabledDateRangeFourthDefault)
+                ]
+            ]}
+            disabledDates={[dateKnobToDate('disable date', disabledDateDefault)]}
+            enableRangeSelection={boolean('enableRangeSelection', true)}
+            inputProps={{
+                id: 'dev-datepicker'
+            }}
+            locale={text('locale', 'en')}
+            localizedText={{
+                todayLabel: text('localizedText.todayLabel', 'Today')
+            }}
+            onChange={action('on-change')}
+            onDatePickerClose={action('on-date-picker-close')}
+            onInputBlur={action('on-input-blur')}
+            onInputFocus={action('on-input-focus')}
+            openToDate={dateKnobToDate('open to date', new Date())}
+            todayActionType={select('Today Action Type',
+                {
+                    'none': 'none',
+                    'select': 'select',
+                    'navigate': 'navigate'
+                }
+            )}
+            validationState={select('Validation State',
+                {
+                    'none': '',
+                    'success': { state: 'success', text: 'placeholder text' },
+                    'error': { state: 'error', text: 'placeholder text' },
+                    'information': { state: 'information', text: 'placeholder text' },
+                    'warning': { state: 'warning', text: 'placeholder text' }
+                }
+            )}
+            weekdayStart={number('weekdayStart', 0)} />
+    </>
 );
 
 dev.storyName = 'Dev';
@@ -610,6 +698,13 @@ export const localizedTodayHeaderButtonVisualStoryShotOnly = () => (
 );
 
 export const noStyles = () => (
-    <DatePicker cssNamespace='xxx' />
+    <>
+        <FormLabel htmlFor='nostyles-datepicker'>Date</FormLabel>
+        <DatePicker
+            cssNamespace='xxx'
+            inputProps={{
+                id: 'nostyles-datepicker'
+            }} />
+    </>
 );
 noStyles.parameters = { docs: { disable: true } };

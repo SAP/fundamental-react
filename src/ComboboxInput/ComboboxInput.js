@@ -439,7 +439,7 @@ const ComboboxInput = React.forwardRef(({
         <div
             aria-expanded={showPopover}
             aria-haspopup='listbox'
-            aria-owns={`${id}-listbox`}
+            aria-owns={`${id}-listbox-list`}
             id={`${id}-combobox`}
             // disabling since we're using aria-owns
             // eslint-disable-next-line jsx-a11y/role-has-required-aria-props
@@ -457,7 +457,7 @@ const ComboboxInput = React.forwardRef(({
                     {...inputProps}
                     {...labelProps}
                     aria-autocomplete={resolvedSelectionType === 'auto-inline' ? 'both' : 'list'}
-                    aria-controls={`${id}-listbox`}
+                    aria-controls={`${id}-listbox-list`}
                     compact={compact}
                     id={`${id}-input`}
                     onBlur={handleInputBlur}

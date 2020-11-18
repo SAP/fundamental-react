@@ -139,7 +139,10 @@ export const richTable = () => {
                                         </Menu.List>
                                     </Menu>
                                 }
-                                control={<Button glyph='vertical-grip' option='transparent' />}
+                                control={<Button
+                                    aria-label='Options'
+                                    glyph='vertical-grip'
+                                    option='transparent' />}
                                 placement='bottom-end' />
                         ]
                     });
