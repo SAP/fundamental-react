@@ -19,7 +19,8 @@ const BreadcrumbItem = ({ url, name, className, children, cssNamespace, ...props
             );
         } else if (children) {
             return React.cloneElement(children, {
-                'className': classnames(`${cssNamespace}-breadcrumb__link`)
+                'className': classnames(`${cssNamespace}-breadcrumb__link`),
+                'tabIndex': '0'
             });
         }
     };
