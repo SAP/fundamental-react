@@ -23,7 +23,6 @@ export { default as FormFieldset } from './Forms/FormFieldset';
 export { default as FormLegend } from './Forms/FormLegend';
 export { default as Icon } from './Icon/Icon';
 export { default as InfoLabel } from './InfoLabel/InfoLabel';
-export { default as InlineHelp } from './InlineHelp/InlineHelp';
 export { default as InputGroup } from './InputGroup/InputGroup';
 export { default as LayoutPanel } from './LayoutPanel/LayoutPanel';
 export { default as Link } from './Link/Link';

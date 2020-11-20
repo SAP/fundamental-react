@@ -9,9 +9,12 @@ export default {
 };
 
 export const primary = () => (<ButtonSegmented>
-    <Button glyph='survey' />
-    <Button glyph='pie-chart' selected />
-    <Button glyph='pool' />
+    <Button aria-label='Survey' glyph='survey' />
+    <Button
+        aria-label='Pie chart'
+        glyph='pie-chart'
+        selected />
+    <Button aria-label='Pool' glyph='pool' />
 </ButtonSegmented>);
 
 
@@ -27,9 +30,12 @@ compact.storyName = 'Compact';
 
 export const noStyles = () => (
     <ButtonSegmented cssNamespace='xxx'>
-        <Button glyph='survey' />
-        <Button glyph='pie-chart' selected />
-        <Button glyph='pool' />
+        <Button aria-label='Survey' glyph='survey' />
+        <Button
+            aria-label='Pie chart'
+            glyph='pie-chart'
+            selected />
+        <Button aria-label='Pool' glyph='pool' />
     </ButtonSegmented>
 );
 noStyles.parameters = { docs: { disable: true } };

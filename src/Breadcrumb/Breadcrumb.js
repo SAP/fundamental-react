@@ -14,7 +14,8 @@ const classnames = classnamesBind.bind(styles);
 const Breadcrumb = React.forwardRef(({ children, cssNamespace, ...props }, ref) => (
     <ul {...props}
         className={classnames(`${cssNamespace}-breadcrumb`)}
-        ref={ref}>{children}</ul>)
+        ref={ref}
+        role='menu'>{children}</ul>)
 );
 
 Breadcrumb.displayName = 'Breadcrumb';

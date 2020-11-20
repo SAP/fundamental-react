@@ -21,7 +21,6 @@ exports[`Storyshots Component API/Button/ButtonSegmented Compact 1`] = `
     </button>
     <button
       className="fd-button fd-button--compact is-selected"
-      selected={true}
       type="button"
     >
       <span
@@ -54,6 +53,7 @@ exports[`Storyshots Component API/Button/ButtonSegmented No Styles 1`] = `
     role="group"
   >
     <button
+      aria-label="Survey"
       className="xxx-button"
       type="button"
     >
@@ -64,8 +64,8 @@ exports[`Storyshots Component API/Button/ButtonSegmented No Styles 1`] = `
       />
     </button>
     <button
+      aria-label="Pie chart"
       className="xxx-button is-selected"
-      selected={true}
       type="button"
     >
       <i
@@ -75,6 +75,7 @@ exports[`Storyshots Component API/Button/ButtonSegmented No Styles 1`] = `
       />
     </button>
     <button
+      aria-label="Pool"
       className="xxx-button"
       type="button"
     >
@@ -98,6 +99,7 @@ exports[`Storyshots Component API/Button/ButtonSegmented Primary 1`] = `
     role="group"
   >
     <button
+      aria-label="Survey"
       className="fd-button"
       type="button"
     >
@@ -108,8 +110,8 @@ exports[`Storyshots Component API/Button/ButtonSegmented Primary 1`] = `
       />
     </button>
     <button
+      aria-label="Pie chart"
       className="fd-button is-selected"
-      selected={true}
       type="button"
     >
       <i
@@ -119,6 +121,7 @@ exports[`Storyshots Component API/Button/ButtonSegmented Primary 1`] = `
       />
     </button>
     <button
+      aria-label="Pool"
       className="fd-button"
       type="button"
     >

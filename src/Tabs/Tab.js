@@ -22,17 +22,17 @@ const Tab = React.forwardRef(({ title, glyph, id, selected, onClick,
     return (
         <li
             {...props}
+            aria-controls={id}
+            aria-selected={selected}
             className={tabClasses}
             key={id}
-            ref={ref}>
+            ref={ref}
+            role='tab'>
             <a
                 {...linkProps}
-                aria-controls={id}
-                aria-selected={selected}
                 className={classnames(`${cssNamespace}-tabs__link`)}
                 href={`#${id}`}
-                onClick={(event) => onClick(event, index)}
-                role='tab'>
+                onClick={(event) => onClick(event, index)}>
                 {glyph ?
                     <span className={classnames('fd-tabs__icon')}>
                         <Icon ariaLabel={title} glyph={glyph} />

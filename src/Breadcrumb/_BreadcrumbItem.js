@@ -10,11 +10,17 @@ const BreadcrumbItem = ({ url, name, className, children, cssNamespace, ...props
     const renderLink = () => {
         if (!children && url) {
             return (
-                <a className={classnames(`${cssNamespace}-breadcrumb__link`)} href={url}>{name}</a>
+                <a
+                    className={classnames(`${cssNamespace}-breadcrumb__link`)}
+                    href={url}
+                    tabIndex='0'>
+                    {name}
+                </a>
             );
         } else if (children) {
             return React.cloneElement(children, {
-                'className': classnames(`${cssNamespace}-breadcrumb__link`)
+                'className': classnames(`${cssNamespace}-breadcrumb__link`),
+                'tabIndex': '0'
             });
         }
     };
@@ -25,7 +31,11 @@ const BreadcrumbItem = ({ url, name, className, children, cssNamespace, ...props
     );
 
     return (
-        <li {...props} className={breadcrumbItemClasses}>
+        <li
+            {...props}
+            className={breadcrumbItemClasses}
+            role='menuitem'
+            tabIndex='-1'>
             {renderLink()}
         </li>
     );

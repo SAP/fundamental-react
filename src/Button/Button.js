@@ -32,6 +32,8 @@ const Button = React.forwardRef(({
     className,
     cssNamespace,
     textClassName,
+    badge,
+    badgeClassName,
     ...props
 }, ref) => {
 
@@ -50,6 +52,11 @@ const Button = React.forwardRef(({
     const buttonTextClasses = classnames(
         `${cssNamespace}-button__text`,
         textClassName
+    );
+
+    const badgeClasses = classnames(
+        `${cssNamespace}-button__badge`,
+        badgeClassName
     );
 
     const ariaDisabled = props['aria-disabled'];
@@ -107,11 +114,11 @@ const Button = React.forwardRef(({
                 className={buttonClasses}
                 onClick={onClickHandler}
                 ref={ref}
-                selected={selected}
                 type={typeAttr}>
                 {iconBeforeText && renderIcon()}
                 {children && <span className={buttonTextClasses}>{children}</span>}
                 {!iconBeforeText && renderIcon()}
+                {badge && <span className={badgeClasses}>{badge}</span>}
             </button>
             {renderButtonStateMessage()}
         </>
@@ -140,11 +147,21 @@ const validateStateTransitionMessage = (props, propName) => {
     }
 };
 
+const badgePropValidation = (props, propName) => {
+    if (props[propName].length < 1 || props[propName].length > 4) {
+        return new Error(`${propName} must be between 1-4 characters.`);
+    }
+};
+
 Button.propTypes = {
     /** Set to **true** to enable button focus through keyboard on a disabled button */
     allowFocusOnDisable: PropTypes.bool,
     /** Automatically set when disabled prop is passed into button */
     'aria-disabled': PropTypes.bool,
+    /** Content to display in a badge. Must be between 1-4 characters */
+    badge: badgePropValidation,
+    /** CSS class(es) to add to the badge element */
+    badgeClassName: PropTypes.string,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */

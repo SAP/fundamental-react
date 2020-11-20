@@ -9,15 +9,15 @@ exports[`Storyshots Component API/Tabs/TabGroup All Buttons 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -31,15 +31,15 @@ exports[`Storyshots Component API/Tabs/TabGroup All Buttons 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -53,15 +53,15 @@ exports[`Storyshots Component API/Tabs/TabGroup All Buttons 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -75,15 +75,15 @@ exports[`Storyshots Component API/Tabs/TabGroup All Buttons 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -137,15 +137,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Dev 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -155,15 +155,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Dev 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -173,15 +173,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Dev 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -191,15 +191,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Dev 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -253,16 +253,16 @@ exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
       disabled={true}
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -272,16 +272,16 @@ exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
       disabled={true}
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -291,16 +291,16 @@ exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
       disabled={true}
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -310,16 +310,16 @@ exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
       disabled={true}
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -373,15 +373,15 @@ exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="xxx-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="xxx-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="xxx-tabs__tag"
@@ -391,15 +391,15 @@ exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="xxx-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="xxx-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="xxx-tabs__tag"
@@ -409,15 +409,15 @@ exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="xxx-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="xxx-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="xxx-tabs__tag"
@@ -427,15 +427,15 @@ exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="xxx-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="xxx-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -488,15 +488,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -506,15 +506,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -524,15 +524,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -542,15 +542,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -604,15 +604,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -622,15 +622,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -640,15 +640,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -658,15 +658,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -720,15 +720,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -738,15 +738,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -756,15 +756,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -774,15 +774,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -829,15 +829,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -847,15 +847,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -865,15 +865,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -883,15 +883,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -938,15 +938,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -956,15 +956,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -974,15 +974,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -992,15 +992,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -1047,15 +1047,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -1065,15 +1065,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -1083,15 +1083,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -1101,15 +1101,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"
@@ -1156,15 +1156,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
     role="tablist"
   >
     <li
+      aria-controls="1"
+      aria-selected={true}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="1"
-        aria-selected={true}
         className="fd-tabs__link"
         href="#1"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -1174,15 +1174,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="2"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="2"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#2"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -1192,15 +1192,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="3"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="3"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#3"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__tag"
@@ -1210,15 +1210,15 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
       </a>
     </li>
     <li
+      aria-controls="4"
+      aria-selected={false}
       className="fd-tabs__item"
+      role="tab"
     >
       <a
-        aria-controls="4"
-        aria-selected={false}
         className="fd-tabs__link"
         href="#4"
         onClick={[Function]}
-        role="tab"
       >
         <span
           className="fd-tabs__icon"

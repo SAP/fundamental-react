@@ -95,6 +95,34 @@ export const sizes = () => (
 
 sizes.storyName = 'Sizes';
 
+/** Button gets a badge in cases of collecting a number of items from various pages in order to trigger an action.
+ * Currently the Emphasized, Standard and Transparent type of buttons are recommended to be used with Badge.
+ * Badges cannot contain more than 4 characters.
+ */
+
+export const badges = () => (
+    <div className='fddocs-container'>
+        <Button badge='1234'>Default</Button>
+        <Button badge='123' option='emphasized'>Emphasized</Button>
+        <Button badge='12' option='transparent'>Transparent</Button>
+        <Button badge='1234' compact>Default compact</Button>
+        <Button
+            badge='123'
+            compact
+            option='emphasized'>
+            Emphasized compact
+        </Button>
+        <Button
+            badge='12'
+            compact
+            option='transparent'>
+            Transparent compact
+        </Button>
+    </div>
+);
+
+badges.storyName = 'Badges';
+
 /** There are four states: default, `selected`, `disabled`, and `allowFocusOnDisable`. `allowFocusOnDisabled` allows a
  * disabled button to be focusable. This is to ensure a screen reader can tab into the button and read its state.
  * if `allowFocusOnDisabled` is selected there must be a `disabledMessage` and `enabledMessage` prop within the button

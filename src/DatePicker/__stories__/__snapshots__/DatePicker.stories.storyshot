@@ -4,6 +4,12 @@ exports[`Storyshots Component API/DatePicker Compact 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="compact-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -39,6 +45,7 @@ exports[`Storyshots Component API/DatePicker Compact 1`] = `
                 >
                   <input
                     className="fd-input fd-input--compact fd-input-group__input"
+                    id="compact-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -581,6 +588,12 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="dev-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue="14/06/2020 - 18/06/2020"
     onChange={[Function]}
@@ -616,6 +629,7 @@ exports[`Storyshots Component API/DatePicker Dev 1`] = `
                 >
                   <input
                     className="fd-input fd-input--compact fd-input-group__input"
+                    id="dev-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -655,6 +669,12 @@ exports[`Storyshots Component API/DatePicker Disabled 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="disabled-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -691,6 +711,7 @@ exports[`Storyshots Component API/DatePicker Disabled 1`] = `
                   <input
                     className="fd-input fd-input-group__input"
                     disabled={true}
+                    id="disabled-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -916,6 +937,12 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
       <div
         className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
       >
+        <label
+          className="fd-form-label"
+          htmlFor="es-datepicker"
+        >
+          La fecha
+        </label>
         <div
           defaultValue=""
           onChange={[Function]}
@@ -951,6 +978,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
                       >
                         <input
                           className="fd-input fd-input-group__input"
+                          id="es-datepicker"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -987,6 +1015,12 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
       <div
         className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
       >
+        <label
+          className="fd-form-label"
+          htmlFor="fr-datepicker"
+        >
+          La date
+        </label>
         <div
           defaultValue=""
           onChange={[Function]}
@@ -1022,6 +1056,7 @@ exports[`Storyshots Component API/DatePicker Localized DatePicker 1`] = `
                       >
                         <input
                           className="fd-input fd-input-group__input"
+                          id="fr-datepicker"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1414,6 +1449,12 @@ exports[`Storyshots Component API/DatePicker No Styles 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="nostyles-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -1449,6 +1490,7 @@ exports[`Storyshots Component API/DatePicker No Styles 1`] = `
                 >
                   <input
                     className="xxx-input xxx-input-group__input"
+                    id="nostyles-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1488,6 +1530,12 @@ exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="openTo-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -1523,6 +1571,7 @@ exports[`Storyshots Component API/DatePicker Open To Date 1`] = `
                 >
                   <input
                     className="fd-input fd-input-group__input"
+                    id="openTo-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1562,6 +1611,12 @@ exports[`Storyshots Component API/DatePicker Primary 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="primary-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -1597,6 +1652,7 @@ exports[`Storyshots Component API/DatePicker Primary 1`] = `
                 >
                   <input
                     className="fd-input fd-input-group__input"
+                    id="primary-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1636,6 +1692,12 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="readOnly-datepicker"
+  >
+    Date
+  </label>
   <div
     defaultValue="12/12/2012"
     onChange={[Function]}
@@ -1671,6 +1733,7 @@ exports[`Storyshots Component API/DatePicker ReadOnly 1`] = `
                 >
                   <input
                     className="fd-input fd-input-group__input"
+                    id="readOnly-datepicker"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1695,6 +1758,12 @@ exports[`Storyshots Component API/DatePicker Special Days 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="special-days"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -1730,6 +1799,7 @@ exports[`Storyshots Component API/DatePicker Special Days 1`] = `
                 >
                   <input
                     className="fd-input fd-input-group__input"
+                    id="special-days"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -1778,6 +1848,12 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
       <div
         className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
+        <label
+          className="fd-form-label"
+          htmlFor="error-state"
+        >
+          Date
+        </label>
         <div
           defaultValue=""
           onChange={[Function]}
@@ -1813,6 +1889,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                       >
                         <input
                           className="fd-input fd-input-group__input"
+                          id="error-state"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1849,6 +1926,12 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
       <div
         className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
+        <label
+          className="fd-form-label"
+          htmlFor="warning-state"
+        >
+          Date
+        </label>
         <div
           defaultValue=""
           onChange={[Function]}
@@ -1884,6 +1967,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                       >
                         <input
                           className="fd-input fd-input-group__input"
+                          id="warning-state"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1920,6 +2004,12 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
       <div
         className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
+        <label
+          className="fd-form-label"
+          htmlFor="success-state"
+        >
+          Date
+        </label>
         <div
           defaultValue=""
           onChange={[Function]}
@@ -1955,6 +2045,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                       >
                         <input
                           className="fd-input fd-input-group__input"
+                          id="success-state"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -1991,6 +2082,12 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
       <div
         className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
+        <label
+          className="fd-form-label"
+          htmlFor="info-state"
+        >
+          Date
+        </label>
         <div
           defaultValue=""
           onChange={[Function]}
@@ -2026,6 +2123,7 @@ exports[`Storyshots Component API/DatePicker Validation States 1`] = `
                       >
                         <input
                           className="fd-input fd-input-group__input"
+                          id="info-state"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -2068,6 +2166,12 @@ exports[`Storyshots Component API/DatePicker Weekday Start (Monday Start) 1`] = 
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="weekday-start"
+  >
+    Date
+  </label>
   <div
     defaultValue=""
     onChange={[Function]}
@@ -2103,6 +2207,7 @@ exports[`Storyshots Component API/DatePicker Weekday Start (Monday Start) 1`] = 
                 >
                   <input
                     className="fd-input fd-input-group__input"
+                    id="weekday-start"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -2158,6 +2263,12 @@ exports[`Storyshots Component API/DatePicker With Custom Flip Container 1`] = `
         }
       }
     >
+      <label
+        className="fd-form-label"
+        htmlFor="flip-container"
+      >
+        Date
+      </label>
       <div
         defaultValue=""
         onChange={[Function]}
@@ -2193,6 +2304,7 @@ exports[`Storyshots Component API/DatePicker With Custom Flip Container 1`] = `
                     >
                       <input
                         className="fd-input fd-input-group__input"
+                        id="flip-container"
                         onBlur={[Function]}
                         onChange={[Function]}
                         onFocus={[Function]}
