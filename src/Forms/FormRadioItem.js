@@ -1,17 +1,21 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
 import React from 'react';
-import shortId from '../utils/shortId';
-import 'fundamental-styles/dist/radio.css';
+import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/radio.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const FormRadioItem = React.forwardRef(({
     checked,
     children,
-    className,
     compact,
+    cssNamespace,
+    data,
     defaultChecked,
     disabled,
     id,
@@ -24,19 +28,19 @@ const FormRadioItem = React.forwardRef(({
     ...props }, ref) => {
 
     const inputClassName = classnames(
-        'fd-radio',
+        `${cssNamespace}-radio`,
         {
-            'fd-radio--compact': compact,
+            [`${cssNamespace}-radio--compact`]: compact,
             [`is-${state}`]: state
         }
     );
 
-    const radioId = id ? id : shortId.generate();
+    const generatedRadioId = useUniqueId();
+    const radioId = id || generatedRadioId;
 
     return (
         <FormItem
             {...props}
-            className={className}
             isInline={inline}
             key={id}>
             <input
@@ -51,7 +55,7 @@ const FormRadioItem = React.forwardRef(({
                 value={value} />
             <FormLabel
                 {...labelProps}
-                className='fd-radio__label'
+                className={classnames(`${cssNamespace}-radio__label`)}
                 disabled={disabled}
                 htmlFor={radioId}>
                 {children}
@@ -71,6 +75,8 @@ FormRadioItem.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Payload to be used for onChange callback when this `FormRadioItem` is selected in a `FormRadioGroup`.*/
+    data: PropTypes.any,
     /** Set to **true** when the radio input is checked and an uncontrolled component */
     defaultChecked: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
@@ -91,4 +97,4 @@ FormRadioItem.propTypes = {
     value: PropTypes.string
 };
 
-export default FormRadioItem;
+export default withStyles(FormRadioItem);

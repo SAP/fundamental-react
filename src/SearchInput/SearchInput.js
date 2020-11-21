@@ -1,212 +1,209 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
-import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroup from '../InputGroup/InputGroup';
+import keycode from 'keycode';
 import Menu from '../Menu/Menu';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import withStyles from '../utils/withStyles';
+import React, { useEffect, useState } from 'react';
+import styles from 'fundamental-styles/dist/input-group.css';
 
-class SearchInput extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isExpanded: false,
-            searchExpanded: false,
-            value: props.inputProps?.value ? props.inputProps.value : ''
-        };
-    }
+const classnames = classnamesBind.bind(styles);
 
-    filterList = (list, query) => {
-        return list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
-    }
+const SearchInput = React.forwardRef( ({
+    className,
+    compact,
+    cssNamespace,
+    disabled,
+    formMessageProps,
+    inputProps,
+    inputGroupAddonProps,
+    inputGroupProps,
+    inShellbar,
+    listProps,
+    localizedText,
+    noSearchBtn,
+    onChange,
+    onEnter,
+    onSelect,
+    placeholder,
+    popoverProps,
+    readOnly,
+    searchList,
+    subStringSearch,
+    searchBtnProps,
+    validationState,
+    ...rest
+}, ref) => {
+    const [isExpanded, setIsExpanded ] = useState(false);
+    const [searchExpanded, setSearchExpanded] = useState(false);
+    const [value, setValue] = useState(inputProps?.value || '');
 
-    handleKeyPress = event => {
-        if (event.key === 'enter') {
-            this.props.onEnter(this.state.value);
+    const filterList = (list, query) => {
+        return subStringSearch ? list.filter((item) => {
+            return item.text.toLowerCase().includes(query.toLowerCase());
+        }) : list.filter((item) => item.text.toLowerCase().startsWith(query.toLowerCase()));
+    };
+
+    const handleKeyPress = event => {
+        if (keycode(event) === 'enter') {
+            onEnter(value);
         }
     };
 
-    handleListItemClick = (event, item) => {
-        this.setState({
-            value: item.text,
-            isExpanded: false,
-            searchExpanded: false
-        }, () => {
-            item?.callback();
-            this.props.onSelect(event, item);
-        });
+    const handleListItemClick = (event, item) => {
+        setValue(item.text);
+        setIsExpanded(false);
+        setSearchExpanded(false);
+        item?.callback();
+        onSelect(event, item);
     };
 
-    handleChange = event => {
+    const handleChange = event => {
         let filteredResult;
-        if (this.props.searchList) {
-            filteredResult = this.filterList(this.props.searchList, event.target.value);
+        if (searchList) {
+            filteredResult = filterList(searchList, event.target.value);
         }
-        this.setState({
-            value: event.target.value,
-            isExpanded: true
-        }, () => {
-            this.props.onChange(event, filteredResult);
-        });
+        setValue(event.target.value);
+        setIsExpanded(true);
+        onChange(event, filteredResult);
     };
 
-    handleClick = () => {
-        this.setState(prevState => ({
-            isExpanded: !prevState.isExpanded
-        }));
-    };
-
-    handleClickOutside = () => {
-        this.setState({
-            isExpanded: false,
-            searchExpanded: false
-        });
-    };
-
-    handleSearchBtn = () => {
-        this.setState(prevState => ({
-            searchExpanded: !prevState.searchExpanded
-        }));
-
-        if (this.state.searchExpanded && this.state.isExpanded) {
-            this.setState({
-                isExpanded: false
-            });
+    const handleClick = () => {
+        if (!readOnly) {
+            setIsExpanded(!isExpanded);
         }
     };
 
-    handleEsc = event => {
+    const handleClickOutside = () => {
+        setIsExpanded(false);
+        setSearchExpanded(false);
+    };
+
+    const handleEsc = event => {
         if (
-            (event.keyCode === 27 && this.state.isExpanded === true) ||
-            (event.keyCode === 27 && this.state.searchExpanded === true)
+            (event.keyCode === 27 && isExpanded === true) ||
+            (event.keyCode === 27 && searchExpanded === true)
         ) {
-            this.setState({
-                isExpanded: false,
-                searchExpanded: false,
-                value: ''
-            });
+            setIsExpanded(false);
+            setSearchExpanded(false);
+            setValue('');
         }
     };
 
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleEsc, false);
-    }
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleEsc, false);
-    }
+    useEffect(() => {
+        document.addEventListener('keydown', handleEsc, false);
 
-    render() {
-        const {
-            placeholder,
-            inShellbar,
-            onEnter,
-            searchList,
-            onChange,
-            onSelect,
-            noSearchBtn,
-            compact,
-            className,
-            inputProps,
-            inputGroupAddonProps,
-            inputGroupProps,
-            listProps,
-            searchBtnProps,
-            popoverProps,
-            validationState,
-            ...rest
-        } = this.props;
+        return () => {
+            document.removeEventListener('keydown', handleEsc, false);
+        };
+    });
 
-        let inputGroupClasses = inputGroupProps && inputGroupProps.className;
 
-        inputGroupClasses = !inShellbar ? classnames(
-            inputGroupClasses,
-            'fd-input-group--control',
-            {
-                [`is-${validationState?.state}`]: validationState?.state
-            }
-        ) : inputGroupClasses;
-        let filteredResult = this.state.value && this.props.searchList ? this.filterList(this.props.searchList, this.state.value) : this.props.searchList;
-        const popoverBody = (
-            <Menu>
-                <Menu.List {...listProps}>
-                    {filteredResult && filteredResult.length > 0 ? (
-                        filteredResult.map((item, index) => {
-                            return (
-                                <Menu.Item
-                                    key={index}
-                                    onClick={(e) => this.handleListItemClick(e, item)}>
-                                    <strong>{this.state.value}</strong>
-                                    {this.state.value && this.state.value.length
-                                        ? item.text.substring(this.state.value.length)
-                                        : item.text}
-                                </Menu.Item>
-                            );
-                        })
-                    ) : (
-                        <Menu.Item>No result</Menu.Item>
-                    )}
-                </Menu.List>
-            </Menu>
-        );
+    let inputGroupClasses = inputGroupProps && inputGroupProps.className;
 
-        const inputGroup = (
-            <InputGroup
-                {...inputGroupProps}
-                className={inputGroupClasses}
-                compact={compact}
-                validationState={validationState}>
-                <FormInput
-                    {...inputProps}
-                    onChange={this.handleChange}
-                    onClick={this.handleClick}
-                    onKeyPress={this.handleKeyPress}
-                    placeholder={placeholder}
-                    value={this.state.value} />
-
-                {!noSearchBtn && (
-                    <InputGroup.Addon {...inputGroupAddonProps} isButton>
-                        <Button {...searchBtnProps}
-                            glyph='search'
-                            onClick={this.handleClick}
-                            option='transparent' />
-                    </InputGroup.Addon>
+    inputGroupClasses = !inShellbar ? classnames(
+        inputGroupClasses,
+        `${cssNamespace}-input-group--control`,
+        {
+            [`is-${validationState?.state}`]: validationState?.state
+        }
+    ) : inputGroupClasses;
+    let filteredResult = value && searchList ? filterList(searchList, value) : searchList;
+    const popoverBody = (
+        <Menu>
+            <Menu.List {...listProps}>
+                {filteredResult && filteredResult.length > 0 ? (
+                    filteredResult.map((item, index) => {
+                        return (
+                            subStringSearch ? (<Menu.Item
+                                key={index}
+                                onClick={(e) => handleListItemClick(e, item)}>
+                                {item.text}
+                            </Menu.Item>) :
+                                (
+                                    <Menu.Item
+                                        key={index}
+                                        onClick={(e) => handleListItemClick(e, item)}>
+                                        <strong>{value}</strong>
+                                        {value && value.length
+                                            ? item.text.substring(value.length)
+                                            : item.text}
+                                    </Menu.Item>
+                                )
+                        );
+                    })
+                ) : (
+                    <Menu.Item>No result</Menu.Item>
                 )}
-            </InputGroup>
-        );
+            </Menu.List>
+        </Menu>
+    );
 
-        const wrappedInputGroup = (
-            <FormValidationOverlay
+    const inputGroup = (
+        <InputGroup
+            {...inputGroupProps}
+            className={inputGroupClasses}
+            compact={compact}
+            disabled={disabled}
+            readOnly={readOnly}
+            // need to get the styling into the input group, but without creating a duplicate popover
+            validationState={{ state: validationState?.state, text: '' }}>
+            <FormInput
+                {...inputProps}
+                disabled={disabled}
+                onChange={handleChange}
+                onClick={handleClick}
+                onKeyPress={handleKeyPress}
+                placeholder={placeholder}
+                readOnly={readOnly}
+                value={value} />
+
+            { !(noSearchBtn || readOnly) && (
+                <InputGroup.Addon {...inputGroupAddonProps} isButton>
+                    <Button {...searchBtnProps}
+                        aria-label={localizedText.searchBtnLabel}
+                        disabled={disabled}
+                        glyph='search'
+                        onClick={handleClick}
+                        option='transparent' />
+                </InputGroup.Addon>
+            )}
+        </InputGroup>
+    );
+
+    return (
+        <div
+            {...rest}
+            className={className}
+            ref={ref}>
+            <Popover
+                {...popoverProps}
+                body={
+                    (<>
+                        {validationState &&
+                            <FormMessage
+                                {...formMessageProps}
+                                type={validationState.state}>
+                                {validationState.text}
+                            </FormMessage>
+                        }
+                        {popoverBody}
+                    </>)}
                 control={inputGroup}
-                validationState={validationState} />
-        );
-
-        return (
-            <div {...rest} className={className}>
-                <Popover
-                    {...popoverProps}
-                    body={
-                        (<>
-                            {validationState &&
-                                <FormMessage
-                                    type={validationState.state}>
-                                    {validationState.text}
-                                </FormMessage>
-                            }
-                            {popoverBody}
-                        </>)}
-                    control={wrappedInputGroup}
-                    disableKeyPressHandler
-                    noArrow
-                    onClickOutside={this.handleClickOutside}
-                    widthSizingType='minTarget' />
-            </div>
-        );
-    }
-}
+                disableKeyPressHandler
+                disabled={readOnly}
+                noArrow
+                onClickOutside={handleClickOutside}
+                widthSizingType='minTarget' />
+        </div>
+    );
+});
 
 SearchInput.displayName = 'SearchInput';
 
@@ -215,6 +212,10 @@ SearchInput.propTypes = {
     className: PropTypes.string,
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
+    /** Set to **true** to mark component as disabled and make it non-interactive */
+    disabled: PropTypes.bool,
+    /** Additional props to be spread to the FormMessage component */
+    formMessageProps: PropTypes.object,
     /** Props to be spread to the InputGroupAddon component */
     inputGroupAddonProps: PropTypes.object,
     /** Props to be spread to the InputGroup component */
@@ -224,12 +225,18 @@ SearchInput.propTypes = {
     inShellbar: PropTypes.bool,
     /** Additional props to be spread to the `<ul>` element */
     listProps: PropTypes.object,
+    /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        searchBtnLabel: PropTypes.string
+    }),
     /** Set to **true** to render without a search button */
     noSearchBtn: PropTypes.bool,
     /** Localized placeholder text of the input */
     placeholder: PropTypes.string,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
+    /** Set to **true** to mark component as readonly */
+    readOnly: PropTypes.bool,
     /** Additional props to be spread to the search `<button>` element */
     searchBtnProps: PropTypes.object,
     /** Collection of items to display in the dropdown list */
@@ -239,6 +246,8 @@ SearchInput.propTypes = {
             callback: PropTypes.func
         })
     ),
+    /** enable substring search */
+    subStringSearch: PropTypes.bool,
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -246,18 +255,38 @@ SearchInput.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when a change event is fired on the underlying `<input>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Object[]} matches - array of objects from searchList that match the search string.
+     * @returns {void}
+    */
     onChange: PropTypes.func,
-    /** Callback function when the user hits the <enter> key */
+    /**
+     * Callback function; triggered when the user hits the `enter` key in the text `<input>`.
+     *
+     * @param {string} text - current string value of input field.
+     * @returns {void}
+     * */
     onEnter: PropTypes.func,
-    /** Callback function when user clicks on an option */
+    /**
+     * Callback function; triggered when user clicks on an option.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Object} data - selected object from searchList
+     * @returns {void}
+     * */
     onSelect: PropTypes.func
 };
 
 SearchInput.defaultProps = {
+    localizedText: {
+        searchBtnLabel: 'Search'
+    },
     onChange: () => { },
     onEnter: () => { },
     onSelect: () => { }
 };
 
-export default SearchInput;
+export default withStyles(SearchInput);

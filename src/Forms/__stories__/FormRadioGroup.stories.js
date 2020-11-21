@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import FormRadioGroup from '../FormRadioGroup';
 import FormRadioItem from '../FormRadioItem';
 import React from 'react';
@@ -15,13 +16,13 @@ export default {
 
 export const primary = () => (
     <FormRadioGroup>
-        <FormRadioItem>
+        <FormRadioItem data='option1'>
             Option 1
         </FormRadioItem>
-        <FormRadioItem>
+        <FormRadioItem data='option2'>
             Option 2
         </FormRadioItem>
-        <FormRadioItem>
+        <FormRadioItem data='option3'>
             Option 3
         </FormRadioItem>
     </FormRadioGroup>
@@ -29,13 +30,13 @@ export const primary = () => (
 
 export const inline = () => (
     <FormRadioGroup inline>
-        <FormRadioItem>
+        <FormRadioItem data='option1'>
             Option 1
         </FormRadioItem>
-        <FormRadioItem>
+        <FormRadioItem data='option2'>
             Option 2
         </FormRadioItem>
-        <FormRadioItem>
+        <FormRadioItem data='option3'>
             Option 3
         </FormRadioItem>
     </FormRadioGroup>
@@ -43,13 +44,13 @@ export const inline = () => (
 
 export const compact = () => (
     <FormRadioGroup compact>
-        <FormRadioItem>
+        <FormRadioItem data='option1'>
             Option 1
         </FormRadioItem>
-        <FormRadioItem>
+        <FormRadioItem data='option2'>
             Option 2
         </FormRadioItem>
-        <FormRadioItem>
+        <FormRadioItem data='option3'>
             Option 3
         </FormRadioItem>
     </FormRadioGroup>
@@ -62,13 +63,14 @@ export const compact = () => (
 
 export const disabled = () => (
     <FormRadioGroup>
-        <FormRadioItem disabled>
+        <FormRadioItem data='option1' disabled>
             Option 1
         </FormRadioItem>
-        <FormRadioItem defaultChecked disabled>
+        <FormRadioItem data='option2' defaultChecked
+            disabled>
             Option 2
         </FormRadioItem>
-        <FormRadioItem disabled>
+        <FormRadioItem data='option3' disabled>
             Option 3
         </FormRadioItem>
     </FormRadioGroup>
@@ -76,19 +78,19 @@ export const disabled = () => (
 
 export const validationStates = () => (
     <FormRadioGroup>
-        <FormRadioItem>
+        <FormRadioItem data='DefaultOption'>
             Default
         </FormRadioItem>
-        <FormRadioItem state='error'>
+        <FormRadioItem data='ErrorOption' state='error'>
             Error
         </FormRadioItem>
-        <FormRadioItem state='warning'>
+        <FormRadioItem data='WarningOption' state='warning'>
             Warning
         </FormRadioItem>
-        <FormRadioItem state='success'>
+        <FormRadioItem data='SuccessOption' state='success'>
             Success
         </FormRadioItem>
-        <FormRadioItem state='information'>
+        <FormRadioItem data='InformationOption' state='information'>
             Information
         </FormRadioItem>
     </FormRadioGroup>
@@ -99,8 +101,10 @@ export const validationStates = () => (
 export const dev = () => (
     <FormRadioGroup
         compact={boolean('compact', false)}
-        inline={boolean('inline', false)}>
+        inline={boolean('inline', false)}
+        onChange={action('on-change')}>
         <FormRadioItem
+            data='test'
             disabled={boolean('disabled', false)}
             state={select('Validation State', {
                 'default': null,
@@ -112,6 +116,7 @@ export const dev = () => (
             Option 1
         </FormRadioItem>
         <FormRadioItem
+            data='test2'
             disabled={boolean('disabled', false)}
             state={select('Validation State', {
                 'default': null,
@@ -123,6 +128,7 @@ export const dev = () => (
             Option 2
         </FormRadioItem>
         <FormRadioItem
+            data={{ 'test3': 'nice' }}
             disabled={boolean('disabled', false)}
             state={select('Validation State', {
                 'default': null,
@@ -138,3 +144,18 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <FormRadioGroup cssNamespace='xxx'>
+        <FormRadioItem data='option1'>
+            Option 1
+        </FormRadioItem>
+        <FormRadioItem data='option2'>
+            Option 2
+        </FormRadioItem>
+        <FormRadioItem data='option3'>
+            Option 3
+        </FormRadioItem>
+    </FormRadioGroup>
+);
+noStyles.parameters = { docs: { disable: true } };

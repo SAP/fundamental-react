@@ -1,9 +1,12 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { TAB_SIZES } from '../utils/constants';
-import { TabContent } from './_TabContent';
+import TabContent from './_TabContent';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/tabs.css';
+import styles from 'fundamental-styles/dist/tabs.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **TabGroup** is a collection of **Tab** components.  Each **Tab** is based on a folder
 metaphor and is used to separate content into different sections.
@@ -73,6 +76,7 @@ class TabGroup extends Component {
         const {
             children,
             className,
+            cssNamespace,
             selectedIndex,
             size,
             tabGroupProps,
@@ -81,8 +85,8 @@ class TabGroup extends Component {
 
         // css classes to use for tab group
         const tabGroupClasses = classnames(
-            'fd-tabs',
-            { [`fd-tabs--${size}`]: size },
+            `${cssNamespace}-tabs`,
+            { [`${cssNamespace}-tabs--${size}`]: size },
             className
         );
         return (
@@ -119,8 +123,14 @@ TabGroup.propTypes = {
     'xxl' */
     size: PropTypes.oneOf(TAB_SIZES),
     tabGroupProps: PropTypes.object,
-    /** Callback function when the user clicks on a tab. Parameters passed to the function are `event` and `index` */
+    /**
+     * Callback function; triggered when the user selects a tab by clicking on pressing `enter`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {number} index - selected tab index.
+     * @returns {void}
+     * */
     onTabClick: PropTypes.func
 };
 
-export default TabGroup;
+export default withStyles(TabGroup);

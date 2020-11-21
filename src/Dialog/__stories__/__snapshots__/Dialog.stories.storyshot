@@ -9,7 +9,29 @@ exports[`Storyshots Component API/Dialog Header 1`] = `
     onClick={[Function]}
     type="button"
   >
-    Show Dialog
+    <span
+      className="fd-button__text"
+    >
+      Show Dialog
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Component API/Dialog No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <button
+    className="xxx-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="xxx-button__text"
+    >
+      Show Dialog
+    </span>
   </button>
 </div>
 `;
@@ -23,7 +45,11 @@ exports[`Storyshots Component API/Dialog Primary 1`] = `
     onClick={[Function]}
     type="button"
   >
-    Show Dialog
+    <span
+      className="fd-button__text"
+    >
+      Show Dialog
+    </span>
   </button>
 </div>
 `;
@@ -40,28 +66,44 @@ exports[`Storyshots Component API/Dialog Sizes 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Show Small Dialog
+      <span
+        className="fd-button__text"
+      >
+        Show Small Dialog
+      </span>
     </button>
     <button
       className="fd-button"
       onClick={[Function]}
       type="button"
     >
-      Show Medium Dialog
+      <span
+        className="fd-button__text"
+      >
+        Show Medium Dialog
+      </span>
     </button>
     <button
       className="fd-button"
       onClick={[Function]}
       type="button"
     >
-      Show Large Dialog
+      <span
+        className="fd-button__text"
+      >
+        Show Large Dialog
+      </span>
     </button>
     <button
       className="fd-button"
       onClick={[Function]}
       type="button"
     >
-      Show XL Dialog
+      <span
+        className="fd-button__text"
+      >
+        Show XL Dialog
+      </span>
     </button>
   </div>
 </div>
@@ -76,7 +118,11 @@ exports[`Storyshots Component API/Dialog Subheader 1`] = `
     onClick={[Function]}
     type="button"
   >
-    Show Dialog
+    <span
+      className="fd-button__text"
+    >
+      Show Dialog
+    </span>
   </button>
 </div>
 `;

@@ -1,5 +1,4 @@
-import classnames from 'classnames';
-import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
+import classnamesBind from 'classnames/bind';
 import LayoutPanelActions from './_LayoutPanelActions';
 import LayoutPanelBody from './_LayoutPanelBody';
 import LayoutPanelFilters from './_LayoutPanelFilters';
@@ -8,19 +7,22 @@ import LayoutPanelHead from './_LayoutPanelHead';
 import LayoutPanelHeader from './_LayoutPanelHeader';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/layout-grid.css';
-import 'fundamental-styles/dist/layout-panel.css';
+import withStyles from '../utils/withStyles';
+import layoutGridStyles from 'fundamental-styles/dist/layout-grid.css';
+import layoutPanelStyles from 'fundamental-styles/dist/layout-panel.css';
+
+const classnames = classnamesBind.bind({
+    ...layoutGridStyles,
+    ...layoutPanelStyles
+});
 
 /** A **LayoutPanel** is used to encapsulate part of the content, form elements, lists, collections, etc., on a page.
 Place patterns and interactions within panels on your pages to achieve focus and separation for the tasks at-hand
 with the information displayed inside the panel. */
-const LayoutPanel = React.forwardRef(({ colSpan, children, className, ...props }, ref) => {
+const LayoutPanel = React.forwardRef(({ children, className, cssNamespace, ...props }, ref) => {
 
     const panelClasses = classnames(
-        'fd-layout-panel',
-        {
-            [`fd-layout-grid__span-column-${colSpan}`]: !!colSpan
-        },
+        `${cssNamespace}-layout-panel`,
         className
     );
 
@@ -36,9 +38,7 @@ LayoutPanel.propTypes = {
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
-    className: PropTypes.string,
-    /** The number of columns to span inside a `LayoutGrid` */
-    colSpan: CustomPropTypes.range(2, 6)
+    className: PropTypes.string
 };
 
 LayoutPanel.Actions = LayoutPanelActions;
@@ -48,4 +48,4 @@ LayoutPanel.Footer = LayoutPanelFooter;
 LayoutPanel.Head = LayoutPanelHead;
 LayoutPanel.Header = LayoutPanelHeader;
 
-export default LayoutPanel;
+export default withStyles(LayoutPanel);

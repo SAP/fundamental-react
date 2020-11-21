@@ -4,6 +4,12 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="compact"
+  >
+    Amount
+  </label>
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -23,24 +29,37 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent fd-button--compact sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-button--compact fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            id="compact"
             onChange={[Function]}
             type="text"
             value={0}
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent fd-button--compact sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-button--compact fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -52,6 +71,12 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="dev-stepinput"
+  >
+    Amount
+  </label>
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -71,15 +96,21 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
-            disabled={false}
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             disabled={false}
+            id="dev-stepinput"
             onChange={[Function]}
             placeholder="Placeholder"
             type="text"
@@ -87,12 +118,17 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
-            disabled={false}
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -104,6 +140,12 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="disabled"
+  >
+    Amount
+  </label>
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -123,27 +165,107 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less is-disabled fd-step-input__button"
+            className="fd-button fd-button--transparent is-disabled fd-step-input__button"
             disabled={true}
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
             disabled={true}
+            id="disabled"
             onChange={[Function]}
             type="text"
             value={0}
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add is-disabled fd-step-input__button"
+            className="fd-button fd-button--transparent is-disabled fd-step-input__button"
             disabled={true}
             onClick={[Function]}
             tabIndex="-1"
             type="button"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/StepInput No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <label
+    className="fd-form-label"
+    htmlFor="nostyles"
+  >
+    Amount
+  </label>
+  <div
+    className="xxx-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="xxx-popover__control"
+      >
+        <div
+          className="xxx-step-input"
+          onKeyDown={[Function]}
+        >
+          <button
+            aria-label="Step Down"
+            className="xxx-button xxx-button--transparent xxx-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
+          <input
+            className="xxx-input xxx-input--no-number-spinner xxx-step-input__input"
+            id="nostyles"
+            onChange={[Function]}
+            type="text"
+            value={0}
           />
+          <button
+            aria-label="Step Up"
+            className="xxx-button xxx-button--transparent xxx-step-input__button"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -155,6 +277,12 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="primary"
+  >
+    Amount
+  </label>
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -174,24 +302,37 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            id="primary"
             onChange={[Function]}
             type="text"
             value={0}
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -203,6 +344,12 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
 <div
   dir="ltr"
 >
+  <label
+    className="fd-form-label"
+    htmlFor="readOnly"
+  >
+    Amount
+  </label>
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -222,24 +369,37 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
         >
           <button
             aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--less"
+              role="img"
+            />
+          </button>
           <input
             className="fd-input fd-input--no-number-spinner fd-step-input__input"
+            id="readOnly"
             onChange={[Function]}
             type="text"
             value={0}
           />
           <button
             aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
+            className="fd-button fd-button--transparent fd-step-input__button"
             onClick={[Function]}
             tabIndex="-1"
             type="button"
-          />
+          >
+            <i
+              aria-hidden={true}
+              className="sap-icon--add"
+              role="img"
+            />
+          </button>
         </div>
       </div>
     </div>
@@ -251,170 +411,254 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
 <div
   dir="ltr"
 >
-  <div
-    className="fd-popover"
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
+  <div>
+    <label
+      className="fd-form-label"
+      htmlFor="error"
+    >
+      Amount
+    </label>
     <div
+      className="fd-popover"
+      onBlur={[Function]}
       onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-step-input is-error"
-          onKeyDown={[Function]}
+          className="fd-popover__control"
         >
-          <button
-            aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
-          <input
-            className="fd-input fd-input--no-number-spinner fd-step-input__input"
-            onChange={[Function]}
-            placeholder="Error"
-            type="text"
-            value={0}
-          />
-          <button
-            aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
+          <div
+            className="fd-step-input is-error"
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-label="Step Down"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--less"
+                role="img"
+              />
+            </button>
+            <input
+              className="fd-input fd-input--no-number-spinner fd-step-input__input"
+              id="error"
+              onChange={[Function]}
+              placeholder="Error"
+              type="text"
+              value={0}
+            />
+            <button
+              aria-label="Step Up"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-popover"
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
+  <div>
+    <label
+      className="fd-form-label"
+      htmlFor="warning"
+    >
+      Amount
+    </label>
     <div
+      className="fd-popover"
+      onBlur={[Function]}
       onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-step-input is-warning"
-          onKeyDown={[Function]}
+          className="fd-popover__control"
         >
-          <button
-            aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
-          <input
-            className="fd-input fd-input--no-number-spinner fd-step-input__input"
-            onChange={[Function]}
-            placeholder="Warning"
-            type="text"
-            value={0}
-          />
-          <button
-            aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
+          <div
+            className="fd-step-input is-warning"
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-label="Step Down"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--less"
+                role="img"
+              />
+            </button>
+            <input
+              className="fd-input fd-input--no-number-spinner fd-step-input__input"
+              id="warning"
+              onChange={[Function]}
+              placeholder="Warning"
+              type="text"
+              value={0}
+            />
+            <button
+              aria-label="Step Up"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-popover"
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
+  <div>
+    <label
+      className="fd-form-label"
+      htmlFor="success"
+    >
+      Amount
+    </label>
     <div
+      className="fd-popover"
+      onBlur={[Function]}
       onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-step-input is-success"
-          onKeyDown={[Function]}
+          className="fd-popover__control"
         >
-          <button
-            aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
-          <input
-            className="fd-input fd-input--no-number-spinner fd-step-input__input"
-            onChange={[Function]}
-            placeholder="Success"
-            type="text"
-            value={0}
-          />
-          <button
-            aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
+          <div
+            className="fd-step-input is-success"
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-label="Step Down"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--less"
+                role="img"
+              />
+            </button>
+            <input
+              className="fd-input fd-input--no-number-spinner fd-step-input__input"
+              id="success"
+              onChange={[Function]}
+              placeholder="Success"
+              type="text"
+              value={0}
+            />
+            <button
+              aria-label="Step Up"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div
-    className="fd-popover"
-    onBlur={[Function]}
-    onFocus={[Function]}
-  >
+  <div>
+    <label
+      className="fd-form-label"
+      htmlFor="information"
+    >
+      Amount
+    </label>
     <div
+      className="fd-popover"
+      onBlur={[Function]}
       onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-step-input is-information"
-          onKeyDown={[Function]}
+          className="fd-popover__control"
         >
-          <button
-            aria-label="Step Down"
-            className="fd-button fd-button--transparent sap-icon--less fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
-          <input
-            className="fd-input fd-input--no-number-spinner fd-step-input__input"
-            onChange={[Function]}
-            placeholder="Information"
-            type="text"
-            value={0}
-          />
-          <button
-            aria-label="Step Up"
-            className="fd-button fd-button--transparent sap-icon--add fd-step-input__button"
-            onClick={[Function]}
-            tabIndex="-1"
-            type="button"
-          />
+          <div
+            className="fd-step-input is-information"
+            onKeyDown={[Function]}
+          >
+            <button
+              aria-label="Step Down"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--less"
+                role="img"
+              />
+            </button>
+            <input
+              className="fd-input fd-input--no-number-spinner fd-step-input__input"
+              id="information"
+              onChange={[Function]}
+              placeholder="Information"
+              type="text"
+              value={0}
+            />
+            <button
+              aria-label="Step Up"
+              className="fd-button fd-button--transparent fd-step-input__button"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="button"
+            >
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>

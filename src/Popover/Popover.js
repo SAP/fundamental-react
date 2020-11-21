@@ -1,5 +1,5 @@
 import chain from 'chain-function';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { findDOMNode } from 'react-dom';
 import FocusManager from '../utils/focusManager/focusManager';
@@ -8,10 +8,12 @@ import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
 import tabbable from 'tabbable';
-import { POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
+import withStyles from '../utils/withStyles';
+import { GridSelector, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/popover.css';
+import styles from 'fundamental-styles/dist/popover.css';
 
+const classnames = classnamesBind.bind(styles);
 
 /** A **Popover** is a wrapping component that accepts a "control" as well as a "body". A control can be
 anything that you want to trigger the interaction from. The body will be the contents of what you reveal
@@ -71,10 +73,10 @@ class Popover extends Component {
         this.handleOutsideClick();
 
         if (this.controlRef) {
-            if (tabbable.isTabbable(this.controlRef)) {
+            if (tabbable.isFocusable(this.controlRef)) {
                 this.controlRef.focus();
             } else {
-                const firstTabbableNode = tabbable(this.controlRef)[0];
+                const firstTabbableNode = this.controlRef.querySelectorAll(GridSelector.FOCUSABLE)[0];
                 firstTabbableNode && firstTabbableNode.focus();
             }
         }
@@ -107,6 +109,7 @@ class Popover extends Component {
             control,
             body,
             className,
+            cssNamespace,
             placement,
             popperClassName,
             popperProps,
@@ -114,6 +117,7 @@ class Popover extends Component {
             useArrowKeyNavigation,
             type,
             show,
+            modalManager,
             ...rest
         } = this.props;
 
@@ -160,21 +164,22 @@ class Popover extends Component {
             };
         }
 
-        const referenceClassName = classnames('fd-popover__control', {
+        const referenceClassName = classnames(`${cssNamespace}-popover__control`, {
             'is-expanded': this.state.isExpanded
         });
 
         const referenceComponent = React.cloneElement(control, newControlProps);
 
-        const popoverClasses = classnames('fd-popover', className);
+        const popoverClasses = classnames(`${cssNamespace}-popover`, className);
 
         return (
             <div {...rest} className={popoverClasses}>
                 <Popper
-                    cssBlock='fd-popover'
+                    cssBlock={`${cssNamespace}-popover`}
                     disableEdgeDetection={disableEdgeDetection}
                     flipContainer={flipContainer}
                     innerRef={innerRef}
+                    modalManager={modalManager}
                     noArrow={noArrow}
                     onClickOutside={chain(this.handleOutsideClick, onClickOutside)}
                     onEscapeKey={chain(this.handleEscapeKey, onEscapeKey)}
@@ -216,6 +221,8 @@ Popover.propTypes = {
     firstFocusIndex: PropTypes.number,
     /** The bounding container to use when determining if the popover is out of bounds */
     flipContainer: CustomPropTypes.elementOrArrayOfElements(),
+    /** If Popover is to be rendered in a modal, the parent modal manager can be passed as a prop */
+    modalManager: PropTypes.object,
     /** Set to **true** to render a popover without an arrow */
     noArrow: PropTypes.bool,
     /** The options are 'auto',
@@ -255,9 +262,18 @@ Popover.propTypes = {
      * - "maxTarget" - right edge aligns with target unless Popover content is smaller
      */
     widthSizingType: PropTypes.oneOf(POPPER_SIZING_TYPES),
-    /** Callback for consumer clicking outside of popover body */
+    /**
+     * Callback function; triggered on clicking outside of popover body.
+     *
+     * @param {MouseEvent} event
+     * @returns {void}
+     * */
     onClickOutside: PropTypes.func,
-    /** Callback when escape key is pressed when popover body is visible */
+    /**
+     * Callback function; triggered when `escape` key is pressed and popover body is visible.
+     *
+     * @returns {void}
+     * */
     onEscapeKey: PropTypes.func
 };
 
@@ -268,4 +284,4 @@ Popover.defaultProps = {
     onEscapeKey: () => { }
 };
 
-export default Popover;
+export default withStyles(Popover);

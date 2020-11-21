@@ -6,6 +6,7 @@ exports[`Storyshots Component API/Select Compact 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -32,6 +33,7 @@ exports[`Storyshots Component API/Select Compact 1`] = `
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="listbox"
+                aria-label="Compact"
                 className="fd-select fd-select--compact"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -48,8 +50,14 @@ exports[`Storyshots Component API/Select Compact 1`] = `
                     Select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -67,6 +75,7 @@ exports[`Storyshots Component API/Select Dev 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -94,6 +103,7 @@ exports[`Storyshots Component API/Select Dev 1`] = `
                 aria-disabled={false}
                 aria-expanded={false}
                 aria-haspopup="listbox"
+                aria-label="Select"
                 className="fd-select"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -110,8 +120,14 @@ exports[`Storyshots Component API/Select Dev 1`] = `
                     select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -129,6 +145,7 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -153,6 +170,7 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
             >
               <div
                 aria-disabled={true}
+                aria-label="Disabled"
                 className="fd-select"
                 onClick={[Function]}
                 role="combobox"
@@ -168,8 +186,14 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
                     Select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -187,6 +211,7 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -213,6 +238,7 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="listbox"
+                aria-label="Select"
                 className="fd-select"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -227,8 +253,83 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
                     className="fd-select__text-content"
                   />
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-popover"
+    onBlur={[Function]}
+  >
+    <div
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="xxx-popover__control"
+      >
+        <div
+          className="xxx-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="xxx-popover__control"
+            >
+              <div
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-label="Select"
+                className="xxx-select"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="combobox"
+                tabIndex={0}
+              >
+                <div
+                  className="xxx-select__control"
+                >
+                  <span
+                    aria-label={null}
+                    className="xxx-select__text-content"
+                  >
+                    Select
+                  </span>
+                  <span
+                    className="xxx-button xxx-button--transparent xxx-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -246,6 +347,7 @@ exports[`Storyshots Component API/Select Primary 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -272,6 +374,7 @@ exports[`Storyshots Component API/Select Primary 1`] = `
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="listbox"
+                aria-label="Primary"
                 className="fd-select"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -288,8 +391,14 @@ exports[`Storyshots Component API/Select Primary 1`] = `
                     Select
                   </span>
                   <span
-                    className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                  />
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -307,6 +416,7 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
 >
   <div
     className="fd-popover"
+    onBlur={[Function]}
   >
     <div
       onFocus={[Function]}
@@ -330,6 +440,7 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
               className="fd-popover__control"
             >
               <div
+                aria-label="readOnly"
                 aria-readonly={true}
                 className="fd-select"
                 onClick={[Function]}
@@ -365,6 +476,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
   >
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -391,6 +503,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="listbox"
+                  aria-label="Select"
                   className="fd-select"
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -407,8 +520,14 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Error
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--slim-arrow-down"
+                        role="img"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -419,6 +538,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
     </div>
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -445,6 +565,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="listbox"
+                  aria-label="Select"
                   className="fd-select"
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -461,8 +582,14 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Warning
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--slim-arrow-down"
+                        role="img"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -473,6 +600,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
     </div>
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -499,6 +627,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="listbox"
+                  aria-label="Select"
                   className="fd-select"
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -515,8 +644,14 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Success
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--slim-arrow-down"
+                        role="img"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -527,6 +662,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
     </div>
     <div
       className="fd-popover"
+      onBlur={[Function]}
     >
       <div
         onFocus={[Function]}
@@ -553,6 +689,7 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                   aria-controls="fd-mocked-short-id"
                   aria-expanded={false}
                   aria-haspopup="listbox"
+                  aria-label="Select"
                   className="fd-select"
                   onClick={[Function]}
                   onKeyPress={[Function]}
@@ -569,8 +706,14 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
                       Information
                     </span>
                     <span
-                      className="fd-button fd-button--transparent sap-icon--slim-arrow-down fd-select__button"
-                    />
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--slim-arrow-down"
+                        role="img"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>

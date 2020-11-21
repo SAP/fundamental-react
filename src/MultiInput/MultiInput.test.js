@@ -1,5 +1,4 @@
 import { mount } from 'enzyme';
-
 import MultiInput from './MultiInput';
 import React from 'react';
 
@@ -20,12 +19,14 @@ describe('<MultiInput />', () => {
         'Cranberry',
         'Cupuacu'
     ];
-    const multiInput = (
+    const getMultiInput = (props) => (
         <MultiInput
+            {...props}
             data={data}
             onTagsUpdate={mockOnTagsUpdate}
             placeholder='Select a Fruit' />
     );
+    const multiInput = getMultiInput();
 
     const compactMultiInput = (
         <MultiInput
@@ -67,7 +68,7 @@ describe('<MultiInput />', () => {
         wrapper = mount(multiInput);
 
         // check if bShowList state is changed
-        expect(wrapper.state(['bShowList'])).toBe(false);
+        expect(wrapper.children().state(['bShowList'])).toBe(false);
 
         // check to see if list is not shown
         let results = getListStatus(false);
@@ -84,12 +85,23 @@ describe('<MultiInput />', () => {
         wrapper.find('input[type="text"].fd-input').simulate('click');
 
         // check if bShowList state is changed
-        expect(wrapper.state(['bShowList'])).toBe(true);
+        expect(wrapper.children().state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
         let results = getListStatus();
         expect(results.combobox).toHaveLength(1);
         expect(results.popover).toHaveLength(1);
+    });
+
+    test('check that multiple validation overlays are not displayed', () => {
+        wrapper = mount(getMultiInput({
+            validationState: { state: 'error', text: 'Test validation state' }
+        }));
+
+        wrapper.find('input[type="text"].fd-input').simulate('click');
+        wrapper.find('input[type="text"].fd-input').simulate('focus');
+        expect(document.querySelectorAll('.fd-list__message').length).toBe(1);
+
     });
 
     // check that tag list is shown on drop down click
@@ -102,7 +114,7 @@ describe('<MultiInput />', () => {
             .simulate('click');
 
         // check if bShowList state is changed
-        expect(wrapper.state(['bShowList'])).toBe(true);
+        expect(wrapper.children().state(['bShowList'])).toBe(true);
 
         // check to see if list is shown
         let results = getListStatus();
@@ -117,7 +129,7 @@ describe('<MultiInput />', () => {
             .simulate('click');
 
         // check that no tags exist
-        expect(wrapper.state(['tags'])).toHaveLength(0);
+        expect(wrapper.children().state(['tags'])).toHaveLength(0);
 
         // add tag to list
         wrapper
@@ -125,7 +137,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that tag list contains value
-        expect(wrapper.state(['tags'])).toHaveLength(1);
+        expect(wrapper.children().state(['tags'])).toHaveLength(1);
 
         // check to see if tag button is created
         expect(wrapper.find('span.fd-token[role="button"]')).toHaveLength(1);
@@ -157,7 +169,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that tag list contains value
-        expect(wrapper.state(['tags'])).toHaveLength(4);
+        expect(wrapper.children().state(['tags'])).toHaveLength(4);
 
         // check to see that only 3 tags are created
         expect(wrapper.find('span.fd-token[role="button"]')).toHaveLength(3);
@@ -175,7 +187,7 @@ describe('<MultiInput />', () => {
             .simulate('click');
 
         // check that no tags exist
-        expect(wrapper.state(['tags'])).toHaveLength(0);
+        expect(wrapper.children().state(['tags'])).toHaveLength(0);
 
         // add tag to list
         wrapper
@@ -183,7 +195,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that tag list contains value
-        expect(wrapper.state(['tags'])).toHaveLength(1);
+        expect(wrapper.children().state(['tags'])).toHaveLength(1);
 
         // simulate unchecking tag from tag list
         wrapper
@@ -191,7 +203,7 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[0] } });
 
         // check that no tags exist
-        expect(wrapper.state(['tags'])).toHaveLength(0);
+        expect(wrapper.children().state(['tags'])).toHaveLength(0);
     });
 
     test('remove tag from taglist by clicking on tag', () => {
@@ -199,7 +211,7 @@ describe('<MultiInput />', () => {
         wrapper.find('.fd-input').simulate('click');
 
         // check that no tags exist
-        expect(wrapper.state(['tags'])).toHaveLength(0);
+        expect(wrapper.children().state(['tags'])).toHaveLength(0);
 
         // add tag to list
         wrapper
@@ -214,13 +226,32 @@ describe('<MultiInput />', () => {
             .simulate('change', { target: { value: data[2] } });
 
         // check that tag list contains value
-        expect(wrapper.state(['tags'])).toHaveLength(2);
+        expect(wrapper.children().state(['tags'])).toHaveLength(2);
 
         // simulate clicking on tag in tag collection under input box
         wrapper.find('.fd-token__close').first().simulate('click');
 
         // check that no tags exist
-        expect(wrapper.state(['tags'])).toHaveLength(1);
+        expect(wrapper.children().state(['tags'])).toHaveLength(1);
+    });
+
+    describe('validationOverlayProps', () => {
+
+        test('pass validationOverlayProps to InputGroup', () => {
+            const element = mount(
+                <MultiInput
+                    data={data}
+                    validationOverlayProps={{
+                        className: 'foo'
+                    }} />
+            );
+
+            expect(
+                element.find('InputGroup').at(1).prop('validationOverlayProps')
+            ).toMatchObject({
+                className: 'foo'
+            });
+        });
     });
 
     describe('Prop spreading', () => {
@@ -277,7 +308,7 @@ describe('<MultiInput />', () => {
             const element = mount(<MultiInput data={data} popoverProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popover').first().getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

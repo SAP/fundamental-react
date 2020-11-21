@@ -1,14 +1,17 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormInput from '../Forms/FormInput';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import keycode from 'keycode';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useCallback, useState } from 'react';
-import 'fundamental-styles/dist/step-input.css';
+import styles from 'fundamental-styles/dist/step-input.css';
 
+const classnames = classnamesBind.bind(styles);
+const isUsingCssModules = styles && Object.keys(styles).length > 0;
 /** The **StepInput** allows the user to change the input values in predefined increments (steps).
 
 Use the step input if:
@@ -26,11 +29,14 @@ const StepInput = React.forwardRef(({
     children,
     className,
     compact,
+    cssNamespace,
     disabled,
+    inputId,
     placeholder,
     readOnly,
     localizedText,
     onChange,
+    validationOverlayProps,
     validationState,
     value,
     ...rest
@@ -39,9 +45,9 @@ const StepInput = React.forwardRef(({
 
     const stepInputClasses = classnames(
         className,
-        'fd-step-input',
+        `${cssNamespace}-step-input`,
         {
-            'fd-step-input--compact': compact,
+            [`${cssNamespace}-step-input--compact`]: compact,
             'is-disabled': disabled,
             'is-readonly': readOnly,
             [`is-${validationState?.state}`]: validationState?.state
@@ -104,7 +110,7 @@ const StepInput = React.forwardRef(({
             {...rest}>
             <Button
                 aria-label={localizedText.stepDownLabel}
-                className='fd-step-input__button'
+                className={classnames(`${cssNamespace}-step-input__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                 compact={compact}
                 disabled={disabled}
                 glyph='less'
@@ -112,14 +118,15 @@ const StepInput = React.forwardRef(({
                 option='transparent'
                 tabIndex='-1' />
             <FormInput
-                className='fd-input--no-number-spinner fd-step-input__input'
+                className={classnames(`${cssNamespace}-input--no-number-spinner`, `${cssNamespace}-step-input__input`, { [`${cssNamespace}-input`]: isUsingCssModules })}
                 disabled={disabled}
+                id={inputId}
                 onChange={onChangeInputValue}
                 placeholder={placeholder}
                 value={inputValue} />
             <Button
                 aria-label={localizedText.stepUpLabel}
-                className='fd-step-input__button'
+                className={classnames(`${cssNamespace}-step-input__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                 compact={compact}
                 disabled={disabled}
                 glyph='add'
@@ -131,6 +138,7 @@ const StepInput = React.forwardRef(({
 
     return (
         <FormValidationOverlay
+            {...validationOverlayProps}
             control={stepInputControl}
             validationState={validationState} />
     );
@@ -147,6 +155,8 @@ StepInput.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** ID to be passed to the input element */
+    inputId: PropTypes.string,
     /** Localized text to be updated based on location/language */
     localizedText: CustomPropTypes.i18n({
         stepUpLabel: PropTypes.string,
@@ -156,6 +166,21 @@ StepInput.propTypes = {
     placeholder: PropTypes.string,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
+        innerRefClassName: PropTypes.string,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -165,7 +190,12 @@ StepInput.propTypes = {
     }),
     /** Value of the number input */
     value: PropTypes.number,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the step value changes.
+     *
+     * @param {number} stepValue - current step value as number.
+     * @returns {void}
+     * */
     onChange: PropTypes.func
 };
 
@@ -178,4 +208,4 @@ StepInput.defaultProps = {
     onChange: () => { }
 };
 
-export default StepInput;
+export default withStyles(StepInput);

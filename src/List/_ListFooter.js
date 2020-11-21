@@ -1,21 +1,26 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const ListFooter = ({
     className,
     children,
+    cssNamespace,
     ...props
 }) => {
     const ListItemClasses = classnames(
-        'fd-list__footer',
+        `${cssNamespace}-list__footer`,
         className
     );
 
     return (
-        <li {...props} className={ListItemClasses}>
+        <span {...props} className={ListItemClasses}>
             {children}
-        </li>
+        </span>
 
     );
 };
@@ -29,4 +34,4 @@ ListFooter.propTypes = {
     className: PropTypes.string
 };
 
-export default ListFooter;
+export default withStyles(ListFooter);

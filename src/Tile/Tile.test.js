@@ -13,7 +13,7 @@ describe('<Tile />', () => {
 
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tile component', () => {
-            const element = mount(<Tile data-sample='Sample' />);
+            const element = mount(<Tile data-sample='Sample' onClick={handleClick} />);
 
             expect(
                 element.getDOMNode().attributes['data-sample'].value
@@ -28,7 +28,7 @@ describe('<Tile />', () => {
                 super(props);
                 ref = React.createRef();
             }
-            render = () => <Tile ref={ref} />;
+            render = () => <Tile onClick={handleClick} ref={ref} />;
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');

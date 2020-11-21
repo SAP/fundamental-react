@@ -1,25 +1,29 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/token.css';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/token.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Token** is used to represent contextual information. It can be useful to show
 applied filters, selected values for a form field or object metadata. */
 const Token = React.forwardRef(({
+    buttonLabel,
     children,
     className,
     compact,
+    cssNamespace,
     onClick,
     readOnly,
     ...props
 }, ref) => {
 
     const tokenClasses = classnames(
-        'fd-token',
+        `${cssNamespace}-token`,
         {
-            'fd-token--readonly': readOnly,
-            'fd-token--compact': compact
+            [`${cssNamespace}-token--readonly`]: readOnly,
+            [`${cssNamespace}-token--compact`]: compact
         },
         className
     );
@@ -31,9 +35,10 @@ const Token = React.forwardRef(({
             ref={ref}
             role='button'
             tabIndex='0'>
-            <span className='fd-token__text'>{children}</span>
+            <span className={classnames(`${cssNamespace}-token__text`)}>{children}</span>
             <button
-                className='fd-token__close'
+                aria-label={buttonLabel}
+                className={classnames(`${cssNamespace}-token__close`)}
                 onClick={onClick}
                 tabIndex='-1' />
         </span>
@@ -43,6 +48,8 @@ const Token = React.forwardRef(({
 Token.displayName = 'Token';
 
 Token.propTypes = {
+    /** A localized string to be used as aria-label for the token's button */
+    buttonLabel: PropTypes.string.isRequired,
     /** Node(s) to render within the component */
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
@@ -51,7 +58,12 @@ Token.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when the Token's close `<button>` is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onClick: PropTypes.func
 };
 
@@ -59,5 +71,4 @@ Token.defaultProps = {
     onClick: () => {}
 };
 
-export default Token;
-
+export default withStyles(Token);

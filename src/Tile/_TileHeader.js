@@ -1,22 +1,26 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/tile.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const TileHeader = props => {
-    const { children, className, subtitle, subtitleProps, titleProps, ...rest } = props;
+    const { children, className, cssNamespace, subtitle, subtitleProps, titleProps, ...rest } = props;
 
     const tileHeaderClasses = classnames(
-        'fd-tile__header',
+        `${cssNamespace}-tile__header`,
         className
     );
 
     const tileTitleClasses = classnames(
-        'fd-tile__title',
+        `${cssNamespace}-tile__title`,
         titleProps?.className
     );
 
     const tileSubtitleClasses = classnames(
-        'fd-tile__subtitle',
+        `${cssNamespace}-tile__subtitle`,
         subtitleProps?.className
     );
 
@@ -42,4 +46,4 @@ TileHeader.propTypes = {
     titleProps: PropTypes.object
 };
 
-export default TileHeader;
+export default withStyles(TileHeader);

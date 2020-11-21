@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Button from '../../Button/Button';
 import Dialog from '../Dialog';
 import {
@@ -170,36 +171,6 @@ export const sizes = () => {
     );
 };
 
-export const dev = () => (
-    <Dialog
-        actions={[
-            (<Button option='transparent'>No</Button>),
-            (<Button>Yes</Button>)
-        ]}
-        header={text('header', 'Test header')}
-        show={boolean('show', true)}
-        size={select('size', {
-            none: null,
-            s: 's',
-            m: 'm',
-            l: 'l',
-            xl: 'xl'
-        })}
-        subheader={text('subheader', 'Test Subheader')}
-        title={text('title', 'Test title')}>
-        <p><b>The new product have been added to your catalog.</b></p>
-        <p>Automatic Product ID: <b>PD-3465334</b></p>
-        <p>Expiration date: <b>13/03/2018</b></p>
-    </Dialog>
-);
-
-
-dev.parameters = {
-    docs: { disable: true },
-    storyshots: { disable: true }
-};
-
-
 export const small = () => (
     <Dialog
         actions={[
@@ -282,3 +253,59 @@ xl.parameters = {
     docs: { disable: true },
     storyshots: { disable: true }
 };
+
+
+export const dev = () => (
+    <Dialog
+        actions={[
+            (<Button onClick={action('no-action')} option='transparent'>No</Button>),
+            (<Button onClick={action('yes-action')} >Yes</Button>)
+        ]}
+        header={text('header', 'Test header')}
+        onClose={action('on-close')}
+        show={boolean('show', true)}
+        size={select('size', {
+            none: null,
+            s: 's',
+            m: 'm',
+            l: 'l',
+            xl: 'xl'
+        })}
+        subheader={text('subheader', 'Test Subheader')}
+        title={text('title', 'Test title')}>
+        <p><b>The new product have been added to your catalog.</b></p>
+        <p>Automatic Product ID: <b>PD-3465334</b></p>
+        <p>Expiration date: <b>13/03/2018</b></p>
+    </Dialog>
+);
+
+
+dev.parameters = {
+    docs: { disable: true },
+    storyshots: { disable: true }
+};
+
+export const noStyles = () => {
+    let [showDialog, setShowDialog] = useState(false);
+    return (
+        <>
+            <Button cssNamespace='xxx' onClick={() => setShowDialog(true)}>
+                Show Dialog
+            </Button>
+            <Dialog
+                actions={[
+                    (<Button option='transparent'>No</Button>),
+                    (<Button>Yes</Button>)
+                ]}
+                cssNamespace='xxx'
+                onClose={() => setShowDialog(false)}
+                show={showDialog}
+                title='Product Added'>
+                <p><b>The new product have been added to your catalog.</b></p>
+                <p>Automatic Product ID: <b>PD-3465334</b></p>
+                <p>Expiration date: <b>13/03/2018</b></p>
+            </Dialog>
+        </>
+    );
+};
+noStyles.parameters = { docs: { disable: true } };

@@ -1,6 +1,10 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/side-nav.css';
+
+const classnames = classnamesBind.bind(styles);
 
 class SideNavList extends React.Component {
     constructor(props) {
@@ -34,7 +38,7 @@ class SideNavList extends React.Component {
                 aria-hidden={hasParent && !open}
                 aria-label={groupLabel}
                 className={sideNavListClasses}>
-                { title && <li {...titleProps} className='fd-nested-list__group-header'>{title}</li>}
+                { title && <li {...titleProps} className={classnames('fd-nested-list__group-header')}>{title}</li>}
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         condensed,
@@ -96,4 +100,4 @@ SideNavList.defaultProps = {
 
 SideNavList.displayName = 'SideNav.List';
 
-export default SideNavList;
+export default withStyles(SideNavList);

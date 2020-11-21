@@ -1,10 +1,14 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from '../Forms/_FormValidationOverlay';
 import InputGroupAddon from './_InputGroupAddon';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/input-group.css';
+import styles from 'fundamental-styles/dist/input-group.css';
+
+const classnames = classnamesBind.bind(styles);
+const isUsingCssModules = styles && Object.keys(styles).length > 0;
 
 /** An **InputGroup** includes form inputs with add-ons that allow the user to
 better understand the information being entered. */
@@ -18,14 +22,16 @@ class InputGroup extends Component {
             children,
             className,
             compact,
+            cssNamespace,
             disabled,
+            validationOverlayProps,
             validationState,
             ...props
         } = this.props;
 
         const inputGroupClasses = classnames(
             className,
-            'fd-input-group',
+            `${cssNamespace}-input-group`,
             {
                 'is-disabled': disabled,
                 [`is-${validationState?.state}`]: validationState?.state
@@ -34,7 +40,8 @@ class InputGroup extends Component {
 
         const getClassName = (child) => classnames(
             {
-                'fd-input-group__input': !child.props.className?.includes('fd-tokenizer')
+                [`${cssNamespace}-input-group__input`]: !child.props.className?.includes(`${cssNamespace}-tokenizer`),
+                [`${cssNamespace}-textarea`]: child.type?.displayName === 'FormTextarea' && isUsingCssModules
             },
             child.props.className
         );
@@ -60,11 +67,12 @@ class InputGroup extends Component {
             </div>
         );
 
-        return validationState?.state ? (
+        return (
             <FormValidationOverlay
+                {...validationOverlayProps}
                 control={inputGroup}
                 validationState={validationState} />
-        ) : inputGroup;
+        );
     }
 }
 
@@ -81,6 +89,21 @@ InputGroup.propTypes = {
     compact: PropTypes.bool,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
+        innerRefClassName: PropTypes.string,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -90,4 +113,4 @@ InputGroup.propTypes = {
     })
 };
 
-export default InputGroup;
+export default withStyles(InputGroup);

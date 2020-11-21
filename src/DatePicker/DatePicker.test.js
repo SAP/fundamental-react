@@ -1,8 +1,8 @@
 /* eslint-disable compat/compat */
+import { act } from 'react-dom/test-utils';
 import DatePicker from '../DatePicker/DatePicker';
 import moment from 'moment';
 import { mount } from 'enzyme';
-
 import React from 'react';
 
 describe('<DatePicker />', () => {
@@ -32,7 +32,7 @@ describe('<DatePicker />', () => {
     });
 
     test('start date and end date range', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -41,7 +41,7 @@ describe('<DatePicker />', () => {
         let arrDates = [startRangeDate, endRangeDate];
         wrapper.instance().updateDate(arrDates);
 
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
 
         //trigger onBlur by clicking outside
         simulateBlur();
@@ -51,7 +51,7 @@ describe('<DatePicker />', () => {
     });
 
     test('check start date greater than end date for range', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -66,7 +66,7 @@ describe('<DatePicker />', () => {
         let switchFormattedDate = `${endRangeDate.format('L')} - ${startRangeDate.format('L')}`;
 
         expect(wrapper.state('formattedDate')).toEqual(switchFormattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
 
         //trigger onBlur by clicking outside
         simulateBlur();
@@ -76,7 +76,7 @@ describe('<DatePicker />', () => {
     });
 
     test('entering start date and disabled end range dates', () => {
-        wrapper = mount(disabledFutureRangePicker);
+        wrapper = mount(disabledFutureRangePicker).children();
         // set dates
         let startRangeDate = moment();
         let endRangeDate = moment();
@@ -92,13 +92,13 @@ describe('<DatePicker />', () => {
 
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
-        expect(wrapper.state('arrSelectedDates')).toEqual([]);
+        expect(wrapper.state('startAndEndDates')).toEqual([]);
     });
 
     test('updateDate method', () => {
         // choose one day in default picker
         const ISO_FORMAT = 'YYYY-MM-DD';
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
         const date = moment();
         wrapper.instance().updateDate(date);
         expect(wrapper.state('selectedDate')).toEqual(date);
@@ -108,7 +108,7 @@ describe('<DatePicker />', () => {
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 1 day in range picker
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         let startRangeDate = moment();
 
         let arrDates = [startRangeDate];
@@ -117,11 +117,11 @@ describe('<DatePicker />', () => {
         formattedDate = startRangeDate.format('L');
         isoFormattedDate = startRangeDate.format(ISO_FORMAT);
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(1);
+        expect(wrapper.state('startAndEndDates').length).toEqual(1);
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
 
         // choose 2 days in range picker
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
         startRangeDate = moment();
         let endRangeDate = moment();
         endRangeDate.add(3, 'day');
@@ -133,12 +133,12 @@ describe('<DatePicker />', () => {
         isoFormattedDate = `${startRangeDate.format(ISO_FORMAT)} - ${endRangeDate.format(ISO_FORMAT)}`;
 
         expect(wrapper.state('formattedDate')).toEqual(formattedDate);
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
         expect(wrapper.state('isoFormattedDate')).toEqual(isoFormattedDate);
     });
 
     test('pressing enter key on date input', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: '3.16.20 - 3.19.20' } });
@@ -146,11 +146,11 @@ describe('<DatePicker />', () => {
         wrapper.find('input[type="text"]').simulate('keypress', { key: 'Enter' });
 
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
     });
 
     test('pressing enter key on date input where start date > than end date', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
 
         // set start date greater than end date
         wrapper.find('input[type="text"]')
@@ -160,12 +160,12 @@ describe('<DatePicker />', () => {
 
         //check if date start date is less than end date i.e. switched
         expect(wrapper.state('formattedDate')).toEqual('03/16/2020 - 03/19/2020');
-        expect(wrapper.state('arrSelectedDates').length).toEqual(2);
+        expect(wrapper.state('startAndEndDates').length).toEqual(2);
     });
 
     test('enter a valid date string', () => {
         // enter a valid date input
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
         let date = moment().startOf('day');
         let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
@@ -179,7 +179,7 @@ describe('<DatePicker />', () => {
 
     test('enter a disabled date string', () => {
         // enter a valid date input
-        wrapper = mount(disabledFuturePicker);
+        wrapper = mount(disabledFuturePicker).children();
         let date = moment().add(1, 'days');
         let formattedDate = date.format('L');
         wrapper.find('input[type="text"]')
@@ -192,7 +192,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date', () => {
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018' } });
@@ -203,7 +203,7 @@ describe('<DatePicker />', () => {
     });
 
     test('enter text string for date on date range component', () => {
-        wrapper = mount(rangeDatePicker);
+        wrapper = mount(rangeDatePicker).children();
 
         wrapper.find('input[type="text"]')
             .simulate('change', { target: { value: 'May 14th, 2018 - May 15th, 2018' } });
@@ -214,7 +214,7 @@ describe('<DatePicker />', () => {
     });
 
     test('modify date on change', () => {
-        wrapper = mount(defaultDatePicker);
+        wrapper = mount(defaultDatePicker).children();
         wrapper
             .find('input[type="text"]')
             .simulate('change', { target: { value: '05/04/2018' } });
@@ -222,7 +222,7 @@ describe('<DatePicker />', () => {
     });
 
     test('pre-populated value for date', () => {
-        wrapper = mount(prePopulatedDatepicker);
+        wrapper = mount(prePopulatedDatepicker).children();
         expect(wrapper.state('formattedDate')).toEqual('03/13/2020');
         wrapper
             .find('input[type="text"]')
@@ -231,7 +231,7 @@ describe('<DatePicker />', () => {
     });
 
     test('auto format to specified dateFormat', () => {
-        wrapper = mount(defaultDatePicker); // dateFormat='MM/DD/YYYY'
+        wrapper = mount(defaultDatePicker).children(); // dateFormat='MM/DD/YYYY'
 
         const input = wrapper.find('input[type="text"]');
         //set date input value
@@ -249,9 +249,31 @@ describe('<DatePicker />', () => {
                 defaultValue='3.16.20'
                 locale='hi' />
         );
-        wrapper = mount(compToTest);
+
+        act(() => {
+            wrapper = mount(compToTest).children();
+        });
+
         expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२०');
     });
+
+    describe('Date range', () => {
+        test('default value with dateFormat and locale set', ()=>{
+            const compToTest = (
+                <DatePicker
+                    dateFormat='MM/DD/YYYY'
+                    defaultValue='3.20.20 - 3.16.20'
+                    enableRangeSelection
+                    locale='hi' />
+            );
+            act(()=>{
+                wrapper = mount(compToTest).children();
+            });
+
+            expect(wrapper.state('formattedDate')).toEqual('०३/१६/२०२० - ०३/२०/२०२०');
+        });
+    });
+
 
     test('set defaultDate, unset dateFormat, set locale', ()=>{
         const compToTest = (
@@ -259,7 +281,7 @@ describe('<DatePicker />', () => {
                 defaultValue='17.3.20'
                 locale='fr' /> //locale date format DD/MM/YYYY
         );
-        wrapper = mount(compToTest);
+        wrapper = mount(compToTest).children();
 
         //trigger onBlur by clicking outside
         simulateBlur();
@@ -269,7 +291,7 @@ describe('<DatePicker />', () => {
     });
 
     test('date range selection with custom dateFormat set', () => {
-        wrapper = mount(rangeDatePicker); // dateFormat='MM/DD/YYYY'
+        wrapper = mount(rangeDatePicker).children(); // dateFormat='MM/DD/YYYY'
 
         const input = wrapper.find('input[type="text"]');
         //set date input value
@@ -281,7 +303,7 @@ describe('<DatePicker />', () => {
     });
 
     test('provide ISO-8601 format date', () => {
-        wrapper = mount(prePopulatedDatepicker);
+        wrapper = mount(prePopulatedDatepicker).children();
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-03-13');
         wrapper
             .find('input[type="text"]')
@@ -290,7 +312,7 @@ describe('<DatePicker />', () => {
     });
 
     test('provide ISO-8601 format date with custom dateFormat in props', () => {
-        wrapper = mount(<DatePicker dateFormat='DD-MM-YYYY' defaultValue='01-06-2020' />);
+        wrapper = mount(<DatePicker dateFormat='DD-MM-YYYY' defaultValue='01-06-2020' />).children();
         expect(wrapper.state('isoFormattedDate')).toEqual('2020-06-01');
         wrapper
             .find('input[type="text"]')
@@ -303,33 +325,33 @@ describe('<DatePicker />', () => {
         wrapper = wrapper.setProps({
             defaultValue: '12-21-2016'
         });
-        expect(wrapper.state('formattedDate')).toEqual('12/21/2016');
+        expect(wrapper.children().state('formattedDate')).toEqual('12/21/2016');
     });
 
     describe('With today footer button', () => {
 
-        test('renders today button when todayAction.type=\'select\' AND valid todayAction.label is specified', () => {
+        test('renders today button when todayActionType=\'select\' AND valid localizedText.todayLabel is specified', () => {
             wrapper = mount(
                 <DatePicker
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
-            expect(todayButtonWrapper.getDOMNode().innerHTML).toBe('Today');
+            expect(todayButtonWrapper.text()).toBe('Today');
         });
 
-        test('doesn\'t render today button when todayAction.type=\'select\' AND valid todayAction.label is specified but date range selection is enabled', () => {
+        test('doesn\'t render today button when todayActionType=\'select\' AND valid localizedText.todayLabel is specified but date range selection is enabled', () => {
             wrapper = mount(
                 <DatePicker
                     enableRangeSelection
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(false);
         });
@@ -337,15 +359,15 @@ describe('<DatePicker />', () => {
         test('sets todays date when today button is pressed', () => {
             wrapper = mount(
                 <DatePicker
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
+                    todayActionType='select' />);
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             expect(todayButtonWrapper.exists()).toBe(true);
             todayButtonWrapper.simulate('click');
-            expect(moment().isSame(wrapper.state('selectedDate'), 'day')).toBe(true);
+            expect(moment().isSame(wrapper.children().state('selectedDate'), 'day')).toBe(true);
         });
 
         test('calls onChange date when today button is pressed', () => {
@@ -353,23 +375,23 @@ describe('<DatePicker />', () => {
             wrapper = mount(
                 <DatePicker
                     dateFormat='YYYY/MM/DD'
+                    localizedText={{
+                        todayLabel: 'Today'
+                    }}
                     onChange={change}
-                    todayAction={{
-                        type: 'select',
-                        label: 'Today'
-                    }} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+                    todayActionType='select' />);
+            wrapper.find('button.fd-button--transparent').simulate('click');
             const todayButtonWrapper = wrapper.find('button.fd-dialog__decisive-button');
             todayButtonWrapper.simulate('click');
-            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }));
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: moment().format('YYYY/MM/DD') }), 'todaySelected');
 
         });
     });
 
-    describe('onBlur callback', () => {
-        test('should call onBlur after leaving input', () => {
+    describe('onInputBlur callback', () => {
+        test('should call onInputBlur after leaving input', () => {
             const blur = jest.fn();
-            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
+            const element = mount(<DatePicker onInputBlur={blur} />).find('input[type="text"]');
             element.find('input[type="text"]').simulate('click');
             element.find('input[type="text"]').simulate('blur');
 
@@ -380,7 +402,7 @@ describe('<DatePicker />', () => {
             const element = mount(<DatePicker
                 dateFormat='DD-MM-YYYY'
                 defaultValue='01-06-2020'
-                onBlur={blur} />).find('input[type="text"]');
+                onInputBlur={blur} />).find('input[type="text"]');
             element.find('input[type="text"]').simulate('click');
             element.find('input[type="text"]').simulate('change', { target: { value: '30-06-2020' } });
             element.find('input[type="text"]').simulate('blur');
@@ -390,9 +412,9 @@ describe('<DatePicker />', () => {
                 isoFormattedDate: '2020-06-30'
             }));
         });
-        test('should call onBlur after leaving input, with validated data', () => {
+        test('should call onInputBlur after leaving input, with validated data', () => {
             const blur = jest.fn();
-            const element = mount(<DatePicker onBlur={blur} />).find('input[type="text"]');
+            const element = mount(<DatePicker onInputBlur={blur} />).find('input[type="text"]');
             element.simulate('change', { target: { value: 'rubbish' } });
             element.find('input[type="text"]').simulate('blur');
 
@@ -409,7 +431,7 @@ describe('<DatePicker />', () => {
             const datePickerClose = jest.fn();
             const element = mount(<DatePicker dateFormat='YYYY-MM-DD' defaultValue='2020-03-13'
                 onDatePickerClose={datePickerClose} />);
-            element.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            element.find('button.fd-button--transparent').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
             expect(datePickerClose).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '2020-03-02' }));
             expect(datePickerClose).toHaveBeenCalledTimes(1);
@@ -458,7 +480,7 @@ describe('<DatePicker />', () => {
                 .find('input[type="text"]')
                 .simulate('change', { target: { value: '04/14/2020' } });
 
-            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '04/14/2020' }));
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '04/14/2020' }), 'inputChange');
         });
 
         test('should call onChange on selecting a calendar item', () => {
@@ -468,21 +490,21 @@ describe('<DatePicker />', () => {
             element = element.setProps({
                 dateFormat: 'MM/DD/YYYY'
             });
-            element.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            element.find('button.fd-button--transparent').simulate('click');
             element.find('.fd-calendar__text').at(8).simulate('click');
 
-            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }));
+            expect(change).toHaveBeenCalledWith(expect.objectContaining({ formattedDate: '03/02/2020' }), 'calendarDateClicked');
         });
     });
 
-    describe('onFocus callback', () => {
-        test('should call onFocus on focusing input', () => {
+    describe('onInputFocus callback', () => {
+        test('should call onInputFocus on focusing input', () => {
             const focus = jest.fn();
             const element = mount(
                 <DatePicker
                     dateFormat='YYYY-MM-DD'
                     defaultValue='2020-03-13'
-                    onFocus={focus} />
+                    onInputFocus={focus} />
             );
 
             element.find('input[type="text"]').prop('onFocus')();
@@ -509,13 +531,45 @@ describe('<DatePicker />', () => {
             ).toBe('Sample');
         });
 
+        test('should allow props to be spread to the DatePicker component\'s inputGroup element', () => {
+            const element = mount(<DatePicker inputGroupProps={{ 'data-sample': 'Sample' }} />);
+
+            expect(
+                element.find('.fd-input-group').getDOMNode().attributes['data-sample'].value
+            ).toBe('Sample');
+        });
+
         test('should allow props to be spread to the DatePicker component\'s button element', () => {
             const element = mount(<DatePicker buttonProps={{ 'data-sample': 'Sample' }} />);
 
             expect(
-                element.find('button.fd-button--transparent.sap-icon--appointment-2').getDOMNode().attributes['data-sample'].value
+                element.find('button.fd-button--transparent').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
+
+        test('should allow the onClick prop to be passed to the DatePicker component\'s button element', async() => {
+            const onClick = jest.fn();
+            const element = mount(<DatePicker buttonProps={{ 'data-test': 'my-button', onClick }} />);
+
+            await act(async() => {
+                element.find('button[data-test="my-button"]').simulate('click');
+            });
+            expect(onClick).toHaveBeenCalledTimes(1);
+            expect(onClick).toHaveBeenCalledWith(expect.anything());
+        });
+
+        test('should allow onClick when no buttonProps.onClick is provided', async() => {
+            const element = mount(<DatePicker buttonProps={{ 'data-test': 'my-button' }} />);
+
+            expect(
+                async() => {
+                    await act(async() => {
+                        element.find('button[data-test="my-button"]').simulate('click');
+                    });
+                }
+            ).not.toThrow(expect.anything());
+        });
+
 
         test('should allow props to be spread to the DatePicker component\'s Calendar component\'s month list ul element', () => {
             const calendarProps = {
@@ -524,7 +578,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             wrapper.find('.fd-calendar__action').at(1).childAt(0).simulate('click');
 
             expect(
@@ -539,7 +593,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
             wrapper.find('.fd-calendar__action').at(2).childAt(0).simulate('click');
 
             expect(
@@ -554,7 +608,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
 
             expect(
                 wrapper.find('.fd-calendar__dates').childAt(0).getDOMNode().attributes['data-sample'].value
@@ -568,7 +622,7 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
 
             expect(
                 wrapper.find('.fd-calendar__group').at(0).getDOMNode().attributes['data-sample'].value
@@ -582,11 +636,66 @@ describe('<DatePicker />', () => {
                 }
             };
             wrapper = mount(<DatePicker calendarProps={calendarProps} />);
-            wrapper.find('button.fd-button--transparent.sap-icon--appointment-2').simulate('click');
+            wrapper.find('button.fd-button--transparent').simulate('click');
 
             expect(
                 wrapper.find('tbody').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
+        });
+    });
+
+    describe('validationOverlayProps', () => {
+        test('pass validationOverlayProps to InputGroup', () => {
+            const element = mount(
+                <DatePicker
+                    validationOverlayProps={{
+                        className: 'foo'
+                    }} />
+            );
+
+            expect(
+                element.find('InputGroup').at(1).prop('validationOverlayProps')
+            ).toMatchObject({
+                className: 'foo'
+            });
+        });
+
+        test('should not show multiple validation overlays', async() => {
+            wrapper = mount(
+                <DatePicker validationState={{ state: 'error', text: 'Test validation state' }} />
+            );
+
+            const datepickerButton = wrapper.find('button.fd-button--transparent');
+            const datepickerInput = wrapper.find('input[type="text"]');
+            await act(async() => {
+                datepickerButton.simulate('click');
+                datepickerInput.simulate('focus');
+            });
+            wrapper.update();
+            expect(wrapper.find('.fd-list__message').length).toBe(1);
+        });
+    });
+    describe('readOnly', () => {
+        test('should not render an inputGroup.Addon button if it is readOnly', () => {
+            wrapper = mount(<DatePicker readOnly />);
+            expect(wrapper.find('button').length).toBe(0);
+        });
+
+        test('should disabled the popover when readOnly is true', () => {
+            wrapper = mount(<DatePicker readOnly />);
+            expect(wrapper.find('Popover').at(0).props().disabled).toBe(true);
+
+            expect(wrapper.find('button').length).toBe(0);
+        });
+
+        test('should render an inputGroup.Addon button if it is not readOnly', () => {
+            wrapper = mount(<DatePicker />);
+            expect(wrapper.find('button').length).toBe(1);
+        });
+
+        test('should keep the popover when readOnly is true', () => {
+            wrapper = mount(<DatePicker />);
+            expect(wrapper.find('Popover').at(0).props().disabled).not.toBeDefined();
         });
     });
 });

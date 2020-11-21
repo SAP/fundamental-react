@@ -1,9 +1,19 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
+import withStyles from '../utils/withStyles';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...sideNavStyles
+});
+const isUsingCssModules = sideNavStyles && Object.keys(sideNavStyles).length > 0;
 
 class SideNavListItem extends React.Component {
     constructor(props) {
@@ -27,11 +37,11 @@ class SideNavListItem extends React.Component {
     };
 
     render() {
-        const { children, condensed, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, expandSubmenuLabel, ...props } = this.props;
+        const { children, condensed, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, expandSubmenuLabel, cssNamespace, ...props } = this.props;
         const nestedListId = shortid.generate();
         const getClasses = () => {
             return classnames(
-                'fd-nested-list__link',
+                `${cssNamespace}-nested-list__link`,
                 {
                     'is-selected': selected,
                     'is-expanded': this.state.expanded
@@ -53,11 +63,12 @@ class SideNavListItem extends React.Component {
                         onItemSelect(e, id, hasChild);
                     } : null}>
                     {glyph ? (
-                        <span
-                            aria-hidden
-                            className={`fd-nested-list__icon sap-icon--${glyph}`} />
+                        <Icon
+                            ariaHidden
+                            className={classnames(`${cssNamespace}-nested-list__icon`)}
+                            glyph={glyph} />
                     ) : null}
-                    <span className='fd-nested-list__title'>
+                    <span className={classnames(`${cssNamespace}-nested-list__title`)}>
                         {name}
                     </span>
                 </a>
@@ -65,7 +76,7 @@ class SideNavListItem extends React.Component {
 
             if (hasChild) {
                 const divClasses = classnames(
-                    'fd-nested-list__content',
+                    `${cssNamespace}-nested-list__content`,
                     'has-child',
                     {
                         'is-selected': selected
@@ -85,10 +96,12 @@ class SideNavListItem extends React.Component {
                             aria-expanded={this.state.expanded}
                             aria-haspopup='true'
                             aria-label={expandSubmenuLabel}
-                            className='fd-nested-list__button'
+                            className={classnames(`${cssNamespace}-nested-list__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                             onClick={() => {
                                 this.handleExpand();
-                            }} />
+                            }}>
+                            <Icon ariaHidden glyph={this.state.expanded ? 'navigation-down-arrow' : 'navigation-right-arrow'} />
+                        </Button>
                     </div>
                 );
             } else {
@@ -98,7 +111,7 @@ class SideNavListItem extends React.Component {
 
         return (
             <li {...props}
-                className='fd-nested-list__item'
+                className={classnames(`${cssNamespace}-nested-list__item`)}
                 key={id}>
                 {url && renderLink()}
                 {React.Children.toArray(children).map(child => {
@@ -108,9 +121,9 @@ class SideNavListItem extends React.Component {
                                 {glyph ? (
                                     <span
                                         aria-hidden
-                                        className={`fd-nested-list__icon sap-icon--${glyph}`} />
+                                        className={classnames(`${cssNamespace}-nested-list__icon`, `sap-icon--${glyph}`)} />
                                 ) : null}
-                                <span className='fd-nested-list__title'>{child.props.children}</span>
+                                <span className={classnames(`${cssNamespace}-nested-list__title`)}>{child.props.children}</span>
                             </React.Fragment>),
                             className: getClasses(),
                             onClick: (e) => {
@@ -161,7 +174,12 @@ SideNavListItem.propTypes = {
     selectedId: PropTypes.string,
     /** Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute */
     url: PropTypes.string,
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when SideNavListItem is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onClick: PropTypes.func,
     /** Internal use only */
     onItemSelect: PropTypes.func
@@ -174,4 +192,4 @@ SideNavListItem.defaultProps = {
 
 SideNavListItem.displayName = 'SideNav.ListItem';
 
-export default SideNavListItem;
+export default withStyles(SideNavListItem);

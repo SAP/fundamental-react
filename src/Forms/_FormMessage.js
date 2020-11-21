@@ -1,15 +1,24 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/form-message.css';
+import withStyles from '../utils/withStyles';
+import formMessageStyles from 'fundamental-styles/dist/form-message.css';
+import listStyles from 'fundamental-styles/dist/list.css';
 
-const FormMessage = React.forwardRef(({ type, children, className, ...props }, ref) => {
+const classnames = classnamesBind.bind({
+    ...listStyles,
+    ...formMessageStyles
+});
+
+const FormMessage = React.forwardRef(({ children, className, cssNamespace, forPopoverList, type, ...props }, ref) => {
 
     const formMessageClasses = classnames(
-        'fd-form-message',
         {
-            [`fd-form-message--${type}`]: !!type
+            [`${cssNamespace}-form-message`]: !forPopoverList,
+            [`${cssNamespace}-list__message`]: forPopoverList,
+            [`${cssNamespace}-form-message--${type}`]: !forPopoverList && !!type,
+            [`${cssNamespace}-list__message--${type}`]: forPopoverList && !!type
         },
         className
     );
@@ -32,8 +41,10 @@ FormMessage.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Set to **true** if FormMessage is for a popover with list*/
+    forPopoverList: PropTypes.bool,
     /** Sets the variation of the component. Primarily used for styling */
     type: PropTypes.oneOf(FORM_MESSAGE_TYPES)
 };
 
-export default FormMessage;
+export default withStyles(FormMessage);

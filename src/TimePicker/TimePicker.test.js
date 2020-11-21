@@ -14,7 +14,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:34:56' } });
 
-        expect(wrapper.state('value')).toEqual('12:34:56');
+        expect(wrapper.children().state('value')).toEqual('12:34:56');
 
         wrapper = mount(
             <TimePicker
@@ -28,7 +28,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:34 am' } });
 
-        expect(wrapper.state('value')).toEqual('12:34 am');
+        expect(wrapper.children().state('value')).toEqual('12:34 am');
 
         wrapper = mount(
             <TimePicker
@@ -42,7 +42,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:34 am' } });
 
-        expect(wrapper.state('value')).toEqual('12:34 am');
+        expect(wrapper.children().state('value')).toEqual('12:34 am');
 
         wrapper = mount(
             <TimePicker
@@ -56,7 +56,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '4:12:00 am' } });
 
-        expect(wrapper.state('value')).toEqual('4:12:00 am');
+        expect(wrapper.children().state('value')).toEqual('4:12:00 am');
 
         wrapper = mount(twelveHourTime);
         wrapper
@@ -64,7 +64,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:24:34 pm' } });
 
-        expect(wrapper.state('value')).toEqual('12:24:34 pm');
+        expect(wrapper.children().state('value')).toEqual('12:24:34 pm');
 
         // just hour and minute,  12 hr format
         wrapper = mount(
@@ -79,7 +79,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:34 am' } });
 
-        expect(wrapper.state('value')).toEqual('12:34 am');
+        expect(wrapper.children().state('value')).toEqual('12:34 am');
 
         // just minute, 12 hr format
         wrapper = mount(
@@ -94,7 +94,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '00:24:00 am' } });
 
-        expect(wrapper.state('value')).toEqual('00:24:00 am');
+        expect(wrapper.children().state('value')).toEqual('00:24:00 am');
 
         // just hour and minute, no 12 hr format
         wrapper = mount(
@@ -109,7 +109,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:34' } });
 
-        expect(wrapper.state('value')).toEqual('12:34');
+        expect(wrapper.children().state('value')).toEqual('12:34');
 
         // just minute and second, no 12 hr format
         wrapper = mount(
@@ -125,7 +125,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '24:34' } });
 
-        expect(wrapper.state('value')).toEqual('24:34');
+        expect(wrapper.children().state('value')).toEqual('24:34');
     });
 
     test('check value change', () => {
@@ -144,7 +144,7 @@ describe('<TimePicker />', () => {
             .find('.fd-time__unit')
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').hour).toEqual(9);
+        expect(wrapper.children().state('time').hour).toEqual(9);
 
         wrapper
             .find('.fd-time__col')
@@ -155,7 +155,7 @@ describe('<TimePicker />', () => {
             .find('.fd-time__unit')
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').minute).toEqual(57);
+        expect(wrapper.children().state('time').minute).toEqual(57);
 
         wrapper
             .find('.fd-time__col')
@@ -166,9 +166,9 @@ describe('<TimePicker />', () => {
             .find('.fd-time__unit')
             .at(0)
             .simulate('click');
-        expect(wrapper.state('time').second).toEqual(57);
+        expect(wrapper.children().state('time').second).toEqual(57);
 
-        expect(wrapper.state('value')).toEqual('09:57:57 am');
+        expect(wrapper.children().state('value')).toEqual('09:57:57 am');
     });
 
     test('check for onBlur of text input', () => {
@@ -180,7 +180,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('change', { target: { value: '12:34:56 am' } });
 
-        expect(wrapper.state('value')).toEqual('12:34:56 am');
+        expect(wrapper.children().state('value')).toEqual('12:34:56 am');
 
         wrapper
             .find('input[type="text"]')
@@ -198,7 +198,7 @@ describe('<TimePicker />', () => {
             .at(0)
             .simulate('blur');
 
-        expect(wrapper.state('value')).toEqual('');
+        expect(wrapper.children().state('value')).toEqual('');
     });
 
     test('check for onBlur of text input with initial value', () => {
@@ -208,28 +208,28 @@ describe('<TimePicker />', () => {
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('10:10:10 pm');
+        expect(wrapper.children().state('value')).toEqual('10:10:10 pm');
         // check invalid input with 12 Hour Clock
         wrapper = mount(<TimePicker format12Hours value='13:10:10 pm' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('');
+        expect(wrapper.children().state('value')).toEqual('');
         // check valid input with 24 Hour Clock
         wrapper = mount(<TimePicker value='23:10:10' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('23:10:10');
+        expect(wrapper.children().state('value')).toEqual('23:10:10');
         // check invalid input with 24 Hour Clock
         wrapper = mount(<TimePicker value='25:10:10' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('');
+        expect(wrapper.children().state('value')).toEqual('');
         // check valid input with 12 Hour Clock with Hours and Minutes
         wrapper = mount(<TimePicker format12Hours showSecond={false}
             value='10:10 am' />);
@@ -237,7 +237,7 @@ describe('<TimePicker />', () => {
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('10:10 am');
+        expect(wrapper.children().state('value')).toEqual('10:10 am');
         // check invalid input with 12 Hour Clock with Hours and Minutes
         wrapper = mount(<TimePicker format12Hours showSecond={false}
             value='13:10 an' />);
@@ -245,33 +245,33 @@ describe('<TimePicker />', () => {
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('');
+        expect(wrapper.children().state('value')).toEqual('');
         // check valid input with 24 Hour Clock with Hours and Minutes
         wrapper = mount(<TimePicker showSecond={false} value='23:10' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('23:10');
+        expect(wrapper.children().state('value')).toEqual('23:10');
         // check invalid input with 24 Hour Clock with Hours and Minutes
         wrapper = mount(<TimePicker showSecond={false} value='24:10' />);
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('blur');
-        expect(wrapper.state('value')).toEqual('');
+        expect(wrapper.children().state('value')).toEqual('');
     });
 
     test('check for initial value', () => {
         let wrapper = mount(timepickerWithInitialValue);
-        expect(wrapper.state('value')).toEqual('10:30:34 pm');
+        expect(wrapper.children().state('value')).toEqual('10:30:34 pm');
         // check valid input
         wrapper
             .find('input[type="text"]')
             .at(0)
             .simulate('change', { target: { value: '12:34:56 am' } });
 
-        expect(wrapper.state('value')).toEqual('12:34:56 am');
+        expect(wrapper.children().state('value')).toEqual('12:34:56 am');
     });
 
     describe('onChange callback', () => {
@@ -308,7 +308,7 @@ describe('<TimePicker />', () => {
             const element = mount(<TimePicker id='testId' popoverProps={{ 'data-sample': 'Sample' }} />);
             element.find('button').simulate('click');
             expect(
-                element.find('div.fd-popover').getDOMNode().attributes['data-sample'].value
+                element.find('div.fd-popover').first().getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
     });

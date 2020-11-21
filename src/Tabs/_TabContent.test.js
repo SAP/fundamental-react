@@ -1,7 +1,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import Tab from './Tab';
-import { TabContent } from './_TabContent';
+import TabContent from './_TabContent';
 import TabGroup from './TabGroup';
 
 describe('<Tabs />', () => {
@@ -34,7 +34,8 @@ describe('<Tabs />', () => {
     describe('Prop spreading', () => {
         test('should allow props to be spread to the Tab component\'s content component', () => {
             const element = mount(<TabGroup selectedIndex={1}>
-                <Tab id='1' tabContentProps={{ 'data-sample': 'Sample' }} />
+                <Tab id='1' tabContentProps={{ 'data-sample': 'Sample' }}
+                    title='Tab 1' />
             </TabGroup>
             );
 

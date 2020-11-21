@@ -1,16 +1,18 @@
-body {
-    font-family: '72', 'Open Sans', sans-serif;
+html {
+    font-size: 16px;
 }
 
-/* override storybook max width */
-.sbdocs.sbdocs-content {
-    width: 100%;
-    max-width: none;
+body {
+    font-family: '72', 'Open Sans', sans-serif;
 }
 
 /* fix bug in storybook@6 where toolbar height is hardcoded - causes scrollbar */
 a[title='Open canvas in new tab'] {
     height: 34px;
+}
+
+.sbdocs.sbdocs-content {
+    max-width: 85%;
 }
 
 /* make room for TOCBot */
@@ -71,6 +73,7 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
 
 /* header */
 .fddocs-header {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: $docs-hd-tp 0 $docs-hd-bp 0;
     position: fixed;
@@ -79,22 +82,38 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
     width: 100%;
     color: #404040;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-bottom: 2px solid #d7dbde;
     z-index: 10;
 
     &--left {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         justify-self: start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
     &--right {
         justify-self: end;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
@@ -123,8 +142,12 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
     padding: 16px 0;
     font-size: 14px;
     line-height: 1.33;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto auto;
     grid-template-columns: auto auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-top: 2px solid #d7dbde;
     color: #404040;
@@ -132,7 +155,11 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
     &__logo {
         margin-right: 16px;
         min-width: 120px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -148,15 +175,25 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
     }
 
     &--left {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         justify-self: start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
 
     &--right {
         justify-self: end;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
 
         a {
@@ -173,9 +210,18 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
 
 /* community social links */
 .fddocs-community {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-top: 2px solid #d7dbde;
     color: #404040;
@@ -218,8 +264,11 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
 
 /* story example layout containers */
 .fddocs-container {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-wrap: wrap;
@@ -230,6 +279,7 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
     padding: 10px 10px;
 
     &--break {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
         height: 0;
         border-bottom: 10px solid transparent;
@@ -242,4 +292,162 @@ $heading-toc-spacer: $docs-hd-tp + $docs-hd-bp + $docs-hd-ch + $docs-tm;
         text-align: center;
         height: 120px;
     }
+}
+
+/* blockquote e.g. depreciated warning */
+blockquote {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left-width: 5px;
+    border-radius: 5px;
+    background: #fffde4;
+    font-size: 1rem;
+
+    &.docs-deprecated {
+        background: #ffebeb;
+        background: var(--sapErrorBackground, #ffebeb);
+        color: #bb0000;
+        color: var(--sapNegativeColor, #bb0000);
+        border-color: #bb0000;
+        border-color: var(--sapNegativeColor, #bb0000);
+    }
+}
+
+.docs-layout-grid {
+    .col-content {
+        min-height: 4rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .docs-col--full {
+        .col-content {
+            background-color: #30c5d2;
+            color: black;
+        }
+    }
+
+    .docs-col--10 {
+        .col-content {
+            background-color: #3694b5;
+            color: black;
+        }
+    }
+
+    .docs-col--9 {
+        .col-content {
+            background-color: #3a73a2;
+            color: black;
+        }
+    }
+
+    .docs-col--7 {
+        .col-content {
+            background-color: #43317c;
+            color: white;
+        }
+    }
+
+    .docs-col--6 {
+        .col-content {
+            background-color: #471069;
+            color: white;
+        }
+    }
+
+    .docs-col--5 {
+        .col-content {
+            background-color: #452073;
+            color: white;
+        }
+    }
+
+    .docs-col--4 {
+        .col-content {
+            background-color: #414186;
+            color: white;
+        }
+    }
+
+    .docs-col--3 {
+        .col-content {
+            background-color: #3d6299;
+            color: white;
+        }
+    }
+    .docs-col--1 {
+        .col-content {
+            background-color: #34a4bf;
+            color: black;
+        }
+    }
+
+    .docs-layout-grid-first,
+    .docs-col--12 {
+        .col-content {
+            background-color: #30c5d2;
+            color: black;
+        }
+    }
+
+    .docs-layout-grid-second,
+    .docs-col--11 {
+        .col-content {
+            background-color: #32b5c8;
+            color: black;
+        }
+    }
+
+    .docs-layout-grid-third,
+    .docs-col--8 {
+        .col-content {
+            background-color: #3f528f;
+            color: white;
+        }
+    }
+
+    .docs-layout-grid-fourth,
+    .docs-col--2 {
+        .col-content {
+            background-color: #3883ac;
+            color: black;
+        }
+    }
+}
+
+.docs-import-statement {
+    display: inline-flex;
+}
+
+.copy-import-statement-btn {
+    margin: 5px !important;
+}
+
+.docs-multi-imports,
+.docs-single-import {
+    margin-bottom: 5em;
+}
+
+.docs-single-import,
+.docs-multi-imports {
+    display: flex;
+    flex-direction: column;
+
+    pre {
+        margin: 0;
+    }
+}
+
+.docs-offscreen {
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.docs-component-description {
+    margin-bottom: 80px;
 }

@@ -1,8 +1,11 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import shortId from '../utils/shortId';
-import 'fundamental-styles/dist/form-group.css';
+import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/form-group.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **FormRadioGroup** is a type of FormGroup that groups a collection of radio buttons or checkboxes into a single input value.
  * **FormRadioItem** is a specialized form control that emits an `<input>` with a type of radio.
@@ -12,18 +15,19 @@ between 2-3 options. This component can also be disabled and displayed in a row.
 const FormRadioGroup = ({
     children,
     className,
+    cssNamespace,
     compact,
     disabled,
     inline,
     onChange
 }) => {
 
-    const groupId = shortId.generate();
+    const groupId = useUniqueId();
 
     const formGroupClasses = classnames(
-        'fd-form-group',
+        `${cssNamespace}-form-group`,
         {
-            'fd-form-group--inline': inline
+            [`${cssNamespace}-form-group--inline`]: inline
         },
         className
     );
@@ -36,7 +40,9 @@ const FormRadioGroup = ({
                     disabled: child.props.disabled || disabled,
                     inline: child.props.inline || inline,
                     name: child.props.name || groupId,
-                    onChange: child.props.onChange || onChange
+                    onChange: e => {
+                        child.props.onChange?.(e, child.props.data) || onChange(e, child.props.data);
+                    }
                 });
             })}
         </div>
@@ -56,7 +62,13 @@ FormRadioGroup.propTypes = {
     disabled: PropTypes.bool,
     /** Set to **true** to display radio buttons in a row */
     inline: PropTypes.bool,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the selected `FormRadioItem` in the `FormRadioGroup` changes.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {*} radioItemData - anything set on the data property of the last selected FormRadioItem within this group.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 
@@ -64,4 +76,4 @@ FormRadioGroup.defaultProps = {
     onChange: () => {}
 };
 
-export default FormRadioGroup;
+export default withStyles(FormRadioGroup);

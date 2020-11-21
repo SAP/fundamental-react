@@ -51,7 +51,7 @@ describe('<Menu />', () => {
                 </MemoryRouter>);
 
             expect(
-                element.find('span.sap-icon--accept').getDOMNode().attributes['data-sample'].value
+                element.find('.sap-icon--accept').getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 

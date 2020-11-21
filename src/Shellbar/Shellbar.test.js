@@ -147,10 +147,10 @@ describe('<Shellbar />', () => {
 
         wrapper.find('.fd-popover__control .fd-shellbar-collapse--control').simulate('click');
 
-        wrapper.find('a.fd-menu__link span.sap-icon--grid').simulate('click');
+        wrapper.find('a.fd-menu__link i.sap-icon--grid').simulate('click');
         wrapper.find('span.fd-menu.sap-icon--nav-back').simulate('click');
 
-        expect(wrapper.state(['showCollapsedProductSwitchMenu'])).toBeFalsy();
+        expect(wrapper.children().state(['showCollapsedProductSwitchMenu'])).toBeFalsy();
     });
 
     test('click back button on shellbar with back button', () => {

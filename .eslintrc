@@ -11,7 +11,8 @@
       "ie11",
       "jsx-a11y",
       "loosely-restrict-imports",
-      "react"
+      "react",
+      "eslint-plugin-local-rules"
     ],
     "settings": {
       "react": {
@@ -140,7 +141,7 @@
       "react/no-did-update-set-state": 2,
       "react/no-multi-comp": 2,
       "react/no-unknown-property": 2,
-      "react/prop-types": 2,
+      "react/prop-types": [2, {"ignore": ["cssNamespace"], "skipUndeclared": true}],
       "react/react-in-jsx-scope": 2,
       "react/self-closing-comp": 2,
       "react/sort-prop-types": [2,
@@ -152,7 +153,8 @@
       ],
       "semi-spacing": 2,
       "semi": 2,
-      "sort-imports": [2,
+      "local-rules/classnames-wrap": 2,
+      "local-rules/sort-imports": [2,
         {
           "ignoreCase": true,
           "ignoreMemberSort": false,
@@ -160,7 +162,8 @@
             "single",
             "multiple",
             "all",
-            "none"
+            "none",
+            "css"
           ]
         }
       ],

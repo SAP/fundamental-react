@@ -1,10 +1,13 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
-import 'fundamental-styles/dist/textarea.css';
+import styles from 'fundamental-styles/dist/textarea.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **FormTextarea** is used to gather potentially lengthy input from a user.
  * Best practice is to use this component as a child of FormGroup. */
@@ -12,12 +15,14 @@ const FormTextarea = React.forwardRef(({
     className,
     compact,
     counterProps,
+    cssNamespace,
     defaultValue,
     disabled,
     localizedText,
     maxLength,
     onChange,
     readOnly,
+    validationOverlayProps,
     validationState,
     value,
     ...props }, ref) => {
@@ -53,16 +58,16 @@ const FormTextarea = React.forwardRef(({
     };
 
     const formTextAreaClasses = classnames(
-        'fd-textarea',
+        `${cssNamespace}-textarea`,
         {
-            'fd-textarea--compact': compact,
+            [`${cssNamespace}-textarea--compact`]: compact,
             [`is-${validationState?.state}`]: validationState?.state
         },
         className
     );
 
     const counterClasses = classnames(
-        'fd-textarea-counter',
+        `${cssNamespace}-textarea-counter`,
         counterProps?.className
     );
 
@@ -82,6 +87,7 @@ const FormTextarea = React.forwardRef(({
     return (
         <>
             {validationState?.state ? <FormValidationOverlay
+                {...validationOverlayProps}
                 control={formTextarea}
                 validationState={validationState} />
                 : formTextarea}
@@ -120,6 +126,21 @@ FormTextarea.propTypes = {
     maxLength: PropTypes.number,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
+        innerRefClassName: PropTypes.string,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
     validationState: PropTypes.shape({
         /** State of validation: 'error', 'warning', 'information', 'success' */
@@ -130,6 +151,12 @@ FormTextarea.propTypes = {
     /** Value for the textarea */
     value: PropTypes.string,
     /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the change event fires on the HTML `<textarea>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 
@@ -140,4 +167,4 @@ FormTextarea.defaultProps = {
     }
 };
 
-export default FormTextarea;
+export default withStyles(FormTextarea);

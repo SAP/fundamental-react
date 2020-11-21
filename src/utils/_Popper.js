@@ -1,13 +1,17 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from './CustomPropTypes/CustomPropTypes';
 import Foco from 'react-foco';
 import { getModalManager } from './modalManager';
 import keycode from 'keycode';
+import PopperContainer from './_PopperContainer';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Manager, Popper as ReactPopper, Reference } from 'react-popper-2';
 import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from './constants';
+import popoverStyles from 'fundamental-styles/dist/popover.css';
+
+const classnames = classnamesBind.bind(popoverStyles);
 
 const defaultModifiers = [
     {
@@ -91,7 +95,7 @@ const maxTargetModifier = {
 class Popper extends React.Component {
     constructor(props) {
         super(props);
-        this.modalManager = getModalManager();
+        this.modalManager = props.modalManager ? props.modalManager : getModalManager();
     }
 
     componentDidMount() {
@@ -133,7 +137,9 @@ class Popper extends React.Component {
             this.props.onKeyDown(e);
 
             if (e.keyCode === keycode.codes.esc && this.props.onEscapeKey) {
+                e.preventDefault();
                 e.stopPropagation();
+
                 this.props.onEscapeKey();
             }
         }
@@ -146,6 +152,7 @@ class Popper extends React.Component {
             disableEdgeDetection,
             flipContainer,
             innerRef,
+            innerRefClassName,
             noArrow,
             onClickOutside,
             popperClassName,
@@ -207,11 +214,11 @@ class Popper extends React.Component {
                             x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
                             // This is needed for fundamental-styles even though popper-2 uses data-placement as well
                             x-placement={placement}>
-                            <div ref={innerRef}>
+                            <div className={classnames(`${cssBlock}__innerRef`, innerRefClassName)} ref={innerRef}>
                                 {children}
                             </div>
                             <span
-                                className={`${cssBlock}__arrow`}
+                                className={classnames(`${cssBlock}__arrow`)}
                                 ref={arrowProps.ref}
                                 style={{ ...arrowProps.style, ...fundamentalStyleArrowOverrides }} />
                         </div>
@@ -221,8 +228,11 @@ class Popper extends React.Component {
         );
 
         if (usePortal) {
-            // eslint-disable-next-line compat/compat
-            popper = ReactDOM.createPortal(popper, document.querySelector('body'));
+            popper = (
+                <PopperContainer>
+                    {popper}
+                </PopperContainer>
+            );
         }
 
         return (
@@ -256,6 +266,8 @@ Popper.propTypes = {
     disableEdgeDetection: PropTypes.bool,
     flipContainer: CustomPropTypes.elementOrArrayOfElements(),
     innerRef: PropTypes.func,
+    innerRefClassName: PropTypes.string,
+    modalManager: PropTypes.object,
     noArrow: PropTypes.bool,
     popperClassName: PropTypes.string,
     popperModifiers: PropTypes.array,

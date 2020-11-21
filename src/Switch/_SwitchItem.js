@@ -1,21 +1,31 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import switchStyles from 'fundamental-styles/dist/switch.css';
 
-const SwitchItem = ({ glyph, text, type }) => {
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...switchStyles
+});
 
-    const spanClasses = classnames(
-        'fd-fd-switch__text',
+const SwitchItem = ({ glyph, text, type, cssNamespace }) => {
+
+    const iconClasses = classnames(
         {
-            [`fd-switch__icon fd-switch__icon--${type} sap-icon--${glyph}`]: glyph
+            [`${cssNamespace}-switch__icon`]: !!glyph,
+            [`${cssNamespace}-switch__icon--${type}`]: !!glyph
         }
     );
 
     return (
-        <span
-            aria-label={text}
-            className={spanClasses} />
+        <Icon
+            ariaLabel={text}
+            className={iconClasses}
+            glyph={glyph} />
     );
 
 };
@@ -31,4 +41,4 @@ SwitchItem.propTypes = {
     type: PropTypes.oneOf(['on', 'off'])
 };
 
-export default SwitchItem;
+export default withStyles(SwitchItem);

@@ -13,20 +13,77 @@ exports[`Storyshots Component API/Button/ButtonSegmented Compact 1`] = `
       className="fd-button fd-button--compact"
       type="button"
     >
-      Left
+      <span
+        className="fd-button__text"
+      >
+        Left
+      </span>
     </button>
     <button
       className="fd-button fd-button--compact is-selected"
-      selected={true}
       type="button"
     >
-      Middle
+      <span
+        className="fd-button__text"
+      >
+        Middle
+      </span>
     </button>
     <button
       className="fd-button fd-button--compact"
       type="button"
     >
-      Right
+      <span
+        className="fd-button__text"
+      >
+        Right
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Button/ButtonSegmented No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    aria-label="Group label"
+    className="xxx-segmented-button"
+    role="group"
+  >
+    <button
+      aria-label="Survey"
+      className="xxx-button"
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--survey"
+        role="img"
+      />
+    </button>
+    <button
+      aria-label="Pie chart"
+      className="xxx-button is-selected"
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--pie-chart"
+        role="img"
+      />
+    </button>
+    <button
+      aria-label="Pool"
+      className="xxx-button"
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--pool"
+        role="img"
+      />
     </button>
   </div>
 </div>
@@ -42,18 +99,38 @@ exports[`Storyshots Component API/Button/ButtonSegmented Primary 1`] = `
     role="group"
   >
     <button
-      className="fd-button sap-icon--survey"
+      aria-label="Survey"
+      className="fd-button"
       type="button"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--survey"
+        role="img"
+      />
+    </button>
     <button
-      className="fd-button sap-icon--pie-chart is-selected"
-      selected={true}
+      aria-label="Pie chart"
+      className="fd-button is-selected"
       type="button"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--pie-chart"
+        role="img"
+      />
+    </button>
     <button
-      className="fd-button sap-icon--pool"
+      aria-label="Pool"
+      className="fd-button"
       type="button"
-    />
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--pool"
+        role="img"
+      />
+    </button>
   </div>
 </div>
 `;

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import Pagination from '../Pagination';
 import React from 'react';
 
@@ -66,3 +67,18 @@ export const visibleTotalPagesZeroPagination = () => (
         onClick={handleClick}
         visiblePageTotal={20} />
 );
+
+export const dev = () => (
+    <Pagination itemsPerPage={0}
+        itemsTotal={200}
+        onClick={action('on-click')}
+        visiblePageTotal={20} />
+);
+
+export const noStyles = () => (
+    <Pagination
+        cssNamespace='xxx'
+        itemsTotal={101}
+        onClick={handleClick} />
+);
+noStyles.parameters = { docs: { disable: true } };

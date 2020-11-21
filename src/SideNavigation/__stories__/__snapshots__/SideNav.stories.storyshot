@@ -18,6 +18,7 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list--compact fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__item"
@@ -118,6 +119,7 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
     >
       <ul
         className="fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__item"
@@ -127,9 +129,10 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--home"
+              className="sap-icon--home fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -146,9 +149,10 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--cart"
+              className="sap-icon--cart fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -165,9 +169,10 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--accept"
+              className="sap-icon--accept fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -184,9 +189,10 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--alert"
+              className="sap-icon--alert fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -203,12 +209,114 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--bell"
+              className="sap-icon--bell fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
+            >
+              Link Item
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/SideNav No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-side-nav"
+  >
+    <a
+      className="xxx-side-nav__skip-link"
+      href="#content"
+    >
+      Skip navigation
+    </a>
+    <nav
+      className="fd-side-nav__main-navigation"
+    >
+      <ul
+        className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="xxx"
+      >
+        <li
+          className="xxx-nested-list__item"
+        >
+          <a
+            className="xxx-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-nested-list__title"
+            >
+              Link Item
+            </span>
+          </a>
+        </li>
+        <li
+          className="xxx-nested-list__item"
+        >
+          <a
+            className="xxx-nested-list__link is-selected"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-nested-list__title"
+            >
+              Link Item
+            </span>
+          </a>
+        </li>
+        <li
+          className="xxx-nested-list__item"
+        >
+          <a
+            className="xxx-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-nested-list__title"
+            >
+              Link Item
+            </span>
+          </a>
+        </li>
+        <li
+          className="xxx-nested-list__item"
+        >
+          <a
+            className="xxx-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-nested-list__title"
+            >
+              Link Item
+            </span>
+          </a>
+        </li>
+        <li
+          className="xxx-nested-list__item"
+        >
+          <a
+            className="xxx-nested-list__link"
+            href="#"
+            onClick={[Function]}
+          >
+            <span
+              className="xxx-nested-list__title"
             >
               Link Item
             </span>
@@ -238,6 +346,7 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__item"
@@ -322,6 +431,7 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
       <ul
         aria-label="Utility Menu"
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__item"
@@ -377,6 +487,7 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__item"
@@ -477,6 +588,7 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
         data-sample="Sample"
       >
         <li
@@ -487,9 +599,10 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             href="/"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--home"
+              className="sap-icon--home fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -506,9 +619,10 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             href="/"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--home"
+              className="sap-icon--home fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -525,9 +639,10 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             href="/"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--home"
+              className="sap-icon--home fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -544,9 +659,10 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--home"
+              className="sap-icon--home fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -563,9 +679,10 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
             href="#"
             onClick={[Function]}
           >
-            <span
+            <i
               aria-hidden={true}
-              className="fd-nested-list__icon sap-icon--home"
+              className="sap-icon--home fd-nested-list__icon"
+              role="img"
             />
             <span
               className="fd-nested-list__title"
@@ -598,6 +715,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__item"
@@ -640,12 +758,23 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               className="fd-button fd-nested-list__button"
               onClick={[Function]}
               type="button"
-            />
+            >
+              <span
+                className="fd-button__text"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--navigation-right-arrow"
+                  role="img"
+                />
+              </span>
+            </button>
           </div>
           <ul
             aria-expanded={false}
             aria-hidden={true}
             className="fd-nested-list--text-only fd-nested-list level-2"
+            cssNamespace="fd"
             id="fd-mocked-short-id"
           >
             <li
@@ -766,12 +895,23 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               className="fd-button fd-nested-list__button"
               onClick={[Function]}
               type="button"
-            />
+            >
+              <span
+                className="fd-button__text"
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--navigation-right-arrow"
+                  role="img"
+                />
+              </span>
+            </button>
           </div>
           <ul
             aria-expanded={false}
             aria-hidden={true}
             className="fd-nested-list--text-only fd-nested-list level-2"
+            cssNamespace="fd"
             id="fd-mocked-short-id"
           >
             <li
@@ -875,6 +1015,7 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__group-header"
@@ -963,6 +1104,7 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
     >
       <ul
         className="fd-nested-list--text-only fd-nested-list level-1"
+        cssNamespace="fd"
       >
         <li
           className="fd-nested-list__group-header"

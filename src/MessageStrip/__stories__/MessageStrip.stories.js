@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import MessageStrip from '../MessageStrip';
 import React from 'react';
 import {
@@ -40,12 +41,64 @@ export const states = () => (
     </>
 );
 
+
+
+export const statesWithCustomContentAndLinks = () => (
+    <>
+        <MessageStrip
+            dismissible
+            link='https://experience.sap.com'
+            linkText='Learn more'
+            localizedText={{
+                close: 'Dismiss alert'
+            }}
+            type='error'>
+            <b>Error</b><br />
+            {'There was some error. There was some error. There was some error. There was some error.    '}
+        </MessageStrip>
+        <MessageStrip
+            dismissible
+            link='https://experience.sap.com'
+            linkText='Learn more'
+            localizedText={{
+                close: 'Dismiss alert'
+            }}
+            type='warning'>
+            <b>Issue</b><br />
+            {'There is some problem.'} <br /> {'There is some problem. There is some problem. There is some problem.    '}
+        </MessageStrip>
+        <MessageStrip
+            dismissible
+            link='https://experience.sap.com'
+            linkText='Learn more'
+            localizedText={{
+                close: 'Dismiss alert'
+            }}
+            type='success'>
+            <b>Done</b><br />
+            {'Task completed successfully.'} <br />{' Task completed successfully. '} <br />  {'Task completed successfully. Task completed successfully.    '}
+        </MessageStrip>
+        <MessageStrip
+            dismissible
+            link='https://experience.sap.com'
+            linkText='Learn more'
+            localizedText={{
+                close: 'Dismiss alert'
+            }}
+            type='information'>
+            <b>Info</b><br />
+            {'For your information. For your information. For your information. For your information. For your information.    '}
+        </MessageStrip>
+    </>
+);
+
 export const dev = () => (
     <MessageStrip
         dismissible={boolean('dismissible', false)}
         link={text('href', '')}
         linkText={text('linkText', 'Default MessageStrip')}
         noGlyph={boolean('noGlyph', false)}
+        onCloseClicked={action('on-close-clicked')}
         type={select('Validation State', {
             'default': null,
             'warning': 'warning',
@@ -56,3 +109,8 @@ export const dev = () => (
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <MessageStrip cssNamespace='xxx'>Default MessageStrip</MessageStrip>
+);
+noStyles.parameters = { docs: { disable: true } };

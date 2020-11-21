@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import FormTextarea from '../FormTextarea';
 import React from 'react';
 import {
@@ -54,6 +55,7 @@ export const dev = () => (
         compact={boolean('compact', false)}
         defaultValue={text('Default Value', 'Default')}
         disabled={boolean('disabled', false)}
+        onChange={action('on-change')}
         readOnly={boolean('readOnly', false)}
         validationState={select('Validation State', {
             'none': '',
@@ -66,3 +68,6 @@ export const dev = () => (
 
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (<FormTextarea cssNamespace='xxx' defaultValue='Placeholder' />);
+noStyles.parameters = { docs: { disable: true } };

@@ -148,3 +148,36 @@ export const radioButtonGroups = () => (
         </FormFieldset>
     </>
 );
+
+export const noStyles = () => (
+    <FormFieldset cssNamespace='xxx'>
+        <FormLegend>
+            Shipping Address
+        </FormLegend>
+        <FormItem>
+            <FormLabel htmlFor='ex01'>
+                Name:
+            </FormLabel>
+            <FormInput id='ex01' />
+        </FormItem>
+        <FormItem>
+            <FormLabel htmlFor='ex02'>
+                Street:
+            </FormLabel>
+            <FormInput id='ex02' />
+        </FormItem>
+        <FormItem>
+            <FormLabel htmlFor='ex03'>
+                City:
+            </FormLabel>
+            <FormInput id='ex03' />
+        </FormItem>
+        <FormItem>
+            <FormLabel htmlFor='ex04'>
+                ZIP code:
+            </FormLabel>
+            <FormInput id='ex04' />
+        </FormItem>
+    </FormFieldset>
+);
+noStyles.parameters = { docs: { disable: true } };

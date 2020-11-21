@@ -1,11 +1,13 @@
 import Button from '../Button/Button';
+import classnamesBind from 'classnames/bind';
 import FormInput from '../Forms/FormInput';
 import InputGroup from '../InputGroup/InputGroup';
 import PropTypes from 'prop-types';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
+import styles from 'fundamental-styles/dist/input-group.css';
 
-const INVALID = 'is-invalid';
-const VALID = 'fd-input-group__input';
+const classnames = classnamesBind.bind(styles);
 
 class TimePickerItem extends Component {
     constructor(props) {
@@ -96,14 +98,14 @@ class TimePickerItem extends Component {
             if (event.type === 'blur') {
                 return true;
             }
-            this.setState({ isValid: true, style: VALID });
+            this.setState({ isValid: true, style: classnames(`${this.props.cssNamespace}-input-group__input`) });
             //send time value to Time Component
             this.updateTime(value);
         } else {
             if (event.type === 'blur') {
                 return false;
             }
-            this.setState({ isValid: false, style: INVALID });
+            this.setState({ isValid: false, style: classnames('is-invalid') });
         }
     };
 
@@ -207,7 +209,7 @@ class TimePickerItem extends Component {
             this.props.updateValue('');
         }
         //reset to initial style
-        this.setState({ style: VALID });
+        this.setState({ style: classnames(`${this.props.cssNamespace}-input-group__input`) });
     };
 
     render() {
@@ -273,4 +275,4 @@ TimePickerItem.propTypes = {
     onClick: PropTypes.func
 };
 
-export default TimePickerItem;
+export default withStyles(TimePickerItem);

@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import { action } from '@storybook/addon-actions';
 import React from 'react';
 import Tab from '../Tab';
 import TabContent from '../_TabContent';
@@ -23,7 +24,29 @@ export const primary = () => (
             title='Tab 3'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Tab>
-        <Tab glyph='cart' id='4'>
+        <Tab glyph='cart' id='4'
+            title='Tab 4'>
+            Please review your shopping chart.
+        </Tab>
+    </TabGroup>
+);
+
+export const allButtons = () => (
+    <TabGroup>
+        <Tab glyph='cart' id='1'
+            title='Tab 1'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Tab>
+        <Tab glyph='cart' id='2'
+            title='Tab 2'>
+            Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
+        </Tab>
+        <Tab glyph='cart' id='3'
+            title='Tab 3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Tab>
+        <Tab glyph='cart' id='4'
+            title='Tab 4'>
             Please review your shopping chart.
         </Tab>
     </TabGroup>
@@ -41,7 +64,8 @@ export const selectedIndex = () => (
             title='Tab 3'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Tab>
-        <Tab glyph='cart' id='4'>
+        <Tab glyph='cart' id='4'
+            title='Tab 4'>
             Please review your shopping chart.
         </Tab>
     </TabGroup>
@@ -62,7 +86,7 @@ export const disabled = () => (
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </Tab>
         <Tab disabled glyph='cart'
-            id='4'>
+            id='4' title='Tab 4'>
             Please review your shopping chart.
         </Tab>
     </TabGroup>
@@ -82,7 +106,8 @@ export const sizes = () => (
                     title='Tab 3'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </Tab>
-                <Tab glyph='cart' id='4'>
+                <Tab glyph='cart' id='4'
+                    title='Tab 4'>
                     Please review your shopping chart.
                 </Tab>
             </TabGroup>
@@ -90,3 +115,42 @@ export const sizes = () => (
     </>
 );
 
+
+export const dev = () => (
+    <TabGroup
+        onTabClick={action('on-tab-clicked')}>
+        <Tab id='1' title='Tab 1'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Tab>
+        <Tab id='2' title='Tab 2'>
+            Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
+        </Tab>
+        <Tab id='3'
+            title='Tab 3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Tab>
+        <Tab glyph='cart' id='4'
+            title='Tab 4'>
+            Please review your shopping chart.
+        </Tab>
+    </TabGroup>
+);
+
+export const noStyles = () => (
+    <TabGroup cssNamespace='xxx'>
+        <Tab id='1' title='Tab 1'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Tab>
+        <Tab id='2' title='Tab 2'>
+            Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
+        </Tab>
+        <Tab id='3'
+            title='Tab 3'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </Tab>
+        <Tab glyph='cart' id='4'>
+            Please review your shopping chart.
+        </Tab>
+    </TabGroup>
+);
+noStyles.parameters = { docs: { disable: true } };

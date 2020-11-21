@@ -1,18 +1,23 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/list.css';
+
+const classnames = classnamesBind.bind(styles);
 
 const ListByline = ({
     className,
     children,
+    cssNamespace,
     twoColumns,
     ...props
 }) => {
 
     const ListBylineClasses = classnames(
-        'fd-list__byline',
+        `${cssNamespace}-list__byline`,
         {
-            'fd-list__byline--2-col': twoColumns
+            [`${cssNamespace}-list__byline--2-col`]: twoColumns
         },
         className
     );
@@ -41,4 +46,4 @@ ListByline.defaultProps = {
     twoColumns: false
 };
 
-export default ListByline;
+export default withStyles(ListByline);

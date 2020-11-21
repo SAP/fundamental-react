@@ -2,6 +2,520 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.7...v0.14.0-rc.8) (2020-11-21)
+
+
+### Features
+
+* update fundamental-styles to 0.13.1-rc.2 ([#1266](https://github.com/SAP/fundamental-react/issues/1266)) ([60cbc68](https://github.com/SAP/fundamental-react/commit/60cbc685b5d0e36b0c3ee798a06e394900e4106b))
+
+## [0.14.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.6...v0.14.0-rc.7) (2020-11-16)
+
+
+### Features
+
+* update icon list with new icons ([#1248](https://github.com/SAP/fundamental-react/issues/1248)) ([1bdbb1c](https://github.com/SAP/fundamental-react/commit/1bdbb1c1d46cde2678b956bcccab1a32062fc696))
+
+## [0.14.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.5...v0.14.0-rc.6) (2020-11-09)
+
+
+### Bug Fixes
+
+* InputGroup validation changes ([#1260](https://github.com/SAP/fundamental-react/issues/1260)) ([83f3c7c](https://github.com/SAP/fundamental-react/commit/83f3c7c3db82a2e046e33dafcfabeec2f44982d9))
+
+## [0.14.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.4...v0.14.0-rc.5) (2020-11-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Removed `todayAction` property from Datepicker. Add `todayActionType` property to Datepicker to configure the type of today action. Update Datepicker to use a label for the Today action button from `localizedText.todayLabel`.
+
+### Bug Fixes
+
+* Datepicker today actions props interface ([#1259](https://github.com/SAP/fundamental-react/issues/1259)) ([74ba734](https://github.com/SAP/fundamental-react/commit/74ba7345b6961e678724802db413e960d8738a4e))
+
+## [0.14.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.3...v0.14.0-rc.4) (2020-11-05)
+
+
+### Bug Fixes
+
+* Call DatePicker buttonProps.onClick when button is clicked ([#1258](https://github.com/SAP/fundamental-react/issues/1258)) ([a6a5d95](https://github.com/SAP/fundamental-react/commit/a6a5d955a972b579c6819b917cb1031c0c55035c))
+
+## [0.14.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.2...v0.14.0-rc.3) (2020-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* `form-select` component has been removed
+
+* feat: update fd-styles to 0.13.0-rc.34
+
+* chore: update storybook tests
+
+* chore: remove FormSelect from index
+
+### Features
+
+* update fd-styles to 0.13.0-rc.34 ([#1257](https://github.com/SAP/fundamental-react/issues/1257)) ([0136683](https://github.com/SAP/fundamental-react/commit/01366833fe8a3e918efd92c72a8e4e1dbee5fa74))
+
+## [0.14.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.1...v0.14.0-rc.2) (2020-11-05)
+
+## [0.14.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.0...v0.14.0-rc.1) (2020-10-20)
+
+
+### Features
+
+* upgrade fundamental-styles to 13.0-rc.5 ([#1243](https://github.com/SAP/fundamental-react/issues/1243)) ([f39eecc](https://github.com/SAP/fundamental-react/commit/f39eecc099dedccbe07229e5d6fa3c305d260239))
+
+## [0.14.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.13.1...v0.14.0-rc.0) (2020-10-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* The DatePicker and Calendar prop disabledDates is no longer considered as a range, instead it is an array of single disabled dates.  The disableDateRanges prop can be used for existing functionality to disable multiple ranges.
+
+### Features
+
+* Make Calendar disabledDates an array of single dates, use disabledDateRanges for existing functionality ([#1244](https://github.com/SAP/fundamental-react/issues/1244)) ([84b8927](https://github.com/SAP/fundamental-react/commit/84b8927ed8eae8d2b5b91cd0f72b7cbefa9a1316))
+
+### [0.13.1](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.17...v0.13.1) (2020-10-19)
+
+### [0.13.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.16...v0.13.1-rc.17) (2020-10-16)
+
+### [0.13.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.15...v0.13.1-rc.16) (2020-10-16)
+
+
+### Features
+
+* new innerRefClassName prop as part of validationOverlayProps ([#1242](https://github.com/SAP/fundamental-react/issues/1242)) ([59ebaa1](https://github.com/SAP/fundamental-react/commit/59ebaa1786cfd7e75cac8a3523445795bd2064d0))
+
+### [0.13.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.14...v0.13.1-rc.15) (2020-10-14)
+
+
+### Bug Fixes
+
+* gridManager cleanup, fixes ([#1241](https://github.com/SAP/fundamental-react/issues/1241)) ([dd266f6](https://github.com/SAP/fundamental-react/commit/dd266f6036c7fc2746431e53cbcadc91d82edb52))
+
+### [0.13.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.13...v0.13.1-rc.14) (2020-10-13)
+
+
+### Features
+
+* update fd-styles to 0.12.1-rc13 ([#1235](https://github.com/SAP/fundamental-react/issues/1235)) ([c08dcad](https://github.com/SAP/fundamental-react/commit/c08dcaded83c5d39c70c9c45f69804443dba77d5))
+
+### [0.13.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.12...v0.13.1-rc.13) (2020-10-12)
+
+
+### Features
+
+* Hide the DatePicker button when readOnly is true ([#1234](https://github.com/SAP/fundamental-react/issues/1234)) ([80bb5d6](https://github.com/SAP/fundamental-react/commit/80bb5d69bfd943a48c15824a467da1deaedeb130))
+
+
+### Bug Fixes
+
+* Fix breaking datepicker test with merge ([#1240](https://github.com/SAP/fundamental-react/issues/1240)) ([5cdaaae](https://github.com/SAP/fundamental-react/commit/5cdaaaed249f24f80bcc550b3cd0aac9bfa8ac4f))
+
+### [0.13.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.11...v0.13.1-rc.12) (2020-10-11)
+
+
+### Features
+
+* Custom CSS namespace ([#1239](https://github.com/SAP/fundamental-react/issues/1239)) ([a99b2f9](https://github.com/SAP/fundamental-react/commit/a99b2f90e37958d141428e43c680542c792218d3))
+
+### [0.13.1-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.10...v0.13.1-rc.11) (2020-10-08)
+
+
+### Features
+
+* row navigation in Table ([#1231](https://github.com/SAP/fundamental-react/issues/1231)) ([de8af5b](https://github.com/SAP/fundamental-react/commit/de8af5b8c479e5f14f4a277e4fcb1b2a65ceecd3))
+
+
+### Bug Fixes
+
+* Fix isCssModulesEnabled check and improve README for css-modules ([#1237](https://github.com/SAP/fundamental-react/issues/1237)) ([7b90a32](https://github.com/SAP/fundamental-react/commit/7b90a325a8be720d4078ffa335a8125f3735eb66))
+
+### [0.13.1-rc.10](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.9...v0.13.1-rc.10) (2020-10-06)
+
+
+### Features
+
+*  Support CSS modules ([#1220](https://github.com/SAP/fundamental-react/issues/1220)) ([cbf6208](https://github.com/SAP/fundamental-react/commit/cbf620856c0c1fabd4d6220f3e2368bc13df2a62))
+
+### [0.13.1-rc.9](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.8...v0.13.1-rc.9) (2020-10-05)
+
+### [0.13.1-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.7...v0.13.1-rc.8) (2020-10-02)
+
+
+### Bug Fixes
+
+* add title to index.js ([#1230](https://github.com/SAP/fundamental-react/issues/1230)) ([7d64355](https://github.com/SAP/fundamental-react/commit/7d64355c2863a0528d3ad30aef1f38b0f7de2e2f))
+
+### [0.13.1-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.6...v0.13.1-rc.7) (2020-10-01)
+
+
+### Bug Fixes
+
+* focus manager use with grid manager ([#1228](https://github.com/SAP/fundamental-react/issues/1228)) ([4946020](https://github.com/SAP/fundamental-react/commit/4946020b1de7296bc53e1115859977753eeed80e))
+
+### [0.13.1-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.5...v0.13.1-rc.6) (2020-09-29)
+
+
+### Features
+
+* make shellbar popovers customizable ([#1222](https://github.com/SAP/fundamental-react/issues/1222)) ([4136a37](https://github.com/SAP/fundamental-react/commit/4136a37337fe146d019d30f24f3a7d7f285ad887))
+
+
+### Bug Fixes
+
+* DatePicker footerButtonProps type ([#1225](https://github.com/SAP/fundamental-react/issues/1225)) ([1e4afc4](https://github.com/SAP/fundamental-react/commit/1e4afc4a5ffbec88d0c50deec8356e3da2253e3d))
+
+### [0.13.1-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.4...v0.13.1-rc.5) (2020-09-28)
+
+
+### Features
+
+* datepicker improvements ([#1224](https://github.com/SAP/fundamental-react/issues/1224)) ([5d71ff0](https://github.com/SAP/fundamental-react/commit/5d71ff0e30e1678ae062377e7312f556c5b9800c))
+
+### [0.13.1-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.3...v0.13.1-rc.4) (2020-09-24)
+
+
+### Bug Fixes
+
+* datepicker add list styles ([#1221](https://github.com/SAP/fundamental-react/issues/1221)) ([2e4b4e5](https://github.com/SAP/fundamental-react/commit/2e4b4e54788eb331c1b3108515471b02ab094da7))
+
+### [0.13.1-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.2...v0.13.1-rc.3) (2020-09-24)
+
+
+### Features
+
+* cell-level keyboard navigation for Table ([#1211](https://github.com/SAP/fundamental-react/issues/1211)) ([2f82eef](https://github.com/SAP/fundamental-react/commit/2f82eef9e14f0313c6b403eb4958ee56e1afe190))
+
+### [0.13.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.1...v0.13.1-rc.2) (2020-09-24)
+
+### [0.13.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.13.1-rc.0...v0.13.1-rc.1) (2020-09-24)
+
+
+### Features
+
+* update fundamental-styles to 0.12.0-rc.64 ([#1215](https://github.com/SAP/fundamental-react/issues/1215)) ([a2d8369](https://github.com/SAP/fundamental-react/commit/a2d83696d5c9bafc4bd7a33942413a4a78098627))
+
+### [0.13.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.13.0...v0.13.1-rc.0) (2020-09-23)
+
+
+### Features
+
+* SearchInput as a functional comp with forwarded ref ([#1218](https://github.com/SAP/fundamental-react/issues/1218)) ([03659ff](https://github.com/SAP/fundamental-react/commit/03659ff0a48503a85cb36b87652880c442abee6e))
+
+## [0.13.0](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.22...v0.13.0) (2020-09-21)
+
+## [0.13.0-rc.22](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.21...v0.13.0-rc.22) (2020-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* In this change we
+* improve the callback API for various components
+  * Calendar.onChange - added `todayPressed` param which is true only if the change was caused by the today button
+  * ComboboxInput - Forwarded reference now contains both button (ref.current.button) and input (ref.current.input) refs
+  * ComboboxInput.onSelectionChange - added `reason` string param which represents what caused the selection to change
+  * ComboboxInput.selectedKey should work now
+  * DatePicker - added `startAndEndDates` array to callback data which contains start and end dates when ranged selection is enabled, else it is an empty array
+  * DatePicker.onChange - added `reason` string param which represents what caused the selection to change
+  * DatePicker.onFocus changed to DatePicker.onInputFocus
+  * DatePicker.onBlur changed to DatePicker.onInputBlur
+  * Dialog.onClose now contains the event param
+  * FormRadioItem.data property added which is available in the FormRadioGroup.onChange's callback
+  * ListSelection and it's parent ListItem now self manage their selected states based on internal checkbox onChange events
+  * SearchInput.onEnter should work now
+* update tests accordingly
+* document the callback API using JSDoc syntax
+* wire-up @storybook/actions to log callback events in the dev stories of these components
+
+### Bug Fixes
+
+* refine and document component event callbacks ([#1210](https://github.com/SAP/fundamental-react/issues/1210)) ([42391f9](https://github.com/SAP/fundamental-react/commit/42391f9809120df422131769ac175c85cfa69abe))
+
+## [0.13.0-rc.21](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.20...v0.13.0-rc.21) (2020-09-15)
+
+
+### Features
+
+* update fundamental-styles to 0.12.0-rc.44 ([#1203](https://github.com/SAP/fundamental-react/issues/1203)) ([0c0cce7](https://github.com/SAP/fundamental-react/commit/0c0cce78e1424d7926fa3a6a8cc9d00222bacbaa))
+
+## [0.13.0-rc.20](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.19...v0.13.0-rc.20) (2020-09-15)
+
+
+### Bug Fixes
+
+* combobox bugs ([#1206](https://github.com/SAP/fundamental-react/issues/1206)) ([493e867](https://github.com/SAP/fundamental-react/commit/493e8679091b28375bbc43ff21d7ae5753776850))
+
+## [0.13.0-rc.19](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.18...v0.13.0-rc.19) (2020-09-11)
+
+## [0.13.0-rc.18](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.17...v0.13.0-rc.18) (2020-09-08)
+
+
+### Bug Fixes
+
+* multiple validationState messages + popover validation message styles ([#1196](https://github.com/SAP/fundamental-react/issues/1196)) ([dd769c9](https://github.com/SAP/fundamental-react/commit/dd769c9f4a3ed597187ef95272f13f4433099653))
+
+## [0.13.0-rc.17](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.16...v0.13.0-rc.17) (2020-09-08)
+
+## [0.13.0-rc.16](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.15...v0.13.0-rc.16) (2020-09-08)
+
+## [0.13.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.14...v0.13.0-rc.15) (2020-09-04)
+
+
+### Bug Fixes
+
+* In SSR null is not a valid prop-type ([#1198](https://github.com/SAP/fundamental-react/issues/1198)) ([7d614db](https://github.com/SAP/fundamental-react/commit/7d614db043240533fc9d59c5eed7d98f7c3e8da2))
+
+## [0.13.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.13...v0.13.0-rc.14) (2020-09-02)
+
+
+### Features
+
+* add textClassName prop and unit test ([#1184](https://github.com/SAP/fundamental-react/issues/1184)) ([b800bf9](https://github.com/SAP/fundamental-react/commit/b800bf969a469295618c7bf1a4dfe0ecf0410732))
+
+## [0.13.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.12...v0.13.0-rc.13) (2020-09-02)
+
+
+### Features
+
+* create Title component ([#1171](https://github.com/SAP/fundamental-react/issues/1171)) ([0f96960](https://github.com/SAP/fundamental-react/commit/0f96960cfebd338f4e537ce98def32f2ab76dcf1))
+
+## [0.13.0-rc.12](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.11...v0.13.0-rc.12) (2020-09-01)
+
+
+### Features
+
+* add additional props for customization to validationOverlayProps ([#1192](https://github.com/SAP/fundamental-react/issues/1192)) ([ebbbd31](https://github.com/SAP/fundamental-react/commit/ebbbd3108f068debe08e0eefdaee66bca8ff3a91))
+
+## [0.13.0-rc.11](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.10...v0.13.0-rc.11) (2020-09-01)
+
+
+### Bug Fixes
+
+* fundamental Switch state doesn't refresh  ([#1193](https://github.com/SAP/fundamental-react/issues/1193)) ([1a7ac92](https://github.com/SAP/fundamental-react/commit/1a7ac928031c8224cc5eea7d5bb5bb4eea471201))
+
+## [0.13.0-rc.10](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.9...v0.13.0-rc.10) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* In this change we
+* Update fundamental-styles to 0.12.0-rc.18 and support the new features and fixes therein.
+  * Removed LayoutGrid component in favor of the new grid system based on Container, Row, and Column components
+  * Remove LayoutPanel.colSpan property; added story for LayoutPanel in the new grid system.
+  * Removed the TreeViewcomponent in favor of the new Tree component.
+  * Shellbar avatar now has a branded border.
+
+* Docs/Storybook:
+  * update storybook to v6.0.16
+  * fix missing storyDescriptions and component descriptions.
+  * Add copy button to easily copy import statements to clipboard.
+
+### Features
+
+* update fundamental-styles to v0.12.0-rc.18 ([#1172](https://github.com/SAP/fundamental-react/issues/1172)) ([efb2d17](https://github.com/SAP/fundamental-react/commit/efb2d179156d785230cb8fba8bb9dcc72cad9488))
+
+## [0.13.0-rc.9](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.8...v0.13.0-rc.9) (2020-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* removed unused `spinners` prop from TimePicker and Time components
+
+* cleanup some test warnings ([#1188](https://github.com/SAP/fundamental-react/issues/1188)) ([dc93883](https://github.com/SAP/fundamental-react/commit/dc938831e1851efaa253c92693c2e3f638d051b7))
+
+## [0.13.0-rc.8](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.7...v0.13.0-rc.8) (2020-08-27)
+
+
+### Bug Fixes
+
+* select onfocus onblur callbacks called at appropriate times ([#1186](https://github.com/SAP/fundamental-react/issues/1186)) ([f9e1282](https://github.com/SAP/fundamental-react/commit/f9e1282c63aae4d2e9a2d309182fbf2c76e0de53))
+
+## [0.13.0-rc.7](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.6...v0.13.0-rc.7) (2020-08-26)
+
+## [0.13.0-rc.6](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.5...v0.13.0-rc.6) (2020-08-26)
+
+
+### Features
+
+* add custom classes to Select component ([#1185](https://github.com/SAP/fundamental-react/issues/1185)) ([6724eab](https://github.com/SAP/fundamental-react/commit/6724eab7ede0996e369f88307237f0b756ebdeaa))
+
+
+### Bug Fixes
+
+* remove detect-browser from package.json, bump standard version and run audit fix ([#1187](https://github.com/SAP/fundamental-react/issues/1187)) ([c2c952f](https://github.com/SAP/fundamental-react/commit/c2c952f0e1e6bb4723ada9c79e44f5f42d403e44))
+
+## [0.13.0-rc.5](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.4...v0.13.0-rc.5) (2020-08-26)
+
+
+### Features
+
+* normalize FormValidationOverlay usage in other components ([#1183](https://github.com/SAP/fundamental-react/issues/1183)) ([1baafc8](https://github.com/SAP/fundamental-react/commit/1baafc816d85bf5dfb8f08561567b27ee4f9fab8))
+
+## [0.13.0-rc.4](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.3...v0.13.0-rc.4) (2020-08-25)
+
+
+### Features
+
+* validation class prop ([#1181](https://github.com/SAP/fundamental-react/issues/1181)) ([250d75e](https://github.com/SAP/fundamental-react/commit/250d75ec9832ef0bafc7d3c180cc8536d107fbd5))
+
+## [0.13.0-rc.3](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.2...v0.13.0-rc.3) (2020-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* Checkbox: replace `state` property with `validationState`
+
+### Features
+
+* BREAKING CHANGE: checkbox replace state with validation states ([#1176](https://github.com/SAP/fundamental-react/issues/1176)) ([9a71277](https://github.com/SAP/fundamental-react/commit/9a7127733433378e0632f70b8a3ba0039488658e))
+
+## [0.13.0-rc.2](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.1...v0.13.0-rc.2) (2020-08-20)
+
+## [0.13.0-rc.1](https://github.com/SAP/fundamental-react/compare/v0.13.0-rc.0...v0.13.0-rc.1) (2020-08-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Checkbox component now sets the `className` value on the `FormItem` component that wraps the `input`; instead of on the `input` itself. This is consistent with the behavior in other Form components.
+
+### Bug Fixes
+
+* Checkbox classname ([#1170](https://github.com/SAP/fundamental-react/issues/1170)) ([bd49054](https://github.com/SAP/fundamental-react/commit/bd49054478d997920d0bcf9a9268f9e375bff251))
+
+## [0.13.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.1-rc.0...v0.13.0-rc.0) (2020-08-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* * List Header and Footer are now passed as props to a List component and not as its children
+* Use `List.headerClassName` and `List.footerClassName` to add classes
+* List header renders <h2-6> HTML headers, use `List.headerLevel` ; default is 4
+* If List contains selectable options set `List.selectable` to true, do not add non-selectable items to such lists for accessibility
+* List footer is rendered as a <span> outside the <ul> list element since it is not semantically a part of the list
+
+fix:
+* Selecting an item in a selectable list should also highlight it now
+
+feat:
+* You may now set the `List.id` that binds List header and body accessibly. If unset a generated value will be used.
+
+### Bug Fixes
+
+* list selection behavior + accessibility ([#1167](https://github.com/SAP/fundamental-react/issues/1167)) ([2c4cbed](https://github.com/SAP/fundamental-react/commit/2c4cbed61bf2b7c596d477696592ae27f858d580))
+
+### [0.12.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.12.0...v0.12.1-rc.0) (2020-08-17)
+
+
+### Bug Fixes
+
+* refactor popper portal ([#1169](https://github.com/SAP/fundamental-react/issues/1169)) ([05bc098](https://github.com/SAP/fundamental-react/commit/05bc09882b180b2ce40b05ea443e5d9f75763882))
+
+## [0.12.0](https://github.com/SAP/fundamental-react/compare/v0.12.0-rc.0...v0.12.0) (2020-08-17)
+
+## [0.12.0-rc.0](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.29...v0.12.0-rc.0) (2020-08-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* If consumers had used the SearchInput expecting the input's ref value to be updated inside of the callback, this is a breaking change, but that seems like an atypical, non-react way to handle changes
+
+### Bug Fixes
+
+* Move SearchInput and SideNav callbacks outside of the setState callback to maintain event properties ([#1165](https://github.com/SAP/fundamental-react/issues/1165)) ([e1127b1](https://github.com/SAP/fundamental-react/commit/e1127b131f4f5c3f4b49e1d1880ae8629f7d1285))
+
+### [0.11.1-rc.29](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.28...v0.11.1-rc.29) (2020-08-13)
+
+
+### Bug Fixes
+
+* improve screen reader instructions for DatePicker ([#1166](https://github.com/SAP/fundamental-react/issues/1166)) ([384c9cb](https://github.com/SAP/fundamental-react/commit/384c9cba810b3f1acacfcf4fa0836111aab51318))
+
+### [0.11.1-rc.28](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.27...v0.11.1-rc.28) (2020-08-13)
+
+### [0.11.1-rc.27](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.26...v0.11.1-rc.27) (2020-08-13)
+
+
+### Bug Fixes
+
+* update to latest fd-styles ([#1161](https://github.com/SAP/fundamental-react/issues/1161)) ([718700a](https://github.com/SAP/fundamental-react/commit/718700a7dc622cb3509fa0f06288895a7d2a2752))
+
+### [0.11.1-rc.26](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.25...v0.11.1-rc.26) (2020-08-12)
+
+
+### Bug Fixes
+
+* add prop for Select dropdown styling ([#1154](https://github.com/SAP/fundamental-react/issues/1154)) ([8d6d93e](https://github.com/SAP/fundamental-react/commit/8d6d93ed5329e1937ebfdffb0f9b6288ed1bbd48))
+
+### [0.11.1-rc.25](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.24...v0.11.1-rc.25) (2020-08-11)
+
+### [0.11.1-rc.24](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.23...v0.11.1-rc.24) (2020-08-11)
+
+
+### Bug Fixes
+
+* MessageStrip Accessibility + useUniqueId hook ([#1156](https://github.com/SAP/fundamental-react/issues/1156)) ([267e0bd](https://github.com/SAP/fundamental-react/commit/267e0bd94b5c96b4020a3ac546ea6739440e87f8))
+
+### [0.11.1-rc.23](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.22...v0.11.1-rc.23) (2020-08-10)
+
+### [0.11.1-rc.22](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.21...v0.11.1-rc.22) (2020-08-06)
+
+
+### Bug Fixes
+
+* add popoverProps to Select ([#1150](https://github.com/SAP/fundamental-react/issues/1150)) ([77ca775](https://github.com/SAP/fundamental-react/commit/77ca77517874e11141a7e6277ce31d8b85bba458))
+
+### [0.11.1-rc.21](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.20...v0.11.1-rc.21) (2020-08-06)
+
+
+### Bug Fixes
+
+* [#1130](https://github.com/SAP/fundamental-react/issues/1130) Adding disabled and readonly props to search input ([#1140](https://github.com/SAP/fundamental-react/issues/1140)) ([8934e9c](https://github.com/SAP/fundamental-react/commit/8934e9c2a49fbe8284c87683a550eb85cfaf4715))
+
+### [0.11.1-rc.20](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.19...v0.11.1-rc.20) (2020-08-04)
+
+
+### Features
+
+* update fundamental styles to 0.11.3-rc.8 ([#1142](https://github.com/SAP/fundamental-react/issues/1142)) ([282f771](https://github.com/SAP/fundamental-react/commit/282f77177edf41c4f761cc6a171c22892f021e31))
+
+### [0.11.1-rc.19](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.18...v0.11.1-rc.19) (2020-08-04)
+
+### [0.11.1-rc.18](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.17...v0.11.1-rc.18) (2020-08-03)
+
+
+### Features
+
+* combobox filtering and autocomplete ([#1125](https://github.com/SAP/fundamental-react/issues/1125)) ([d84ea0b](https://github.com/SAP/fundamental-react/commit/d84ea0bd8dd5dcb9a23b21afe9c4802b2630beaa)), closes [#1019](https://github.com/SAP/fundamental-react/issues/1019)
+
+### [0.11.1-rc.17](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.16...v0.11.1-rc.17) (2020-08-03)
+
+### [0.11.1-rc.16](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.15...v0.11.1-rc.16) (2020-07-31)
+
+
+### Bug Fixes
+
+* [#1003](https://github.com/SAP/fundamental-react/issues/1003) Sub string search in search input ([#1138](https://github.com/SAP/fundamental-react/issues/1138)) ([ea0011f](https://github.com/SAP/fundamental-react/commit/ea0011fdadd266a53f65d7310e3bdff14907f41d))
+
+### [0.11.1-rc.15](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.14...v0.11.1-rc.15) (2020-07-31)
+
+### [0.11.1-rc.14](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.13...v0.11.1-rc.14) (2020-07-31)
+
+
+### Bug Fixes
+
+* allow custom modal manager for DatePicker ([#1141](https://github.com/SAP/fundamental-react/issues/1141)) ([8238c44](https://github.com/SAP/fundamental-react/commit/8238c4497885d4bab143aec61611c4abf706deb6))
+
+### [0.11.1-rc.13](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.12...v0.11.1-rc.13) (2020-07-31)
+
+
+### Bug Fixes
+
+* focusable disabled button ([#1134](https://github.com/SAP/fundamental-react/issues/1134)) ([d9bbbe0](https://github.com/SAP/fundamental-react/commit/d9bbbe0f39665e970a2eb34c67943101e9a4bd18))
+
 ### [0.11.1-rc.12](https://github.com/SAP/fundamental-react/compare/v0.11.1-rc.11...v0.11.1-rc.12) (2020-07-27)
 
 

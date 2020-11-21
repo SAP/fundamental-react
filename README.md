@@ -1,11 +1,16 @@
 # Fundamental React
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/fundamental-react)](https://api.reuse.software/info/github.com/SAP/fundamental-react)
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
 [![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)	
 [![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
 [![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
 [![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
 [![Slack](https://img.shields.io/badge/slack-ui--fundamentals-blue.svg?logo=slack)](https://join.slack.com/t/ui-fundamentals/shared_invite/enQtNTIzOTU0Mzc2NTc5LWQzZWI5MWFhYjE5OTc4YzliN2JhOTc1ZjQxZTg1YjZiMWZiYzRkNjMwYzgyMmFkYmNhZDVjMWE5MDIzOWEzMmM)
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
+</a>
 
 ## Description
 
@@ -74,6 +79,14 @@ For an existing react application, follow the steps below:
 
 Additionally, edit your webpack configuration to load font and icon fonts - see [file-loader](https://webpack.js.org/loaders/file-loader/).
 
+All styles are based on `rem` units. Include the following in your CSS to ensure components are sized correctly:
+
+```css
+    html {
+        font-size: 16px;
+    }
+```
+
 ## Versioning
 
 The `fundamental-react` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the `[MAJOR].[MINOR].[PATCH]` numbering system (also known as `[BREAKING].[FEATURE].[FIX]`).
@@ -90,6 +103,46 @@ The following circumstances will NOT be considered a **BREAKING** change:
 * Non-visual HTML attribute changes/additions (such as `role`, `aria-*`, `data-*`)
 * An existing unit test is altered to account for non-visual HTML attribute changes/additions (such as `role`, `aria-*`, `data-*`)
 
+## CSS Modules
+
+This library supports [css-modules](https://github.com/css-modules/css-modules). The motivation for this support is to be able to include multiple versions or instances of fundamental styles on the same page without collisions in styles.  This can be useful if you have a page using fundamental-ngx alongside fundamental-react, for example.
+
+One way to use fundamental-react with hashed class names is to pass the library code through css-loader in your webpack config
+
+```js
+// If you have an existing css rule
+{
+    test: /.css$/,
+    exclude: [
+        /node_modules\/fundamental-styles/
+    ],
+    use: [
+        'style-loader',
+        'css-loader'
+    ]
+},
+// run css-loader with modules enabled for css files from fundamental-styles
+{
+    test: /.css$/,
+    include: [
+        /node_modules\/fundamental-styles/
+    ],
+    use: [
+        'style-loader',
+        {
+            loader: 'css-loader',
+            options: {
+                modules: {
+                    localIdentName: '[local]-[sha1:hash:hex:6]'
+                }
+            }
+        }
+    ]
+},
+```
+
+It's important to include `[local]` in the localIdentName which keeps the class name in the hash. This is because some of the style rules in fundamental-styles reference the name of the class, like `[class*=level]`.
+
 ## Known Issues
 
 Please see [Issues](https://github.com/SAP/fundamental-react/issues).
@@ -101,11 +154,6 @@ If you encounter an issue or want to request a feature, you can [create an issue
 ## Contributing
 
 If you want to contribute, please check the [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/master/.github/CONTRIBUTING.md). Also see our [Developer Guide to Getting Started](https://github.com/SAP/fundamental-react/wiki/Developer-Guide).
-
-## License
-
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This library is licensed under the Apache Software License, v. 2 except as noted otherwise in the [License File](https://github.com/SAP/fundamental-react/blob/master/LICENSE.txt).
 
 ## Similar Projects
 

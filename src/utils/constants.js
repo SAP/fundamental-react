@@ -24,6 +24,12 @@ export const BUTTON_TYPES = [
     'attention'
 ];
 
+export const COMBOBOX_SELECTION_TYPES = [
+    'manual',
+    'auto',
+    'auto-inline'
+];
+
 export const DIALOG_SIZES = [
     's',
     'm',
@@ -111,7 +117,9 @@ export const GridSelector = {
     ROW: 'tr, [role="row"]',
     HEADER: 'th',
     CELL: 'td, [role="gridcell"]',
-    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [tabindex], [role="button"]'
+    FOCUSABLE: 'input:enabled, select, textarea, a[href], button, [role="button"], [tabindex]',
+    EDITABLE: 'input:enabled[type="text"], input:enabled[type="number"], select, textarea',
+    HAS_ENTER_KEY_HANDLING: 'a, button, textarea'
 };
 
 export const OBJECT_STATUS_SIZES = ['l'];
@@ -125,3 +133,19 @@ export const OBJECT_STATUS_TYPES = [
 
 export const DATEPICKER_TODAY_ACTIONS_TYPES = ['none', 'select', 'navigate'];
 
+
+export const SCREEN_SIZE_MAP = {
+    'smallScreen': 'col--',
+    'mediumScreen': 'col-md--',
+    'largeScreen': 'col-lg--',
+    'xLargeScreen': 'col-xl--'
+};
+
+export const TREE_NODE_HIGHLIGHTS = [
+    'default',
+    'error',
+    'success',
+    'warning'
+];
+
+export const ISO_DATE_FORMAT = 'YYYY-MM-DD';

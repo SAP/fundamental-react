@@ -2,6 +2,7 @@
 /* eslint-disable react/no-multi-comp */
 import Menu from '../../Menu/Menu';
 import React from 'react';
+import { select } from '@storybook/addon-knobs';
 import Shellbar from '../Shellbar';
 
 const profileMenu = [
@@ -203,3 +204,171 @@ export const coPilot = () => (
         }}
         subtitle='Subtitle' />
 );
+
+export const dev = () => (
+    <Shellbar
+        actions={[
+            {
+                glyph: 'settings',
+                label: 'Settings',
+                notificationCount: 5,
+                callback: () => console.log('Settings selected!'),
+                menu: (
+                    <Menu>
+                        <Menu.List>
+                            <Menu.Item url='#'>Option 1</Menu.Item>
+                            <Menu.Item url='#'>Option 2</Menu.Item>
+                            <Menu.Item url='#'>Option 3</Menu.Item>
+                        </Menu.List>
+                    </Menu>
+                )
+            }
+        ]}
+        copilot
+        logoSAP
+        notifications={{
+            notificationCount: 2,
+            label: 'Notifications',
+            notificationsBody: (
+                <Menu>
+                    <Menu.List>
+                        <Menu.Item url='#'>Notification 1</Menu.Item>
+                        <Menu.Item url='#'>Notification 2</Menu.Item>
+                        <Menu.Item url='#'>Notification 3</Menu.Item>
+                    </Menu.List>
+                </Menu>
+            ),
+            noNotificationsBody: (
+                <Menu>
+                    <Menu.List>
+                        <Menu.Item>There are no notifications</Menu.Item>
+                    </Menu.List>
+                </Menu>
+            )
+        }}
+        popoverPropsFor={{
+            actionMenu: {
+                placement: 'bottom'
+            },
+            collapsedMobileMenu: {
+                placement: 'bottom'
+            },
+            notifications: {
+                placement: 'bottom'
+            },
+            productSwitch: {
+                placement: 'bottom-start'
+            },
+            productMenu: {
+                placement: 'bottom'
+            },
+            profileMenu: {
+                placement: 'bottom'
+            }
+        }}
+        productMenu={productMenu}
+        productSwitch={{
+            label: 'Product Switch'
+        }}
+        productSwitchList={[
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Fiori Home',
+                subtitle: 'Central Home',
+                image: './assets/01.png',
+                selected: true,
+                glyph: 'home'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'S/4 HANA Cloud',
+                image: './assets/02.png',
+                glyph: 'cloud'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Analytics Cloud',
+                subtitle: 'Analytics Cloud',
+                image: './assets/03.png',
+                glyph: 'business-objects-experience'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Ariba',
+                image: './assets/04.png',
+                glyph: 'activate'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'SuccessFactors',
+                image: './assets/05.png',
+                glyph: 'message-success'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Commerce Cloud',
+                image: './assets/06.png',
+                glyph: 'retail-store'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Gigya',
+                image: './assets/07.png',
+                glyph: 'customer-view'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Callidus Cloud',
+                image: './assets/08.png',
+                glyph: 'globe'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Fieldglass',
+                image: './assets/09.png',
+                glyph: 'work-history'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Concur',
+                image: './10.png',
+                glyph: 'area-chart'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Cloud for Customer',
+                image: './11.png',
+                glyph: 'customer-view'
+            },
+            {
+                callback: () => console.log(`${this.title} selected!`),
+                title: 'Cloud Portal',
+                image: './12.png',
+                glyph: 'customer'
+            }
+        ]}
+        productTitle='Corporate Portal'
+        profile={profile}
+        profileMenu={profileMenu}
+        searchInput={{
+            label: 'Search',
+            placeholder: 'Search'
+        }}
+        size={select('size', { 's': 's', 'm': 'm', 'l': 'l', 'xl': 'xl' }, 's')}
+        subtitle='Subtitle' />
+);
+dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <Shellbar
+        cssNamespace='xxx'
+        logo={<img alt='SAP' src='//unpkg.com/fundamental-styles/dist/images/sap-logo.png' />}
+        productTitle='Corporate Portal'
+        profile={profile}
+        profileMenu={profileMenu}
+        searchInput={{
+            label: 'Search',
+            placeholder: 'Search'
+        }} />
+);
+noStyles.parameters = { docs: { disable: true } };

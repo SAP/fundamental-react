@@ -1,38 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Component API/Breadcrumb No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <ul
+    className="xxx-breadcrumb"
+    role="menu"
+  >
+    <li
+      className="xxx-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
+    >
+      <a
+        className="xxx-breadcrumb__link"
+        href="#"
+        tabIndex="0"
+      >
+        Link Text
+      </a>
+    </li>
+    <li
+      className="xxx-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
+    >
+      <a
+        className="xxx-breadcrumb__link"
+        href="#"
+        tabIndex="0"
+      >
+        Link Text
+      </a>
+    </li>
+    <li
+      className="xxx-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
+    >
+      <a
+        className="xxx-breadcrumb__link"
+        href="#"
+        tabIndex="0"
+      >
+        Link Text
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Storyshots Component API/Breadcrumb Primary 1`] = `
 <div
   dir="ltr"
 >
   <ul
     className="fd-breadcrumb"
+    role="menu"
   >
     <li
       className="fd-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
     >
       <a
         className="fd-breadcrumb__link"
         href="#"
+        tabIndex="0"
       >
         Link Text
       </a>
     </li>
     <li
       className="fd-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
     >
       <a
         className="fd-breadcrumb__link"
         href="#"
+        tabIndex="0"
       >
         Link Text
       </a>
     </li>
     <li
       className="fd-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
     >
       <a
         className="fd-breadcrumb__link"
         href="#"
+        tabIndex="0"
       >
         Link Text
       </a>
@@ -47,33 +108,43 @@ exports[`Storyshots Component API/Breadcrumb With url property 1`] = `
 >
   <ul
     className="fd-breadcrumb"
+    role="menu"
   >
     <li
       className="fd-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
     >
       <a
         className="fd-breadcrumb__link"
         href="#"
+        tabIndex="0"
       >
         Link Text
       </a>
     </li>
     <li
       className="fd-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
     >
       <a
         className="fd-breadcrumb__link"
         href="#"
+        tabIndex="0"
       >
         Link Text
       </a>
     </li>
     <li
       className="fd-breadcrumb__item"
+      role="menuitem"
+      tabIndex="-1"
     >
       <a
         className="fd-breadcrumb__link"
         href="#"
+        tabIndex="0"
       >
         Link Text
       </a>

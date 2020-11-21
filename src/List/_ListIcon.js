@@ -1,19 +1,26 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import { listOfIcons } from '../utils/listOfIcons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import listStyles from 'fundamental-styles/dist/list.css';
 
-const ListIcon = ({ className, glyph, ...props }) => {
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...listStyles
+});
+
+const ListIcon = ({ className, cssNamespace, glyph, ...props }) => {
     const listIconClasses = classnames(
-        'fd-list__icon',
-        {
-            [`sap-icon--${glyph}`]: glyph
-        },
+        `${cssNamespace}-list__icon`,
         className
     );
 
     return (
-        <span {...props} className={listIconClasses} />
+        <Icon {...props} ariaHidden
+            className={listIconClasses} glyph={glyph} />
     );
 };
 
@@ -25,4 +32,4 @@ ListIcon.propTypes = {
     className: PropTypes.string
 };
 
-export default ListIcon;
+export default withStyles(ListIcon);

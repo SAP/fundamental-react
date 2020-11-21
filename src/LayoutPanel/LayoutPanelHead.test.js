@@ -8,7 +8,7 @@ describe('<LayoutPanelHead />', () => {
             const element = mount(<LayoutPanel.Head headingLevel={2} title='Sample' />);
 
             expect(
-                element.find('.fd-layout-panel__title').type()
+                element.find('.fd-title').type()
             ).toBe('h2');
         });
     });

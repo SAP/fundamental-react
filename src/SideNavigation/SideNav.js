@@ -1,11 +1,16 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import SideNavList from './_SideNavList';
 import SideNavListItem from './_SideNavListItem';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/button.css';
-import 'fundamental-styles/dist/side-nav.css';
+import buttonStyles from 'fundamental-styles/dist/button.css';
+import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
+
+const classnames = classnamesBind.bind({
+    ...buttonStyles,
+    ...sideNavStyles
+});
 
 /** The left navigation can always display or expand/collapse using the menu icon within the global
 navigation. */
@@ -28,25 +33,24 @@ class SideNav extends Component {
     handleSelect = (e, id) => {
         this.setState({
             selectedId: id
-        }, () => {
-            this.props.onItemSelect(e, id);
         });
+        this.props.onItemSelect(e, id);
     }
 
     render() {
-        const { onItemSelect, children, className, condensed, compact, selectedId, skipLink, ...rest } = this.props;
+        const { onItemSelect, children, className, condensed, compact, cssNamespace, selectedId, skipLink, ...rest } = this.props;
 
         const sideNavClasses = classnames(
             className,
-            'fd-side-nav',
+            `${cssNamespace}-side-nav`,
             {
-                'fd-side-nav--condensed': condensed
+                [`${cssNamespace}-side-nav--condensed`]: condensed
             }
         );
 
         return (
             <div {...rest} className={sideNavClasses}>
-                <a className='fd-side-nav__skip-link' href={skipLink.href}>{skipLink.label}</a>
+                <a className={classnames(`${cssNamespace}-side-nav__skip-link`)} href={skipLink.href}>{skipLink.label}</a>
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         onItemSelect: this.handleSelect,
@@ -77,7 +81,13 @@ SideNav.propTypes = {
     condensed: PropTypes.bool,
     /** The `id` of the selected `SideNavListItem` */
     selectedId: PropTypes.string,
-    /** Callback function when a navigation item is selected. Arguments passed are the event and the id of the selected item. */
+    /**
+     * Callback function; triggered when a navigation item is selected.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {string} id - id of selected item.
+     * @returns {void}
+     * */
     onItemSelect: PropTypes.func
 };
 
@@ -90,4 +100,4 @@ SideNav.displayName = 'SideNav';
 SideNav.List = SideNavList;
 SideNav.ListItem = SideNavListItem;
 
-export default SideNav;
+export default withStyles(SideNav);

@@ -14,16 +14,27 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
         className="fd-action-bar__back"
       >
         <button
-          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+          aria-label="Back to home"
+          className="fd-button fd-button--transparent fd-button--compact"
           onClick={[Function]}
           type="button"
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-left-arrow"
+            role="img"
+          />
+        </button>
       </div>
-      <h2
+      <div
         className="fd-action-bar__title"
       >
-        Page Title
-      </h2>
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          Page Title
+        </h2>
+      </div>
       <div
         className="fd-action-bar__actions"
       >
@@ -31,13 +42,21 @@ exports[`Storyshots Component API/ActionBar Dev 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -60,11 +79,15 @@ exports[`Storyshots Component API/ActionBar No Actions 1`] = `
     <div
       className="fd-action-bar__header"
     >
-      <h3
+      <div
         className="fd-action-bar__title"
       >
-        Page Title
-      </h3>
+        <h3
+          className="fd-title fd-title--h3"
+        >
+          Page Title
+        </h3>
+      </div>
     </div>
   </div>
 </div>
@@ -80,11 +103,15 @@ exports[`Storyshots Component API/ActionBar No Back Button 1`] = `
     <div
       className="fd-action-bar__header"
     >
-      <h3
+      <div
         className="fd-action-bar__title"
       >
-        Page Title
-      </h3>
+        <h3
+          className="fd-title fd-title--h3"
+        >
+          Page Title
+        </h3>
+      </div>
       <div
         className="fd-action-bar__actions"
       >
@@ -92,13 +119,21 @@ exports[`Storyshots Component API/ActionBar No Back Button 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -121,11 +156,15 @@ exports[`Storyshots Component API/ActionBar No Description 1`] = `
     <div
       className="fd-action-bar__header"
     >
-      <h3
+      <div
         className="fd-action-bar__title"
       >
-        Page Title
-      </h3>
+        <h3
+          className="fd-title fd-title--h3"
+        >
+          Page Title
+        </h3>
+      </div>
       <div
         className="fd-action-bar__actions"
       >
@@ -133,16 +172,93 @@ exports[`Storyshots Component API/ActionBar No Description 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ActionBar No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-action-bar"
+  >
+    <div
+      className="xxx-action-bar__header"
+    >
+      <div
+        className="xxx-action-bar__back"
+      >
+        <button
+          aria-label="Back to home"
+          className="xxx-button xxx-button--transparent xxx-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-left-arrow"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="xxx-action-bar__title"
+      >
+        <h3
+          className="xxx-title xxx-title--h3"
+        >
+          Page Title
+        </h3>
+      </div>
+      <div
+        className="xxx-action-bar__actions"
+      >
+        <button
+          className="xxx-button"
+          type="button"
+        >
+          <span
+            className="xxx-button__text"
+          >
+            Button
+          </span>
+        </button>
+        <button
+          className="xxx-button xxx-button--emphasized"
+          type="button"
+        >
+          <span
+            className="xxx-button__text"
+          >
+            Button
+          </span>
+        </button>
+      </div>
+    </div>
+    <p
+      className="xxx-action-bar__description xxx-action-bar__description--back"
+    >
+      Action Bar Description
+    </p>
   </div>
 </div>
 `;
@@ -161,16 +277,27 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
         className="fd-action-bar__back"
       >
         <button
-          className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-left-arrow"
+          aria-label="Back to home"
+          className="fd-button fd-button--transparent fd-button--compact"
           onClick={[Function]}
           type="button"
-        />
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--navigation-left-arrow"
+            role="img"
+          />
+        </button>
       </div>
-      <h3
+      <div
         className="fd-action-bar__title"
       >
-        Page Title
-      </h3>
+        <h3
+          className="fd-title fd-title--h3"
+        >
+          Page Title
+        </h3>
+      </div>
       <div
         className="fd-action-bar__actions"
       >
@@ -178,13 +305,21 @@ exports[`Storyshots Component API/ActionBar Primary 1`] = `
           className="fd-button"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
         <button
           className="fd-button fd-button--emphasized"
           type="button"
         >
-          Button
+          <span
+            className="fd-button__text"
+          >
+            Button
+          </span>
         </button>
       </div>
     </div>
@@ -207,11 +342,15 @@ exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
     <div
       className="fd-action-bar__header"
     >
-      <h3
+      <div
         className="fd-action-bar__title"
       >
-        Page Title
-      </h3>
+        <h3
+          className="fd-title fd-title--h3"
+        >
+          Page Title
+        </h3>
+      </div>
       <div
         className="fd-action-bar__actions"
       >
@@ -230,13 +369,20 @@ exports[`Storyshots Component API/ActionBar With a ContextualMenu 1`] = `
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-button fd-button--transparent sap-icon--vertical-grip"
+                aria-label="More actions"
+                className="fd-button fd-button--transparent"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
                 type="button"
-              />
+              >
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--vertical-grip"
+                  role="img"
+                />
+              </button>
             </div>
           </div>
         </div>

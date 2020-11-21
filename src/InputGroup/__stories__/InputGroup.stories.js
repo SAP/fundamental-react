@@ -1,6 +1,7 @@
 /* eslint-disable react/no-multi-comp */
 import Button from '../../Button/Button';
 import FormInput from '../../Forms/FormInput';
+import FormLabel from '../../Forms/FormLabel';
 import FormTextarea from '../../Forms/FormTextarea';
 import Icon from '../../Icon/Icon';
 import InputGroup from '../InputGroup';
@@ -15,60 +16,76 @@ import {
 export default {
     title: 'Component API/InputGroup',
     component: InputGroup,
-    subcomponents: InputGroupAddon
+    subcomponents: { InputGroupAddon }
 };
 
 
 export const primary = () => (
-    <InputGroup>
-        <InputGroup.Addon isButton>
-            <Button
-                glyph='navigation-down-arrow'
-                option='transparent' />
-        </InputGroup.Addon>
-        <FormInput />
-    </InputGroup>
+    <>
+        <FormLabel htmlFor='primary'>Select</FormLabel>
+        <InputGroup>
+            <InputGroup.Addon isButton>
+                <Button
+                    aria-label='Open menu'
+                    glyph='navigation-down-arrow'
+                    option='transparent' />
+            </InputGroup.Addon>
+            <FormInput id='primary' />
+        </InputGroup>
+    </>
 );
 
 export const compact = () => (
-    <InputGroup compact>
-        <InputGroup.Addon isButton>
-            <Button
-                glyph='navigation-down-arrow'
-                option='transparent' />
-        </InputGroup.Addon>
-        <FormInput />
-    </InputGroup>
+    <>
+        <FormLabel htmlFor='compact'>Select</FormLabel>
+        <InputGroup compact>
+            <InputGroup.Addon isButton>
+                <Button
+                    aria-label='Open menu'
+                    glyph='navigation-down-arrow'
+                    option='transparent' />
+            </InputGroup.Addon>
+            <FormInput id='compact' />
+        </InputGroup>
+    </>
 );
 
 export const disabled = () => (
-    <InputGroup disabled>
-        <InputGroup.Addon isButton>
-            <Button
-                glyph='navigation-down-arrow'
-                option='transparent' />
-        </InputGroup.Addon>
-        <FormInput />
-    </InputGroup>
+    <>
+        <FormLabel htmlFor='disabled'>Select</FormLabel>
+        <InputGroup disabled>
+            <InputGroup.Addon isButton>
+                <Button
+                    aria-label='Open menu'
+                    glyph='navigation-down-arrow'
+                    option='transparent' />
+            </InputGroup.Addon>
+            <FormInput id='disabled' />
+        </InputGroup>
+    </>
 );
 
 export const validationState = () => (
     <div className='fddocs-container'>
+        <FormLabel htmlFor='error'>Select</FormLabel>
         <InputGroup validationState={{ state: 'error', text: 'Test validation state' }}>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput />
+            <FormInput id='error' />
         </InputGroup>
+        <FormLabel htmlFor='warning'>Select</FormLabel>
         <InputGroup validationState={{ state: 'warning', text: 'Test validation state' }}>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput />
+            <FormInput id='warning' />
         </InputGroup>
+        <FormLabel htmlFor='disabled'>Select</FormLabel>
         <InputGroup validationState={{ state: 'information', text: 'Test validation state' }}>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput />
+            <FormInput id='disabled' />
         </InputGroup>
+        <FormLabel htmlFor='success'>Select</FormLabel>
         <InputGroup validationState={{ state: 'success', text: 'Test validation state' }}>
             <InputGroup.Addon>$</InputGroup.Addon>
-            <FormInput />
+            <FormInput id='success' />
         </InputGroup>
     </div>
 );
@@ -79,21 +96,25 @@ export const validationState = () => (
 
 export const addonButton = () => (
     <div className='fddocs-container'>
+        <FormLabel htmlFor='addon-button-1'>Select</FormLabel>
         <InputGroup>
-            <FormInput />
+            <FormInput id='addon-button-1' />
             <InputGroup.Addon isButton>
                 <Button
+                    aria-label='Open menu'
                     glyph='navigation-down-arrow'
                     option='transparent' />
             </InputGroup.Addon>
         </InputGroup>
+        <FormLabel htmlFor='addon-button-2'>Select</FormLabel>
         <InputGroup>
             <InputGroup.Addon isButton>
                 <Button
+                    aria-label='Open menu'
                     glyph='navigation-down-arrow'
                     option='transparent' />
             </InputGroup.Addon>
-            <FormInput />
+            <FormInput id='addon-button-2' />
         </InputGroup>
     </div>
 );
@@ -107,12 +128,14 @@ This add-on can be placed at the left or right of the input element.
 
 export const addonText = () => (
     <div className='fddocs-container'>
+        <FormLabel htmlFor='addon-1'>Select</FormLabel>
         <InputGroup>
             <InputGroup.Addon>€</InputGroup.Addon>
-            <FormInput placeholder='Type text here' />
+            <FormInput id='addon-1' placeholder='Type text here' />
         </InputGroup>
+        <FormLabel htmlFor='addon-2'>Select</FormLabel>
         <InputGroup>
-            <FormInput placeholder='Type text here' />
+            <FormInput id='addon-2' placeholder='Type text here' />
             <InputGroup.Addon>€</InputGroup.Addon>
         </InputGroup>
     </div>
@@ -125,16 +148,18 @@ addonText.storyName = 'Text add-on';
 
 export const addonIcon = () => (
     <div className='fddocs-container'>
+        <FormLabel htmlFor='globe'>Select</FormLabel>
         <InputGroup>
             <InputGroup.Addon>
-                <Icon glyph='globe' />
+                <Icon ariaLabel='Globe' glyph='globe' />
             </InputGroup.Addon>
-            <FormInput placeholder='Type text here' />
+            <FormInput id='globe' placeholder='Type text here' />
         </InputGroup>
+        <FormLabel htmlFor='hide'>Select</FormLabel>
         <InputGroup>
-            <FormInput placeholder='Type text here' />
+            <FormInput id='hide' placeholder='Type text here' />
             <InputGroup.Addon>
-                <Icon glyph='hide' />
+                <Icon ariaLabel='Hide' glyph='hide' />
             </InputGroup.Addon>
         </InputGroup>
     </div>
@@ -143,32 +168,55 @@ export const addonIcon = () => (
 addonIcon.storyName = 'Icon add-on';
 
 export const textArea = () => (
-    <InputGroup>
-        <FormTextarea defaultValue='Default' />
-        <InputGroup.Addon>
-            <Icon glyph='hide' />
-        </InputGroup.Addon>
-    </InputGroup>
+    <>
+        <FormLabel htmlFor='textarea'>Select</FormLabel>
+        <InputGroup>
+            <FormTextarea defaultValue='Default' id='textarea' />
+            <InputGroup.Addon>
+                <Icon ariaLabel='Hide' glyph='hide' />
+            </InputGroup.Addon>
+        </InputGroup>
+    </>
 );
 
 export const dev = () => (
-    <InputGroup
-        compact={boolean('compact', false)}
-        disabled={boolean('disabled', false)}
-        validationState={select('Validation State', {
-            'none': '',
-            'success': { state: 'success', text: 'placeholder text' },
-            'error': { state: 'error', text: 'placeholder text' },
-            'information': { state: 'information', text: 'placeholder text' },
-            'warning': { state: 'warning', text: 'placeholder text' }
-        })}>
-        <FormInput />
-        <InputGroup.Addon isButton>
-            <Button
-                glyph='navigation-down-arrow'
-                option='transparent' />
-        </InputGroup.Addon>
-    </InputGroup>
+    <>
+        <FormLabel htmlFor='dev-inputgroup'>Select</FormLabel>
+        <InputGroup
+            compact={boolean('compact', false)}
+            disabled={boolean('disabled', false)}
+            validationState={select('Validation State', {
+                'none': '',
+                'success': { state: 'success', text: 'placeholder text' },
+                'error': { state: 'error', text: 'placeholder text' },
+                'information': { state: 'information', text: 'placeholder text' },
+                'warning': { state: 'warning', text: 'placeholder text' }
+            })}>
+            <FormInput id='dev-inputgroup' />
+            <InputGroup.Addon isButton>
+                <Button
+                    aria-label='Open menu'
+                    glyph='navigation-down-arrow'
+                    option='transparent' />
+            </InputGroup.Addon>
+        </InputGroup>
+    </>
 );
 
 dev.parameters = { docs: { disable: true } };
+
+export const noStyles = () => (
+    <>
+        <FormLabel htmlFor='nostyles'>Select</FormLabel>
+        <InputGroup cssNamespace='xxx'>
+            <InputGroup.Addon isButton>
+                <Button
+                    aria-label='Open menu'
+                    glyph='navigation-down-arrow'
+                    option='transparent' />
+            </InputGroup.Addon>
+            <FormInput id='nostyles' />
+        </InputGroup>
+    </>
+);
+noStyles.parameters = { docs: { disable: true } };

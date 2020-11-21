@@ -1,5 +1,6 @@
 import '../custom.scss';
 import Community from './Community';
+import Description from './Description';
 import { DocsContext } from '@storybook/addon-docs/blocks';
 import Footer from './Footer';
 import Header from './Header';
@@ -10,7 +11,7 @@ import React, { useContext, useEffect } from 'react';
 import {
     Title,
     Subtitle,
-    Description,
+    Description as DocsStoryDescription,
     Heading,
     Props,
     DocsStory,
@@ -40,14 +41,44 @@ const DocsPage = () => {
         document.querySelectorAll('.toc-link').forEach( x => x.setAttribute('target','_self'));
     }, []);
 
+    const showImport = () => {
+        let groups = context.kind.split('/');
+        const name = groups[1];
+        return (
+            <div className='docs-single-import'>
+                <Import componentName={name} />
+            </div>
+        );
+    }
+
+    const showSubImports = () => {
+        const subComps = context?.parameters?.subcomponents;
+        const subImports = [];
+        if(subComps){
+            const compNames = Object.keys(subComps);
+            compNames?.forEach((name, index) => {
+                subImports.push(<Import key={index} componentName={subComps[name]?.displayName}/>)
+            })
+        }
+        return (
+            <div className='docs-multi-imports'>
+                {subImports}
+            </div>
+        );
+    };
+
     return (
         <>
         <Header />
         <Title />
         <Toc />
         <Subtitle />
-        <Import />
-        <Description />
+        {context?.parameters?.deprecated && <Description desc={context?.parameters?.deprecated} />}
+        {!context?.parameters?.noImport && showImport()}
+        {context?.parameters?.displaySubComponentImports && showSubImports()}
+        <div className='docs-component-description'>
+                    <DocsStoryDescription />
+        </div>
         <Heading>Examples</Heading>
         {stories.map((story) => story && <DocsStory
             key={story.id}

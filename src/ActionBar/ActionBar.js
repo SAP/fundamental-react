@@ -1,10 +1,14 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/action-bar.css';
+import requiredIf from 'react-required-if';
+import Title from '../Title/Title';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/action-bar.css';
 
+const classnames = classnamesBind.bind(styles);
 /**
  * The **Action Bar** is located at the top of the page and is used for page title
  * and main actions for the page.
@@ -15,11 +19,14 @@ const ActionBar = React.forwardRef(({
     actionClassName,
     actionProps,
     className,
+    cssNamespace,
+    backButtonLabel,
     buttonContainerClassName,
     buttonProps,
     description,
     descriptionProps,
     headingLevel,
+    headingStyle,
     title,
     titleProps,
     onBackClick,
@@ -27,48 +34,54 @@ const ActionBar = React.forwardRef(({
 }, ref) => {
 
     const actionBarClasses = classnames(
-        'fd-action-bar',
+        `${cssNamespace}-action-bar`,
         className
     );
 
     const actionBarHeaderClasses = classnames(
-        'fd-action-bar__header',
+        `${cssNamespace}-action-bar__header`,
         className
     );
 
     const actionBarBackClasses = classnames(
-        'fd-action-bar__back',
+        `${cssNamespace}-action-bar__back`,
         buttonContainerClassName
     );
 
     const actionBarDescriptionClasses = classnames(
-        'fd-action-bar__description',
+        `${cssNamespace}-action-bar__description`,
         {
-            'fd-action-bar__description--back': onBackClick
+            [`${cssNamespace}-action-bar__description--back`]: onBackClick
         }
     );
 
     const actionBarActionsClasses = classnames(
-        'fd-action-bar__actions',
+        `${cssNamespace}-action-bar__actions`,
         actionClassName
     );
-
-    const HeadingTag = `h${headingLevel}`;
 
     return (
         <div {...props}
             className={actionBarClasses}
             ref={ref}>
             <div {...props} className={actionBarHeaderClasses}>
-                {onBackClick && (<div className={actionBarBackClasses}>
+                {typeof onBackClick === 'function' && (<div className={actionBarBackClasses}>
                     <Button
+                        aria-label={backButtonLabel}
                         {...buttonProps}
                         compact
                         glyph='navigation-left-arrow'
                         onClick={onBackClick}
                         option='transparent' />
                 </div>)}
-                <HeadingTag {...titleProps} className='fd-action-bar__title'>{title}</HeadingTag>
+                <div className={classnames(`${cssNamespace}-action-bar__title`)}>
+                    <Title
+                        {...titleProps}
+                        level={headingLevel}
+                        levelStyle={headingStyle}>
+                        {title}
+                    </Title>
+                </div>
                 {actions && (
                     <div {...actionProps} className={actionBarActionsClasses}>{actions}</div>
                 )}
@@ -93,6 +106,10 @@ ActionBar.propTypes = {
     actionProps: PropTypes.object,
     /** Button components to add to the ActionBar */
     actions: PropTypes.node,
+    /** Localized string for 'Back' button's aria-label. This is required if the button is enabled and `buttonProps` doesn't have a valid `aria-label` */
+    backButtonLabel: requiredIf(PropTypes.string, props => {
+        return typeof props?.onBackClick === 'function' && (!props?.buttonProps || !props.buttonProps['aria-label']?.trim());
+    }),
     /** Classnames to spread to the back Button container */
     buttonContainerClassName: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */
@@ -105,9 +122,17 @@ ActionBar.propTypes = {
     descriptionProps: PropTypes.object,
     /** Heading level. `<h1>` is reserved for the page title */
     headingLevel: CustomPropTypes.range(2, 6),
+    /** Heading style, if it should be different from the default style for the heading level. */
+    headingStyle: CustomPropTypes.range(2, 6),
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
-    /** Callback to pass to the back Button */
+    /**
+     * Callback function; triggered when the back button is clicked.
+     * If this is not set to a function, the back button won't be rendered.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onBackClick: PropTypes.func
 };
 
@@ -115,4 +140,4 @@ ActionBar.defaultProps = {
     headingLevel: 3
 };
 
-export default ActionBar;
+export default withStyles(ActionBar);

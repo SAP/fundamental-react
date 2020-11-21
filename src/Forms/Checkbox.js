@@ -1,12 +1,16 @@
 /* eslint-disable valid-jsdoc */
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
+import FormValidationOverlay from './_FormValidationOverlay';
 import PropTypes from 'prop-types';
-import shortId from '../utils/shortId';
-import React, { useEffect, useRef } from 'react';
-import 'fundamental-styles/dist/checkbox.css';
+import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
+import React, { useEffect, useRef, useState } from 'react';
+import styles from 'fundamental-styles/dist/checkbox.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** With a **Checkbox**, all options are visible and the user can make one or more selections.
 This component can also be disabled and displayed in a row */
@@ -15,23 +19,26 @@ const Checkbox = React.forwardRef(({
     ariaLabel,
     checked,
     children,
-    className,
+    cssNamespace,
+    textClassName,
     compact,
     defaultChecked,
     disabled,
     id,
     indeterminate,
     inline,
+    inputClassName,
     inputProps,
     labelClassName,
     labelProps,
     name,
     onChange,
     value,
-    state,
+    validationOverlayProps,
+    validationState,
     ...props
 }, ref) => {
-
+    const [checkedState, setCheckedState] = useState(!!checked);
     const inputEl = useRef();
 
     useEffect(() => {
@@ -39,29 +46,34 @@ const Checkbox = React.forwardRef(({
     });
 
 
-    const classes = classnames(
-        className,
-        'fd-checkbox',
+    const inputClassNames = classnames(
+        `${cssNamespace}-checkbox`,
         {
-            [`is-${state}`]: state,
-            'fd-checkbox--compact': compact
-        }
+            [`is-${validationState?.state}`]: validationState?.state,
+            [`${cssNamespace}-checkbox--compact`]: compact
+        },
+        inputClassName
     );
 
     const labelClasses = classnames(
-        'fd-checkbox__label',
+        `${cssNamespace}-checkbox__label`,
         labelClassName
     );
 
-    const checkId = id ? id : shortId.generate();
+    const childrenClasses = classnames(
+        `${cssNamespace}-checkbox__text`,
+        textClassName
+    );
+
+    const checkId = useUniqueId(id);
 
     const checkboxChildren = (typeof children === 'string') ? (
-        <span className='fd-checkbox__text'>
+        <span className={childrenClasses}>
             {children}
         </span>
     ) : children;
 
-    return (
+    const checkbox = (
         <FormItem
             {...props}
             disabled={disabled}
@@ -69,15 +81,18 @@ const Checkbox = React.forwardRef(({
             ref={ref}>
             <input
                 {...inputProps}
+                aria-checked={checkedState}
                 aria-label={ariaLabel}
                 checked={checked}
-                className={classes}
+                className={inputClassNames}
                 defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
                 name={name}
                 onChange={(e) => {
-                    onChange(e, !checked);
+                    const toggledState = !checkedState;
+                    setCheckedState(toggledState);
+                    onChange(e, toggledState);
                 }}
                 ref={inputEl}
                 type='checkbox'
@@ -90,6 +105,13 @@ const Checkbox = React.forwardRef(({
             </FormLabel>
         </FormItem>
     );
+
+    return validationState ? (
+        <FormValidationOverlay
+            {...validationOverlayProps}
+            control={checkbox}
+            validationState={validationState} />
+    ) : checkbox;
 });
 
 Checkbox.displayName = 'Checkbox';
@@ -123,6 +145,8 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     indeterminate: PropTypes.bool,
     /** Internal use only */
     inline: PropTypes.bool,
+    /** Class name to be added to the component `<input>` element */
+    inputClassName: PropTypes.string,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Class name to be added to the component `<label>` element */
@@ -131,11 +155,39 @@ Please ensure you are either using a visible \`FormLabel\` or an \`aria-label\` 
     labelProps: PropTypes.object,
     /** Sets the `name` for the checkbox input */
     name: PropTypes.string,
-    /** State of validation: 'error', 'warning', 'information', 'success' */
-    state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+    /** Additional classes to apply to children */
+    textClassName: PropTypes.string,
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
+        innerRefClassName: PropTypes.string,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
+    }),
+    /** An object identifying a validation message.  The object will include properties for `state` and `text`; _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
+    validationState: PropTypes.shape({
+        /** State of validation: 'error', 'warning', 'information', 'success' */
+        state: PropTypes.oneOf(FORM_MESSAGE_TYPES),
+        /** Text of the validation message */
+        text: PropTypes.string
+    }),
     /** Sets the `value` for the checkbox input */
     value: PropTypes.string,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the change event fires on the HTML checkbox `<input>`.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {Boolean} checkedState - represents the final checked state of the HTML checkbox input.
+     * @returns {void}
+    */
     onChange: PropTypes.func
 };
 
@@ -143,4 +195,4 @@ Checkbox.defaultProps = {
     onChange: () => {}
 };
 
-export default Checkbox;
+export default withStyles(Checkbox);

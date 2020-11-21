@@ -1,6 +1,15 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import menuItemStyles from 'fundamental-styles/dist/menu.css';
+
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...menuItemStyles
+});
 
 const MenuItem = ({
     addonAfter,
@@ -10,6 +19,7 @@ const MenuItem = ({
     children,
     onClick,
     className,
+    cssNamespace,
     addonProps,
     urlProps,
     separator,
@@ -19,28 +29,17 @@ const MenuItem = ({
     ...props
 }) => {
 
-    const addonBeforeClassnames = classnames(
-        'fd-menu__addon-before',
-        {
-            [`sap-icon--${addonBefore}`]: !!addonBefore
-        }
-    );
-
-    const addonAfterClassnames = classnames(
-        'fd-menu__addon-after',
-        {
-            [`sap-icon--${addonAfter}`]: !!addonAfter
-        }
-    );
-
     const linkClassNames = classnames(
-        'fd-menu__link',
+        `${cssNamespace}-menu__link`,
         {
             'is-active': active,
             'is-selected': selected,
             'is-disabled': disabled
         }
     );
+
+    const addonBeforeClassname = classnames(`${cssNamespace}-menu__addon-before`);
+    const addonAfterClassname = classnames(`${cssNamespace}-menu__addon-after`);
 
     const renderLink = () => {
         if (url) {
@@ -49,9 +48,19 @@ const MenuItem = ({
                 href={url}
                 onClick={onClick}
                 role='menuitem'>
-                {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
-                <span className='fd-menu__title'>{children}</span>
-                {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
+                {addonBefore &&
+                    <span className={addonBeforeClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonBefore} />
+                    </span>
+                }
+                <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
+                {addonAfter &&
+                    <span className={addonAfterClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonAfter} />
+                    </span>
+                }
             </a>);
         } else if (children && React.isValidElement(children)) {
             const childrenClassnames = classnames(
@@ -59,47 +68,67 @@ const MenuItem = ({
                 children.props.className
             );
 
-            const addonChildBefore = addonBefore ? (<span {...addonProps} className={addonBeforeClassnames} />) : null;
-            const addonChildAfter = addonAfter ? (<span {...addonProps} className={addonAfterClassnames} />) : null;
-
             return (
-                <React.Fragment>
-                    {React.Children.toArray(children).map(child => {
-                        return React.cloneElement(child, {
-                            'className': childrenClassnames,
-                            ...urlProps
-                        },
-                        [addonChildBefore, (<span className='fd-menu__title'>{child.props.children}</span>), addonChildAfter]);
-                    })}
-                </React.Fragment>
+                <>
+                    {addonBefore &&
+                        <span {...urlProps} className={addonBeforeClassname}>
+                            <Icon {...addonProps} ariaHidden
+                                glyph={addonBefore} />
+                        </span>
+                    }
+                    <span className={classnames(`${cssNamespace}-menu__title`)}>
+                        {React.Children.map(children, child => {
+                            return React.cloneElement(child, {
+                                className: childrenClassnames,
+                                ...urlProps
+                            });
+                        })}
+                    </span>
+                    {addonAfter &&
+                        <span {...urlProps} className={addonAfterClassname}>
+                            <Icon {...addonProps} ariaHidden
+                                glyph={addonAfter} />
+                        </span>
+                    }
+                </>
             );
         } else if (children) {
             return (<a {...urlProps}
                 className={linkClassNames}
                 onClick={onClick}
                 role='menuitem'>
-                {addonBefore && <span {...addonProps} className={addonBeforeClassnames} />}
-                <span className='fd-menu__title'>{children}</span>
-                {addonAfter && <span {...addonProps} className={addonAfterClassnames} />}
+                {addonBefore &&
+                    <span className={addonBeforeClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonBefore} />
+                    </span>
+                }
+                <span className={classnames(`${cssNamespace}-menu__title`)}>{children}</span>
+                {addonAfter &&
+                    <span className={addonAfterClassname}>
+                        <Icon {...addonProps} ariaHidden
+                            glyph={addonAfter} />
+                    </span>
+                }
             </a>);
         }
     };
 
     const listClassNames = classnames(
-        'fd-menu__item',
+        `${cssNamespace}-menu__item`,
         className
     );
 
     return (
-        <React.Fragment>
+        <>
             <li
                 {...props}
                 className={listClassNames}
                 role='presentation'>
                 {renderLink()}
             </li>
-            {separator && <span className='fd-menu__separator' />}
-        </React.Fragment>
+            {separator && <span className={classnames(`${cssNamespace}-menu__separator`)} />}
+        </>
     );
 };
 
@@ -131,8 +160,13 @@ MenuItem.propTypes = {
     url: PropTypes.string,
     /** Additional props to be spread to the Menu Item links (when using `url`). */
     urlProps: PropTypes.object,
-    /** Callback function when user clicks on the component*/
+    /**
+     * Callback function; triggered when the MenuItem (i.e. the `<a>` element) is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onClick: PropTypes.func
 };
 
-export default MenuItem;
+export default withStyles(MenuItem);

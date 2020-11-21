@@ -1,8 +1,12 @@
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import TimeItem from './_TimeItem';
+import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/time.css';
+import styles from 'fundamental-styles/dist/time.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Time** component is used for a single time value. Multiple components can be used in the **Time Picker**
 to assemble a clock time. A max of four will account for hours, minutes, seconds and meridiem of the day.
@@ -72,6 +76,7 @@ class Time extends Component {
 
     render() {
         const {
+            cssNamespace,
             localizedText,
             showHour,
             showMinute,
@@ -106,12 +111,12 @@ class Time extends Component {
         return (
             <div
                 {...props}
-                className='fd-time'
+                className={classnames(`${cssNamespace}-time`)}
                 id={id}>
                 {/* Hours */}
                 {showHour ? (
-                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('hour')}>
-                        <label className='fd-time__slider-label'>{localizedText.hoursLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)} onClick={() => this.updateActiveColumn('hour')}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)} >{localizedText.hoursLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -132,8 +137,8 @@ class Time extends Component {
                 )}
                 {/* Minutes */}
                 {showMinute ? (
-                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('minute')}>
-                        <label className='fd-time__slider-label'>{localizedText.minutesLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)} onClick={() => this.updateActiveColumn('minute')}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)}>{localizedText.minutesLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -154,8 +159,8 @@ class Time extends Component {
                 )}
                 {/* Seconds */}
                 {showSecond ? (
-                    <div className='fd-time__col' onClick={() => this.updateActiveColumn('second')}>
-                        <label className='fd-time__slider-label'>{localizedText.secondsLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)} onClick={() => this.updateActiveColumn('second')}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)}>{localizedText.secondsLabel}</label>
                         <TimeItem
                             active={active}
                             defaultValue={1}
@@ -176,8 +181,8 @@ class Time extends Component {
                 )}
                 {/* Meridiem */}
                 {format12Hours ? (
-                    <div className='fd-time__col'>
-                        <label className='fd-time__slider-label'>{localizedText.meridiemLabel}</label>
+                    <div className={classnames(`${cssNamespace}-time__col`)}>
+                        <label className={classnames(`${cssNamespace}-time__slider-label`)}>{localizedText.meridiemLabel}</label>
                         <TimeItem
                             active={active}
                             disabled={disabled}
@@ -265,7 +270,12 @@ Time.propTypes = {
       * is true or 00 to 23 when `format12Hours` is false), **minute** (with values from 00 to 59), **second** (with values from 00 to 59),
       * **meridiem** (with values 0 for AM or 1 for PM) */
     time: PropTypes.object,
-    /** Callback function when the change event fires on the component */
+    /**
+     * Callback function; triggered when the current time is changed by user interaction.
+     *
+     * @param {Object} time - has hour, meridiem, minute, second properties as numbers
+     * @returns {void}
+     * */
     onChange: PropTypes.func
 };
 
@@ -290,7 +300,6 @@ Time.defaultProps = {
     showHour: true,
     showMinute: true,
     showSecond: true,
-    spinners: true,
     time: {
         hour: '00',
         minute: '00',
@@ -300,4 +309,4 @@ Time.defaultProps = {
 };
 
 
-export default Time;
+export default withStyles(Time);

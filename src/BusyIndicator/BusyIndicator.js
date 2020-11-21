@@ -1,13 +1,17 @@
 import { BUSY_INDICATOR_SIZES } from '../utils/constants';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import React from 'react';
-import 'fundamental-styles/dist/busy-indicator.css';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/busy-indicator.css';
+
+const classnames = classnamesBind.bind(styles);
 
 /** A **Busy Indicator** informs the user of an ongoing operation. */
 const BusyIndicator = React.forwardRef(({
     className,
+    cssNamespace,
     show,
     size,
     localizedText,
@@ -16,8 +20,8 @@ const BusyIndicator = React.forwardRef(({
 
     const busyIndicatorClasses = classnames(
         {
-            [`fd-busy-indicator--${size}`]: size === 'm' || size === 'l',
-            'fd-busy-indicator': size === 's'
+            [`${cssNamespace}-busy-indicator--${size}`]: size === 'm' || size === 'l',
+            [`${cssNamespace}-busy-indicator`]: size === 's'
         },
         className
     );
@@ -32,9 +36,9 @@ const BusyIndicator = React.forwardRef(({
             aria-label={localizedText.loading}
             className={busyIndicatorClasses}
             ref={ref} >
-            <div className='fd-busy-indicator--circle-0' />
-            <div className='fd-busy-indicator--circle-1' />
-            <div className='fd-busy-indicator--circle-2' />
+            <div className={classnames(`${cssNamespace}-busy-indicator--circle-0`)} />
+            <div className={classnames(`${cssNamespace}-busy-indicator--circle-1`)} />
+            <div className={classnames(`${cssNamespace}-busy-indicator--circle-2`)} />
         </div>
     );
 });
@@ -63,4 +67,4 @@ BusyIndicator.defaultProps = {
     show: false
 };
 
-export default BusyIndicator;
+export default withStyles(BusyIndicator);

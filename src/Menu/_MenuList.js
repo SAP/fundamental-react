@@ -1,10 +1,14 @@
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withStyles from '../utils/withStyles';
+import styles from 'fundamental-styles/dist/menu.css';
 
-const MenuList = ({ children, className, ...props }) => {
+const classnames = classnamesBind.bind(styles);
+
+const MenuList = ({ children, className, cssNamespace, ...props }) => {
     const menuListClasses = classnames(
-        'fd-menu__list',
+        `${cssNamespace}-menu__list`,
         className
     );
 
@@ -27,4 +31,4 @@ MenuList.propTypes = {
     className: PropTypes.string
 };
 
-export default MenuList;
+export default withStyles(MenuList);

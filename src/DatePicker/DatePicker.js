@@ -1,21 +1,30 @@
 import Button from '../Button/Button';
 import Calendar from '../Calendar/Calendar';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
+import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import FormInput from '../Forms/FormInput';
 import FormMessage from '../Forms/_FormMessage';
 import InputGroup from '../InputGroup/InputGroup';
-import { isEnabledDate } from '../utils/dateUtils';
 import moment from 'moment';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
-import requiredIf from 'react-required-if';
 import { validDateLookup } from './_validDateLookup';
-import { DATEPICKER_TODAY_ACTIONS_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
+import withStyles from '../utils/withStyles';
+import { FORM_MESSAGE_TYPES, ISO_DATE_FORMAT } from '../utils/constants';
+import { isDateEnabled, resolveFormat } from '../utils/dateUtils';
 import React, { Component } from 'react';
-import 'fundamental-styles/dist/dialog.css';
-import 'fundamental-styles/dist/bar.css';
+import barStyles from 'fundamental-styles/dist/bar.css';
+import dialogStyles from 'fundamental-styles/dist/dialog.css';
+import inputGroupStyles from 'fundamental-styles/dist/input-group.css';
+import listStyles from 'fundamental-styles/dist/list.css';
 
-const ISO_DATE_FORMAT = 'YYYY-MM-DD';
+const classnames = classnamesBind.bind({
+    ...listStyles,
+    ...inputGroupStyles,
+    ...dialogStyles,
+    ...barStyles
+});
+
 const dateRangeSeparator = ' - ';
 
 /** A **DatePicker** is an opinionated composition of the **Input Group**, **Popover**
@@ -24,20 +33,21 @@ const dateRangeSeparator = ' - ';
 class DatePicker extends Component {
     constructor(props) {
         super(props);
-        const formattedDate = props.defaultValue.length > 0 ? this.getFormattedDateStr(props.defaultValue) : '';
-        const isoFormattedDate = props.defaultValue.length > 0
-            ? moment(props.defaultValue, props.dateFormat).format(ISO_DATE_FORMAT)
-            : '';
+
         this.state = {
-            isExpanded: false,
-            selectedDate: formattedDate.length === 0 ? null : this.getMomentDateObj(formattedDate),
-            arrSelectedDates: [],
-            formattedDate,
-            isoFormattedDate
+            formattedDate: this.props?.defaultValue || '',
+            isExpanded: false
         };
 
         this.calendarRef = React.createRef();
         this.popoverRef = React.createRef();
+    }
+
+
+    toISOFormat = (dateStr) => {
+        if (!dateStr || !dateStr?.trim().length) return '';
+        const { dateFormat, locale } = this.props;
+        return moment(dateStr, resolveFormat({ dateFormat, locale })).format(ISO_DATE_FORMAT);
     }
 
     /**
@@ -55,23 +65,13 @@ class DatePicker extends Component {
         if (date) {
             const momentDateObj = this.getMomentDateObj(date);
             if (momentDateObj && momentDateObj.isValid()) {
-                return momentDateObj.format(this.resolveFormat());
+                const { dateFormat, locale } = this.props;
+                return momentDateObj.format(resolveFormat({ dateFormat, locale }));
             } else {
                 return '';
             }
         }
         return date;
-    }
-
-    resolveFormat = () => {
-        const { dateFormat, locale } = this.props;
-        if (dateFormat) {
-            return dateFormat;
-        } else if (locale) {
-            const localeData = moment.localeData(locale);
-            return localeData.longDateFormat('L');
-        }
-        return ISO_DATE_FORMAT;
     }
 
     /**
@@ -104,13 +104,15 @@ class DatePicker extends Component {
      *
      * @returns {Array} collection of date formats allowed for input.
      */
-    getValidFormats = () =>{
-        const format = this.resolveFormat();
+    getValidFormats = () => {
+        const { dateFormat, locale } = this.props;
+        const format = resolveFormat({ dateFormat, locale });
         return validDateLookup[format] ? validDateLookup[format] : format;
     }
 
-    getPlaceHolder() {
-        let placeholderDateFormat = this.resolveFormat();
+    getPlaceHolder = () => {
+        const { dateFormat, locale } = this.props;
+        let placeholderDateFormat = resolveFormat({ dateFormat, locale });
         if (this.props.enableRangeSelection) {
             return placeholderDateFormat + dateRangeSeparator + placeholderDateFormat;
         }
@@ -121,6 +123,10 @@ class DatePicker extends Component {
         this.setState({ formattedDate: e.target.value });
     }
 
+    componentDidMount() {
+        this.validateDates();
+    }
+
     componentDidUpdate(prevProps) {
         if (prevProps.defaultValue !== this.props.defaultValue) {
             this.handleNewDefault();
@@ -128,14 +134,9 @@ class DatePicker extends Component {
     }
 
     handleNewDefault = () => {
-        const { dateFormat, defaultValue } = this.props;
-        const formattedNewDefault = defaultValue && defaultValue.length > 0 ? this.getFormattedDateStr(defaultValue) : '';
+        const { defaultValue } = this.props;
         this.setState({
-            selectedDate: formattedNewDefault.length === 0 ? null : this.getMomentDateObj(formattedNewDefault),
-            isoFormattedDate: defaultValue && defaultValue.length > 0
-                ? moment(defaultValue, dateFormat).format(ISO_DATE_FORMAT)
-                : '',
-            formattedDate: formattedNewDefault
+            formattedDate: defaultValue
         }, () => {
             this.validateDates();
         });
@@ -145,11 +146,9 @@ class DatePicker extends Component {
         e.stopPropagation();
         this.setState({
             formattedDate: e.target.value,
-            isoFormattedDate: e.target.value
-                ? moment(e.target.value, this.props.dateFormat).format(ISO_DATE_FORMAT)
-                : ''
+            isoFormattedDate: this.toISOFormat(e.target?.value)
         }, () => {
-            this.props.onChange(this.getCallbackData());
+            this.props.onChange(this.getCallbackData(), 'inputChange');
         });
     }
 
@@ -160,27 +159,30 @@ class DatePicker extends Component {
     }
 
     isDateValid = (date) => {
-        return date.isValid() && isEnabledDate(date, this.props);
+        return date.isValid() && isDateEnabled(date, this.props);
     }
 
     getCallbackData = () => {
         return {
             date: this.state.selectedDate,
             formattedDate: this.state.formattedDate,
-            isoFormattedDate: this.state.isoFormattedDate
+            isoFormattedDate: this.state.isoFormattedDate,
+            startAndEndDates: this.state.startAndEndDates
         };
     }
 
-    executeCallback = (callbackFunction) => {
+    executeCallback = (callbackFunction, reason) => {
         callbackFunction
         && typeof callbackFunction === 'function'
-        && callbackFunction(this.getCallbackData());
+        && (reason ? callbackFunction(this.getCallbackData(), reason) : callbackFunction(this.getCallbackData()));
     }
 
     validateDates = (postValidationCallback) => {
         const { formattedDate } = this.state;
 
-        if (this.props.enableRangeSelection) {
+        if (!formattedDate || !formattedDate?.trim().length) {
+            this.resetState(postValidationCallback);
+        } else if (this.props.enableRangeSelection) {
             const dateRange = formattedDate.split(dateRangeSeparator);
             const firstDate = this.getMomentDateObj(dateRange[0]);
             const secondDate = this.getMomentDateObj(dateRange[1]);
@@ -192,12 +194,13 @@ class DatePicker extends Component {
                     : (arrSelected = [firstDate, secondDate]);
                 const newFormattedDateRangeStr = this.getFormattedDateRangeStr(arrSelected);
                 this.setState({
+                    formattedDate: newFormattedDateRangeStr,
+                    isoFormatDate: arrSelected[0].format(ISO_DATE_FORMAT) + dateRangeSeparator + arrSelected[1].format(ISO_DATE_FORMAT),
                     selectedDate: null,
-                    arrSelectedDates: arrSelected,
-                    formattedDate: newFormattedDateRangeStr
+                    startAndEndDates: arrSelected
                 }, () => {
                     if (formattedDate !== newFormattedDateRangeStr) {
-                        this.executeCallback(this.props.onChange);
+                        this.executeCallback(this.props.onChange, 'autoFormatDateRange');
                     }
                     this.executeCallback(postValidationCallback);
                 });
@@ -211,12 +214,11 @@ class DatePicker extends Component {
                 this.setState({
                     selectedDate: newDate,
                     formattedDate: newFormattedDateStr,
-                    isoFormattedDate: formattedDate
-                        ? moment(formattedDate, this.props.dateFormat).format(ISO_DATE_FORMAT)
-                        : ''
+                    isoFormattedDate: newDate.format(ISO_DATE_FORMAT),
+                    startAndEndDates: []
                 }, () => {
                     if (formattedDate !== newFormattedDateStr) {
-                        this.executeCallback(this.props.onChange);
+                        this.executeCallback(this.props.onChange, 'autoFormat');
                     }
                     this.executeCallback(postValidationCallback);
                 });
@@ -232,20 +234,24 @@ class DatePicker extends Component {
             formattedDate: '',
             isoFormattedDate: '',
             selectedDate: null,
-            arrSelectedDates: []
+            startAndEndDates: []
         }, () => {
             if (formattedDate !== '') {
-                this.executeCallback(this.props.onChange);
+                this.executeCallback(this.props.onChange, 'invalidInput');
             }
             this.executeCallback(postValidationCallback);
         });
     }
 
-    handleClickButton = () => {
+    handleClickButton = (e) => {
+        const { buttonProps } = this.props;
         this.setState({ isExpanded: !this.state.isExpanded });
 
         const popover = this.popoverRef && this.popoverRef.current;
         popover && popover.triggerBody();
+        if (typeof buttonProps?.onClick === 'function') {
+            buttonProps.onClick(e);
+        }
     };
 
     handleOutsideClickAndEscape = () => {
@@ -255,39 +261,41 @@ class DatePicker extends Component {
     };
 
     handleFocus = () => {
-        this.props.onFocus(this.getCallbackData());
+        this.props.onInputFocus(this.getCallbackData());
     }
 
-    updateDate = (date, forceStayOpen) => {
+    updateDate = (date, forceStayOpen, reason) => {
         let closeCalendar = false;
         const { formattedDate } = this.state;
 
         if (this.props.enableRangeSelection) {
-            let isoFormatDate = date[0].format(ISO_DATE_FORMAT);
+            let isoFormatDateRange = date[0].format(ISO_DATE_FORMAT);
             if (!!date[1]) {
-                isoFormatDate += dateRangeSeparator + date[1].format(ISO_DATE_FORMAT);
+                isoFormatDateRange += dateRangeSeparator + date[1].format(ISO_DATE_FORMAT);
                 closeCalendar = true;
             }
             const newFormattedDateRangeStr = this.getFormattedDateRangeStr(date);
             this.setState({
-                arrSelectedDates: date,
                 formattedDate: newFormattedDateRangeStr,
-                isoFormattedDate: isoFormatDate
+                isoFormattedDate: isoFormatDateRange,
+                selectedDate: null,
+                startAndEndDates: date
             }, () => {
                 if (formattedDate !== newFormattedDateRangeStr) {
-                    this.props.onChange(this.getCallbackData());
+                    this.props.onChange(this.getCallbackData(), reason);
                 }
             });
         } else {
             closeCalendar = true;
             const newFormattedDate = this.getFormattedDateStr(date);
             this.setState({
-                selectedDate: date,
                 formattedDate: newFormattedDate,
-                isoFormattedDate: date.format(ISO_DATE_FORMAT)
+                isoFormattedDate: this.toISOFormat(newFormattedDate),
+                selectedDate: date,
+                startAndEndDates: []
             }, () => {
                 if (formattedDate !== newFormattedDate) {
-                    this.props.onChange(this.getCallbackData());
+                    this.props.onChange(this.getCallbackData(), reason);
                 }
             });
         }
@@ -303,97 +311,108 @@ class DatePicker extends Component {
     /**
      * First validates the inputted dates,
      * then sets state,
-     * finally calls props.onBlur with callback data
+     * finally calls props.onInputBlur with callback data
      * i.e. the  validated state
      *
      * @returns {undefined}
      */
     handleBlur = () => {
-        this.validateDates(this.props.onBlur);
+        this.validateDates(this.props.onInputBlur);
     };
 
     showTodayHeader = () => {
-        const { todayAction: { label: todayLabel, type: todayType } } = this.props;
-        return todayType === 'navigate'
-                && todayLabel
-                && typeof todayLabel === 'string'
-                && todayLabel.trim().length > 0;
+        const { todayActionType, localizedText: { todayLabel } } = this.props;
+        return todayActionType === 'navigate'
+                && todayLabel?.trim().length > 0;
     }
 
     showTodayFooter = () => {
-        const { enableRangeSelection, todayAction: { label: todayLabel, type: todayType } } = this.props;
-        return todayType === 'select'
+        const { enableRangeSelection, todayActionType, localizedText: { todayLabel } } = this.props;
+        return todayActionType === 'select'
                 && !enableRangeSelection
-                && isEnabledDate(moment(), this.props)
-                && todayLabel
-                && typeof todayLabel === 'string'
-                && todayLabel.trim().length > 0;
+                && isDateEnabled(moment(), this.props)
+                && todayLabel?.trim().length > 0;
     };
 
     setTodayDate = () => {
-        this.updateDate(moment().locale(this.props.locale));
+        this.updateDate(moment().locale(this.props.locale), false, 'todaySelected');
     }
 
     render() {
         const {
-            blockedDates,
+            addonProps,
             buttonLabel,
             buttonProps,
             calendarProps,
             compact,
+            cssNamespace,
             dateFormat,
             disabled,
             disableAfterDate,
             disableBeforeDate,
+            disabledDateRanges,
             disabledDates,
             disableFutureDates,
             disablePastDates,
             disableWeekday,
             disableWeekends,
             enableRangeSelection,
+            footerButtonProps,
+            footerClasses,
             inputProps,
+            inputGroupProps,
             locale,
             localizedText,
-            onBlur,
+            onInputBlur,
+            onInputFocus,
             onDatePickerClose,
             openToDate,
             popoverProps,
             readOnly,
             showToday,
             specialDays,
-            todayAction,
+            todayActionType,
+            validationOverlayProps,
             validationState,
             weekdayStart,
+            modalManager,
             ...props
         } = this.props;
 
         const inputGroupClass = classnames(
-            'fd-input-group--control',
+            `${cssNamespace}-input-group--control`,
             {
                 [`is-${validationState?.state}`]: validationState?.state
-            }
+            },
+            inputGroupProps?.className
         );
 
         const datepickerFooterClassName = classnames(
-            'fd-dialog__footer',
-            'fd-bar',
-            'fd-bar--footer',
+            `${cssNamespace}-dialog__footer`,
+            `${cssNamespace}-bar`,
+            `${cssNamespace}-bar--footer`,
             {
-                'fd-bar--cozy': !compact,
-                'fd-bar--compact': compact
-            }
+                [`${cssNamespace}-bar--cozy`]: !compact,
+                [`${cssNamespace}-bar--compact`]: compact
+            },
+            footerClasses
         );
 
-        const disableButton = disabled || readOnly;
+        const footerButtonClassnames = classnames(
+            `${cssNamespace}-dialog__decisive-button`,
+            footerButtonProps?.className
+        );
 
         const inputGroup = (
             <InputGroup
-                aria-expanded={this.state.isExpanded}
-                aria-haspopup='true'
+                {...inputGroupProps}
+                aria-expanded={disabled || readOnly ? null : this.state.isExpanded}
+                aria-haspopup={disabled || readOnly ? null : 'true'}
                 className={inputGroupClass}
                 compact={compact}
                 disabled={disabled}
-                validationState={validationState} >
+                validationOverlayProps={validationOverlayProps}
+                validationState={this.state.isExpanded ? null : validationState} >
                 <FormInput
                     {...inputProps}
                     onBlur={this.handleBlur}
@@ -403,15 +422,26 @@ class DatePicker extends Component {
                     placeholder={this.getPlaceHolder(dateFormat)}
                     readOnly={readOnly}
                     value={this.state.formattedDate} />
-                <InputGroup.Addon isButton>
-                    <Button {...buttonProps}
-                        aria-label={buttonLabel}
-                        disabled={disableButton}
-                        glyph='appointment-2'
-                        onClick={this.handleClickButton}
-                        option='transparent' />
-                </InputGroup.Addon>
+                {!readOnly && (
+                    <InputGroup.Addon
+                        {...addonProps}
+                        isButton>
+                        <Button {...buttonProps}
+                            aria-label={buttonLabel}
+                            disabled={disabled}
+                            glyph='appointment-2'
+                            onClick={this.handleClickButton}
+                            option='transparent' />
+                    </InputGroup.Addon>
+                )}
             </InputGroup>
+        );
+
+        const calendarClasses = classnames(
+            {
+                [`${cssNamespace}-list--has-message`]: validationState?.state
+            },
+            calendarProps?.className
         );
 
         return (
@@ -423,34 +453,40 @@ class DatePicker extends Component {
                         <>
                             {validationState?.text?.length > 0 &&
                                 <FormMessage
+                                    {...validationOverlayProps?.formMessageProps}
+                                    forPopoverList
                                     type={validationState.state}>
                                     {validationState.text}
                                 </FormMessage>
                             }
                             <Calendar
                                 {...calendarProps}
-                                blockedDates={blockedDates}
+                                className={calendarClasses}
                                 compact={compact}
                                 customDate={
                                     enableRangeSelection
-                                        ? this.state.arrSelectedDates
+                                        ? this.state.startAndEndDates
                                         : this.state.selectedDate
                                 }
+                                dateFormat={dateFormat}
                                 disableAfterDate={disableAfterDate}
                                 disableBeforeDate={disableBeforeDate}
                                 disableFutureDates={disableFutureDates}
                                 disablePastDates={disablePastDates}
                                 disableWeekday={disableWeekday}
                                 disableWeekends={disableWeekends}
+                                disabledDateRanges={disabledDateRanges}
                                 disabledDates={disabledDates}
                                 enableRangeSelection={enableRangeSelection}
                                 focusOnInit
                                 locale={locale}
                                 localizedText={{
-                                    ...localizedText,
-                                    todayLabel: todayAction.label
+                                    ...Calendar.defaultProps.localizedText,
+                                    ...localizedText
                                 }}
-                                onChange={this.updateDate}
+                                onChange={ (date, todayNavigated) => {
+                                    this.updateDate(date, todayNavigated, todayNavigated ? 'todayNavigated' : 'calendarDateClicked');
+                                }}
                                 openToDate={openToDate}
                                 ref={this.calendarRef}
                                 showToday={this.showTodayHeader()}
@@ -458,13 +494,14 @@ class DatePicker extends Component {
                                 weekdayStart={weekdayStart} />
                             { this.showTodayFooter() &&
                                 <div className={datepickerFooterClassName}>
-                                    <div className='fd-bar__right'>
-                                        <div className='fd-bar__element'>
+                                    <div className={classnames(`${cssNamespace}-bar__right`)}>
+                                        <div className={classnames(`${cssNamespace}-bar__element`)}>
                                             <Button
-                                                className='fd-dialog__decisive-button'
+                                                {...footerButtonProps}
+                                                className={footerButtonClassnames}
                                                 compact={compact}
                                                 onClick={this.setTodayDate}>
-                                                {todayAction.label}
+                                                {localizedText.todayLabel}
                                             </Button>
                                         </div>
                                     </div>
@@ -475,7 +512,8 @@ class DatePicker extends Component {
                     control={inputGroup}
                     disableKeyPressHandler
                     disableTriggerOnClick
-                    disabled={disableButton}
+                    disabled={disabled || readOnly}
+                    modalManager={modalManager}
                     noArrow
                     onClickOutside={this.handleOutsideClickAndEscape}
                     onEscapeKey={this.handleOutsideClickAndEscape}
@@ -489,6 +527,8 @@ DatePicker.displayName = 'DatePicker';
 
 DatePicker.propTypes = {
     ...Calendar.PropTypes,
+    /** Additional props to be spread to the input group addon button container i.e. `<InputGroup.Addon {...addonProps} >` */
+    addonProps: PropTypes.object,
     /** aria-label for datepicker button */
     buttonLabel: PropTypes.string,
     /** Additional props to be spread to the `<button>` element */
@@ -502,47 +542,82 @@ DatePicker.propTypes = {
     }),
     /** Set to **true** to enable compact mode */
     compact: PropTypes.bool,
-    /** Format to use for displaying the inputted or selected date. E.g. "YYYY.M.D", "DD-MM-YYYY", "MM/DD/YYYY" etc.
-     * This overrides the date format derived from any set locale. */
-    dateFormat: PropTypes.string,
-    /** Default value to be shown in the Datepicker */
+    /**
+     * Default value to be shown in the Datepicker
+     * for example, `defaultValue='12/04/1993'`
+     * or when range selection is enabled `defaultValue='12/04/1993 - 12/30/1992'` (will auto sort chronologically)
+     * */
     defaultValue: PropTypes.string,
     /** Set to **true** to mark component as disabled and make it non-interactive */
     disabled: PropTypes.bool,
     /** Set to **true** to enable the selection of a date range (begin and end) */
     enableRangeSelection: PropTypes.bool,
+    /** Additional props to to apply to calendar footer button*/
+    footerButtonProps: PropTypes.object,
+    /** Classnames to apply to calendar footer that will contain the 'Today' action */
+    footerClasses: PropTypes.string,
+    /** Additional props to be spread to the `InputGroup` component */
+    inputGroupProps: PropTypes.object,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
-    /** Language code to set the locale */
-    locale: PropTypes.string,
+    /** Localized text to be updated based on location/language */
+    localizedText: CustomPropTypes.i18n({
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in day view */
+        dayInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in month view */
+        monthInstructions: PropTypes.string,
+        /** Localized string informing screen reader users the calendar can be navigated by arrow keys while in year view */
+        yearInstructions: PropTypes.string,
+        /** Localized string informing screen reader users to select a second date when in range selection */
+        rangeInstructions: PropTypes.string,
+        /** aria-label for next button */
+        nextMonth: PropTypes.string,
+        /** aria-label for previous button */
+        previousMonth: PropTypes.string,
+        /** aria-label for next button when years are displayed */
+        show12NextYears: PropTypes.string,
+        /** aria-label for previous button when years are displayed */
+        show12PreviousYears: PropTypes.string,
+        /** Label for Today button which is shown if todayActionType is 'select' or 'navigate' */
+        todayLabel: PropTypes.string
+    }),
+    /** If DatePicker is to be rendered in a modal, the parent modal manager can be passed as a prop */
+    modalManager: PropTypes.object,
     /** Additional props to be spread to the Popover component */
     popoverProps: PropTypes.object,
     /** Set to **true** to mark component as readonly */
     readOnly: PropTypes.bool,
     /** Object with special dates and special date types in shape of `{'YYYYMMDD': type}`. Type must be a number between 1-20 */
     specialDays: PropTypes.object,
-    /** Config object for DatePicker's today action button.
-     *  For example, ```todayAction={type: 'select', label: 'Today'}```
-     *
-     * **todayAction.type** is a string indicating the type of today button
+    /**
+     * **todayActionType** is a string indicating the type of today button
      *
      * - `'none'` today button won't be shown
      * - `'select'` today button as footer action that selects today's date and closes datepicker
      * - `'navigate'` today button as header action that navigates (i.e. sets focus) to today's date
      *
-     * **todayAction.label** is a localized string label for the today action button.
+     * **localizedText.todayLabel** should be a localized string label for the today action button.
      *
      * The button will only be rendered if:
      *
-     * - `todayAction.type` is `'select'` or `'navigate'`
-     * - AND `todayAction.label` is a valid non-empty string
+     * - `todayActionType` is `'select'` or `'navigate'`
+     * - AND `localizedText.todayLabel` is a valid non-empty string
     */
-    todayAction: PropTypes.shape({
-        type: PropTypes.oneOf(DATEPICKER_TODAY_ACTIONS_TYPES),
-        label: requiredIf(PropTypes.string, todayAction => {
-            const todayActionType = todayAction?.type?.trim();
-            return todayActionType === 'select' || todayActionType === 'navigate';
-        })
+    todayActionType: PropTypes.oneOf(['none', 'select', 'navigate']),
+    /** Additional props to be spread to the ValidationOverlay */
+    validationOverlayProps: PropTypes.shape({
+        /** Additional classes to apply to validation popover's outermost `<div>` element  */
+        className: PropTypes.string,
+        /** Additional props to be spread to the ValdiationOverlay's FormMessage component */
+        formMessageProps: PropTypes.object,
+        /** Additional classes to apply to validation popover's popper child `<div>` wrapping the provided children  */
+        innerRefClassName: PropTypes.string,
+        /** Additional classes to apply to validation popover's popper `<div>` element  */
+        popperClassName: PropTypes.string,
+        /** CSS class(es) to add to the ValidationOverlay's reference `<div>` element */
+        referenceClassName: PropTypes.string,
+        /** Additional props to be spread to the popover's outermost `<div>` element */
+        wrapperProps: PropTypes.object
     }),
     /** An object identifying a validation message.  The object will include properties for `state` and `text`;
      * _e.g._, \`{ state: \'warning\', text: \'This is your last warning\' }\` */
@@ -552,35 +627,54 @@ DatePicker.propTypes = {
         /** Text of the validation message */
         text: PropTypes.string
     }),
-    /** Callback function for onBlur events. In the object returned,`date` is the date object,
-     * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
-    onBlur: PropTypes.func,
-    /** Callback function for onChange events - every keystroke when user inputs into date text field, after auto formatting date
-     * e.g. after 3/3/20 becomes 03/03/2020, after field is cleared due to invalid input, after new date is selected from popover.
-     * In the object returned, `date` is the date object, `formattedDate` is the formatted date, and `isoFormattedDate`is the date
-     * formatted in ISO-8601 format (YYYY-MM-DD) */
+    /** Callback function; triggered when the selected date changes.
+     * There can be many reasons for a date change.
+     * The reason is available as a String and could be one of `todaySelected`, `todayNavigated`, `calendarDateClicked`,
+     * `inputChange`, `autoFormat` or `invalidInput`
+     *
+     * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+     * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+     * array of date objects containing the start and end date if enableRangeSelection is true.
+     * @param {string} reason - what caused the selection to change
+     * @returns {void}
+     */
     onChange: PropTypes.func,
-    /** Callback function which triggers when datepicker closes after date selection. In the object returned, `date` is the date object,
-     * `formattedDate` is the formatted date, and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD) */
+    /** Callback function; triggered when datepicker popover closes after date selection.
+     *
+     * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+     * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+     * array of date objects containing the start and end date if enableRangeSelection is true.
+     * @returns {void}
+     */
     onDatePickerClose: PropTypes.func,
-    /** Callback function for onFocus events. In the object returned, `date` is the date object, `formattedDate` is the formatted date,
-     * and `isoFormattedDate` is the date formatted in ISO-8601 format (YYYY-MM-DD). */
-    onFocus: PropTypes.func
+    /** Callback function; triggered when text input field loses focus.
+      * Input value is validated before calling onInputBlur.
+      * If input field value can be formatted to a valid date object then this is used as the data, else field is reset.
+      *
+      * @param {Object} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+      * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+      * array of date objects containing the start and end date if enableRangeSelection is true.
+      * @returns {void}
+     */
+    onInputBlur: PropTypes.func,
+    /** Callback function; triggered when datepicker input is focused.
+     *
+     * @param {Object|SyntheticEvent} data - data.date is the selected date object; data.formattedDate is the formatted date string;
+     * data.isoFormattedDate is the formatted date string in ISO-8601 format i.e. YYYY-MM-DD; data.startAndEndDates is an
+     * array of date objects containing the start and end date if enableRangeSelection is true.
+     * @returns {void}
+     */
+    onInputFocus: PropTypes.func
 };
 
 DatePicker.defaultProps = {
+    ...Calendar.defaultProps,
     buttonLabel: 'Choose date',
     defaultValue: '',
-    dateFormat: null,
-    locale: 'en',
-    localizedText: Calendar.defaultProps.localizedText,
-    todayAction: {
-        type: 'none'
-    },
-    onBlur: () => {},
-    onChange: () => {},
+    todayActionType: 'none',
+    onInputBlur: () => {},
     onDatePickerClose: () => {},
-    onFocus: () => {}
+    onInputFocus: () => {}
 };
 
-export default DatePicker;
+export default withStyles(DatePicker);

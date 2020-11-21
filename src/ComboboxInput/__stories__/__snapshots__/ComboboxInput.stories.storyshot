@@ -5,36 +5,61 @@ exports[`Storyshots Component API/ComboboxInput Compact 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-popover"
+    className="fd-form-item"
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover"
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control fd-input-group"
-          onClick={[Function]}
+          className="fd-popover__control"
         >
-          <input
-            className="fd-input fd-input--compact fd-input-group__input"
-            onChange={[Function]}
-            placeholder="Placeholder"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+          <div
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            aria-owns="compactComboboxExample-listbox-list"
+            id="compactComboboxExample-combobox"
+            role="combobox"
           >
-            <button
-              className="fd-button fd-button--transparent fd-button--compact sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
+            <div
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    className="fd-input-group--control fd-input-group"
+                    onClick={[Function]}
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="compactComboboxExample-listbox-list"
+                      aria-label="Compact"
+                      autoComplete="off"
+                      className="fd-input fd-input--compact fd-input-group__input"
+                      id="compactComboboxExample-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Enter country"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -47,38 +72,179 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-popover"
+    className="fd-container"
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-row"
     >
       <div
-        className="fd-popover__control"
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
       >
-        <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control fd-input-group"
-          onClick={[Function]}
-        >
-          <input
-            className="fd-input fd-input-group__input"
-            disabled={false}
-            onChange={[Function]}
-            placeholder="Placeholder"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
-            disabled={false}
+        <div>
+          <button
+            className="fd-button"
+            type="button"
           >
-            <button
-              className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
+            <span
+              className="fd-button__text"
+            >
+              Dummy
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div>
+          <label
+            className="fd-form-label"
+            onKeyDown={[Function]}
+          >
+            Use custom option renderer
+          </label>
+          <label
+            className="fd-switch__label"
+          >
+            <span
+              className="fd-switch fd-switch--compact"
+            >
+              <input
+                aria-checked={false}
+                aria-label="Switch"
+                checked={false}
+                className="fd-switch__input"
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <div
+                className="fd-switch__wrapper"
+              >
+                <div
+                  className="fd-switch__track"
+                >
+                  <span
+                    className="fd-switch__handle"
+                    role="presentation"
+                  />
+                </div>
+              </div>
+            </span>
+          </label>
+          Selected country code: 
+          none
+          <br />
+          <div
+            className="fd-form-group"
+          >
+            <div
+              className="fd-form-item fd-form-item--horizontal"
+            >
+              <label
+                className="fd-form-label"
+                htmlFor="comboboxDevExample"
+              >
+                Country
+              </label>
+              <br />
+              <div
+                className="fd-form-item"
+              >
+                <div
+                  className="fd-popover"
+                >
+                  <div
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onTouchStart={[Function]}
+                  >
+                    <div
+                      className="fd-popover__control"
+                    >
+                      <div
+                        aria-expanded={false}
+                        aria-haspopup="listbox"
+                        aria-owns="comboboxDevExample-listbox-list"
+                        id="comboboxDevExample-combobox"
+                        role="combobox"
+                      >
+                        <div
+                          className="fd-popover"
+                          onBlur={[Function]}
+                          onFocus={[Function]}
+                        >
+                          <div
+                            onFocus={[Function]}
+                            onMouseDown={[Function]}
+                            onTouchStart={[Function]}
+                          >
+                            <div
+                              className="fd-popover__control"
+                            >
+                              <div
+                                className="fd-input-group--control fd-input-group"
+                                onClick={[Function]}
+                              >
+                                <input
+                                  aria-autocomplete="list"
+                                  aria-controls="comboboxDevExample-listbox-list"
+                                  autoComplete="off"
+                                  className="fd-input fd-input-group__input"
+                                  disabled={false}
+                                  id="comboboxDevExample-input"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyDown={[Function]}
+                                  placeholder="Enter country"
+                                  required={false}
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                className="fd-button"
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="fd-button__text"
+                >
+                  Clear
+                </span>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--decline"
+                  role="img"
+                />
+              </button>
+            </div>
+          </div>
+          <div
+            className="fd-container"
+          />
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div>
+          <button
+            className="fd-button"
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Dummy
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -91,40 +257,249 @@ exports[`Storyshots Component API/ComboboxInput Disabled 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-popover"
+    className="fd-form-item"
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover"
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control is-disabled fd-input-group is-disabled"
-          onClick={[Function]}
+          className="fd-popover__control"
         >
-          <input
-            className="fd-input fd-input-group__input"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Placeholder"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
-            disabled={true}
+          <div
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            aria-owns="disabledComboboxExample-listbox-list"
+            id="disabledComboboxExample-combobox"
+            role="combobox"
           >
-            <button
-              className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
+            <div
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    className="fd-input-group--control is-disabled fd-input-group is-disabled"
+                    onClick={[Function]}
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="disabledComboboxExample-listbox-list"
+                      aria-label="Disabled"
+                      autoComplete="off"
+                      className="fd-input fd-input-group__input"
+                      disabled={true}
+                      id="disabledComboboxExample-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Enter country"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ComboboxInput No Styles 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      id="primaryComboboxExample-label"
+    >
+      Default
+    </label>
+    <div
+      className="xxx-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="xxx-popover__control"
+        >
+          <div
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            aria-owns="primaryComboboxExample-listbox-list"
+            id="primaryComboboxExample-combobox"
+            role="combobox"
+          >
+            <div
+              className="xxx-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="xxx-popover__control"
+                >
+                  <div
+                    className="xxx-input-group--control xxx-input-group"
+                    onClick={[Function]}
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="primaryComboboxExample-listbox-list"
+                      aria-labelledby="primaryComboboxExample-label"
+                      autoComplete="off"
+                      className="xxx-input xxx-input-group__input"
+                      id="primaryComboboxExample-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Enter country"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ComboboxInput Pre Selected Key 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-container"
+  >
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div
+          className="fd-form-item"
+        >
+          <label
+            className="fd-form-label"
+            id="preSelectedKeyComboboxExample-label"
+          >
+            Pre Selected Combobox
+          </label>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  aria-expanded={false}
+                  aria-haspopup="listbox"
+                  aria-owns="preSelectedKeyComboboxExample-listbox-list"
+                  id="preSelectedKeyComboboxExample-combobox"
+                  role="combobox"
+                >
+                  <div
+                    className="fd-popover"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                  >
+                    <div
+                      onFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <div
+                        className="fd-popover__control"
+                      >
+                        <div
+                          className="fd-input-group--control fd-input-group"
+                          onClick={[Function]}
+                        >
+                          <input
+                            aria-autocomplete="both"
+                            aria-controls="preSelectedKeyComboboxExample-listbox-list"
+                            aria-labelledby="preSelectedKeyComboboxExample-label"
+                            autoComplete="nope"
+                            className="fd-input fd-input-group__input"
+                            id="preSelectedKeyComboboxExample-input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Enter country"
+                            type="text"
+                          />
+                          <span
+                            className="fd-input-group__addon fd-input-group__addon--button"
+                          >
+                            <button
+                              aria-label="Show country options"
+                              className="fd-button fd-button--transparent fd-input-group__button"
+                              id="preSelectedKeyComboboxExample-combobox-arrow"
+                              onClick={[Function]}
+                              tabIndex="-1"
+                              type="button"
+                            >
+                              <i
+                                aria-hidden={true}
+                                className="sap-icon--navigation-down-arrow"
+                                role="img"
+                              />
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <small>
+          Clear the field to see more options
+        </small>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      />
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      />
     </div>
   </div>
 </div>
@@ -135,36 +510,325 @@ exports[`Storyshots Component API/ComboboxInput Primary 1`] = `
   dir="ltr"
 >
   <div
-    className="fd-popover"
+    className="fd-form-item"
   >
+    <label
+      className="fd-form-label"
+      id="primaryComboboxExample-label"
+    >
+      Default
+    </label>
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover"
     >
       <div
-        className="fd-popover__control"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          aria-expanded={false}
-          aria-haspopup="true"
-          className="fd-input-group--control fd-input-group"
-          onClick={[Function]}
+          className="fd-popover__control"
         >
-          <input
-            className="fd-input fd-input-group__input"
-            onChange={[Function]}
-            placeholder="Select an item"
-            type="text"
-          />
-          <span
-            className="fd-input-group__addon fd-input-group__addon--button"
+          <div
+            aria-expanded={false}
+            aria-haspopup="listbox"
+            aria-owns="primaryComboboxExample-listbox-list"
+            id="primaryComboboxExample-combobox"
+            role="combobox"
           >
-            <button
-              className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-              type="button"
-            />
-          </span>
+            <div
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    className="fd-input-group--control fd-input-group"
+                    onClick={[Function]}
+                  >
+                    <input
+                      aria-autocomplete="list"
+                      aria-controls="primaryComboboxExample-listbox-list"
+                      aria-labelledby="primaryComboboxExample-label"
+                      autoComplete="off"
+                      className="fd-input fd-input-group__input"
+                      id="primaryComboboxExample-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Enter country"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/ComboboxInput Selection Type 1`] = `
+<div
+  dir="ltr"
+>
+  <div
+    className="fd-container"
+  >
+    <div
+      className="fd-row"
+    >
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div>
+          Selected country code: 
+          none
+          <br />
+          <div
+            className="fd-form-item"
+          >
+            <label
+              className="fd-form-label"
+              id="comboboxManualSelectExample-label"
+            >
+              Country (Manual Select)
+            </label>
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="listbox"
+                    aria-owns="comboboxManualSelectExample-listbox-list"
+                    id="comboboxManualSelectExample-combobox"
+                    role="combobox"
+                  >
+                    <div
+                      className="fd-popover"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      <div
+                        onFocus={[Function]}
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="fd-popover__control"
+                        >
+                          <div
+                            className="fd-input-group--control fd-input-group"
+                            onClick={[Function]}
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-controls="comboboxManualSelectExample-listbox-list"
+                              aria-labelledby="comboboxManualSelectExample-label"
+                              autoComplete="nope"
+                              className="fd-input fd-input-group__input"
+                              id="comboboxManualSelectExample-input"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onKeyDown={[Function]}
+                              placeholder="🔎   Enter Country Name"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div>
+          Selected country code: 
+          none
+          <br />
+          <div
+            className="fd-form-item"
+          >
+            <label
+              className="fd-form-label"
+              id="comboboxAutoSelectExample-label"
+            >
+              Country (Auto Select)
+            </label>
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="listbox"
+                    aria-owns="comboboxAutoSelectExample-listbox-list"
+                    id="comboboxAutoSelectExample-combobox"
+                    role="combobox"
+                  >
+                    <div
+                      className="fd-popover"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      <div
+                        onFocus={[Function]}
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="fd-popover__control"
+                        >
+                          <div
+                            className="fd-input-group--control fd-input-group"
+                            onClick={[Function]}
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-controls="comboboxAutoSelectExample-listbox-list"
+                              aria-labelledby="comboboxAutoSelectExample-label"
+                              autoComplete="nope"
+                              className="fd-input fd-input-group__input"
+                              id="comboboxAutoSelectExample-input"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onKeyDown={[Function]}
+                              placeholder="🔎   Enter Country Name"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
+      >
+        <div>
+          Selected country code: 
+          none
+          <br />
+          <div
+            className="fd-form-item"
+          >
+            <label
+              className="fd-form-label"
+              id="comboboxAutoInlineSelectExample-label"
+            >
+              Country (Auto Select and Inline Auto Complete)
+            </label>
+            <div
+              className="fd-popover"
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-expanded={false}
+                    aria-haspopup="listbox"
+                    aria-owns="comboboxAutoInlineSelectExample-listbox-list"
+                    id="comboboxAutoInlineSelectExample-combobox"
+                    role="combobox"
+                  >
+                    <div
+                      className="fd-popover"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                    >
+                      <div
+                        onFocus={[Function]}
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="fd-popover__control"
+                        >
+                          <div
+                            className="fd-input-group--control fd-input-group"
+                            onClick={[Function]}
+                          >
+                            <input
+                              aria-autocomplete="both"
+                              aria-controls="comboboxAutoInlineSelectExample-listbox-list"
+                              aria-labelledby="comboboxAutoInlineSelectExample-label"
+                              autoComplete="nope"
+                              className="fd-input fd-input-group__input"
+                              id="comboboxAutoInlineSelectExample-input"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onKeyDown={[Function]}
+                              placeholder="🔎   Enter Country Name"
+                              type="text"
+                            />
+                            <span
+                              className="fd-input-group__addon fd-input-group__addon--button"
+                            >
+                              <button
+                                aria-label="Show country options"
+                                className="fd-button fd-button--transparent fd-input-group__button"
+                                id="comboboxAutoInlineSelectExample-combobox-arrow"
+                                onClick={[Function]}
+                                tabIndex="-1"
+                                type="button"
+                              >
+                                <i
+                                  aria-hidden={true}
+                                  className="sap-icon--navigation-down-arrow"
+                                  role="img"
+                                />
+                              </button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -177,23 +841,26 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
   dir="ltr"
 >
   <div
-    className="fddocs-container"
+    className="fd-container"
   >
     <div
-      className="fd-popover"
+      className="fd-row"
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
+          <label
+            aria-required={true}
+            className="fd-form-label fd-form-label--required"
+            id="errorComboboxExample-label"
+          >
+            Combobox with error
+          </label>
           <div
             className="fd-popover"
-            onBlur={[Function]}
-            onFocus={[Function]}
           >
             <div
               onFocus={[Function]}
@@ -205,46 +872,66 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
               >
                 <div
                   aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-error fd-input-group is-error"
-                  onClick={[Function]}
+                  aria-haspopup="listbox"
+                  aria-owns="errorComboboxExample-listbox-list"
+                  id="errorComboboxExample-combobox"
+                  role="combobox"
                 >
-                  <input
-                    className="fd-input fd-input-group__input"
-                    onChange={[Function]}
-                    placeholder="Error"
-                    type="text"
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    className="fd-popover"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      onFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <div
+                        className="fd-popover__control"
+                      >
+                        <div
+                          className="fd-input-group--control is-error fd-input-group is-error"
+                          onClick={[Function]}
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="errorComboboxExample-listbox-list"
+                            aria-labelledby="errorComboboxExample-label"
+                            autoComplete="off"
+                            className="fd-input fd-input-group__input"
+                            id="errorComboboxExample-input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Enter country"
+                            required={true}
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="fd-popover"
-    >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
+          <label
+            className="fd-form-label"
+            id="warningComboboxExample-label"
+          >
+            Combobox with warning
+          </label>
           <div
             className="fd-popover"
-            onBlur={[Function]}
-            onFocus={[Function]}
           >
             <div
               onFocus={[Function]}
@@ -256,46 +943,65 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
               >
                 <div
                   aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-warning fd-input-group is-warning"
-                  onClick={[Function]}
+                  aria-haspopup="listbox"
+                  aria-owns="warningComboboxExample-listbox-list"
+                  id="warningComboboxExample-combobox"
+                  role="combobox"
                 >
-                  <input
-                    className="fd-input fd-input-group__input"
-                    onChange={[Function]}
-                    placeholder="Warning"
-                    type="text"
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    className="fd-popover"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      onFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <div
+                        className="fd-popover__control"
+                      >
+                        <div
+                          className="fd-input-group--control is-warning fd-input-group is-warning"
+                          onClick={[Function]}
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="warningComboboxExample-listbox-list"
+                            aria-labelledby="warningComboboxExample-label"
+                            autoComplete="off"
+                            className="fd-input fd-input-group__input"
+                            id="warningComboboxExample-input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Enter country"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="fd-popover"
-    >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
+          <label
+            className="fd-form-label"
+            id="infoComboboxExample-label"
+          >
+            Combobox with information
+          </label>
           <div
             className="fd-popover"
-            onBlur={[Function]}
-            onFocus={[Function]}
           >
             <div
               onFocus={[Function]}
@@ -307,46 +1013,65 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
               >
                 <div
                   aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-information fd-input-group is-information"
-                  onClick={[Function]}
+                  aria-haspopup="listbox"
+                  aria-owns="infoComboboxExample-listbox-list"
+                  id="infoComboboxExample-combobox"
+                  role="combobox"
                 >
-                  <input
-                    className="fd-input fd-input-group__input"
-                    onChange={[Function]}
-                    placeholder="Information"
-                    type="text"
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    className="fd-popover"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      onFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <div
+                        className="fd-popover__control"
+                      >
+                        <div
+                          className="fd-input-group--control is-information fd-input-group is-information"
+                          onClick={[Function]}
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="infoComboboxExample-listbox-list"
+                            aria-labelledby="infoComboboxExample-label"
+                            autoComplete="off"
+                            className="fd-input fd-input-group__input"
+                            id="infoComboboxExample-input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Enter country"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="fd-popover"
-    >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
+          <label
+            className="fd-form-label"
+            id="successComboboxExample-label"
+          >
+            Combobox with success
+          </label>
           <div
             className="fd-popover"
-            onBlur={[Function]}
-            onFocus={[Function]}
           >
             <div
               onFocus={[Function]}
@@ -358,24 +1083,45 @@ exports[`Storyshots Component API/ComboboxInput Validation State 1`] = `
               >
                 <div
                   aria-expanded={false}
-                  aria-haspopup="true"
-                  className="fd-input-group--control is-success fd-input-group is-success"
-                  onClick={[Function]}
+                  aria-haspopup="listbox"
+                  aria-owns="successComboboxExample-listbox-list"
+                  id="successComboboxExample-combobox"
+                  role="combobox"
                 >
-                  <input
-                    className="fd-input fd-input-group__input"
-                    onChange={[Function]}
-                    placeholder="Success"
-                    type="text"
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
+                  <div
+                    className="fd-popover"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
                   >
-                    <button
-                      className="fd-button fd-button--transparent sap-icon--navigation-down-arrow fd-input-group__button"
-                      type="button"
-                    />
-                  </span>
+                    <div
+                      onFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onTouchStart={[Function]}
+                    >
+                      <div
+                        className="fd-popover__control"
+                      >
+                        <div
+                          className="fd-input-group--control is-success fd-input-group is-success"
+                          onClick={[Function]}
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="successComboboxExample-listbox-list"
+                            aria-labelledby="successComboboxExample-label"
+                            autoComplete="off"
+                            className="fd-input fd-input-group__input"
+                            id="successComboboxExample-input"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Enter country"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

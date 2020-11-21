@@ -1,13 +1,19 @@
 import Button from '../Button/Button';
-import classnames from 'classnames';
+import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import Link from '../Link/Link';
 import { MESSAGESTRIP_TYPES } from '../utils/constants';
 import PropTypes from 'prop-types';
+import useUniqueId from '../utils/useUniqueId';
+import withStyles from '../utils/withStyles';
 import React, { useState } from 'react';
-import 'fundamental-styles/dist/icon.css';
-import 'fundamental-styles/dist/message-strip.css';
+import iconStyles from 'fundamental-styles/dist/icon.css';
+import messageStripStyles from 'fundamental-styles/dist/message-strip.css';
 
+const classnames = classnamesBind.bind({
+    ...iconStyles,
+    ...messageStripStyles
+});
 
 /** A **MessageStrip** provides a message within the application that is
  * color-coded to emphasize the level of urgency. */
@@ -28,6 +34,7 @@ const MessageStrip = (props) => {
         dismissible,
         children,
         className,
+        cssNamespace,
         ...otherProps
     } = props;
 
@@ -38,33 +45,38 @@ const MessageStrip = (props) => {
 
 
     const MessageStripClasses = classnames(
-        'fd-message-strip',
+        `${cssNamespace}-message-strip`,
         {
-            'fd-message-strip--dismissible': dismissible,
-            'fd-message-strip--no-icon': noGlyph,
-            [`fd-message-strip--${type}`]: !!type
+            [`${cssNamespace}-message-strip--dismissible`]: dismissible,
+            [`${cssNamespace}-message-strip--no-icon`]: noGlyph,
+            [`${cssNamespace}-message-strip--${type}`]: !!type
         },
         className
     );
 
+    const generatedAlertId = useUniqueId();
+    const alertId = otherProps?.id || generatedAlertId;
+
     return (
-        <div>
+        <>
             {active && (
                 <div
                     {...otherProps}
                     className={MessageStripClasses}
+                    id={alertId}
                     role='alert'>
                     {dismissible && (
                         <Button
                             {...buttonProps}
-                            aria-controls='j2ALl423'
+                            aria-controls={alertId}
                             aria-label={localizedText.close}
-                            className='fd-message-strip__close'
+                            className={classnames(`${cssNamespace}-message-strip__close`)}
                             compact
+                            glyph='decline'
                             onClick={closeMessageStripHandler}
                             option='transparent' />
                     )}
-                    <p className='fd-message-strip__text'>
+                    <p className={classnames(`${cssNamespace}-message-strip__text`)}>
                         {children}
                         {link && (
                             <Link
@@ -76,7 +88,7 @@ const MessageStrip = (props) => {
                     </p>
                 </div>
             )}
-        </div>
+        </>
     );
 };
 
@@ -110,7 +122,12 @@ MessageStrip.propTypes = {
     'success',
     'information'*/
     type: PropTypes.oneOf(MESSAGESTRIP_TYPES),
-    /** Callback function passing event when close button is clicked */
+    /**
+     * Callback function; triggered when a dismissible MessageStrip's close button is clicked.
+     *
+     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @returns {void}
+    */
     onCloseClicked: PropTypes.func
 };
 
@@ -121,4 +138,4 @@ MessageStrip.defaultProps = {
     onCloseClicked: () => { }
 };
 
-export default MessageStrip;
+export default withStyles(MessageStrip);
