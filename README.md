@@ -8,6 +8,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
 [![Slack](https://img.shields.io/badge/slack-ui--fundamentals-blue.svg?logo=slack)](https://join.slack.com/t/ui-fundamentals/shared_invite/enQtNTIzOTU0Mzc2NTc5LWQzZWI5MWFhYjE5OTc4YzliN2JhOTc1ZjQxZTg1YjZiMWZiYzRkNjMwYzgyMmFkYmNhZDVjMWE5MDIzOWEzMmM)
 
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
+</a>
+
 ## Description
 
 The `fundamental-react` library is a set of [React](https://reactjs.org/) components built using [SAP Fundamental Styles](https://sap.github.io/fundamental-styles/).
