@@ -426,11 +426,6 @@ blockquote {
     margin: 5px !important;
 }
 
-.docs-multi-imports,
-.docs-single-import {
-    margin-bottom: 5em;
-}
-
 .docs-single-import,
 .docs-multi-imports {
     display: flex;
@@ -446,8 +441,4 @@ blockquote {
     position: absolute;
     top: -9999px;
     left: -9999px;
-}
-
-.docs-component-description {
-    margin-bottom: 80px;
 }
