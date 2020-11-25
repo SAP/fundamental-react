@@ -29,6 +29,13 @@ module.exports = {
             use: [{ loader: 'story-description-loader' }],
         });
 
+        // run babel on highlight.js (needed for ie11)
+        config.module.rules.push({
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: /node_modules\/(?!(highlight.js)\/).*/,
+        });
+
         config.module.rules.push({
             test: /\.scss$/,
             use: ['style-loader', 'css-loader', 'sass-loader'],
