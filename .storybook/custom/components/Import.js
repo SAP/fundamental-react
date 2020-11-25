@@ -10,8 +10,8 @@ const Import = ({ componentName }) => {
             <SyntaxHighlighter
                 customStyle={{ padding: 10, whiteSpace: 'pre-wrap', fontSize: 14 }}
                 language='javascript'
-                showLineNumbers
-                showInlineLineNumbers
+                showLineNumbers={false}
+                showInlineLineNumbers={false}
                 style={googlecode}
                 wrapLongLines>
                 {importStatement}
