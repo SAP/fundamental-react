@@ -1,10 +1,10 @@
 import keycode from 'keycode';
-import tabbable from 'tabbable';
+import { isTabbable, tabbable } from 'tabbable';
 
 export default class FocusManager {
     constructor(trapNode, controlNode, useArrowKeys = false, firstFocusIndex) {
         this.container = trapNode;
-        this.firstOuterTabbableNode = tabbable.isTabbable(controlNode) ? controlNode : tabbable(controlNode)[0];
+        this.firstOuterTabbableNode = isTabbable(controlNode) ? controlNode : tabbable(controlNode)[0];
         this.tabbableNodes = tabbable(this.container);
         this.useArrowKeys = useArrowKeys;
 

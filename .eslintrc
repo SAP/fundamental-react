@@ -36,7 +36,8 @@
       "ie11/no-for-in-const": 2,
       "ie11/no-weak-collections": 2,
       "indent": [2, 4, {
-          "SwitchCase": 1
+          "SwitchCase": 1,
+          "ignoredNodes": ["TemplateLiteral"]
         }
       ],
       "jsx-a11y/accessible-emoji": 2,

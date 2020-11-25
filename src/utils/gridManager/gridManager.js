@@ -1,6 +1,6 @@
 import { GridSelector } from '../constants';
 import keycode from 'keycode';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 
 // ie
 if (global.Element && !Element.prototype.matches) {
