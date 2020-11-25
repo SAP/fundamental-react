@@ -9,14 +9,16 @@ module.exports = {
     stories: ['../src/Docs/introduction.stories.mdx', `../src/**/*.@${includedStories}.js`],
 
     addons: [
-        '@storybook/addon-knobs/register',
+        {
+            name: '@storybook/addon-essentials',
+            options: {
+                backgrounds: false,
+            },
+        },
         '@storybook/addon-a11y',
-        '@storybook/addon-actions/register',
         '@storybook/addon-cssresources/register',
         '@storybook/addon-storysource/register',
-        '@storybook/addon-viewport/register',
-        '@storybook/addon-docs',
-        'storybook-addon-i18n/register'
+        '@pxblue/storybook-rtl-addon/register',
     ],
 
     webpackFinal: async(config) => {
