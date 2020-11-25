@@ -3,10 +3,20 @@ const { merge } = require('webpack-merge');
 
 const maxAssetSize = 1024 * 1024;
 
-const includedStories = process.env.STORYBOOK_ENV === 'docs' ? '(stories)' : '(stories|visual)';
+const storiesToInclude = () => {
+    const mode = process.env.STORYBOOK_ENV;
+    switch(mode){
+      case 'docs':
+        return '(stories)';
+      case 'chromatic':
+        return '(visual)';
+      default:
+        return '(stories|visual)';
+    }
+  }
 
 module.exports = {
-    stories: ['../src/Docs/introduction.stories.mdx', `../src/**/*.@${includedStories}.js`],
+    stories: ['../src/Docs/introduction.stories.mdx', `../src/**/*.@${storiesToInclude()}.js`],
 
     addons: [
         {

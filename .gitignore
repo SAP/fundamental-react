@@ -4,7 +4,8 @@
 # testing
 /coverage
 src/*/__stories__/*.visual.js
-storybook-testing/__image_snapshots__/__diff_output__/*
+storybook-chromatic
+*.visual.js
 
 # production
 /lib
