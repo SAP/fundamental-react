@@ -2,112 +2,90 @@
 
 exports[`Storyshots Component API/MessageStrip Dev 1`] = `
 <div
-  dir="ltr"
+  className="fd-message-strip"
+  id="fd-mocked-short-id"
+  role="alert"
 >
-  <div
-    className="fd-message-strip"
-    id="fd-mocked-short-id"
-    role="alert"
+  <p
+    className="fd-message-strip__text"
   >
-    <p
-      className="fd-message-strip__text"
-    >
-      Default MessageStrip
-      
-    </p>
-  </div>
+    Default MessageStrip
+    
+  </p>
 </div>
 `;
 
 exports[`Storyshots Component API/MessageStrip Dismissible 1`] = `
 <div
-  dir="ltr"
+  className="fd-message-strip fd-message-strip--dismissible"
+  id="fd-mocked-short-id"
+  role="alert"
 >
-  <div
-    className="fd-message-strip fd-message-strip--dismissible"
-    id="fd-mocked-short-id"
-    role="alert"
+  <button
+    aria-controls="fd-mocked-short-id"
+    aria-label="Close"
+    className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
+    onClick={[Function]}
+    type="button"
   >
-    <button
-      aria-controls="fd-mocked-short-id"
-      aria-label="Close"
-      className="fd-button fd-button--transparent fd-button--compact fd-message-strip__close"
-      onClick={[Function]}
-      type="button"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--decline"
-        role="img"
-      />
-    </button>
-    <p
-      className="fd-message-strip__text"
-    >
-      MessageStrip
-    </p>
-  </div>
+    <i
+      aria-hidden={true}
+      className="sap-icon--decline"
+      role="img"
+    />
+  </button>
+  <p
+    className="fd-message-strip__text"
+  >
+    MessageStrip
+  </p>
 </div>
 `;
 
 exports[`Storyshots Component API/MessageStrip No Glyph 1`] = `
 <div
-  dir="ltr"
+  className="fd-message-strip fd-message-strip--no-icon"
+  id="fd-mocked-short-id"
+  role="alert"
 >
-  <div
-    className="fd-message-strip fd-message-strip--no-icon"
-    id="fd-mocked-short-id"
-    role="alert"
+  <p
+    className="fd-message-strip__text"
   >
-    <p
-      className="fd-message-strip__text"
-    >
-      MessageStrip
-    </p>
-  </div>
+    MessageStrip
+  </p>
 </div>
 `;
 
 exports[`Storyshots Component API/MessageStrip No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-message-strip"
+  id="fd-mocked-short-id"
+  role="alert"
 >
-  <div
-    className="xxx-message-strip"
-    id="fd-mocked-short-id"
-    role="alert"
+  <p
+    className="xxx-message-strip__text"
   >
-    <p
-      className="xxx-message-strip__text"
-    >
-      Default MessageStrip
-    </p>
-  </div>
+    Default MessageStrip
+  </p>
 </div>
 `;
 
 exports[`Storyshots Component API/MessageStrip Primary 1`] = `
 <div
-  dir="ltr"
+  className="fd-message-strip"
+  id="fd-mocked-short-id"
+  role="alert"
 >
-  <div
-    className="fd-message-strip"
-    id="fd-mocked-short-id"
-    role="alert"
+  <p
+    className="fd-message-strip__text"
   >
-    <p
-      className="fd-message-strip__text"
-    >
-      Default MessageStrip
-    </p>
-  </div>
+    Default MessageStrip
+  </p>
 </div>
 `;
 
 exports[`Storyshots Component API/MessageStrip States 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fd-message-strip fd-message-strip--error"
     id="fd-mocked-short-id"
@@ -118,7 +96,7 @@ exports[`Storyshots Component API/MessageStrip States 1`] = `
     >
       MessageStrip
     </p>
-  </div>
+  </div>,
   <div
     className="fd-message-strip fd-message-strip--warning"
     id="fd-mocked-short-id"
@@ -129,7 +107,7 @@ exports[`Storyshots Component API/MessageStrip States 1`] = `
     >
       MessageStrip
     </p>
-  </div>
+  </div>,
   <div
     className="fd-message-strip fd-message-strip--success"
     id="fd-mocked-short-id"
@@ -140,7 +118,7 @@ exports[`Storyshots Component API/MessageStrip States 1`] = `
     >
       MessageStrip
     </p>
-  </div>
+  </div>,
   <div
     className="fd-message-strip fd-message-strip--information"
     id="fd-mocked-short-id"
@@ -151,14 +129,12 @@ exports[`Storyshots Component API/MessageStrip States 1`] = `
     >
       MessageStrip
     </p>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/MessageStrip States With Custom Content And Links 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fd-message-strip fd-message-strip--dismissible fd-message-strip--error"
     id="fd-mocked-short-id"
@@ -193,7 +169,7 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
          
       </a>
     </p>
-  </div>
+  </div>,
   <div
     className="fd-message-strip fd-message-strip--dismissible fd-message-strip--warning"
     id="fd-mocked-short-id"
@@ -232,7 +208,7 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
          
       </a>
     </p>
-  </div>
+  </div>,
   <div
     className="fd-message-strip fd-message-strip--dismissible fd-message-strip--success"
     id="fd-mocked-short-id"
@@ -274,7 +250,7 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
          
       </a>
     </p>
-  </div>
+  </div>,
   <div
     className="fd-message-strip fd-message-strip--dismissible fd-message-strip--information"
     id="fd-mocked-short-id"
@@ -309,6 +285,6 @@ exports[`Storyshots Component API/MessageStrip States With Custom Content And Li
          
       </a>
     </p>
-  </div>
-</div>
+  </div>,
+]
 `;

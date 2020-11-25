@@ -2,63 +2,59 @@
 
 exports[`Storyshots Component API/Select Compact 1`] = `
 <div
-  dir="ltr"
+  className="fd-popover"
+  onBlur={[Function]}
 >
   <div
-    className="fd-popover"
-    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        className="fd-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
       >
         <div
-          className="fd-popover"
-          onBlur={[Function]}
           onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover__control"
           >
             <div
-              className="fd-popover__control"
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-label="Compact"
+              className="fd-select fd-select--compact"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="combobox"
+              tabIndex={0}
             >
               <div
-                aria-controls="fd-mocked-short-id"
-                aria-expanded={false}
-                aria-haspopup="listbox"
-                aria-label="Compact"
-                className="fd-select fd-select--compact"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="combobox"
-                tabIndex={0}
+                className="fd-select__control"
               >
-                <div
-                  className="fd-select__control"
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
                 >
-                  <span
-                    aria-label={null}
-                    className="fd-select__text-content"
-                  >
-                    Select
-                  </span>
-                  <span
-                    className="fd-button fd-button--transparent fd-select__button"
-                  >
-                    <i
-                      aria-hidden={true}
-                      className="sap-icon--slim-arrow-down"
-                      role="img"
-                    />
-                  </span>
-                </div>
+                  Select
+                </span>
+                <span
+                  className="fd-button fd-button--transparent fd-select__button"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--slim-arrow-down"
+                    role="img"
+                  />
+                </span>
               </div>
             </div>
           </div>
@@ -71,64 +67,60 @@ exports[`Storyshots Component API/Select Compact 1`] = `
 
 exports[`Storyshots Component API/Select Dev 1`] = `
 <div
-  dir="ltr"
+  className="fd-popover"
+  onBlur={[Function]}
 >
   <div
-    className="fd-popover"
-    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        className="fd-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
       >
         <div
-          className="fd-popover"
-          onBlur={[Function]}
           onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover__control"
           >
             <div
-              className="fd-popover__control"
+              aria-controls="fd-mocked-short-id"
+              aria-disabled={false}
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-label="Select"
+              className="fd-select"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="combobox"
+              tabIndex={0}
             >
               <div
-                aria-controls="fd-mocked-short-id"
-                aria-disabled={false}
-                aria-expanded={false}
-                aria-haspopup="listbox"
-                aria-label="Select"
-                className="fd-select"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="combobox"
-                tabIndex={0}
+                className="fd-select__control"
               >
-                <div
-                  className="fd-select__control"
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
                 >
-                  <span
-                    aria-label={null}
-                    className="fd-select__text-content"
-                  >
-                    select
-                  </span>
-                  <span
-                    className="fd-button fd-button--transparent fd-select__button"
-                  >
-                    <i
-                      aria-hidden={true}
-                      className="sap-icon--slim-arrow-down"
-                      role="img"
-                    />
-                  </span>
-                </div>
+                  select
+                </span>
+                <span
+                  className="fd-button fd-button--transparent fd-select__button"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--slim-arrow-down"
+                    role="img"
+                  />
+                </span>
               </div>
             </div>
           </div>
@@ -141,60 +133,56 @@ exports[`Storyshots Component API/Select Dev 1`] = `
 
 exports[`Storyshots Component API/Select Disabled 1`] = `
 <div
-  dir="ltr"
+  className="fd-popover"
+  onBlur={[Function]}
 >
   <div
-    className="fd-popover"
-    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        className="fd-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
       >
         <div
-          className="fd-popover"
-          onBlur={[Function]}
           onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover__control"
           >
             <div
-              className="fd-popover__control"
+              aria-disabled={true}
+              aria-label="Disabled"
+              className="fd-select"
+              onClick={[Function]}
+              role="combobox"
+              tabIndex={-1}
             >
               <div
-                aria-disabled={true}
-                aria-label="Disabled"
-                className="fd-select"
-                onClick={[Function]}
-                role="combobox"
-                tabIndex={-1}
+                className="fd-select__control is-disabled"
               >
-                <div
-                  className="fd-select__control is-disabled"
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
                 >
-                  <span
-                    aria-label={null}
-                    className="fd-select__text-content"
-                  >
-                    Select
-                  </span>
-                  <span
-                    className="fd-button fd-button--transparent fd-select__button"
-                  >
-                    <i
-                      aria-hidden={true}
-                      className="sap-icon--slim-arrow-down"
-                      role="img"
-                    />
-                  </span>
-                </div>
+                  Select
+                </span>
+                <span
+                  className="fd-button fd-button--transparent fd-select__button"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--slim-arrow-down"
+                    role="img"
+                  />
+                </span>
               </div>
             </div>
           </div>
@@ -207,61 +195,57 @@ exports[`Storyshots Component API/Select Disabled 1`] = `
 
 exports[`Storyshots Component API/Select Empty Option 1`] = `
 <div
-  dir="ltr"
+  className="fd-popover"
+  onBlur={[Function]}
 >
   <div
-    className="fd-popover"
-    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="fd-popover__control"
     >
       <div
-        className="fd-popover__control"
+        className="fd-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
       >
         <div
-          className="fd-popover"
-          onBlur={[Function]}
           onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="fd-popover__control"
           >
             <div
-              className="fd-popover__control"
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-label="Select"
+              className="fd-select"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="combobox"
+              tabIndex={0}
             >
               <div
-                aria-controls="fd-mocked-short-id"
-                aria-expanded={false}
-                aria-haspopup="listbox"
-                aria-label="Select"
-                className="fd-select"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="combobox"
-                tabIndex={0}
+                className="fd-select__control"
               >
-                <div
-                  className="fd-select__control"
+                <span
+                  aria-label="Select an option"
+                  className="fd-select__text-content"
+                />
+                <span
+                  className="fd-button fd-button--transparent fd-select__button"
                 >
-                  <span
-                    aria-label="Select an option"
-                    className="fd-select__text-content"
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--slim-arrow-down"
+                    role="img"
                   />
-                  <span
-                    className="fd-button fd-button--transparent fd-select__button"
-                  >
-                    <i
-                      aria-hidden={true}
-                      className="sap-icon--slim-arrow-down"
-                      role="img"
-                    />
-                  </span>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -274,63 +258,59 @@ exports[`Storyshots Component API/Select Empty Option 1`] = `
 
 exports[`Storyshots Component API/Select No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-popover"
+  onBlur={[Function]}
 >
   <div
-    className="xxx-popover"
-    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onTouchStart={[Function]}
+      className="xxx-popover__control"
     >
       <div
-        className="xxx-popover__control"
+        className="xxx-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
       >
         <div
-          className="xxx-popover"
-          onBlur={[Function]}
           onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
+            className="xxx-popover__control"
           >
             <div
-              className="xxx-popover__control"
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-label="Select"
+              className="xxx-select"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="combobox"
+              tabIndex={0}
             >
               <div
-                aria-controls="fd-mocked-short-id"
-                aria-expanded={false}
-                aria-haspopup="listbox"
-                aria-label="Select"
-                className="xxx-select"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="combobox"
-                tabIndex={0}
+                className="xxx-select__control"
               >
-                <div
-                  className="xxx-select__control"
+                <span
+                  aria-label={null}
+                  className="xxx-select__text-content"
                 >
-                  <span
-                    aria-label={null}
-                    className="xxx-select__text-content"
-                  >
-                    Select
-                  </span>
-                  <span
-                    className="xxx-button xxx-button--transparent xxx-select__button"
-                  >
-                    <i
-                      aria-hidden={true}
-                      className="sap-icon--slim-arrow-down"
-                      role="img"
-                    />
-                  </span>
-                </div>
+                  Select
+                </span>
+                <span
+                  className="xxx-button xxx-button--transparent xxx-select__button"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--slim-arrow-down"
+                    role="img"
+                  />
+                </span>
               </div>
             </div>
           </div>
@@ -343,7 +323,125 @@ exports[`Storyshots Component API/Select No Styles 1`] = `
 
 exports[`Storyshots Component API/Select Primary 1`] = `
 <div
-  dir="ltr"
+  className="fd-popover"
+  onBlur={[Function]}
+>
+  <div
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="fd-popover__control"
+    >
+      <div
+        className="fd-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-controls="fd-mocked-short-id"
+              aria-expanded={false}
+              aria-haspopup="listbox"
+              aria-label="Primary"
+              className="fd-select"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="combobox"
+              tabIndex={0}
+            >
+              <div
+                className="fd-select__control"
+              >
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
+                >
+                  Select
+                </span>
+                <span
+                  className="fd-button fd-button--transparent fd-select__button"
+                >
+                  <i
+                    aria-hidden={true}
+                    className="sap-icon--slim-arrow-down"
+                    role="img"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Read Only 1`] = `
+<div
+  className="fd-popover"
+  onBlur={[Function]}
+>
+  <div
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="fd-popover__control"
+    >
+      <div
+        className="fd-popover"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              aria-label="readOnly"
+              aria-readonly={true}
+              className="fd-select"
+              onClick={[Function]}
+              role="combobox"
+              tabIndex={0}
+            >
+              <div
+                className="fd-select__control is-readonly"
+              >
+                <span
+                  aria-label={null}
+                  className="fd-select__text-content"
+                >
+                  List Item 1
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Select Validation States 1`] = `
+<div
+  className="fddocs-container"
 >
   <div
     className="fd-popover"
@@ -374,7 +472,7 @@ exports[`Storyshots Component API/Select Primary 1`] = `
                 aria-controls="fd-mocked-short-id"
                 aria-expanded={false}
                 aria-haspopup="listbox"
-                aria-label="Primary"
+                aria-label="Select"
                 className="fd-select"
                 onClick={[Function]}
                 onKeyPress={[Function]}
@@ -382,13 +480,13 @@ exports[`Storyshots Component API/Select Primary 1`] = `
                 tabIndex={0}
               >
                 <div
-                  className="fd-select__control"
+                  className="fd-select__control is-error"
                 >
                   <span
                     aria-label={null}
                     className="fd-select__text-content"
                   >
-                    Select
+                    Error
                   </span>
                   <span
                     className="fd-button fd-button--transparent fd-select__button"
@@ -407,13 +505,6 @@ exports[`Storyshots Component API/Select Primary 1`] = `
       </div>
     </div>
   </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Select Read Only 1`] = `
-<div
-  dir="ltr"
->
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -440,21 +531,33 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
               className="fd-popover__control"
             >
               <div
-                aria-label="readOnly"
-                aria-readonly={true}
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-label="Select"
                 className="fd-select"
                 onClick={[Function]}
+                onKeyPress={[Function]}
                 role="combobox"
                 tabIndex={0}
               >
                 <div
-                  className="fd-select__control is-readonly"
+                  className="fd-select__control is-warning"
                 >
                   <span
                     aria-label={null}
                     className="fd-select__text-content"
                   >
-                    List Item 1
+                    Warning
+                  </span>
+                  <span
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
                   </span>
                 </div>
               </div>
@@ -464,71 +567,60 @@ exports[`Storyshots Component API/Select Read Only 1`] = `
       </div>
     </div>
   </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Select Validation States 1`] = `
-<div
-  dir="ltr"
->
   <div
-    className="fddocs-container"
+    className="fd-popover"
+    onBlur={[Function]}
   >
     <div
-      className="fd-popover"
-      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-label="Select"
+                className="fd-select"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="combobox"
+                tabIndex={0}
               >
                 <div
-                  aria-controls="fd-mocked-short-id"
-                  aria-expanded={false}
-                  aria-haspopup="listbox"
-                  aria-label="Select"
-                  className="fd-select"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="combobox"
-                  tabIndex={0}
+                  className="fd-select__control is-success"
                 >
-                  <div
-                    className="fd-select__control is-error"
+                  <span
+                    aria-label={null}
+                    className="fd-select__text-content"
                   >
-                    <span
-                      aria-label={null}
-                      className="fd-select__text-content"
-                    >
-                      Error
-                    </span>
-                    <span
-                      className="fd-button fd-button--transparent fd-select__button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--slim-arrow-down"
-                        role="img"
-                      />
-                    </span>
-                  </div>
+                    Success
+                  </span>
+                  <span
+                    className="fd-button fd-button--transparent fd-select__button"
+                  >
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
@@ -536,185 +628,61 @@ exports[`Storyshots Component API/Select Validation States 1`] = `
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+  >
     <div
-      className="fd-popover"
-      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                aria-controls="fd-mocked-short-id"
+                aria-expanded={false}
+                aria-haspopup="listbox"
+                aria-label="Select"
+                className="fd-select"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="combobox"
+                tabIndex={0}
               >
                 <div
-                  aria-controls="fd-mocked-short-id"
-                  aria-expanded={false}
-                  aria-haspopup="listbox"
-                  aria-label="Select"
-                  className="fd-select"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="combobox"
-                  tabIndex={0}
+                  className="fd-select__control is-information"
                 >
-                  <div
-                    className="fd-select__control is-warning"
+                  <span
+                    aria-label={null}
+                    className="fd-select__text-content"
                   >
-                    <span
-                      aria-label={null}
-                      className="fd-select__text-content"
-                    >
-                      Warning
-                    </span>
-                    <span
-                      className="fd-button fd-button--transparent fd-select__button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--slim-arrow-down"
-                        role="img"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fd-popover"
-      onBlur={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <div
-            className="fd-popover"
-            onBlur={[Function]}
-            onFocus={[Function]}
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <div
-                  aria-controls="fd-mocked-short-id"
-                  aria-expanded={false}
-                  aria-haspopup="listbox"
-                  aria-label="Select"
-                  className="fd-select"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="combobox"
-                  tabIndex={0}
-                >
-                  <div
-                    className="fd-select__control is-success"
+                    Information
+                  </span>
+                  <span
+                    className="fd-button fd-button--transparent fd-select__button"
                   >
-                    <span
-                      aria-label={null}
-                      className="fd-select__text-content"
-                    >
-                      Success
-                    </span>
-                    <span
-                      className="fd-button fd-button--transparent fd-select__button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--slim-arrow-down"
-                        role="img"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="fd-popover"
-      onBlur={[Function]}
-    >
-      <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          className="fd-popover__control"
-        >
-          <div
-            className="fd-popover"
-            onBlur={[Function]}
-            onFocus={[Function]}
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <div
-                  aria-controls="fd-mocked-short-id"
-                  aria-expanded={false}
-                  aria-haspopup="listbox"
-                  aria-label="Select"
-                  className="fd-select"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="combobox"
-                  tabIndex={0}
-                >
-                  <div
-                    className="fd-select__control is-information"
-                  >
-                    <span
-                      aria-label={null}
-                      className="fd-select__text-content"
-                    >
-                      Information
-                    </span>
-                    <span
-                      className="fd-button fd-button--transparent fd-select__button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--slim-arrow-down"
-                        role="img"
-                      />
-                    </span>
-                  </div>
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--slim-arrow-down"
+                      role="img"
+                    />
+                  </span>
                 </div>
               </div>
             </div>

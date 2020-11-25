@@ -1,423 +1,403 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/Menu No Styles 1`] = `
-<div
-  dir="ltr"
+<nav
+  className="xxx-menu"
 >
-  <nav
-    className="xxx-menu"
+  <ul
+    className="xxx-menu__list"
+    role="menu"
   >
-    <ul
-      className="xxx-menu__list"
-      role="menu"
+    <li
+      className="xxx-menu__item"
+      role="presentation"
     >
-      <li
-        className="xxx-menu__item"
-        role="presentation"
+      <a
+        className="xxx-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="xxx-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="xxx-menu__title"
         >
-          <span
-            className="xxx-menu__title"
-          >
-            Option 1
-          </span>
-        </a>
-      </li>
-      <li
-        className="xxx-menu__item"
-        role="presentation"
+          Option 1
+        </span>
+      </a>
+    </li>
+    <li
+      className="xxx-menu__item"
+      role="presentation"
+    >
+      <a
+        className="xxx-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="xxx-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="xxx-menu__title"
         >
-          <span
-            className="xxx-menu__title"
-          >
-            Option 2
-          </span>
-        </a>
-      </li>
-      <li
-        className="xxx-menu__item"
-        role="presentation"
+          Option 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="xxx-menu__item"
+      role="presentation"
+    >
+      <a
+        className="xxx-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="xxx-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="xxx-menu__title"
         >
-          <span
-            className="xxx-menu__title"
-          >
-            Option 3
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+          Option 3
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
 `;
 
 exports[`Storyshots Component API/Menu Primary 1`] = `
-<div
-  dir="ltr"
+<nav
+  className="fd-menu"
 >
-  <nav
-    className="fd-menu"
+  <ul
+    className="fd-menu__list"
+    role="menu"
   >
-    <ul
-      className="fd-menu__list"
-      role="menu"
+    <li
+      className="fd-menu__item"
+      role="presentation"
     >
-      <li
-        className="fd-menu__item"
-        role="presentation"
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 1
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 1
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 2
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 3
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+          Option 3
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
 `;
 
 exports[`Storyshots Component API/Menu With Addons 1`] = `
-<div
-  dir="ltr"
+<nav
+  className="fd-menu"
 >
-  <nav
-    className="fd-menu"
+  <ul
+    className="fd-menu__list"
+    role="menu"
   >
-    <ul
-      className="fd-menu__list"
-      role="menu"
+    <li
+      className="fd-menu__item"
+      role="presentation"
     >
-      <li
-        className="fd-menu__item"
-        role="presentation"
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__addon-before"
         >
-          <span
-            className="fd-menu__addon-before"
-          >
-            <i
-              aria-hidden={true}
-              className="sap-icon--grid"
-              role="img"
-            />
-          </span>
-          <span
-            className="fd-menu__title"
-          >
-            Option 1
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          <i
+            aria-hidden={true}
+            className="sap-icon--grid"
+            role="img"
+          />
+        </span>
+        <span
+          className="fd-menu__title"
+        >
+          Option 1
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__addon-before"
         >
-          <span
-            className="fd-menu__addon-before"
-          >
-            <i
-              aria-hidden={true}
-              className="sap-icon--wrench"
-              role="img"
-            />
-          </span>
-          <span
-            className="fd-menu__title"
-          >
-            Option 2
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          <i
+            aria-hidden={true}
+            className="sap-icon--wrench"
+            role="img"
+          />
+        </span>
+        <span
+          className="fd-menu__title"
+        >
+          Option 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__addon-before"
         >
-          <span
-            className="fd-menu__addon-before"
-          >
-            <i
-              aria-hidden={true}
-              className="sap-icon--history"
-              role="img"
-            />
-          </span>
-          <span
-            className="fd-menu__title"
-          >
-            Option 3
-          </span>
-          <span
-            className="fd-menu__addon-after"
-          >
-            <i
-              aria-hidden={true}
-              className="sap-icon--accept"
-              role="img"
-            />
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          <i
+            aria-hidden={true}
+            className="sap-icon--history"
+            role="img"
+          />
+        </span>
+        <span
+          className="fd-menu__title"
+        >
+          Option 3
+        </span>
+        <span
+          className="fd-menu__addon-after"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--accept"
+            role="img"
+          />
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__addon-before"
         >
-          <span
-            className="fd-menu__addon-before"
-          >
-            <i
-              aria-hidden={true}
-              className="sap-icon--lightbulb"
-              role="img"
-            />
-          </span>
-          <span
-            className="fd-menu__title"
-          >
-            Option 4
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+          <i
+            aria-hidden={true}
+            className="sap-icon--lightbulb"
+            role="img"
+          />
+        </span>
+        <span
+          className="fd-menu__title"
+        >
+          Option 4
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
 `;
 
 exports[`Storyshots Component API/Menu With Separator 1`] = `
-<div
-  dir="ltr"
+<nav
+  className="fd-menu"
 >
-  <nav
-    className="fd-menu"
+  <ul
+    className="fd-menu__list"
+    role="menu"
   >
-    <ul
-      className="fd-menu__list"
-      role="menu"
+    <li
+      className="fd-menu__item"
+      role="presentation"
     >
-      <li
-        className="fd-menu__item"
-        role="presentation"
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 1
-          </span>
-        </a>
-      </li>
-      <span
-        className="fd-menu__separator"
-      />
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 1
+        </span>
+      </a>
+    </li>
+    <span
+      className="fd-menu__separator"
+    />
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 2
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 3
-          </span>
-        </a>
-      </li>
-      <span
-        className="fd-menu__separator"
-      />
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 3
+        </span>
+      </a>
+    </li>
+    <span
+      className="fd-menu__separator"
+    />
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 4
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+          Option 4
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
 `;
 
 exports[`Storyshots Component API/Menu With States 1`] = `
-<div
-  dir="ltr"
+<nav
+  className="fd-menu"
 >
-  <nav
-    className="fd-menu"
+  <ul
+    className="fd-menu__list"
+    role="menu"
   >
-    <ul
-      className="fd-menu__list"
-      role="menu"
+    <li
+      className="fd-menu__item"
+      role="presentation"
     >
-      <li
-        className="fd-menu__item"
-        role="presentation"
+      <a
+        className="fd-menu__link"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 1
-          </span>
-        </a>
-      </li>
-      <span
-        className="fd-menu__separator"
-      />
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 1
+        </span>
+      </a>
+    </li>
+    <span
+      className="fd-menu__separator"
+    />
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link is-active"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link is-active"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 2
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 2
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link is-selected"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link is-selected"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 3
-          </span>
-        </a>
-      </li>
-      <li
-        className="fd-menu__item"
-        role="presentation"
+          Option 3
+        </span>
+      </a>
+    </li>
+    <li
+      className="fd-menu__item"
+      role="presentation"
+    >
+      <a
+        className="fd-menu__link is-disabled"
+        href="#"
+        role="menuitem"
       >
-        <a
-          className="fd-menu__link is-disabled"
-          href="#"
-          role="menuitem"
+        <span
+          className="fd-menu__title"
         >
-          <span
-            className="fd-menu__title"
-          >
-            Option 4
-          </span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+          Option 4
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
 `;

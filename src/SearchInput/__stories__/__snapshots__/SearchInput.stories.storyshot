@@ -1,65 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/SearchInput Compact 1`] = `
-<div
-  dir="ltr"
->
-  <div>
+<div>
+  <div
+    className="fd-popover"
+  >
     <div
-      className="fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-input-group--control fd-input-group"
+                onClick={[Function]}
               >
-                <div
-                  className="fd-input-group--control fd-input-group"
+                <input
+                  aria-label="Compact search input"
+                  className="fd-input fd-input--compact fd-input-group__input"
+                  onChange={[Function]}
                   onClick={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Placeholder"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
                 >
-                  <input
-                    aria-label="Compact search input"
-                    className="fd-input fd-input--compact fd-input-group__input"
-                    onChange={[Function]}
+                  <button
+                    aria-label="Search"
+                    className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
                     onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Placeholder"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
+                    type="button"
                   >
-                    <button
-                      aria-label="Search"
-                      className="fd-button fd-button--transparent fd-button--compact fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--search"
-                        role="img"
-                      />
-                    </button>
-                  </span>
-                </div>
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--search"
+                      role="img"
+                    />
+                  </button>
+                </span>
               </div>
             </div>
           </div>
@@ -71,69 +67,65 @@ exports[`Storyshots Component API/SearchInput Compact 1`] = `
 `;
 
 exports[`Storyshots Component API/SearchInput Dev 1`] = `
-<div
-  dir="ltr"
->
-  <div>
+<div>
+  <div
+    className="fd-popover"
+  >
     <div
-      className="fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-input-group--control fd-input-group"
+                onClick={[Function]}
+                readOnly={false}
               >
-                <div
-                  className="fd-input-group--control fd-input-group"
+                <input
+                  aria-label="Search input for dev testing"
+                  className="fd-input fd-input-group__input"
+                  disabled={false}
+                  onChange={[Function]}
                   onClick={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Select a Fruit"
                   readOnly={false}
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button"
+                  disabled={false}
                 >
-                  <input
-                    aria-label="Search input for dev testing"
-                    className="fd-input fd-input-group__input"
-                    disabled={false}
-                    onChange={[Function]}
+                  <button
+                    aria-label="Search"
+                    className="fd-button fd-button--transparent fd-input-group__button"
                     onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Select a Fruit"
-                    readOnly={false}
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                    disabled={false}
+                    type="button"
                   >
-                    <button
-                      aria-label="Search"
-                      className="fd-button fd-button--transparent fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--search"
-                        role="img"
-                      />
-                    </button>
-                  </span>
-                </div>
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--search"
+                      role="img"
+                    />
+                  </button>
+                </span>
               </div>
             </div>
           </div>
@@ -145,68 +137,64 @@ exports[`Storyshots Component API/SearchInput Dev 1`] = `
 `;
 
 exports[`Storyshots Component API/SearchInput Disabled 1`] = `
-<div
-  dir="ltr"
->
-  <div>
+<div>
+  <div
+    className="fd-popover"
+  >
     <div
-      className="fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-input-group--control fd-input-group is-disabled"
+                onClick={[Function]}
               >
-                <div
-                  className="fd-input-group--control fd-input-group is-disabled"
+                <input
+                  aria-label="Disabled search input"
+                  className="fd-input fd-input-group__input"
+                  disabled={true}
+                  onChange={[Function]}
                   onClick={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Placeholder"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button"
+                  disabled={true}
                 >
-                  <input
-                    aria-label="Disabled search input"
-                    className="fd-input fd-input-group__input"
+                  <button
+                    aria-label="Search"
+                    className="fd-button fd-button--transparent is-disabled fd-input-group__button"
                     disabled={true}
-                    onChange={[Function]}
                     onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Placeholder"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
-                    disabled={true}
+                    type="button"
                   >
-                    <button
-                      aria-label="Search"
-                      className="fd-button fd-button--transparent is-disabled fd-input-group__button"
-                      disabled={true}
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--search"
-                        role="img"
-                      />
-                    </button>
-                  </span>
-                </div>
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--search"
+                      role="img"
+                    />
+                  </button>
+                </span>
               </div>
             </div>
           </div>
@@ -218,65 +206,61 @@ exports[`Storyshots Component API/SearchInput Disabled 1`] = `
 `;
 
 exports[`Storyshots Component API/SearchInput No Styles 1`] = `
-<div
-  dir="ltr"
->
-  <div>
+<div>
+  <div
+    className="xxx-popover"
+  >
     <div
-      className="xxx-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="xxx-popover__control"
       >
         <div
-          className="xxx-popover__control"
+          className="xxx-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="xxx-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="xxx-popover__control"
             >
               <div
-                className="xxx-popover__control"
+                className="xxx-input-group--control xxx-input-group"
+                onClick={[Function]}
               >
-                <div
-                  className="xxx-input-group--control xxx-input-group"
+                <input
+                  aria-label="Compact search input"
+                  className="xxx-input xxx-input-group__input"
+                  onChange={[Function]}
                   onClick={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Placeholder"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="xxx-input-group__addon xxx-input-group__addon--button"
                 >
-                  <input
-                    aria-label="Compact search input"
-                    className="xxx-input xxx-input-group__input"
-                    onChange={[Function]}
+                  <button
+                    aria-label="Search"
+                    className="xxx-button xxx-button--transparent xxx-input-group__button"
                     onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Placeholder"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="xxx-input-group__addon xxx-input-group__addon--button"
+                    type="button"
                   >
-                    <button
-                      aria-label="Search"
-                      className="xxx-button xxx-button--transparent xxx-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--search"
-                        role="img"
-                      />
-                    </button>
-                  </span>
-                </div>
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--search"
+                      role="img"
+                    />
+                  </button>
+                </span>
               </div>
             </div>
           </div>
@@ -288,51 +272,47 @@ exports[`Storyshots Component API/SearchInput No Styles 1`] = `
 `;
 
 exports[`Storyshots Component API/SearchInput Read Only 1`] = `
-<div
-  dir="ltr"
->
-  <div>
+<div>
+  <div
+    className="fd-popover"
+  >
     <div
-      className="fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-input-group--control fd-input-group"
+                onClick={[Function]}
+                readOnly={true}
               >
-                <div
-                  className="fd-input-group--control fd-input-group"
+                <input
+                  aria-label="Readonly search input"
+                  className="fd-input fd-input-group__input"
+                  onChange={[Function]}
                   onClick={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Read Only"
                   readOnly={true}
-                >
-                  <input
-                    aria-label="Readonly search input"
-                    className="fd-input fd-input-group__input"
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Read Only"
-                    readOnly={true}
-                    type="text"
-                    value="apple"
-                  />
-                </div>
+                  type="text"
+                  value="apple"
+                />
               </div>
             </div>
           </div>
@@ -344,64 +324,60 @@ exports[`Storyshots Component API/SearchInput Read Only 1`] = `
 `;
 
 exports[`Storyshots Component API/SearchInput Substring Search 1`] = `
-<div
-  dir="ltr"
->
-  <div>
+<div>
+  <div
+    className="fd-popover"
+  >
     <div
-      className="fd-popover"
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-popover"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
           <div
-            className="fd-popover"
-            onBlur={[Function]}
             onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
               <div
-                className="fd-popover__control"
+                className="fd-input-group--control fd-input-group"
+                onClick={[Function]}
               >
-                <div
-                  className="fd-input-group--control fd-input-group"
+                <input
+                  className="fd-input fd-input-group__input"
+                  onChange={[Function]}
                   onClick={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="search substring"
+                  type="text"
+                  value=""
+                />
+                <span
+                  className="fd-input-group__addon fd-input-group__addon--button"
                 >
-                  <input
-                    className="fd-input fd-input-group__input"
-                    onChange={[Function]}
+                  <button
+                    aria-label="Search"
+                    className="fd-button fd-button--transparent fd-input-group__button"
                     onClick={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="search substring"
-                    type="text"
-                    value=""
-                  />
-                  <span
-                    className="fd-input-group__addon fd-input-group__addon--button"
+                    type="button"
                   >
-                    <button
-                      aria-label="Search"
-                      className="fd-button fd-button--transparent fd-input-group__button"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <i
-                        aria-hidden={true}
-                        className="sap-icon--search"
-                        role="img"
-                      />
-                    </button>
-                  </span>
-                </div>
+                    <i
+                      aria-hidden={true}
+                      className="sap-icon--search"
+                      role="img"
+                    />
+                  </button>
+                </span>
               </div>
             </div>
           </div>
@@ -413,9 +389,7 @@ exports[`Storyshots Component API/SearchInput Substring Search 1`] = `
 `;
 
 exports[`Storyshots Component API/SearchInput Validation States 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div>
     <div
       className="fd-popover"
@@ -478,7 +452,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div>
     <div
       className="fd-popover"
@@ -541,7 +515,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div>
     <div
       className="fd-popover"
@@ -604,7 +578,7 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div>
     <div
       className="fd-popover"
@@ -667,6 +641,6 @@ exports[`Storyshots Component API/SearchInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;

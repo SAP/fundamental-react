@@ -2,386 +2,350 @@
 
 exports[`Storyshots Component API/Forms/Checkbox Compact 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    className="fd-checkbox fd-checkbox--compact"
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="fd-checkbox fd-checkbox--compact"
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Text Option
-      </span>
-    </label>
-  </div>
+      Text Option
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Controlled Checked 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    checked={false}
+    className="fd-checkbox"
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      checked={false}
-      className="fd-checkbox"
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Text Option
-      </span>
-    </label>
-  </div>
+      Text Option
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Default Checked 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    className="fd-checkbox"
+    defaultChecked={true}
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="fd-checkbox"
-      defaultChecked={true}
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Text Option
-      </span>
-    </label>
-  </div>
+      Text Option
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Dev 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
+  disabled={false}
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    className="fd-checkbox"
     disabled={false}
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="fd-checkbox"
-      disabled={false}
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Text Option
-      </span>
-    </label>
-  </div>
+      Text Option
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Disabled 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
+  disabled={true}
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    className="fd-checkbox"
     disabled={true}
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label is-disabled fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="fd-checkbox"
-      disabled={true}
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label is-disabled fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Text Option
-      </span>
-    </label>
-  </div>
+      Text Option
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Indeterminate 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    className="fd-checkbox"
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="fd-checkbox"
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Text Option
-      </span>
-    </label>
-  </div>
+      Text Option
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-form-item"
 >
-  <div
-    className="xxx-form-item"
+  <input
+    aria-checked={false}
+    className="xxx-checkbox"
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="xxx-form-label xxx-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="xxx-checkbox"
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="xxx-form-label xxx-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="xxx-checkbox__text"
     >
-      <span
-        className="xxx-checkbox__text"
-      >
-        Default Checkbox
-      </span>
-    </label>
-  </div>
+      Default Checkbox
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Primary 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <input
+    aria-checked={false}
+    className="fd-checkbox"
+    id="fd-mocked-short-id"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <label
+    className="fd-form-label fd-checkbox__label"
+    htmlFor="fd-mocked-short-id"
   >
-    <input
-      aria-checked={false}
-      className="fd-checkbox"
-      id="fd-mocked-short-id"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="fd-form-label fd-checkbox__label"
-      htmlFor="fd-mocked-short-id"
+    <span
+      className="fd-checkbox__text"
     >
-      <span
-        className="fd-checkbox__text"
-      >
-        Default Checkbox
-      </span>
-    </label>
-  </div>
+      Default Checkbox
+    </span>
+  </label>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/Checkbox Validation States 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
   <div
-    className="fddocs-container"
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
   >
     <div
-      className="fd-popover"
-      onBlur={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
-          <div
-            className="fd-form-item"
+          <input
+            aria-checked={false}
+            className="fd-checkbox is-error"
+            id="fd-mocked-short-id"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="fd-form-label fd-checkbox__label"
+            htmlFor="fd-mocked-short-id"
           >
-            <input
-              aria-checked={false}
-              className="fd-checkbox is-error"
-              id="fd-mocked-short-id"
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-mocked-short-id"
+            <span
+              className="fd-checkbox__text"
             >
-              <span
-                className="fd-checkbox__text"
-              >
-                Error State
-              </span>
-            </label>
-          </div>
+              Error State
+            </span>
+          </label>
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
     <div
-      className="fd-popover"
-      onBlur={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
-          <div
-            className="fd-form-item"
+          <input
+            aria-checked={false}
+            className="fd-checkbox is-warning"
+            id="fd-mocked-short-id"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="fd-form-label fd-checkbox__label"
+            htmlFor="fd-mocked-short-id"
           >
-            <input
-              aria-checked={false}
-              className="fd-checkbox is-warning"
-              id="fd-mocked-short-id"
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-mocked-short-id"
+            <span
+              className="fd-checkbox__text"
             >
-              <span
-                className="fd-checkbox__text"
-              >
-                Warning State
-              </span>
-            </label>
-          </div>
+              Warning State
+            </span>
+          </label>
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
     <div
-      className="fd-popover"
-      onBlur={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
-          <div
-            className="fd-form-item"
+          <input
+            aria-checked={false}
+            className="fd-checkbox is-information"
+            id="fd-mocked-short-id"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="fd-form-label fd-checkbox__label"
+            htmlFor="fd-mocked-short-id"
           >
-            <input
-              aria-checked={false}
-              className="fd-checkbox is-information"
-              id="fd-mocked-short-id"
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-mocked-short-id"
+            <span
+              className="fd-checkbox__text"
             >
-              <span
-                className="fd-checkbox__text"
-              >
-                Information State
-              </span>
-            </label>
-          </div>
+              Information State
+            </span>
+          </label>
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="fd-popover"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
     <div
-      className="fd-popover"
-      onBlur={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
     >
       <div
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
+        className="fd-popover__control"
       >
         <div
-          className="fd-popover__control"
+          className="fd-form-item"
         >
-          <div
-            className="fd-form-item"
+          <input
+            aria-checked={false}
+            className="fd-checkbox is-success"
+            id="fd-mocked-short-id"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <label
+            className="fd-form-label fd-checkbox__label"
+            htmlFor="fd-mocked-short-id"
           >
-            <input
-              aria-checked={false}
-              className="fd-checkbox is-success"
-              id="fd-mocked-short-id"
-              onChange={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="fd-form-label fd-checkbox__label"
-              htmlFor="fd-mocked-short-id"
+            <span
+              className="fd-checkbox__text"
             >
-              <span
-                className="fd-checkbox__text"
-              >
-                Success State
-              </span>
-            </label>
-          </div>
+              Success State
+            </span>
+          </label>
         </div>
       </div>
     </div>

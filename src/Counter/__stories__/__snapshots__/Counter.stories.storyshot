@@ -2,166 +2,23 @@
 
 exports[`Storyshots Component API/Counter Counter inline with a paragraph 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
-  >
-    <p>
-      Lorem ipsum 
-      <span
-        aria-label="Unread count"
-        className="fd-counter"
-      >
-        5
-      </span>
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Counter Default Counter 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
+  <p>
+    Lorem ipsum 
     <span
       aria-label="Unread count"
       className="fd-counter"
     >
       5
     </span>
-    <span
-      aria-label="Unread count"
-      className="fd-counter"
-    >
-      25
-    </span>
-    <span
-      aria-label="Unread count"
-      className="fd-counter"
-    >
-      101
-    </span>
-    <span
-      aria-label="Unread count"
-      className="fd-counter"
-    >
-      999+
-    </span>
-  </div>
+  </p>
 </div>
 `;
 
-exports[`Storyshots Component API/Counter Default Counter 2`] = `
+exports[`Storyshots Component API/Counter Default Counter 1`] = `
 <div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <button
-      className="fd-button fd-button--transparent"
-      type="button"
-    >
-      <span
-        className="fd-button__text"
-      >
-        <span
-          aria-label="Unread count"
-          className="fd-counter fd-counter--notification"
-        >
-          5
-        </span>
-      </span>
-      <i
-        aria-hidden={true}
-        className="sap-icon--bell"
-        role="img"
-      />
-    </button>
-    <button
-      className="fd-button fd-button--transparent"
-      type="button"
-    >
-      <span
-        className="fd-button__text"
-      >
-        <span
-          aria-label="Unread count"
-          className="fd-counter fd-counter--notification"
-        >
-          25
-        </span>
-      </span>
-      <i
-        aria-hidden={true}
-        className="sap-icon--bell"
-        role="img"
-      />
-    </button>
-    <button
-      className="fd-button fd-button--transparent"
-      type="button"
-    >
-      <span
-        className="fd-button__text"
-      >
-        <span
-          aria-label="Unread count"
-          className="fd-counter fd-counter--notification"
-        >
-          101
-        </span>
-      </span>
-      <i
-        aria-hidden={true}
-        className="sap-icon--bell"
-        role="img"
-      />
-    </button>
-    <button
-      className="fd-button fd-button--transparent"
-      type="button"
-    >
-      <span
-        className="fd-button__text"
-      >
-        <span
-          aria-label="Unread count"
-          className="fd-counter fd-counter--notification"
-        >
-          999+
-        </span>
-      </span>
-      <i
-        aria-hidden={true}
-        className="sap-icon--bell"
-        role="img"
-      />
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Counter No Styles 1`] = `
-<div
-  dir="ltr"
->
-  <span
-    aria-label="Unread count"
-    className="xxx-counter"
-  >
-    5
-  </span>
-</div>
-`;
-
-exports[`Storyshots Component API/Counter Primary 1`] = `
-<div
-  dir="ltr"
+  className="fddocs-container"
 >
   <span
     aria-label="Unread count"
@@ -169,5 +26,128 @@ exports[`Storyshots Component API/Counter Primary 1`] = `
   >
     5
   </span>
+  <span
+    aria-label="Unread count"
+    className="fd-counter"
+  >
+    25
+  </span>
+  <span
+    aria-label="Unread count"
+    className="fd-counter"
+  >
+    101
+  </span>
+  <span
+    aria-label="Unread count"
+    className="fd-counter"
+  >
+    999+
+  </span>
 </div>
+`;
+
+exports[`Storyshots Component API/Counter Default Counter 2`] = `
+<div
+  className="fddocs-container"
+>
+  <button
+    className="fd-button fd-button--transparent"
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        5
+      </span>
+    </span>
+    <i
+      aria-hidden={true}
+      className="sap-icon--bell"
+      role="img"
+    />
+  </button>
+  <button
+    className="fd-button fd-button--transparent"
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        25
+      </span>
+    </span>
+    <i
+      aria-hidden={true}
+      className="sap-icon--bell"
+      role="img"
+    />
+  </button>
+  <button
+    className="fd-button fd-button--transparent"
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        101
+      </span>
+    </span>
+    <i
+      aria-hidden={true}
+      className="sap-icon--bell"
+      role="img"
+    />
+  </button>
+  <button
+    className="fd-button fd-button--transparent"
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      <span
+        aria-label="Unread count"
+        className="fd-counter fd-counter--notification"
+      >
+        999+
+      </span>
+    </span>
+    <i
+      aria-hidden={true}
+      className="sap-icon--bell"
+      role="img"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Component API/Counter No Styles 1`] = `
+<span
+  aria-label="Unread count"
+  className="xxx-counter"
+>
+  5
+</span>
+`;
+
+exports[`Storyshots Component API/Counter Primary 1`] = `
+<span
+  aria-label="Unread count"
+  className="fd-counter"
+>
+  5
+</span>
 `;

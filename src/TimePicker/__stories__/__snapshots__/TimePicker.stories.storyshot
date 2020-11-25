@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/TimePicker Dev 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="timepickerInitExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="fd"
     id="timepickerInitExample"
@@ -79,20 +77,18 @@ exports[`Storyshots Component API/TimePicker Dev 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/TimePicker Disabled 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="timepickerDisabledExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="fd"
     id="timepickerDisabledExample"
@@ -164,20 +160,18 @@ exports[`Storyshots Component API/TimePicker Disabled 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="timepicker12HrExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="fd"
     id="timepicker12HrExample"
@@ -247,20 +241,18 @@ exports[`Storyshots Component API/TimePicker Format 12 Hours 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="timepickerHideSecondExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="fd"
     id="timepickerHideSecondExample"
@@ -330,20 +322,18 @@ exports[`Storyshots Component API/TimePicker Hide Seconds 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="timepickerInitExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="fd"
     id="timepickerInitExample"
@@ -413,20 +403,18 @@ exports[`Storyshots Component API/TimePicker Initial Value 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/TimePicker No Styles 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="xxx-form-label"
     htmlFor="timepickerPrimaryExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="xxx"
     id="timepickerPrimaryExample"
@@ -496,20 +484,18 @@ exports[`Storyshots Component API/TimePicker No Styles 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/TimePicker Primary 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="timepickerPrimaryExample-input"
   >
     Time
-  </label>
+  </label>,
   <div
     cssNamespace="fd"
     id="timepickerPrimaryExample"
@@ -579,6 +565,6 @@ exports[`Storyshots Component API/TimePicker Primary 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/Tabs/TabGroup All Buttons 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="fd-tabs fd-tabs--l"
     role="tablist"
@@ -96,42 +94,40 @@ exports[`Storyshots Component API/Tabs/TabGroup All Buttons 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Tabs/TabGroup Dev 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="fd-tabs fd-tabs--l"
     role="tablist"
@@ -212,42 +208,40 @@ exports[`Storyshots Component API/Tabs/TabGroup Dev 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="fd-tabs fd-tabs--l"
     role="tablist"
@@ -332,42 +326,40 @@ exports[`Storyshots Component API/Tabs/TabGroup Disabled 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="xxx-tabs xxx-tabs--l"
     role="tablist"
@@ -447,42 +439,40 @@ exports[`Storyshots Component API/Tabs/TabGroup No Styles 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="xxx-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="xxx-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="xxx-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="xxx-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="fd-tabs fd-tabs--l"
     role="tablist"
@@ -563,42 +553,40 @@ exports[`Storyshots Component API/Tabs/TabGroup Primary 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="fd-tabs fd-tabs--l"
     role="tablist"
@@ -679,42 +667,40 @@ exports[`Storyshots Component API/Tabs/TabGroup Selected Index 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <ul
     className="fd-tabs fd-tabs--s"
     role="tablist"
@@ -795,35 +781,35 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
+  </div>,
   <ul
     className="fd-tabs fd-tabs--m"
     role="tablist"
@@ -904,35 +890,35 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
+  </div>,
   <ul
     className="fd-tabs fd-tabs--l"
     role="tablist"
@@ -1013,35 +999,35 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
+  </div>,
   <ul
     className="fd-tabs fd-tabs--xl"
     role="tablist"
@@ -1122,35 +1108,35 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
+  </div>,
   <ul
     className="fd-tabs fd-tabs--xxl"
     role="tablist"
@@ -1231,34 +1217,34 @@ exports[`Storyshots Component API/Tabs/TabGroup Sizes 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <div
     aria-expanded={true}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Numquam libero id corporis odit animi voluptat, Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quia tempore eligendi tempora repellat officia rerum laudantium, veritatis officiis asperiores ipsum nam, distinctio, dolor provident culpa voluptatibus esse deserunt animi?
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-  </div>
+  </div>,
   <div
     aria-expanded={false}
     className="fd-tabs__panel"
     role="tabpanel"
   >
     Please review your shopping chart.
-  </div>
-</div>
+  </div>,
+]
 `;
