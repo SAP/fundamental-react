@@ -16,6 +16,7 @@ module.exports = {
             },
         },
         '@storybook/addon-a11y',
+        '@storybook/addon-knobs/register',
         '@storybook/addon-cssresources/register',
         '@storybook/addon-storysource/register',
         '@pxblue/storybook-rtl-addon/register',

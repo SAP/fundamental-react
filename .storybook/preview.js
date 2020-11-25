@@ -1,6 +1,7 @@
 import fundamentals from './custom/fundamentals';
 import React from 'react';
 import { withCssResources } from '@storybook/addon-cssresources';
+import { withKnobs } from '@storybook/addon-knobs';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import DocsPage from './custom/components/DocsPage';
 import { addDecorator, addParameters } from '@storybook/react';
@@ -50,3 +51,4 @@ addParameters({
 });
 
 addDecorator(withCssResources);
+addDecorator(withKnobs);
