@@ -47,6 +47,14 @@ addParameters({
         container: DocsContainer,
         page: DocsPage,
         theme: fundamentals,
+        transformSource: (src) => {
+            // we strip out the () =>` ` from the story
+            // so that the source can be formatted and
+            // rendered as HTML.
+            const SOURCE_REGEX = /^\(\) => `((.|\n)*)`$/;
+            const match = SOURCE_REGEX.exec(src);
+            return prettify(match ? match[1] : src);
+        },
     }
 });
 
