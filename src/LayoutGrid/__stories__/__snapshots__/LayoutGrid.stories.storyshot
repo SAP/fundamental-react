@@ -2,98 +2,94 @@
 
 exports[`Storyshots Layout/Layout Grid Auto Adjusting 1`] = `
 <div
-  dir="ltr"
+  className="fd-container docs-layout-grid"
 >
   <div
-    className="fd-container docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
     >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={8}&gt;
-           
-        </div>
-      </div>
-      <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 fd-col--full docs-col--full"
-      >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column full&gt;
-           
-        </div>
+         
+        &lt;Column span={8}&gt;
+         
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 fd-col--full docs-col--full"
     >
       <div
-        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={3}&gt;
-           
-        </div>
+         
+        &lt;Column full&gt;
+         
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+    >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col--full docs-col--full"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column full&gt;
-           
-        </div>
-      </div>
-      <div
-        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
-      >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={3}&gt;
-           
-        </div>
+         
+        &lt;Column span={3}&gt;
+         
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col--full docs-col--full"
     >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 fd-col--full docs-col--full"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column full&gt;
-           
-        </div>
+         
+        &lt;Column full&gt;
+         
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+    >
       <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={4}&gt;
-           
-        </div>
+         
+        &lt;Column span={3}&gt;
+         
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 fd-col--full docs-col--full"
+    >
+      <div
+        className="col-content"
+      >
+         
+        &lt;Column full&gt;
+         
+      </div>
+    </div>
+    <div
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+    >
+      <div
+        className="col-content"
+      >
+         
+        &lt;Column span={4}&gt;
+         
       </div>
     </div>
   </div>
@@ -102,43 +98,39 @@ exports[`Storyshots Layout/Layout Grid Auto Adjusting 1`] = `
 
 exports[`Storyshots Layout/Layout Grid Auto Span Available Cells 1`] = `
 <div
-  dir="ltr"
+  className="fd-container docs-layout-grid"
 >
   <div
-    className="fd-container docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--12 fd-col-md--8 fd-col-lg--7 fd-col-xl--6 docs-layout-grid-first"
     >
       <div
-        className="fd-col fd-col--12 fd-col-md--8 fd-col-lg--7 fd-col-xl--6 docs-layout-grid-first"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          We have defined col spans for this Column
-        </div>
+        We have defined col spans for this Column
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
+    >
       <div
-        className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          This Column will share available cells
-        </div>
-         
+        This Column will share available cells
       </div>
+       
+    </div>
+    <div
+      className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--2 fd-col-xl--3 docs-layout-grid-third"
+    >
       <div
-        className="fd-col fd-col--12 fd-col-md--2 fd-col-lg--2 fd-col-xl--3 docs-layout-grid-third"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          This Column will share available cells
-        </div>
-         
+        This Column will share available cells
       </div>
+       
     </div>
   </div>
 </div>
@@ -146,264 +138,260 @@ exports[`Storyshots Layout/Layout Grid Auto Span Available Cells 1`] = `
 
 exports[`Storyshots Layout/Layout Grid Different Size Columns 1`] = `
 <div
-  dir="ltr"
+  className="fd-container docs-layout-grid"
 >
   <div
-    className="fd-container docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--12 fd-col-md--12 fd-col-lg--12 fd-col-xl--12 docs-col--12"
     >
       <div
-        className="fd-col fd-col--12 fd-col-md--12 fd-col-lg--12 fd-col-xl--12 docs-col--12"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           12 Column Element 
-        </div>
+         12 Column Element 
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11 docs-col--11"
+    >
+      <div
+        className="col-content"
+      >
+        11 Column Element
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1 docs-col--1"
     >
       <div
-        className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11 docs-col--11"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          11 Column Element
-        </div>
+        1 Column Element
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--10 fd-col-md--10 fd-col-lg--10 fd-col-xl--10 docs-col--10"
+    >
       <div
-        className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1 docs-col--1"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          1 Column Element
-        </div>
+        10 Column Element
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
     >
       <div
-        className="fd-col fd-col--10 fd-col-md--10 fd-col-lg--10 fd-col-xl--10 docs-col--10"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          10 Column Element
-        </div>
+         2 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9 docs-col--9"
+    >
       <div
-        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           2 Column Element 
-        </div>
+         9 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
     >
       <div
-        className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9 docs-col--9"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           9 Column Element 
-        </div>
+         3 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+    >
       <div
-        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           3 Column Element 
-        </div>
+         8 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
     >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           8 Column Element 
-        </div>
+         4 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--7 fd-col-md--7 fd-col-lg--7 fd-col-xl--7 docs-col--7"
+    >
       <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           4 Column Element 
-        </div>
+         7 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--5 fd-col-md--5 fd-col-lg--5 fd-col-xl--5 docs-col--5"
     >
       <div
-        className="fd-col fd-col--7 fd-col-md--7 fd-col-lg--7 fd-col-xl--7 docs-col--7"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           7 Column Element 
-        </div>
+         5 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+    >
       <div
-        className="fd-col fd-col--5 fd-col-md--5 fd-col-lg--5 fd-col-xl--5 docs-col--5"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           5 Column Element 
-        </div>
+         6 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
     >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           6 Column Element 
-        </div>
+         6 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--5 fd-col-md--5 fd-col-lg--5 fd-col-xl--5 docs-col--5"
+    >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           6 Column Element 
-        </div>
+         5 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--7 fd-col-md--7 fd-col-lg--7 fd-col-xl--7 docs-col--7"
     >
       <div
-        className="fd-col fd-col--5 fd-col-md--5 fd-col-lg--5 fd-col-xl--5 docs-col--5"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           5 Column Element 
-        </div>
+         7 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+    >
       <div
-        className="fd-col fd-col--7 fd-col-md--7 fd-col-lg--7 fd-col-xl--7 docs-col--7"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           7 Column Element 
-        </div>
+         4 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
     >
       <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           4 Column Element 
-        </div>
+         8 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+    >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           8 Column Element 
-        </div>
+         3 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9 docs-col--9"
     >
       <div
-        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           3 Column Element 
-        </div>
+        9 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+    >
       <div
-        className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9 docs-col--9"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          9 Column Element 
-        </div>
+         2 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--10 fd-col-md--10 fd-col-lg--10 fd-col-xl--10 docs-col--10"
     >
       <div
-        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           2 Column Element 
-        </div>
+         10 Column Element 
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1 docs-col--1"
+    >
       <div
-        className="fd-col fd-col--10 fd-col-md--10 fd-col-lg--10 fd-col-xl--10 docs-col--10"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           10 Column Element 
-        </div>
+        1 Column Element 
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11 docs-col--11"
     >
       <div
-        className="fd-col fd-col--1 fd-col-md--1 fd-col-lg--1 fd-col-xl--1 docs-col--1"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          1 Column Element 
-        </div>
-      </div>
-      <div
-        className="fd-col fd-col--11 fd-col-md--11 fd-col-lg--11 fd-col-xl--11 docs-col--11"
-      >
-        <div
-          className="col-content"
-        >
-          11 Column Element 
-        </div>
+        11 Column Element 
       </div>
     </div>
   </div>
@@ -412,75 +400,71 @@ exports[`Storyshots Layout/Layout Grid Different Size Columns 1`] = `
 
 exports[`Storyshots Layout/Layout Grid Nesting 1`] = `
 <div
-  dir="ltr"
+  className="fd-container docs-layout-grid"
 >
   <div
-    className="fd-container docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
     >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6"
+        className="fd-row"
       >
         <div
-          className="fd-row"
+          className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
         >
           <div
-            className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+            className="col-content"
           >
-            <div
-              className="col-content"
-            >
-              Nested Column Element
-            </div>
+            Nested Column Element
           </div>
+        </div>
+        <div
+          className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+        >
           <div
-            className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+            className="col-content"
           >
-            <div
-              className="col-content"
-            >
-              Nested Column Element
-            </div>
+            Nested Column Element
           </div>
+        </div>
+        <div
+          className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+        >
           <div
-            className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 docs-col--3"
+            className="col-content"
           >
-            <div
-              className="col-content"
-            >
-              Nested Column Element
-            </div>
+            Nested Column Element
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+    >
       <div
-        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+    >
       <div
-        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+    >
       <div
-        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
     </div>
   </div>
@@ -489,87 +473,83 @@ exports[`Storyshots Layout/Layout Grid Nesting 1`] = `
 
 exports[`Storyshots Layout/Layout Grid No Gap 1`] = `
 <div
-  dir="ltr"
+  className="fd-container fd-container--no-gap docs-layout-grid"
 >
   <div
-    className="fd-container fd-container--no-gap docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
     >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={8}&gt;
-           
-        </div>
-      </div>
-      <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
-      >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={4}&gt;
-           
-        </div>
+         
+        &lt;Column span={8}&gt;
+         
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
     >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={6}&gt;
-           
-        </div>
+         
+        &lt;Column span={4}&gt;
+         
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+    >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={6}&gt;
-           
-        </div>
+         
+        &lt;Column span={6}&gt;
+         
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 docs-col--6"
     >
       <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={4}&gt;
-           
-        </div>
+         
+        &lt;Column span={6}&gt;
+         
       </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 docs-col--4"
+    >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={8}&gt;
-           
-        </div>
+         
+        &lt;Column span={4}&gt;
+         
+      </div>
+    </div>
+    <div
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8 docs-col--8"
+    >
+      <div
+        className="col-content"
+      >
+         
+        &lt;Column span={8}&gt;
+         
       </div>
     </div>
   </div>
@@ -578,87 +558,83 @@ exports[`Storyshots Layout/Layout Grid No Gap 1`] = `
 
 exports[`Storyshots Layout/Layout Grid No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-container xxx-container--no-gap docs-layout-grid"
 >
   <div
-    className="xxx-container xxx-container--no-gap docs-layout-grid"
+    className="xxx-row"
   >
     <div
-      className="xxx-row"
+      className="xxx-col xxx-col--8 xxx-col-md--8 xxx-col-lg--8 xxx-col-xl--8"
     >
       <div
-        className="xxx-col xxx-col--8 xxx-col-md--8 xxx-col-lg--8 xxx-col-xl--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={8}&gt;
-           
-        </div>
-      </div>
-      <div
-        className="xxx-col xxx-col--4 xxx-col-md--4 xxx-col-lg--4 xxx-col-xl--4"
-      >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={4}&gt;
-           
-        </div>
+         
+        &lt;Column span={8}&gt;
+         
       </div>
     </div>
     <div
-      className="xxx-row"
+      className="xxx-col xxx-col--4 xxx-col-md--4 xxx-col-lg--4 xxx-col-xl--4"
     >
       <div
-        className="xxx-col xxx-col--6 xxx-col-md--6 xxx-col-lg--6 xxx-col-xl--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={6}&gt;
-           
-        </div>
+         
+        &lt;Column span={4}&gt;
+         
       </div>
+    </div>
+  </div>
+  <div
+    className="xxx-row"
+  >
+    <div
+      className="xxx-col xxx-col--6 xxx-col-md--6 xxx-col-lg--6 xxx-col-xl--6"
+    >
       <div
-        className="xxx-col xxx-col--6 xxx-col-md--6 xxx-col-lg--6 xxx-col-xl--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={6}&gt;
-           
-        </div>
+         
+        &lt;Column span={6}&gt;
+         
       </div>
     </div>
     <div
-      className="xxx-row"
+      className="xxx-col xxx-col--6 xxx-col-md--6 xxx-col-lg--6 xxx-col-xl--6"
     >
       <div
-        className="xxx-col xxx-col--4 xxx-col-md--4 xxx-col-lg--4 xxx-col-xl--4"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={4}&gt;
-           
-        </div>
+         
+        &lt;Column span={6}&gt;
+         
       </div>
+    </div>
+  </div>
+  <div
+    className="xxx-row"
+  >
+    <div
+      className="xxx-col xxx-col--4 xxx-col-md--4 xxx-col-lg--4 xxx-col-xl--4"
+    >
       <div
-        className="xxx-col xxx-col--8 xxx-col-md--8 xxx-col-lg--8 xxx-col-xl--8"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-           
-          &lt;Column span={8}&gt;
-           
-        </div>
+         
+        &lt;Column span={4}&gt;
+         
+      </div>
+    </div>
+    <div
+      className="xxx-col xxx-col--8 xxx-col-md--8 xxx-col-lg--8 xxx-col-xl--8"
+    >
+      <div
+        className="col-content"
+      >
+         
+        &lt;Column span={8}&gt;
+         
       </div>
     </div>
   </div>
@@ -667,66 +643,62 @@ exports[`Storyshots Layout/Layout Grid No Styles 1`] = `
 
 exports[`Storyshots Layout/Layout Grid Offsetting 1`] = `
 <div
-  dir="ltr"
+  className="fd-container docs-layout-grid"
 >
   <div
-    className="fd-container docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col-md--offset-2 fd-col-xl--offset-3 docs-col--6"
     >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col-md--offset-2 fd-col-xl--offset-3 docs-col--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Offset Column Element
-        </div>
+        Offset Column Element
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col--offset-6 fd-col-md--offset-6 fd-col-lg--offset-6 fd-col-xl--offset-6 docs-col--6"
+    >
+      <div
+        className="col-content"
+      >
+        Offset Column Element
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 fd-col--offset-after-1 fd-col-md--offset-after-2 fd-col-lg--offset-after-2 fd-col-xl--offset-after-1 docs-col--3"
+    >
+      <div
+        className="col-content"
+      >
+        Offset Column Element
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 fd-col--offset-after-1 docs-col--4"
     >
       <div
-        className="fd-col fd-col--6 fd-col-md--6 fd-col-lg--6 fd-col-xl--6 fd-col--offset-6 fd-col-md--offset-6 fd-col-lg--offset-6 fd-col-xl--offset-6 docs-col--6"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Offset Column Element
-        </div>
+        Offset Column Element
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
     >
       <div
-        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3 fd-col--offset-after-1 fd-col-md--offset-after-2 fd-col-lg--offset-after-2 fd-col-xl--offset-after-1 docs-col--3"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Offset Column Element
-        </div>
-      </div>
-      <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4 fd-col--offset-after-1 docs-col--4"
-      >
-        <div
-          className="col-content"
-        >
-          Offset Column Element
-        </div>
-      </div>
-      <div
-        className="fd-col fd-col--2 fd-col-md--2 fd-col-lg--2 fd-col-xl--2 docs-col--2"
-      >
-        <div
-          className="col-content"
-        >
-          Offset Column Element
-        </div>
+        Offset Column Element
       </div>
     </div>
   </div>
@@ -735,49 +707,45 @@ exports[`Storyshots Layout/Layout Grid Offsetting 1`] = `
 
 exports[`Storyshots Layout/Layout Grid Responsive 1`] = `
 <div
-  dir="ltr"
+  className="fd-container docs-layout-grid"
 >
   <div
-    className="fd-container docs-layout-grid"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-first"
     >
       <div
-        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-first"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
+    >
       <div
-        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-second"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-third"
+    >
       <div
-        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-third"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
+    </div>
+    <div
+      className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-fourth"
+    >
       <div
-        className="fd-col fd-col--6 fd-col-md--4 fd-col-lg--3 fd-col-xl--3 docs-layout-grid-fourth"
+        className="col-content"
       >
-        <div
-          className="col-content"
-        >
-          Column Element
-        </div>
+        Column Element
       </div>
     </div>
   </div>

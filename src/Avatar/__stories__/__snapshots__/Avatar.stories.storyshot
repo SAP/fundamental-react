@@ -2,656 +2,608 @@
 
 exports[`Storyshots Component API/Avatar Accent Colors 1`] = `
 <div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-1"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-2"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-3"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-4"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-5"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-6"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-7"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-8"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--accent-color-9"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--money-bills fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Avatar Background Image 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <span
-      className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
-      role="presentation"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
-    <span
-      className="fd-avatar fd-avatar--s fd-avatar--thumbnail fd-avatar--circle"
-      role="presentation"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--circle"
-      role="presentation"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
-      role="presentation"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
-    <span
-      className="fd-avatar fd-avatar--xl fd-avatar--thumbnail fd-avatar--circle"
-      role="presentation"
-      style={
-        Object {
-          "backgroundImage": "url(./assets/nature.jpg)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Avatar Border 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <span
-      className="fd-avatar fd-avatar--xs fd-avatar--transparent fd-avatar--border"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--s fd-avatar--transparent fd-avatar--border"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--circle fd-avatar--transparent fd-avatar--border"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--circle fd-avatar--transparent fd-avatar--border"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--xl fd-avatar--circle fd-avatar--transparent fd-avatar--border"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Avatar Circle 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <span
-      className="fd-avatar fd-avatar--xs fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--s fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--xl fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Avatar Initials 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <span
-      aria-label="Wendy Wallace"
-      className="fd-avatar fd-avatar--xs"
-      role=""
-    >
-      WW
-    </span>
-    <span
-      aria-label="Wendy Wallace"
-      className="fd-avatar fd-avatar--s"
-      role=""
-    >
-      WW
-    </span>
-    <span
-      aria-label="Wendy Wallace"
-      className="fd-avatar fd-avatar--m"
-      role=""
-    >
-      WW
-    </span>
-    <span
-      aria-label="Wendy Wallace"
-      className="fd-avatar fd-avatar--l"
-      role=""
-    >
-      WW
-    </span>
-    <span
-      aria-label="Wendy Wallace"
-      className="fd-avatar fd-avatar--xl"
-      role=""
-    >
-      WW
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Component API/Avatar No Styles 1`] = `
-<div
-  dir="ltr"
+  className="fddocs-container"
 >
   <span
-    className="xxx-avatar xxx-avatar--m"
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-1"
     role="presentation"
   >
     <i
       aria-hidden={true}
-      className="sap-icon--cart xxx-avatar__icon"
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-2"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-3"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-4"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-5"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-6"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-7"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-8"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--accent-color-9"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--money-bills fd-avatar__icon"
       role="img"
     />
   </span>
 </div>
 `;
 
+exports[`Storyshots Component API/Avatar Background Image 1`] = `
+<div
+  className="fddocs-container"
+>
+  <span
+    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+    role="presentation"
+    style={
+      Object {
+        "backgroundImage": "url(./assets/nature.jpg)",
+      }
+    }
+  />
+  <span
+    className="fd-avatar fd-avatar--s fd-avatar--thumbnail fd-avatar--circle"
+    role="presentation"
+    style={
+      Object {
+        "backgroundImage": "url(./assets/nature.jpg)",
+      }
+    }
+  />
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--thumbnail fd-avatar--circle"
+    role="presentation"
+    style={
+      Object {
+        "backgroundImage": "url(./assets/nature.jpg)",
+      }
+    }
+  />
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--thumbnail fd-avatar--circle"
+    role="presentation"
+    style={
+      Object {
+        "backgroundImage": "url(./assets/nature.jpg)",
+      }
+    }
+  />
+  <span
+    className="fd-avatar fd-avatar--xl fd-avatar--thumbnail fd-avatar--circle"
+    role="presentation"
+    style={
+      Object {
+        "backgroundImage": "url(./assets/nature.jpg)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Component API/Avatar Border 1`] = `
+<div
+  className="fddocs-container"
+>
+  <span
+    className="fd-avatar fd-avatar--xs fd-avatar--transparent fd-avatar--border"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--s fd-avatar--transparent fd-avatar--border"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--circle fd-avatar--transparent fd-avatar--border"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--circle fd-avatar--transparent fd-avatar--border"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--xl fd-avatar--circle fd-avatar--transparent fd-avatar--border"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/Avatar Circle 1`] = `
+<div
+  className="fddocs-container"
+>
+  <span
+    className="fd-avatar fd-avatar--xs fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--s fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--xl fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/Avatar Initials 1`] = `
+<div
+  className="fddocs-container"
+>
+  <span
+    aria-label="Wendy Wallace"
+    className="fd-avatar fd-avatar--xs"
+    role=""
+  >
+    WW
+  </span>
+  <span
+    aria-label="Wendy Wallace"
+    className="fd-avatar fd-avatar--s"
+    role=""
+  >
+    WW
+  </span>
+  <span
+    aria-label="Wendy Wallace"
+    className="fd-avatar fd-avatar--m"
+    role=""
+  >
+    WW
+  </span>
+  <span
+    aria-label="Wendy Wallace"
+    className="fd-avatar fd-avatar--l"
+    role=""
+  >
+    WW
+  </span>
+  <span
+    aria-label="Wendy Wallace"
+    className="fd-avatar fd-avatar--xl"
+    role=""
+  >
+    WW
+  </span>
+</div>
+`;
+
+exports[`Storyshots Component API/Avatar No Styles 1`] = `
+<span
+  className="xxx-avatar xxx-avatar--m"
+  role="presentation"
+>
+  <i
+    aria-hidden={true}
+    className="sap-icon--cart xxx-avatar__icon"
+    role="img"
+  />
+</span>
+`;
+
 exports[`Storyshots Component API/Avatar Placeholder 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-avatar fd-avatar--xs fd-avatar--placeholder fd-avatar--circle"
+    role="presentation"
   >
-    <span
-      className="fd-avatar fd-avatar--xs fd-avatar--placeholder fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--s fd-avatar--placeholder fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--placeholder fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--placeholder fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--xl fd-avatar--placeholder fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--s fd-avatar--placeholder fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--placeholder fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--placeholder fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--xl fd-avatar--placeholder fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Avatar Primary 1`] = `
-<div
-  dir="ltr"
+<span
+  className="fd-avatar fd-avatar--m"
+  role="presentation"
 >
+  <i
+    aria-hidden={true}
+    className="sap-icon--cart fd-avatar__icon"
+    role="img"
+  />
+</span>
+`;
+
+exports[`Storyshots Component API/Avatar Sizes 1`] = `
+<div
+  className="fddocs-container"
+>
+  <span
+    className="fd-avatar fd-avatar--xs"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--s"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
   <span
     className="fd-avatar fd-avatar--m"
     role="presentation"
   >
     <i
       aria-hidden={true}
-      className="sap-icon--cart fd-avatar__icon"
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--xl"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
       role="img"
     />
   </span>
 </div>
 `;
 
-exports[`Storyshots Component API/Avatar Sizes 1`] = `
-<div
-  dir="ltr"
->
-  <div
-    className="fddocs-container"
-  >
-    <span
-      className="fd-avatar fd-avatar--xs"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--s"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--xl"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Component API/Avatar Tile 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-avatar fd-avatar--xs fd-avatar--tile fd-avatar--circle"
+    role="presentation"
   >
-    <span
-      className="fd-avatar fd-avatar--xs fd-avatar--tile fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--s fd-avatar--tile fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--tile fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--tile fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--xl fd-avatar--tile fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--s fd-avatar--tile fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--tile fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--tile fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--xl fd-avatar--tile fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Avatar Transparent 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    aria-label="Wendy Wallace"
+    className="fd-avatar fd-avatar--m fd-avatar--transparent"
+    role=""
   >
-    <span
-      aria-label="Wendy Wallace"
-      className="fd-avatar fd-avatar--m fd-avatar--transparent"
-      role=""
-    >
-      WW
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--transparent"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-    </span>
-  </div>
+    WW
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--transparent"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Avatar Zoom 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-avatar fd-avatar--xs fd-avatar--circle"
+    role="presentation"
   >
-    <span
-      className="fd-avatar fd-avatar--xs fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-      <i
-        aria-label="Edit"
-        className="sap-icon--edit fd-avatar__zoom-icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--s fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-      <i
-        aria-label="Edit"
-        className="sap-icon--edit fd-avatar__zoom-icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--m fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-      <i
-        aria-label="Edit"
-        className="sap-icon--edit fd-avatar__zoom-icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--l fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-      <i
-        aria-label="Edit"
-        className="sap-icon--edit fd-avatar__zoom-icon"
-        role="img"
-      />
-    </span>
-    <span
-      className="fd-avatar fd-avatar--xl fd-avatar--circle"
-      role="presentation"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--washing-machine fd-avatar__icon"
-        role="img"
-      />
-      <i
-        aria-label="Edit"
-        className="sap-icon--edit fd-avatar__zoom-icon"
-        role="img"
-      />
-    </span>
-  </div>
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+    <i
+      aria-label="Edit"
+      className="sap-icon--edit fd-avatar__zoom-icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--s fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+    <i
+      aria-label="Edit"
+      className="sap-icon--edit fd-avatar__zoom-icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--m fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+    <i
+      aria-label="Edit"
+      className="sap-icon--edit fd-avatar__zoom-icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--l fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+    <i
+      aria-label="Edit"
+      className="sap-icon--edit fd-avatar__zoom-icon"
+      role="img"
+    />
+  </span>
+  <span
+    className="fd-avatar fd-avatar--xl fd-avatar--circle"
+    role="presentation"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--washing-machine fd-avatar__icon"
+      role="img"
+    />
+    <i
+      aria-label="Edit"
+      className="sap-icon--edit fd-avatar__zoom-icon"
+      role="img"
+    />
+  </span>
 </div>
 `;

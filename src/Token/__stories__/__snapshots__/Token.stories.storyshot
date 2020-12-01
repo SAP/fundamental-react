@@ -1,121 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/Token Compact 1`] = `
-<div
-  dir="ltr"
+<span
+  className="fd-token fd-token--compact"
+  role="button"
+  tabIndex="0"
 >
   <span
-    className="fd-token fd-token--compact"
-    role="button"
-    tabIndex="0"
+    className="fd-token__text"
   >
-    <span
-      className="fd-token__text"
-    >
-      Compact
-    </span>
-    <button
-      aria-label="Clear"
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
+    Compact
   </span>
-</div>
+  <button
+    aria-label="Clear"
+    className="fd-token__close"
+    onClick={[Function]}
+    tabIndex="-1"
+  />
+</span>
 `;
 
 exports[`Storyshots Component API/Token Dev 1`] = `
-<div
-  dir="ltr"
+<span
+  className="fd-token"
+  role="button"
+  tabIndex="0"
 >
   <span
-    className="fd-token"
-    role="button"
-    tabIndex="0"
+    className="fd-token__text"
   >
-    <span
-      className="fd-token__text"
-    >
-      Dev
-    </span>
-    <button
-      aria-label="Clear"
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
+    Dev
   </span>
-</div>
+  <button
+    aria-label="Clear"
+    className="fd-token__close"
+    onClick={[Function]}
+    tabIndex="-1"
+  />
+</span>
 `;
 
 exports[`Storyshots Component API/Token No Styles 1`] = `
-<div
-  dir="ltr"
+<span
+  className="xxx-token"
+  role="button"
+  tabIndex="0"
 >
   <span
-    className="xxx-token"
-    role="button"
-    tabIndex="0"
+    className="xxx-token__text"
   >
-    <span
-      className="xxx-token__text"
-    >
-      Default
-    </span>
-    <button
-      aria-label="Clear"
-      className="xxx-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
+    Default
   </span>
-</div>
+  <button
+    aria-label="Clear"
+    className="xxx-token__close"
+    onClick={[Function]}
+    tabIndex="-1"
+  />
+</span>
 `;
 
 exports[`Storyshots Component API/Token Primary 1`] = `
-<div
-  dir="ltr"
+<span
+  className="fd-token"
+  role="button"
+  tabIndex="0"
 >
   <span
-    className="fd-token"
-    role="button"
-    tabIndex="0"
+    className="fd-token__text"
   >
-    <span
-      className="fd-token__text"
-    >
-      Default
-    </span>
-    <button
-      aria-label="Clear"
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
+    Default
   </span>
-</div>
+  <button
+    aria-label="Clear"
+    className="fd-token__close"
+    onClick={[Function]}
+    tabIndex="-1"
+  />
+</span>
 `;
 
 exports[`Storyshots Component API/Token Read Only 1`] = `
-<div
-  dir="ltr"
+<span
+  className="fd-token fd-token--readonly"
+  role="button"
+  tabIndex="0"
 >
   <span
-    className="fd-token fd-token--readonly"
-    role="button"
-    tabIndex="0"
+    className="fd-token__text"
   >
-    <span
-      className="fd-token__text"
-    >
-      Read Only
-    </span>
-    <button
-      aria-label="Clear"
-      className="fd-token__close"
-      onClick={[Function]}
-      tabIndex="-1"
-    />
+    Read Only
   </span>
-</div>
+  <button
+    aria-label="Clear"
+    className="fd-token__close"
+    onClick={[Function]}
+    tabIndex="-1"
+  />
+</span>
 `;

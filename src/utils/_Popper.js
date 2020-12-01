@@ -7,7 +7,7 @@ import PopperContainer from './_PopperContainer';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Manager, Popper as ReactPopper, Reference } from 'react-popper-2';
+import { Manager, Popper as ReactPopper, Reference } from 'react-popper';
 import { POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from './constants';
 import popoverStyles from 'fundamental-styles/dist/popover.css';
 

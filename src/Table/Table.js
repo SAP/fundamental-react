@@ -239,6 +239,7 @@ const Table = React.forwardRef(({ headers, tableData, className, compact, conden
                         <tr
                             className={tableRowClasses}
                             {...rowProps}
+                            /* eslint-disable jsx-a11y/aria-proptypes */
                             aria-selected={selection?.isSelected(index)}
                             key={index}
                             onClick={(event) => {

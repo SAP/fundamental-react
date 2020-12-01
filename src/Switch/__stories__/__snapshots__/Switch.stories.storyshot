@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/Switch Checked 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -37,20 +35,18 @@ exports[`Storyshots Component API/Switch Checked 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch Compact 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -78,20 +74,18 @@ exports[`Storyshots Component API/Switch Compact 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch Dev 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -130,20 +124,18 @@ exports[`Storyshots Component API/Switch Dev 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch Disabled 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label is-disabled"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -172,20 +164,18 @@ exports[`Storyshots Component API/Switch Disabled 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch Internal Labels 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Show Internal Labels
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -229,13 +219,13 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         </div>
       </div>
     </span>
-  </label>
+  </label>,
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Show Internal Labels and Icons
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -279,20 +269,18 @@ exports[`Storyshots Component API/Switch Internal Labels 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch No Styles 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="xxx-form-label"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="xxx-switch__label"
   >
@@ -320,20 +308,18 @@ exports[`Storyshots Component API/Switch No Styles 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch Primary 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -361,20 +347,18 @@ exports[`Storyshots Component API/Switch Primary 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch Semantic 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -402,20 +386,18 @@ exports[`Storyshots Component API/Switch Semantic 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch With Icons 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
   >
     Switch label
-  </label>
+  </label>,
   <label
     className="fd-switch__label"
   >
@@ -453,18 +435,16 @@ exports[`Storyshots Component API/Switch With Icons 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;
 
 exports[`Storyshots Component API/Switch With No Label 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     onKeyDown={[Function]}
-  />
+  />,
   <label
     className="fd-switch__label"
   >
@@ -492,6 +472,6 @@ exports[`Storyshots Component API/Switch With No Label 1`] = `
         </div>
       </div>
     </span>
-  </label>
-</div>
+  </label>,
+]
 `;

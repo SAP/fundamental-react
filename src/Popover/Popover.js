@@ -3,11 +3,11 @@ import classnamesBind from 'classnames/bind';
 import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import { findDOMNode } from 'react-dom';
 import FocusManager from '../utils/focusManager/focusManager';
+import { isFocusable } from 'tabbable';
 import keycode from 'keycode';
 import Popper from '../utils/_Popper';
 import PropTypes from 'prop-types';
 import shortId from '../utils/shortId';
-import tabbable from 'tabbable';
 import withStyles from '../utils/withStyles';
 import { GridSelector, POPOVER_TYPES, POPPER_PLACEMENTS, POPPER_SIZING_TYPES } from '../utils/constants';
 import React, { Component } from 'react';
@@ -73,7 +73,7 @@ class Popover extends Component {
         this.handleOutsideClick();
 
         if (this.controlRef) {
-            if (tabbable.isFocusable(this.controlRef)) {
+            if (isFocusable(this.controlRef)) {
                 this.controlRef.focus();
             } else {
                 const firstTabbableNode = this.controlRef.querySelectorAll(GridSelector.FOCUSABLE)[0];

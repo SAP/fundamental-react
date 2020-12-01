@@ -2,141 +2,117 @@
 
 exports[`Storyshots Component API/Forms/FormLabel Dev 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <label
+    aria-required={true}
+    className="fd-form-label fd-form-label--required"
+    htmlFor="devLabelExample"
   >
-    <label
-      aria-required={true}
-      className="fd-form-label fd-form-label--required"
-      htmlFor="devLabelExample"
-    >
-      Dev
-    </label>
-    <input
-      className="fd-input"
-      id="devLabelExample"
-      type="text"
-    />
-  </div>
+    Dev
+  </label>
+  <input
+    className="fd-input"
+    id="devLabelExample"
+    type="text"
+  />
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/FormLabel Disabled 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <label
+    className="fd-form-label is-disabled"
   >
-    <label
-      className="fd-form-label is-disabled"
-    >
-      Disabled Label
-    </label>
-    <input
-      className="fd-input"
-      disabled={true}
-      type="text"
-    />
-  </div>
+    Disabled Label
+  </label>
+  <input
+    className="fd-input"
+    disabled={true}
+    type="text"
+  />
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/FormLabel Include Colon 1`] = `
 <div
-  dir="ltr"
+  style={
+    Object {
+      "maxWidth": "250px",
+    }
+  }
 >
   <div
-    style={
-      Object {
-        "maxWidth": "250px",
-      }
-    }
+    className="fd-form-item"
   >
-    <div
-      className="fd-form-item"
+    <label
+      className="fd-form-label fd-form-label--colon"
+      htmlFor="includeColonLabelExample"
     >
-      <label
-        className="fd-form-label fd-form-label--colon"
-        htmlFor="includeColonLabelExample"
-      >
-        Overflow proof colon, overflow proof colon, overflow proof colon
-      </label>
-      <input
-        className="fd-input"
-        id="includeColonLabelExample"
-        type="text"
-      />
-    </div>
+      Overflow proof colon, overflow proof colon, overflow proof colon
+    </label>
+    <input
+      className="fd-input"
+      id="includeColonLabelExample"
+      type="text"
+    />
   </div>
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/FormLabel No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-form-item"
 >
-  <div
-    className="xxx-form-item"
+  <label
+    className="xxx-form-label"
+    htmlFor="primaryLabelExample"
   >
-    <label
-      className="xxx-form-label"
-      htmlFor="primaryLabelExample"
-    >
-      Default Label
-    </label>
-    <input
-      className="xxx-input"
-      id="primaryLabelExample"
-      type="text"
-    />
-  </div>
+    Default Label
+  </label>
+  <input
+    className="xxx-input"
+    id="primaryLabelExample"
+    type="text"
+  />
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/FormLabel Primary 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <label
+    className="fd-form-label"
+    htmlFor="primaryLabelExample"
   >
-    <label
-      className="fd-form-label"
-      htmlFor="primaryLabelExample"
-    >
-      Default Label
-    </label>
-    <input
-      className="fd-input"
-      id="primaryLabelExample"
-      type="text"
-    />
-  </div>
+    Default Label
+  </label>
+  <input
+    className="fd-input"
+    id="primaryLabelExample"
+    type="text"
+  />
 </div>
 `;
 
 exports[`Storyshots Component API/Forms/FormLabel Required 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-item"
 >
-  <div
-    className="fd-form-item"
+  <label
+    aria-required={true}
+    className="fd-form-label fd-form-label--required"
+    htmlFor="requiredLabelExample"
   >
-    <label
-      aria-required={true}
-      className="fd-form-label fd-form-label--required"
-      htmlFor="requiredLabelExample"
-    >
-      Required Label
-    </label>
-    <input
-      className="fd-input"
-      id="requiredLabelExample"
-      type="text"
-    />
-  </div>
+    Required Label
+  </label>
+  <input
+    className="fd-input"
+    id="requiredLabelExample"
+    type="text"
+  />
 </div>
 `;

@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 import Popover from './Popover';
 import Popper from '../utils/_Popper';
 import React from 'react';
-import { Popper as ReactPopper } from 'react-popper-2';
+import { Popper as ReactPopper } from 'react-popper';
 
 describe('<Popover />', () => {
     const popOver = (

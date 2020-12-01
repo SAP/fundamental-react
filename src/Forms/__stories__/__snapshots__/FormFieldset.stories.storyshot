@@ -1,85 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/Forms/FormFieldset No Styles 1`] = `
-<div
-  dir="ltr"
+<fieldset
+  className="xxx-fieldset"
 >
-  <fieldset
-    className="xxx-fieldset"
+  <legend
+    className="xxx-fieldset__legend"
   >
-    <legend
-      className="xxx-fieldset__legend"
+    Shipping Address
+  </legend>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      htmlFor="ex01"
     >
-      Shipping Address
-    </legend>
-    <div
-      className="xxx-form-item"
+      Name:
+    </label>
+    <input
+      className="xxx-input"
+      id="ex01"
+      type="text"
+    />
+  </div>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      htmlFor="ex02"
     >
-      <label
-        className="xxx-form-label"
-        htmlFor="ex01"
-      >
-        Name:
-      </label>
-      <input
-        className="xxx-input"
-        id="ex01"
-        type="text"
-      />
-    </div>
-    <div
-      className="xxx-form-item"
+      Street:
+    </label>
+    <input
+      className="xxx-input"
+      id="ex02"
+      type="text"
+    />
+  </div>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      htmlFor="ex03"
     >
-      <label
-        className="xxx-form-label"
-        htmlFor="ex02"
-      >
-        Street:
-      </label>
-      <input
-        className="xxx-input"
-        id="ex02"
-        type="text"
-      />
-    </div>
-    <div
-      className="xxx-form-item"
+      City:
+    </label>
+    <input
+      className="xxx-input"
+      id="ex03"
+      type="text"
+    />
+  </div>
+  <div
+    className="xxx-form-item"
+  >
+    <label
+      className="xxx-form-label"
+      htmlFor="ex04"
     >
-      <label
-        className="xxx-form-label"
-        htmlFor="ex03"
-      >
-        City:
-      </label>
-      <input
-        className="xxx-input"
-        id="ex03"
-        type="text"
-      />
-    </div>
-    <div
-      className="xxx-form-item"
-    >
-      <label
-        className="xxx-form-label"
-        htmlFor="ex04"
-      >
-        ZIP code:
-      </label>
-      <input
-        className="xxx-input"
-        id="ex04"
-        type="text"
-      />
-    </div>
-  </fieldset>
-</div>
+      ZIP code:
+    </label>
+    <input
+      className="xxx-input"
+      id="ex04"
+      type="text"
+    />
+  </div>
+</fieldset>
 `;
 
 exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <fieldset
     className="fd-fieldset"
   >
@@ -148,7 +142,7 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
         type="text"
       />
     </div>
-  </fieldset>
+  </fieldset>,
   <fieldset
     className="fd-fieldset"
   >
@@ -217,14 +211,12 @@ exports[`Storyshots Component API/Forms/FormFieldset Primary 1`] = `
         type="text"
       />
     </div>
-  </fieldset>
-</div>
+  </fieldset>,
+]
 `;
 
 exports[`Storyshots Component API/Forms/FormFieldset Radio Button Groups 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <fieldset
     className="fd-fieldset"
   >
@@ -288,7 +280,7 @@ exports[`Storyshots Component API/Forms/FormFieldset Radio Button Groups 1`] = `
         </label>
       </div>
     </div>
-  </fieldset>
+  </fieldset>,
   <fieldset
     className="fd-fieldset"
   >
@@ -355,7 +347,7 @@ exports[`Storyshots Component API/Forms/FormFieldset Radio Button Groups 1`] = `
         </label>
       </div>
     </div>
-  </fieldset>
+  </fieldset>,
   <fieldset
     className="fd-fieldset"
   >
@@ -419,7 +411,7 @@ exports[`Storyshots Component API/Forms/FormFieldset Radio Button Groups 1`] = `
         </label>
       </div>
     </div>
-  </fieldset>
+  </fieldset>,
   <fieldset
     className="fd-fieldset"
   >
@@ -483,6 +475,6 @@ exports[`Storyshots Component API/Forms/FormFieldset Radio Button Groups 1`] = `
         </label>
       </div>
     </div>
-  </fieldset>
-</div>
+  </fieldset>,
+]
 `;

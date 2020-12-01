@@ -1,7 +1,6 @@
 import fundamentals from './custom/fundamentals';
 import React from 'react';
 import { withCssResources } from '@storybook/addon-cssresources';
-import { withI18n } from 'storybook-addon-i18n';
 import { withKnobs } from '@storybook/addon-knobs';
 import { DocsContainer } from '@storybook/addon-docs/blocks';
 import DocsPage from './custom/components/DocsPage';
@@ -47,16 +46,9 @@ addParameters({
     docs: {
         container: DocsContainer,
         page: DocsPage,
-        theme: fundamentals,
-    },
-    i18n: {
-        provider: ({ children }) => <>{children}</>,
-        supportedLocales: ['LTR', 'RTL'],
-        providerLocaleKey: 'locale',
-        getDirection: locale => locale.toLowerCase()
+        theme: fundamentals
     }
 });
 
-addDecorator(withI18n);
 addDecorator(withCssResources);
 addDecorator(withKnobs);

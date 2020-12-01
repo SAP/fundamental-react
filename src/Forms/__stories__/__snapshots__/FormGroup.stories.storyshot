@@ -2,54 +2,50 @@
 
 exports[`Storyshots Component API/Forms/FormGroup No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-form-group"
 >
-  <div
-    className="xxx-form-group"
+  <label
+    className="xxx-form-label"
   >
-    <label
-      className="xxx-form-label"
-    >
-      InputGroup inside FormGroup
-    </label>
+    InputGroup inside FormGroup
+  </label>
+  <div
+    className="xxx-form-item"
+  >
     <div
-      className="xxx-form-item"
+      className="xxx-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
-        className="xxx-popover"
-        onBlur={[Function]}
         onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          onFocus={[Function]}
-          onMouseDown={[Function]}
-          onTouchStart={[Function]}
+          className="xxx-popover__control"
         >
           <div
-            className="xxx-popover__control"
+            className="xxx-input-group"
           >
-            <div
-              className="xxx-input-group"
+            <span
+              className="xxx-input-group__addon xxx-input-group__addon--button"
             >
-              <span
-                className="xxx-input-group__addon xxx-input-group__addon--button"
+              <button
+                className="xxx-button xxx-button--transparent xxx-input-group__button"
+                type="button"
               >
-                <button
-                  className="xxx-button xxx-button--transparent xxx-input-group__button"
-                  type="button"
-                >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--accept"
-                    role="img"
-                  />
-                </button>
-              </span>
-              <input
-                className="xxx-input xxx-input-group__input"
-                type="text"
-              />
-            </div>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--accept"
+                  role="img"
+                />
+              </button>
+            </span>
+            <input
+              className="xxx-input xxx-input-group__input"
+              type="text"
+            />
           </div>
         </div>
       </div>
@@ -60,54 +56,50 @@ exports[`Storyshots Component API/Forms/FormGroup No Styles 1`] = `
 
 exports[`Storyshots Component API/Forms/FormGroup Primary 1`] = `
 <div
-  dir="ltr"
+  className="fd-form-group"
 >
-  <div
-    className="fd-form-group"
+  <label
+    className="fd-form-label"
   >
-    <label
-      className="fd-form-label"
-    >
-      InputGroup inside FormGroup
-    </label>
+    InputGroup inside FormGroup
+  </label>
+  <div
+    className="fd-form-item"
+  >
     <div
-      className="fd-form-item"
+      className="fd-popover"
+      onBlur={[Function]}
+      onFocus={[Function]}
     >
       <div
-        className="fd-popover"
-        onBlur={[Function]}
         onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          onFocus={[Function]}
-          onMouseDown={[Function]}
-          onTouchStart={[Function]}
+          className="fd-popover__control"
         >
           <div
-            className="fd-popover__control"
+            className="fd-input-group"
           >
-            <div
-              className="fd-input-group"
+            <span
+              className="fd-input-group__addon fd-input-group__addon--button"
             >
-              <span
-                className="fd-input-group__addon fd-input-group__addon--button"
+              <button
+                className="fd-button fd-button--transparent fd-input-group__button"
+                type="button"
               >
-                <button
-                  className="fd-button fd-button--transparent fd-input-group__button"
-                  type="button"
-                >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--accept"
-                    role="img"
-                  />
-                </button>
-              </span>
-              <input
-                className="fd-input fd-input-group__input"
-                type="text"
-              />
-            </div>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--accept"
+                  role="img"
+                />
+              </button>
+            </span>
+            <input
+              className="fd-input fd-input-group__input"
+              type="text"
+            />
           </div>
         </div>
       </div>
@@ -117,9 +109,7 @@ exports[`Storyshots Component API/Forms/FormGroup Primary 1`] = `
 `;
 
 exports[`Storyshots Component API/Forms/FormGroup With Form Input 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fd-form-group"
   >
@@ -139,7 +129,7 @@ exports[`Storyshots Component API/Forms/FormGroup With Form Input 1`] = `
         type="text"
       />
     </div>
-  </div>
+  </div>,
   <div
     className="fd-form-group"
   >
@@ -160,7 +150,7 @@ exports[`Storyshots Component API/Forms/FormGroup With Form Input 1`] = `
         type="text"
       />
     </div>
-  </div>
+  </div>,
   <div
     className="fd-form-group"
   >
@@ -181,14 +171,12 @@ exports[`Storyshots Component API/Forms/FormGroup With Form Input 1`] = `
         type="password"
       />
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Forms/FormGroup With Form Textarea 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fd-form-group"
   >
@@ -209,7 +197,7 @@ exports[`Storyshots Component API/Forms/FormGroup With Form Textarea 1`] = `
         onChange={[Function]}
       />
     </div>
-  </div>
+  </div>,
   <div
     className="fd-form-group"
   >
@@ -234,6 +222,6 @@ exports[`Storyshots Component API/Forms/FormGroup With Form Textarea 1`] = `
         150 characters left
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;

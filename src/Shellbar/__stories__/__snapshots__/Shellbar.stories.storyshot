@@ -2,66 +2,62 @@
 
 exports[`Storyshots Component API/Shellbar Basic 1`] = `
 <div
-  dir="ltr"
+  className="fd-shellbar fd-shellbar--l"
 >
   <div
-    className="fd-shellbar fd-shellbar--l"
+    className="fd-shellbar__group fd-shellbar__group--product"
+  >
+    <span
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <span
+      className="fd-shellbar__title"
+    >
+      Corporate Portal
+    </span>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--actions"
   >
     <div
-      className="fd-shellbar__group fd-shellbar__group--product"
-    >
-      <span
-        className="fd-shellbar__logo"
-      >
-        <img
-          alt="SAP"
-          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
-        />
-      </span>
-      <span
-        className="fd-shellbar__title"
-      >
-        Corporate Portal
-      </span>
-    </div>
-    <div
-      className="fd-shellbar__group fd-shellbar__group--actions"
+      className="fd-shellbar__action fd-shellbar__action--show-always"
     >
       <div
-        className="fd-shellbar__action fd-shellbar__action--show-always"
+        className="fd-user-menu"
       >
         <div
-          className="fd-user-menu"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
-              <div
-                className="fd-popover__control"
+              <button
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
               >
-                <button
-                  aria-controls="fd-shellbar-profile-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
+                  role=""
                 >
-                  <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
-                    role=""
-                  >
-                    JS
-                  </span>
-                </button>
-              </div>
+                  JS
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -73,22 +69,145 @@ exports[`Storyshots Component API/Shellbar Basic 1`] = `
 
 exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
 <div
-  dir="ltr"
+  className="fd-shellbar fd-shellbar--l"
 >
   <div
-    className="fd-shellbar fd-shellbar--l"
+    className="fd-shellbar__group fd-shellbar__group--product"
+  >
+    <span
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <button
+            aria-controls="fd-shellbar-product-popover"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="fd-button__text fd-shellbar__title"
+            >
+              Corporate Portal
+            </span>
+            <i
+              aria-hidden={true}
+              className="sap-icon--megamenu fd-shellbar__button--icon"
+              role="img"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-shellbar__subtitle"
+    >
+      Subtitle
+    </div>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--copilot"
+  >
+    <img
+      alt="CoPilot"
+      height="30"
+      src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
+      width="30"
+    />
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--actions"
   >
     <div
-      className="fd-shellbar__group fd-shellbar__group--product"
+      className="fd-shellbar__action fd-shellbar__action--desktop"
     >
-      <span
-        className="fd-shellbar__logo"
+      <div
+        className="fd-shellbar__input-group"
       >
-        <img
-          alt="SAP"
-          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
-        />
-      </span>
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    className="fd-popover__control"
+                  >
+                    <div
+                      className="fd-shellbar__input-group fd-input-group"
+                      onClick={[Function]}
+                    >
+                      <input
+                        className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Search"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Search"
+                          className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--search"
+                            role="img"
+                          />
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--desktop"
+    >
       <div
         className="fd-popover"
       >
@@ -101,163 +220,86 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
             className="fd-popover__control"
           >
             <button
-              aria-controls="fd-shellbar-product-popover"
+              aria-controls="fd-shellbar-actions-popover-0"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+              aria-label="Settings"
+              className="fd-button fd-shellbar__button"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
               type="button"
             >
-              <span
-                className="fd-button__text fd-shellbar__title"
-              >
-                Corporate Portal
-              </span>
               <i
                 aria-hidden={true}
-                className="sap-icon--megamenu fd-shellbar__button--icon"
+                className="sap-icon--settings"
                 role="img"
               />
+              <span
+                className="fd-button__text"
+              >
+                <span
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
+                >
+                  5
+                </span>
+              </span>
             </button>
           </div>
         </div>
       </div>
-      <div
-        className="fd-shellbar__subtitle"
-      >
-        Subtitle
-      </div>
     </div>
     <div
-      className="fd-shellbar__group fd-shellbar__group--copilot"
-    >
-      <img
-        alt="CoPilot"
-        height="30"
-        src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
-        width="30"
-      />
-    </div>
-    <div
-      className="fd-shellbar__group fd-shellbar__group--actions"
+      className="fd-popover"
     >
       <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-shellbar__input-group"
+          className="fd-popover__control"
         >
           <div
-            className="fd-popover"
+            aria-controls="fd-shellbar-notifications-popover"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-shellbar__action fd-shellbar__action--desktop"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
           >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+            <button
+              aria-label="Notifications"
+              className="fd-button fd-shellbar__button"
+              type="button"
             >
-              <div
-                className="fd-popover__control"
+              <i
+                aria-hidden={true}
+                className="sap-icon--bell"
+                role="img"
+              />
+              <span
+                className="fd-button__text"
               >
-                <div
-                  className="fd-popover"
-                  onBlur={[Function]}
-                  onFocus={[Function]}
-                >
-                  <div
-                    onFocus={[Function]}
-                    onMouseDown={[Function]}
-                    onTouchStart={[Function]}
-                  >
-                    <div
-                      className="fd-popover__control"
-                    >
-                      <div
-                        className="fd-shellbar__input-group fd-input-group"
-                        onClick={[Function]}
-                      >
-                        <input
-                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Search"
-                          type="text"
-                          value=""
-                        />
-                        <span
-                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
-                        >
-                          <button
-                            aria-label="Search"
-                            className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
-                            onClick={[Function]}
-                            type="button"
-                          >
-                            <i
-                              aria-hidden={true}
-                              className="sap-icon--search"
-                              role="img"
-                            />
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
-      >
-        <div
-          className="fd-popover"
-        >
-          <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
-          >
-            <div
-              className="fd-popover__control"
-            >
-              <button
-                aria-controls="fd-shellbar-actions-popover-0"
-                aria-expanded={false}
-                aria-haspopup={true}
-                aria-label="Settings"
-                className="fd-button fd-shellbar__button"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
-              >
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--settings"
-                  role="img"
-                />
                 <span
-                  className="fd-button__text"
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification"
                 >
-                  <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
-                  >
-                    5
-                  </span>
+                  2
                 </span>
-              </button>
-            </div>
+              </span>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--mobile"
+    >
       <div
         className="fd-popover"
       >
@@ -270,23 +312,22 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-shellbar-notifications-popover"
+              aria-controls="fd-shellbar-mobile-action-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-shellbar__action fd-shellbar__action--desktop"
+              className="fd-shellbar-collapse--control"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
             >
               <button
-                aria-label="Notifications"
                 className="fd-button fd-shellbar__button"
                 type="button"
               >
                 <i
                   aria-hidden={true}
-                  className="sap-icon--bell"
+                  className="sap-icon--overflow"
                   role="img"
                 />
                 <span
@@ -296,7 +337,9 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                     aria-label="Unread count"
                     className="fd-counter fd-counter--notification"
                   >
-                    2
+                     
+                    7
+                     
                   </span>
                 </span>
               </button>
@@ -304,8 +347,12 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--show-always"
+    >
       <div
-        className="fd-shellbar__action fd-shellbar__action--mobile"
+        className="fd-user-menu"
       >
         <div
           className="fd-popover"
@@ -318,118 +365,63 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
             <div
               className="fd-popover__control"
             >
-              <div
-                aria-controls="fd-shellbar-mobile-action-popover"
+              <button
+                aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-shellbar-collapse--control"
+                className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                <button
-                  className="fd-button fd-shellbar__button"
-                  type="button"
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
+                  role=""
                 >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--overflow"
-                    role="img"
-                  />
-                  <span
-                    className="fd-button__text"
-                  >
-                    <span
-                      aria-label="Unread count"
-                      className="fd-counter fd-counter--notification"
-                    >
-                       
-                      7
-                       
-                    </span>
-                  </span>
-                </button>
-              </div>
+                  JS
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--desktop"
+    >
       <div
-        className="fd-shellbar__action fd-shellbar__action--show-always"
+        className="fd-product-switch"
       >
         <div
-          className="fd-user-menu"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
-              <div
-                className="fd-popover__control"
+              <button
+                aria-controls="fd-shellbar-product-switch-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                aria-label="Product Switch"
+                className="fd-button fd-product-switch__control fd-shellbar__button"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+                type="button"
               >
-                <button
-                  aria-controls="fd-shellbar-profile-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
-                    role=""
-                  >
-                    JS
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
-      >
-        <div
-          className="fd-product-switch"
-        >
-          <div
-            className="fd-popover"
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <button
-                  aria-controls="fd-shellbar-product-switch-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  aria-label="Product Switch"
-                  className="fd-button fd-product-switch__control fd-shellbar__button"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
-                  type="button"
-                >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--grid"
-                    role="img"
-                  />
-                </button>
-              </div>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--grid"
+                  role="img"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -441,22 +433,145 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
 
 exports[`Storyshots Component API/Shellbar Dev 1`] = `
 <div
-  dir="ltr"
+  className="fd-shellbar fd-shellbar--s"
 >
   <div
-    className="fd-shellbar fd-shellbar--s"
+    className="fd-shellbar__group fd-shellbar__group--product"
+  >
+    <span
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <div
+      className="fd-popover"
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <button
+            aria-controls="fd-shellbar-product-popover"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="fd-button__text fd-shellbar__title"
+            >
+              Corporate Portal
+            </span>
+            <i
+              aria-hidden={true}
+              className="sap-icon--megamenu fd-shellbar__button--icon"
+              role="img"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-shellbar__subtitle"
+    >
+      Subtitle
+    </div>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--copilot"
+  >
+    <img
+      alt="CoPilot"
+      height="30"
+      src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
+      width="30"
+    />
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--actions"
   >
     <div
-      className="fd-shellbar__group fd-shellbar__group--product"
+      className="fd-shellbar__action fd-shellbar__action--desktop"
     >
-      <span
-        className="fd-shellbar__logo"
+      <div
+        className="fd-shellbar__input-group"
       >
-        <img
-          alt="SAP"
-          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
-        />
-      </span>
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <div
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
+                >
+                  <div
+                    className="fd-popover__control"
+                  >
+                    <div
+                      className="fd-shellbar__input-group fd-input-group"
+                      onClick={[Function]}
+                    >
+                      <input
+                        className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Search"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Search"
+                          className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--search"
+                            role="img"
+                          />
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--desktop"
+    >
       <div
         className="fd-popover"
       >
@@ -469,163 +584,86 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
             className="fd-popover__control"
           >
             <button
-              aria-controls="fd-shellbar-product-popover"
+              aria-controls="fd-shellbar-actions-popover-0"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+              aria-label="Settings"
+              className="fd-button fd-shellbar__button"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
               type="button"
             >
-              <span
-                className="fd-button__text fd-shellbar__title"
-              >
-                Corporate Portal
-              </span>
               <i
                 aria-hidden={true}
-                className="sap-icon--megamenu fd-shellbar__button--icon"
+                className="sap-icon--settings"
                 role="img"
               />
+              <span
+                className="fd-button__text"
+              >
+                <span
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
+                >
+                  5
+                </span>
+              </span>
             </button>
           </div>
         </div>
       </div>
-      <div
-        className="fd-shellbar__subtitle"
-      >
-        Subtitle
-      </div>
     </div>
     <div
-      className="fd-shellbar__group fd-shellbar__group--copilot"
-    >
-      <img
-        alt="CoPilot"
-        height="30"
-        src="//unpkg.com/fundamental-styles/dist/images/copilot.png"
-        width="30"
-      />
-    </div>
-    <div
-      className="fd-shellbar__group fd-shellbar__group--actions"
+      className="fd-popover"
     >
       <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-shellbar__input-group"
+          className="fd-popover__control"
         >
           <div
-            className="fd-popover"
+            aria-controls="fd-shellbar-notifications-popover"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-shellbar__action fd-shellbar__action--desktop"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
           >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+            <button
+              aria-label="Notifications"
+              className="fd-button fd-shellbar__button"
+              type="button"
             >
-              <div
-                className="fd-popover__control"
+              <i
+                aria-hidden={true}
+                className="sap-icon--bell"
+                role="img"
+              />
+              <span
+                className="fd-button__text"
               >
-                <div
-                  className="fd-popover"
-                  onBlur={[Function]}
-                  onFocus={[Function]}
-                >
-                  <div
-                    onFocus={[Function]}
-                    onMouseDown={[Function]}
-                    onTouchStart={[Function]}
-                  >
-                    <div
-                      className="fd-popover__control"
-                    >
-                      <div
-                        className="fd-shellbar__input-group fd-input-group"
-                        onClick={[Function]}
-                      >
-                        <input
-                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Search"
-                          type="text"
-                          value=""
-                        />
-                        <span
-                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
-                        >
-                          <button
-                            aria-label="Search"
-                            className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
-                            onClick={[Function]}
-                            type="button"
-                          >
-                            <i
-                              aria-hidden={true}
-                              className="sap-icon--search"
-                              role="img"
-                            />
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
-      >
-        <div
-          className="fd-popover"
-        >
-          <div
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            onTouchStart={[Function]}
-          >
-            <div
-              className="fd-popover__control"
-            >
-              <button
-                aria-controls="fd-shellbar-actions-popover-0"
-                aria-expanded={false}
-                aria-haspopup={true}
-                aria-label="Settings"
-                className="fd-button fd-shellbar__button"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
-                type="button"
-              >
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--settings"
-                  role="img"
-                />
                 <span
-                  className="fd-button__text"
+                  aria-label="Unread count"
+                  className="fd-counter fd-counter--notification"
                 >
-                  <span
-                    aria-label="Unread count"
-                    className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
-                  >
-                    5
-                  </span>
+                  2
                 </span>
-              </button>
-            </div>
+              </span>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--mobile"
+    >
       <div
         className="fd-popover"
       >
@@ -638,23 +676,22 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
             className="fd-popover__control"
           >
             <div
-              aria-controls="fd-shellbar-notifications-popover"
+              aria-controls="fd-shellbar-mobile-action-popover"
               aria-expanded={false}
               aria-haspopup={true}
-              className="fd-shellbar__action fd-shellbar__action--desktop"
+              className="fd-shellbar-collapse--control"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
               tabIndex={0}
             >
               <button
-                aria-label="Notifications"
                 className="fd-button fd-shellbar__button"
                 type="button"
               >
                 <i
                   aria-hidden={true}
-                  className="sap-icon--bell"
+                  className="sap-icon--overflow"
                   role="img"
                 />
                 <span
@@ -664,7 +701,9 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
                     aria-label="Unread count"
                     className="fd-counter fd-counter--notification"
                   >
-                    2
+                     
+                    7
+                     
                   </span>
                 </span>
               </button>
@@ -672,8 +711,12 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--show-always"
+    >
       <div
-        className="fd-shellbar__action fd-shellbar__action--mobile"
+        className="fd-user-menu"
       >
         <div
           className="fd-popover"
@@ -686,118 +729,63 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
             <div
               className="fd-popover__control"
             >
-              <div
-                aria-controls="fd-shellbar-mobile-action-popover"
+              <button
+                aria-controls="fd-shellbar-profile-popover"
                 aria-expanded={false}
                 aria-haspopup={true}
-                className="fd-shellbar-collapse--control"
+                className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
                 tabIndex={0}
               >
-                <button
-                  className="fd-button fd-shellbar__button"
-                  type="button"
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
+                  role=""
                 >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--overflow"
-                    role="img"
-                  />
-                  <span
-                    className="fd-button__text"
-                  >
-                    <span
-                      aria-label="Unread count"
-                      className="fd-counter fd-counter--notification"
-                    >
-                       
-                      7
-                       
-                    </span>
-                  </span>
-                </button>
-              </div>
+                  JS
+                </span>
+              </button>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--desktop"
+    >
       <div
-        className="fd-shellbar__action fd-shellbar__action--show-always"
+        className="fd-product-switch"
       >
         <div
-          className="fd-user-menu"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
-              <div
-                className="fd-popover__control"
+              <button
+                aria-controls="fd-shellbar-product-switch-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                aria-label="Product Switch"
+                className="fd-button fd-product-switch__control fd-shellbar__button"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+                type="button"
               >
-                <button
-                  aria-controls="fd-shellbar-profile-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
-                    role=""
-                  >
-                    JS
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
-      >
-        <div
-          className="fd-product-switch"
-        >
-          <div
-            className="fd-popover"
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <button
-                  aria-controls="fd-shellbar-product-switch-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  aria-label="Product Switch"
-                  className="fd-button fd-product-switch__control fd-shellbar__button"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
-                  type="button"
-                >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--grid"
-                    role="img"
-                  />
-                </button>
-              </div>
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--grid"
+                  role="img"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -809,101 +797,33 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
 
 exports[`Storyshots Component API/Shellbar No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-shellbar xxx-shellbar--l"
 >
   <div
-    className="xxx-shellbar xxx-shellbar--l"
+    className="xxx-shellbar__group xxx-shellbar__group--product"
+  >
+    <span
+      className="xxx-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <span
+      className="xxx-shellbar__title"
+    >
+      Corporate Portal
+    </span>
+  </div>
+  <div
+    className="xxx-shellbar__group xxx-shellbar__group--actions"
   >
     <div
-      className="xxx-shellbar__group xxx-shellbar__group--product"
-    >
-      <span
-        className="xxx-shellbar__logo"
-      >
-        <img
-          alt="SAP"
-          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
-        />
-      </span>
-      <span
-        className="xxx-shellbar__title"
-      >
-        Corporate Portal
-      </span>
-    </div>
-    <div
-      className="xxx-shellbar__group xxx-shellbar__group--actions"
+      className="xxx-shellbar__action xxx-shellbar__action--desktop"
     >
       <div
-        className="xxx-shellbar__action xxx-shellbar__action--desktop"
-      >
-        <div
-          className="xxx-shellbar__input-group"
-        >
-          <div
-            className="xxx-popover"
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="xxx-popover__control"
-              >
-                <div
-                  className="xxx-popover"
-                  onBlur={[Function]}
-                  onFocus={[Function]}
-                >
-                  <div
-                    onFocus={[Function]}
-                    onMouseDown={[Function]}
-                    onTouchStart={[Function]}
-                  >
-                    <div
-                      className="xxx-popover__control"
-                    >
-                      <div
-                        className="xxx-shellbar__input-group xxx-input-group"
-                        onClick={[Function]}
-                      >
-                        <input
-                          className="xxx-input xxx-input-group__input xxx-shellbar__input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Search"
-                          type="text"
-                          value=""
-                        />
-                        <span
-                          className="xxx-shellbar__input-group__addon xxx-input-group__addon xxx-input-group__addon--button"
-                        >
-                          <button
-                            aria-label="Search"
-                            className="xxx-button xxx-button--transparent xxx-shellbar__button xxx-input-group__button"
-                            onClick={[Function]}
-                            type="button"
-                          >
-                            <i
-                              aria-hidden={true}
-                              className="sap-icon--search"
-                              role="img"
-                            />
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="xxx-shellbar__action xxx-shellbar__action--mobile"
+        className="xxx-shellbar__input-group"
       >
         <div
           className="xxx-popover"
@@ -917,76 +837,140 @@ exports[`Storyshots Component API/Shellbar No Styles 1`] = `
               className="xxx-popover__control"
             >
               <div
-                aria-controls="xxx-shellbar-mobile-action-popover"
-                aria-expanded={false}
-                aria-haspopup={true}
-                className="xxx-shellbar-collapse--control"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
+                className="xxx-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
-                <button
-                  className="xxx-button xxx-shellbar__button"
-                  type="button"
+                <div
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
                 >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--overflow"
-                    role="img"
-                  />
-                  <span
-                    className="xxx-button__text"
+                  <div
+                    className="xxx-popover__control"
                   >
-                    <span
-                      aria-label="Unread count"
-                      className="xxx-counter xxx-counter--notification"
+                    <div
+                      className="xxx-shellbar__input-group xxx-input-group"
+                      onClick={[Function]}
                     >
-                       
-                       
-                    </span>
-                  </span>
-                </button>
+                      <input
+                        className="xxx-input xxx-input-group__input xxx-shellbar__input-group__input"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Search"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        className="xxx-shellbar__input-group__addon xxx-input-group__addon xxx-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Search"
+                          className="xxx-button xxx-button--transparent xxx-shellbar__button xxx-input-group__button"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--search"
+                            role="img"
+                          />
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="xxx-shellbar__action xxx-shellbar__action--mobile"
+    >
       <div
-        className="xxx-shellbar__action xxx-shellbar__action--show-always"
+        className="xxx-popover"
       >
         <div
-          className="xxx-user-menu"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            className="xxx-popover"
+            className="xxx-popover__control"
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              aria-controls="xxx-shellbar-mobile-action-popover"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="xxx-shellbar-collapse--control"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <div
-                className="xxx-popover__control"
+              <button
+                className="xxx-button xxx-shellbar__button"
+                type="button"
               >
-                <button
-                  aria-controls="xxx-shellbar-profile-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="xxx-button xxx-shellbar__button xxx-shellbar__button--user-menu"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--overflow"
+                  role="img"
+                />
+                <span
+                  className="xxx-button__text"
                 >
                   <span
-                    className="xxx-avatar xxx-avatar--xs xxx-avatar--accent-color-8 xxx-avatar--circle xxx-shellbar__avatar--circle"
-                    role=""
+                    aria-label="Unread count"
+                    className="xxx-counter xxx-counter--notification"
                   >
-                    JS
+                     
+                     
                   </span>
-                </button>
-              </div>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="xxx-shellbar__action xxx-shellbar__action--show-always"
+    >
+      <div
+        className="xxx-user-menu"
+      >
+        <div
+          className="xxx-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="xxx-popover__control"
+            >
+              <button
+                aria-controls="xxx-shellbar-profile-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="xxx-button xxx-shellbar__button xxx-shellbar__button--user-menu"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  className="xxx-avatar xxx-avatar--xs xxx-avatar--accent-color-8 xxx-avatar--circle xxx-shellbar__avatar--circle"
+                  role=""
+                >
+                  JS
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -998,78 +982,74 @@ exports[`Storyshots Component API/Shellbar No Styles 1`] = `
 
 exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
 <div
-  dir="ltr"
+  className="fd-shellbar fd-shellbar--l"
 >
   <div
-    className="fd-shellbar fd-shellbar--l"
+    className="fd-shellbar__group fd-shellbar__group--product"
+  >
+    <button
+      aria-label="Back button"
+      className="fd-button fd-button--transparent fd-shellbar__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        aria-hidden={true}
+        className="sap-icon--nav-back"
+        role="img"
+      />
+    </button>
+    <span
+      className="fd-shellbar__logo"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <span
+      className="fd-shellbar__title"
+    >
+      Corporate Portal
+    </span>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--actions"
   >
     <div
-      className="fd-shellbar__group fd-shellbar__group--product"
-    >
-      <button
-        aria-label="Back button"
-        className="fd-button fd-button--transparent fd-shellbar__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <i
-          aria-hidden={true}
-          className="sap-icon--nav-back"
-          role="img"
-        />
-      </button>
-      <span
-        className="fd-shellbar__logo"
-      >
-        <img
-          alt="SAP"
-          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
-        />
-      </span>
-      <span
-        className="fd-shellbar__title"
-      >
-        Corporate Portal
-      </span>
-    </div>
-    <div
-      className="fd-shellbar__group fd-shellbar__group--actions"
+      className="fd-shellbar__action fd-shellbar__action--show-always"
     >
       <div
-        className="fd-shellbar__action fd-shellbar__action--show-always"
+        className="fd-user-menu"
       >
         <div
-          className="fd-user-menu"
+          className="fd-popover"
         >
           <div
-            className="fd-popover"
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              className="fd-popover__control"
             >
-              <div
-                className="fd-popover__control"
+              <button
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
               >
-                <button
-                  aria-controls="fd-shellbar-profile-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
+                  role=""
                 >
-                  <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--accent-color-8 fd-avatar--circle fd-shellbar__avatar--circle"
-                    role=""
-                  >
-                    JS
-                  </span>
-                </button>
-              </div>
+                  JS
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -1081,162 +1061,69 @@ exports[`Storyshots Component API/Shellbar With Back Button 1`] = `
 
 exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
 <div
-  dir="ltr"
+  className="fd-shellbar fd-shellbar--l"
 >
   <div
-    className="fd-shellbar fd-shellbar--l"
+    className="fd-shellbar__group fd-shellbar__group--product"
   >
-    <div
-      className="fd-shellbar__group fd-shellbar__group--product"
+    <span
+      className="fd-shellbar__logo"
     >
-      <span
-        className="fd-shellbar__logo"
-      >
-        <img
-          alt="SAP"
-          src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
-        />
-      </span>
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </span>
+    <div
+      className="fd-popover"
+    >
       <div
-        className="fd-popover"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          onFocus={[Function]}
-          onMouseDown={[Function]}
-          onTouchStart={[Function]}
+          className="fd-popover__control"
         >
-          <div
-            className="fd-popover__control"
+          <button
+            aria-controls="fd-shellbar-product-popover"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
           >
-            <button
-              aria-controls="fd-shellbar-product-popover"
-              aria-expanded={false}
-              aria-haspopup={true}
-              className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              role="button"
-              tabIndex={0}
-              type="button"
+            <span
+              className="fd-button__text fd-shellbar__title"
             >
-              <span
-                className="fd-button__text fd-shellbar__title"
-              >
-                Corporate Portal
-              </span>
-              <i
-                aria-hidden={true}
-                className="sap-icon--megamenu fd-shellbar__button--icon"
-                role="img"
-              />
-            </button>
-          </div>
+              Corporate Portal
+            </span>
+            <i
+              aria-hidden={true}
+              className="sap-icon--megamenu fd-shellbar__button--icon"
+              role="img"
+            />
+          </button>
         </div>
-      </div>
-      <div
-        className="fd-shellbar__subtitle"
-      >
-        Subtitle
       </div>
     </div>
     <div
-      className="fd-shellbar__group fd-shellbar__group--actions"
+      className="fd-shellbar__subtitle"
+    >
+      Subtitle
+    </div>
+  </div>
+  <div
+    className="fd-shellbar__group fd-shellbar__group--actions"
+  >
+    <div
+      className="fd-shellbar__action fd-shellbar__action--desktop"
     >
       <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
-      >
-        <div
-          className="fd-shellbar__input-group"
-        >
-          <div
-            className="fd-popover"
-          >
-            <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
-            >
-              <div
-                className="fd-popover__control"
-              >
-                <div
-                  className="fd-popover"
-                  onBlur={[Function]}
-                  onFocus={[Function]}
-                >
-                  <div
-                    onFocus={[Function]}
-                    onMouseDown={[Function]}
-                    onTouchStart={[Function]}
-                  >
-                    <div
-                      className="fd-popover__control"
-                    >
-                      <div
-                        className="fd-shellbar__input-group fd-input-group"
-                        onClick={[Function]}
-                      >
-                        <input
-                          className="fd-input fd-input-group__input fd-shellbar__input-group__input"
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Search"
-                          type="text"
-                          value=""
-                        />
-                        <span
-                          className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
-                        >
-                          <button
-                            aria-label="Search"
-                            className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
-                            onClick={[Function]}
-                            type="button"
-                          >
-                            <i
-                              aria-hidden={true}
-                              className="sap-icon--search"
-                              role="img"
-                            />
-                          </button>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fd-shellbar__action fd-shellbar__action--desktop"
-      >
-        <button
-          aria-label="Notifications"
-          className="fd-button fd-shellbar__button"
-          type="button"
-        >
-          <i
-            aria-hidden={true}
-            className="sap-icon--bell"
-            role="img"
-          />
-          <span
-            className="fd-button__text"
-          >
-            <span
-              aria-label="Unread count"
-              className="fd-counter fd-counter--notification"
-            >
-              2
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        className="fd-shellbar__action fd-shellbar__action--mobile"
+        className="fd-shellbar__input-group"
       >
         <div
           className="fd-popover"
@@ -1250,80 +1137,169 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
               className="fd-popover__control"
             >
               <div
-                aria-controls="fd-shellbar-mobile-action-popover"
-                aria-expanded={false}
-                aria-haspopup={true}
-                className="fd-shellbar-collapse--control"
-                onClick={[Function]}
-                onKeyPress={[Function]}
-                role="button"
-                tabIndex={0}
+                className="fd-popover"
+                onBlur={[Function]}
+                onFocus={[Function]}
               >
-                <button
-                  className="fd-button fd-shellbar__button"
-                  type="button"
+                <div
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchStart={[Function]}
                 >
-                  <i
-                    aria-hidden={true}
-                    className="sap-icon--overflow"
-                    role="img"
-                  />
-                  <span
-                    className="fd-button__text"
+                  <div
+                    className="fd-popover__control"
                   >
-                    <span
-                      aria-label="Unread count"
-                      className="fd-counter fd-counter--notification"
+                    <div
+                      className="fd-shellbar__input-group fd-input-group"
+                      onClick={[Function]}
                     >
-                       
-                      2
-                       
-                    </span>
-                  </span>
-                </button>
+                      <input
+                        className="fd-input fd-input-group__input fd-shellbar__input-group__input"
+                        onChange={[Function]}
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Search"
+                        type="text"
+                        value=""
+                      />
+                      <span
+                        className="fd-shellbar__input-group__addon fd-input-group__addon fd-input-group__addon--button"
+                      >
+                        <button
+                          aria-label="Search"
+                          className="fd-button fd-button--transparent fd-shellbar__button fd-input-group__button"
+                          onClick={[Function]}
+                          type="button"
+                        >
+                          <i
+                            aria-hidden={true}
+                            className="sap-icon--search"
+                            role="img"
+                          />
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--desktop"
+    >
+      <button
+        aria-label="Notifications"
+        className="fd-button fd-shellbar__button"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--bell"
+          role="img"
+        />
+        <span
+          className="fd-button__text"
+        >
+          <span
+            aria-label="Unread count"
+            className="fd-counter fd-counter--notification"
+          >
+            2
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--mobile"
+    >
       <div
-        className="fd-shellbar__action fd-shellbar__action--show-always"
+        className="fd-popover"
       >
         <div
-          className="fd-user-menu"
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            className="fd-popover"
+            className="fd-popover__control"
           >
             <div
-              onFocus={[Function]}
-              onMouseDown={[Function]}
-              onTouchStart={[Function]}
+              aria-controls="fd-shellbar-mobile-action-popover"
+              aria-expanded={false}
+              aria-haspopup={true}
+              className="fd-shellbar-collapse--control"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <div
-                className="fd-popover__control"
+              <button
+                className="fd-button fd-shellbar__button"
+                type="button"
               >
-                <button
-                  aria-controls="fd-shellbar-profile-popover"
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
-                  onClick={[Function]}
-                  onKeyPress={[Function]}
-                  role="button"
-                  tabIndex={0}
+                <i
+                  aria-hidden={true}
+                  className="sap-icon--overflow"
+                  role="img"
+                />
+                <span
+                  className="fd-button__text"
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle fd-shellbar__avatar--circle"
-                    role="presentation"
-                    style={
-                      Object {
-                        "backgroundImage": "url(./assets/headshot-male.jpg)",
-                      }
+                    aria-label="Unread count"
+                    className="fd-counter fd-counter--notification"
+                  >
+                     
+                    2
+                     
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-shellbar__action fd-shellbar__action--show-always"
+    >
+      <div
+        className="fd-user-menu"
+      >
+        <div
+          className="fd-popover"
+        >
+          <div
+            onFocus={[Function]}
+            onMouseDown={[Function]}
+            onTouchStart={[Function]}
+          >
+            <div
+              className="fd-popover__control"
+            >
+              <button
+                aria-controls="fd-shellbar-profile-popover"
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="fd-button fd-shellbar__button fd-shellbar__button--user-menu"
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="button"
+                tabIndex={0}
+              >
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle fd-shellbar__avatar--circle"
+                  role="presentation"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./assets/headshot-male.jpg)",
                     }
-                  />
-                </button>
-              </div>
+                  }
+                />
+              </button>
             </div>
           </div>
         </div>

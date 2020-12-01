@@ -2,668 +2,664 @@
 
 exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = `
 <div
-  dir="ltr"
+  className="fd-container"
 >
   <div
-    className="fd-container"
+    className="fd-row"
   >
     <div
-      className="fd-row"
+      className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
     >
       <div
-        className="fd-col fd-col--8 fd-col-md--8 fd-col-lg--8 fd-col-xl--8"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-layout-panel"
+          className="fd-layout-panel__header"
         >
           <div
-            className="fd-layout-panel__header"
+            className="fd-layout-panel__head"
           >
             <div
-              className="fd-layout-panel__head"
+              className="fd-layout-panel__title"
             >
-              <div
-                className="fd-layout-panel__title"
+              <h3
+                className="fd-title fd-title--h5 fd-title--wrap"
               >
-                <h3
-                  className="fd-title fd-title--h5 fd-title--wrap"
-                >
-                  LayoutPanel Header with Actions
-                </h3>
-              </div>
-              <p
-                className="fd-layout-panel__description"
-              >
-                LayoutPanel Description
-              </p>
+                LayoutPanel Header with Actions
+              </h3>
             </div>
-            <div
-              className="fd-layout-panel__actions"
+            <p
+              className="fd-layout-panel__description"
             >
-              <button
-                className="fd-button fd-button--compact"
-                type="button"
-              >
-                <span
-                  className="fd-button__text"
-                >
-                  Add New Button
-                </span>
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--add"
-                  role="img"
-                />
-              </button>
-            </div>
+              LayoutPanel Description
+            </p>
           </div>
           <div
-            className="fd-layout-panel__filters"
+            className="fd-layout-panel__actions"
           >
-            <div>
-              LayoutPanel Filters
-            </div>
-            <br />
-            <div
-              className="fd-popover"
+            <button
+              className="fd-button fd-button--compact"
+              type="button"
             >
-              <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
+              <span
+                className="fd-button__text"
               >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Color
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="fd-popover"
-            >
-              <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
-              >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Size
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="fd-layout-panel__body"
-          >
-            <div>
-              LayoutPanel Body
-            </div>
-            <br />
-            <div
-              className="fd-tile"
-              role="button"
-              tabIndex="0"
-            >
-              <div
-                className="fd-tile__header"
-              >
-                <div
-                  className="fd-tile__title"
-                >
-                  <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
-                    role="presentation"
-                    style={
-                      Object {
-                        "backgroundImage": "url(./assets/nature.jpg)",
-                      }
-                    }
-                  />
-                  Tile Title
-                </div>
-              </div>
-              <div
-                className="fd-tile__content"
-              >
-                <p>
-                  Tile Description
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className="fd-layout-panel__footer"
-          >
-            LayoutPanel Footer
+                Add New Button
+              </span>
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
           </div>
         </div>
-      </div>
-      <div
-        className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
-      >
         <div
-          className="fd-layout-panel"
+          className="fd-layout-panel__filters"
         >
-          <div
-            className="fd-layout-panel__header"
-          >
-            <div
-              className="fd-layout-panel__head"
-            >
-              <div
-                className="fd-layout-panel__title"
-              >
-                <h3
-                  className="fd-title fd-title--h5 fd-title--wrap"
-                >
-                  LayoutPanel Header with Actions
-                </h3>
-              </div>
-              <p
-                className="fd-layout-panel__description"
-              >
-                LayoutPanel Description
-              </p>
-            </div>
-            <div
-              className="fd-layout-panel__actions"
-            >
-              <button
-                className="fd-button fd-button--compact"
-                type="button"
-              >
-                <span
-                  className="fd-button__text"
-                >
-                  Add New Button
-                </span>
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--add"
-                  role="img"
-                />
-              </button>
-            </div>
+          <div>
+            LayoutPanel Filters
           </div>
+          <br />
           <div
-            className="fd-layout-panel__filters"
+            className="fd-popover"
           >
-            <div>
-              LayoutPanel Filters
-            </div>
-            <br />
             <div
-              className="fd-popover"
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
               <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
+                className="fd-popover__control"
               >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Color
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="fd-popover"
-            >
-              <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
-              >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Size
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="fd-layout-panel__body"
-          >
-            <div>
-              LayoutPanel Body
-            </div>
-            <br />
-            <div
-              className="fd-tile"
-              role="button"
-              tabIndex="0"
-            >
-              <div
-                className="fd-tile__header"
-              >
-                <div
-                  className="fd-tile__title"
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
-                    role="presentation"
-                    style={
-                      Object {
-                        "backgroundImage": "url(./assets/nature.jpg)",
-                      }
-                    }
-                  />
-                  Tile Title
-                </div>
-              </div>
-              <div
-                className="fd-tile__content"
-              >
-                <p>
-                  Tile Description
-                </p>
+                    className="fd-button__text"
+                  >
+                    Color
+                  </span>
+                </button>
               </div>
             </div>
           </div>
           <div
-            className="fd-layout-panel__footer"
+            className="fd-popover"
           >
-            LayoutPanel Footer
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Size
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
+        <div
+          className="fd-layout-panel__body"
+        >
+          <div>
+            LayoutPanel Body
+          </div>
+          <br />
+          <div
+            className="fd-tile"
+            role="button"
+            tabIndex="0"
+          >
+            <div
+              className="fd-tile__header"
+            >
+              <div
+                className="fd-tile__title"
+              >
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+                  role="presentation"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./assets/nature.jpg)",
+                    }
+                  }
+                />
+                Tile Title
+              </div>
+            </div>
+            <div
+              className="fd-tile__content"
+            >
+              <p>
+                Tile Description
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__footer"
+        >
+          LayoutPanel Footer
         </div>
       </div>
     </div>
     <div
-      className="fd-row"
+      className="fd-col fd-col--4 fd-col-md--4 fd-col-lg--4 fd-col-xl--4"
     >
       <div
-        className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
+        className="fd-layout-panel"
       >
         <div
-          className="fd-layout-panel"
+          className="fd-layout-panel__header"
         >
           <div
-            className="fd-layout-panel__header"
+            className="fd-layout-panel__head"
           >
             <div
-              className="fd-layout-panel__head"
+              className="fd-layout-panel__title"
             >
-              <div
-                className="fd-layout-panel__title"
+              <h3
+                className="fd-title fd-title--h5 fd-title--wrap"
               >
-                <h3
-                  className="fd-title fd-title--h5 fd-title--wrap"
-                >
-                  LayoutPanel Header with Actions
-                </h3>
-              </div>
-              <p
-                className="fd-layout-panel__description"
-              >
-                LayoutPanel Description
-              </p>
+                LayoutPanel Header with Actions
+              </h3>
             </div>
-            <div
-              className="fd-layout-panel__actions"
+            <p
+              className="fd-layout-panel__description"
             >
-              <button
-                className="fd-button fd-button--compact"
-                type="button"
-              >
-                <span
-                  className="fd-button__text"
-                >
-                  Add New Button
-                </span>
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--add"
-                  role="img"
-                />
-              </button>
-            </div>
+              LayoutPanel Description
+            </p>
           </div>
           <div
-            className="fd-layout-panel__filters"
+            className="fd-layout-panel__actions"
           >
-            <div>
-              LayoutPanel Filters
-            </div>
-            <br />
-            <div
-              className="fd-popover"
+            <button
+              className="fd-button fd-button--compact"
+              type="button"
             >
-              <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
+              <span
+                className="fd-button__text"
               >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Color
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="fd-popover"
-            >
-              <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
-              >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Size
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="fd-layout-panel__body"
-          >
-            <div>
-              LayoutPanel Body
-            </div>
-            <br />
-            <div
-              className="fd-tile"
-              role="button"
-              tabIndex="0"
-            >
-              <div
-                className="fd-tile__header"
-              >
-                <div
-                  className="fd-tile__title"
-                >
-                  <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
-                    role="presentation"
-                    style={
-                      Object {
-                        "backgroundImage": "url(./assets/nature.jpg)",
-                      }
-                    }
-                  />
-                  Tile Title
-                </div>
-              </div>
-              <div
-                className="fd-tile__content"
-              >
-                <p>
-                  Tile Description
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className="fd-layout-panel__footer"
-          >
-            LayoutPanel Footer
+                Add New Button
+              </span>
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
           </div>
         </div>
-      </div>
-      <div
-        className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9"
-      >
         <div
-          className="fd-layout-panel"
+          className="fd-layout-panel__filters"
         >
-          <div
-            className="fd-layout-panel__header"
-          >
-            <div
-              className="fd-layout-panel__head"
-            >
-              <div
-                className="fd-layout-panel__title"
-              >
-                <h3
-                  className="fd-title fd-title--h5 fd-title--wrap"
-                >
-                  LayoutPanel Header with Actions
-                </h3>
-              </div>
-              <p
-                className="fd-layout-panel__description"
-              >
-                LayoutPanel Description
-              </p>
-            </div>
-            <div
-              className="fd-layout-panel__actions"
-            >
-              <button
-                className="fd-button fd-button--compact"
-                type="button"
-              >
-                <span
-                  className="fd-button__text"
-                >
-                  Add New Button
-                </span>
-                <i
-                  aria-hidden={true}
-                  className="sap-icon--add"
-                  role="img"
-                />
-              </button>
-            </div>
+          <div>
+            LayoutPanel Filters
           </div>
+          <br />
           <div
-            className="fd-layout-panel__filters"
+            className="fd-popover"
           >
-            <div>
-              LayoutPanel Filters
-            </div>
-            <br />
             <div
-              className="fd-popover"
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
             >
               <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
+                className="fd-popover__control"
               >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Color
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="fd-popover"
-            >
-              <div
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                onTouchStart={[Function]}
-              >
-                <div
-                  className="fd-popover__control"
-                >
-                  <button
-                    aria-controls="fd-mocked-short-id"
-                    aria-expanded={false}
-                    aria-haspopup={true}
-                    className="fd-button"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                    type="button"
-                  >
-                    <span
-                      className="fd-button__text"
-                    >
-                      Size
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="fd-layout-panel__body"
-          >
-            <div>
-              LayoutPanel Body
-            </div>
-            <br />
-            <div
-              className="fd-tile"
-              role="button"
-              tabIndex="0"
-            >
-              <div
-                className="fd-tile__header"
-              >
-                <div
-                  className="fd-tile__title"
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
                 >
                   <span
-                    className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
-                    role="presentation"
-                    style={
-                      Object {
-                        "backgroundImage": "url(./assets/nature.jpg)",
-                      }
-                    }
-                  />
-                  Tile Title
-                </div>
-              </div>
-              <div
-                className="fd-tile__content"
-              >
-                <p>
-                  Tile Description
-                </p>
+                    className="fd-button__text"
+                  >
+                    Color
+                  </span>
+                </button>
               </div>
             </div>
           </div>
           <div
-            className="fd-layout-panel__footer"
+            className="fd-popover"
           >
-            LayoutPanel Footer
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Size
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
+        <div
+          className="fd-layout-panel__body"
+        >
+          <div>
+            LayoutPanel Body
+          </div>
+          <br />
+          <div
+            className="fd-tile"
+            role="button"
+            tabIndex="0"
+          >
+            <div
+              className="fd-tile__header"
+            >
+              <div
+                className="fd-tile__title"
+              >
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+                  role="presentation"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./assets/nature.jpg)",
+                    }
+                  }
+                />
+                Tile Title
+              </div>
+            </div>
+            <div
+              className="fd-tile__content"
+            >
+              <p>
+                Tile Description
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__footer"
+        >
+          LayoutPanel Footer
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-row"
+  >
+    <div
+      className="fd-col fd-col--3 fd-col-md--3 fd-col-lg--3 fd-col-xl--3"
+    >
+      <div
+        className="fd-layout-panel"
+      >
+        <div
+          className="fd-layout-panel__header"
+        >
+          <div
+            className="fd-layout-panel__head"
+          >
+            <div
+              className="fd-layout-panel__title"
+            >
+              <h3
+                className="fd-title fd-title--h5 fd-title--wrap"
+              >
+                LayoutPanel Header with Actions
+              </h3>
+            </div>
+            <p
+              className="fd-layout-panel__description"
+            >
+              LayoutPanel Description
+            </p>
+          </div>
+          <div
+            className="fd-layout-panel__actions"
+          >
+            <button
+              className="fd-button fd-button--compact"
+              type="button"
+            >
+              <span
+                className="fd-button__text"
+              >
+                Add New Button
+              </span>
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__filters"
+        >
+          <div>
+            LayoutPanel Filters
+          </div>
+          <br />
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Color
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Size
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__body"
+        >
+          <div>
+            LayoutPanel Body
+          </div>
+          <br />
+          <div
+            className="fd-tile"
+            role="button"
+            tabIndex="0"
+          >
+            <div
+              className="fd-tile__header"
+            >
+              <div
+                className="fd-tile__title"
+              >
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+                  role="presentation"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./assets/nature.jpg)",
+                    }
+                  }
+                />
+                Tile Title
+              </div>
+            </div>
+            <div
+              className="fd-tile__content"
+            >
+              <p>
+                Tile Description
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__footer"
+        >
+          LayoutPanel Footer
+        </div>
+      </div>
+    </div>
+    <div
+      className="fd-col fd-col--9 fd-col-md--9 fd-col-lg--9 fd-col-xl--9"
+    >
+      <div
+        className="fd-layout-panel"
+      >
+        <div
+          className="fd-layout-panel__header"
+        >
+          <div
+            className="fd-layout-panel__head"
+          >
+            <div
+              className="fd-layout-panel__title"
+            >
+              <h3
+                className="fd-title fd-title--h5 fd-title--wrap"
+              >
+                LayoutPanel Header with Actions
+              </h3>
+            </div>
+            <p
+              className="fd-layout-panel__description"
+            >
+              LayoutPanel Description
+            </p>
+          </div>
+          <div
+            className="fd-layout-panel__actions"
+          >
+            <button
+              className="fd-button fd-button--compact"
+              type="button"
+            >
+              <span
+                className="fd-button__text"
+              >
+                Add New Button
+              </span>
+              <i
+                aria-hidden={true}
+                className="sap-icon--add"
+                role="img"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__filters"
+        >
+          <div>
+            LayoutPanel Filters
+          </div>
+          <br />
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Color
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <button
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="fd-button"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="fd-button__text"
+                  >
+                    Size
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__body"
+        >
+          <div>
+            LayoutPanel Body
+          </div>
+          <br />
+          <div
+            className="fd-tile"
+            role="button"
+            tabIndex="0"
+          >
+            <div
+              className="fd-tile__header"
+            >
+              <div
+                className="fd-tile__title"
+              >
+                <span
+                  className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+                  role="presentation"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./assets/nature.jpg)",
+                    }
+                  }
+                />
+                Tile Title
+              </div>
+            </div>
+            <div
+              className="fd-tile__content"
+            >
+              <p>
+                Tile Description
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="fd-layout-panel__footer"
+        >
+          LayoutPanel Footer
         </div>
       </div>
     </div>
@@ -673,284 +669,272 @@ exports[`Storyshots Component API/LayoutPanel In A Responsive Layout Grid 1`] = 
 
 exports[`Storyshots Component API/LayoutPanel No Styles 1`] = `
 <div
-  dir="ltr"
+  className="xxx-layout-panel"
 >
   <div
-    className="xxx-layout-panel"
+    className="xxx-layout-panel__header"
   >
     <div
-      className="xxx-layout-panel__header"
+      className="xxx-layout-panel__head"
     >
       <div
-        className="xxx-layout-panel__head"
+        className="xxx-layout-panel__title"
       >
-        <div
-          className="xxx-layout-panel__title"
+        <h3
+          className="xxx-title xxx-title--h5 xxx-title--wrap"
         >
-          <h3
-            className="xxx-title xxx-title--h5 xxx-title--wrap"
-          >
-            LayoutPanel Header with Actions
-          </h3>
-        </div>
-        <p
-          className="xxx-layout-panel__description"
-        >
-          LayoutPanel Description
-        </p>
+          LayoutPanel Header with Actions
+        </h3>
       </div>
-      <div
-        className="xxx-layout-panel__actions"
+      <p
+        className="xxx-layout-panel__description"
       >
-        <div>
-          LayoutPanel actions
-        </div>
-      </div>
+        LayoutPanel Description
+      </p>
     </div>
     <div
-      className="xxx-layout-panel__filters"
+      className="xxx-layout-panel__actions"
     >
       <div>
-        LayoutPanel Filters
+        LayoutPanel actions
       </div>
     </div>
-    <div
-      className="xxx-layout-panel__body"
-    >
-      <div>
-        LayoutPanel Body
-      </div>
+  </div>
+  <div
+    className="xxx-layout-panel__filters"
+  >
+    <div>
+      LayoutPanel Filters
     </div>
-    <div
-      className="xxx-layout-panel__footer"
-    >
-      LayoutPanel Footer
+  </div>
+  <div
+    className="xxx-layout-panel__body"
+  >
+    <div>
+      LayoutPanel Body
     </div>
+  </div>
+  <div
+    className="xxx-layout-panel__footer"
+  >
+    LayoutPanel Footer
   </div>
 </div>
 `;
 
 exports[`Storyshots Component API/LayoutPanel Primary 1`] = `
 <div
-  dir="ltr"
+  className="fd-layout-panel"
 >
   <div
-    className="fd-layout-panel"
+    className="fd-layout-panel__header"
   >
     <div
-      className="fd-layout-panel__header"
+      className="fd-layout-panel__head"
     >
       <div
-        className="fd-layout-panel__head"
+        className="fd-layout-panel__title"
       >
-        <div
-          className="fd-layout-panel__title"
+        <h3
+          className="fd-title fd-title--h5 fd-title--wrap"
         >
-          <h3
-            className="fd-title fd-title--h5 fd-title--wrap"
-          >
-            LayoutPanel Header with Actions
-          </h3>
-        </div>
-        <p
-          className="fd-layout-panel__description"
-        >
-          LayoutPanel Description
-        </p>
+          LayoutPanel Header with Actions
+        </h3>
       </div>
-      <div
-        className="fd-layout-panel__actions"
+      <p
+        className="fd-layout-panel__description"
       >
-        <div>
-          LayoutPanel actions
-        </div>
-      </div>
+        LayoutPanel Description
+      </p>
     </div>
     <div
-      className="fd-layout-panel__filters"
+      className="fd-layout-panel__actions"
     >
       <div>
-        LayoutPanel Filters
+        LayoutPanel actions
       </div>
     </div>
-    <div
-      className="fd-layout-panel__body"
-    >
-      <div>
-        LayoutPanel Body
-      </div>
+  </div>
+  <div
+    className="fd-layout-panel__filters"
+  >
+    <div>
+      LayoutPanel Filters
     </div>
-    <div
-      className="fd-layout-panel__footer"
-    >
-      LayoutPanel Footer
+  </div>
+  <div
+    className="fd-layout-panel__body"
+  >
+    <div>
+      LayoutPanel Body
     </div>
+  </div>
+  <div
+    className="fd-layout-panel__footer"
+  >
+    LayoutPanel Footer
   </div>
 </div>
 `;
 
 exports[`Storyshots Component API/LayoutPanel Single Layout Panel 1`] = `
 <div
-  dir="ltr"
+  className="fd-layout-panel"
 >
   <div
-    className="fd-layout-panel"
+    className="fd-layout-panel__header"
   >
     <div
-      className="fd-layout-panel__header"
+      className="fd-layout-panel__head"
     >
       <div
-        className="fd-layout-panel__head"
+        className="fd-layout-panel__title"
       >
-        <div
-          className="fd-layout-panel__title"
+        <h3
+          className="fd-title fd-title--h5 fd-title--wrap"
         >
-          <h3
-            className="fd-title fd-title--h5 fd-title--wrap"
-          >
-            LayoutPanel Header with Actions
-          </h3>
-        </div>
-        <p
-          className="fd-layout-panel__description"
-        >
-          LayoutPanel Description
-        </p>
+          LayoutPanel Header with Actions
+        </h3>
       </div>
-      <div
-        className="fd-layout-panel__actions"
+      <p
+        className="fd-layout-panel__description"
       >
-        <button
-          className="fd-button fd-button--compact"
-          type="button"
-        >
-          <span
-            className="fd-button__text"
-          >
-            Add New Button
-          </span>
-          <i
-            aria-hidden={true}
-            className="sap-icon--add"
-            role="img"
-          />
-        </button>
-      </div>
+        LayoutPanel Description
+      </p>
     </div>
     <div
-      className="fd-layout-panel__filters"
+      className="fd-layout-panel__actions"
     >
-      <div>
-        LayoutPanel Filters
-      </div>
-      <br />
-      <div
-        className="fd-popover"
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
       >
-        <div
-          onFocus={[Function]}
-          onMouseDown={[Function]}
-          onTouchStart={[Function]}
+        <span
+          className="fd-button__text"
         >
-          <div
-            className="fd-popover__control"
-          >
-            <button
-              aria-controls="fd-mocked-short-id"
-              aria-expanded={false}
-              aria-haspopup={true}
-              className="fd-button"
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              role="button"
-              tabIndex={0}
-              type="button"
-            >
-              <span
-                className="fd-button__text"
-              >
-                Color
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="fd-popover"
-      >
-        <div
-          onFocus={[Function]}
-          onMouseDown={[Function]}
-          onTouchStart={[Function]}
-        >
-          <div
-            className="fd-popover__control"
-          >
-            <button
-              aria-controls="fd-mocked-short-id"
-              aria-expanded={false}
-              aria-haspopup={true}
-              className="fd-button"
-              onClick={[Function]}
-              onKeyPress={[Function]}
-              role="button"
-              tabIndex={0}
-              type="button"
-            >
-              <span
-                className="fd-button__text"
-              >
-                Size
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
+          Add New Button
+        </span>
+        <i
+          aria-hidden={true}
+          className="sap-icon--add"
+          role="img"
+        />
+      </button>
     </div>
+  </div>
+  <div
+    className="fd-layout-panel__filters"
+  >
+    <div>
+      LayoutPanel Filters
+    </div>
+    <br />
     <div
-      className="fd-layout-panel__body"
+      className="fd-popover"
     >
-      <div>
-        LayoutPanel Body
-      </div>
-      <br />
       <div
-        className="fd-tile"
-        role="button"
-        tabIndex="0"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
       >
         <div
-          className="fd-tile__header"
+          className="fd-popover__control"
         >
-          <div
-            className="fd-tile__title"
+          <button
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
           >
             <span
-              className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
-              role="presentation"
-              style={
-                Object {
-                  "backgroundImage": "url(./assets/nature.jpg)",
-                }
-              }
-            />
-            Tile Title
-          </div>
-        </div>
-        <div
-          className="fd-tile__content"
-        >
-          <p>
-            Tile Description
-          </p>
+              className="fd-button__text"
+            >
+              Color
+            </span>
+          </button>
         </div>
       </div>
     </div>
     <div
-      className="fd-layout-panel__footer"
+      className="fd-popover"
     >
-      LayoutPanel Footer
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <button
+            aria-controls="fd-mocked-short-id"
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="fd-button"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            role="button"
+            tabIndex={0}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Size
+            </span>
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
+  <div
+    className="fd-layout-panel__body"
+  >
+    <div>
+      LayoutPanel Body
+    </div>
+    <br />
+    <div
+      className="fd-tile"
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="fd-tile__header"
+      >
+        <div
+          className="fd-tile__title"
+        >
+          <span
+            className="fd-avatar fd-avatar--xs fd-avatar--thumbnail fd-avatar--circle"
+            role="presentation"
+            style={
+              Object {
+                "backgroundImage": "url(./assets/nature.jpg)",
+              }
+            }
+          />
+          Tile Title
+        </div>
+      </div>
+      <div
+        className="fd-tile__content"
+      >
+        <p>
+          Tile Description
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="fd-layout-panel__footer"
+  >
+    LayoutPanel Footer
   </div>
 </div>
 `;

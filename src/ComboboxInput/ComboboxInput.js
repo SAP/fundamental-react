@@ -11,7 +11,7 @@ import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import requiredIf from 'react-required-if';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import withStyles from '../utils/withStyles';
 import { COMBOBOX_SELECTION_TYPES, FORM_MESSAGE_TYPES } from '../utils/constants';
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';

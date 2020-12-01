@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/StepInput Compact 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="compact"
   >
     Amount
-  </label>
+  </label>,
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -63,20 +61,18 @@ exports[`Storyshots Component API/StepInput Compact 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/StepInput Dev 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="dev-stepinput"
   >
     Amount
-  </label>
+  </label>,
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -132,20 +128,18 @@ exports[`Storyshots Component API/StepInput Dev 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/StepInput Disabled 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="disabled"
   >
     Amount
-  </label>
+  </label>,
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -202,20 +196,18 @@ exports[`Storyshots Component API/StepInput Disabled 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/StepInput No Styles 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="nostyles"
   >
     Amount
-  </label>
+  </label>,
   <div
     className="xxx-popover"
     onBlur={[Function]}
@@ -269,20 +261,18 @@ exports[`Storyshots Component API/StepInput No Styles 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/StepInput Primary 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="primary"
   >
     Amount
-  </label>
+  </label>,
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -336,20 +326,18 @@ exports[`Storyshots Component API/StepInput Primary 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/StepInput Read Only 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <label
     className="fd-form-label"
     htmlFor="readOnly"
   >
     Amount
-  </label>
+  </label>,
   <div
     className="fd-popover"
     onBlur={[Function]}
@@ -403,14 +391,12 @@ exports[`Storyshots Component API/StepInput Read Only 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/StepInput Validation States 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div>
     <label
       className="fd-form-label"
@@ -473,7 +459,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div>
     <label
       className="fd-form-label"
@@ -536,7 +522,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div>
     <label
       className="fd-form-label"
@@ -599,7 +585,7 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div>
     <label
       className="fd-form-label"
@@ -662,6 +648,6 @@ exports[`Storyshots Component API/StepInput Validation States 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;

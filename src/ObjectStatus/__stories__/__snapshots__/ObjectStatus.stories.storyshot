@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickable 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fddocs-container"
   >
@@ -94,7 +92,7 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         Neutral
       </span>
     </span>
-  </div>
+  </div>,
   <div
     className="fddocs-container"
   >
@@ -170,7 +168,7 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         role="img"
       />
     </a>
-  </div>
+  </div>,
   <div
     className="fddocs-container"
   >
@@ -255,14 +253,12 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Clickab
         role="img"
       />
     </a>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fddocs-container"
   >
@@ -353,7 +349,7 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         Neutral
       </span>
     </span>
-  </div>
+  </div>,
   <div
     className="fddocs-container"
   >
@@ -429,7 +425,7 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         role="img"
       />
     </a>
-  </div>
+  </div>,
   <div
     className="fddocs-container"
   >
@@ -514,239 +510,225 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Dev 1`]
         role="img"
       />
     </a>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Generic Indication Colors 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-object-status fd-object-status--indication-1"
   >
     <span
-      className="fd-object-status fd-object-status--indication-1"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Dark Red
-      </span>
+      Dark Red
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-2"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-2"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Red
-      </span>
+      Red
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-3"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-3"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Yellow
-      </span>
+      Yellow
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-4"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-4"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Green
-      </span>
+      Green
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-5"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-5"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Blue
-      </span>
+      Blue
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-6"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-6"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Teal
-      </span>
+      Teal
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-7"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-7"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Purple
-      </span>
+      Purple
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--indication-8"
+  >
     <span
-      className="fd-object-status fd-object-status--indication-8"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Pink
-      </span>
+      Pink
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon Only 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    aria-label="negative"
+    className="fd-object-status fd-object-status--negative"
   >
-    <span
-      aria-label="negative"
-      className="fd-object-status fd-object-status--negative"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-negative fd-object-status__icon"
-        role="img"
-      />
-    </span>
-    <span
-      aria-label="critical"
-      className="fd-object-status fd-object-status--critical"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-critical fd-object-status__icon"
-        role="img"
-      />
-    </span>
-    <span
-      aria-label="positive"
-      className="fd-object-status fd-object-status--positive"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-positive fd-object-status__icon"
-        role="img"
-      />
-    </span>
-    <span
-      aria-label="info"
-      className="fd-object-status fd-object-status--informative"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--hint fd-object-status__icon"
-        role="img"
-      />
-    </span>
-    <span
-      aria-label="neutral"
-      className="fd-object-status"
-    >
-      <i
-        aria-hidden={true}
-        className="sap-icon--to-be-reviewed fd-object-status__icon"
-        role="img"
-      />
-    </span>
-  </div>
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-negative fd-object-status__icon"
+      role="img"
+    />
+  </span>
+  <span
+    aria-label="critical"
+    className="fd-object-status fd-object-status--critical"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-critical fd-object-status__icon"
+      role="img"
+    />
+  </span>
+  <span
+    aria-label="positive"
+    className="fd-object-status fd-object-status--positive"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-positive fd-object-status__icon"
+      role="img"
+    />
+  </span>
+  <span
+    aria-label="info"
+    className="fd-object-status fd-object-status--informative"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--hint fd-object-status__icon"
+      role="img"
+    />
+  </span>
+  <span
+    aria-label="neutral"
+    className="fd-object-status"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--to-be-reviewed fd-object-status__icon"
+      role="img"
+    />
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Icon and Text 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-object-status fd-object-status--negative"
   >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-negative fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--negative"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-negative fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Negative
-      </span>
+      Negative
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--critical"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-critical fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--critical"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-critical fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Critical
-      </span>
+      Critical
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--positive"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-positive fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--positive"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-positive fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Positive
-      </span>
+      Positive
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--informative"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--hint fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--informative"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--hint fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Info
-      </span>
+      Info
     </span>
+  </span>
+  <span
+    className="fd-object-status"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--to-be-reviewed fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--to-be-reviewed fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Neutral
-      </span>
+      Neutral
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverted 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fddocs-container"
   >
@@ -813,7 +795,7 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverte
         3.8
       </span>
     </span>
-  </div>
+  </div>,
   <div
     className="fddocs-container"
   >
@@ -883,14 +865,12 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Inverte
         role="img"
       />
     </span>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Large Design 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <div
     className="fddocs-container"
   >
@@ -957,7 +937,7 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
         3.8
       </span>
     </span>
-  </div>
+  </div>,
   <div
     className="fddocs-container"
   >
@@ -1027,224 +1007,212 @@ exports[`Storyshots Component API/Object Display Components/ObjectStatus Large D
         role="img"
       />
     </span>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus No Styles 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="xxx-object-status xxx-object-status--negative"
   >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-negative xxx-object-status__icon"
+      role="img"
+    />
     <span
-      className="xxx-object-status xxx-object-status--negative"
+      className="xxx-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-negative xxx-object-status__icon"
-        role="img"
-      />
-      <span
-        className="xxx-object-status__text"
-      >
-        Negative
-      </span>
+      Negative
     </span>
+  </span>
+  <span
+    className="xxx-object-status xxx-object-status--critical"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-critical xxx-object-status__icon"
+      role="img"
+    />
     <span
-      className="xxx-object-status xxx-object-status--critical"
+      className="xxx-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-critical xxx-object-status__icon"
-        role="img"
-      />
-      <span
-        className="xxx-object-status__text"
-      >
-        Critical
-      </span>
+      Critical
     </span>
+  </span>
+  <span
+    className="xxx-object-status xxx-object-status--positive"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-positive xxx-object-status__icon"
+      role="img"
+    />
     <span
-      className="xxx-object-status xxx-object-status--positive"
+      className="xxx-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-positive xxx-object-status__icon"
-        role="img"
-      />
-      <span
-        className="xxx-object-status__text"
-      >
-        Positive
-      </span>
+      Positive
     </span>
+  </span>
+  <span
+    className="xxx-object-status xxx-object-status--informative"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--hint xxx-object-status__icon"
+      role="img"
+    />
     <span
-      className="xxx-object-status xxx-object-status--informative"
+      className="xxx-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--hint xxx-object-status__icon"
-        role="img"
-      />
-      <span
-        className="xxx-object-status__text"
-      >
-        Info
-      </span>
+      Info
     </span>
+  </span>
+  <span
+    className="xxx-object-status"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--to-be-reviewed xxx-object-status__icon"
+      role="img"
+    />
     <span
-      className="xxx-object-status"
+      className="xxx-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--to-be-reviewed xxx-object-status__icon"
-        role="img"
-      />
-      <span
-        className="xxx-object-status__text"
-      >
-        Neutral
-      </span>
+      Neutral
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Primary 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-object-status fd-object-status--negative"
   >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-negative fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--negative"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-negative fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Negative
-      </span>
+      Negative
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--critical"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-critical fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--critical"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-critical fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Critical
-      </span>
+      Critical
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--positive"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--status-positive fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--positive"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--status-positive fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Positive
-      </span>
+      Positive
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--informative"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--hint fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status fd-object-status--informative"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--hint fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Info
-      </span>
+      Info
     </span>
+  </span>
+  <span
+    className="fd-object-status"
+  >
+    <i
+      aria-hidden={true}
+      className="sap-icon--to-be-reviewed fd-object-status__icon"
+      role="img"
+    />
     <span
-      className="fd-object-status"
+      className="fd-object-status__text"
     >
-      <i
-        aria-hidden={true}
-        className="sap-icon--to-be-reviewed fd-object-status__icon"
-        role="img"
-      />
-      <span
-        className="fd-object-status__text"
-      >
-        Neutral
-      </span>
+      Neutral
     </span>
-  </div>
+  </span>
 </div>
 `;
 
 exports[`Storyshots Component API/Object Display Components/ObjectStatus Text Only 1`] = `
 <div
-  dir="ltr"
+  className="fddocs-container"
 >
-  <div
-    className="fddocs-container"
+  <span
+    className="fd-object-status fd-object-status--negative"
   >
     <span
-      className="fd-object-status fd-object-status--negative"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Negative
-      </span>
+      Negative
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--critical"
+  >
     <span
-      className="fd-object-status fd-object-status--critical"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Critical
-      </span>
+      Critical
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--positive"
+  >
     <span
-      className="fd-object-status fd-object-status--positive"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Positive
-      </span>
+      Positive
     </span>
+  </span>
+  <span
+    className="fd-object-status fd-object-status--informative"
+  >
     <span
-      className="fd-object-status fd-object-status--informative"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Info
-      </span>
+      Info
     </span>
+  </span>
+  <span
+    className="fd-object-status"
+  >
     <span
-      className="fd-object-status"
+      className="fd-object-status__text"
     >
-      <span
-        className="fd-object-status__text"
-      >
-        Neutral
-      </span>
+      Neutral
     </span>
-  </div>
+  </span>
 </div>
 `;

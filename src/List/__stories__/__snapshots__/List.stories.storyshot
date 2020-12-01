@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Component API/List Action List 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Cart (4 items)
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
@@ -116,25 +114,23 @@ exports[`Storyshots Component API/List Action List 1`] = `
         Checkout
       </button>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Company ©
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Byline 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Order Summary (4 items)
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--byline"
@@ -230,25 +226,23 @@ exports[`Storyshots Component API/List Byline 1`] = `
         </div>
       </div>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Updated 3 minutes ago
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Compact 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Fruits
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--compact"
@@ -299,25 +293,23 @@ exports[`Storyshots Component API/List Compact 1`] = `
         Grape
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Updated 3 minutes ago
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Dev 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Developer's List
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
@@ -340,18 +332,18 @@ exports[`Storyshots Component API/List Dev 1`] = `
         List Item 1
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     List Footer
-  </span>
+  </span>,
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Selectable Checkout options
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--selection fd-list--navigation fd-list--navigation-indication"
@@ -460,25 +452,23 @@ exports[`Storyshots Component API/List Dev 1`] = `
         Less packaging
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Company ©
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Icons Left 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Settings
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
@@ -549,20 +539,18 @@ exports[`Storyshots Component API/List Icons Left 1`] = `
         Order History
       </span>
     </li>
-  </ul>
-</div>
+  </ul>,
+]
 `;
 
 exports[`Storyshots Component API/List Icons Right 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Settings
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
@@ -633,20 +621,18 @@ exports[`Storyshots Component API/List Icons Right 1`] = `
         role="img"
       />
     </li>
-  </ul>
-</div>
+  </ul>,
+]
 `;
 
 exports[`Storyshots Component API/List Navigation List 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Quick links
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
@@ -721,83 +707,77 @@ exports[`Storyshots Component API/List Navigation List 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Company ©
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List No Styles 1`] = `
-<div
-  dir="ltr"
+<ul
+  aria-labelledby={null}
+  className="xxx-list"
+  id="fd-mocked-short-id-list"
+  role="list"
 >
-  <ul
-    aria-labelledby={null}
-    className="xxx-list"
-    id="fd-mocked-short-id-list"
-    role="list"
+  <li
+    className="xxx-list__item"
+    onClick={[Function]}
+    tabIndex="0"
   >
-    <li
-      className="xxx-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+    <span
+      className="xxx-list__title"
     >
-      <span
-        className="xxx-list__title"
-      >
-        Apple
-      </span>
-    </li>
-    <li
-      className="xxx-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+      Apple
+    </span>
+  </li>
+  <li
+    className="xxx-list__item"
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <span
+      className="xxx-list__title"
     >
-      <span
-        className="xxx-list__title"
-      >
-        Banana
-      </span>
-    </li>
-    <li
-      className="xxx-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+      Banana
+    </span>
+  </li>
+  <li
+    className="xxx-list__item"
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <span
+      className="xxx-list__title"
     >
-      <span
-        className="xxx-list__title"
-      >
-        Durian
-      </span>
-    </li>
-    <li
-      className="xxx-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+      Durian
+    </span>
+  </li>
+  <li
+    className="xxx-list__item"
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <span
+      className="xxx-list__title"
     >
-      <span
-        className="xxx-list__title"
-      >
-        Grape
-      </span>
-    </li>
-  </ul>
-</div>
+      Grape
+    </span>
+  </li>
+</ul>
 `;
 
 exports[`Storyshots Component API/List Partial Navigation 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Cart (3 items)
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--navigation fd-list--navigation-indication"
@@ -871,25 +851,23 @@ exports[`Storyshots Component API/List Partial Navigation 1`] = `
         </span>
       </a>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Updated 3 minutes ago
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Secondary Text 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Order Receipt (4 items)
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
@@ -960,7 +938,7 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
         Quantity: 1
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
@@ -976,20 +954,18 @@ exports[`Storyshots Component API/List Secondary Text 1`] = `
     >
       7
     </span>
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Selection 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Checkout options
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--selection fd-list--navigation fd-list--navigation-indication"
@@ -1098,83 +1074,77 @@ exports[`Storyshots Component API/List Selection 1`] = `
         Less packaging
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Company ©
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List Simple List 1`] = `
-<div
-  dir="ltr"
+<ul
+  aria-labelledby={null}
+  className="fd-list"
+  id="fd-mocked-short-id-list"
+  role="list"
 >
-  <ul
-    aria-labelledby={null}
-    className="fd-list"
-    id="fd-mocked-short-id-list"
-    role="list"
+  <li
+    className="fd-list__item"
+    onClick={[Function]}
+    tabIndex="0"
   >
-    <li
-      className="fd-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+    <span
+      className="fd-list__title"
     >
-      <span
-        className="fd-list__title"
-      >
-        Apple
-      </span>
-    </li>
-    <li
-      className="fd-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+      Apple
+    </span>
+  </li>
+  <li
+    className="fd-list__item"
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <span
+      className="fd-list__title"
     >
-      <span
-        className="fd-list__title"
-      >
-        Banana
-      </span>
-    </li>
-    <li
-      className="fd-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+      Banana
+    </span>
+  </li>
+  <li
+    className="fd-list__item"
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <span
+      className="fd-list__title"
     >
-      <span
-        className="fd-list__title"
-      >
-        Durian
-      </span>
-    </li>
-    <li
-      className="fd-list__item"
-      onClick={[Function]}
-      tabIndex="0"
+      Durian
+    </span>
+  </li>
+  <li
+    className="fd-list__item"
+    onClick={[Function]}
+    tabIndex="0"
+  >
+    <span
+      className="fd-list__title"
     >
-      <span
-        className="fd-list__title"
-      >
-        Grape
-      </span>
-    </li>
-  </ul>
-</div>
+      Grape
+    </span>
+  </li>
+</ul>
 `;
 
 exports[`Storyshots Component API/List with Header and Footer 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h6
     className="fd-title fd-title--h2 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Fruits
-  </h6>
+  </h6>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list"
@@ -1225,25 +1195,23 @@ exports[`Storyshots Component API/List with Header and Footer 1`] = `
         Grape
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Updated 3 minutes ago
-  </span>
-</div>
+  </span>,
+]
 `;
 
 exports[`Storyshots Component API/List with no borders 1`] = `
-<div
-  dir="ltr"
->
+Array [
   <h4
     className="fd-title fd-title--h4 fd-list__group-header"
     id="fd-mocked-short-id-header"
   >
     Fruits
-  </h4>
+  </h4>,
   <ul
     aria-labelledby="fd-mocked-short-id-header"
     className="fd-list fd-list--no-border"
@@ -1294,11 +1262,11 @@ exports[`Storyshots Component API/List with no borders 1`] = `
         Grape
       </span>
     </li>
-  </ul>
+  </ul>,
   <span
     className="fd-list__footer"
   >
     Updated 3 minutes ago
-  </span>
-</div>
+  </span>,
+]
 `;
