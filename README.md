@@ -4,8 +4,8 @@
 [![npm version](https://badge.fury.io/js/fundamental-react.svg)](//www.npmjs.com/package/fundamental-react)
 [![Minified Size](https://badgen.net/bundlephobia/min/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)	
 [![Minzipped Size](https://badgen.net/bundlephobia/minzip/fundamental-react)](https://bundlephobia.com/result?p=fundamental-react)
-[![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=master)](https://travis-ci.org/SAP/fundamental-react)
-[![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=master)](https://coveralls.io/github/SAP/fundamental-react?branch=master)
+[![Build Status](https://travis-ci.org/SAP/fundamental-react.svg?branch=main)](https://travis-ci.org/SAP/fundamental-react)
+[![Coverage Status](https://coveralls.io/repos/github/SAP/fundamental-react/badge.svg?branch=main)](https://coveralls.io/github/SAP/fundamental-react?branch=main)
 [![Slack](https://img.shields.io/badge/slack-ui--fundamentals-blue.svg?logo=slack)](https://join.slack.com/t/ui-fundamentals/shared_invite/enQtNTIzOTU0Mzc2NTc5LWQzZWI5MWFhYjE5OTc4YzliN2JhOTc1ZjQxZTg1YjZiMWZiYzRkNjMwYzgyMmFkYmNhZDVjMWE5MDIzOWEzMmM)
 
 <a href="https://www.netlify.com">
@@ -91,7 +91,7 @@ All styles are based on `rem` units. Include the following in your CSS to ensure
 
 The `fundamental-react` library follows [Semantic Versioning](https://semver.org/). These components strictly adhere to the `[MAJOR].[MINOR].[PATCH]` numbering system (also known as `[BREAKING].[FEATURE].[FIX]`).
 
-Merges to the `master` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ `[MAJOR].[MINOR].[PATCH]-rc.[RC]`).
+Merges to the `main` branch will be published as a prerelease. Prereleases will include an **rc** version (_e.g._ `[MAJOR].[MINOR].[PATCH]-rc.[RC]`).
 
 The following circumstances will be considered a **BREAKING** change:
 * A component’s existing API is altered (with the exception of additions)
@@ -153,7 +153,7 @@ If you encounter an issue or want to request a feature, you can [create an issue
 
 ## Contributing
 
-If you want to contribute, please check the [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/master/.github/CONTRIBUTING.md). Also see our [Developer Guide to Getting Started](https://github.com/SAP/fundamental-react/wiki/Developer-Guide).
+If you want to contribute, please check the [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/main/.github/CONTRIBUTING.md). Also see our [Developer Guide to Getting Started](https://github.com/SAP/fundamental-react/wiki/Developer-Guide).
 
 ## Similar Projects
 
