@@ -53,4 +53,4 @@ Components also have visual regression tests enabled. [Learn how to add to our t
 1.  Follow the link posted by the CLA assistant to your pull request and accept it, as described above.
 1.  Wait for our code review and approval. We may ask you for additional commits, or make changes to your pull request ourselves.
     - Note that the Fundamental-react developers also have their regular duties so, depending on the required effort for reviewing, testing, and clarification, this may take a while.
-1.  Once the change has been approved, an admin will merge the pull request into master on your behalf. You can then delete the now obsolete branch.
+1.  Once the change has been approved, an admin will merge the pull request into main on your behalf. You can then delete the now obsolete branch.

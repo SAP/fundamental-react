@@ -15,20 +15,22 @@ jobs:
   -
     script: npm run test:storybook
   - stage: Pre-release
-    if: branch = master AND type != pull_request
+    if: branch = main AND type != pull_request
     before_deploy:
-    - git checkout master
+    - git checkout main
     - bash ./ci-scripts/setup-npm.sh
     deploy:
     - provider: script
       script: bash ./ci-scripts/publish-rc.sh
       skip_cleanup: true
+      on:
+        all_branches: true
   - stage: Release
     if: branch = tmp_branch_for_automated_release_do_not_use
     before_deploy:
     - git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
     - git fetch
-    - git checkout master
+    - git checkout main
     - bash ./ci-scripts/setup-npm.sh
     deploy:
     - provider: script

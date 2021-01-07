@@ -10,4 +10,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Hello @${{ github.actor }}, thank you for using fundamental-react! The fundamental-react team will triage your issue as soon as possible.'
-        pr-message: 'Hello @${{ github.actor }} , thank you submitting a pull request! Please make sure you have followed our [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/master/.github/CONTRIBUTING.md).'
+        pr-message: 'Hello @${{ github.actor }} , thank you submitting a pull request! Please make sure you have followed our [Contribution Guidelines](https://github.com/SAP/fundamental-react/blob/main/.github/CONTRIBUTING.md).'
