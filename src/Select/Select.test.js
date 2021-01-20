@@ -329,7 +329,7 @@ describe('<Select />', () => {
             expect(blurSpy).toHaveBeenCalledTimes(0);
         });
 
-        test('should select the "selectedKey" when it or "options" prop change', async() => {
+        test('should select the "selectedKey" when it or "options" prop change', () => {
             const wrapper = setup({
                 selectedKey: '4'
             });
