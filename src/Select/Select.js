@@ -8,7 +8,7 @@ import List from '../List/List';
 import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/withStyles';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import buttonStyles from 'fundamental-styles/dist/button.css';
 import listStyles from 'fundamental-styles/dist/list.css';
 import selectStyles from 'fundamental-styles/dist/select.css';
@@ -55,6 +55,10 @@ const Select = React.forwardRef(({
     const ulRef = useRef(null);
 
     let [selectedOptionKey, setSelectedOptionKey] = useState(selectedKey);
+
+    useEffect(() => {
+        setSelectedOptionKey(selectedKey);
+    }, [selectedKey, options]);
 
     const handleClick = (e) => {
         if (!disabled && !readOnly) {

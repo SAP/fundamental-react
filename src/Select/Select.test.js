@@ -328,6 +328,28 @@ describe('<Select />', () => {
 
             expect(blurSpy).toHaveBeenCalledTimes(0);
         });
+
+        test('should select the "selectedKey" when it or "options" prop change', () => {
+            const wrapper = setup({
+                selectedKey: '4'
+            });
+
+            wrapper.setProps({
+                options: [
+                    ...options,
+                    { key: '5', text: 'List Item 5' }
+                ],
+                selectedKey: '5'
+            });
+
+            expect(wrapper.find('span.fd-select__text-content').getDOMNode().innerHTML).toBe('List Item 5');
+
+            wrapper.setProps({
+                selectedKey: '1'
+            });
+
+            expect(wrapper.find('span.fd-select__text-content').getDOMNode().innerHTML).toBe('List Item 1');
+        });
     });
 
     test('forwards the ref to the div role="button"', () => {

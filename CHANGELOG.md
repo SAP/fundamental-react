@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0-rc.15](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.14...v0.14.0-rc.15) (2021-01-20)
+
+
+### Bug Fixes
+
+* Select selectedKey behavior ([#1290](https://github.com/SAP/fundamental-react/issues/1290)) ([564ae80](https://github.com/SAP/fundamental-react/commit/564ae80f12059d5fd474fbbe6e39ccaa8c23d3cb))
+
 ## [0.14.0-rc.14](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.13...v0.14.0-rc.14) (2021-01-07)
 
 ## [0.14.0-rc.13](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.12...v0.14.0-rc.13) (2021-01-07)
