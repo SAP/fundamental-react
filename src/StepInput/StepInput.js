@@ -123,6 +123,7 @@ const StepInput = React.forwardRef(({
                 id={inputId}
                 onChange={onChangeInputValue}
                 placeholder={placeholder}
+                readOnly={readOnly}
                 value={inputValue} />
             <Button
                 aria-label={localizedText.stepUpLabel}
