@@ -1,0 +1,40 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "10:00"
+    timezone: Etc/UCT
+  ignore:
+  - dependency-name: react-dev-utils
+    versions:
+    - ">= 8.a, < 9"
+  - dependency-name: serve
+    versions:
+    - ">= 11.a, < 12"
+  - dependency-name: size-limit
+    versions:
+    - ">= 2.a, < 3"
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: tabbable
+    versions:
+    - 5.1.5
+    - 5.1.6
+  - dependency-name: eslint-plugin-local-rules
+    versions:
+    - 1.0.1
+  - dependency-name: standard-version
+    versions:
+    - 9.1.0
+  - dependency-name: fundamental-styles
+    versions:
+    - 0.15.0
+  - dependency-name: eslint-plugin-react
+    versions:
+    - 7.22.0
+  - dependency-name: "@popperjs/core"
+    versions:
+    - 2.6.0
