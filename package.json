@@ -32,7 +32,6 @@
     "size": "npm run build && size-limit",
     "size:debug": "npm run build && size-limit --why",
     "start": "npm run storybook",
-    "std-version": "standard-version --releaseCommitMessageFormat \"chore(release): version {{currentTag}} build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
     "storybook": "npm run build:storybook && start-storybook -p 12123 -s .storybook/static/,node_modules/@sap-theming --no-dll",
     "storybook:ci": "npm run storybook -- --ci --quiet",
     "storybook:static": "rimraf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs --no-dll",
@@ -43,7 +42,13 @@
     "test": "npm run test:dev -- --watch",
     "test:storybook:setup": "npm run build:storybook && cross-env BABEL_ENV=test jest --no-cache --config=./storybook-testing/jest.config.js",
     "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
-    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rimraf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'"
+    "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rimraf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'",
+    "prepare": "husky install",
+    "version": "npm run changelog && npm run git-add",
+    "version.rc": "npm version prerelease --preid=rc -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
+    "version.patch": "npm version patch -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
+    "git-add": "git add -A",
+    "changelog": "conventional-changelog -i ./CHANGELOG.md -s -p angular -r 0"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
@@ -73,6 +78,9 @@
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/travis-cli": "^12.1.4",
     "@pxblue/storybook-rtl-addon": "^1.0.0",
     "@sap-theming/theming-base-content": "^11.1.23",
     "@size-limit/preset-big-lib": "^4.9.0",
@@ -97,6 +105,7 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
     "babel-preset-react-app": "^10.0.0",
+    "conventional-changelog-cli": "^2.1.1",
     "core-js": "^3.7.0",
     "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
@@ -115,10 +124,10 @@
     "fs-extra": "^9.0.1",
     "gh-pages": "^3.1.0",
     "github-assistant": "^0.3.1-rc.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "jest-puppeteer": "^4.4.0",
     "node-sass": "^5.0.0",
-    "pre-commit": "^1.2.2",
     "prettier": "^2.2.0",
     "puppeteer": "^5.5.0",
     "react": "^17.0.1",
@@ -129,7 +138,6 @@
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.0",
     "size-limit": "^4.9.0",
-    "standard-version": "^9.0.0",
     "start-server-and-test": "^1.11.6",
     "story-description-loader": "^1.0.0",
     "style-loader": "^2.0.0",
@@ -143,13 +151,6 @@
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.1",
     "react-dom": "^16.8.0 || ^17.0.1"
-  },
-  "pre-commit": {
-    "colors": true,
-    "run": [
-      "lint:pre-commit"
-    ],
-    "silent": false
   },
   "browserslist": [
     "last 2 versions",
