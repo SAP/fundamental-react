@@ -114,6 +114,7 @@ const Button = React.forwardRef(({
                 className={buttonClasses}
                 onClick={onClickHandler}
                 ref={ref}
+                style={{ backgroundColor: 'hotpink' }}
                 type={typeAttr}>
                 {iconBeforeText && renderIcon()}
                 {children && <span className={buttonTextClasses}>{children}</span>}
