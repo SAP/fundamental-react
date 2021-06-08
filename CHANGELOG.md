@@ -1,3 +1,6 @@
+
+## [0.14.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.25...v0.14.0-rc.26) (2021-06-08)
+
 # [0.14.0-rc.25](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.24...v0.14.0-rc.25) (2021-06-04)
 
 
@@ -4047,6 +4050,3 @@ feat:
 
 
 ## 0.0.2 (2018-10-25)
-
-
-
