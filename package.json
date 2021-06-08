@@ -44,11 +44,7 @@
     "test:storybook": "server-test storybook:ci http-get://localhost:12123 test:storybook:setup",
     "test:storybook:update": "server-test storybook:ci http-get://localhost:12123 'rimraf storybook-testing/__image_snapshots__/* && npm run test:storybook:setup -- --updateSnapshot'",
     "prepare": "husky install",
-    "version": "npm run changelog && npm run git-add",
-    "version.rc": "npm version prerelease --preid=rc -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
-    "version.patch": "npm version patch -m \"chore(release): version %s build ${TRAVIS_BUILD_NUMBER} [ci skip]\"",
-    "git-add": "git add -A",
-    "changelog": "conventional-changelog -i ./CHANGELOG.md -s -p angular -r 0"
+    "std-version": "standard-version --infile ./CHANGELOG.md --releaseCommitMessageFormat \"chore(release): version {{currentTag}} build ${TRAVIS_BUILD_NUMBER} [ci skip]\" --header \"\""
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
@@ -105,7 +101,6 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.23",
     "babel-preset-react-app": "^10.0.0",
-    "conventional-changelog-cli": "^2.1.1",
     "core-js": "^3.7.0",
     "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
@@ -137,6 +132,7 @@
     "react-test-renderer": "^17.0.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.0",
+    "standard-version": "9.3.0",
     "size-limit": "^4.9.0",
     "start-server-and-test": "^1.11.6",
     "story-description-loader": "^1.0.0",
