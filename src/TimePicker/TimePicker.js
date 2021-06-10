@@ -163,6 +163,11 @@ class TimePicker extends Component {
             </div>
         );
     }
+    componentDidUpdate(prevProps) {
+        if (prevProps.value !== this.props.value) {
+            this.updateValue(this.props.value);
+        }
+    }
 }
 
 TimePicker.displayName = 'TimePicker';
