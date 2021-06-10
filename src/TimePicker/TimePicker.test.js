@@ -312,4 +312,11 @@ describe('<TimePicker />', () => {
             ).toBe('Sample');
         });
     });
+    test('check for props value change', () => {
+        let wrapper = mount(defaultTimePicker);
+        wrapper = wrapper.setProps({
+            value: '10:30:38 pm'
+        });
+        expect(wrapper.children().state('value')).toEqual('10:30:38 pm');
+    });
 });
