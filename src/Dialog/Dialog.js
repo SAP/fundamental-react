@@ -69,6 +69,7 @@ class Dialog extends Component {
             subheader,
             titleProps,
             title,
+            whiteListForFocusLock
             ...rest
         } = this.props;
 
@@ -102,7 +103,7 @@ class Dialog extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock as='div' className={backdropClassName}
+            <FocusLock as='div' className={backdropClassName} whiteList={whiteListForFocusLock}
                 lockProps={{ ...rest }}>
                 <span data-autofocus tabIndex='-1' />
                 <div
@@ -191,6 +192,7 @@ Dialog.propTypes = {
     size: PropTypes.oneOf(DIALOG_SIZES),
     /** Text for the components subheader */
     subheader: PropTypes.string,
+    whiteListForFocusLock: PropTypes.node,
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     /** Callback function; triggered when dialog closes either due to `Escape` keydown or any of the actions' `onClick`.
