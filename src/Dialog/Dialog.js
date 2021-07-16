@@ -69,7 +69,7 @@ class Dialog extends Component {
             subheader,
             titleProps,
             title,
-            allowLockFocusList,
+            allowListForLockFocus,
             ...rest
         } = this.props;
 
@@ -105,7 +105,7 @@ class Dialog extends Component {
         return ReactDOM.createPortal(
             <FocusLock as='div' className={backdropClassName}
                 lockProps={{ ...rest }}
-                whiteList={allowLockFocusList}>
+                whiteList={allowListForLockFocus}>
                 <span data-autofocus tabIndex='-1' />
                 <div
                     aria-label={title}
@@ -167,8 +167,8 @@ Dialog.propTypes = {
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
     /** Localized text for the heading */
     title: PropTypes.string.isRequired,
-    /** allow lock focus for specific list in dialog */
-    allowLockFocusList: PropTypes.node,
+    /** Specific list of node to lock the focus*/
+    allowListForLockFocus: PropTypes.node,
     /** CSS class(es) to add to the dialog backdrop */
     backdropClassName: PropTypes.string,
     /** Additional props to be spread to the body section of the dialog */
