@@ -192,6 +192,7 @@ Dialog.propTypes = {
     size: PropTypes.oneOf(DIALOG_SIZES),
     /** Text for the components subheader */
     subheader: PropTypes.string,
+    /** give focus lock a white list area */
     whiteListForFocusLock: PropTypes.node,
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
