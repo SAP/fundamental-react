@@ -103,8 +103,9 @@ class Dialog extends Component {
         }
 
         return ReactDOM.createPortal(
-            <FocusLock as='div' className={backdropClassName} whiteList={allowLockFocusList}
-                lockProps={{ ...rest }}>
+            <FocusLock as='div' className={backdropClassName}
+                lockProps={{ ...rest }}
+                whiteList={allowLockFocusList}>
                 <span data-autofocus tabIndex='-1' />
                 <div
                     aria-label={title}
@@ -166,6 +167,8 @@ Dialog.propTypes = {
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
     /** Localized text for the heading */
     title: PropTypes.string.isRequired,
+    /** allow lock focus for specific list in dialog */
+    allowLockFocusList: PropTypes.node,
     /** CSS class(es) to add to the dialog backdrop */
     backdropClassName: PropTypes.string,
     /** Additional props to be spread to the body section of the dialog */
@@ -192,8 +195,6 @@ Dialog.propTypes = {
     size: PropTypes.oneOf(DIALOG_SIZES),
     /** Text for the components subheader */
     subheader: PropTypes.string,
-    /** allow lock focus for specific list in dialog */
-    allowLockFocusList: PropTypes.node,
     /**Additional props to be spread to the title\'s heading element */
     titleProps: PropTypes.object,
     /** Callback function; triggered when dialog closes either due to `Escape` keydown or any of the actions' `onClick`.
