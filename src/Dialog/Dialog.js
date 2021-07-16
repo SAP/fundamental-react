@@ -69,7 +69,7 @@ class Dialog extends Component {
             subheader,
             titleProps,
             title,
-            allowLockFocusList
+            allowLockFocusList,
             ...rest
         } = this.props;
 
