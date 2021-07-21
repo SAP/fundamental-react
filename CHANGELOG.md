@@ -1,4 +1,11 @@
 
+## [0.14.0-rc.28](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.27...v0.14.0-rc.28) (2021-07-21)
+
+
+### Bug Fixes
+
+* allow lock focus for specific list  ([#1340](https://github.com/SAP/fundamental-react/issues/1340)) ([2b73876](https://github.com/SAP/fundamental-react/commit/2b73876ec78b6bb165728d1fca86b1a0532117e3))
+
 ## [0.14.0-rc.27](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.26...v0.14.0-rc.27) (2021-06-13)
 
 ## [0.14.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.25...v0.14.0-rc.26) (2021-06-08)
