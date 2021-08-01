@@ -132,7 +132,7 @@
     "react-test-renderer": "^17.0.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^10.1.0",
-    "standard-version": "9.3.0",
+    "standard-version": "9.3.1",
     "size-limit": "^4.9.0",
     "start-server-and-test": "^1.11.6",
     "story-description-loader": "^1.0.0",
