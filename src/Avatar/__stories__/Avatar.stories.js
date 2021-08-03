@@ -7,7 +7,7 @@ export default {
     component: Avatar
 };
 
-export const primary = () => (<Avatar glyph='cart' size='m' />);
+export const primary = () => (<Avatar glyph='cart' size='xl' />);
 
 export const sizes = () => (
     <div className='fddocs-container'>
