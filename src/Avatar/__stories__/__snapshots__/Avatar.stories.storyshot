@@ -377,7 +377,7 @@ exports[`Storyshots Component API/Avatar Placeholder 1`] = `
 
 exports[`Storyshots Component API/Avatar Primary 1`] = `
 <span
-  className="fd-avatar fd-avatar--m"
+  className="fd-avatar fd-avatar--xl"
   role="presentation"
 >
   <i
