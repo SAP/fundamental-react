@@ -15,7 +15,8 @@ function Wizard({
     className,
     cssNamespace
 }) {
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    // const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedIndex] = useState(0);
     const wizardClasses = classnames(
         `${cssNamespace}-wizard`,
         className,
@@ -119,6 +120,6 @@ function Wizard({
 Wizard.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string
-}
+};
 
 export default withStyles(Wizard);
