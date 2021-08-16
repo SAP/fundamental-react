@@ -1,9 +1,9 @@
+import React from 'react';
 import classnamesBind from 'classnames/bind';
 import { FORM_MESSAGE_TYPES } from '../utils/constants';
 import FormItem from './FormItem';
 import FormLabel from './FormLabel';
 import PropTypes from 'prop-types';
-import React from 'react';
 import useUniqueId from '../utils/useUniqueId';
 import withStyles from '../utils/withStyles';
 import styles from 'fundamental-styles/dist/radio.css';
