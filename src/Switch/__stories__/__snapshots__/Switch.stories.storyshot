@@ -9,10 +9,10 @@ Array [
     Switch label
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch"
+      className="fd-switch__control"
     >
       <input
         aria-checked={true}
@@ -23,7 +23,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -48,10 +48,10 @@ Array [
     Switch label
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch fd-switch--compact"
+      className="fd-switch__control fd-switch--compact"
     >
       <input
         aria-checked={false}
@@ -62,7 +62,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -87,10 +87,10 @@ Array [
     label
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch"
+      className="fd-switch__control"
     >
       <input
         aria-checked={false}
@@ -102,7 +102,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -137,10 +137,10 @@ Array [
     Switch label
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch"
+      className="fd-switch__control"
     >
       <input
         aria-checked={false}
@@ -152,7 +152,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -177,7 +177,7 @@ Array [
     Show Internal Labels
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
       aria-live="polite"
@@ -186,7 +186,7 @@ Array [
       off
     </span>
     <span
-      className="fd-switch"
+      className="fd-switch__control"
     >
       <input
         aria-checked={false}
@@ -197,7 +197,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -227,7 +227,7 @@ Array [
     Show Internal Labels and Icons
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
       aria-live="polite"
@@ -236,7 +236,7 @@ Array [
       off
     </span>
     <span
-      className="fd-switch fd-switch--semantic"
+      className="fd-switch__control fd-switch--semantic"
     >
       <input
         aria-checked={false}
@@ -247,7 +247,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -282,10 +282,10 @@ Array [
     Switch label
   </label>,
   <label
-    className="xxx-switch__label"
+    className="xxx-switch"
   >
     <span
-      className="xxx-switch"
+      className="xxx-switch__control"
     >
       <input
         aria-checked={false}
@@ -296,7 +296,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="xxx-switch__wrapper"
+        className="xxx-switch__slider"
       >
         <div
           className="xxx-switch__track"
@@ -321,10 +321,10 @@ Array [
     Switch label
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch"
+      className="fd-switch__control"
     >
       <input
         aria-checked={false}
@@ -335,7 +335,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -360,10 +360,10 @@ Array [
     Switch label
   </label>,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch fd-switch--semantic"
+      className="fd-switch__control fd-switch--semantic"
     >
       <input
         aria-checked={false}
@@ -374,46 +374,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
-      >
-        <div
-          className="fd-switch__track"
-        >
-          <span
-            className="fd-switch__handle"
-            role="presentation"
-          />
-        </div>
-      </div>
-    </span>
-  </label>,
-]
-`;
-
-exports[`Storyshots Component API/Switch With Icons 1`] = `
-Array [
-  <label
-    className="fd-form-label"
-    onKeyDown={[Function]}
-  >
-    Switch label
-  </label>,
-  <label
-    className="fd-switch__label"
-  >
-    <span
-      className="fd-switch"
-    >
-      <input
-        aria-checked={false}
-        aria-label="Switch"
-        checked={false}
-        className="fd-switch__input"
-        onChange={[Function]}
-        type="checkbox"
-      />
-      <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"
@@ -446,10 +407,10 @@ Array [
     onKeyDown={[Function]}
   />,
   <label
-    className="fd-switch__label"
+    className="fd-switch"
   >
     <span
-      className="fd-switch"
+      className="fd-switch__control"
     >
       <input
         aria-checked={false}
@@ -460,7 +421,7 @@ Array [
         type="checkbox"
       />
       <div
-        className="fd-switch__wrapper"
+        className="fd-switch__slider"
       >
         <div
           className="fd-switch__track"

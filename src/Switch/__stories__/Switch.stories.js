@@ -27,7 +27,10 @@ export const compact = () => (
 export const disabled = () => (
     <Switch disabled>Switch label</Switch>
 );
-export const withIcons = () => (
+export const withNoLabel = () => (
+    <Switch />
+);
+export const semantic = () => (
     <Switch internalLabels={{
         checked: {
             text: 'on',
@@ -37,15 +40,8 @@ export const withIcons = () => (
             text: 'off',
             glyph: 'decline'
         }
-    }}>Switch label</Switch>
+    }} semantic>Switch label</Switch>
 );
-export const semantic = () => (
-    <Switch semantic>Switch label</Switch>
-);
-export const withNoLabel = () => (
-    <Switch />
-);
-
 export const internalLabels = () => (
     <>
         <Switch
