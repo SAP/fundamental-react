@@ -6,16 +6,33 @@ import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
 
+const CONNECTOR_TYPES = [
+    'none',
+    'default',
+    'active',
+    'branching'
+];
+
+const STEP_MODIFIERS = [
+    'completed',
+    'current',
+    'upcoming',
+    'no-label',
+    'stacked',
+    'stacked-top',
+    'active'
+];
+
 function WizardStep({
+    connector,
     cssNamespace,
+    modifiers,
     optional,
     title
 }) {
-    const state = 'completed';
-
     const stepClasses = classnames(
         `${cssNamespace}-wizard__step`,
-        `${cssNamespace}-wizard__step--${state}`
+        modifiers.map(modifier => `${cssNamespace}-wizard__step--${modifier}`),
     );
 
     const labelContainerClasses = classnames(
@@ -24,6 +41,14 @@ function WizardStep({
             [`${cssNamespace}-wizard__label-container--optional`]: optional
         }
     );
+
+    const connectorClasses = classnames(
+        `${cssNamespace}-wizard__connector`,
+        {
+            [`${cssNamespace}-wizard__connector--${connector}`]: connector !== 'default'
+        }
+    );
+
     return (
         <li className={stepClasses}>
             <div className={classnames(`${cssNamespace}-wizard__step-wrapper`)}>
@@ -38,7 +63,7 @@ function WizardStep({
                         {optional && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>(Optional)</span>}
                     </div>
                 </a>
-                <span className={classnames(`${cssNamespace}-wizard__connector`, `${cssNamespace}-wizard__connector--active`)} />
+                {connector !== 'none' && <span className={connectorClasses} />}
             </div>
         </li>
     );
@@ -49,7 +74,13 @@ WizardStep.propTypes = {
 
     children: PropTypes.node,
     className: PropTypes.string,
+    connector: PropTypes.oneOf(CONNECTOR_TYPES),
+    modifiers: PropTypes.arrayOf(PropTypes.oneOf(STEP_MODIFIERS)),
     optional: PropTypes.bool
+};
+
+WizardStep.defaultProps = {
+    modifiers: []
 };
 
 export default withStyles(WizardStep);

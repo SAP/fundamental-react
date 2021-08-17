@@ -9,10 +9,13 @@ export default {
 export const primary = () => {
     return (
         <Wizard>
-            <WizardStep title='Step 1: Foo'>
+            <WizardStep modifiers={['completed']} title='Step 1: Foo'>
                 Lorem ipsum dolor sit amet.
             </WizardStep>
-            <WizardStep title='Step 2: Bar'>
+            <WizardStep modifiers={['current']} title='Step 2: Bar'>
+                Blah blah blah.
+            </WizardStep>
+            <WizardStep modifiers={['upcoming']} title='Step 3: Baz'>
                 Blah blah blah.
             </WizardStep>
         </Wizard>

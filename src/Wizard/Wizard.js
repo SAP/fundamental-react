@@ -10,30 +10,70 @@ import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
 
+const WIZARD_SIZES = ['s', 'm', 'l', 'xl'];
+
 function Wizard({
+    branching,
     children,
     className,
-    cssNamespace
+    contentSize,
+    cssNamespace,
+    headerSize,
+    size
 }) {
+    const stepCount = React.Children.toArray(children).length;
     // const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedIndex] = useState(0);
+
     const wizardClasses = classnames(
         `${cssNamespace}-wizard`,
         className,
     );
 
+    const progressBarClasses = classnames({
+        [`${cssNamespace}-wizard__progress-bar`]: true,
+        [`${cssNamespace}-wizard__progress-bar--${headerSize || size}`]: headerSize || size
+    });
+
+    const contentClasses = classnames({
+        [`${cssNamespace}-fd-wizard__content`]: true,
+        [`${cssNamespace}-fd-wizard__content--${contentSize || size}`]: contentSize || size
+    });
+
+    const connectorType = (child, index) => {
+        if (index === stepCount - 1) {
+            return branching ? 'branching' : 'none';
+        } else if (index === selectedIndex) {
+            return 'active';
+        } else {
+            return 'default';
+        }
+    };
+
+    const handleStepSelection = () => {
+        // console.log('step selected', e);
+        // NOOP
+    };
+
+    const cloneElement = (child, index) => React.cloneElement(child, {
+        onClick: handleStepSelection,
+        selected: selectedIndex === index,
+        index: index,
+        connector: connectorType(child, index)
+    });
+
     return (<>
         <section className={wizardClasses}>
             <nav className={classnames(`${cssNamespace}-wizard__navigation`)}>
-                <ul className={classnames(`${cssNamespace}-wizard__progress-bar`)}>
-                    {children}
+                <ul className={progressBarClasses}>
+                    {React.Children.toArray(children).map(cloneElement)}
                 </ul>
             </nav>
         </section>
         {React.Children.toArray(children).map((child, index) => (
             <section
                 aria-expanded={selectedIndex === index}
-                className={classnames(`${cssNamespace}-fd-wizard__content`)}
+                className={contentClasses}
                 key={index}>
                 {child.props.children}
             </section>
@@ -118,8 +158,12 @@ function Wizard({
 */
 }
 Wizard.propTypes = {
+    branching: PropTypes.bool,
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    contentSize: PropTypes.oneOf(WIZARD_SIZES),
+    headerSize: PropTypes.oneOf(WIZARD_SIZES),
+    size: PropTypes.oneOf(WIZARD_SIZES)
 };
 
 export default withStyles(Wizard);
