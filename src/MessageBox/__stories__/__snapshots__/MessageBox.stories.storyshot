@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/MessageBox Primary 1`] = `
+<button
+  className="fd-button"
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="fd-button__text"
+  >
+    Show Message Box
+  </span>
+</button>
+`;
+
+exports[`Storyshots Component API/MessageBox Sizes 1`] = `
+<div
+  className="fddocs-container"
+>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Small
+    </span>
+  </button>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Medium
+    </span>
+  </button>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Large
+    </span>
+  </button>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Extra Large
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Component API/MessageBox Types 1`] = `
+<div
+  className="fddocs-container"
+>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Confirmation
+    </span>
+  </button>
+  <button
+    className="fd-button fd-button--negative"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Error
+    </span>
+  </button>
+  <button
+    className="fd-button fd-button--positive"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Success
+    </span>
+  </button>
+  <button
+    className="fd-button fd-button--attention"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Warning
+    </span>
+  </button>
+  <button
+    className="fd-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="fd-button__text"
+    >
+      Information
+    </span>
+  </button>
+</div>
+`;

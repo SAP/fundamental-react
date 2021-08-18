@@ -97,10 +97,10 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
           Use custom option renderer
         </label>
         <label
-          className="fd-switch__label"
+          className="fd-switch"
         >
           <span
-            className="fd-switch fd-switch--compact"
+            className="fd-switch__control fd-switch--compact"
           >
             <input
               aria-checked={false}
@@ -111,7 +111,7 @@ exports[`Storyshots Component API/ComboboxInput Dev 1`] = `
               type="checkbox"
             />
             <div
-              className="fd-switch__wrapper"
+              className="fd-switch__slider"
             >
               <div
                 className="fd-switch__track"
