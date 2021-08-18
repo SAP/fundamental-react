@@ -1,4 +1,11 @@
 
+## [0.14.0-rc.29](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.28...v0.14.0-rc.29) (2021-08-18)
+
+
+### Features
+
+* introduce MessageBox and Bar components ([#1356](https://github.com/SAP/fundamental-react/issues/1356)) ([19a663b](https://github.com/SAP/fundamental-react/commit/19a663b19ac2fb39c70beac9921245e05bacecc3))
+
 ## [0.14.0-rc.28](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.27...v0.14.0-rc.28) (2021-07-21)
 
 
