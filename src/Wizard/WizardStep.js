@@ -1,4 +1,5 @@
 import classnamesBind from 'classnames/bind';
+import Icon from '../Icon/Icon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -6,14 +7,14 @@ import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
 
-const CONNECTOR_TYPES = [
+const WIZARD_CONNECTOR_TYPES = [
     'none',
     'default',
     'active',
     'branching'
 ];
 
-const STEP_MODIFIERS = [
+const WIZARD_STEP_MODIFIERS = [
     'completed',
     'current',
     'upcoming',
@@ -25,7 +26,10 @@ const STEP_MODIFIERS = [
 
 function WizardStep({
     connector,
+    className,
     cssNamespace,
+    glyph,
+    index,
     modifiers,
     optional,
     title
@@ -33,21 +37,18 @@ function WizardStep({
     const stepClasses = classnames(
         `${cssNamespace}-wizard__step`,
         modifiers.map(modifier => `${cssNamespace}-wizard__step--${modifier}`),
+        className,
     );
 
-    const labelContainerClasses = classnames(
-        `${cssNamespace}-wizard__label-container`,
-        {
-            [`${cssNamespace}-wizard__label-container--optional`]: optional
-        }
-    );
+    const labelContainerClasses = classnames({
+        [`${cssNamespace}-wizard__label-container`]: true,
+        [`${cssNamespace}-wizard__label-container--optional`]: optional
+    });
 
-    const connectorClasses = classnames(
-        `${cssNamespace}-wizard__connector`,
-        {
-            [`${cssNamespace}-wizard__connector--${connector}`]: connector !== 'default'
-        }
-    );
+    const connectorClasses = classnames({
+        [`${cssNamespace}-wizard__connector`]: true,
+        [`${cssNamespace}-wizard__connector--${connector}`]: connector !== 'default'
+    });
 
     return (
         <li className={stepClasses}>
@@ -56,11 +57,11 @@ function WizardStep({
                     aria-label={title}
                     className={classnames(`${cssNamespace}-wizard__step-container`)}>
                     <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
-                        <i className={classnames(`${cssNamespace}-wizard__icon sap-icon--accept`)} role='presentation' />
+                        {glyph ? <Icon className={classnames(`${cssNamespace}-wizard__icon`)} glyph={glyph} /> : index + 1}
                     </span>
                     <div className={labelContainerClasses}>
                         <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
-                        {optional && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>(Optional)</span>}
+                        {optional && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optional}</span>}
                     </div>
                 </a>
                 {connector !== 'none' && <span className={connectorClasses} />}
@@ -74,13 +75,18 @@ WizardStep.propTypes = {
 
     children: PropTypes.node,
     className: PropTypes.string,
-    connector: PropTypes.oneOf(CONNECTOR_TYPES),
-    modifiers: PropTypes.arrayOf(PropTypes.oneOf(STEP_MODIFIERS)),
-    optional: PropTypes.bool
+    connector: PropTypes.oneOf(WIZARD_CONNECTOR_TYPES),
+    glyph: PropTypes.node,
+    index: PropTypes.number,
+    modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
+    optional: PropTypes.string,
+
+    validator: PropTypes.func
 };
 
 WizardStep.defaultProps = {
-    modifiers: []
+    modifiers: [],
+    validator: () => true
 };
 
 export default withStyles(WizardStep);
