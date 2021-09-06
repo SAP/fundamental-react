@@ -71,6 +71,8 @@ function WizardStep({
 }
 
 WizardStep.propTypes = {
+    key: PropTypes.string.isRequired,
+    nextLabel: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
 
     children: PropTypes.node,
@@ -78,6 +80,7 @@ WizardStep.propTypes = {
     connector: PropTypes.oneOf(WIZARD_CONNECTOR_TYPES),
     glyph: PropTypes.node,
     index: PropTypes.number,
+    /** for internal use only */
     modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
     optional: PropTypes.string,
 

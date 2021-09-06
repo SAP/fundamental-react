@@ -1,13 +1,12 @@
-import Button from '../../Button/Button';
 import Wizard from '../Wizard';
-import WizardFlow from '../WizardFlow';
-import WizardStep from '../WizardStep';
 import React, { useState } from 'react';
 
 export default {
     title: 'Component API/Wizard',
     component: Wizard
 };
+
+/*
 export const primary = () => {
     return (
         <Wizard>
@@ -31,22 +30,31 @@ export const primary = () => {
         </Wizard>
     );
 };
+*/
 
-export const defaultFlow = () => {
-    const [selectedIndex, setSelectedIndex] = useState(0);
+export const primary = () => {
+    const [selectedIndex] = useState(0);
     return (
-        <WizardFlow selectedIndex={selectedIndex}>
-            <WizardStep title='Step 1: Foo'>
+        <Wizard selectedIndex={selectedIndex}>
+            <Wizard.Step
+                key='1'
+                nextLabel='Step 2'
+                title='Step 1: Foo'
+                validator={() => true}>
                 <p>Lorem ipsum dolor sit amet.</p>
-                <Button onClick={() => setSelectedIndex(1)}>Next step</Button>
-            </WizardStep>
-            <WizardStep title='Step 2: Bar'>
+            </Wizard.Step>
+            <Wizard.Step
+                key='2'
+                nextLabel='Step 3'
+                title='Step 2: Bar'>
                 <p>Blah blah blah.</p>
-                <Button onClick={() => setSelectedIndex(2)}>Next step</Button>
-            </WizardStep>
-            <WizardStep title='Step 3: Baz'>
-                <p>Blah blah blah.</p>
-            </WizardStep>
-        </WizardFlow>
+            </Wizard.Step>
+            <Wizard.Step
+                key='3'
+                nextLabel='Complete'
+                title='Step 3: Baz'>
+                <p>Foo bar baz.</p>
+            </Wizard.Step>
+        </Wizard>
     );
 };
