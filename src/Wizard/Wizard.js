@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import withStyles from '../utils/withStyles';
 import WizardStep from './WizardStep';
 
-import React, { cloneElement, useEffect, useState } from 'react';
+// import React, { cloneElement, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from 'fundamental-styles/dist/wizard.css';
 
@@ -20,13 +21,14 @@ const WIZARD_CONTENT_BACKGROUNDS = [
 ];
 
 function Wizard({
-    background,
-    branching,
+    // background,
+    // branching,
     children,
     className,
-    contentSize,
+    // contentSize,
     cssNamespace,
     headerSize,
+    stacked,
     onComplete,
     onStepChange
 }) {
@@ -35,12 +37,12 @@ function Wizard({
     const [selectedIndex, setSelectedIndex] = useState(0);
     // const [selectedStep, setSelectedStep] = useState(null);
 
-    const [stepProps, setStepProps] = useState({});
+    const [stepStatuses, setStepStatuses] = useState({});
 
     const mapStepProps = (child, index) => {
         const key = child.props.key;
         const current = index === selectedIndex;
-        const visited = stepProps[key]?.visited || current;
+        const visited = stepStatuses[key]?.visited || current;
         // const valid = child.props.validator();
 
         return {
@@ -85,7 +87,7 @@ function Wizard({
 
     useEffect(() => {
         // setSteps(inputSteps.map(mapStep));
-        setStepProps(
+        setStepStatuses(
             steps
                 .map(mapStepProps)
                 .reduce((acc, p) => ({ ...acc, [p.key]: p }), {})
@@ -102,12 +104,15 @@ function Wizard({
         [`${cssNamespace}-wizard__progress-bar--${headerSize}`]: headerSize
     });
 
+    /*
     const contentClasses = classnames({
         [`${cssNamespace}-fd-wizard__content`]: true,
         [`${cssNamespace}-fd-wizard__content--${contentSize}`]: contentSize,
         [`${cssNamespace}-fd-wizard__content--${background}`]: background
     });
+    */
 
+    /*
     const connectorType = (child, index) => {
         if (index === stepCount - 1) {
             return branching ? 'branching' : 'none';
@@ -117,7 +122,9 @@ function Wizard({
             return 'default';
         }
     };
+    */
 
+    /*
     // const mapStep = (child, index) => {
         // const thisStepProps = stepProps[child.props.key];
         // const modifiers = [
@@ -134,7 +141,8 @@ function Wizard({
             // // connector: connectorType(child, index)
         // // });
     // };
-    //
+    */
+
     const nextStep = () => {
         if (selectedIndex < stepCount - 1) {
             setSelectedIndex(selectedIndex + 1);
@@ -144,21 +152,46 @@ function Wizard({
         }
     };
 
-    console.log({ steps, selectedIndex, stepProps });
+    const extraStepProps = (step, index) => {
+        const key = step.props.key;
+        const { visited } = stepStatuses[key] || {};
+        const modifiers = {
+            completed: false,
+            current: index === selectedIndex,
+            upcoming: index > selectedIndex,
+            'no-label': false,
+            stacked: stacked && !index === selectedIndex,
+            'stacked-top': stacked && index === selectedIndex - 1,
+            active: visited
+        };
+
+        return {
+            modifiers: Object.entries(modifiers)
+                .filter(([, value]) => !!value)
+                .map(([mkey]) => mkey)
+        };
+    };
+
+    const renderHeader = () =>
+        React.Children.toArray(children).map((child, index) =>
+            React.cloneElement(child, extraStepProps(child, index)));
+
+    // console.log({ steps, selectedIndex, stepProps });
     const currentChild = steps[selectedIndex];
-    const currentChildProps = stepProps[currentChild.props.key];
+    // const currentChildProps = stepProps[currentChild.props.key];
     const valid = currentChild?.props.validator();
     return (<>
         <section className={wizardClasses}>
             <nav className={classnames(`${cssNamespace}-wizard__navigation`)}>
                 <ul className={progressBarClasses}>
-                    {children}
+                    {renderHeader()}
                 </ul>
             </nav>
         </section>
         {currentChild?.props.children}
         {valid && <div className={classnames(`${cssNamespace}-wizard__next-step`)}>
-            <Button compact emphasized onClick={nextStep}>
+            <Button compact emphasized
+                onClick={nextStep}>
                 {currentChild?.props.nextLabel}
             </Button>
         </div>}
