@@ -2,12 +2,11 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
+import { WIZARD_SIZES } from './Wizard';
 
 import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
-
-const WIZARD_SIZES = ['sm', 'md', 'lg', 'xl'];
 
 function WizardNavigation({
     children,

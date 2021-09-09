@@ -29,7 +29,7 @@ function WizardStep({
     className,
     cssNamespace,
     glyph,
-    index,
+    indicator,
     modifiers,
     optionalLabel,
     title,
@@ -58,7 +58,7 @@ function WizardStep({
                     aria-label={title}
                     className={classnames(`${cssNamespace}-wizard__step-container`)}>
                     <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
-                        {glyph ? <Icon className={classnames(`${cssNamespace}-wizard__icon`)} glyph={glyph} /> : index + 1}
+                        {glyph ? <Icon className={classnames(`${cssNamespace}-wizard__icon`)} glyph={glyph} /> : indicator}
                     </span>
                     <div className={labelContainerClasses}>
                         <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
@@ -72,23 +72,23 @@ function WizardStep({
 }
 
 WizardStep.propTypes = {
-    nextLabel: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
 
     children: PropTypes.node,
     className: PropTypes.string,
     connector: PropTypes.oneOf(WIZARD_CONNECTOR_TYPES),
     glyph: PropTypes.node,
-    index: PropTypes.number,
+    indicator: PropTypes.string,
     modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
+    nextLabel: PropTypes.string,
     optionalLabel: PropTypes.string,
-    validator: PropTypes.func
+    valid: PropTypes.func
 };
 
 WizardStep.defaultProps = {
     nextLabel: 'Next',
     modifiers: [],
-    validator: () => true,
+    valid: true,
     onClick: () => {}
 };
 
