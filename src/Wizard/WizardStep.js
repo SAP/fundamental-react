@@ -31,8 +31,9 @@ function WizardStep({
     glyph,
     index,
     modifiers,
-    optional,
-    title
+    optionalLabel,
+    title,
+    ...props
 }) {
     const stepClasses = classnames(
         `${cssNamespace}-wizard__step`,
@@ -42,7 +43,7 @@ function WizardStep({
 
     const labelContainerClasses = classnames({
         [`${cssNamespace}-wizard__label-container`]: true,
-        [`${cssNamespace}-wizard__label-container--optional`]: optional
+        [`${cssNamespace}-wizard__label-container--optional`]: optionalLabel
     });
 
     const connectorClasses = classnames({
@@ -51,7 +52,7 @@ function WizardStep({
     });
 
     return (
-        <li className={stepClasses}>
+        <li className={stepClasses} {...props}>
             <div className={classnames(`${cssNamespace}-wizard__step-wrapper`)}>
                 <a
                     aria-label={title}
@@ -61,7 +62,7 @@ function WizardStep({
                     </span>
                     <div className={labelContainerClasses}>
                         <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
-                        {optional && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optional}</span>}
+                        {optionalLabel && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optionalLabel}</span>}
                     </div>
                 </a>
                 {connector !== 'none' && <span className={connectorClasses} />}
@@ -71,7 +72,6 @@ function WizardStep({
 }
 
 WizardStep.propTypes = {
-    key: PropTypes.string.isRequired,
     nextLabel: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
 
@@ -80,16 +80,16 @@ WizardStep.propTypes = {
     connector: PropTypes.oneOf(WIZARD_CONNECTOR_TYPES),
     glyph: PropTypes.node,
     index: PropTypes.number,
-    /** for internal use only */
     modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
-    optional: PropTypes.string,
-
+    optionalLabel: PropTypes.string,
     validator: PropTypes.func
 };
 
 WizardStep.defaultProps = {
+    nextLabel: 'Next',
     modifiers: [],
-    validator: () => true
+    validator: () => true,
+    onClick: () => {}
 };
 
 export default withStyles(WizardStep);
