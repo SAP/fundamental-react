@@ -2,11 +2,23 @@ import Button from '../../Button/Button';
 import Checkbox from '../../Forms/Checkbox';
 import Select from '../../Select/Select';
 import Wizard from '../Wizard';
+import WizardContainer from '../WizardContainer';
+import WizardContent from '../WizardContent';
+import WizardFooter from '../WizardFooter';
+import WizardNavigation from '../WizardNavigation';
+import WizardStep from '../WizardStep';
 import React, { useState } from 'react';
 
 export default {
     title: 'Component API/Wizard',
-    component: Wizard
+    component: Wizard,
+    subcomponents: {
+        WizardStep,
+        WizardContainer,
+        WizardContent,
+        WizardFooter,
+        WizardNavigation
+    }
 };
 
 export const primary = () => (
@@ -155,6 +167,7 @@ export const validator = () => {
 
 export const branching = () => {
     const [branch, setBranch] = useState(null);
+    const [branch2, setBranch2] = useState(null);
 
     return (
         <Wizard
@@ -164,41 +177,168 @@ export const branching = () => {
             onComplete={() => alert('Wizard completed')}>
             <Wizard.Step
                 branching={!branch}
-                title='Step 1: Foo'
+                title='Branch choice'
                 valid={branch}>
                 <Select
                     onSelect={(e, option) => setBranch(option.key)}
                     options={[
-                        { key: '1', text: 'Branch 1' },
-                        { key: '2', text: 'Branch 2' }
+                        { key: 'one', text: 'One extra element' },
+                        { key: 'two', text: 'Two extra elements (react fragment)' },
+                        { key: 'none', text: 'Empty' },
+                        { key: 'deep', text: 'Two level' }
                     ]}
                     selectedKey={branch} />
             </Wizard.Step>
-            {branch === '1' && <>
+            {branch === 'one' && (
                 <Wizard.Step
-                    title='Step 2a: Bar'>
-                    Second step of branch 1
-                </Wizard.Step>
-                <Wizard.Step
-                    title='Step 2b: Bar'>
-                    Second step of branch 1
-                </Wizard.Step>
-            </>}
-            {branch === '2' && (
-                <Wizard.Step
-                    title='Step 2: Qux'>
-                    Second step of branch 2
+                    title='Single'>
+                    Extra step
                 </Wizard.Step>
             )}
+            {branch === 'two' && <>
+                <Wizard.Step
+                    title='Double 1'>
+                    Extra step 1
+                </Wizard.Step>
+                <Wizard.Step
+                    title='Double 2'>
+                    Extra step 2
+                </Wizard.Step>
+            </>}
+            {branch === 'deep' && <>
+                <Wizard.Step
+                    branching={!branch2}
+                    title='Deep branch choice'
+                    valid={branch2}>
+                    <Select
+                        onSelect={(e, option) => setBranch2(option.key)}
+                        options={[
+                            { key: '1', text: 'Branch 1' },
+                            { key: '2', text: 'Branch 2' }
+                        ]}
+                        selectedKey={branch2} />
+                </Wizard.Step>
+                {branch2 === '1' && <Wizard.Step
+                    title='Deep step 1'>
+                    Deep step 1
+                </Wizard.Step>}
+                {branch2 === '2' && <Wizard.Step
+                    title='Deep step 2'>
+                    Deep step 2
+                </Wizard.Step>}
+            </>}
             <Wizard.Step
                 nextLabel='Complete'
-                title='Step 3: Baz'>
+                title='Finish'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
     );
 };
 
+export const sizes = () => (
+    <>
+        <h3>Small</h3>
+        <Wizard contentSize='sm' headerSize='sm'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+
+        <h3>Medium</h3>
+        <Wizard contentSize='md' headerSize='md'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+
+        <h3>Large</h3>
+        <Wizard contentSize='lg' headerSize='lg'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+
+        <h3>XL</h3>
+        <Wizard contentSize='xl' headerSize='xl'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+    </>
+);
+
+export const backgrounds = () => (
+    <div style={{ backgroundColor: '#ff9', padding: '1rem' }}>
+        <h3>Solid</h3>
+        <Wizard background='solid'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+
+        <h3>List</h3>
+        <Wizard background='list'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+
+        <h3>Transparent</h3>
+        <Wizard background='transparent'>
+            <Wizard.Step title='Step 1: Foo'>
+                <p>This is the first step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 2: Bar'>
+                <p>This is the second step.</p>
+            </Wizard.Step>
+            <Wizard.Step title='Step 3: Baz'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+    </div>
+);
+
+/**
+ * For custom logic, the component can be built manually from it's parts
+ * instead of using the `Wizard` wrapper.
+ */
 export const manual = () => (
     <Wizard.Container>
         <Wizard.Navigation size='sm'>

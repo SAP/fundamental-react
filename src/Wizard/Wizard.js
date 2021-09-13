@@ -1,5 +1,3 @@
-// import Bar from '../Bar/Bar';
-// import Button from '../Button/Button';
 import classnamesBind from 'classnames/bind';
 import { flattenChildren } from '../utils/children';
 import PropTypes from 'prop-types';
@@ -28,6 +26,41 @@ const WIZARD_STACKING = [
     'no-labels'
 ];
 
+/** The **Wizard** guides a user through a long or unfamiliar task by dividing
+ * it into sections, revealing information in an easy and digestible way. It
+ * consists of a walkthrough screen, where the user is prompted to input
+ * required information and upon completing a section, the next sections
+ * subsequently follow in a prescribed order; and the summary page, where the
+ * form is displayed in read-only mode for assessment and final submission.
+ *
+ * USE THE WIZARD IF:
+ *
+ * * the user has to accomplish a long or unfamiliar task
+ * * the flow consist of a minimum of 3 and a maximum of 8 steps
+ *
+ * DO NOT USE THE WIZARD IF:
+ *
+ * * a task has only 2 steps
+ * * a task has more than 8 steps
+ * * the format of the task is familiar to the user
+ *
+ * There are two types of wizard that offer different functionality: **standard** and **branching**.
+ *
+ * USE THE STANDARD TYPE IF:
+ *
+ * * The total number of steps is known in advance.
+ * * The number of steps does not change during usage.
+ * * There is linear progression from one step to the next.
+ *
+ * USE THE BRANCHING TYPE IF:
+ *
+ * * The total number of steps is not known.
+ * * The number of steps may change during usage.
+ * * There is non-linear progression. In other words, the user’s choice during one step determines which step comes next.
+ * * In both types of wizard you can let users skip steps. Label these steps as “Optional”.
+ *
+ * @returns {Node} WizardContainer component
+*/
 function Wizard({
     background,
     cancelLabel,
@@ -65,7 +98,7 @@ function Wizard({
             return 'branching';
         } else if (index === steps.length - 1) {
             return 'none';
-        } else if (index < selectedIndex) {
+        } else if (index < maxIndex) {
             return 'active';
         } else {
             return 'default';

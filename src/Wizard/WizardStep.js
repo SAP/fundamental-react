@@ -74,22 +74,32 @@ function WizardStep({
 WizardStep.propTypes = {
     title: PropTypes.string.isRequired,
 
+    /** (integrated only) Mark step as having unknown following content */
+    branching: PropTypes.bool,
+    /** (integated only) Nodes to render as step content */
     children: PropTypes.node,
+    /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** (standalone only) Appearance of the connector to the next element */
     connector: PropTypes.oneOf(WIZARD_CONNECTOR_TYPES),
+    /** Icon glyph to display in the indicator component */
     glyph: PropTypes.node,
+    /** Text to display in the indicator component if no glyph given */
     indicator: PropTypes.string,
+    /** (standalone only) Step appearance modifiers */
     modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
+    /** (integrated only) Label to use on the next step button */
     nextLabel: PropTypes.string,
+    /** Label to use as the optional text in step header */
     optionalLabel: PropTypes.string,
+    /** (integrated only) True if moving to the next step is allowed */
     valid: PropTypes.func
 };
 
 WizardStep.defaultProps = {
     nextLabel: 'Next',
     modifiers: [],
-    valid: true,
-    onClick: () => {}
+    valid: true
 };
 
 export default withStyles(WizardStep);

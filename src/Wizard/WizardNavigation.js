@@ -8,6 +8,12 @@ import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
 
+/** WizardContainer is a wrapper for wizard navigation bar. It is meant to be
+ * used with `Wizard.Step` components as children when building the wizard
+ * manually, without the build-in logic.
+ *
+ * @returns {Node} WizardContainer component
+ */
 function WizardNavigation({
     children,
     className,
