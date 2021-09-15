@@ -123,7 +123,10 @@ function MessageBox({
                     <Bar
                         className={classnames(`${cssNamespace}-message-box__footer`)}
                         rightComponents={actions.map(child => cloneElement(child, {
-                            className: classnames(`${cssNamespace}-message-box__decisive-button`),
+                            className: classnames(
+                                child.props?.className,
+                                `${cssNamespace}-message-box__decisive-button`
+                            ),
                             onClick: chain(onClose, child.props?.onClick)
                         }))}
                         type='footer'
