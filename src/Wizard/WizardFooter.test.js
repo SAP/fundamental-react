@@ -1,13 +1,27 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import Wizard from './Wizard';
+import WizardFooter from './WizardFooter';
 
 describe('<WizardFooter />', () => {
-    test('should be created', () => {
+    it('should be created', () => {
         const component = mount(
-            <Wizard.Footer />
+            <WizardFooter />
         );
 
         expect(component.find('button').text()).toBe('Cancel');
+    });
+
+    describe('Prop spreading', () => {
+        it('should allow props to be spread to the component', () => {
+            const component = mount(
+                <WizardFooter data-sample='Sample' />
+            );
+
+            expect(
+                component.getDOMNode()
+                    .attributes['data-sample']
+                    .value
+            ).toBe('Sample');
+        });
     });
 });

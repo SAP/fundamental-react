@@ -17,7 +17,8 @@ const classnames = classnamesBind.bind(styles);
 function WizardContainer({
     children,
     className,
-    cssNamespace
+    cssNamespace,
+    ...props
 }) {
     const wizardClasses = classnames(
         `${cssNamespace}-wizard`,
@@ -25,7 +26,7 @@ function WizardContainer({
     );
 
     return (
-        <section className={wizardClasses}>{children}</section>
+        <section className={wizardClasses} {...props}>{children}</section>
     );
 }
 WizardContainer.propTypes = {

@@ -1,4 +1,3 @@
-import classnamesBind from 'classnames/bind';
 import { flattenChildren } from '../utils/children';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/withStyles';
@@ -9,13 +8,9 @@ import WizardNavigation from './WizardNavigation';
 import WizardStep from './WizardStep';
 import React, { cloneElement, useEffect, useState } from 'react';
 
-import styles from 'fundamental-styles/dist/wizard.css';
+const WIZARD_SIZES = ['sm', 'md', 'lg', 'xl'];
 
-const classnames = classnamesBind.bind(styles);
-
-export const WIZARD_SIZES = ['sm', 'md', 'lg', 'xl'];
-
-export const WIZARD_CONTENT_BACKGROUNDS = [
+const WIZARD_CONTENT_BACKGROUNDS = [
     'solid',
     'list',
     'transparent'
@@ -72,7 +67,8 @@ function Wizard({
     option,
     onCancel,
     onComplete,
-    onStepChange
+    onStepChange,
+    ...props
 }) {
     const steps = flattenChildren(children);
     const [selectedIndex, setSelectedIndex] = useState(0);
@@ -87,11 +83,6 @@ function Wizard({
             setMaxIndex(selectedIndex);
         }
     }, [selectedIndex]);
-
-    const wizardClasses = classnames(
-        `${cssNamespace}-wizard`,
-        className,
-    );
 
     const connectorType = (step, index) => {
         if (step.props.branching) {
@@ -131,7 +122,7 @@ function Wizard({
     };
 
     const extraStepProps = (step, index) => ({
-        indicator: index + 1,
+        indicator: `${index + 1}`,
         modifiers: stepModifiers(index),
         onClick: event => {
             if (index <= maxIndex) {
@@ -158,7 +149,7 @@ function Wizard({
 
     const currentStep = steps[selectedIndex];
     return (
-        <section className={wizardClasses}>
+        <WizardContainer {...props}>
             <WizardNavigation size={headerSize}>
                 {renderHeader()}
             </WizardNavigation>
@@ -171,14 +162,12 @@ function Wizard({
                 {currentStep.props.children}
             </WizardContent>
             <WizardFooter label={cancelLabel} onCancel={onCancel} />
-        </section>
+        </WizardContainer>
     );
 }
 Wizard.propTypes = {
     /** Content background styling */
     background: PropTypes.oneOf(WIZARD_CONTENT_BACKGROUNDS),
-    /** Mark flow as branching and display an unfinished connectior line at the end */
-    branching: PropTypes.bool,
     /** Label to use for the cancel button */
     cancelLabel: PropTypes.string,
     /** Wizard.Step nodes to render as steps */
@@ -215,7 +204,6 @@ Wizard.propTypes = {
     onStepChange: PropTypes.func
 };
 Wizard.defaultProps = {
-    branching: false,
     cancelLabel: 'Cancel',
     onCancel: () => {},
     onComplete: () => {},

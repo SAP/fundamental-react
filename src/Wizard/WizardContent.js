@@ -3,12 +3,19 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
-import { WIZARD_CONTENT_BACKGROUNDS, WIZARD_SIZES } from './Wizard';
+// import { WIZARD_CONTENT_BACKGROUNDS, WIZARD_SIZES } from './Wizard';
+// import { WIZARD_CONTENT_BACKGROUNDS, WIZARD_SIZES } from '../utils/constants';
 
 import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
 
+export const WIZARD_SIZES = ['sm', 'md', 'lg', 'xl'];
+export const WIZARD_CONTENT_BACKGROUNDS = [
+    'solid',
+    'list',
+    'transparent'
+];
 /** WizardContent is a wrapper for wizard content. It is meant to be
  * used when building the wizard manually, without the build-in logic.
  *
@@ -24,7 +31,8 @@ function WizardContent({
     nextLabel,
     onNext,
     showNext,
-    size
+    size,
+    ...props
 }) {
     const contentClasses = classnames(
         `${cssNamespace}-wizard__content`,
@@ -37,7 +45,7 @@ function WizardContent({
     const nextStepClasses = classnames(`${cssNamespace}-wizard__next-step`);
 
     return (
-        <section className={contentClasses}>
+        <section className={contentClasses} {...props}>
             {children}
             {showNext && <div className={nextStepClasses}>
                 <Button

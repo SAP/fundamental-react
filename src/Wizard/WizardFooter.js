@@ -19,7 +19,8 @@ function WizardFooter({
     children,
     className,
     label,
-    onCancel
+    onCancel,
+    ...props
 }) {
     return (
         <Bar
@@ -33,7 +34,8 @@ function WizardFooter({
                     {label}
                 </Button>
             ]}
-            type='footer' />
+            type='footer'
+            {...props} />
     );
 }
 WizardFooter.propTypes = {

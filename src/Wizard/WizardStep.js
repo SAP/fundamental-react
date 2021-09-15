@@ -31,8 +31,10 @@ function WizardStep({
     glyph,
     indicator,
     modifiers,
+    nextLabel,
     optionalLabel,
     title,
+    valid,
     ...props
 }) {
     const stepClasses = classnames(
@@ -58,7 +60,8 @@ function WizardStep({
                     aria-label={title}
                     className={classnames(`${cssNamespace}-wizard__step-container`)}>
                     <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
-                        {glyph ? <Icon className={classnames(`${cssNamespace}-wizard__icon`)} glyph={glyph} /> : indicator}
+                        {glyph ? <Icon ariaLabel={glyph} className={classnames(`${cssNamespace}-wizard__icon`)}
+                            glyph={glyph} /> : indicator}
                     </span>
                     <div className={labelContainerClasses}>
                         <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
@@ -93,7 +96,7 @@ WizardStep.propTypes = {
     /** Label to use as the optional text in step header */
     optionalLabel: PropTypes.string,
     /** (integrated only) True if moving to the next step is allowed */
-    valid: PropTypes.func
+    valid: PropTypes.bool
 };
 
 WizardStep.defaultProps = {

@@ -2,11 +2,13 @@ import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
-import { WIZARD_SIZES } from './Wizard';
+// import { WIZARD_SIZES } from './Wizard';
 
 import styles from 'fundamental-styles/dist/wizard.css';
 
 const classnames = classnamesBind.bind(styles);
+
+const WIZARD_SIZES = ['sm', 'md', 'lg', 'xl'];
 
 /** WizardContainer is a wrapper for wizard navigation bar. It is meant to be
  * used with `Wizard.Step` components as children when building the wizard
@@ -18,7 +20,8 @@ function WizardNavigation({
     children,
     className,
     cssNamespace,
-    size
+    size,
+    ...props
 }) {
     const navigationClasses = classnames(
         `${cssNamespace}-wizard__navigation`,
@@ -31,7 +34,7 @@ function WizardNavigation({
     });
 
     return (
-        <nav className={navigationClasses}>
+        <nav className={navigationClasses} {...props}>
             <ul className={progressBarClasses}>
                 {children}
             </ul>
