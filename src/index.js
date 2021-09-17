@@ -51,3 +51,4 @@ export { default as TimePicker } from './TimePicker/TimePicker';
 export { default as Title } from './Title/Title';
 export { default as Token } from './Token/Token';
 export { default as Tree } from './Tree/Tree';
+export { default as Wizard } from './Wizard/Wizard';
