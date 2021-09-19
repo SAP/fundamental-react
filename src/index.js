@@ -30,6 +30,7 @@ export { default as Link } from './Link/Link';
 export { default as List } from './List/List';
 export { default as Menu } from './Menu/Menu';
 export { default as MessageBox } from './MessageBox/MessageBox';
+export { default as MessagePage } from './MessagePage/MessagePage';
 export { default as MessageStrip } from './MessageStrip/MessageStrip';
 export { default as MultiInput } from './MultiInput/MultiInput';
 export { default as ObjectStatus } from './ObjectStatus/ObjectStatus';

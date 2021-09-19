@@ -25,6 +25,7 @@ const WIZARD_STEP_MODIFIERS = [
 ];
 
 function WizardStep({
+    branching,
     connector,
     className,
     cssNamespace,
