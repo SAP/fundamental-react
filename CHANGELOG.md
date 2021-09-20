@@ -1,4 +1,12 @@
 
+## [0.14.0-rc.30](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.29...v0.14.0-rc.30) (2021-09-20)
+
+
+### Features
+
+* introduce the MessagePage component ([#1359](https://github.com/SAP/fundamental-react/issues/1359)) ([32a4e2d](https://github.com/SAP/fundamental-react/commit/32a4e2dc6b7f1a53a1cffbedeb6e7db239300c45))
+* Wizard component ([#1358](https://github.com/SAP/fundamental-react/issues/1358)) ([a9bb3a7](https://github.com/SAP/fundamental-react/commit/a9bb3a7cdb8e3ec875c1fa3249d415348505ddf2))
+
 ## [0.14.0-rc.29](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.28...v0.14.0-rc.29) (2021-08-18)
 
 
