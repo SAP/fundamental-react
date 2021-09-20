@@ -28,12 +28,12 @@ const WIZARD_STACKING = [
  * subsequently follow in a prescribed order; and the summary page, where the
  * form is displayed in read-only mode for assessment and final submission.
  *
- * USE THE WIZARD IF:
+ * ##### Use the Wizard if:
  *
  * * the user has to accomplish a long or unfamiliar task
  * * the flow consist of a minimum of 3 and a maximum of 8 steps
  *
- * DO NOT USE THE WIZARD IF:
+ * ##### Do not use the wizard if:
  *
  * * a task has only 2 steps
  * * a task has more than 8 steps
@@ -41,13 +41,13 @@ const WIZARD_STACKING = [
  *
  * There are two types of wizard that offer different functionality: **standard** and **branching**.
  *
- * USE THE STANDARD TYPE IF:
+ * ##### Use the standard type if:
  *
  * * The total number of steps is known in advance.
  * * The number of steps does not change during usage.
  * * There is linear progression from one step to the next.
  *
- * USE THE BRANCHING TYPE IF:
+ * ##### Use the branching type if:
  *
  * * The total number of steps is not known.
  * * The number of steps may change during usage.

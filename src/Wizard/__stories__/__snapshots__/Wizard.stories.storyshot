@@ -473,7 +473,6 @@ exports[`Storyshots Component API/Wizard Branching 1`] = `
       className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
     >
       <li
-        branching={true}
         className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
         onClick={[Function]}
       >
