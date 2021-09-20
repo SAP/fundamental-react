@@ -127,7 +127,7 @@ function Wizard({
     const extraStepProps = (step, index) => ({
         indicator: `${index + 1}`,
         modifiers: stepModifiers(index),
-        onClick: event => {
+        onClick: e => {
             if (index <= maxIndex) {
                 setSelectedIndex(index);
                 onStepChange(e, steps[index], index, steps.length);
@@ -144,7 +144,7 @@ function Wizard({
     const nextStep = (e) => {
         if (selectedIndex < steps.length - 1) {
             setSelectedIndex(selectedIndex + 1);
-            onStepChange(e, steps[selectdIndex + 1], selectedIndex + 1, steps.length);
+            onStepChange(e, steps[selectedIndex + 1], selectedIndex + 1, steps.length);
         } else {
             onComplete();
         }
@@ -212,6 +212,9 @@ Wizard.propTypes = {
      * Callback function; triggered when the next step button is clicked in any step other than last.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {WizardStep} step - Step component that's being activated
+     * @param {number} index - Index of the step that's being activated
+     * @param {number} count - Total number of visible steps
      * @returns {void}
     */
     onStepChange: PropTypes.func
