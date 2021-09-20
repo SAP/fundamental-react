@@ -61,8 +61,11 @@ function Wizard({
     cancelLabel,
     children,
     className,
+    contentProps,
     contentSize,
     cssNamespace,
+    footerProps,
+    headerProps,
     headerSize,
     option,
     onCancel,
@@ -150,7 +153,7 @@ function Wizard({
     const currentStep = steps[selectedIndex];
     return (
         <WizardContainer {...props}>
-            <WizardNavigation size={headerSize}>
+            <WizardNavigation size={headerSize} {...headerProps}>
                 {renderHeader()}
             </WizardNavigation>
             <WizardContent
@@ -158,10 +161,14 @@ function Wizard({
                 nextLabel={currentStep.props.nextLabel}
                 onNext={nextStep}
                 showNext={currentStep.props.valid}
-                size={contentSize}>
+                size={contentSize}
+                {...contentProps}>
                 {currentStep.props.children}
             </WizardContent>
-            <WizardFooter label={cancelLabel} onCancel={onCancel} />
+            <WizardFooter
+                label={cancelLabel}
+                onCancel={onCancel}
+                {...footerProps} />
         </WizardContainer>
     );
 }
@@ -174,8 +181,14 @@ Wizard.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Props to be spread to the WizardContent component */
+    contentProps: PropTypes.object,
     /** By default wizard body has no horizontal paddings. Add a size to modify the padding */
     contentSize: PropTypes.oneOf(WIZARD_SIZES),
+    /** Props to be spread to the WizardFooter component */
+    footerProps: PropTypes.object,
+    /** Props to be spread to the WizardNavigation component */
+    headerProps: PropTypes.object,
     /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
     headerSize: PropTypes.oneOf(WIZARD_SIZES),
     /** Display option */
