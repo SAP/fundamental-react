@@ -130,7 +130,7 @@ function Wizard({
         onClick: event => {
             if (index <= maxIndex) {
                 setSelectedIndex(index);
-                onStepChange(event, index);
+                onStepChange(e, steps[index], index, steps.length);
             }
         },
         connector: connectorType(step, index),
@@ -144,7 +144,7 @@ function Wizard({
     const nextStep = (e) => {
         if (selectedIndex < steps.length - 1) {
             setSelectedIndex(selectedIndex + 1);
-            onStepChange(e, selectedIndex + 1);
+            onStepChange(e, steps[selectdIndex + 1], selectedIndex + 1, steps.length);
         } else {
             onComplete();
         }
