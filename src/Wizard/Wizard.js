@@ -61,8 +61,11 @@ function Wizard({
     cancelLabel,
     children,
     className,
+    contentProps,
     contentSize,
     cssNamespace,
+    footerProps,
+    headerProps,
     headerSize,
     option,
     onCancel,
@@ -124,10 +127,10 @@ function Wizard({
     const extraStepProps = (step, index) => ({
         indicator: `${index + 1}`,
         modifiers: stepModifiers(index),
-        onClick: event => {
+        onClick: e => {
             if (index <= maxIndex) {
                 setSelectedIndex(index);
-                onStepChange(event, index);
+                onStepChange(e, steps[index], index, steps.length);
             }
         },
         connector: connectorType(step, index),
@@ -141,7 +144,7 @@ function Wizard({
     const nextStep = (e) => {
         if (selectedIndex < steps.length - 1) {
             setSelectedIndex(selectedIndex + 1);
-            onStepChange(e, selectedIndex + 1);
+            onStepChange(e, steps[selectedIndex + 1], selectedIndex + 1, steps.length);
         } else {
             onComplete();
         }
@@ -150,7 +153,7 @@ function Wizard({
     const currentStep = steps[selectedIndex];
     return (
         <WizardContainer {...props}>
-            <WizardNavigation size={headerSize}>
+            <WizardNavigation size={headerSize} {...headerProps}>
                 {renderHeader()}
             </WizardNavigation>
             <WizardContent
@@ -158,10 +161,14 @@ function Wizard({
                 nextLabel={currentStep.props.nextLabel}
                 onNext={nextStep}
                 showNext={currentStep.props.valid}
-                size={contentSize}>
+                size={contentSize}
+                {...contentProps}>
                 {currentStep.props.children}
             </WizardContent>
-            <WizardFooter label={cancelLabel} onCancel={onCancel} />
+            <WizardFooter
+                label={cancelLabel}
+                onCancel={onCancel}
+                {...footerProps} />
         </WizardContainer>
     );
 }
@@ -174,8 +181,14 @@ Wizard.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
+    /** Props to be spread to the WizardContent component */
+    contentProps: PropTypes.object,
     /** By default wizard body has no horizontal paddings. Add a size to modify the padding */
     contentSize: PropTypes.oneOf(WIZARD_SIZES),
+    /** Props to be spread to the WizardFooter component */
+    footerProps: PropTypes.object,
+    /** Props to be spread to the WizardNavigation component */
+    headerProps: PropTypes.object,
     /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
     headerSize: PropTypes.oneOf(WIZARD_SIZES),
     /** Display option */
@@ -199,6 +212,9 @@ Wizard.propTypes = {
      * Callback function; triggered when the next step button is clicked in any step other than last.
      *
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
+     * @param {WizardStep} step - Step component that's being activated
+     * @param {number} index - Index of the step that's being activated
+     * @param {number} count - Total number of visible steps
      * @returns {void}
     */
     onStepChange: PropTypes.func
