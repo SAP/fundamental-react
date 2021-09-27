@@ -1,12 +1,15 @@
+import Button from '../Button/Button';
 import { flattenChildren } from '../utils/children';
 import PropTypes from 'prop-types';
+import Title from '../Title/Title';
 import withStyles from '../utils/withStyles';
 import WizardContainer from './WizardContainer';
 import WizardContent from './WizardContent';
 import WizardFooter from './WizardFooter';
 import WizardNavigation from './WizardNavigation';
+import WizardNextStep from './WizardNextStep';
 import WizardStep from './WizardStep';
-import React, { cloneElement, useEffect, useState } from 'react';
+import React, { cloneElement, createRef, useEffect, useRef, useState } from 'react';
 
 const WIZARD_SIZES = ['sm', 'md', 'lg', 'xl'];
 
@@ -67,6 +70,7 @@ function Wizard({
     footerProps,
     headerProps,
     headerSize,
+    navigationType,
     option,
     onCancel,
     onComplete,
@@ -76,9 +80,12 @@ function Wizard({
     const steps = flattenChildren(children);
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [maxIndex, setMaxIndex] = useState(0);
+    const [refs, setRefs] = useState([]);
+    const contentRef = useRef();
 
     useEffect(() => {
         setMaxIndex(selectedIndex);
+        setRefs(children.map(() => createRef()));
     }, [children]);
 
     useEffect(() => {
@@ -129,7 +136,11 @@ function Wizard({
         modifiers: stepModifiers(index),
         onClick: e => {
             if (index <= maxIndex) {
-                setSelectedIndex(index);
+                if (navigationType === 'anchors') {
+                    refs[index].current.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    setSelectedIndex(index);
+                }
                 onStepChange(e, steps[index], index, steps.length);
             }
         },
@@ -141,10 +152,24 @@ function Wizard({
         steps.map((child, index) =>
             cloneElement(child, extraStepProps(child, index)));
 
-    const nextStep = (e) => {
-        if (selectedIndex < steps.length - 1) {
-            setSelectedIndex(selectedIndex + 1);
-            onStepChange(e, steps[selectedIndex + 1], selectedIndex + 1, steps.length);
+    const previousStep = (e, index = selectedIndex) => {
+        if (index > 0) {
+            setSelectedIndex(index - 1);
+            onStepChange(e, steps[index - 1], index - 1, steps.length);
+        }
+    };
+
+    const nextStep = (e, index = selectedIndex) => {
+        if (index < steps.length - 1) {
+            if (navigationType === 'anchors') {
+                setMaxIndex(index + 1);
+                setTimeout(() => {
+                    refs[index + 1].current.scrollIntoView({ behavior: 'smooth' });
+                });
+            } else {
+                setSelectedIndex(index + 1);
+            }
+            onStepChange(e, steps[index + 1], index + 1, steps.length);
         } else {
             onComplete();
         }
@@ -153,22 +178,64 @@ function Wizard({
     const currentStep = steps[selectedIndex];
     return (
         <WizardContainer {...props}>
-            <WizardNavigation size={headerSize} {...headerProps}>
+            <WizardNavigation
+                size={headerSize}
+                stacked={option === 'stacked'}
+                {...headerProps}>
                 {renderHeader()}
             </WizardNavigation>
-            <WizardContent
-                background={background}
-                nextLabel={currentStep.props.nextLabel}
-                onNext={nextStep}
-                showNext={currentStep.props.valid}
-                size={contentSize}
-                {...contentProps}>
-                {currentStep.props.children}
-            </WizardContent>
-            <WizardFooter
-                label={cancelLabel}
-                onCancel={onCancel}
-                {...footerProps} />
+            {navigationType === 'tabs' && <>
+                <WizardContent
+                    background={background}
+                    size={contentSize}
+                    {...contentProps}>
+                    <Title level={2}>{selectedIndex + 1}. {currentStep.props.title}</Title>
+                    {currentStep.props.children}
+                </WizardContent>
+                <WizardFooter
+                    label={cancelLabel}
+                    onCancel={onCancel}
+                    {...footerProps}>
+                    {selectedIndex > 0 && <Button compact onClick={previousStep}>{currentStep.props.previousLabel}</Button>}
+                    <Button compact
+                        disabled={!currentStep.props.valid}
+                        onClick={nextStep}
+                        option='emphasized'>
+                        {currentStep.props.nextLabel}
+                    </Button>
+                </WizardFooter>
+            </>}
+            {navigationType === 'anchors' && <>
+                <WizardContent
+                    background={background}
+                    onScroll={(e) => {
+                        // console.log('on scroll', e);
+                        // const tops = steps.slice(0, maxIndex + 1).map((step, index) => refs[index].current.scrollTop);
+                        const offsets = steps
+                            .slice(0, maxIndex + 1)
+                            .map((step, index) => Math.abs(refs[index].current.offsetTop - e.target.scrollTop));
+                        const minOffset = Math.min(...offsets);
+                        const closest = offsets.findIndex(offset => offset === minOffset);
+                        setSelectedIndex(closest);
+                        // console.log('on scroll', e.target.scrollTop, tops, diffs, minDiff);
+                    }}
+                    ref={contentRef}
+                    size={contentSize}
+                    {...contentProps}
+                    style={{ ...(contentProps?.style || {}), overflow: 'auto', position: 'relative' }}>
+                    {steps.slice(0, maxIndex + 1).map((step, index) => (
+                        <section ref={refs[index]} style={index === maxIndex ? { minHeight: '100%' } : {}}>
+                            <Title level={2}>{index + 1}. {step.props.title}</Title>
+                            {step.props.children}
+                            {index === maxIndex && step.props.valid && <WizardNextStep label={step.props.nextLabel} onNext={(e) => nextStep(e, index)} />}
+                        </section>
+                    ))}
+                </WizardContent>
+                <WizardFooter
+                    label={cancelLabel}
+                    onCancel={onCancel}
+                    {...footerProps} />
+            </>}
         </WizardContainer>
     );
 }
@@ -191,6 +258,10 @@ Wizard.propTypes = {
     headerProps: PropTypes.object,
     /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
     headerSize: PropTypes.oneOf(WIZARD_SIZES),
+
+    /** */
+    navigationType: PropTypes.oneOf(['anchors', 'tabs']),
+
     /** Display option */
     option: PropTypes.oneOf(WIZARD_STACKING),
 
@@ -221,6 +292,7 @@ Wizard.propTypes = {
 };
 Wizard.defaultProps = {
     cancelLabel: 'Cancel',
+    navigationType: 'anchors',
     onCancel: () => {},
     onComplete: () => {},
     onStepChange: () => {}
@@ -230,6 +302,7 @@ Wizard.Container = WizardContainer;
 Wizard.Content = WizardContent;
 Wizard.Footer = WizardFooter;
 Wizard.Navigation = WizardNavigation;
+Wizard.NextStep = WizardNextStep;
 Wizard.Step = WizardStep;
 
 export default withStyles(Wizard);

@@ -47,7 +47,8 @@ WizardNavigation.propTypes = {
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
     /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
-    size: PropTypes.oneOf(WIZARD_SIZES)
+    size: PropTypes.oneOf(WIZARD_SIZES),
+    stacked: PropTypes.bool
 };
 
 export default withStyles(WizardNavigation);

@@ -45,6 +45,7 @@ WizardFooter.propTypes = {
     className: PropTypes.string,
     /** Cancel button label */
     label: PropTypes.string,
+    withNavigation: PropTypes.bool,
 
     /**
      * Callback function; triggered when the cancel button is pressed.
@@ -52,7 +53,9 @@ WizardFooter.propTypes = {
      * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
      * @returns {void}
     */
-    onCancel: PropTypes.func
+    onCancel: PropTypes.func,
+    onNext: PropTypes.func,
+    onPrevious: PropTypes.func
 };
 WizardFooter.defaultProps = {
     label: 'Cancel',

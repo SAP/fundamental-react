@@ -96,12 +96,15 @@ WizardStep.propTypes = {
     nextLabel: PropTypes.string,
     /** Label to use as the optional text in step header */
     optionalLabel: PropTypes.string,
+    /** (integrated only) Label to use on the previous step button */
+    previousLabel: PropTypes.string,
     /** (integrated only) True if moving to the next step is allowed */
     valid: PropTypes.bool
 };
 
 WizardStep.defaultProps = {
-    nextLabel: 'Next',
+    nextLabel: 'Next Step',
+    previousLabel: 'Previous Step',
     modifiers: [],
     valid: true
 };
