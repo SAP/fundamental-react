@@ -1,5 +1,6 @@
 import Button from '../Button/Button';
 import { flattenChildren } from '../utils/children';
+import Menu from '../Menu/Menu';
 import PropTypes from 'prop-types';
 import Title from '../Title/Title';
 import withStyles from '../utils/withStyles';
@@ -78,6 +79,7 @@ function Wizard({
     ...props
 }) {
     const steps = flattenChildren(children);
+
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [maxIndex, setMaxIndex] = useState(0);
     const [refs, setRefs] = useState([]);
@@ -93,6 +95,8 @@ function Wizard({
             setMaxIndex(selectedIndex);
         }
     }, [selectedIndex]);
+
+    const stepName = (step, index) => `${index + 1}. ${step.props.title}`;
 
     const connectorType = (step, index) => {
         if (step.props.branching) {
@@ -131,26 +135,53 @@ function Wizard({
         }
     };
 
+    const goToStep = (e, index) => {
+        if (index <= maxIndex) {
+            if (navigationType === 'anchors') {
+                refs[index].current.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                setSelectedIndex(index);
+            }
+            onStepChange(e, steps[index], index, steps.length);
+        }
+    };
+
+    const stepsMenu = (menuSteps, offset = 0) => (<Menu>
+        <Menu.List>
+            {menuSteps.map((step, index) => (<Menu.Item
+                disabled={index + offset > maxIndex}
+                onClick={(e) => goToStep(e, index + offset)}>
+                {stepName(step, index + offset)}
+            </Menu.Item>))}
+        </Menu.List>
+    </Menu>);
+
+    const beforeMenu = stepsMenu(steps.slice(0, selectedIndex));
+    const afterMenu = stepsMenu(steps.slice(selectedIndex + 1), selectedIndex + 1);
+
+    const stepMenu = (index) => {
+        if (option !== 'stacked') {
+            return null;
+        } else if (index < selectedIndex) {
+            return beforeMenu;
+        } else if (index > selectedIndex) {
+            return afterMenu;
+        } else {
+            return null;
+        }
+    };
+
     const extraStepProps = (step, index) => ({
         indicator: `${index + 1}`,
         modifiers: stepModifiers(index),
-        onClick: e => {
-            if (index <= maxIndex) {
-                if (navigationType === 'anchors') {
-                    refs[index].current.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    setSelectedIndex(index);
-                }
-                onStepChange(e, steps[index], index, steps.length);
-            }
-        },
+        menu: stepMenu(index),
+        onClick: e => goToStep(e, index),
         connector: connectorType(step, index),
         glyph: stepGlyph(step, index)
     });
 
-    const renderHeader = () =>
-        steps.map((child, index) =>
-            cloneElement(child, extraStepProps(child, index)));
+    const renderHeader = () => steps.map((child, index) =>
+        cloneElement(child, extraStepProps(child, index)));
 
     const previousStep = (e, index = selectedIndex) => {
         if (index > 0) {
@@ -189,7 +220,7 @@ function Wizard({
                     background={background}
                     size={contentSize}
                     {...contentProps}>
-                    <Title level={2}>{selectedIndex + 1}. {currentStep.props.title}</Title>
+                    <Title level={2}>{stepName(currentStep, selectedIndex)}</Title>
                     {currentStep.props.children}
                 </WizardContent>
                 <WizardFooter
@@ -209,15 +240,12 @@ function Wizard({
                 <WizardContent
                     background={background}
                     onScroll={(e) => {
-                        // console.log('on scroll', e);
-                        // const tops = steps.slice(0, maxIndex + 1).map((step, index) => refs[index].current.scrollTop);
                         const offsets = steps
                             .slice(0, maxIndex + 1)
                             .map((step, index) => Math.abs(refs[index].current.offsetTop - e.target.scrollTop));
                         const minOffset = Math.min(...offsets);
                         const closest = offsets.findIndex(offset => offset === minOffset);
                         setSelectedIndex(closest);
-                        // console.log('on scroll', e.target.scrollTop, tops, diffs, minDiff);
                     }}
                     ref={contentRef}
                     size={contentSize}
@@ -225,7 +253,7 @@ function Wizard({
                     style={{ ...(contentProps?.style || {}), overflow: 'auto', position: 'relative' }}>
                     {steps.slice(0, maxIndex + 1).map((step, index) => (
                         <section ref={refs[index]} style={index === maxIndex ? { minHeight: '100%' } : {}}>
-                            <Title level={2}>{index + 1}. {step.props.title}</Title>
+                            <Title level={2}>{stepName(step, index)}</Title>
                             {step.props.children}
                             {index === maxIndex && step.props.valid && <WizardNextStep label={step.props.nextLabel} onNext={(e) => nextStep(e, index)} />}
                         </section>

@@ -1,5 +1,6 @@
 import classnamesBind from 'classnames/bind';
 import Icon from '../Icon/Icon';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -34,6 +35,8 @@ function WizardStep({
     modifiers,
     nextLabel,
     optionalLabel,
+    menu,
+    onClick,
     title,
     valid,
     ...props
@@ -54,21 +57,27 @@ function WizardStep({
         [`${cssNamespace}-wizard__connector--${connector}`]: connector !== 'default'
     });
 
+    const link = (linkClick) => (<a
+        aria-label={title}
+        className={classnames(`${cssNamespace}-wizard__step-container`)}
+        onClick={linkClick}
+        // hack to counter a fundamental-styles rule preventing proper navigation
+        style={{ pointerEvents: 'auto' }}>
+        <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
+            {glyph ? <Icon ariaLabel={glyph} className={classnames(`${cssNamespace}-wizard__icon`)}
+                glyph={glyph} /> : indicator}
+        </span>
+        <div className={labelContainerClasses}>
+            <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
+            {optionalLabel && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optionalLabel}</span>}
+        </div>
+    </a>);
+
     return (
         <li className={stepClasses} {...props}>
             <div className={classnames(`${cssNamespace}-wizard__step-wrapper`)}>
-                <a
-                    aria-label={title}
-                    className={classnames(`${cssNamespace}-wizard__step-container`)}>
-                    <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
-                        {glyph ? <Icon ariaLabel={glyph} className={classnames(`${cssNamespace}-wizard__icon`)}
-                            glyph={glyph} /> : indicator}
-                    </span>
-                    <div className={labelContainerClasses}>
-                        <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
-                        {optionalLabel && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optionalLabel}</span>}
-                    </div>
-                </a>
+                {menu && <Popover body={menu} control={link()} />}
+                {!menu && link(onClick)}
                 {connector !== 'none' && <span className={connectorClasses} />}
             </div>
         </li>
@@ -90,6 +99,7 @@ WizardStep.propTypes = {
     glyph: PropTypes.node,
     /** Text to display in the indicator component if no glyph given */
     indicator: PropTypes.string,
+    menu: PropTypes.node,
     /** (standalone only) Step appearance modifiers */
     modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
     /** (integrated only) Label to use on the next step button */
@@ -99,7 +109,9 @@ WizardStep.propTypes = {
     /** (integrated only) Label to use on the previous step button */
     previousLabel: PropTypes.string,
     /** (integrated only) True if moving to the next step is allowed */
-    valid: PropTypes.bool
+    valid: PropTypes.bool,
+
+    onClick: PropTypes.function
 };
 
 WizardStep.defaultProps = {
