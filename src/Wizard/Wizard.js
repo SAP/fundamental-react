@@ -76,6 +76,7 @@ function Wizard({
     onCancel,
     onComplete,
     onStepChange,
+    showTitles,
     ...props
 }) {
     const steps = flattenChildren(children);
@@ -220,7 +221,7 @@ function Wizard({
                     background={background}
                     size={contentSize}
                     {...contentProps}>
-                    <Title level={2}>{stepName(currentStep, selectedIndex)}</Title>
+                    {showTitles && <Title level={2}>{stepName(currentStep, selectedIndex)}</Title>}
                     {currentStep.props.children}
                 </WizardContent>
                 <WizardFooter
@@ -253,7 +254,7 @@ function Wizard({
                     style={{ ...(contentProps?.style || {}), overflow: 'auto', position: 'relative' }}>
                     {steps.slice(0, maxIndex + 1).map((step, index) => (
                         <section ref={refs[index]} style={index === maxIndex ? { minHeight: '100%' } : {}}>
-                            <Title level={2}>{stepName(step, index)}</Title>
+                            {showTitles && <Title level={2}>{stepName(step, index)}</Title>}
                             {step.props.children}
                             {index === maxIndex && step.props.valid && <WizardNextStep label={step.props.nextLabel} onNext={(e) => nextStep(e, index)} />}
                         </section>
@@ -286,12 +287,10 @@ Wizard.propTypes = {
     headerProps: PropTypes.object,
     /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
     headerSize: PropTypes.oneOf(WIZARD_SIZES),
-
-    /** */
     navigationType: PropTypes.oneOf(['anchors', 'tabs']),
-
     /** Display option */
     option: PropTypes.oneOf(WIZARD_STACKING),
+    showTitles: PropTypes.bool,
 
     /**
      * Callback function; triggered when the cancel button is clicked.
@@ -323,7 +322,8 @@ Wizard.defaultProps = {
     navigationType: 'anchors',
     onCancel: () => {},
     onComplete: () => {},
-    onStepChange: () => {}
+    onStepChange: () => {},
+    showTitles: true
 };
 
 Wizard.Container = WizardContainer;
