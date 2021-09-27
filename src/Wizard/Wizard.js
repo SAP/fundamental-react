@@ -269,27 +269,33 @@ function Wizard({
     );
 }
 Wizard.propTypes = {
-    /** Content background styling */
+    /** Content background styling. */
     background: PropTypes.oneOf(WIZARD_CONTENT_BACKGROUNDS),
-    /** Label to use for the cancel button */
+    /** Label to use for the cancel button. */
     cancelLabel: PropTypes.string,
-    /** Wizard.Step nodes to render as steps */
+    /** Wizard.Step nodes to render as steps. */
     children: PropTypes.node,
-    /** CSS class(es) to add to the element */
+    /** CSS class(es) to add to the element. */
     className: PropTypes.string,
-    /** Props to be spread to the WizardContent component */
+    /** Props to be spread to the WizardContent component. */
     contentProps: PropTypes.object,
-    /** By default wizard body has no horizontal paddings. Add a size to modify the padding */
+    /** By default wizard body has no horizontal paddings. Add a size to modify the padding. */
     contentSize: PropTypes.oneOf(WIZARD_SIZES),
-    /** Props to be spread to the WizardFooter component */
+    /** Props to be spread to the WizardFooter component. */
     footerProps: PropTypes.object,
-    /** Props to be spread to the WizardNavigation component */
+    /** Props to be spread to the WizardNavigation component. */
     headerProps: PropTypes.object,
-    /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
+    /** By default wizard header has no horizontal paddings. Add a size to modify the padding. */
     headerSize: PropTypes.oneOf(WIZARD_SIZES),
+    /** Navigation type. `anchors` mode Displays all steps in one scrolling
+     * page, while `tabs` shows one page at a time with navigation buttons in
+     * the footer. */
     navigationType: PropTypes.oneOf(['anchors', 'tabs']),
-    /** Display option */
+    /** Space-saving options. `stacking` option reduces all non-active steps to
+     * a condensed form with a pop-up menu, while `no-labels` hides all text
+     * from steps, only displaying the indicators. */
     option: PropTypes.oneOf(WIZARD_STACKING),
+    /** Whether to show auto-generated titles in page contents. */
     showTitles: PropTypes.bool,
 
     /**
