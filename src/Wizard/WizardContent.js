@@ -1,10 +1,7 @@
-import Button from '../Button/Button';
 import classnamesBind from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
-// import { WIZARD_CONTENT_BACKGROUNDS, WIZARD_SIZES } from './Wizard';
-// import { WIZARD_CONTENT_BACKGROUNDS, WIZARD_SIZES } from '../utils/constants';
 
 import styles from 'fundamental-styles/dist/wizard.css';
 
@@ -28,9 +25,6 @@ function WizardContent({
     children,
     className,
     cssNamespace,
-    nextLabel,
-    onNext,
-    showNext,
     size,
     ...props
 }) {
@@ -42,19 +36,10 @@ function WizardContent({
             [`${cssNamespace}-wizard__content--${background}`]: background
         }
     );
-    const nextStepClasses = classnames(`${cssNamespace}-wizard__next-step`);
 
     return (
         <section className={contentClasses} {...props}>
             {children}
-            {showNext && <div className={nextStepClasses}>
-                <Button
-                    compact
-                    onClick={onNext}
-                    option='emphasized'>
-                    {nextLabel}
-                </Button>
-            </div>}
         </section>
     );
 }
@@ -65,23 +50,8 @@ WizardContent.propTypes = {
     children: PropTypes.node,
     /** CSS class(es) to add to the element */
     className: PropTypes.string,
-    /** Label to use on the next step button */
-    nextLabel: PropTypes.string,
-    /** Show the "next step" button */
-    showNext: PropTypes.bool,
     /** By default wizard header has no horizontal paddings. Add a size to modify the padding */
-    size: PropTypes.oneOf(WIZARD_SIZES),
-
-    /**
-     * Callback function; triggered when the next step button is clicked.
-     *
-     * @param {SyntheticEvent} event - React's original SyntheticEvent. See https://reactjs.org/docs/events.html.
-     * @returns {void}
-    */
-    onNext: PropTypes.func
-};
-WizardContent.defaultProps = {
-    onNext: () => {}
+    size: PropTypes.oneOf(WIZARD_SIZES)
 };
 
 export default withStyles(WizardContent);
