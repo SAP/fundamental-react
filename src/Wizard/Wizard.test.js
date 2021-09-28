@@ -7,12 +7,12 @@ describe('<Wizard />', () => {
         const component = mount(
             <Wizard>
                 <Wizard.Step title='Step 1'>
-                    content
+                    <span className='data'>content</span>
                 </Wizard.Step>
             </Wizard>
         );
 
-        expect(component.find('.fd-wizard .fd-wizard__content').text()).toBe('contentNext');
+        expect(component.find('.fd-wizard .fd-wizard__content .data').text()).toBe('content');
     });
 
     describe('Prop spreading', () => {

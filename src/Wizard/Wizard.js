@@ -88,7 +88,7 @@ function Wizard({
 
     useEffect(() => {
         setMaxIndex(selectedIndex);
-        setRefs(children.map(() => createRef()));
+        setRefs(steps.map(() => createRef()));
     }, [children]);
 
     useEffect(() => {
