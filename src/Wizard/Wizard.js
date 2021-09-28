@@ -64,7 +64,6 @@ function Wizard({
     background,
     cancelLabel,
     children,
-    className,
     contentProps,
     contentSize,
     cssNamespace,
