@@ -382,7 +382,7 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const getRemainingOptions = (filteredOptions) => {
-        return options?.filter( ( el ) => !filteredOptions?.includes( el ) ) || [];
+        return hideNotMatchingEntries ? [] : options?.filter( ( el ) => !filteredOptions?.includes( el ) ) || [];
     };
 
     // Rendering
@@ -395,24 +395,16 @@ const ComboboxInput = React.forwardRef(({
         const matchingPart = option.text?.substring(firstOccurrence, firstOccurrence + filterString?.length);
         const rightPart = option.text?.substring(firstOccurrence + filterString?.length);
         const content = (
-            <List.Text>{filterString?.length ?
+            <List.Text>{(filterString?.length && firstOccurrence !== -1) ?
                 (<>{leftPart}<b>{matchingPart}</b>{rightPart}</>)
                 : option.text}</List.Text>
         );
         return content;
     };
 
-    const renderNotMatchingListOption = (option) => {
-        if (optionRenderer) {
-            return optionRenderer(option);
-        }
-        return (
-            <List.Text>{option.text}</List.Text>
-        );
-    };
-
     const filteredOptions = getFilteredOptions(filterString);
     const remainingOptions = getRemainingOptions(filteredOptions);
+    const sortedOptions = [...filteredOptions, ...remainingOptions];
     const showPopover = isExpanded && (!!options.length);
 
     const comboboxAddonButton = (
@@ -528,7 +520,16 @@ const ComboboxInput = React.forwardRef(({
                             id={`${id}-listbox`}
                             noBorder
                             role='listbox'>
-                            {filteredOptions?.length ? filteredOptions.map(option => {
+                            {!filteredOptions.length ? (
+                                <List.Item
+                                    tabIndex='-1'>
+                                    <List.Text
+                                        role='option'>
+                                        {noMatchesText || 'No match'}
+                                    </List.Text>
+                                </List.Item>
+                            ) : <></>}
+                            {sortedOptions?.length ? sortedOptions.map(option => {
 
                                 const listItemClasses = classnames({
                                     'is-selected': selectedOption?.key ? option?.key === selectedOption?.key : false
@@ -547,35 +548,7 @@ const ComboboxInput = React.forwardRef(({
                                     </List.Item>
                                 );
                             }) : <></>}
-                            {(!hideNotMatchingEntries && remainingOptions?.length) ? remainingOptions.map((option) => {
 
-                                const listItemClasses = classnames({
-                                    'is-selected': selectedOption?.key ? option?.key === selectedOption?.key : false
-                                });
-
-                                return (
-                                    <List.Item
-                                        className={listItemClasses}
-                                        id={`${id}-listbox-option-${option.key}`}
-                                        key={option.key}
-                                        onClick={(e) => handleOptionSelect(e, option, 'optionClick')}
-                                        onFocus={(e) => handleOptionFocus(e, option)}
-                                        onKeyDown={(e) => handleOptionKeyDown(e, option)}
-                                        role='option'>
-                                        {renderNotMatchingListOption(option)}
-                                    </List.Item>
-                                );
-                            }) : <></>}
-
-                            {(hideNotMatchingEntries && !filteredOptions.length) || !(filteredOptions.length && (hideNotMatchingEntries && remainingOptions.length)) ? (
-                                <List.Item
-                                    tabIndex='-1'>
-                                    <List.Text
-                                        role='option'>
-                                        {noMatchesText || 'No match'}
-                                    </List.Text>
-                                </List.Item>
-                            ) : <></>}
                         </List>
                     </div>)}
                 control={inputGroup}
