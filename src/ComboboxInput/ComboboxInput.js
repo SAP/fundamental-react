@@ -380,6 +380,9 @@ const ComboboxInput = React.forwardRef(({
         return options;
     };
 
+    const getRemainingOptions = (filteredOptions) => {
+        return options?.filter( ( el ) => !filteredOptions?.includes( el ) ) || [];
+    };
 
     // Rendering
     const renderListOption = (option) => {
@@ -398,8 +401,18 @@ const ComboboxInput = React.forwardRef(({
         return content;
     };
 
+    const renderNotMatchingListOption = (option) => {
+        if (optionRenderer) {
+            return optionRenderer(option);
+        }
+        return (
+            <List.Text>{option.text}</List.Text>
+        );
+    };
+
     const filteredOptions = getFilteredOptions(filterString);
-    const showPopover = isExpanded && !!filteredOptions.length;
+    const remainingOptions = getRemainingOptions(filteredOptions);
+    const showPopover = isExpanded && (!!options.length);
 
     const comboboxAddonButton = (
         <Button
@@ -532,15 +545,36 @@ const ComboboxInput = React.forwardRef(({
                                         {renderListOption(option)}
                                     </List.Item>
                                 );
-                            }) :
-                                (<List.Item
+                            }) : <></>}
+                            {remainingOptions?.length ? remainingOptions.map((option) => {
+
+                                const listItemClasses = classnames({
+                                    'is-selected': selectedOption?.key ? option?.key === selectedOption?.key : false
+                                });
+
+                                return (
+                                    <List.Item
+                                        className={listItemClasses}
+                                        id={`${id}-listbox-option-${option.key}`}
+                                        key={option.key}
+                                        onClick={(e) => handleOptionSelect(e, option, 'optionClick')}
+                                        onFocus={(e) => handleOptionFocus(e, option)}
+                                        onKeyDown={(e) => handleOptionKeyDown(e, option)}
+                                        role='option'>
+                                        {renderNotMatchingListOption(option)}
+                                    </List.Item>
+                                );
+                            }) : <></>}
+
+                            {!(filteredOptions.length && remainingOptions.length) ? (
+                                <List.Item
                                     tabIndex='-1'>
                                     <List.Text
                                         role='option'>
                                         {noMatchesText || 'No match'}
                                     </List.Text>
                                 </List.Item>
-                                )}
+                            ) : <></>}
                         </List>
                     </div>)}
                 control={inputGroup}
