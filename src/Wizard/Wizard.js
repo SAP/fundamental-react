@@ -64,7 +64,6 @@ function Wizard({
     background,
     cancelLabel,
     children,
-    className,
     contentProps,
     contentSize,
     cssNamespace,
@@ -72,10 +71,12 @@ function Wizard({
     headerProps,
     headerSize,
     navigationType,
+    nextLabel,
     option,
     onCancel,
     onComplete,
     onStepChange,
+    previousLabel,
     showTitles,
     ...props
 }) {
@@ -228,12 +229,12 @@ function Wizard({
                     label={cancelLabel}
                     onCancel={onCancel}
                     {...footerProps}>
-                    {selectedIndex > 0 && <Button compact onClick={previousStep}>{currentStep.props.previousLabel}</Button>}
+                    {selectedIndex > 0 && <Button compact onClick={previousStep}>{currentStep.props.previousLabel || previousLabel}</Button>}
                     <Button compact
                         disabled={!currentStep.props.valid}
                         onClick={nextStep}
                         option='emphasized'>
-                        {currentStep.props.nextLabel}
+                        {currentStep.props.nextLabel || nextLabel}
                     </Button>
                 </WizardFooter>
             </>}
@@ -256,7 +257,7 @@ function Wizard({
                         <section ref={refs[index]} style={index === maxIndex ? { minHeight: '100%' } : {}}>
                             {showTitles && <Title level={2}>{stepName(step, index)}</Title>}
                             {step.props.children}
-                            {index === maxIndex && step.props.valid && <WizardNextStep label={step.props.nextLabel} onNext={(e) => nextStep(e, index)} />}
+                            {index === maxIndex && step.props.valid && <WizardNextStep label={step.props.nextLabel || nextLabel} onNext={(e) => nextStep(e, index)} />}
                         </section>
                     ))}
                 </WizardContent>
@@ -291,10 +292,16 @@ Wizard.propTypes = {
      * page, while `tabs` shows one page at a time with navigation buttons in
      * the footer. */
     navigationType: PropTypes.oneOf(['anchors', 'tabs']),
+    /** Default label for next step buttons. Can be overriden by setting
+     * `nextLabel` on specific steps. */
+    nextLabel: PropTypes.string,
     /** Space-saving options. `stacking` option reduces all non-active steps to
      * a condensed form with a pop-up menu, while `no-labels` hides all text
      * from steps, only displaying the indicators. */
     option: PropTypes.oneOf(WIZARD_STACKING),
+    /** Default label for previous step buttons. Can be overriden by setting
+     * `previousLabel` on specific steps. */
+    previousLabel: PropTypes.string,
     /** Whether to show auto-generated titles in page contents. */
     showTitles: PropTypes.bool,
 
@@ -326,9 +333,11 @@ Wizard.propTypes = {
 Wizard.defaultProps = {
     cancelLabel: 'Cancel',
     navigationType: 'anchors',
+    nextLabel: 'Next Step',
     onCancel: () => {},
     onComplete: () => {},
     onStepChange: () => {},
+    previousLabel: 'Previous Step',
     showTitles: true
 };
 
