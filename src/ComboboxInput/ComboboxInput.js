@@ -38,6 +38,7 @@ const ComboboxInput = React.forwardRef(({
     disabled,
     formItemProps,
     filterable,
+    hideNotMatchingEntries,
     id,
     inputProps,
     label,
@@ -365,14 +366,14 @@ const ComboboxInput = React.forwardRef(({
         const sentenceLC = sentence?.toLowerCase();
         const searchLC = search?.toLowerCase();
         const words = sentenceLC.split(/[^a-zA-Z0-9.]/i);
-        return words?.length && !!words?.find(word => word.startsWith(searchLC))?.length;
+        return words?.length && !!words?.find(word => word.includes(searchLC))?.length;
     };
 
     const getFilteredOptions = (searchString) => {
         //if non-empty string return options whose text begins with searchString, case insensitive
         if (searchString?.trim()?.length) {
             return options?.filter(eachOption => searchString?.toLowerCase().match(/\s/i)?.length ?
-                eachOption?.text?.toLowerCase().startsWith(searchString?.toLowerCase())
+                eachOption?.text?.toLowerCase().includes(searchString?.toLowerCase())
                 : anyWordStartsWith(eachOption?.text, searchString)
             );
         }
@@ -546,7 +547,7 @@ const ComboboxInput = React.forwardRef(({
                                     </List.Item>
                                 );
                             }) : <></>}
-                            {remainingOptions?.length ? remainingOptions.map((option) => {
+                            {(!hideNotMatchingEntries && remainingOptions?.length) ? remainingOptions.map((option) => {
 
                                 const listItemClasses = classnames({
                                     'is-selected': selectedOption?.key ? option?.key === selectedOption?.key : false
@@ -566,7 +567,7 @@ const ComboboxInput = React.forwardRef(({
                                 );
                             }) : <></>}
 
-                            {!(filteredOptions.length && remainingOptions.length) ? (
+                            {(hideNotMatchingEntries && !filteredOptions.length) || !(filteredOptions.length && (hideNotMatchingEntries && remainingOptions.length)) ? (
                                 <List.Item
                                     tabIndex='-1'>
                                     <List.Text
@@ -632,6 +633,8 @@ Please set 'arrowLabel' property to a non-empty localized string.
     filterable: PropTypes.bool,
     /** Additional props to be spread to the combobox FormItem wrapper */
     formItemProps: PropTypes.object,
+    /** Set it to **true** to hide entries not maching the searched query */
+    hideNotMatchingEntries: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Localized string to use as a visual and semantic label for the Combobox*/
