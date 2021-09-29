@@ -154,14 +154,14 @@ describe('<ComboboxInput />', () => {
                 expect(document.querySelectorAll('.fd-form-message').length).toBe(1);
             });
 
-            test('should show filtered options when text is entered in the input field', () => {
+            test('should show sorted options when text is entered in the input field', () => {
                 let wrapper;
                 act(() => {
                     wrapper = setupForInteraction({}, container);
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
                 const filteredOptions = document.querySelectorAll('.fd-list__item');
-                expect(filteredOptions.length).toBe(22);
+                expect(filteredOptions.length).toBe(258);
             });
 
             test('should not auto select the first filtered option when list is shown', () => {
@@ -247,7 +247,7 @@ describe('<ComboboxInput />', () => {
         });
 
         describe('When selectionType is \'auto\'', () => {
-            test('should show filtered options when text is entered in the input field', () => {
+            test('should show sorted options when text is entered in the input field', () => {
                 let wrapper;
                 act(() => {
 
@@ -258,7 +258,7 @@ describe('<ComboboxInput />', () => {
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
                 const filteredOptions = document.querySelectorAll('.fd-list__item');
-                expect(filteredOptions.length).toBe(22);
+                expect(filteredOptions.length).toBe(258);
             });
 
             test('should auto select the first filtered option when list is shown', () => {
@@ -350,7 +350,7 @@ describe('<ComboboxInput />', () => {
         });
 
         describe('When selectionType is \'auto-inline\'', () => {
-            test('should show filtered options when text is entered in the input field', () => {
+            test('should show sorted options when text is entered in the input field', () => {
                 let wrapper;
                 act(() => {
 
@@ -361,7 +361,7 @@ describe('<ComboboxInput />', () => {
                     wrapper.find('input').simulate('change', { target: { value: 'island' } });
                 });
                 const filteredOptions = document.querySelectorAll('.fd-list__item');
-                expect(filteredOptions.length).toBe(22);
+                expect(filteredOptions.length).toBe(258);
             });
 
             test('should auto select the first filtered option when list is shown', () => {
@@ -392,11 +392,11 @@ describe('<ComboboxInput />', () => {
                         onSelectionChange: selectionChangeHandler
                     }, container);
 
-                    wrapper.find('input').simulate('change', { target: { value: 'sw' } });
+                    wrapper.find('input').simulate('change', { target: { value: 'swi' } });
                 });
                 const inputNode = wrapper.find('input').getDOMNode();
                 expect(inputNode.value).toBe('Switzerland');
-                expect(inputNode.selectionStart).toBe(2);
+                expect(inputNode.selectionStart).toBe(3);
                 expect(inputNode.selectionEnd).toBe(11);
             });
 
@@ -454,12 +454,12 @@ describe('<ComboboxInput />', () => {
                         onSelectionChange: selectionChangeHandler
                     }, container);
 
-                    wrapper.find('input').simulate('change', { target: { value: 'm' } });
+                    wrapper.find('input').simulate('change', { target: { value: 'mo' } });
                 });
-                const fifthOption = document.body.querySelectorAll('.fd-list__item')[4];
+                const thirdOption = document.body.querySelectorAll('.fd-list__item')[2];
                 let clickEvent = new MouseEvent('click', { bubbles: true });
                 act(() => {
-                    fifthOption.dispatchEvent(clickEvent);
+                    thirdOption.dispatchEvent(clickEvent);
                 });
                 expect(selectionChangeHandler).toHaveBeenLastCalledWith(expect.anything(), expect.objectContaining({
                     text: 'Morocco',
@@ -487,6 +487,23 @@ describe('<ComboboxInput />', () => {
                     });
                 });
                 expect(wrapper.find('input').getDOMNode().value).toBe('');
+            });
+        });
+
+        describe('When hideNotMatchingEntries is \'true\'', () => {
+            test('should show only filtered options when text is entered in the input field', () => {
+                let wrapper;
+                act(() => {
+
+                    wrapper = setupForInteraction({
+                        selectionType: 'auto-inline',
+                        hideNotMatchingEntries: true
+                    }, container);
+
+                    wrapper.find('input').simulate('change', { target: { value: 'island' } });
+                });
+                const filteredOptions = document.querySelectorAll('.fd-list__item');
+                expect(filteredOptions.length).toBe(22);
             });
         });
     });
