@@ -366,8 +366,11 @@ const ComboboxInput = React.forwardRef(({
     const anyWordStartsWith = (sentence, search) => {
         const sentenceLC = sentence?.toLowerCase();
         const searchLC = search?.toLowerCase();
-        const words = sentenceLC.split(/\s+/);
-        return searchFullString ? words?.length && !!words?.find(word => word.includes(searchLC))?.length : words?.length && !!words?.find(word => word.startsWith(searchLC))?.length;
+        const words = sentenceLC.split(/\s/i);
+        return words?.length && !!words?.find(word => {
+            const normalizedWord = word.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+            return searchFullString ? normalizedWord.includes(searchLC) : normalizedWord.startsWith(searchLC);
+        })?.length;
     };
 
     const getFilteredOptions = (searchString) => {
