@@ -38,7 +38,7 @@ const ComboboxInput = React.forwardRef(({
     disabled,
     formItemProps,
     filterable,
-    hideNotMatchingEntries,
+    showAllEntries,
     id,
     inputProps,
     label,
@@ -51,6 +51,7 @@ const ComboboxInput = React.forwardRef(({
     placeholder,
     popoverProps,
     required,
+    searchFullString,
     selectedKey,
     selectionType,
     validationOverlayProps,
@@ -365,16 +366,19 @@ const ComboboxInput = React.forwardRef(({
     const anyWordStartsWith = (sentence, search) => {
         const sentenceLC = sentence?.toLowerCase();
         const searchLC = search?.toLowerCase();
-        const words = sentenceLC.split(/[^a-zA-Z0-9.]/i);
-        return words?.length && !!words?.find(word => word.includes(searchLC))?.length;
+        const words = sentenceLC.split(/\s+/);
+        return searchFullString ? words?.length && !!words?.find(word => word.includes(searchLC))?.length : words?.length && !!words?.find(word => word.startsWith(searchLC))?.length;
     };
 
     const getFilteredOptions = (searchString) => {
         //if non-empty string return options whose text begins with searchString, case insensitive
         if (searchString?.trim()?.length) {
-            return options?.filter(eachOption => searchString?.toLowerCase().match(/\s/i)?.length ?
-                eachOption?.text?.toLowerCase().includes(searchString?.toLowerCase())
-                : anyWordStartsWith(eachOption?.text, searchString)
+            return options?.filter(eachOption => {
+                if (searchString?.toLowerCase().match(/\s/i)?.length) {
+                    if (searchFullString) return eachOption?.text?.toLowerCase().includes(searchString?.toLowerCase());
+                    else return eachOption?.text?.toLowerCase().startsWith(searchString?.toLowerCase());
+                } else return anyWordStartsWith(eachOption?.text, searchString);
+            }
             );
         }
         //if empty string return all the options
@@ -382,7 +386,12 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const getRemainingOptions = (filteredOptions) => {
-        return hideNotMatchingEntries ? [] : options?.filter( ( el ) => !filteredOptions?.includes( el ) ) || [];
+        if (showAllEntries) {
+            if (showAllEntries) return options?.filter( ( el ) => !filteredOptions?.includes( el ) ) || [];
+            else return options?.filter( ( el ) => !filteredOptions?.startsWith( el ) ) || [];
+        } else {
+            return [];
+        }
     };
 
     // Rendering
@@ -606,8 +615,6 @@ Please set 'arrowLabel' property to a non-empty localized string.
     filterable: PropTypes.bool,
     /** Additional props to be spread to the combobox FormItem wrapper */
     formItemProps: PropTypes.object,
-    /** Set it to **true** to hide entries not maching the searched query */
-    hideNotMatchingEntries: PropTypes.bool,
     /** Additional props to be spread to the `<input>` element */
     inputProps: PropTypes.object,
     /** Localized string to use as a visual and semantic label for the Combobox*/
@@ -629,7 +636,9 @@ Please set 'arrowLabel' property to a non-empty localized string.
     popoverProps: PropTypes.object,
     /** Set to **true** to mark input field as required.*/
     required: PropTypes.bool,
-    /** The key corresponding to the selected option */
+    /** Set it to **true** to search through the full string instead of just the beggining */
+    searchFullString: PropTypes.bool,
+    /** Additional props to be spread to the ValidationOverlay */
     selectedKey: PropTypes.string,
     /** String representing option selection behaviors:
      *
@@ -638,6 +647,8 @@ Please set 'arrowLabel' property to a non-empty localized string.
      * * `'auto-inline'`: First option from the filtered options is automatically selected and its options.text value is populated inline (type-ahead), user chooses different option by navigating through the list
     */
     selectionType: PropTypes.oneOf(COMBOBOX_SELECTION_TYPES),
+    /** Set it to **true** to show all entries, also those not maching the searched query */
+    showAllEntries: PropTypes.bool,
     /** Additional props to be spread to the ValidationOverlay */
     validationOverlayProps: PropTypes.shape({
         /** Additional classes to apply to validation popover's outermost `<div>` element  */
