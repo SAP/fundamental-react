@@ -641,7 +641,7 @@ Please set 'arrowLabel' property to a non-empty localized string.
     required: PropTypes.bool,
     /** Set it to **true** to search through the full string instead of just the beggining */
     searchFullString: PropTypes.bool,
-    /** Additional props to be spread to the ValidationOverlay */
+    /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** String representing option selection behaviors:
      *
