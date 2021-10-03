@@ -65,13 +65,14 @@ export const customLabels = () => (
         cancelLabel='Exit'
         contentSize='sm'
         headerSize='sm'
+        nextLabel='Go to next step'
         onCancel={() => alert('Wizard cancelled')}
         onComplete={() => alert('Wizard completed')}
         style={{ height: '20rem' }}>
-        <Wizard.Step nextLabel='Next Step' title='First Step'>
+        <Wizard.Step title='First Step'>
             <p>This is the first step.</p>
         </Wizard.Step>
-        <Wizard.Step nextLabel='Go to step 3' title='Second Step'>
+        <Wizard.Step title='Second Step'>
             <p>This is the second step.</p>
         </Wizard.Step>
         <Wizard.Step nextLabel='Complete' title='Final Step'>
