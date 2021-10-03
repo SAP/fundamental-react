@@ -117,8 +117,6 @@ WizardStep.propTypes = {
 };
 
 WizardStep.defaultProps = {
-    nextLabel: 'Next Step',
-    previousLabel: 'Previous Step',
     modifiers: [],
     valid: true
 };
