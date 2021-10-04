@@ -215,6 +215,90 @@ export const preSelectedKey = () => (
     </>
 );
 
+export const showAllEntries = () => (
+    <>
+        <Container>
+            <Row>
+                <Column>
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='showOnlyMatchingEntriesComboboxExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
+                        label='Show only matching entries Combobox (Default)'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        options={countriesData}
+                        placeholder='Enter country'
+                        selectedKey='CR'
+                        selectionType='auto-inline' />
+                </Column>
+                <Column>
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='showAllEntriesComboboxExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
+                        label='Show all entries Combobox'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        options={countriesData}
+                        placeholder='Enter country'
+                        selectedKey='CR'
+                        selectionType='auto-inline'
+                        showAllEntries />
+                </Column>
+                <Column />
+                <Column />
+            </Row>
+        </Container>
+    </>
+);
+
+export const searchFullString = () => (
+    <>
+        <Container>
+            <Row>
+                <Column>
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='searchBeginningStringComboboxExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
+                        label='Search by the beginning of the string Combobox (Default)'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        options={countriesData}
+                        placeholder='Enter country'
+                        selectedKey='CR'
+                        selectionType='auto-inline' />
+                </Column>
+                <Column>
+                    <ComboboxInput
+                        arrowLabel='Show country options'
+                        id='searchFullStringComboboxExample'
+                        inputProps={{
+                            autoComplete: 'nope'
+                        }}
+                        label='Search by the full string Combobox'
+                        maxHeight='250px'
+                        noMatchesText='No Matches'
+                        options={countriesData}
+                        placeholder='Enter country'
+                        searchFullString
+                        selectedKey='CR'
+                        selectionType='auto-inline' />
+                </Column>
+                <Column />
+                <Column />
+            </Row>
+        </Container>
+    </>
+);
+
 export const dev = () => {
     const [selectedCountryObj, setSelectedCountry] = useState();
     const [useCustomRenderer, setUseCustomRenderer] = useState(false);

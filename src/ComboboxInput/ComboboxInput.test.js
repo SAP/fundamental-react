@@ -489,6 +489,23 @@ describe('<ComboboxInput />', () => {
                 expect(wrapper.find('input').getDOMNode().value).toBe('');
             });
         });
+
+        describe('When showAllEntries is set to\'true\'', () => {
+            test('should show only all options when text is entered in the input field', () => {
+                let wrapper;
+                act(() => {
+
+                    wrapper = setupForInteraction({
+                        selectionType: 'auto-inline',
+                        showAllEntries: true
+                    }, container);
+
+                    wrapper.find('input').simulate('change', { target: { value: 'island' } });
+                });
+                const filteredOptions = document.querySelectorAll('.fd-list__item');
+                expect(filteredOptions.length).toBe(258);
+            });
+        });
     });
 
     test('forwards the ref', () => {

@@ -38,6 +38,7 @@ const ComboboxInput = React.forwardRef(({
     disabled,
     formItemProps,
     filterable,
+    showAllEntries,
     id,
     inputProps,
     label,
@@ -50,6 +51,7 @@ const ComboboxInput = React.forwardRef(({
     placeholder,
     popoverProps,
     required,
+    searchFullString,
     selectedKey,
     selectionType,
     validationOverlayProps,
@@ -364,22 +366,36 @@ const ComboboxInput = React.forwardRef(({
     const anyWordStartsWith = (sentence, search) => {
         const sentenceLC = sentence?.toLowerCase();
         const searchLC = search?.toLowerCase();
-        const words = sentenceLC.split(/[^a-zA-Z0-9.]/i);
-        return words?.length && !!words?.find(word => word.startsWith(searchLC))?.length;
+        const words = sentenceLC.split(/\s/i);
+        return words?.length && !!words?.find(word => {
+            const normalizedWord = word.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+            return searchFullString ? normalizedWord.includes(searchLC) : normalizedWord.startsWith(searchLC);
+        })?.length;
     };
 
     const getFilteredOptions = (searchString) => {
         //if non-empty string return options whose text begins with searchString, case insensitive
         if (searchString?.trim()?.length) {
-            return options?.filter(eachOption => searchString?.toLowerCase().match(/\s/i)?.length ?
-                eachOption?.text?.toLowerCase().startsWith(searchString?.toLowerCase())
-                : anyWordStartsWith(eachOption?.text, searchString)
+            return options?.filter(eachOption => {
+                if (searchString?.toLowerCase().match(/\s/i)?.length) {
+                    if (searchFullString) return eachOption?.text?.toLowerCase().includes(searchString?.toLowerCase());
+                    else return eachOption?.text?.toLowerCase().startsWith(searchString?.toLowerCase());
+                } else return anyWordStartsWith(eachOption?.text, searchString);
+            }
             );
         }
         //if empty string return all the options
         return options;
     };
 
+    const getRemainingOptions = (filteredOptions) => {
+        if (showAllEntries) {
+            if (showAllEntries) return options?.filter( ( el ) => !filteredOptions?.includes( el ) ) || [];
+            else return options?.filter( ( el ) => !filteredOptions?.startsWith( el ) ) || [];
+        } else {
+            return [];
+        }
+    };
 
     // Rendering
     const renderListOption = (option) => {
@@ -391,7 +407,7 @@ const ComboboxInput = React.forwardRef(({
         const matchingPart = option.text?.substring(firstOccurrence, firstOccurrence + filterString?.length);
         const rightPart = option.text?.substring(firstOccurrence + filterString?.length);
         const content = (
-            <List.Text>{filterString?.length ?
+            <List.Text>{(filterString?.length && firstOccurrence !== -1) ?
                 (<>{leftPart}<b>{matchingPart}</b>{rightPart}</>)
                 : option.text}</List.Text>
         );
@@ -399,7 +415,9 @@ const ComboboxInput = React.forwardRef(({
     };
 
     const filteredOptions = getFilteredOptions(filterString);
-    const showPopover = isExpanded && !!filteredOptions.length;
+    const remainingOptions = getRemainingOptions(filteredOptions);
+    const sortedOptions = [...filteredOptions, ...remainingOptions];
+    const showPopover = isExpanded && (!!options.length);
 
     const comboboxAddonButton = (
         <Button
@@ -514,7 +532,16 @@ const ComboboxInput = React.forwardRef(({
                             id={`${id}-listbox`}
                             noBorder
                             role='listbox'>
-                            {filteredOptions?.length ? filteredOptions.map(option => {
+                            {!filteredOptions.length ? (
+                                <List.Item
+                                    tabIndex='-1'>
+                                    <List.Text
+                                        role='option'>
+                                        {noMatchesText || 'No match'}
+                                    </List.Text>
+                                </List.Item>
+                            ) : <></>}
+                            {sortedOptions?.length ? sortedOptions.map(option => {
 
                                 const listItemClasses = classnames({
                                     'is-selected': selectedOption?.key ? option?.key === selectedOption?.key : false
@@ -532,15 +559,8 @@ const ComboboxInput = React.forwardRef(({
                                         {renderListOption(option)}
                                     </List.Item>
                                 );
-                            }) :
-                                (<List.Item
-                                    tabIndex='-1'>
-                                    <List.Text
-                                        role='option'>
-                                        {noMatchesText || 'No match'}
-                                    </List.Text>
-                                </List.Item>
-                                )}
+                            }) : <></>}
+
                         </List>
                     </div>)}
                 control={inputGroup}
@@ -619,6 +639,8 @@ Please set 'arrowLabel' property to a non-empty localized string.
     popoverProps: PropTypes.object,
     /** Set to **true** to mark input field as required.*/
     required: PropTypes.bool,
+    /** Set it to **true** to search through the full string instead of just the beggining */
+    searchFullString: PropTypes.bool,
     /** The key corresponding to the selected option */
     selectedKey: PropTypes.string,
     /** String representing option selection behaviors:
@@ -628,6 +650,8 @@ Please set 'arrowLabel' property to a non-empty localized string.
      * * `'auto-inline'`: First option from the filtered options is automatically selected and its options.text value is populated inline (type-ahead), user chooses different option by navigating through the list
     */
     selectionType: PropTypes.oneOf(COMBOBOX_SELECTION_TYPES),
+    /** Set it to **true** to show all entries, also those not maching the searched query */
+    showAllEntries: PropTypes.bool,
     /** Additional props to be spread to the ValidationOverlay */
     validationOverlayProps: PropTypes.shape({
         /** Additional classes to apply to validation popover's outermost `<div>` element  */
