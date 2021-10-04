@@ -21,19 +21,40 @@ export default {
     }
 };
 
-export const primary = () => (
+export const anchorsMode = () => (
     <Wizard
         contentSize='sm'
         headerSize='sm'
         onCancel={() => alert('Wizard cancelled')}
-        onComplete={() => alert('Wizard completed')}>
-        <Wizard.Step title='Step 1: Foo'>
+        onComplete={() => alert('Wizard completed')}
+        style={{ height: '20rem' }}>
+        <Wizard.Step title='First Step'>
             <p>This is the first step.</p>
         </Wizard.Step>
-        <Wizard.Step title='Step 2: Bar'>
+        <Wizard.Step title='Second Step'>
             <p>This is the second step.</p>
         </Wizard.Step>
-        <Wizard.Step title='Step 3: Baz'>
+        <Wizard.Step title='Final Step'>
+            <p>This is the final step.</p>
+        </Wizard.Step>
+    </Wizard>
+);
+
+export const tabsMode = () => (
+    <Wizard
+        contentSize='sm'
+        headerSize='sm'
+        navigationType='tabs'
+        onCancel={() => alert('Wizard cancelled')}
+        onComplete={() => alert('Wizard completed')}
+        style={{ height: '20rem' }}>
+        <Wizard.Step title='First Step'>
+            <p>This is the first step.</p>
+        </Wizard.Step>
+        <Wizard.Step title='Second Step'>
+            <p>This is the second step.</p>
+        </Wizard.Step>
+        <Wizard.Step title='Final Step'>
             <p>This is the final step.</p>
         </Wizard.Step>
     </Wizard>
@@ -44,15 +65,37 @@ export const customLabels = () => (
         cancelLabel='Exit'
         contentSize='sm'
         headerSize='sm'
+        nextLabel='Go to next step'
         onCancel={() => alert('Wizard cancelled')}
-        onComplete={() => alert('Wizard completed')}>
-        <Wizard.Step nextLabel='Next Step' title='Step 1: Foo'>
+        onComplete={() => alert('Wizard completed')}
+        style={{ height: '20rem' }}>
+        <Wizard.Step title='First Step'>
             <p>This is the first step.</p>
         </Wizard.Step>
-        <Wizard.Step nextLabel='Go to step 3' title='Step 2: Bar'>
+        <Wizard.Step title='Second Step'>
             <p>This is the second step.</p>
         </Wizard.Step>
-        <Wizard.Step nextLabel='Complete' title='Step 3: Baz'>
+        <Wizard.Step nextLabel='Complete' title='Final Step'>
+            <p>This is the final step.</p>
+        </Wizard.Step>
+    </Wizard>
+);
+
+export const NoTitles = () => (
+    <Wizard
+        contentSize='sm'
+        headerSize='sm'
+        onCancel={() => alert('Wizard cancelled')}
+        onComplete={() => alert('Wizard completed')}
+        showTitles={false}
+        style={{ height: '20rem' }}>
+        <Wizard.Step title='First Step'>
+            <p>This is the first step.</p>
+        </Wizard.Step>
+        <Wizard.Step title='Second Step'>
+            <p>This is the second step.</p>
+        </Wizard.Step>
+        <Wizard.Step title='Final Step'>
             <p>This is the final step.</p>
         </Wizard.Step>
     </Wizard>
@@ -63,7 +106,8 @@ export const glyphs = () => (
         contentSize='sm'
         headerSize='sm'
         onCancel={() => alert('Wizard cancelled')}
-        onComplete={() => alert('Wizard completed')}>
+        onComplete={() => alert('Wizard completed')}
+        style={{ height: '20rem' }}>
         <Wizard.Step glyph='person-placeholder' title='Customer'>
             <p>This is the customer step.</p>
         </Wizard.Step>
@@ -89,7 +133,8 @@ export const noLabels = () => (
         headerSize='sm'
         onCancel={() => alert('Wizard cancelled')}
         onComplete={() => alert('Wizard completed')}
-        option='no-labels'>
+        option='no-labels'
+        style={{ height: '20rem' }}>
         <Wizard.Step glyph='person-placeholder' title='Customer'>
             <p>This is the customer step.</p>
         </Wizard.Step>
@@ -116,7 +161,8 @@ export const stacked = () => (
         headerSize='sm'
         onCancel={() => alert('Wizard cancelled')}
         onComplete={() => alert('Wizard completed')}
-        option='stacked'>
+        option='stacked'
+        style={{ height: '20rem' }}>
         <Wizard.Step glyph='person-placeholder' title='Customer'>
             <p>This is the customer step.</p>
         </Wizard.Step>
@@ -145,20 +191,52 @@ export const validator = () => {
             contentSize='sm'
             headerSize='sm'
             onCancel={() => alert('Wizard cancelled')}
-            onComplete={() => alert('Wizard completed')}>
+            onComplete={() => alert('Wizard completed')}
+            style={{ height: '20rem' }}>
             <Wizard.Step
-                title='Step 1: Foo'
+                title='First Step'
                 valid={stepOneValid}>
                 <Checkbox checked={stepOneValid} onChange={(e, val) => setStepOneValid(val)}>Is valid?</Checkbox>
             </Wizard.Step>
             <Wizard.Step
-                title='Step 2: Bar'
+                title='Second Step'
                 valid={stepTwoValid}>
                 <Checkbox checked={stepTwoValid} onChange={(e, val) => setStepTwoValid(val)}>Is valid?</Checkbox>
             </Wizard.Step>
             <Wizard.Step
                 nextLabel='Complete'
-                title='Step 3: Baz'>
+                title='Final Step'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+    );
+};
+
+export const tabsModeValidator = () => {
+    const [stepOneValid, setStepOneValid] = useState(false);
+    const [stepTwoValid, setStepTwoValid] = useState(false);
+
+    return (
+        <Wizard
+            contentSize='sm'
+            headerSize='sm'
+            navigationType='tabs'
+            onCancel={() => alert('Wizard cancelled')}
+            onComplete={() => alert('Wizard completed')}
+            style={{ height: '20rem' }}>
+            <Wizard.Step
+                title='First Step'
+                valid={stepOneValid}>
+                <Checkbox checked={stepOneValid} onChange={(e, val) => setStepOneValid(val)}>Is valid?</Checkbox>
+            </Wizard.Step>
+            <Wizard.Step
+                title='Second Step'
+                valid={stepTwoValid}>
+                <Checkbox checked={stepTwoValid} onChange={(e, val) => setStepTwoValid(val)}>Is valid?</Checkbox>
+            </Wizard.Step>
+            <Wizard.Step
+                nextLabel='Complete'
+                title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
@@ -174,7 +252,81 @@ export const branching = () => {
             contentSize='sm'
             headerSize='sm'
             onCancel={() => alert('Wizard cancelled')}
-            onComplete={() => alert('Wizard completed')}>
+            onComplete={() => alert('Wizard completed')}
+            style={{ height: '20rem' }}>
+            <Wizard.Step
+                branching={!branch}
+                title='Branch choice'
+                valid={branch}>
+                <Select
+                    onSelect={(e, option) => setBranch(option.key)}
+                    options={[
+                        { key: 'one', text: 'One extra element' },
+                        { key: 'two', text: 'Two extra elements (react fragment)' },
+                        { key: 'none', text: 'Empty' },
+                        { key: 'deep', text: 'Two level' }
+                    ]}
+                    selectedKey={branch} />
+            </Wizard.Step>
+            {branch === 'one' && (
+                <Wizard.Step
+                    title='Single'>
+                    Extra step
+                </Wizard.Step>
+            )}
+            {branch === 'two' && <>
+                <Wizard.Step
+                    title='Double 1'>
+                    Extra step 1
+                </Wizard.Step>
+                <Wizard.Step
+                    title='Double 2'>
+                    Extra step 2
+                </Wizard.Step>
+            </>}
+            {branch === 'deep' && <>
+                <Wizard.Step
+                    branching={!branch2}
+                    title='Deep branch choice'
+                    valid={branch2}>
+                    <Select
+                        onSelect={(e, option) => setBranch2(option.key)}
+                        options={[
+                            { key: '1', text: 'Branch 1' },
+                            { key: '2', text: 'Branch 2' }
+                        ]}
+                        selectedKey={branch2} />
+                </Wizard.Step>
+                {branch2 === '1' && <Wizard.Step
+                    title='Deep step 1'>
+                    Deep step 1
+                </Wizard.Step>}
+                {branch2 === '2' && <Wizard.Step
+                    title='Deep step 2'>
+                    Deep step 2
+                </Wizard.Step>}
+            </>}
+            <Wizard.Step
+                nextLabel='Complete'
+                title='Finish'>
+                <p>This is the final step.</p>
+            </Wizard.Step>
+        </Wizard>
+    );
+};
+
+export const tabsModeBranching = () => {
+    const [branch, setBranch] = useState(null);
+    const [branch2, setBranch2] = useState(null);
+
+    return (
+        <Wizard
+            contentSize='sm'
+            headerSize='sm'
+            navigationType='tabs'
+            onCancel={() => alert('Wizard cancelled')}
+            onComplete={() => alert('Wizard completed')}
+            style={{ height: '20rem' }}>
             <Wizard.Step
                 branching={!branch}
                 title='Branch choice'
@@ -240,52 +392,52 @@ export const sizes = () => (
     <>
         <h3>Small</h3>
         <Wizard contentSize='sm' headerSize='sm'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
 
         <h3>Medium</h3>
         <Wizard contentSize='md' headerSize='md'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
 
         <h3>Large</h3>
         <Wizard contentSize='lg' headerSize='lg'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
 
         <h3>XL</h3>
         <Wizard contentSize='xl' headerSize='xl'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
@@ -296,39 +448,39 @@ export const backgrounds = () => (
     <div style={{ backgroundColor: '#ff9', padding: '1rem' }}>
         <h3>Solid</h3>
         <Wizard background='solid'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
 
         <h3>List</h3>
         <Wizard background='list'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
 
         <h3>Transparent</h3>
         <Wizard background='transparent'>
-            <Wizard.Step title='Step 1: Foo'>
+            <Wizard.Step title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 2: Bar'>
+            <Wizard.Step title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
-            <Wizard.Step title='Step 3: Baz'>
+            <Wizard.Step title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard>
@@ -346,25 +498,26 @@ export const manual = () => (
                 connector='active'
                 glyph='accept'
                 modifiers={['completed']}
-                title='Step 1: Foo'>
+                title='First Step'>
                 <p>This is the first step.</p>
             </Wizard.Step>
             <Wizard.Step
                 indicator='2'
                 modifiers={['active', 'current']}
-                title='Step 2: Bar'>
+                title='Second Step'>
                 <p>This is the second step.</p>
             </Wizard.Step>
             <Wizard.Step
                 connector='none'
                 indicator='3'
                 modifiers={['upcoming']}
-                title='Step 3: Baz'>
+                title='Final Step'>
                 <p>This is the final step.</p>
             </Wizard.Step>
         </Wizard.Navigation>
         <Wizard.Content size='sm'>
             <p>This is content</p>
+            <Wizard.NextStep />
         </Wizard.Content>
         <Wizard.Footer label='Cancel'>
             <Button compact option='transparent'>Custom</Button>

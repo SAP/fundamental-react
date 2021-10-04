@@ -1,5 +1,6 @@
 import classnamesBind from 'classnames/bind';
 import Icon from '../Icon/Icon';
+import Popover from '../Popover/Popover';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '../utils/withStyles';
@@ -34,6 +35,8 @@ function WizardStep({
     modifiers,
     nextLabel,
     optionalLabel,
+    menu,
+    onClick,
     title,
     valid,
     ...props
@@ -54,21 +57,27 @@ function WizardStep({
         [`${cssNamespace}-wizard__connector--${connector}`]: connector !== 'default'
     });
 
+    const link = (linkClick) => (<a
+        aria-label={title}
+        className={classnames(`${cssNamespace}-wizard__step-container`)}
+        onClick={linkClick}
+        // hack to counter a fundamental-styles rule preventing proper navigation
+        style={{ pointerEvents: 'auto' }}>
+        <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
+            {glyph ? <Icon ariaLabel={glyph} className={classnames(`${cssNamespace}-wizard__icon`)}
+                glyph={glyph} /> : indicator}
+        </span>
+        <div className={labelContainerClasses}>
+            <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
+            {optionalLabel && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optionalLabel}</span>}
+        </div>
+    </a>);
+
     return (
         <li className={stepClasses} {...props}>
             <div className={classnames(`${cssNamespace}-wizard__step-wrapper`)}>
-                <a
-                    aria-label={title}
-                    className={classnames(`${cssNamespace}-wizard__step-container`)}>
-                    <span className={classnames(`${cssNamespace}-wizard__step-indicator`)}>
-                        {glyph ? <Icon ariaLabel={glyph} className={classnames(`${cssNamespace}-wizard__icon`)}
-                            glyph={glyph} /> : indicator}
-                    </span>
-                    <div className={labelContainerClasses}>
-                        <span className={classnames(`${cssNamespace}-wizard__label`)}>{title}</span>
-                        {optionalLabel && <span className={classnames(`${cssNamespace}-wizard__optional-text`)}>{optionalLabel}</span>}
-                    </div>
-                </a>
+                {menu && <Popover body={menu} control={link()} />}
+                {!menu && link(onClick)}
                 {connector !== 'none' && <span className={connectorClasses} />}
             </div>
         </li>
@@ -78,30 +87,36 @@ function WizardStep({
 WizardStep.propTypes = {
     title: PropTypes.string.isRequired,
 
-    /** (integrated only) Mark step as having unknown following content */
+    /** (integrated only) Mark step as having unknown following content. */
     branching: PropTypes.bool,
-    /** (integated only) Nodes to render as step content */
+    /** (integated only) Nodes to render as step content. */
     children: PropTypes.node,
-    /** CSS class(es) to add to the element */
+    /** CSS class(es) to add to the element. */
     className: PropTypes.string,
-    /** (standalone only) Appearance of the connector to the next element */
+    /** (standalone only) Appearance of the connector to the next element. */
     connector: PropTypes.oneOf(WIZARD_CONNECTOR_TYPES),
-    /** Icon glyph to display in the indicator component */
+    /** Icon glyph to display in the indicator component. */
     glyph: PropTypes.node,
-    /** Text to display in the indicator component if no glyph given */
+    /** Text to display in the indicator component if no glyph given. */
     indicator: PropTypes.string,
-    /** (standalone only) Step appearance modifiers */
+    /** Menu to show instead of triggering a click even. Used mostly for
+     * stacking steps. */
+    menu: PropTypes.node,
+    /** (standalone only) Step appearance modifiers. */
     modifiers: PropTypes.arrayOf(PropTypes.oneOf(WIZARD_STEP_MODIFIERS)),
-    /** (integrated only) Label to use on the next step button */
+    /** (integrated only) Label to use on the next step button. */
     nextLabel: PropTypes.string,
-    /** Label to use as the optional text in step header */
+    /** Label to use as the optional text in step header. */
     optionalLabel: PropTypes.string,
-    /** (integrated only) True if moving to the next step is allowed */
-    valid: PropTypes.bool
+    /** (integrated only) Label to use on the previous step button. */
+    previousLabel: PropTypes.string,
+    /** (integrated only) True if moving to the next step is allowed. */
+    valid: PropTypes.bool,
+
+    onClick: PropTypes.function
 };
 
 WizardStep.defaultProps = {
-    nextLabel: 'Next',
     modifiers: [],
     valid: true
 };
