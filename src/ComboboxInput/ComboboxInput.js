@@ -54,6 +54,7 @@ const ComboboxInput = React.forwardRef(({
     searchFullString,
     selectedKey,
     selectionType,
+    typedValue,
     validationOverlayProps,
     validationState,
     ...props
@@ -75,8 +76,13 @@ const ComboboxInput = React.forwardRef(({
             if (textInputRef?.current) {
                 textInputRef.current.value = preSelectedOption?.text || '';
             }
+        } else if (typedValue) {
+            setFilterString(typedValue);
+            if (textInputRef?.current) {
+                textInputRef.current.value = typedValue;
+            }
         }
-    }, [selectedKey, textInputRef]);
+    }, [selectedKey, textInputRef, typedValue]);
 
     const inputGroupClass = classnames(
         `${cssNamespace}-input-group--control`,
@@ -484,14 +490,9 @@ const ComboboxInput = React.forwardRef(({
                     placeholder={placeholder}
                     ref={textInputRef}
                     required={required} />
-                {
-                    resolvedSelectionType === 'auto-inline'
-                    && (
-                        <InputGroup.Addon isButton>
-                            {comboboxAddonButton}
-                        </InputGroup.Addon>
-                    )
-                }
+                <InputGroup.Addon isButton>
+                    {comboboxAddonButton}
+                </InputGroup.Addon>
             </InputGroup>
         </div>
     );
@@ -652,6 +653,8 @@ Please set 'arrowLabel' property to a non-empty localized string.
     selectionType: PropTypes.oneOf(COMBOBOX_SELECTION_TYPES),
     /** Set it to **true** to show all entries, also those not maching the searched query */
     showAllEntries: PropTypes.bool,
+    /** The value used if selectedKey is not given or it matches no option. */
+    typedValue: PropTypes.string,
     /** Additional props to be spread to the ValidationOverlay */
     validationOverlayProps: PropTypes.shape({
         /** Additional classes to apply to validation popover's outermost `<div>` element  */
