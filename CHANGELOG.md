@@ -1,4 +1,11 @@
 
+## [0.14.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.34...v0.14.0-rc.35) (2021-10-21)
+
+
+### Features
+
+* allow freetype on ComboboxInput ([#1371](https://github.com/SAP/fundamental-react/issues/1371)) ([58fd153](https://github.com/SAP/fundamental-react/commit/58fd15323ceafa060e632fc92e2cdbf3d70e4106))
+
 ## [0.14.0-rc.34](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.33...v0.14.0-rc.34) (2021-10-04)
 
 ## [0.14.0-rc.33](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.32...v0.14.0-rc.33) (2021-10-03)
