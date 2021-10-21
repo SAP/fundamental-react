@@ -248,7 +248,7 @@ export const freetype = () => {
                 </Row>
             </Container>
             <p>
-                <pre>text: </pre>
+                text:{' '}
                 <input onChange={(e) => setSelectedText(e.target.value)} value={selectedText} />
             </p>
             <p>

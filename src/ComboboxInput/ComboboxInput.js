@@ -46,7 +46,6 @@ const ComboboxInput = React.forwardRef(({
     noMatchesText,
     onClick,
     onSelectionChange,
-    typedValue,
     optionRenderer,
     options,
     placeholder,
@@ -55,6 +54,7 @@ const ComboboxInput = React.forwardRef(({
     searchFullString,
     selectedKey,
     selectionType,
+    typedValue,
     validationOverlayProps,
     validationState,
     ...props
