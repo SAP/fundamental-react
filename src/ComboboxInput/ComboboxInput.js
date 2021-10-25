@@ -81,6 +81,8 @@ const ComboboxInput = React.forwardRef(({
             if (textInputRef?.current) {
                 textInputRef.current.value = typedValue;
             }
+        } else {
+            textInputRef.current.value = null;
         }
     }, [selectedKey, textInputRef, typedValue]);
 
