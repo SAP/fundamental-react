@@ -1,4 +1,11 @@
 
+## [0.14.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.35...v0.14.0-rc.36) (2021-11-03)
+
+
+### Bug Fixes
+
+* check explicitly if typedValue is a string ([#1378](https://github.com/SAP/fundamental-react/issues/1378)) ([3120c39](https://github.com/SAP/fundamental-react/commit/3120c390150104889f16b211681a8bcb4db6e54f))
+
 ## [0.14.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.34...v0.14.0-rc.35) (2021-10-21)
 
 
