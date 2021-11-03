@@ -76,7 +76,7 @@ const ComboboxInput = React.forwardRef(({
             if (textInputRef?.current) {
                 textInputRef.current.value = preSelectedOption?.text || '';
             }
-        } else if (typedValue) {
+        } else if (typeof typedValue === 'string') {
             setFilterString(typedValue);
             if (textInputRef?.current) {
                 textInputRef.current.value = typedValue;
