@@ -17,7 +17,18 @@
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to top frame for connecting dev tools');
-  }</script><style>.sidebar-header {
+  }
+
+  window.onerror = function onerror(message, source, line, column, err) {
+    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
+    // eslint-disable-next-line no-var, vars-on-top
+    var error = { message: err.message, name: err.name, stack: err.stack };
+    window.fetch('/runtime-error', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, source, line, column, error, origin: 'manager' }),
+    });
+  };</script><style>.sidebar-header {
         position: fixed !important;
         align-items: center !important;
         padding: 20px 16px 12px 20px !important;
@@ -42,7 +53,7 @@
     }
     
     .sidebar-container {
-        padding-top: 85px;
+        padding-top: 35px;
     }
 
     .sidebar-container form {
@@ -72,7 +83,11 @@
     }</style><style>#root[hidden],
       #docs-root[hidden] {
         display: none !important;
-      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['LOGLEVEL'] = "info";
+      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
+            
+        
+            
+              window['LOGLEVEL'] = "info";
             
         
             
@@ -80,4 +95,4 @@
             
         
             
-              window['DOCS_MODE'] = true;</script><script src="./sb_dll/storybook_ui_dll.js"></script><script src="runtime~main.870e8ee0658e83d05c6b.bundle.js"></script><script src="vendors~main.157ff9b5d5ff30a429fe.bundle.js"></script><script src="main.fb440b0c75d16886aa8c.bundle.js"></script></body></html>
+              window['DOCS_MODE'] = true;</script><script src="runtime~main.870e8ee0658e83d05c6b.bundle.js"></script><script src="vendors~main.bbf05b53e19582ff2a47.bundle.js"></script><script src="main.cd85254ca03f032ec3a8.bundle.js"></script></body></html>

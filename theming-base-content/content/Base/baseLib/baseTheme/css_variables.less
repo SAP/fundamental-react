@@ -1,12 +1,12 @@
 /**
-* Copyright (c) 2012-2019 SAP SE. All Rights Reserved Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+* Copyright (c) 2012-2020 SAP SE or an SAP affiliate company and Theming Base Content contributors. Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
 * Theming Engine 1.51.0
-* data:{"sModified":"2020-04-07T10:19:39Z"}
+* data:{"sModified":"2020-10-23T11:38:37Z"}
 */
 
 @import "base.less";
 
-/******************* FILE /Base/baseLib/baseTheme/css_variables.less (Version 11.1.19) *******************/
+/******************* FILE /Base/baseLib/baseTheme/css_variables.less (Version 11.1.23) *******************/
 
 /*!SAP_POSTPROCESS_REDUCE_START*/
 
@@ -140,6 +140,7 @@
   --sapContent_HelpColor: @sapContent_HelpColor;
   --sapContent_LabelColor: @sapContent_LabelColor;
   --sapContent_MonospaceFontFamily: @sapContent_MonospaceFontFamily;
+  --sapContent_MonospaceBoldFontFamily: @sapContent_MonospaceBoldFontFamily;
   --sapContent_DisabledTextColor: @sapContent_DisabledTextColor;
   --sapContent_DisabledOpacity: @sapContent_DisabledOpacity;
   --sapContent_ContrastTextThreshold: @sapContent_ContrastTextThreshold;
@@ -184,6 +185,9 @@
   --sapShell_Navigation_SelectedColor: @sapShell_Navigation_SelectedColor;
   --sapShell_Navigation_Selected_TextColor: @sapShell_Navigation_Selected_TextColor;
   --sapShell_Navigation_TextColor: @sapShell_Navigation_TextColor;
+  --sapShell_Navigation_Hover_Background: @sapShell_Navigation_Hover_Background;
+  --sapShell_Navigation_Active_Background: @sapShell_Navigation_Active_Background;
+  --sapShell_Navigation_Active_TextColor: @sapShell_Navigation_Active_TextColor;
   --sapShell_Shadow: @sapShell_Shadow;
   --sapButton_BorderWidth: @sapButton_BorderWidth;
   --sapButton_BorderCornerRadius: @sapButton_BorderCornerRadius;
@@ -380,8 +384,11 @@
   --sapInfobar_Background: @sapInfobar_Background;
   --sapInfobar_Hover_Background: @sapInfobar_Hover_Background;
   --sapInfobar_Active_Background: @sapInfobar_Active_Background;
+  --sapInfobar_NonInteractive_Background: @sapInfobar_NonInteractive_Background;
+  --sapInfobar_TextColor: @sapInfobar_TextColor;
   --sapObjectHeader_Background: @sapObjectHeader_Background;
   --sapObjectHeader_BorderColor: @sapObjectHeader_BorderColor;
+  --sapObjectHeader_Hover_Background: @sapObjectHeader_Hover_Background;
   --sapBlockLayer_Background: @sapBlockLayer_Background;
   --sapTile_Background: @sapTile_Background;
   --sapTile_Hover_Background: @sapTile_Hover_Background;
@@ -391,6 +398,7 @@
   --sapTile_TextColor: @sapTile_TextColor;
   --sapTile_IconColor: @sapTile_IconColor;
   --sapTile_SeparatorColor: @sapTile_SeparatorColor;
+  --sapTile_Interactive_BorderColor: @sapTile_Interactive_BorderColor;
   --sapAccentColor1: @sapAccentColor1;
   --sapAccentColor2: @sapAccentColor2;
   --sapAccentColor3: @sapAccentColor3;
@@ -486,6 +494,14 @@
   --sapFontUrl_72_Bold_full_woff: @sapFontUrl_72_Bold_full_woff;
   --sapFontUrl_72_Light_full_woff2: @sapFontUrl_72_Light_full_woff2;
   --sapFontUrl_72_Light_full_woff: @sapFontUrl_72_Light_full_woff;
+  --sapFontUrl_72Mono_Regular_woff2: @sapFontUrl_72Mono_Regular_woff2;
+  --sapFontUrl_72Mono_Regular_woff: @sapFontUrl_72Mono_Regular_woff;
+  --sapFontUrl_72Mono_Regular_full_woff2: @sapFontUrl_72Mono_Regular_full_woff2;
+  --sapFontUrl_72Mono_Regular_full_woff: @sapFontUrl_72Mono_Regular_full_woff;
+  --sapFontUrl_72Mono_Bold_woff2: @sapFontUrl_72Mono_Bold_woff2;
+  --sapFontUrl_72Mono_Bold_woff: @sapFontUrl_72Mono_Bold_woff;
+  --sapFontUrl_72Mono_Bold_full_woff2: @sapFontUrl_72Mono_Bold_full_woff2;
+  --sapFontUrl_72Mono_Bold_full_woff: @sapFontUrl_72Mono_Bold_full_woff;
 }
 
 .background-image--sapCompanyLogo {

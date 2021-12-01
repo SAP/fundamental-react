@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/theming-base-content)](https://api.reuse.software/info/github.com/SAP/theming-base-content)
+
 # SAP Theming Base Content
 
 This repository provides color, font and metric definitions of SAP themes to be used by application UIs and UI frameworks.
@@ -82,6 +84,3 @@ app.listen(3000, () => console.log('Try http://localhost:3000/Base/baseLib/sap_b
 
 ## Contributing
 This repository is containing the SAP Open Source Theming Content releases build internally. It is a channel for external distribution. This repository is not open for external contributions.
-
-## License
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the Apache Software License (v.2) except as noted otherwise in the [LICENSE file](./LICENSE.txt).

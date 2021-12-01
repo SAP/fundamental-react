@@ -4,6 +4,41 @@
     display: none;
   }
 
+  .sb-show-main.sb-main-centered {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .sb-show-main.sb-main-centered #root {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1rem;
+    max-height: 100%; /* Hack for centering correctly in IE11 */
+  }
+
+  /* Vertical centering fix for IE11 */
+  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .sb-show-main.sb-main-centered:after {
+      content: '';
+      min-height: inherit;
+      font-size: 0;
+    }
+  }
+
+  .sb-show-main.sb-main-fullscreen {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .sb-show-main.sb-main-padded {
+    margin: 0;
+    padding: 1rem;
+    display: block;
+  }
+
   .sb-wrapper {
     position: fixed;
     top: 0;
@@ -68,7 +103,18 @@
   } catch (e) {
     // eslint-disable-next-line no-console
     console.warn('unable to connect to top frame for connecting dev tools');
-  }</script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg" href="/logo.svg" sizes="192x192"><style>@font-face {
+  }
+
+  window.onerror = function onerror(message, source, line, column, err) {
+    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
+    // eslint-disable-next-line no-var, vars-on-top
+    var error = { message: err.message, name: err.name, stack: err.stack };
+    window.fetch('/runtime-error', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, source, line, column, error, origin: 'preview' }),
+    });
+  };</script><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg" href="/logo.svg" sizes="192x192"><style>@font-face {
     font-family: '72';
     src: url('./theming-base-content/content/Base/baseLib/sap_base_fiori/fonts/72-Regular.woff') format('woff');
     font-weight: normal;
@@ -97,4 +143,8 @@
 }</style><style>#root[hidden],
       #docs-root[hidden] {
         display: none !important;
-      }</style></head><body><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><pre id="error-message" class="sb-heading"></pre><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="root"></div><div id="docs-root"></div><script>window['LOGLEVEL'] = "info";</script><script src="./sb_dll/storybook_docs_dll.js"></script><script src="runtime~main.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~0f485567.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~0decbd73.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~b81e6e7a.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~ca8e15b3.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~0ad7406a.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~2b5fb19d.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~d939e436.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~d27da816.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~203e0718.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~476f5224.a77f2f886fdf0844e1e2.bundle.js"></script><script src="vendors~main~fdadd360.a77f2f886fdf0844e1e2.bundle.js"></script><script src="main~6c8e061a.a77f2f886fdf0844e1e2.bundle.js"></script><script src="main~798ab416.a77f2f886fdf0844e1e2.bundle.js"></script><script src="main~06837ae4.a77f2f886fdf0844e1e2.bundle.js"></script><script src="main~c94c2b55.a77f2f886fdf0844e1e2.bundle.js"></script><script src="main~dd4e686b.a77f2f886fdf0844e1e2.bundle.js"></script></body></html>
+      }</style></head><body><div class="sb-nopreview sb-wrapper"><div class="sb-nopreview_main"><h1 class="sb-nopreview_heading sb-heading">No Preview</h1><p>Sorry, but you either have no stories or none are selected somehow.</p><ul><li>Please check the Storybook config.</li><li>Try reloading the page.</li></ul><p>If the problem persists, check the browser console, or the terminal you've run Storybook from.</p></div></div><div class="sb-errordisplay sb-wrapper"><pre id="error-message" class="sb-heading"></pre><pre class="sb-errordisplay_code"><code id="error-stack"></code></pre></div><div id="root"></div><div id="docs-root"></div><script>window['LOGLEVEL'] = "info";
+            
+        
+            
+              window['FRAMEWORK_OPTIONS'] = {};</script><script src="runtime~main.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~0f485567.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~41a6ab2c.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~0decbd73.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~ca8e15b3.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~44327899.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~bc1328b0.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~0ad7406a.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~2b5fb19d.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~d939e436.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~db300d2f.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~6967f8ee.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~1c36a975.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~f11e8cdd.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~a83ad6d6.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~c866ae35.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~73914085.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~fdadd360.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~9c5b28f6.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~c1dd23ef.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~f9ca8911.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~678f84af.508b1a49d9b42d0dcae6.bundle.js"></script><script src="vendors~main~ec8c427e.508b1a49d9b42d0dcae6.bundle.js"></script><script src="main~24120820.508b1a49d9b42d0dcae6.bundle.js"></script><script src="main~002699c4.508b1a49d9b42d0dcae6.bundle.js"></script><script src="main~f53107cf.508b1a49d9b42d0dcae6.bundle.js"></script><script src="main~684afbc5.508b1a49d9b42d0dcae6.bundle.js"></script><script src="main~e7080f8c.508b1a49d9b42d0dcae6.bundle.js"></script><script src="main~23ed1968.508b1a49d9b42d0dcae6.bundle.js"></script></body></html>

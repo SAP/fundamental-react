@@ -1,0 +1,9 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+//! moment.js
+
+//! moment.js locale configuration

@@ -1,11 +1,11 @@
 /**
-* Copyright (c) 2012-2019 SAP SE. All Rights Reserved Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+* Copyright (c) 2012-2020 SAP SE or an SAP affiliate company and Theming Base Content contributors. Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
 * Theming Engine 1.51.0
-* data:{"sModified":"2020-04-07T10:19:39Z"}
+* data:{"sModified":"2020-10-23T11:38:37Z"}
 */
 
 
-/******************* FILE /Base/baseLib/baseTheme/base.less (Version 11.1.19) *******************/
+/******************* FILE /Base/baseLib/baseTheme/base.less (Version 11.1.23) *******************/
 
 
 // [Label "Brand Color"]
@@ -438,6 +438,12 @@
 // [Tags "Base", "Content", "Font", "Protected"]
 @sapContent_MonospaceFontFamily: @sapDefault_Font;
 
+// [Label "Monospace Bold Font Family"]
+// [Description "Defines which monospaced bold font is used for specific texts in the content area."]
+// [TranslationKey "sapContent_MonoBoldFontFamily"]
+// [Tags "Base", "Content", "Font", "Protected"]
+@sapContent_MonospaceBoldFontFamily: @sapDefault_Font;
+
 // [Label "Disabled Text Color"]
 // [Description "The color of texts on disabled screen elements in the content area."]
 // [Tags "Base", "Content", "Color", "Font", "Protected"]
@@ -717,6 +723,12 @@
 // [Tags "Base", "Shell", "Color", "Protected"]
 @sapShell_Navigation_Background: @sapDefault_Color;
 
+// [Label "Shell Navigation Area Hover Background"]
+// [Description "The hover background color for the shell navigation area."]
+// [TranslationKey "sapShell_Navigation_Hvr_Bg"]
+// [Tags "Base", "Shell", "Color", "Protected"]
+@sapShell_Navigation_Hover_Background: @sapDefault_Color;
+
 // [Label "Shell Navigation Selected Color"]
 // [Description "The color of selected shell content."]
 // [TranslationKey "sapShell_Navigation_SelColor"]
@@ -733,6 +745,18 @@
 // [Description "The standard color of text in the shell."]
 // [Tags "Base", "Shell", "Color", "Protected"]
 @sapShell_Navigation_TextColor: @sapDefault_Color;
+
+// [Label "Shell Navigation Active Text Color"]
+// [Description "Active text color of shell navigation area content."]
+// [TranslationKey "sapShell_Navigation_Act_TxtClr"]
+// [Tags "Base", "Shell", "Color", "Protected"]
+@sapShell_Navigation_Active_TextColor: @sapDefault_Color;
+
+// [Label "Shell Navigation Active Background"]
+// [Description "Active background color of the shell navigation area content."]
+// [TranslationKey "sapShell_Navigation_Act_Bg"]
+// [Tags "Base", "Shell", "Color", "Protected"]
+@sapShell_Navigation_Active_Background: @sapDefault_Color;
 
 // [Label "Shell Shadow"]
 // [Description "The shadow of the shell on the content area."]
@@ -1800,10 +1824,27 @@
 // [Tags "Base", "Toolbar", "Color", "Protected"]
 @sapInfobar_Active_Background: @sapDefault_Color;
 
+// [Label "Info Bar Non Interactive Background Color"]
+// [Description "The background color of info bars that are not interactive."]
+// [TranslationKey "sapInfobar_NIact_Bg"]
+// [Tags "Base", "Toolbar", "Color", "Protected"]
+@sapInfobar_NonInteractive_Background: @sapDefault_Color;
+
+// [Label "Info Bar Text Color"]
+// [Description "The text color of the interactive info bar."]
+// [Tags "Base", "Toolbar", "Color", "Font", "Protected"]
+@sapInfobar_TextColor: @sapDefault_Color;
+
 // [Label "Object Header Background Color"]
 // [Description "The background color of object headers."]
 // [Tags "Base", "Page", "Color", "Protected"]
 @sapObjectHeader_Background: @sapDefault_Color;
+
+// [Label "Object Header Hover Background Color"]
+// [Description "The hover background color of object headers."]
+// [TranslationKey "sapObjectHeader_Hvr_Bg"]
+// [Tags "Base", "Page", "Color", "Protected"]
+@sapObjectHeader_Hover_Background: @sapDefault_Color;
 
 // [Label "Object Header Border Color"]
 // [Description "The border color of object layout headers."]
@@ -1851,9 +1892,14 @@
 @sapTile_IconColor: @sapDefault_Color;
 
 // [Label "Tile/Card Border Color"]
-// [Description "The border or divider color of tile/ card headers."]
+// [Description "The border or divider color of tile/card headers."]
 // [Tags "Base", "Tile", "Color", "Protected"]
 @sapTile_SeparatorColor: @sapDefault_Color;
+
+// [Label "Tile/Card Interactive Border Color"]
+// [Description "The interactive hover and active border color of tile and card controls."]
+// [Tags "Base", "Tile", "Color", "Protected"]
+@sapTile_Interactive_BorderColor: @sapDefault_Color;
 
 // [Label "Accent Color 1"]
 // [Description "Secondary color to accentuate UI elements."]
@@ -2444,6 +2490,30 @@
 // [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
 @sapFontUrl_72_Light_full_woff: none;
 
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Regular_woff2: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Regular_woff: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Regular_full_woff2: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Regular_full_woff: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Bold_woff2: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Bold_woff: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Bold_full_woff2: none;
+
+// [Tags "SapInternal", "Base", "URI", "Font", "Protected"]
+@sapFontUrl_72Mono_Bold_full_woff: none;
+
 // [Tags "SapInternal", "Base", "URI", "Protected"]
 @sapSvgLib_SAP-icons: none;
 
@@ -2578,7 +2648,7 @@
 }
 
 @font-face {
-  font-family: '72-Lighfull';
+  font-family: '72-Lightfull';
   src: @sapFontUrl_72_Light_full_woff2 format('woff2'), @sapFontUrl_72_Light_full_woff format('woff');
 }
 
@@ -2590,6 +2660,26 @@
 @font-face {
   font-family: '72-Boldfull';
   src: @sapFontUrl_72_Bold_full_woff2 format('woff2'), @sapFontUrl_72_Bold_full_woff format('woff');
+}
+
+@font-face {
+  font-family: '72Mono';
+  src: local('72Mono'), @sapFontUrl_72Mono_Regular_woff2 format('woff2'), @sapFontUrl_72Mono_Regular_woff format('woff');
+}
+
+@font-face {
+  font-family: '72Monofull';
+  src: @sapFontUrl_72Mono_Regular_full_woff2 format('woff2'), @sapFontUrl_72Mono_Regular_full_woff format('woff');
+}
+
+@font-face {
+  font-family: '72Mono-Bold';
+  src: local('72Mono-Bold'), @sapFontUrl_72Mono_Bold_woff2 format('woff2'), @sapFontUrl_72Mono_Bold_woff format('woff');
+}
+
+@font-face {
+  font-family: '72Mono-Boldfull';
+  src: @sapFontUrl_72Mono_Bold_full_woff2 format('woff2'), @sapFontUrl_72Mono_Bold_full_woff format('woff');
 }
 
 .sapSvgLibs {

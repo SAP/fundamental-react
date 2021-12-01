@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2019 SAP SE. All Rights Reserved Licensed under the Apache License, Version 2.0 - see LICENSE.txt..  Theming Engine 1.51.0 */
+/* Copyright (c) 2012-2020 SAP SE or an SAP affiliate company and Theming Base Content contributors. Licensed under the Apache License, Version 2.0 - see LICENSE.txt..  Theming Engine 1.51.0 */
 @sapBrandColor: #91c8f6;
 @sapHighlightColor: #91c8f6;
 @sapBaseColor: #29313a;
@@ -23,7 +23,7 @@
 @sapLink_Active_Color: #91c8f6;
 @sapLink_Visited_Color: #91c8f6;
 @sapLink_InvertedColor: #d3e9fb;
-@sapLink_SubtleColor: #eff7fe;
+@sapLink_SubtleColor: #c0e0fa;
 @sapCompanyLogo: none;
 @sapBackgroundImage: none;
 @sapBackgroundImageOpacity: 1.0;
@@ -92,7 +92,7 @@
 @sapIndicationColor_8: #E269C9;
 @sapIndicationColor_8_Hover_Background: #e67ed1;
 @sapIndicationColor_8_Active_Background: #ea94d8;
-@sapIndicationColor_8_TextColor: #29313a;
+@sapIndicationColor_8_TextColor: #fafafa;
 @sapElement_LineHeight: 2.75rem;
 @sapElement_Height: 2.25rem;
 @sapElement_BorderWidth: .0625rem;
@@ -127,10 +127,11 @@
 @sapContent_SearchHighlightColor: #058088;
 @sapContent_HelpColor: #57b900;
 @sapContent_LabelColor: #d3d7d9;
-@sapContent_MonospaceFontFamily: lucida console, monospace;
+@sapContent_MonospaceFontFamily: "72Mono", "72Monofull", lucida console, monospace;
+@sapContent_MonospaceBoldFontFamily: "72Mono-Bold", "72Mono-Boldfull", lucida console, monospace;
 @sapContent_DisabledTextColor: rgba(250,250,250,0.6);
 @sapContent_DisabledOpacity: 0.4;
-@sapContent_ContrastTextThreshold: 0.5;
+@sapContent_ContrastTextThreshold: 0.55;
 @sapContent_ContrastTextColor: #29313a;
 @sapContent_ForegroundColor: #1c2228;
 @sapContent_ForegroundBorderColor: #8696a9;
@@ -168,10 +169,13 @@
 @sapShell_Selected_TextColor: #fafafa;
 @sapShell_Selected_Hover_Background: #23303e;
 @sapShell_Favicon: none;
-@sapShell_Navigation_Background: #29313a;
-@sapShell_Navigation_SelectedColor: #91c8f6;
-@sapShell_Navigation_Selected_TextColor: #91c8f6;
+@sapShell_Navigation_Background: #354a5f;
+@sapShell_Navigation_SelectedColor: #d1e8ff;
+@sapShell_Navigation_Selected_TextColor: #d1e8ff;
 @sapShell_Navigation_TextColor: #fafafa;
+@sapShell_Navigation_Hover_Background: #283848;
+@sapShell_Navigation_Active_Background: #23303e;
+@sapShell_Navigation_Active_TextColor: #fafafa;
 @sapShell_Shadow: 0 0 0.5rem 0 rgba(0,0,0,0.8), inset 0 -0.0625rem 0 0 rgba(255,255,255,0.2);
 @sapButton_BorderWidth: .0625rem;
 @sapButton_BorderCornerRadius: .25rem;
@@ -190,7 +194,7 @@
 @sapButton_Emphasized_TextColor: #fff;
 @sapButton_Emphasized_Hover_Background: #2e96ee;
 @sapButton_Emphasized_Hover_BorderColor: #2e96ee;
-@sapButton_Emphasized_Hover_TextColor: #29313a;
+@sapButton_Emphasized_Hover_TextColor: #fff;
 @sapButton_Emphasized_Active_Background: #91c8f6;
 @sapButton_Emphasized_Active_BorderColor: #91c8f6;
 @sapButton_Emphasized_TextShadow: transparent;
@@ -367,8 +371,11 @@
 @sapInfobar_Background: #7fc6c6;
 @sapInfobar_Hover_Background: #74c1c1;
 @sapInfobar_Active_Background: #58b5b5;
+@sapInfobar_NonInteractive_Background: #14181c;
+@sapInfobar_TextColor: #29313a;
 @sapObjectHeader_Background: #29313a;
 @sapObjectHeader_BorderColor: #3a4552;
+@sapObjectHeader_Hover_Background: #2f3943;
 @sapBlockLayer_Background: #000;
 @sapTile_Background: #29313a;
 @sapTile_Hover_Background: #21272e;
@@ -378,6 +385,7 @@
 @sapTile_TextColor: #d3d7d9;
 @sapTile_IconColor: #89a3bd;
 @sapTile_SeparatorColor: #424f5e;
+@sapTile_Interactive_BorderColor: #687d94;
 @sapAccentColor1: #ffc847;
 @sapAccentColor2: #e7a1a1;
 @sapAccentColor3: #f37aa2;
@@ -473,3 +481,11 @@
 @sapFontUrl_72_Bold_full_woff: url('../../../Base/baseLib/sap_base_fiori/fonts/72-Bold-full.woff');
 @sapFontUrl_72_Light_full_woff2: url('../../../Base/baseLib/sap_base_fiori/fonts/72-Light-full.woff2');
 @sapFontUrl_72_Light_full_woff: url('../../../Base/baseLib/sap_base_fiori/fonts/72-Light-full.woff');
+@sapFontUrl_72Mono_Regular_woff2: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Regular.woff2');
+@sapFontUrl_72Mono_Regular_woff: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Regular.woff');
+@sapFontUrl_72Mono_Regular_full_woff2: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Regular-full.woff2');
+@sapFontUrl_72Mono_Regular_full_woff: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Regular-full.woff');
+@sapFontUrl_72Mono_Bold_woff2: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Bold.woff2');
+@sapFontUrl_72Mono_Bold_woff: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Bold.woff');
+@sapFontUrl_72Mono_Bold_full_woff2: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Bold-full.woff2');
+@sapFontUrl_72Mono_Bold_full_woff: url('../../../Base/baseLib/sap_base_fiori/fonts/72Mono-Bold-full.woff');
