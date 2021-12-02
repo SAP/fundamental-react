@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/MessagePage Complex 1`] = `
+<section
+  className="fd-message-page"
+>
+  <div
+    className="fd-message-page__container"
+  >
+    <div
+      className="fd-message-page__icon-container"
+    >
+      <i
+        aria-label="search"
+        className="sap-icon--search fd-message-page__icon"
+        role="img"
+      />
+    </div>
+    <div
+      aria-live="polite"
+      className="fd-message-page__content"
+      role="status"
+    >
+      <div
+        className="fd-message-page__title"
+      >
+        No items found.
+      </div>
+      <div
+        className="fd-message-page__subtitle"
+      >
+        Please try again.
+      </div>
+      <div
+        className="fd-message-page__actions"
+      >
+        <button
+          className="fd-button fd-button--emphasized"
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Try again
+          </span>
+        </button>
+      </div>
+      <div
+        className="fd-message-page__more"
+      >
+        <a
+          href="#"
+        >
+          More info
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Component API/MessagePage Custom Image 1`] = `
+<section
+  className="fd-message-page"
+>
+  <div
+    className="fd-message-page__container"
+  >
+    <div
+      className="fd-message-page__icon-container"
+    >
+      <img
+        alt="SAP"
+        src="//unpkg.com/fundamental-styles/dist/images/sap-logo.png"
+      />
+    </div>
+    <div
+      aria-live="polite"
+      className="fd-message-page__content"
+      role="status"
+    >
+      <div
+        className="fd-message-page__title"
+      >
+        No items found.
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Component API/MessagePage Primary 1`] = `
+<section
+  className="fd-message-page"
+>
+  <div
+    className="fd-message-page__container"
+  >
+    <div
+      className="fd-message-page__icon-container"
+    >
+      <i
+        aria-label="product"
+        className="sap-icon--product fd-message-page__icon"
+        role="img"
+      />
+    </div>
+    <div
+      aria-live="polite"
+      className="fd-message-page__content"
+      role="status"
+    >
+      <div
+        className="fd-message-page__title"
+      >
+        No items found.
+      </div>
+    </div>
+  </div>
+</section>
+`;

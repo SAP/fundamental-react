@@ -1,0 +1,747 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Bar Cozy 1`] = `
+<div
+  className="fd-bar fd-bar--cozy"
+>
+  <div
+    className="fd-bar__left"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <hundefined
+        className="fd-title fd-title--hundefined"
+      >
+        TEXT
+      </hundefined>
+    </div>
+  </div>
+  <div
+    className="fd-bar__middle"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--email"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--iphone"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--notification-2"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-bar__right"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--grid"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Bar Floating Footer 1`] = `
+<div
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <br />
+  <br />
+  <br />
+  <footer
+    className="fd-bar fd-bar--floating-footer"
+  >
+    <div
+      className="fd-bar__left"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <hundefined
+          className="fd-title fd-title--hundefined"
+        >
+          TEXT
+        </hundefined>
+      </div>
+    </div>
+    <div
+      className="fd-bar__middle"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--email"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--iphone"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--notification-2"
+            role="img"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <span
+          className="fd-avatar fd-avatar--xs fd-avatar--circle"
+          role="presentation"
+        />
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--grid"
+            role="img"
+          />
+        </button>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Storyshots Component API/Bar Footer 1`] = `
+<footer
+  className="fd-bar fd-bar--footer"
+>
+  <div
+    className="fd-bar__left"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <hundefined
+        className="fd-title fd-title--hundefined"
+      >
+        TEXT
+      </hundefined>
+    </div>
+  </div>
+  <div
+    className="fd-bar__middle"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--email"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--iphone"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--notification-2"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-bar__right"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--grid"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots Component API/Bar Header 1`] = `
+<header
+  className="fd-bar fd-bar--header"
+>
+  <div
+    className="fd-bar__left"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <hundefined
+        className="fd-title fd-title--hundefined"
+      >
+        TEXT
+      </hundefined>
+    </div>
+  </div>
+  <div
+    className="fd-bar__middle"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--email"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--iphone"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--notification-2"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-bar__right"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--grid"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Storyshots Component API/Bar Header With Subheader 1`] = `
+Array [
+  <header
+    className="fd-bar fd-bar--header-with-subheader"
+  >
+    <div
+      className="fd-bar__left"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <hundefined
+          className="fd-title fd-title--hundefined"
+        >
+          TEXT
+        </hundefined>
+      </div>
+    </div>
+    <div
+      className="fd-bar__middle"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--email"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--iphone"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--notification-2"
+            role="img"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <span
+          className="fd-avatar fd-avatar--xs fd-avatar--circle"
+          role="presentation"
+        />
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--grid"
+            role="img"
+          />
+        </button>
+      </div>
+    </div>
+  </header>,
+  <div
+    className="fd-bar fd-bar--subheader"
+  >
+    <div
+      className="fd-bar__left"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <hundefined
+          className="fd-title fd-title--hundefined"
+        >
+          TEXT
+        </hundefined>
+      </div>
+    </div>
+    <div
+      className="fd-bar__middle"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--email"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--iphone"
+            role="img"
+          />
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--notification-2"
+            role="img"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <span
+          className="fd-avatar fd-avatar--xs fd-avatar--circle"
+          role="presentation"
+        />
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--compact"
+          type="button"
+        >
+          <i
+            aria-hidden={true}
+            className="sap-icon--grid"
+            role="img"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Component API/Bar Primary 1`] = `
+<div
+  className="fd-bar"
+>
+  <div
+    className="fd-bar__left"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <hundefined
+        className="fd-title fd-title--hundefined"
+      >
+        TEXT
+      </hundefined>
+    </div>
+  </div>
+  <div
+    className="fd-bar__middle"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--email"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--iphone"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--notification-2"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-bar__right"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--grid"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Component API/Bar Subheader 1`] = `
+<div
+  className="fd-bar fd-bar--subheader"
+>
+  <div
+    className="fd-bar__left"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <hundefined
+        className="fd-title fd-title--hundefined"
+      >
+        TEXT
+      </hundefined>
+    </div>
+  </div>
+  <div
+    className="fd-bar__middle"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--email"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--iphone"
+          role="img"
+        />
+      </button>
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--notification-2"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="fd-bar__right"
+  >
+    <div
+      className="fd-bar__element"
+    >
+      <span
+        className="fd-avatar fd-avatar--xs fd-avatar--circle"
+        role="presentation"
+      />
+    </div>
+    <div
+      className="fd-bar__element"
+    >
+      <button
+        className="fd-button fd-button--compact"
+        type="button"
+      >
+        <i
+          aria-hidden={true}
+          className="sap-icon--grid"
+          role="img"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
