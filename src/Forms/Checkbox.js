@@ -38,12 +38,19 @@ const Checkbox = React.forwardRef(({
     validationState,
     ...props
 }, ref) => {
-    const [checkedState, setCheckedState] = useState(!!checked);
+    const [checkedState, setCheckedState] = useState(!!checked || !!defaultChecked);
     const inputEl = useRef();
 
     useEffect(() => {
         inputEl && inputEl.current && (inputEl.current.indeterminate = indeterminate);
     });
+
+    useEffect(()=> {
+        // eslint-disable-next-line no-undefined
+        if (checked !== undefined) {
+            setCheckedState(!!checked);
+        }
+    }, [checked]);
 
 
     const inputClassNames = classnames(
@@ -83,16 +90,18 @@ const Checkbox = React.forwardRef(({
                 {...inputProps}
                 aria-checked={checkedState}
                 aria-label={ariaLabel}
-                checked={checked}
+                checked={checkedState}
                 className={inputClassNames}
                 defaultChecked={defaultChecked}
                 disabled={disabled}
                 id={checkId}
                 name={name}
                 onChange={(e) => {
-                    const toggledState = !checkedState;
-                    setCheckedState(toggledState);
-                    onChange(e, toggledState);
+                    // eslint-disable-next-line no-undefined
+                    if (checked === undefined) {
+                        setCheckedState(e.target.checked);
+                    }
+                    onChange(e, e.target.checked);
                 }}
                 ref={inputEl}
                 type='checkbox'

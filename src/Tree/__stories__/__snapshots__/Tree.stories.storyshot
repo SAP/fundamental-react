@@ -2242,6 +2242,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
         <input
           aria-checked={false}
           aria-label="Level 1 - onSelectionChange"
+          checked={false}
           className="fd-checkbox"
           id="fd-mocked-short-id-selection-control"
           onChange={[Function]}
@@ -2301,6 +2302,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
             <input
               aria-checked={false}
               aria-label="Level 2 - onSelectionChange"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id-selection-control"
               onChange={[Function]}
@@ -2360,6 +2362,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                 <input
                   aria-checked={false}
                   aria-label="Level 3"
+                  checked={false}
                   className="fd-checkbox"
                   id="fd-mocked-short-id-selection-control"
                   onChange={[Function]}
@@ -2419,6 +2422,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                     <input
                       aria-checked={false}
                       aria-label="Level 4"
+                      checked={false}
                       className="fd-checkbox"
                       id="fd-mocked-short-id-selection-control"
                       onChange={[Function]}
@@ -2464,6 +2468,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                         <input
                           aria-checked={false}
                           aria-label="Level 5"
+                          checked={false}
                           className="fd-checkbox"
                           id="fd-mocked-short-id-selection-control"
                           onChange={[Function]}
@@ -2526,6 +2531,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
         <input
           aria-checked={false}
           aria-label="Level 1"
+          checked={false}
           className="fd-checkbox"
           id="fd-mocked-short-id-selection-control"
           onChange={[Function]}
@@ -2585,6 +2591,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
             <input
               aria-checked={false}
               aria-label="Level 2"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id-selection-control"
               onChange={[Function]}
@@ -2644,6 +2651,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                 <input
                   aria-checked={false}
                   aria-label="Level 3"
+                  checked={false}
                   className="fd-checkbox"
                   id="fd-mocked-short-id-selection-control"
                   onChange={[Function]}
@@ -2703,6 +2711,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                     <input
                       aria-checked={false}
                       aria-label="Level 4"
+                      checked={false}
                       className="fd-checkbox"
                       id="fd-mocked-short-id-selection-control"
                       onChange={[Function]}
@@ -2748,6 +2757,7 @@ exports[`Storyshots Component API/Tree Multi Selection Left 1`] = `
                         <input
                           aria-checked={false}
                           aria-label="Level 5"
+                          checked={false}
                           className="fd-checkbox"
                           id="fd-mocked-short-id-selection-control"
                           onChange={[Function]}
@@ -2829,6 +2839,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
         <input
           aria-checked={false}
           aria-label="Level 1 - onSelectionChange"
+          checked={false}
           className="fd-checkbox"
           id="fd-mocked-short-id-selection-control"
           onChange={[Function]}
@@ -2888,6 +2899,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
             <input
               aria-checked={false}
               aria-label="Level 2 - onSelectionChange"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id-selection-control"
               onChange={[Function]}
@@ -2947,6 +2959,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                 <input
                   aria-checked={false}
                   aria-label="Level 3"
+                  checked={false}
                   className="fd-checkbox"
                   id="fd-mocked-short-id-selection-control"
                   onChange={[Function]}
@@ -3006,6 +3019,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                     <input
                       aria-checked={false}
                       aria-label="Level 4"
+                      checked={false}
                       className="fd-checkbox"
                       id="fd-mocked-short-id-selection-control"
                       onChange={[Function]}
@@ -3051,6 +3065,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                         <input
                           aria-checked={false}
                           aria-label="Level 5"
+                          checked={false}
                           className="fd-checkbox"
                           id="fd-mocked-short-id-selection-control"
                           onChange={[Function]}
@@ -3113,6 +3128,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
         <input
           aria-checked={false}
           aria-label="Level 1"
+          checked={false}
           className="fd-checkbox"
           id="fd-mocked-short-id-selection-control"
           onChange={[Function]}
@@ -3172,6 +3188,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
             <input
               aria-checked={false}
               aria-label="Level 2"
+              checked={false}
               className="fd-checkbox"
               id="fd-mocked-short-id-selection-control"
               onChange={[Function]}
@@ -3231,6 +3248,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                 <input
                   aria-checked={false}
                   aria-label="Level 3"
+                  checked={false}
                   className="fd-checkbox"
                   id="fd-mocked-short-id-selection-control"
                   onChange={[Function]}
@@ -3290,6 +3308,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                     <input
                       aria-checked={false}
                       aria-label="Level 4"
+                      checked={false}
                       className="fd-checkbox"
                       id="fd-mocked-short-id-selection-control"
                       onChange={[Function]}
@@ -3335,6 +3354,7 @@ exports[`Storyshots Component API/Tree Multi Selection Right 1`] = `
                         <input
                           aria-checked={false}
                           aria-label="Level 5"
+                          checked={false}
                           className="fd-checkbox"
                           id="fd-mocked-short-id-selection-control"
                           onChange={[Function]}
