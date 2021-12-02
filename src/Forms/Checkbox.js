@@ -48,7 +48,7 @@ const Checkbox = React.forwardRef(({
     useEffect(()=> {
         // eslint-disable-next-line no-undefined
         if (checked !== undefined) {
-            setCheckedState(checked);
+            setCheckedState(!!checked);
         }
     }, [checked]);
 
