@@ -193,14 +193,18 @@ describe('<Tree />', () => {
             }));
             const levelOneCheckBox = wrapper.find('input#myCustomLevel1-selection-control');
             act(() => {
-                levelOneCheckBox.simulate('change');
+                levelOneCheckBox.simulate('change', { target: {
+                    checked: true
+                } });
             });
             expect(levelOneHandler).toHaveBeenCalledTimes(1);
             expect(levelOneHandler).toHaveBeenCalledWith(expect.anything(), true, levelOneData);
 
             const level7CheckBox = wrapper.find('input#level7-selection-control');
             act(() => {
-                level7CheckBox.simulate('change');
+                level7CheckBox.simulate('change', { target: {
+                    checked: true
+                } });
             });
             expect(levelSevenHandler).toHaveBeenCalledTimes(1);
             expect(levelSevenHandler).toHaveBeenCalledWith(expect.anything(), true, levelSevenData);
