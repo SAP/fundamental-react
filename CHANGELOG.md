@@ -1,4 +1,11 @@
 
+### [0.14.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.0...v0.14.1-rc.0) (2021-12-02)
+
+
+### Bug Fixes
+
+* optimize checkbox ([#1382](https://github.com/SAP/fundamental-react/issues/1382)) ([1f65ffa](https://github.com/SAP/fundamental-react/commit/1f65ffabfa614976aa1b5927fdaea45a80dcb911))
+
 ## [0.14.0](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.36...v0.14.0) (2021-12-01)
 
 ## [0.14.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.35...v0.14.0-rc.36) (2021-11-03)
