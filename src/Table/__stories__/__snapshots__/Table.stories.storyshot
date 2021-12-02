@@ -440,6 +440,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <input
             aria-checked={false}
             aria-label="Heavy Weight"
+            checked={false}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -684,6 +685,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <input
             aria-checked={false}
             aria-label="Heavy Weight"
+            checked={false}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -928,6 +930,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <input
             aria-checked={false}
             aria-label="Heavy Weight"
+            checked={false}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
@@ -1172,6 +1175,7 @@ exports[`Storyshots Component API/Table Grid Table 1`] = `
           <input
             aria-checked={false}
             aria-label="Heavy Weight"
+            checked={false}
             className="fd-checkbox"
             id="fd-mocked-short-id"
             onChange={[Function]}
