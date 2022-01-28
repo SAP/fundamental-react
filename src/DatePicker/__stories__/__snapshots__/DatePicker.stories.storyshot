@@ -628,7 +628,7 @@ Array [
                     onKeyPress={[Function]}
                     placeholder="DD/MM/YYYY - DD/MM/YYYY"
                     type="text"
-                    value="14/06/2020 - 18/06/2020"
+                    value=""
                   />
                   <span
                     className="fd-input-group__addon fd-input-group__addon--button fd-input-group__addon--compact"
