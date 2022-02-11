@@ -105,6 +105,7 @@ class Dialog extends Component {
         return ReactDOM.createPortal(
             <FocusLock as='div' className={backdropClassName}
                 lockProps={{ ...rest }}
+                returnFocus
                 whiteList={allowListForLockFocus}>
                 <span data-autofocus tabIndex='-1' />
                 <div
