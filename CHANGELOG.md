@@ -1,4 +1,11 @@
 
+### [0.14.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.1...v0.14.1-rc.2) (2022-02-12)
+
+
+### Bug Fixes
+
+* restore scroll position after fialog closes ([#1397](https://github.com/SAP/fundamental-react/issues/1397)) ([a3d948a](https://github.com/SAP/fundamental-react/commit/a3d948a6020f8baa4d7924ad4932eda41a560b1e))
+
 ### [0.14.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.0...v0.14.1-rc.1) (2022-02-12)
 
 
