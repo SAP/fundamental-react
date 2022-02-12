@@ -41,6 +41,11 @@ addParameters({
             id: 'HCW_css_variables',
             code: '<link rel="stylesheet" type="text/css" href="./theming-base-content/content/Base/baseLib/sap_fiori_3_hcw/css_variables.css"></link>',
             picked: false
+        },
+        {
+            id: 'horizon_variables',
+            code: '<link rel="stylesheet" type="text/css" href="./theming-base-content/content/Base/baseLib/sap_horizon/css_variables.css"></link>',
+            picked: false
         }
     ],
     docs: {

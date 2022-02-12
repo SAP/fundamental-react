@@ -1,4 +1,16 @@
 
+### [0.14.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.0...v0.14.1-rc.1) (2022-02-12)
+
+
+### Features
+
+* bring sap_horizon in react ([#1398](https://github.com/SAP/fundamental-react/issues/1398)) ([12deacd](https://github.com/SAP/fundamental-react/commit/12deacdae607860b902e3183ca00681f62878b5f))
+
+
+### Bug Fixes
+
+* added fix to support the behavior of twelve hour timepicker format if seconds not passed" ([#1392](https://github.com/SAP/fundamental-react/issues/1392)) ([37b4b46](https://github.com/SAP/fundamental-react/commit/37b4b460d02fcc8e4891a7eacbc7c64084855f08))
+
 ### [0.14.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.0...v0.14.1-rc.0) (2021-12-02)
 
 
