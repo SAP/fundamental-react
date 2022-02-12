@@ -20,7 +20,7 @@ addParameters({
         {
             id: 'css_variables',
             code: '<link rel="stylesheet" type="text/css" href="./theming-base-content/content/Base/baseLib/sap_fiori_3/css_variables.css"></link>',
-            picked: true
+            picked: false
         },
         {
             id: 'dark_css_variables',
@@ -45,7 +45,7 @@ addParameters({
         {
             id: 'horizon_variables',
             code: '<link rel="stylesheet" type="text/css" href="./theming-base-content/content/Base/baseLib/sap_horizon/css_variables.css"></link>',
-            picked: false
+            picked: true
         }
     ],
     docs: {
