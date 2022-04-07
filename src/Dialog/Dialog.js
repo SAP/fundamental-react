@@ -168,8 +168,8 @@ Dialog.propTypes = {
     actions: PropTypes.arrayOf(PropTypes.node).isRequired,
     /** Localized text for the heading */
     title: PropTypes.string.isRequired,
-    /** Specific list of node to lock the focus*/
-    allowListForLockFocus: PropTypes.node,
+    /** Specific function to select list of node to lock the focus*/
+    allowListForLockFocus: PropTypes.func,
     /** CSS class(es) to add to the dialog backdrop */
     backdropClassName: PropTypes.string,
     /** Additional props to be spread to the body section of the dialog */
@@ -182,8 +182,11 @@ Dialog.propTypes = {
     contentProps: PropTypes.object,
     /** Additional props to be spread to the footer of the dialog */
     footerProps: PropTypes.object,
-    /** Text for the components header */
-    header: PropTypes.string,
+    /** Text or Custom React node for the components header */
+    header:  PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node,
+    ]),
     /** Additional props to be spread to the header of the dialog */
     headerProps: PropTypes.object,
     /** Heading level. `<h1>` is reserved for the page title. It should not appear in components */

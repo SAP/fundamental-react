@@ -43,8 +43,11 @@ LayoutPanelHead.propTypes = {
     headingLevel: CustomPropTypes.range(2, 6),
     /** Heading style, if it should be different from the default style for the heading level. */
     headingStyle: CustomPropTypes.range(2, 6),
-    /** Localized text for the heading */
-    title: PropTypes.string
+    /** Localized text or Custom React node for the heading */
+    title: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node,
+    ])
 };
 
 LayoutPanelHead.defaultProps = {
