@@ -1,14 +1,15 @@
-module.exports = {
-    'extends': ['@commitlint/config-conventional'],
+const Configuration = {
+    extends: ['@commitlint/config-conventional'],
     rules: {
-      'scope-enum': [
-        2,
-        'always',
         'scope-enum': [
-            ['code', 'docs', 'e2e', 'release', 'deps', 'deps-dev', 'changelog', 'ci']
+            2,
+            'always',
+            ['code', 'docs', 'e2e', 'release', 'deps', 'deps-dev', 'changelog', 'ci', 'fn']
         ],
         'body-max-line-length': [2, 'always', 200],
         'footer-max-line-length': [2, 'always', 200],
         'header-max-length': [2, 'always', 200]
     }
 };
+
+module.exports = Configuration;
