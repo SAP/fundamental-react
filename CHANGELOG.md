@@ -1,4 +1,80 @@
 
+### [0.14.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.2...v0.14.1) (2022-02-12)
+
+### [0.14.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.1...v0.14.1-rc.2) (2022-02-12)
+
+
+### Bug Fixes
+
+* restore scroll position after fialog closes ([#1397](https://github.com/SAP/fundamental-react/issues/1397)) ([a3d948a](https://github.com/SAP/fundamental-react/commit/a3d948a6020f8baa4d7924ad4932eda41a560b1e))
+
+### [0.14.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.0...v0.14.1-rc.1) (2022-02-12)
+
+
+### Features
+
+* bring sap_horizon in react ([#1398](https://github.com/SAP/fundamental-react/issues/1398)) ([12deacd](https://github.com/SAP/fundamental-react/commit/12deacdae607860b902e3183ca00681f62878b5f))
+
+
+### Bug Fixes
+
+* added fix to support the behavior of twelve hour timepicker format if seconds not passed" ([#1392](https://github.com/SAP/fundamental-react/issues/1392)) ([37b4b46](https://github.com/SAP/fundamental-react/commit/37b4b460d02fcc8e4891a7eacbc7c64084855f08))
+
+### [0.14.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.0...v0.14.1-rc.0) (2021-12-02)
+
+
+### Bug Fixes
+
+* optimize checkbox ([#1382](https://github.com/SAP/fundamental-react/issues/1382)) ([1f65ffa](https://github.com/SAP/fundamental-react/commit/1f65ffabfa614976aa1b5927fdaea45a80dcb911))
+
+## [0.14.0](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.36...v0.14.0) (2021-12-01)
+
+## [0.14.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.35...v0.14.0-rc.36) (2021-11-03)
+
+
+### Bug Fixes
+
+* check explicitly if typedValue is a string ([#1378](https://github.com/SAP/fundamental-react/issues/1378)) ([3120c39](https://github.com/SAP/fundamental-react/commit/3120c390150104889f16b211681a8bcb4db6e54f))
+
+## [0.14.0-rc.35](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.34...v0.14.0-rc.35) (2021-10-21)
+
+
+### Features
+
+* allow freetype on ComboboxInput ([#1371](https://github.com/SAP/fundamental-react/issues/1371)) ([58fd153](https://github.com/SAP/fundamental-react/commit/58fd15323ceafa060e632fc92e2cdbf3d70e4106))
+
+## [0.14.0-rc.34](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.33...v0.14.0-rc.34) (2021-10-04)
+
+## [0.14.0-rc.33](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.32...v0.14.0-rc.33) (2021-10-03)
+
+## [0.14.0-rc.32](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.31...v0.14.0-rc.32) (2021-09-28)
+
+## [0.14.0-rc.31](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.30...v0.14.0-rc.31) (2021-09-21)
+
+## [0.14.0-rc.30](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.29...v0.14.0-rc.30) (2021-09-20)
+
+
+### Features
+
+* introduce the MessagePage component ([#1359](https://github.com/SAP/fundamental-react/issues/1359)) ([32a4e2d](https://github.com/SAP/fundamental-react/commit/32a4e2dc6b7f1a53a1cffbedeb6e7db239300c45))
+* Wizard component ([#1358](https://github.com/SAP/fundamental-react/issues/1358)) ([a9bb3a7](https://github.com/SAP/fundamental-react/commit/a9bb3a7cdb8e3ec875c1fa3249d415348505ddf2))
+
+## [0.14.0-rc.29](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.28...v0.14.0-rc.29) (2021-08-18)
+
+
+### Features
+
+* introduce MessageBox and Bar components ([#1356](https://github.com/SAP/fundamental-react/issues/1356)) ([19a663b](https://github.com/SAP/fundamental-react/commit/19a663b19ac2fb39c70beac9921245e05bacecc3))
+
+## [0.14.0-rc.28](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.27...v0.14.0-rc.28) (2021-07-21)
+
+
+### Bug Fixes
+
+* allow lock focus for specific list  ([#1340](https://github.com/SAP/fundamental-react/issues/1340)) ([2b73876](https://github.com/SAP/fundamental-react/commit/2b73876ec78b6bb165728d1fca86b1a0532117e3))
+
+## [0.14.0-rc.27](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.26...v0.14.0-rc.27) (2021-06-13)
+
 ## [0.14.0-rc.26](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.25...v0.14.0-rc.26) (2021-06-08)
 
 # [0.14.0-rc.25](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.24...v0.14.0-rc.25) (2021-06-04)

@@ -1,0 +1,3972 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Component API/Wizard Anchors Mode 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. First Step
+      </h2>
+      <p>
+        This is the first step.
+      </p>
+      <nav
+        className="fd-wizard__next-step"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </nav>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Backgrounds 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#ff9",
+      "padding": "1rem",
+    }
+  }
+>
+  <h3>
+    Solid
+  </h3>
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--solid"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <h3>
+    List
+  </h3>
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--list"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <h3>
+    Transparent
+  </h3>
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--transparent"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Component API/Wizard Branching 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Branch choice"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Branch choice
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector fd-wizard__connector--branching"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Finish"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Finish
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. Branch choice
+      </h2>
+      <div
+        className="fd-popover"
+        onBlur={[Function]}
+      >
+        <div
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+        >
+          <div
+            className="fd-popover__control"
+          >
+            <div
+              className="fd-popover"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                onTouchStart={[Function]}
+              >
+                <div
+                  className="fd-popover__control"
+                >
+                  <div
+                    aria-controls="fd-mocked-short-id"
+                    aria-expanded={false}
+                    aria-haspopup="listbox"
+                    className="fd-select"
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <div
+                      className="fd-select__control"
+                    >
+                      <span
+                        aria-label={null}
+                        className="fd-select__text-content"
+                      />
+                      <span
+                        className="fd-button fd-button--transparent fd-select__button"
+                      >
+                        <i
+                          aria-hidden={true}
+                          className="sap-icon--slim-arrow-down"
+                          role="img"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Custom Labels 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. First Step
+      </h2>
+      <p>
+        This is the first step.
+      </p>
+      <nav
+        className="fd-wizard__next-step"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Go to next step
+          </span>
+        </button>
+      </nav>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Exit
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Glyphs 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Customer"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="person-placeholder"
+                className="sap-icon--person-placeholder fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Customer
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Contact"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="contacts"
+                className="sap-icon--contacts fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container fd-wizard__label-container--optional"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Contact
+              </span>
+              <span
+                className="fd-wizard__optional-text"
+              >
+                (Optional)
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Payment"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="money-bills"
+                className="sap-icon--money-bills fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Payment
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Bill To"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="batch-payments"
+                className="sap-icon--batch-payments fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Bill To
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Ship To"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="shipping-status"
+                className="sap-icon--shipping-status fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Ship To
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. Customer
+      </h2>
+      <p>
+        This is the customer step.
+      </p>
+      <nav
+        className="fd-wizard__next-step"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </nav>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Manual 1`] = `
+<section
+  className="fd-wizard"
+>
+  <nav
+    className="fd-wizard__navigation"
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="accept"
+                className="sap-icon--accept fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector fd-wizard__connector--active"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--active fd-wizard__step--current"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector fd-wizard__connector--undefined"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+  >
+    <p>
+      This is content
+    </p>
+    <nav
+      className="fd-wizard__next-step"
+    >
+      <button
+        className="fd-button fd-button--emphasized fd-button--compact"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="fd-button__text"
+        >
+          Next
+        </span>
+      </button>
+    </nav>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Custom
+          </span>
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard No Labels 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--no-label fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Customer"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="person-placeholder"
+                className="sap-icon--person-placeholder fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Customer
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--no-label"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Contact"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="contacts"
+                className="sap-icon--contacts fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container fd-wizard__label-container--optional"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Contact
+              </span>
+              <span
+                className="fd-wizard__optional-text"
+              >
+                (Optional)
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--no-label"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Payment"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="money-bills"
+                className="sap-icon--money-bills fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Payment
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--no-label"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Bill To"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="batch-payments"
+                className="sap-icon--batch-payments fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Bill To
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--no-label"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Ship To"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="shipping-status"
+                className="sap-icon--shipping-status fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Ship To
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. Customer
+      </h2>
+      <p>
+        This is the customer step.
+      </p>
+      <nav
+        className="fd-wizard__next-step"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </nav>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard No Titles 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <p>
+        This is the first step.
+      </p>
+      <nav
+        className="fd-wizard__next-step"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </nav>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Sizes 1`] = `
+Array [
+  <h3>
+    Small
+  </h3>,
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--sm"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>,
+  <h3>
+    Medium
+  </h3>,
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar fd-wizard__progress-bar--md"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--md"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>,
+  <h3>
+    Large
+  </h3>,
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar fd-wizard__progress-bar--lg"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--lg"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>,
+  <h3>
+    XL
+  </h3>,
+  <section
+    className="fd-wizard"
+  >
+    <nav
+      className="fd-wizard__navigation"
+      stacked={false}
+    >
+      <ul
+        className="fd-wizard__progress-bar fd-wizard__progress-bar--xl"
+      >
+        <li
+          className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="First Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                1
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  First Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Second Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                2
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Second Step
+                </span>
+              </div>
+            </a>
+            <span
+              className="fd-wizard__connector"
+            />
+          </div>
+        </li>
+        <li
+          className="fd-wizard__step fd-wizard__step--upcoming"
+        >
+          <div
+            className="fd-wizard__step-wrapper"
+          >
+            <a
+              aria-label="Final Step"
+              className="fd-wizard__step-container"
+              onClick={[Function]}
+              style={
+                Object {
+                  "pointerEvents": "auto",
+                }
+              }
+            >
+              <span
+                className="fd-wizard__step-indicator"
+              >
+                3
+              </span>
+              <div
+                className="fd-wizard__label-container"
+              >
+                <span
+                  className="fd-wizard__label"
+                >
+                  Final Step
+                </span>
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <section
+      className="fd-wizard__content fd-wizard__content--xl"
+      onScroll={[Function]}
+      style={
+        Object {
+          "overflow": "auto",
+          "position": "relative",
+        }
+      }
+    >
+      <section
+        style={
+          Object {
+            "minHeight": "100%",
+          }
+        }
+      >
+        <h2
+          className="fd-title fd-title--h2"
+        >
+          1. First Step
+        </h2>
+        <p>
+          This is the first step.
+        </p>
+        <nav
+          className="fd-wizard__next-step"
+        >
+          <button
+            className="fd-button fd-button--emphasized fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Next Step
+            </span>
+          </button>
+        </nav>
+      </section>
+    </section>
+    <footer
+      className="fd-bar fd-bar--footer"
+    >
+      <div
+        className="fd-bar__right"
+      >
+        <div
+          className="fd-bar__element"
+        >
+          <button
+            className="fd-button fd-button--transparent fd-button--compact"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="fd-button__text"
+            >
+              Cancel
+            </span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </section>,
+]
+`;
+
+exports[`Storyshots Component API/Wizard Stacked 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={true}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Customer"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              <i
+                aria-label="person-placeholder"
+                className="sap-icon--person-placeholder fd-wizard__icon"
+                role="img"
+              />
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Customer
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--stacked"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <a
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  aria-label="Contact"
+                  className="fd-wizard__step-container"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  style={
+                    Object {
+                      "pointerEvents": "auto",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <span
+                    className="fd-wizard__step-indicator"
+                  >
+                    <i
+                      aria-label="contacts"
+                      className="sap-icon--contacts fd-wizard__icon"
+                      role="img"
+                    />
+                  </span>
+                  <div
+                    className="fd-wizard__label-container fd-wizard__label-container--optional"
+                  >
+                    <span
+                      className="fd-wizard__label"
+                    >
+                      Contact
+                    </span>
+                    <span
+                      className="fd-wizard__optional-text"
+                    >
+                      (Optional)
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--stacked"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <a
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  aria-label="Payment"
+                  className="fd-wizard__step-container"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  style={
+                    Object {
+                      "pointerEvents": "auto",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <span
+                    className="fd-wizard__step-indicator"
+                  >
+                    <i
+                      aria-label="money-bills"
+                      className="sap-icon--money-bills fd-wizard__icon"
+                      role="img"
+                    />
+                  </span>
+                  <div
+                    className="fd-wizard__label-container"
+                  >
+                    <span
+                      className="fd-wizard__label"
+                    >
+                      Payment
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--stacked"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <a
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  aria-label="Bill To"
+                  className="fd-wizard__step-container"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  style={
+                    Object {
+                      "pointerEvents": "auto",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <span
+                    className="fd-wizard__step-indicator"
+                  >
+                    <i
+                      aria-label="batch-payments"
+                      className="sap-icon--batch-payments fd-wizard__icon"
+                      role="img"
+                    />
+                  </span>
+                  <div
+                    className="fd-wizard__label-container"
+                  >
+                    <span
+                      className="fd-wizard__label"
+                    >
+                      Bill To
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming fd-wizard__step--stacked"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <div
+            className="fd-popover"
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <a
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  aria-label="Ship To"
+                  className="fd-wizard__step-container"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="button"
+                  style={
+                    Object {
+                      "pointerEvents": "auto",
+                    }
+                  }
+                  tabIndex={0}
+                >
+                  <span
+                    className="fd-wizard__step-indicator"
+                  >
+                    <i
+                      aria-label="shipping-status"
+                      className="sap-icon--shipping-status fd-wizard__icon"
+                      role="img"
+                    />
+                  </span>
+                  <div
+                    className="fd-wizard__label-container"
+                  >
+                    <span
+                      className="fd-wizard__label"
+                    >
+                      Ship To
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. Customer
+      </h2>
+      <p>
+        This is the customer step.
+      </p>
+      <nav
+        className="fd-wizard__next-step"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </nav>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Tabs Mode 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+  >
+    <h2
+      className="fd-title fd-title--h2"
+    >
+      1. First Step
+    </h2>
+    <p>
+      This is the first step.
+    </p>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Tabs Mode Branching 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Branch choice"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Branch choice
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector fd-wizard__connector--branching"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Finish"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Finish
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+  >
+    <h2
+      className="fd-title fd-title--h2"
+    >
+      1. Branch choice
+    </h2>
+    <div
+      className="fd-popover"
+      onBlur={[Function]}
+    >
+      <div
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="fd-popover__control"
+        >
+          <div
+            className="fd-popover"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              onTouchStart={[Function]}
+            >
+              <div
+                className="fd-popover__control"
+              >
+                <div
+                  aria-controls="fd-mocked-short-id"
+                  aria-expanded={false}
+                  aria-haspopup="listbox"
+                  className="fd-select"
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  role="combobox"
+                  tabIndex={0}
+                >
+                  <div
+                    className="fd-select__control"
+                  >
+                    <span
+                      aria-label={null}
+                      className="fd-select__text-content"
+                    />
+                    <span
+                      className="fd-button fd-button--transparent fd-select__button"
+                    >
+                      <i
+                        aria-hidden={true}
+                        className="sap-icon--slim-arrow-down"
+                        role="img"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Tabs Mode Validator 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+  >
+    <h2
+      className="fd-title fd-title--h2"
+    >
+      1. First Step
+    </h2>
+    <div
+      className="fd-form-item"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="fd-checkbox"
+        id="fd-mocked-short-id"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="fd-form-label fd-checkbox__label"
+        htmlFor="fd-mocked-short-id"
+      >
+        <span
+          className="fd-checkbox__text"
+        >
+          Is valid?
+        </span>
+      </label>
+    </div>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--emphasized fd-button--compact is-disabled"
+          disabled={true}
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Next Step
+          </span>
+        </button>
+      </div>
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;
+
+exports[`Storyshots Component API/Wizard Validator 1`] = `
+<section
+  className="fd-wizard"
+  style={
+    Object {
+      "height": "20rem",
+    }
+  }
+>
+  <nav
+    className="fd-wizard__navigation"
+    stacked={false}
+  >
+    <ul
+      className="fd-wizard__progress-bar fd-wizard__progress-bar--sm"
+    >
+      <li
+        className="fd-wizard__step fd-wizard__step--completed fd-wizard__step--current fd-wizard__step--active"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="First Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              1
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                First Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Second Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              2
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Second Step
+              </span>
+            </div>
+          </a>
+          <span
+            className="fd-wizard__connector"
+          />
+        </div>
+      </li>
+      <li
+        className="fd-wizard__step fd-wizard__step--upcoming"
+      >
+        <div
+          className="fd-wizard__step-wrapper"
+        >
+          <a
+            aria-label="Final Step"
+            className="fd-wizard__step-container"
+            onClick={[Function]}
+            style={
+              Object {
+                "pointerEvents": "auto",
+              }
+            }
+          >
+            <span
+              className="fd-wizard__step-indicator"
+            >
+              3
+            </span>
+            <div
+              className="fd-wizard__label-container"
+            >
+              <span
+                className="fd-wizard__label"
+              >
+                Final Step
+              </span>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section
+    className="fd-wizard__content fd-wizard__content--sm"
+    onScroll={[Function]}
+    style={
+      Object {
+        "overflow": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <section
+      style={
+        Object {
+          "minHeight": "100%",
+        }
+      }
+    >
+      <h2
+        className="fd-title fd-title--h2"
+      >
+        1. First Step
+      </h2>
+      <div
+        className="fd-form-item"
+      >
+        <input
+          aria-checked={false}
+          checked={false}
+          className="fd-checkbox"
+          id="fd-mocked-short-id"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="fd-form-label fd-checkbox__label"
+          htmlFor="fd-mocked-short-id"
+        >
+          <span
+            className="fd-checkbox__text"
+          >
+            Is valid?
+          </span>
+        </label>
+      </div>
+    </section>
+  </section>
+  <footer
+    className="fd-bar fd-bar--footer"
+  >
+    <div
+      className="fd-bar__right"
+    >
+      <div
+        className="fd-bar__element"
+      >
+        <button
+          className="fd-button fd-button--transparent fd-button--compact"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="fd-button__text"
+          >
+            Cancel
+          </span>
+        </button>
+      </div>
+    </div>
+  </footer>
+</section>
+`;

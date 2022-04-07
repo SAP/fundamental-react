@@ -85,7 +85,15 @@ class TimePicker extends Component {
     };
     getFormattedTime = value => {
         let time = {};
-        let timeArray = value.split(':');
+        let timeArray = [];
+        if (value.includes(this.props.localizedText.meridiemAM) || value.includes(this.props.localizedText.meridiemPM)) {
+            let splitBySpace = value.trim().match(/^(\S+)\s(.*)/).slice(1);
+            let timeMerideim = splitBySpace[1];
+            timeArray = splitBySpace[0].split(':');
+            timeArray.push(timeMerideim);
+        } else {
+            timeArray = value.trim().split(':');
+        }
         if (typeof timeArray[0] !== 'undefined' && this.props.showHour) {
             time.hour = this.formatWithLeadingZero(timeArray[0]);
         }
@@ -93,9 +101,15 @@ class TimePicker extends Component {
             time.minute = this.formatWithLeadingZero(timeArray[1]);
         }
         if (typeof timeArray[2] !== 'undefined' && this.props.showSecond) {
-            time.second = this.formatWithLeadingZero(timeArray[2].match(/\d+/)[0]);
+            if ((timeArray[2] !== this.props.localizedText.meridiemPM) && timeArray[2] !== this.props.localizedText.meridiemAM) {
+                time.second = this.formatWithLeadingZero(timeArray[2].match(/\d+/)[0]);
+            }
             if (this.props.format12Hours) {
-                time.meridiem = timeArray[2].indexOf(this.props.localizedText.meridiemAM) !== -1 ? 0 : 1;
+                time.meridiem = timeArray[timeArray.length - 1].indexOf(this.props.localizedText.meridiemAM) !== -1 ? 0 : 1;
+            }
+        } else {
+            if (this.props.format12Hours) {
+                time.meridiem = timeArray[timeArray.length - 1].indexOf(this.props.localizedText.meridiemAM) !== -1 ? 0 : 1;
             }
         }
         return time;

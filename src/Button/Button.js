@@ -148,7 +148,7 @@ const validateStateTransitionMessage = (props, propName) => {
 };
 
 const badgePropValidation = (props, propName) => {
-    if (props[propName].length < 1 || props[propName].length > 4) {
+    if (props[propName]?.length < 1 || props[propName]?.length > 4) {
         return new Error(`${propName} must be between 1-4 characters.`);
     }
 };

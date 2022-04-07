@@ -55,7 +55,7 @@ const Switch = React.forwardRef(({
     });
 
     const spanClasses = classnames(
-        `${cssNamespace}-switch`,
+        `${cssNamespace}-switch__control`,
         {
             [`${cssNamespace}-switch--compact`]: compact,
             [`${cssNamespace}-switch--semantic`]: semantic
@@ -77,7 +77,7 @@ const Switch = React.forwardRef(({
                 onKeyDown={onKeyDownSwitch}>
                 {children}
             </FormLabel>
-            <label className={classnames(`${cssNamespace}-switch__label`)}>
+            <label className={classnames(`${cssNamespace}-switch`)}>
                 {internalLabelDisplay}
                 <span className={spanClasses}>
                     <input
@@ -91,7 +91,7 @@ const Switch = React.forwardRef(({
                         onChange={handleChange}
                         ref={ref}
                         type='checkbox' />
-                    <div className={classnames(`${cssNamespace}-switch__wrapper`)}>
+                    <div className={classnames(`${cssNamespace}-switch__slider`)}>
                         <div className={classnames(`${cssNamespace}-switch__track`)}>
                             {internalLabels ? (
                                 <>

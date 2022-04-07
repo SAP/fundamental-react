@@ -96,6 +96,20 @@ describe('<TimePicker />', () => {
 
         expect(wrapper.children().state('value')).toEqual('00:24:00 am');
 
+        // just hour and minute, 12 hr format with pm
+        wrapper = mount(
+            <TimePicker
+                format12Hours
+                showHour
+                showMinute
+                showSecond={false} />
+        );
+        wrapper
+            .find('input[type="text"]')
+            .at(0)
+            .simulate('change', { target: { value: '10:30 pm' } });
+
+        expect(wrapper.children().state('value')).toEqual('10:30 pm');
         // just hour and minute, no 12 hr format
         wrapper = mount(
             <TimePicker

@@ -50,11 +50,6 @@ module.exports = {
                 },
                 {
                     loader: 'css-loader',
-                    options: {
-                        modules: {
-                            localIdentName: '[local]-[sha1:hash:hex:6]'
-                        }
-                    }
                 }
             ]
         });
