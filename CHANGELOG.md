@@ -1,4 +1,32 @@
 
+### [0.14.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.2...v0.14.1) (2022-02-12)
+
+### [0.14.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.1...v0.14.1-rc.2) (2022-02-12)
+
+
+### Bug Fixes
+
+* restore scroll position after fialog closes ([#1397](https://github.com/SAP/fundamental-react/issues/1397)) ([a3d948a](https://github.com/SAP/fundamental-react/commit/a3d948a6020f8baa4d7924ad4932eda41a560b1e))
+
+### [0.14.1-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.0...v0.14.1-rc.1) (2022-02-12)
+
+
+### Features
+
+* bring sap_horizon in react ([#1398](https://github.com/SAP/fundamental-react/issues/1398)) ([12deacd](https://github.com/SAP/fundamental-react/commit/12deacdae607860b902e3183ca00681f62878b5f))
+
+
+### Bug Fixes
+
+* added fix to support the behavior of twelve hour timepicker format if seconds not passed" ([#1392](https://github.com/SAP/fundamental-react/issues/1392)) ([37b4b46](https://github.com/SAP/fundamental-react/commit/37b4b460d02fcc8e4891a7eacbc7c64084855f08))
+
+### [0.14.1-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.0...v0.14.1-rc.0) (2021-12-02)
+
+
+### Bug Fixes
+
+* optimize checkbox ([#1382](https://github.com/SAP/fundamental-react/issues/1382)) ([1f65ffa](https://github.com/SAP/fundamental-react/commit/1f65ffabfa614976aa1b5927fdaea45a80dcb911))
+
 ## [0.14.0](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.36...v0.14.0) (2021-12-01)
 
 ## [0.14.0-rc.36](https://github.com/SAP/fundamental-react/compare/v0.14.0-rc.35...v0.14.0-rc.36) (2021-11-03)
