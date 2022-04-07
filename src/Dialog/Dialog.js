@@ -183,9 +183,9 @@ Dialog.propTypes = {
     /** Additional props to be spread to the footer of the dialog */
     footerProps: PropTypes.object,
     /** Text or Custom React node for the components header */
-    header:  PropTypes.oneOfType([
+    header: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.node,
+        PropTypes.node
     ]),
     /** Additional props to be spread to the header of the dialog */
     headerProps: PropTypes.object,

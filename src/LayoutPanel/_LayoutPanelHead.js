@@ -46,7 +46,7 @@ LayoutPanelHead.propTypes = {
     /** Localized text or Custom React node for the heading */
     title: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.node,
+        PropTypes.node
     ])
 };
 
