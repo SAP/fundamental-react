@@ -1,6 +1,8 @@
 module.exports = {
     'extends': ['@commitlint/config-conventional'],
     rules: {
+        2,
+        'always',
         'scope-enum': [
             ['code', 'docs', 'e2e', 'release', 'deps', 'deps-dev', 'changelog', 'ci']
         ],
