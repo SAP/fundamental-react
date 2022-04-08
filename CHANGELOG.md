@@ -1,4 +1,11 @@
 
+### [0.14.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.1...v0.14.2-rc.0) (2022-04-08)
+
+
+### Bug Fixes
+
+* type definition of dialog headers and allowListForLockFocus ([#1410](https://github.com/SAP/fundamental-react/issues/1410)) ([a502255](https://github.com/SAP/fundamental-react/commit/a5022557888b8064017881a8e2c57f6e830359d0))
+
 ### [0.14.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.2...v0.14.1) (2022-02-12)
 
 ### [0.14.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.1...v0.14.1-rc.2) (2022-02-12)
