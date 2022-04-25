@@ -70,6 +70,7 @@ class Dialog extends Component {
             titleProps,
             title,
             allowListForLockFocus,
+            disableAutoClose,
             ...rest
         } = this.props;
 
@@ -148,7 +149,7 @@ class Dialog extends Component {
                             <div className={classnames(`${cssNamespace}-bar__right`)}>
                                 {React.Children.toArray(actions).map((child, index) => (
                                     <div className={classnames(`${cssNamespace}-bar__element`)} key={index}>
-                                        {React.cloneElement(child, { className: classnames(`${cssNamespace}-dialog__decisive-button`), onClick: chain(this.handleCloseClick, child.props?.onClick) })}
+                                        {React.cloneElement(child, { className: classnames(`${cssNamespace}-dialog__decisive-button`), onClick: disableAutoClose ? child.props?.onClick : chain(this.handleCloseClick, child.props?.onClick) })}
                                     </div>
                                 ))}
                             </div>
@@ -180,6 +181,8 @@ Dialog.propTypes = {
     className: PropTypes.string,
     /** Additional props to be spread to the content section of the dialog */
     contentProps: PropTypes.object,
+    /** Additional props to disable auto closing dialog */
+    disableAutoClose: PropTypes.bool,
     /** Additional props to be spread to the footer of the dialog */
     footerProps: PropTypes.object,
     /** Text or Custom React node for the components header */
