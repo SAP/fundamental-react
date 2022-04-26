@@ -1,4 +1,11 @@
 
+### [0.14.3-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.2...v0.14.3-rc.0) (2022-04-26)
+
+
+### Features
+
+* add prop to disable auto closing dialog ([#1416](https://github.com/SAP/fundamental-react/issues/1416)) ([93aeb17](https://github.com/SAP/fundamental-react/commit/93aeb1753255ad89a056a2a99dc4b2ade4365025))
+
 ### [0.14.2](https://github.com/SAP/fundamental-react/compare/v0.14.2-rc.1...v0.14.2) (2022-04-26)
 
 ### [0.14.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.2-rc.0...v0.14.2-rc.1) (2022-04-25)
