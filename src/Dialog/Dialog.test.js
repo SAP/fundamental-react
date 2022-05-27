@@ -3,6 +3,7 @@ import Dialog from './Dialog';
 import { mount } from 'enzyme';
 import React from 'react';
 
+window.HTMLElement.prototype.scroll = () => {};
 describe('<Dialog />', () => {
     const mockOnClose = jest.fn();
     const bShow = true;

@@ -27,6 +27,20 @@ class Dialog extends Component {
     // select body element to add Dialog component too
     // eslint-disable-next-line compat/compat
     bodyElm = document.querySelector('body');
+    scrollX = 0
+    scrollY = 0
+
+    // restore scroll position
+    restoreOriginalScrollPosition = () => {
+        if (this.props.focusElementOnClose?.focus) {
+            this.props.focusElementOnClose.focus();
+        } else {
+            document.querySelector('html')?.scroll({
+                top: this.scrollY,
+                left: this.scrollX
+            });
+        }
+    }
 
     handleCloseClick = (e) => {
         this.props.onClose(e);
@@ -36,18 +50,31 @@ class Dialog extends Component {
     handleKeyPress = event => {
         if (event.key === 'Escape' || event.key === 'Esc') {
             this.handleCloseClick(event);
+            this.restoreOriginalScrollPosition();
         }
     };
 
-    // add event listener for escape key
+    // add event listener for escape key, save scroll position
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress, false);
+        if (this.props.show) {
+            this.scrollX = window.scrollX;
+            this.scrollY = window.scrollY;
+        }
     }
 
     // remove event listener for escape key
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeyPress, false);
     }
+
+    componentDidUpdate(prevProps) {
+        if (!prevProps.show && this.props.show ) {
+            this.scrollX = window.scrollX;
+            this.scrollY = window.scrollY;
+        }
+    }
+
 
     render() {
         const {
@@ -149,7 +176,7 @@ class Dialog extends Component {
                             <div className={classnames(`${cssNamespace}-bar__right`)}>
                                 {React.Children.toArray(actions).map((child, index) => (
                                     <div className={classnames(`${cssNamespace}-bar__element`)} key={index}>
-                                        {React.cloneElement(child, { className: classnames(`${cssNamespace}-dialog__decisive-button`), onClick: disableAutoClose ? child.props?.onClick : chain(this.handleCloseClick, child.props?.onClick) })}
+                                        {React.cloneElement(child, { className: classnames(`${cssNamespace}-dialog__decisive-button`), onClick: disableAutoClose ? chain(this.restoreOriginalScrollPosition, child.props?.onClick) : chain(this.handleCloseClick, this.restoreOriginalScrollPosition, child.props?.onClick) })}
                                     </div>
                                 ))}
                             </div>
@@ -184,6 +211,8 @@ Dialog.propTypes = {
     /** Additional props to disable auto closing dialog */
     disableAutoClose: PropTypes.bool,
     /** Additional props to be spread to the footer of the dialog */
+    focusElementOnClose: PropTypes.object,
+    /** Additional props containing an HTMLElement to be focused when the dialog closes. The element must be focusable. */
     footerProps: PropTypes.object,
     /** Text or Custom React node for the components header */
     header: PropTypes.oneOfType([
