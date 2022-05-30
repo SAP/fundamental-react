@@ -1,4 +1,11 @@
 
+### [0.14.4-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.3...v0.14.4-rc.0) (2022-05-30)
+
+
+### Features
+
+* preserve scroll position ([#1424](https://github.com/SAP/fundamental-react/issues/1424)) ([47971e8](https://github.com/SAP/fundamental-react/commit/47971e87106ba63c016237bc0cdf33059faee9a3))
+
 ### [0.14.3](https://github.com/SAP/fundamental-react/compare/v0.14.3-rc.0...v0.14.3) (2022-04-26)
 
 ### [0.14.3-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.2...v0.14.3-rc.0) (2022-04-26)
