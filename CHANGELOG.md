@@ -1,4 +1,6 @@
 
+### [0.14.5-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.4...v0.14.5-rc.0) (2022-07-05)
+
 ### [0.14.4](https://github.com/SAP/fundamental-react/compare/v0.14.4-rc.0...v0.14.4) (2022-06-01)
 
 ### [0.14.4-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.3...v0.14.4-rc.0) (2022-05-30)
