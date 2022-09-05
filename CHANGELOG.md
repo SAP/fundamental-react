@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.0...v0.14.5-rc.1) (2022-09-05)
+
+
+### Features
+
+* update react-popper to support react18 ([#1437](https://github.com/SAP/fundamental-react/issues/1437)) ([0ab6fe7](https://github.com/SAP/fundamental-react/commit/0ab6fe7401bf7487233ccdac0140204c2e1db3c8))
+
 ### [0.14.5-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.4...v0.14.5-rc.0) (2022-07-05)
 
 ### [0.14.4](https://github.com/SAP/fundamental-react/compare/v0.14.4-rc.0...v0.14.4) (2022-06-01)
