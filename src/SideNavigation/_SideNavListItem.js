@@ -60,7 +60,7 @@ class SideNavListItem extends React.Component {
                     href={url}
                     onClick={!hasChild ? (e) => {
                         !hasChild && onClick(e);
-                        onItemSelect(e, id, hasChild);
+                        if (onItemSelect) onItemSelect(e, id, hasChild);
                     } : null}>
                     {glyph ? (
                         <Icon
@@ -88,7 +88,7 @@ class SideNavListItem extends React.Component {
                         className={divClasses}
                         onClick={(e) => { /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
                             onClick(e);
-                            onItemSelect(e, id, hasChild);
+                            if (onItemSelect) onItemSelect(e, id, hasChild);
                         }}>
                         {link}
                         <Button
@@ -128,7 +128,7 @@ class SideNavListItem extends React.Component {
                             className: getClasses(),
                             onClick: (e) => {
                                 onClick(e);
-                                onItemSelect(e, id, hasChild);
+                                if (onItemSelect) onItemSelect(e, id, hasChild);
                                 if (hasChild) {
                                     this.handleExpand();
                                 }

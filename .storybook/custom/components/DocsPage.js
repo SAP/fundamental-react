@@ -80,7 +80,7 @@ const DocsPage = () => {
                     <DocsStoryDescription />
         </div>
         <Heading>Examples</Heading>
-        {stories.map((story) => story && <DocsStory
+        {stories?.map((story) => story && <DocsStory
             key={story.id}
             {...story}
             expanded
