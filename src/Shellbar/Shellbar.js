@@ -487,7 +487,7 @@ class Shellbar extends Component {
                                                     className={classnames(`${cssNamespace}-shellbar__avatar--circle`)}
                                                     color={profile.colorAccent}
                                                     size='xs'>
-                                                    {profile.initials}
+                                                    {profile.glyph ? <Icon glyph={profile.glyph} /> : profile.initials}
                                                 </Avatar>
                                             )}
                                         </button>
