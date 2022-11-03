@@ -424,6 +424,7 @@ class Shellbar extends Component {
                                     )}
                                     glyph='megamenu'
                                     iconProps={{ className: classnames(`${cssNamespace}-shellbar__button--icon`) }}
+                                    onClick={productSwitch.callback}
                                     option='transparent'
                                     textClassName={classnames(`${cssNamespace}-shellbar__title`)}>
                                     {productSwitch.label}
@@ -532,7 +533,8 @@ class Shellbar extends Component {
                                     control={<Button
                                         aria-label={productSwitch.label}
                                         className={classnames(`${cssNamespace}-product-switch__control`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
-                                        glyph='grid' />}
+                                        glyph='grid'
+                                        onClick={productSwitch.callback} />}
                                     disableEdgeDetection
                                     popperProps={{ id: `${cssNamespace}-shellbar-product-switch-popover` }} />
                             </div>
@@ -590,7 +592,9 @@ Shellbar.propTypes = {
         /** Accessible and localized label for product switch button */
         label: PropTypes.string.isRequired,
         /** Renders the switch in a form of a dropdown */
-        compact: PropTypes.bool
+        compact: PropTypes.bool,
+        /** A function called when opening a switch */
+        callback: PropTypes.func
     }),
     /** Array of objects containing data about the products.
      * Callback and title are required; selected, glyph and subtitle are optional. */
