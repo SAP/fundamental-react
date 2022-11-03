@@ -116,6 +116,7 @@ export const coPilot = () => (
         }}
         productMenu={productMenu}
         productSwitch={{
+            compact: false,
             label: 'Product Switch'
         }}
         productSwitchList={[

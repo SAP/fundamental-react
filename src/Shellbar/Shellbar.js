@@ -386,6 +386,52 @@ class Shellbar extends Component {
                                 popperProps={{ id: `${cssNamespace}-shellbar-mobile-action-popover` }} />
                         </div>
                     }
+                    {productSwitch && productSwitch.compact && (
+                        <Popover
+                            {...popoverPropsFor?.[productSwitch]}
+                            body={
+                                productSwitchList && (
+                                    <Menu>
+                                        <Menu.List>
+                                            {productSwitchList.map((item, index) => {
+                                                return (
+                                                    <Menu.Item
+                                                        key={index}
+                                                        onClick={item.callback}>
+                                                        {item.glyph && (
+                                                            <>
+                                                                <Icon glyph={item.glyph} size={item.size} />
+                                                                    &nbsp;&nbsp;&nbsp;
+                                                            </>
+                                                        )}
+                                                        {item.title}
+                                                    </Menu.Item>
+                                                );
+                                            })}
+                                        </Menu.List>
+                                    </Menu>
+                                )
+                            }
+                            control={
+                                <Button
+                                    className={classnames(
+                                        `${cssNamespace}-shellbar__button--menu`,
+                                        `${cssNamespace}-button--menu`,
+                                        {
+                                            [`${cssNamespace}-button`]: isUsingCssModules,
+                                            [buttonClassnames(`${cssNamespace}-button--menu`)]: isUsingCssModules
+                                        }
+                                    )}
+                                    glyph='megamenu'
+                                    iconProps={{ className: classnames(`${cssNamespace}-shellbar__button--icon`) }}
+                                    option='transparent'
+                                    textClassName={classnames(`${cssNamespace}-shellbar__title`)}>
+                                    {productSwitch.label}
+                                </Button>
+                            }
+                            noArrow
+                            popperProps={{ id: `${cssNamespace}-shellbar-product-popover` }} />
+                    )}
                     {profile && (
                         <div className={classnames(`${cssNamespace}-shellbar__action`, `${cssNamespace}-shellbar__action--show-always`)}>
                             <div className={classnames(`${cssNamespace}-user-menu`)}>
@@ -441,7 +487,7 @@ class Shellbar extends Component {
                                                     className={classnames(`${cssNamespace}-shellbar__avatar--circle`)}
                                                     color={profile.colorAccent}
                                                     size='xs'>
-                                                    {profile.initials}
+                                                    {profile.glyph ? <Icon glyph={profile.glyph} /> : profile.initials}
                                                 </Avatar>
                                             )}
                                         </button>
@@ -451,7 +497,7 @@ class Shellbar extends Component {
                             </div>
                         </div>
                     )}
-                    {productSwitch && (
+                    {productSwitch && !productSwitch.compact && (
                         <div className={classnames(`${cssNamespace}-shellbar__action`, `${cssNamespace}-shellbar__action--desktop`)}>
                             <div className={classnames(`${cssNamespace}-product-switch`)}>
                                 <Popover
@@ -542,17 +588,19 @@ Shellbar.propTypes = {
     /** For navigating between products. An object that contains an accessible and localized label for product switch button. */
     productSwitch: PropTypes.shape({
         /** Accessible and localized label for product switch button */
-        label: PropTypes.string.isRequired
+        label: PropTypes.string.isRequired,
+        /** Renders the switch in a form of a dropdown */
+        compact: PropTypes.bool
     }),
     /** Array of objects containing data about the products.
-     * Callback, title, and glyph are required; selected and subtitle are optional. */
+     * Callback and title are required; selected, glyph and subtitle are optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
             /** Localized text for the heading */
             title: PropTypes.string.isRequired,
             /** The icon to include. See the icon page for the list of icons */
-            glyph: PropTypes.string.isRequired,
+            glyph: PropTypes.string,
             /** For pre-selecting an item in the product switch list */
             selected: PropTypes.bool,
             subtitle: PropTypes.string
