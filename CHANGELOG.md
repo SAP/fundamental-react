@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.1...v0.14.5-rc.2) (2022-11-03)
+
+
+### Features
+
+* add compact option to product menu, remove console errors ([#1446](https://github.com/SAP/fundamental-react/issues/1446)) ([f618ab5](https://github.com/SAP/fundamental-react/commit/f618ab5f8ab2d4585917873c0b4ca90b456501e0))
+
 ### [0.14.5-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.0...v0.14.5-rc.1) (2022-09-05)
 
 
