@@ -166,8 +166,8 @@ SideNavListItem.propTypes = {
     id: PropTypes.string,
     /** Internal use only */
     isSubItem: PropTypes.bool,
-    /** Localized text for the item (when `url` is provided) */
-    name: PropTypes.string,
+    /** Localized text or React element for the item (when `url` is provided) */
+    name: PropTypes.oneOf[PropTypes.string, PropTypes.node],
     /** Internal use only */
     selected: PropTypes.bool,
     /** Internal use only */
