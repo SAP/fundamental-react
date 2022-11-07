@@ -7,7 +7,6 @@ import styles from 'fundamental-styles/dist/side-nav.css';
 
 const classnames = classnamesBind.bind(styles);
 
-
 class SideNavList extends React.Component {
     constructor(props) {
         super(props);
