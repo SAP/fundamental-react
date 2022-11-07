@@ -541,7 +541,11 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            External Link Item 
+            <i
+              className="sap-icon--action"
+              role="img"
+            />
           </span>
         </a>
       </li>

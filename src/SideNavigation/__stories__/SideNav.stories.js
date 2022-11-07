@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import Icon from '../../Icon/Icon';
 import React from 'react';
 import SideNav from '../SideNav';
 import SideNavList from '../_SideNavList';
@@ -38,7 +39,8 @@ export const primary = () => (
                 url='#' />
             <SideNav.ListItem
                 id='item-5'
-                name='Link Item'
+                name={<>External Link Item <Icon glyph='action' /></>}
+                onClick={() => alert('Redirection')}
                 url='#' />
         </SideNav.List>
     </SideNav>
