@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
+import { textContentStyle } from './SideNav';
 import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
@@ -69,7 +70,7 @@ class SideNavListItem extends React.Component {
                             glyph={glyph} />
                     ) : null}
                     <span className={classnames(`${cssNamespace}-nested-list__title`)}>
-                        {name}
+                        <span style={textContentStyle}>{name}</span>
                     </span>
                 </a>
             );

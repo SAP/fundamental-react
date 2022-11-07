@@ -185,14 +185,14 @@ export const withTitle = () => (
                 name='Link Item'
                 url='#' />
         </SideNav.List>
-        <SideNav.List title='Group Title'>
+        <SideNav.List title='Group Title With A Pretty Long Name'>
             <SideNav.ListItem
                 id='utility-1'
                 name='Link Item'
                 url='#' />
             <SideNav.ListItem
                 id='utility-2'
-                name='Link Item'
+                name='Link Item With A Pretty Long Name'
                 url='#' />
         </SideNav.List>
     </SideNav>
