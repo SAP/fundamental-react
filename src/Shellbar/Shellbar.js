@@ -488,8 +488,7 @@ class Shellbar extends Component {
                                     control={<Button
                                         aria-label={productSwitch.label}
                                         className={classnames(`${cssNamespace}-product-switch__control`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
-                                        glyph='grid'
-                                        onClick={productSwitch.onClick} />}
+                                        glyph='grid' />}
                                     disableEdgeDetection
                                     popperProps={{ id: `${cssNamespace}-shellbar-product-switch-popover` }} />
                             </div>
@@ -545,9 +544,7 @@ Shellbar.propTypes = {
     /** For navigating between products. An object that contains an accessible and localized label for product switch button. */
     productSwitch: PropTypes.shape({
         /** Accessible and localized label for product switch button */
-        label: PropTypes.string.isRequired,
-        /** A function called when opening a switch */
-        onClick: PropTypes.func
+        label: PropTypes.string.isRequired
     }),
     /** Array of objects containing data about the products.
      * Callback and title are required; selected, glyph and subtitle are optional. */
