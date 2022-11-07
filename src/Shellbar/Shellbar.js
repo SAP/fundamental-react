@@ -56,7 +56,6 @@ class Shellbar extends Component {
 
         //Add the notification icon to the notifications object and add it to the list
         //The notifications are placed after the additional actions
-
         if (this.props.notifications) {
             let collapsedNotifications = this.props.notifications;
             collapsedNotifications.glyph = 'bell';
@@ -65,7 +64,6 @@ class Shellbar extends Component {
 
         //Add the grid icon to the product switch object and add it to the list
         //The product switch is placed after the notifications
-
         if (this.props.productSwitch) {
             let collapsedProductSwitch = this.props.productSwitch;
 
