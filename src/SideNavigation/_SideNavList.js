@@ -38,7 +38,8 @@ class SideNavList extends React.Component {
                 aria-hidden={hasParent && !open}
                 aria-label={groupLabel}
                 className={sideNavListClasses}>
-                { title && <li {...titleProps} className={classnames('fd-nested-list__group-header')}>{title}</li>}
+                { title && <li {...titleProps} className={classnames('fd-nested-list__group-header')}
+                    title={title}>{title}</li>}
                 {React.Children.toArray(children).map(child => {
                     return React.cloneElement(child, {
                         condensed,

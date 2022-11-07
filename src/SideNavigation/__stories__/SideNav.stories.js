@@ -41,6 +41,7 @@ export const primary = () => (
                 id='item-5'
                 name={<>External Link Item <Icon glyph='action' /></>}
                 onClick={() => alert('Redirection')}
+                title='External Link Item'
                 url='#' />
         </SideNav.List>
     </SideNav>
