@@ -1,4 +1,12 @@
 
+### [0.14.5-rc.3](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.2...v0.14.5-rc.3) (2022-11-07)
+
+
+### Features
+
+* add an option to fire onclick event on actions menu, revert compact option for product switch ([#1454](https://github.com/SAP/fundamental-react/issues/1454)) ([833da87](https://github.com/SAP/fundamental-react/commit/833da87e4a44a54590dbe184e58a761c2896e97b))
+* add onclick event on actions, revert compact option for product switch ([#1458](https://github.com/SAP/fundamental-react/issues/1458)) ([ec68eb0](https://github.com/SAP/fundamental-react/commit/ec68eb0b2040ffe16e3e8b2a32f4371ee8d8716f))
+
 ### [0.14.5-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.1...v0.14.5-rc.2) (2022-11-03)
 
 
