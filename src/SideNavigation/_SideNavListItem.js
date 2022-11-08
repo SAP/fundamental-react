@@ -114,7 +114,7 @@ class SideNavListItem extends React.Component {
             <li {...props}
                 className={classnames(`${cssNamespace}-nested-list__item`)}
                 key={id}
-                title={title || name}>
+                title={title || (typeof name === 'object' ? '' : name)}>
                 {url && renderLink()}
                 {React.Children.toArray(children).map(child => {
                     if (child.type !== SideNavList) {

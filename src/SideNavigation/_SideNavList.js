@@ -42,7 +42,7 @@ class SideNavList extends React.Component {
                 { title && <li
                     {...titleProps}
                     className={classnames('fd-nested-list__group-header')}
-                    title={title}>
+                    title={typeof title === 'object' ? '' : title}>
                     <span style={textContentStyle}>{title}</span>
                 </li>}
                 {React.Children.toArray(children).map(child => {
