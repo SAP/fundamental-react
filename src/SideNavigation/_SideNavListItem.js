@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import shortid from '../utils/shortId';
 import SideNavList from './_SideNavList';
+import { textContentStyle } from './SideNav';
 import withStyles from '../utils/withStyles';
 import iconStyles from 'fundamental-styles/dist/icon.css';
 import sideNavStyles from 'fundamental-styles/dist/side-nav.css';
@@ -37,7 +38,7 @@ class SideNavListItem extends React.Component {
     };
 
     render() {
-        const { children, condensed, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, expandSubmenuLabel, cssNamespace, ...props } = this.props;
+        const { children, condensed, glyph, id, isSubItem, name, onClick, onItemSelect, selected, selectedId, url, expandSubmenuLabel, cssNamespace, title, ...props } = this.props;
         const nestedListId = shortid.generate();
         const getClasses = () => {
             return classnames(
@@ -69,7 +70,7 @@ class SideNavListItem extends React.Component {
                             glyph={glyph} />
                     ) : null}
                     <span className={classnames(`${cssNamespace}-nested-list__title`)}>
-                        {name}
+                        <span style={textContentStyle}>{name}</span>
                     </span>
                 </a>
             );
@@ -112,7 +113,8 @@ class SideNavListItem extends React.Component {
         return (
             <li {...props}
                 className={classnames(`${cssNamespace}-nested-list__item`)}
-                key={id}>
+                key={id}
+                title={title || (typeof name === 'object' ? '' : name)}>
                 {url && renderLink()}
                 {React.Children.toArray(children).map(child => {
                     if (child.type !== SideNavList) {
@@ -172,6 +174,8 @@ SideNavListItem.propTypes = {
     selected: PropTypes.bool,
     /** Internal use only */
     selectedId: PropTypes.string,
+    /** Value to display on hover. Defaults to `name`.  */
+    title: PropTypes.string,
     /** Enables use of `<a>` element. Value to be applied to the anchor\'s `href` attribute */
     url: PropTypes.string,
     /**

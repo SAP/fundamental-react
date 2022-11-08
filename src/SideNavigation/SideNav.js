@@ -12,6 +12,11 @@ const classnames = classnamesBind.bind({
     ...sideNavStyles
 });
 
+export const textContentStyle = {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+};
+
 /** The left navigation can always display or expand/collapse using the menu icon within the global
 navigation. */
 
