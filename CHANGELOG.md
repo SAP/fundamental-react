@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.3...v0.14.5-rc.4) (2022-11-08)
+
+
+### Features
+
+* add title to sidenav ([#1457](https://github.com/SAP/fundamental-react/issues/1457)) ([a6c86da](https://github.com/SAP/fundamental-react/commit/a6c86da237b961fc0cb5664c3c8602b4b881c32f))
+
 ### [0.14.5-rc.3](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.2...v0.14.5-rc.3) (2022-11-07)
 
 
