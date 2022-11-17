@@ -45,7 +45,7 @@ const FormRadioItem = React.forwardRef(({
             key={id}>
             <input
                 {...inputProps}
-                checked={checked}
+                checked={checked ?? defaultChecked}
                 className={inputClassName}
                 disabled={disabled}
                 id={radioId}
