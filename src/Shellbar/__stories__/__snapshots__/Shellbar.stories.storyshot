@@ -245,6 +245,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 >
                   5
                 </span>
+                Settings
               </span>
             </button>
           </div>
@@ -609,6 +610,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
                 >
                   5
                 </span>
+                Settings
               </span>
             </button>
           </div>

@@ -19,6 +19,7 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -28,12 +29,22 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link is-selected"
@@ -43,12 +54,22 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -58,12 +79,22 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -73,12 +104,22 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -88,7 +129,16 @@ exports[`Storyshots Component API/SideNav Compact 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -116,6 +166,7 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -130,12 +181,22 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link is-selected"
@@ -150,12 +211,22 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -170,12 +241,22 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -190,12 +271,22 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -210,7 +301,16 @@ exports[`Storyshots Component API/SideNav Condensed 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -238,6 +338,7 @@ exports[`Storyshots Component API/SideNav No Styles 1`] = `
     >
       <li
         className="xxx-nested-list__item"
+        title="Link Item"
       >
         <a
           className="xxx-nested-list__link"
@@ -247,12 +348,22 @@ exports[`Storyshots Component API/SideNav No Styles 1`] = `
           <span
             className="xxx-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="xxx-nested-list__item"
+        title="Link Item"
       >
         <a
           className="xxx-nested-list__link is-selected"
@@ -262,12 +373,22 @@ exports[`Storyshots Component API/SideNav No Styles 1`] = `
           <span
             className="xxx-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="xxx-nested-list__item"
+        title="Link Item"
       >
         <a
           className="xxx-nested-list__link"
@@ -277,12 +398,22 @@ exports[`Storyshots Component API/SideNav No Styles 1`] = `
           <span
             className="xxx-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="xxx-nested-list__item"
+        title="Link Item"
       >
         <a
           className="xxx-nested-list__link"
@@ -292,12 +423,22 @@ exports[`Storyshots Component API/SideNav No Styles 1`] = `
           <span
             className="xxx-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="xxx-nested-list__item"
+        title="Link Item"
       >
         <a
           className="xxx-nested-list__link"
@@ -307,7 +448,16 @@ exports[`Storyshots Component API/SideNav No Styles 1`] = `
           <span
             className="xxx-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -335,6 +485,7 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -344,12 +495,22 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link is-selected"
@@ -359,12 +520,22 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -374,12 +545,22 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -389,12 +570,22 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -404,7 +595,16 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -420,6 +620,7 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -429,12 +630,22 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -444,7 +655,16 @@ exports[`Storyshots Component API/SideNav One Level 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -472,6 +692,7 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -481,12 +702,22 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link is-selected"
@@ -496,12 +727,22 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -511,12 +752,22 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -526,12 +777,22 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="External Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -541,7 +802,20 @@ exports[`Storyshots Component API/SideNav Primary 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              External Link Item 
+              <i
+                className="sap-icon--action"
+                role="img"
+              />
+            </span>
           </span>
         </a>
       </li>
@@ -570,6 +844,7 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link item"
       >
         <a
           className="fd-nested-list__link"
@@ -584,12 +859,22 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link item"
       >
         <a
           className="fd-nested-list__link is-selected"
@@ -604,12 +889,22 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link item"
       >
         <a
           className="fd-nested-list__link"
@@ -624,12 +919,22 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -644,12 +949,22 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -664,7 +979,16 @@ exports[`Storyshots Component API/SideNav With Icons 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -692,6 +1016,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
     >
       <li
         className="fd-nested-list__item"
+        title="Link Item 1"
       >
         <a
           className="fd-nested-list__link"
@@ -701,12 +1026,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item 1
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item 1
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item 2"
       >
         <div
           className="fd-nested-list__content has-child"
@@ -720,7 +1055,16 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
             <span
               className="fd-nested-list__title"
             >
-              Link Item 2
+              <span
+                style={
+                  Object {
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                  }
+                }
+              >
+                Link Item 2
+              </span>
             </span>
           </a>
           <button
@@ -752,6 +1096,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
         >
           <li
             className="fd-nested-list__item"
+            title="Item 1"
           >
             <a
               className="fd-nested-list__link"
@@ -761,12 +1106,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 1
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 1
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 2"
           >
             <a
               className="fd-nested-list__link"
@@ -776,12 +1131,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 2
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 2
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 3"
           >
             <a
               className="fd-nested-list__link"
@@ -791,12 +1156,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 3
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 3
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 4"
           >
             <a
               className="fd-nested-list__link"
@@ -806,12 +1181,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 4
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 4
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 5"
           >
             <a
               className="fd-nested-list__link"
@@ -821,7 +1206,16 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 5
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 5
+                </span>
               </span>
             </a>
           </li>
@@ -829,6 +1223,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item 3"
       >
         <a
           className="fd-nested-list__link"
@@ -838,12 +1233,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item 3
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item 3
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item 4"
       >
         <div
           className="fd-nested-list__content has-child"
@@ -857,7 +1262,16 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
             <span
               className="fd-nested-list__title"
             >
-              Link Item 4
+              <span
+                style={
+                  Object {
+                    "overflow": "hidden",
+                    "textOverflow": "ellipsis",
+                  }
+                }
+              >
+                Link Item 4
+              </span>
             </span>
           </a>
           <button
@@ -889,6 +1303,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
         >
           <li
             className="fd-nested-list__item"
+            title="Item 1"
           >
             <a
               className="fd-nested-list__link"
@@ -898,12 +1313,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 1
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 1
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 2"
           >
             <a
               className="fd-nested-list__link"
@@ -913,12 +1338,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 2
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 2
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 3"
           >
             <a
               className="fd-nested-list__link"
@@ -928,12 +1363,22 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 3
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 3
+                </span>
               </span>
             </a>
           </li>
           <li
             className="fd-nested-list__item"
+            title="Item 4"
           >
             <a
               className="fd-nested-list__link"
@@ -943,7 +1388,16 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
               <span
                 className="fd-nested-list__title"
               >
-                Item 4
+                <span
+                  style={
+                    Object {
+                      "overflow": "hidden",
+                      "textOverflow": "ellipsis",
+                    }
+                  }
+                >
+                  Item 4
+                </span>
               </span>
             </a>
           </li>
@@ -951,6 +1405,7 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -960,7 +1415,16 @@ exports[`Storyshots Component API/SideNav With Sub List 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -988,11 +1452,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
     >
       <li
         className="fd-nested-list__group-header"
+        title="Group Title"
       >
-        Group Title
+        <span
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
+          }
+        >
+          Group Title
+        </span>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -1002,12 +1477,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link is-selected"
@@ -1017,12 +1502,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -1032,12 +1527,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -1047,12 +1552,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -1062,7 +1577,16 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
@@ -1077,11 +1601,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
     >
       <li
         className="fd-nested-list__group-header"
+        title="Group Title With A Pretty Long Name"
       >
-        Group Title
+        <span
+          style={
+            Object {
+              "overflow": "hidden",
+              "textOverflow": "ellipsis",
+            }
+          }
+        >
+          Group Title With A Pretty Long Name
+        </span>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item"
       >
         <a
           className="fd-nested-list__link"
@@ -1091,12 +1626,22 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item
+            </span>
           </span>
         </a>
       </li>
       <li
         className="fd-nested-list__item"
+        title="Link Item With A Pretty Long Name"
       >
         <a
           className="fd-nested-list__link"
@@ -1106,7 +1651,16 @@ exports[`Storyshots Component API/SideNav With Title 1`] = `
           <span
             className="fd-nested-list__title"
           >
-            Link Item
+            <span
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+            >
+              Link Item With A Pretty Long Name
+            </span>
           </span>
         </a>
       </li>

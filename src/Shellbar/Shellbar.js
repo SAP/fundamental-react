@@ -56,7 +56,6 @@ class Shellbar extends Component {
 
         //Add the notification icon to the notifications object and add it to the list
         //The notifications are placed after the additional actions
-
         if (this.props.notifications) {
             let collapsedNotifications = this.props.notifications;
             collapsedNotifications.glyph = 'bell';
@@ -65,7 +64,6 @@ class Shellbar extends Component {
 
         //Add the grid icon to the product switch object and add it to the list
         //The product switch is placed after the notifications
-
         if (this.props.productSwitch) {
             let collapsedProductSwitch = this.props.productSwitch;
 
@@ -249,7 +247,8 @@ class Shellbar extends Component {
                                                         aria-label={action.label}
                                                         className={classnames(`${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                                                         glyph={action.glyph}
-                                                        iconBeforeText>
+                                                        iconBeforeText
+                                                        onClick={action.callback}>
                                                         {action.notificationCount > 0 && (
                                                             <Counter
                                                                 aria-label={localizedText.counterLabel}
@@ -258,6 +257,7 @@ class Shellbar extends Component {
                                                                 {action.notificationCount}
                                                             </Counter>
                                                         )}
+                                                        {action.label}
                                                     </Button>
                                                 }
                                                 popperProps={{ id: `${cssNamespace}-shellbar-actions-popover-${index}` }} />
@@ -441,7 +441,7 @@ class Shellbar extends Component {
                                                     className={classnames(`${cssNamespace}-shellbar__avatar--circle`)}
                                                     color={profile.colorAccent}
                                                     size='xs'>
-                                                    {profile.initials}
+                                                    {profile.glyph ? <Icon glyph={profile.glyph} /> : profile.initials}
                                                 </Avatar>
                                             )}
                                         </button>
@@ -545,14 +545,14 @@ Shellbar.propTypes = {
         label: PropTypes.string.isRequired
     }),
     /** Array of objects containing data about the products.
-     * Callback, title, and glyph are required; selected and subtitle are optional. */
+     * Callback and title are required; selected, glyph and subtitle are optional. */
     productSwitchList: PropTypes.arrayOf(
         PropTypes.shape({
             callback: PropTypes.func.isRequired,
             /** Localized text for the heading */
             title: PropTypes.string.isRequired,
             /** The icon to include. See the icon page for the list of icons */
-            glyph: PropTypes.string.isRequired,
+            glyph: PropTypes.string,
             /** For pre-selecting an item in the product switch list */
             selected: PropTypes.bool,
             subtitle: PropTypes.string

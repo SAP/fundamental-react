@@ -1,4 +1,64 @@
 
+### [0.14.5-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.3...v0.14.5-rc.4) (2022-11-08)
+
+
+### Features
+
+* add title to sidenav ([#1457](https://github.com/SAP/fundamental-react/issues/1457)) ([a6c86da](https://github.com/SAP/fundamental-react/commit/a6c86da237b961fc0cb5664c3c8602b4b881c32f))
+
+### [0.14.5-rc.3](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.2...v0.14.5-rc.3) (2022-11-07)
+
+
+### Features
+
+* add an option to fire onclick event on actions menu, revert compact option for product switch ([#1454](https://github.com/SAP/fundamental-react/issues/1454)) ([833da87](https://github.com/SAP/fundamental-react/commit/833da87e4a44a54590dbe184e58a761c2896e97b))
+* add onclick event on actions, revert compact option for product switch ([#1458](https://github.com/SAP/fundamental-react/issues/1458)) ([ec68eb0](https://github.com/SAP/fundamental-react/commit/ec68eb0b2040ffe16e3e8b2a32f4371ee8d8716f))
+
+### [0.14.5-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.1...v0.14.5-rc.2) (2022-11-03)
+
+
+### Features
+
+* add compact option to product menu, remove console errors ([#1446](https://github.com/SAP/fundamental-react/issues/1446)) ([f618ab5](https://github.com/SAP/fundamental-react/commit/f618ab5f8ab2d4585917873c0b4ca90b456501e0))
+
+### [0.14.5-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.0...v0.14.5-rc.1) (2022-09-05)
+
+
+### Features
+
+* update react-popper to support react18 ([#1437](https://github.com/SAP/fundamental-react/issues/1437)) ([0ab6fe7](https://github.com/SAP/fundamental-react/commit/0ab6fe7401bf7487233ccdac0140204c2e1db3c8))
+
+### [0.14.5-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.4...v0.14.5-rc.0) (2022-07-05)
+
+### [0.14.4](https://github.com/SAP/fundamental-react/compare/v0.14.4-rc.0...v0.14.4) (2022-06-01)
+
+### [0.14.4-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.3...v0.14.4-rc.0) (2022-05-30)
+
+
+### Features
+
+* preserve scroll position ([#1424](https://github.com/SAP/fundamental-react/issues/1424)) ([47971e8](https://github.com/SAP/fundamental-react/commit/47971e87106ba63c016237bc0cdf33059faee9a3))
+
+### [0.14.3](https://github.com/SAP/fundamental-react/compare/v0.14.3-rc.0...v0.14.3) (2022-04-26)
+
+### [0.14.3-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.2...v0.14.3-rc.0) (2022-04-26)
+
+
+### Features
+
+* add prop to disable auto closing dialog ([#1416](https://github.com/SAP/fundamental-react/issues/1416)) ([93aeb17](https://github.com/SAP/fundamental-react/commit/93aeb1753255ad89a056a2a99dc4b2ade4365025))
+
+### [0.14.2](https://github.com/SAP/fundamental-react/compare/v0.14.2-rc.1...v0.14.2) (2022-04-26)
+
+### [0.14.2-rc.1](https://github.com/SAP/fundamental-react/compare/v0.14.2-rc.0...v0.14.2-rc.1) (2022-04-25)
+
+### [0.14.2-rc.0](https://github.com/SAP/fundamental-react/compare/v0.14.1...v0.14.2-rc.0) (2022-04-08)
+
+
+### Bug Fixes
+
+* type definition of dialog headers and allowListForLockFocus ([#1410](https://github.com/SAP/fundamental-react/issues/1410)) ([a502255](https://github.com/SAP/fundamental-react/commit/a5022557888b8064017881a8e2c57f6e830359d0))
+
 ### [0.14.1](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.2...v0.14.1) (2022-02-12)
 
 ### [0.14.1-rc.2](https://github.com/SAP/fundamental-react/compare/v0.14.1-rc.1...v0.14.1-rc.2) (2022-02-12)

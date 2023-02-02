@@ -1,4 +1,5 @@
 /* eslint-disable react/no-multi-comp */
+import Icon from '../../Icon/Icon';
 import React from 'react';
 import SideNav from '../SideNav';
 import SideNavList from '../_SideNavList';
@@ -38,7 +39,9 @@ export const primary = () => (
                 url='#' />
             <SideNav.ListItem
                 id='item-5'
-                name='Link Item'
+                name={<>External Link Item <Icon glyph='action' /></>}
+                onClick={() => alert('Redirection')}
+                title='External Link Item'
                 url='#' />
         </SideNav.List>
     </SideNav>
@@ -182,14 +185,14 @@ export const withTitle = () => (
                 name='Link Item'
                 url='#' />
         </SideNav.List>
-        <SideNav.List title='Group Title'>
+        <SideNav.List title='Group Title With A Pretty Long Name'>
             <SideNav.ListItem
                 id='utility-1'
                 name='Link Item'
                 url='#' />
             <SideNav.ListItem
                 id='utility-2'
-                name='Link Item'
+                name='Link Item With A Pretty Long Name'
                 url='#' />
         </SideNav.List>
     </SideNav>

@@ -1,0 +1,13 @@
+kind: Component
+metadata:
+  displayName: fundamental-react
+  description: React implementation of the reusable component library designed in Fundamental Library Styles
+  labels:
+    language: # java|typescript|golang
+  tags:
+    # - Tag 1
+    # - Tag 2
+spec:
+  type:
+    name: # ui|microservice|operator|doc|cli
+    lifecycle: # experimental|production|deprecated.
