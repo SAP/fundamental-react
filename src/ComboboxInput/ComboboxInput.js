@@ -81,7 +81,7 @@ const ComboboxInput = React.forwardRef(({
             if (textInputRef?.current) {
                 textInputRef.current.value = typedValue;
             }
-        } else {
+        } else if (textInputRef?.current) {
             textInputRef.current.value = '';
         }
     }, [selectedKey, textInputRef, typedValue]);
