@@ -23,6 +23,6 @@ describe('<BusyIndicator />', () => {
         }
         mount(<Test />);
         expect(ref.current.tagName).toEqual('DIV');
-        expect(ref.current.className).toEqual('fd-busy-indicator--m');
+        expect(ref.current.className).toEqual('fd-busy-indicator fd-busy-indicator--m');
     });
 });
