@@ -181,8 +181,8 @@ class Popper extends React.Component {
         if (widthSizingType === 'maxTarget') {
             modifiers.push(maxTargetModifier);
         }
-        const popperClasses = classnames(`${cssBlock}__popper`, popperClassName, {
-            [`${cssBlock}__popper--no-arrow`]: !!noArrow
+        const popperClasses = classnames(`${cssBlock}__body`, popperClassName, {
+            [`${cssBlock}__body--no-arrow`]: !!noArrow
         });
 
         const basePlacement = Array.isArray(popperPlacement)
@@ -214,7 +214,7 @@ class Popper extends React.Component {
                             x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
                             // This is needed for fundamental-styles even though popper-2 uses data-placement as well
                             x-placement={placement}>
-                            <div className={classnames(`${cssBlock}__innerRef`, innerRefClassName)} ref={innerRef}>
+                            <div className={classnames(`${cssBlock}__wrapper`, innerRefClassName)} ref={innerRef}>
                                 {children}
                             </div>
                             <span

@@ -43,7 +43,7 @@ describe('<MultiInput />', () => {
         const combobox = wrapper.find('.fd-input-group');
 
         const popover = wrapper.find(
-            'div.fd-popover__popper'
+            'div.fd-popover__body'
         );
 
         return { combobox: combobox, popover: popover };

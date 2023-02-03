@@ -62,7 +62,7 @@ describe('<InputGroup />', () => {
                 document.body.innerHTML = '';
             });
 
-            const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+            const getFormMessage = () => document.body.querySelector('.fd-popover__body > div > .fd-form-message');
 
 
             test('should allow spreading className to ValidationOverlay popover', () => {
@@ -83,7 +83,7 @@ describe('<InputGroup />', () => {
                 });
 
                 expect(
-                    wrapper.find('.fd-popover__innerRef').getDOMNode().classList
+                    wrapper.find('.fd-popover__wrapper').getDOMNode().classList
                 ).toContain('wonderful-styles');
             });
 
@@ -143,7 +143,7 @@ describe('<InputGroup />', () => {
                 });
 
                 expect(
-                    document.body.querySelector('.fd-popover__popper').classList
+                    document.body.querySelector('.fd-popover__body').classList
                 ).toContain('wonderful-styles');
             });
         });

@@ -724,7 +724,7 @@ class Calendar extends Component {
                 className={calendarClasses}
                 onKeyDown={(e) => this.onKeyDownCalendar(e)}>
                 {this.generateNavigation()}
-                <div className={classnames(`${cssNamespace}-calendar__content`)}
+                <div className={classnames(`${cssNamespace}-calendar__content`, `${cssNamespace}-calendar__content--dates`)}
                     onBlur={(e) => {
                         if (!e.currentTarget.contains(e.relatedTarget)) {
                             this.setState({ screenReaderText: '' });
