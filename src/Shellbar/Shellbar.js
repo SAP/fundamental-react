@@ -185,6 +185,7 @@ class Shellbar extends Component {
                             control={
                                 <Button
                                     className={classnames(
+                                        `${cssNamespace}-shellbar__button`,
                                         `${cssNamespace}-shellbar__button--menu`,
                                         `${cssNamespace}-button--menu`,
                                         {
@@ -230,7 +231,8 @@ class Shellbar extends Component {
                                     ...searchInput.popoverProps
                                 }}
                                 searchBtnProps={{ className: classnames(`${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules }) }}
-                                searchList={searchInput.searchList} />
+                                searchList={searchInput.searchList}
+                                style={{ margin: '0' }} />
                         </div>
                     )}
                     {actions &&
@@ -245,17 +247,12 @@ class Shellbar extends Component {
                                                 control={
                                                     <Button
                                                         aria-label={action.label}
-                                                        className={classnames(`${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
+                                                        className={classnames(`${cssNamespace}-shellbar__button`, `${cssNamespace}-button--transparent`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                                                         glyph={action.glyph}
                                                         iconBeforeText
                                                         onClick={action.callback}>
                                                         {action.notificationCount > 0 && (
-                                                            <Counter
-                                                                aria-label={localizedText.counterLabel}
-                                                                className={classnames(`${cssNamespace}-shellbar__counter--notification`)}
-                                                                notification>
-                                                                {action.notificationCount}
-                                                            </Counter>
+                                                            <span aria-label={localizedText.counterLabel} className='fd-button__badge'>{action.notificationCount}</span>
                                                         )}
                                                         {action.label}
                                                     </Button>
@@ -264,17 +261,13 @@ class Shellbar extends Component {
                                         ) : (
                                             <Button
                                                 aria-label={action.label}
-                                                className={classnames(`${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
+                                                className={classnames( `${cssNamespace}-button--transparent`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                                                 glyph={action.glyph}
                                                 iconBeforeText
                                                 key={index}
                                                 onClick={action.callback}>
                                                 {action.notificationCount > 0 && (
-                                                    <Counter
-                                                        aria-label={localizedText.counterLabel}
-                                                        notification>
-                                                        {action.notificationCount}
-                                                    </Counter>
+                                                    <span aria-label={localizedText.counterLabel} className='fd-button__badge'>{action.notificationCount}</span>
                                                 )}
                                             </Button>
                                         )}
@@ -294,15 +287,11 @@ class Shellbar extends Component {
                                     <div className={classnames(`${cssNamespace}-shellbar__action`, `${cssNamespace}-shellbar__action--desktop`)}>
                                         <Button
                                             aria-label={localizedText.notificationsButton}
-                                            className={classnames(`${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
+                                            className={classnames( `${cssNamespace}-button--transparent`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                                             glyph='bell'
                                             iconBeforeText>
                                             {notifications.notificationCount > 0 && (
-                                                <Counter
-                                                    aria-label={localizedText.counterLabel}
-                                                    notification>
-                                                    {notifications.notificationCount}
-                                                </Counter>
+                                                <span aria-label={localizedText.counterLabel} className='fd-button__badge'>{notifications.notificationCount}</span>
                                             )}
                                         </Button>
                                     </div>
@@ -312,16 +301,12 @@ class Shellbar extends Component {
                             <div className={classnames(`${cssNamespace}-shellbar__action`, `${cssNamespace}-shellbar__action--desktop`)}>
                                 <Button
                                     aria-label={localizedText.notificationsButton}
-                                    className={classnames(`${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
+                                    className={classnames(`${cssNamespace}-button--transparent`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                                     glyph='bell'
                                     iconBeforeText
                                     onClick={notifications.callback}>
                                     {notifications.notificationCount > 0 && (
-                                        <Counter
-                                            aria-label={localizedText.counterLabel}
-                                            notification>
-                                            {notifications.notificationCount}
-                                        </Counter>
+                                        <span aria-label={localizedText.counterLabel} className='fd-button__badge'>{notifications.notificationCount}</span>
                                     )}
                                 </Button>
                             </div>
@@ -485,7 +470,7 @@ class Shellbar extends Component {
                                     }
                                     control={<Button
                                         aria-label={productSwitch.label}
-                                        className={classnames(`${cssNamespace}-product-switch__control`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
+                                        className={classnames(`${cssNamespace}-button--transparent`, `${cssNamespace}-product-switch__control`, `${cssNamespace}-shellbar__button`, { [`${cssNamespace}-button`]: isUsingCssModules })}
                                         glyph='grid' />}
                                     disableEdgeDetection
                                     popperProps={{ id: `${cssNamespace}-shellbar-product-switch-popover` }} />
