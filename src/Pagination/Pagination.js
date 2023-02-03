@@ -4,7 +4,7 @@ import CustomPropTypes from '../utils/CustomPropTypes/CustomPropTypes';
 import PropTypes from 'prop-types';
 import withStyles from '../utils/withStyles';
 import React, { Component } from 'react';
-import styles from 'fundamental-styles/dist/pagination.css';
+import styles from './Pagination.css';
 
 const classnames = classnamesBind.bind(styles);
 

@@ -20,7 +20,7 @@ const BusyIndicator = React.forwardRef(({
 
     const busyIndicatorClasses = classnames(
         {
-            [`${cssNamespace}-busy-indicator--${size}`]: size === 'm' || size === 'l',
+            [`${cssNamespace}-busy-indicator ${cssNamespace}-busy-indicator--${size}`]: size === 'm' || size === 'l',
             [`${cssNamespace}-busy-indicator`]: size === 's'
         },
         className
@@ -36,9 +36,9 @@ const BusyIndicator = React.forwardRef(({
             aria-label={localizedText.loading}
             className={busyIndicatorClasses}
             ref={ref} >
-            <div className={classnames(`${cssNamespace}-busy-indicator--circle-0`)} />
-            <div className={classnames(`${cssNamespace}-busy-indicator--circle-1`)} />
-            <div className={classnames(`${cssNamespace}-busy-indicator--circle-2`)} />
+            <div className={classnames(`${cssNamespace}-busy-indicator__circle`)} />
+            <div className={classnames(`${cssNamespace}-busy-indicator__circle`)} />
+            <div className={classnames(`${cssNamespace}-busy-indicator__circle`)} />
         </div>
     );
 });
