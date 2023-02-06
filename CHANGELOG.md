@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.5](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.4...v0.14.5-rc.5) (2023-02-06)
+
+
+### Bug Fixes
+
+* upgrade fd-styles to latest and fix components due to broken changes from fd-styles ([#1471](https://github.com/SAP/fundamental-react/issues/1471)) ([6e58a23](https://github.com/SAP/fundamental-react/commit/6e58a233223d8d9f549826bfb286b1280e0c2377))
+
 ### [0.14.5-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.3...v0.14.5-rc.4) (2022-11-08)
 
 
