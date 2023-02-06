@@ -96,7 +96,7 @@ describe('<StepInput />', () => {
                 });
 
                 expect(
-                    wrapper.find('.fd-popover').getDOMNode().attributes['data-sample'].value
+                    wrapper.find('.fd-popover').at(0).getDOMNode().attributes['data-sample'].value
                 ).toBe('Sample');
             });
 
