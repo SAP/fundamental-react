@@ -285,7 +285,7 @@ describe('<SearchInput />', () => {
             document.body.innerHTML = '';
         });
 
-        const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+        const getFormMessage = () => document.body.querySelector('.fd-popover__body > div > .fd-form-message');
 
         test('should spread popoverProps to Popover', () => {
             const internalWrapper = setup({

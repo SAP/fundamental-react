@@ -24,7 +24,7 @@ describe('<Select />', () => {
             document.body.innerHTML = '';
         });
 
-        const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+        const getFormMessage = () => document.body.querySelector('.fd-popover__body > div > .fd-form-message');
 
 
         test('should allow spreading className to ValidationOverlay popover', () => {
@@ -80,7 +80,7 @@ describe('<Select />', () => {
             });
 
             expect(
-                document.body.querySelector('.fd-popover__innerRef').className
+                document.body.querySelector('.fd-popover__wrapper').className
             ).toContain('Sample');
         });
     });
@@ -126,7 +126,7 @@ describe('<Select />', () => {
             });
 
             expect(
-                document.body.querySelector('.fd-popover__popper').classList
+                document.body.querySelector('.fd-popover__body').classList
             ).toContain('wonderful-styles');
         });
 
@@ -139,7 +139,7 @@ describe('<Select />', () => {
             });
 
             expect(
-                document.body.querySelector('.fd-popover__popper').classList
+                document.body.querySelector('.fd-popover__body').classList
             ).toContain('wonderful-styles');
         });
 

@@ -97,7 +97,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
             aria-controls="fd-shellbar-product-popover"
             aria-expanded={false}
             aria-haspopup={true}
-            className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+            className="fd-button fd-button--transparent fd-shellbar__button fd-shellbar__button--menu fd-button--menu"
             onClick={[Function]}
             onKeyPress={[Function]}
             role="button"
@@ -142,6 +142,11 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
     >
       <div
         className="fd-shellbar__input-group"
+        style={
+          Object {
+            "margin": "0",
+          }
+        }
       >
         <div
           className="fd-popover"
@@ -224,7 +229,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               aria-label="Settings"
-              className="fd-button fd-shellbar__button"
+              className="fd-button fd-shellbar__button fd-button--transparent"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -241,7 +246,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               >
                 <span
                   aria-label="Unread count"
-                  className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
+                  className="fd-button__badge"
                 >
                   5
                 </span>
@@ -275,7 +280,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
           >
             <button
               aria-label="Notifications"
-              className="fd-button fd-shellbar__button"
+              className="fd-button fd-button--transparent fd-shellbar__button"
               type="button"
             >
               <i
@@ -288,7 +293,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
               >
                 <span
                   aria-label="Unread count"
-                  className="fd-counter fd-counter--notification"
+                  className="fd-button__badge"
                 >
                   2
                 </span>
@@ -410,7 +415,7 @@ exports[`Storyshots Component API/Shellbar Co Pilot 1`] = `
                 aria-expanded={false}
                 aria-haspopup={true}
                 aria-label="Product Switch"
-                className="fd-button fd-product-switch__control fd-shellbar__button"
+                className="fd-button fd-button--transparent fd-product-switch__control fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -462,7 +467,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
             aria-controls="fd-shellbar-product-popover"
             aria-expanded={false}
             aria-haspopup={true}
-            className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+            className="fd-button fd-button--transparent fd-shellbar__button fd-shellbar__button--menu fd-button--menu"
             onClick={[Function]}
             onKeyPress={[Function]}
             role="button"
@@ -507,6 +512,11 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
     >
       <div
         className="fd-shellbar__input-group"
+        style={
+          Object {
+            "margin": "0",
+          }
+        }
       >
         <div
           className="fd-popover"
@@ -589,7 +599,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
               aria-expanded={false}
               aria-haspopup={true}
               aria-label="Settings"
-              className="fd-button fd-shellbar__button"
+              className="fd-button fd-shellbar__button fd-button--transparent"
               onClick={[Function]}
               onKeyPress={[Function]}
               role="button"
@@ -606,7 +616,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
               >
                 <span
                   aria-label="Unread count"
-                  className="fd-counter fd-counter--notification fd-shellbar__counter--notification"
+                  className="fd-button__badge"
                 >
                   5
                 </span>
@@ -640,7 +650,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
           >
             <button
               aria-label="Notifications"
-              className="fd-button fd-shellbar__button"
+              className="fd-button fd-button--transparent fd-shellbar__button"
               type="button"
             >
               <i
@@ -653,7 +663,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
               >
                 <span
                   aria-label="Unread count"
-                  className="fd-counter fd-counter--notification"
+                  className="fd-button__badge"
                 >
                   2
                 </span>
@@ -775,7 +785,7 @@ exports[`Storyshots Component API/Shellbar Dev 1`] = `
                 aria-expanded={false}
                 aria-haspopup={true}
                 aria-label="Product Switch"
-                className="fd-button fd-product-switch__control fd-shellbar__button"
+                className="fd-button fd-button--transparent fd-product-switch__control fd-shellbar__button"
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="button"
@@ -826,6 +836,11 @@ exports[`Storyshots Component API/Shellbar No Styles 1`] = `
     >
       <div
         className="xxx-shellbar__input-group"
+        style={
+          Object {
+            "margin": "0",
+          }
+        }
       >
         <div
           className="xxx-popover"
@@ -1091,7 +1106,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
             aria-controls="fd-shellbar-product-popover"
             aria-expanded={false}
             aria-haspopup={true}
-            className="fd-button fd-button--transparent fd-shellbar__button--menu fd-button--menu"
+            className="fd-button fd-button--transparent fd-shellbar__button fd-shellbar__button--menu fd-button--menu"
             onClick={[Function]}
             onKeyPress={[Function]}
             role="button"
@@ -1126,6 +1141,11 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
     >
       <div
         className="fd-shellbar__input-group"
+        style={
+          Object {
+            "margin": "0",
+          }
+        }
       >
         <div
           className="fd-popover"
@@ -1194,7 +1214,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
     >
       <button
         aria-label="Notifications"
-        className="fd-button fd-shellbar__button"
+        className="fd-button fd-button--transparent fd-shellbar__button"
         type="button"
       >
         <i
@@ -1207,7 +1227,7 @@ exports[`Storyshots Component API/Shellbar With Product Menu 1`] = `
         >
           <span
             aria-label="Unread count"
-            className="fd-counter fd-counter--notification"
+            className="fd-button__badge"
           >
             2
           </span>
