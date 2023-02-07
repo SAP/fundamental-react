@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.7](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.6...v0.14.5-rc.7) (2023-02-07)
+
+
+### Bug Fixes
+
+* css override import ([#1475](https://github.com/SAP/fundamental-react/issues/1475)) ([0c8fa18](https://github.com/SAP/fundamental-react/commit/0c8fa18b58bc2c28708cd79cf691810138d40606))
+
 ### [0.14.5-rc.6](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.5...v0.14.5-rc.6) (2023-02-07)
 
 
