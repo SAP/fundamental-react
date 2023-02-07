@@ -18,7 +18,7 @@ rimraf('**/*.visual.js', (rimRafError) => {
     const srcPath = path.join(__dirname, '../src');
 
     const isComponentDirectory = (source) => {
-        const ignoredDirectories = ['utils', 'Docs'];
+        const ignoredDirectories = ['utils', 'Docs', 'overrideCss'];
         return lstatSync(source).isDirectory() && !ignoredDirectories.some(ignored => source.includes(ignored));
     };
 
