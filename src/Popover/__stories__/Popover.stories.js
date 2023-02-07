@@ -19,7 +19,7 @@ export default {
 };
 
 const bodyContent = (
-    <Menu>
+    <Menu style={{ width: '100%' }}>
         <Menu.List>
             <Menu.Item url='#'>Option 1</Menu.Item>
             <Menu.Item url='#'>Option 2</Menu.Item>
@@ -30,7 +30,7 @@ const bodyContent = (
 );
 
 const longBodyContent = (
-    <Menu>
+    <Menu style={{ width: '100%' }}>
         <Menu.List>
             <Menu.Item url='#'>Lorem ipsum dolor sit amet</Menu.Item>
             <Menu.Item url='#'>consectetur adipiscing elit</Menu.Item>
