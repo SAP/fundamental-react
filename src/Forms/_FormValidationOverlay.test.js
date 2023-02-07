@@ -9,7 +9,7 @@ describe('<FormValidationOverlay />', () => {
         <FormValidationOverlay control={(<input onChange={() => {}} value='Test' />)} {...props} />);
 
     const getPopover = () => {
-        return document.body.querySelector('.fd-popover__popper');
+        return document.body.querySelector('.fd-popover__body');
     };
 
     afterEach(() => {

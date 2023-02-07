@@ -21,7 +21,7 @@ describe('<FormTextArea />', () => {
             document.body.innerHTML = '';
         });
 
-        const getFormMessage = () => document.body.querySelector('.fd-popover__popper > div > .fd-form-message');
+        const getFormMessage = () => document.body.querySelector('.fd-popover__body > div > .fd-form-message');
 
 
         test('should allow spreading className to ValidationOverlay popover', () => {
@@ -42,7 +42,7 @@ describe('<FormTextArea />', () => {
             });
 
             expect(
-                wrapper.find('.fd-popover__innerRef').getDOMNode().classList
+                wrapper.find('.fd-popover__wrapper').getDOMNode().classList
             ).toContain('wonderful-styles');
         });
 
@@ -89,7 +89,7 @@ describe('<FormTextArea />', () => {
             });
 
             expect(
-                wrapper.find('.fd-popover').getDOMNode().attributes['data-sample'].value
+                wrapper.find('.fd-popover').at(0).getDOMNode().attributes['data-sample'].value
             ).toBe('Sample');
         });
 
@@ -102,7 +102,7 @@ describe('<FormTextArea />', () => {
             });
 
             expect(
-                document.body.querySelector('.fd-popover__popper').classList
+                document.body.querySelector('.fd-popover__body').classList
             ).toContain('wonderful-styles');
         });
     });

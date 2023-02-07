@@ -174,7 +174,7 @@ describe('<Popover />', () => {
             const propLessPopover = React.cloneElement(popOver, { popperProps: undefined } );
             wrapper = mount(propLessPopover).children();
             wrapper.setState({ isExpanded: true }, () => {
-                const popoverContentId = document.querySelector('div.fd-popover__popper').id;
+                const popoverContentId = document.querySelector('div.fd-popover__body').id;
                 button = wrapper.find('Icon').at(0);
                 expect(button.props()['aria-controls']).toEqual(popoverContentId);
             });
