@@ -116,7 +116,7 @@ const SearchInput = React.forwardRef( ({
     ) : inputGroupClasses;
     let filteredResult = value && searchList ? filterList(searchList, value) : searchList;
     const popoverBody = (
-        <Menu>
+        <Menu style={{ width: '100%' }}>
             <Menu.List {...listProps}>
                 {filteredResult && filteredResult.length > 0 ? (
                     filteredResult.map((item, index) => {
