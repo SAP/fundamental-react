@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.8](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.7...v0.14.5-rc.8) (2023-02-07)
+
+
+### Bug Fixes
+
+* search input not full width ([#1476](https://github.com/SAP/fundamental-react/issues/1476)) ([80d467a](https://github.com/SAP/fundamental-react/commit/80d467a122ef77ac9f384c0e08f930f1383b3fde))
+
 ### [0.14.5-rc.7](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.6...v0.14.5-rc.7) (2023-02-07)
 
 
