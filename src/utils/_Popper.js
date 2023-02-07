@@ -92,11 +92,16 @@ const classPlaceMapping = {
     arrowX: 'arrow-x-',
     arrowY: 'arrow-y-'
 };
-const getPopperClasses2 = (cssBlock, placement)=> {
+const getPopperClasses2 = (cssBlock, placement, noArrow)=> {
     const config = _get(poperMappings, placement);
     let popperClasses = [];
     if (config) {
-        const keys = Object.keys(config);
+        let keys = Object.keys(config);
+        if (!!noArrow) {
+            keys = keys.filter((key)=> {
+                return !key.includes('arrow');
+            });
+        }
         popperClasses = keys.map(key=> {
             const relatedFix = _get(classPlaceMapping, key);
             const value = _get(config, key);
@@ -283,7 +288,7 @@ class Popper extends React.Component {
             <ReactPopper
                 modifiers={modifiers}
                 placement={basePlacement}>
-                {({ ref, style, isReferenceHidden, arrowProps, placement }) => {
+                {({ ref, style, isReferenceHidden, placement }) => {
                     if (!show) {
                         return null;
                     }
@@ -291,16 +296,13 @@ class Popper extends React.Component {
                     const fundamentalStyleOverrides = {
                         visibility: isReferenceHidden ? 'hidden' : 'visible'
                     };
-                    const fundamentalStyleArrowOverrides = {
-                        margin: 0
-                    };
                     return (
-                        <div className={cssBlock}>
+                        <div className={cssBlock} style={{ position: 'absolute' }}>
                             <div
                                 {...popperProps}
-                                className={classnames(`${cssBlock}__body`, popperClassName, {
+                                className={classnames(`${cssBlock}__body`, popperClassName, getPopperClasses2(cssBlock, placement, noArrow), {
                                     [`${cssBlock}__body--no-arrow`]: !!noArrow
-                                }, getPopperClasses2(cssBlock, placement))}
+                                })}
                                 ref={ref}
                                 style={{ ...style, ...popperProps.style, ...fundamentalStyleOverrides }}
                                 // eslint-disable-next-line no-undefined
@@ -310,10 +312,6 @@ class Popper extends React.Component {
                                 <div className={classnames(`${cssBlock}__wrapper`, innerRefClassName)} ref={innerRef}>
                                     {children}
                                 </div>
-                                <span
-                                    className={classnames(`${cssBlock}__arrow`)}
-                                    ref={arrowProps.ref}
-                                    style={{ ...arrowProps.style, ...fundamentalStyleArrowOverrides }} />
                             </div>
                         </div>
 
