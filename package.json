@@ -5,13 +5,17 @@
   "description": "SAP Fundamental Library, implemented in React",
   "license": "Apache-2.0",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "homepage": "https://sap.github.io/fundamental-react",
   "repository": {
     "type": "git",
     "url": "https://github.com/SAP/fundamental-react"
   },
   "files": [
-    "lib"
+    "lib",
+    "types",
+    "index.d.ts",
+    "README.md"
   ],
   "scripts": {
     "build:index": "babel-node devtools/buildIndexFiles.js",
@@ -147,6 +151,9 @@
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.1 || ^18",
     "react-dom": "^16.8.0 || ^17.0.1 || ^18"
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "browserslist": [
     "last 2 versions",
