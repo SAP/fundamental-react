@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.6](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.5...v0.14.5-rc.6) (2023-02-07)
+
+
+### Features
+
+* add ts definition ([#1473](https://github.com/SAP/fundamental-react/issues/1473)) ([aa46b08](https://github.com/SAP/fundamental-react/commit/aa46b0868bfe3a17642b299a320797b73547ec0a))
+
 ### [0.14.5-rc.5](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.4...v0.14.5-rc.5) (2023-02-06)
 
 
