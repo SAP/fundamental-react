@@ -294,27 +294,25 @@ class Popper extends React.Component {
                     }
                     // TODO: Temporary overrides to support popper-2
                     const fundamentalStyleOverrides = {
-                        visibility: isReferenceHidden ? 'hidden' : 'visible'
+                        visibility: isReferenceHidden ? 'hidden' : 'visible',
+                        '--fdPopover_Offset': '0px'
                     };
                     return (
-                        <div className={cssBlock} style={{ position: 'absolute' }}>
-                            <div
-                                {...popperProps}
-                                className={classnames(`${cssBlock}__body`, popperClassName, getPopperClasses2(cssBlock, placement, noArrow), {
-                                    [`${cssBlock}__body--no-arrow`]: !!noArrow
-                                })}
-                                ref={ref}
-                                style={{ ...style, ...popperProps.style, ...fundamentalStyleOverrides }}
-                                // eslint-disable-next-line no-undefined
-                                x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
-                                // This is needed for fundamental-styles even though popper-2 uses data-placement as well
-                                x-placement={placement}>
-                                <div className={classnames(`${cssBlock}__wrapper`, innerRefClassName)} ref={innerRef}>
-                                    {children}
-                                </div>
+                        <div
+                            {...popperProps}
+                            className={classnames(`${cssBlock}__body`, popperClassName, getPopperClasses2(cssBlock, placement, noArrow), {
+                                [`${cssBlock}__body--no-arrow`]: !!noArrow
+                            })}
+                            ref={ref}
+                            style={{ ...style, ...popperProps.style, ...fundamentalStyleOverrides }}
+                            // eslint-disable-next-line no-undefined
+                            x-out-of-boundaries={isReferenceHidden ? 'true' : undefined}
+                            // This is needed for fundamental-styles even though popper-2 uses data-placement as well
+                            x-placement={placement}>
+                            <div className={classnames(`${cssBlock}__wrapper`, innerRefClassName)} ref={innerRef}>
+                                {children}
                             </div>
                         </div>
-
                     );
                 }}
             </ReactPopper>
