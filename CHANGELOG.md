@@ -1,4 +1,12 @@
 
+### [0.14.5-rc.11](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.10...v0.14.5-rc.11) (2023-02-08)
+
+
+### Bug Fixes
+
+* popover first time scroll ([#1481](https://github.com/SAP/fundamental-react/issues/1481)) ([68e5c8c](https://github.com/SAP/fundamental-react/commit/68e5c8c6c65b8132bfa462bda07e4b853a262ffa))
+* reademe ([#1482](https://github.com/SAP/fundamental-react/issues/1482)) ([341332f](https://github.com/SAP/fundamental-react/commit/341332fd3c48a9260b74d3e9391361e95afc6ec0))
+
 ### [0.14.5-rc.10](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.9...v0.14.5-rc.10) (2023-02-08)
 
 
