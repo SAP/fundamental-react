@@ -38,7 +38,7 @@
     "start": "npm run storybook",
     "storybook": "npm run build:storybook && start-storybook -p 12123 -s .storybook/static/,node_modules/@sap-theming,node_modules/fundamental-styles/dist/ --no-dll",
     "storybook:ci": "npm run storybook -- --ci --quiet",
-    "storybook:static": "rimraf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming --docs --no-dll",
+    "storybook:static": "rimraf storybook-static && npm run build:storybook && STORYBOOK_ENV=docs build-storybook -c .storybook -o storybook-static -s .storybook/static/,node_modules/@sap-theming,node_modules/fundamental-styles/dist/ --docs --no-dll",
     "test:coverage:watch": "npm run test:coverage -- --watch",
     "test:coverage": "npm run test:dev -- --coverage",
     "test:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js || echo -e \"Coveralls failed.\"",
