@@ -161,4 +161,5 @@ If you want to contribute, please check the [Contribution Guidelines](https://gi
 -   [Vue implementation of SAP Fundamental Styles](https://github.com/SAP/fundamental-vue)
 
 ## Environment Tips:
- For the Mac M1 user needs to run the project under node x86.
+
+ For the MAC M1 user needs to run the project under node x86.
