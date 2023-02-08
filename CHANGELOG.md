@@ -1,4 +1,13 @@
 
+### [0.14.5-rc.9](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.8...v0.14.5-rc.9) (2023-02-08)
+
+
+### Bug Fixes
+
+* popover position &&  no arrow styles ([#1477](https://github.com/SAP/fundamental-react/issues/1477)) ([ad0e0d4](https://github.com/SAP/fundamental-react/commit/ad0e0d49052df4148e455ef04d61bfc087ed7dde))
+* trigger build ([#1479](https://github.com/SAP/fundamental-react/issues/1479)) ([ddd2a36](https://github.com/SAP/fundamental-react/commit/ddd2a36f49eb3cb600b5e4714c6b46a7bb5d99d7))
+* update readme and re-trigger build rc version due to last time failed by commit name lint ([#1478](https://github.com/SAP/fundamental-react/issues/1478)) ([5cf3327](https://github.com/SAP/fundamental-react/commit/5cf33276c69cad357b8bcee7cced9cb1a5bb865a))
+
 ### [0.14.5-rc.8](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.7...v0.14.5-rc.8) (2023-02-07)
 
 
