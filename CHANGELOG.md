@@ -1,4 +1,11 @@
 
+### [0.14.5-rc.10](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.9...v0.14.5-rc.10) (2023-02-08)
+
+
+### Bug Fixes
+
+* storybook deployment lack FD theming css ([#1480](https://github.com/SAP/fundamental-react/issues/1480)) ([31e8488](https://github.com/SAP/fundamental-react/commit/31e848899d88f12cac3cb401162035a0fc1ce05d))
+
 ### [0.14.5-rc.9](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.8...v0.14.5-rc.9) (2023-02-08)
 
 
