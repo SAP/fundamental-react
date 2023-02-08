@@ -160,6 +160,5 @@ If you want to contribute, please check the [Contribution Guidelines](https://gi
 -   [Angular implementation of SAP Fundamental Styles](https://github.com/SAP/fundamental-ngx)
 -   [Vue implementation of SAP Fundamental Styles](https://github.com/SAP/fundamental-vue)
 
-## Environment Tips:
-
- For the MAC M1 user needs to run the project under node x86.
+##  Tips for fundamental-react project developers
+ For the MAC M1 user, to Set up your local dev environment, you need to run the project under node x86.
