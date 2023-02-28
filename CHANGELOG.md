@@ -51,6 +51,25 @@
 
 * upgrade fd-styles to latest and fix components due to broken changes from fd-styles ([#1471](https://github.com/SAP/fundamental-react/issues/1471)) ([6e58a23](https://github.com/SAP/fundamental-react/commit/6e58a233223d8d9f549826bfb286b1280e0c2377))
 
+### Broken changes
+There are  **some broken changes** caused by fundamental-styles's upgrade **(if your test case rely on the class or x-path , you may need to change that)：**
+- Popover：
+Changed `.fd-popover__popper` to `.fd-popover__body`
+Changed `.fd-popover__innerRef ` to `.fd-popover__innerRef `
+
+
+- Calendar:
+Ad one more `fd-calendar__content--dates` besides `.fd-calendar__content`
+
+- Loading Indicator:
+`.fd-busy-indicator--circle-0` to `.fd-busy-indicator__circle`
+`.fd-busy-indicator--circle-1` to `.fd-busy-indicator__circle`
+`.fd-busy-indicator--circle-2` to `.fd-busy-indicator__circle`
+
+- Shell bar:
+`.fd-counter .fd-counter--notification .fd-shellbar__counter--notification` to `.fd-badge`
+
+
 ### [0.14.5-rc.4](https://github.com/SAP/fundamental-react/compare/v0.14.5-rc.3...v0.14.5-rc.4) (2022-11-08)
 
 
