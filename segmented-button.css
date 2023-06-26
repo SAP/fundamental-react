@@ -1,0 +1,9 @@
+/*!
+ * Fundamental Library Styles v0.26.5
+ * Copyright (c) 2023 SAP SE or an SAP affiliate company.
+ * Licensed under Apache License 2.0 (https://github.com/SAP/fundamental-styles/blob/main/LICENSE)
+ */
+/*!
+.fd-segmented-button
+    button
+*/.fd-segmented-button{-webkit-box-sizing:border-box;border:0;box-sizing:border-box;color:var(--sapTextColor);display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;font-family:var(--sapFontFamily);font-size:var(--sapFontSize);font-weight:400;forced-color-adjust:none;line-height:var(--sapContent_LineHeight);margin:0;padding:0;position:relative;vertical-align:middle}.fd-segmented-button:after,.fd-segmented-button:before{-webkit-box-sizing:inherit;box-sizing:inherit;font-size:inherit}.fd-segmented-button:before{background:var(--sapButton_Background);border-radius:var(--sapButton_BorderCornerRadius);content:"";display:var(--fdButton_Segmented_Pad_Display);height:100%;left:0;position:absolute;top:0;width:100%}.fd-segmented-button button{margin:0}.fd-segmented-button button.is-hover,.fd-segmented-button button:hover{z-index:1}.fd-segmented-button button:first-child{border-radius:var(--fdButton_Border_Radius_Left)}.fd-segmented-button button:not(:first-child):not(:last-child){border-radius:var(--fdButton_Segmented_Middle_Border_Radius)}.fd-segmented-button button:last-child{border-radius:var(--fdButton_Border_Radius_Right)}.fd-segmented-button button:not(:last-child){margin-right:var(--fdButton_Segmented_Border_Offset)}.fd-segmented-button button:not(:last-child)[dir=rtl],[dir=rtl] .fd-segmented-button button:not(:last-child){margin-left:var(--fdButton_Segmented_Border_Offset);margin-right:0}.fd-segmented-button button[dir=rtl]:first-child,[dir=rtl] .fd-segmented-button button:first-child{border-radius:var(--fdButton_Border_Radius_Left_RTL)}.fd-segmented-button button[dir=rtl]:last-child,[dir=rtl] .fd-segmented-button button:last-child{border-radius:var(--fdButton_Border_Radius_Right_RTL)}

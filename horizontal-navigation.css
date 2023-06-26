@@ -1,0 +1,5 @@
+/*!
+ * Fundamental Library Styles v0.26.5
+ * Copyright (c) 2023 SAP SE or an SAP affiliate company.
+ * Licensed under Apache License 2.0 (https://github.com/SAP/fundamental-styles/blob/main/LICENSE)
+ */.fd-horizontal-navigation{-webkit-box-sizing:border-box;-webkit-box-shadow:var(--sapContent_HeaderShadow);border:0;box-shadow:var(--sapContent_HeaderShadow);box-sizing:border-box;color:var(--sapTextColor);font-family:var(--sapFontFamily);font-size:var(--sapFontSize);font-weight:400;forced-color-adjust:none;line-height:var(--sapContent_LineHeight);margin:0;padding:0}.fd-horizontal-navigation:after,.fd-horizontal-navigation:before{-webkit-box-sizing:inherit;box-sizing:inherit;font-size:inherit}
