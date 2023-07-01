@@ -93,7 +93,7 @@
     "@storybook/addon-storysource": "^6.1.9",
     "@storybook/components": "^6.1.9",
     "@storybook/react": "^6.1.9",
-    "@storybook/source-loader": "^6.1.9",
+    "@storybook/source-loader": "^7.0.24",
     "@storybook/theming": "^6.1.9",
     "@testing-library/jest-dom": "^5.11.6",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
