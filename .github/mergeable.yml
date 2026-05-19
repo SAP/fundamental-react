@@ -1,6 +1,0 @@
-mergeable: 
-  pull_requests: 
-    title: 
-      must_include: 
-        message: "Title must begin with the following prefixes: feat:, fix: or chore:"
-        regex: "^feat:|^chore:|^fix:|^docs:"
